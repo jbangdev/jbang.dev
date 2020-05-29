@@ -17,15 +17,26 @@ bgcolor: ff5a71
 keywords: jbang
 ---
 {% include JB/setup %}
-Hello world! Is the first post on helium jekyll
+Beyond Hello World!
 <!--more-->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consequat luctus neque eget commodo. Sed a molestie lorem. Fusce lectus mauris, vulputate sollicitudin ullamcorper ut, semper at risus. Nunc porta ut velit non fringilla. Pellentesque egestas eros vitae suscipit imperdiet. Cras imperdiet a velit sit amet placerat. Morbi dolor quam, semper ac venenatis ac, pretium at ex. Suspendisse fermentum mi sit amet risus congue ullamcorper. Sed sed ultrices libero. Cras pulvinar dui efficitur felis maximus, ac dictum leo egestas. Pellentesque ut dictum odio. Aliquam varius viverra orci, quis blandit mi blandit vitae. Donec non semper augue, ut consectetur ligula. Aenean tellus tortor, sagittis sed iaculis quis, imperdiet et ex. Mauris id libero sed diam euismod pharetra.
+A simple script you can run with `jbang` is "Hello World" using jshell (`.jsh`).
 
-Mauris nec pulvinar elit, in fermentum leo. Curabitur volutpat ullamcorper diam id dapibus. Donec dolor eros, dictum vitae quam sit amet, imperdiet dapibus libero. Nullam vel ligula non velit tincidunt volutpat. Maecenas at magna enim. Nunc quis molestie lectus. Maecenas facilisis finibus consequat.
+    System.out.println("Hello " + ((args.length>0)?args[0]:"jbang"));
 
-Curabitur vitae elementum nulla, at cursus elit. Suspendisse elementum auctor lorem eu sodales. Curabitur accumsan efficitur maximus. Ut purus lacus, dapibus ut elit vitae, imperdiet ultrices diam. Donec pharetra quis urna et auctor. Sed non augue vel lacus scelerisque mattis. In ac eros quis felis laoreet luctus vitae eget libero.
+You can run the above by putting it in a file named: `hello.jsh` and run `jbang hello.jsh`.
 
-Sed egestas lectus urna, et lacinia nulla suscipit nec. Sed sed consequat nulla. Morbi lobortis ex tellus, quis aliquam magna gravida quis. Ut mattis dui nec euismod tempor. Ut sit amet felis tincidunt, ultrices ligula eu, dapibus nulla. Aliquam efficitur magna in elit placerat, vel placerat augue interdum. In hac habitasse platea dictumst. Sed ac mollis lacus. Praesent eleifend justo ut nunc fermentum, eget luctus dui ultricies.
+To expand on this we will make a Java file (`.java`) which uses an external dependency to make the text a bit more fancy.
 
-Integer interdum fringilla commodo. Integer finibus purus diam, at gravida metus interdum ac. Curabitur posuere, felis facilisis consectetur convallis, enim nulla ultricies nisi, at pretium sapien lorem ac diam. Integer ac ex consequat, facilisis justo sit amet, auctor quam. Curabitur luctus suscipit ante sed aliquet. Donec non molestie sapien, ut pellentesque odio. In lobortis porta auctor. Sed eu convallis est, eget ultricies ligula. Maecenas facilisis laoreet velit, eget rutrum ligula malesuada in. Vestibulum sapien lacus, congue ut mi ut, faucibus dapibus massa. Morbi vel ligula eget lacus vehicula tincidunt.
+In this case we'll use a library called `jfiglet`.
+
+We use `//DEPS com.github.lalyos:jfiglet:0.0.8` to declare this script should run using the dependency with group id: `com.github.lalyos`, artifact id: `jfiglet` and with the version `0.0.8`.
+
+These are called "artifacts coordinates" or "maven coordinates" as the system originates from the Maven build system; but is today used in almost all Java projects. You can use sites like https://mvnrepository.com to locate the coordinates of projects, and otherwise find them on the website or source repository of the project them self.
+
+Below is a repl.it instance preconfigured with `jbang` ready to run `hello.java` using the `figlet` dependency.
+
+Try and press the Run button to see how it works and then try edit the code to see how it pick up the changes between each run.
+
+<iframe height="400px" width="100%" src="https://repl.it/@maxandersen/jbang-replit-demo?lite=true#hello.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
+
