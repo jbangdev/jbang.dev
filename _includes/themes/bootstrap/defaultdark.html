@@ -18,6 +18,9 @@ lantoniotrento@gmail.com
 
     <!--Google Font link-->
         <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+   <!-- hilight -->
+   <link rel="stylesheet"
+   href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
  <!--Helium css-->
         <link rel="stylesheet" href="{{ "/assets/css/animate.css" | relativize_url }}">
         <link rel="stylesheet" href="{{ "/assets/css/bootstrap.min.css" | relativize_url }}">
@@ -89,7 +92,7 @@ lantoniotrento@gmail.com
 
 	<!-- ********************* Grads SCRIPTING ******************************-->
 	<!--Custom script loaded by children page-->
-	{% if page.js %}<script src="{{ "/assets/js/{{ page.js }}" | relativize_url }}"></script>{% endif %}
+	{% if page.js %}<script src="{{ "/assets/js/" | append: page.js | relativize_url }}"></script>{% endif %}
 
 
 	  

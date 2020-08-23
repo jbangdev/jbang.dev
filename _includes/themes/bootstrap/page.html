@@ -19,7 +19,7 @@
 
                             <div class="col-md-6">
                                 <div class="phone_one phone_attr1 text-center sm-m-top-50">
-                                    {% if page.img %}<img src="{{ "/assets/images/{{ page.img }}" | relativize_url }}" alt="" />{% endif %}
+                                    {% if page.img %}<img src="{{ "/assets/images/" | append: page.img | relativize_url }}" alt="" />{% endif %}
                                 </div>
                             </div>
 

@@ -37,14 +37,21 @@ lantoniotrento@gmail.com
         <link rel="stylesheet" href="{{ "/assets/css/scrolling-nav.css" | relativize_url }}">	  
 
 	<!-- CSS loaded by the children page -->
-        {% if page.css %}<link rel="stylesheet" type="text/css" href="{{ "/assets/css/custom/{{ page.css }}" | relativize_url }}" />{% endif %}
+        {% if page.css %}<link rel="stylesheet" type="text/css" href="{{ "/assets/css/custom/" | append: page.css | relativize_url }}" />{% endif %}
 
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:description" content="{{ page.tagline }}">
-    <meta property="og:image" content="{{ "/assets/img/big/{{ page.img }}" | relativize_url }}">
+    <meta property="og:image" content="{{ "/assets/img/big/" | append: page.img | relativize_url }}">
     <meta property="og:url" content="{{ BASE_PATH }}">
     <meta name="twitter:card" content="summary_large_image">
 
+        <!-- hilight -->
+        <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/rainbow.min.css"  />
+
+  <script>hljs.initHighlightingOnLoad();</script>
 	<!--[if IE]>
 		<script type="text/javascript">
 			 var console = { log: function() {} };
@@ -97,7 +104,7 @@ lantoniotrento@gmail.com
 
 	<!-- ********************* Grads SCRIPTING ******************************-->
 	<!--Custom script loaded by children page-->
-	{% if page.js %}<script src="{{ "/assets/js/{{ page.js }}" | relativize_url }}"></script>{% endif %}
+	{% if page.js %}<script src="{{ "/assets/js/" | append: page.js | relativize_url }}"></script>{% endif %}
 
 
 	  

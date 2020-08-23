@@ -1,6 +1,6 @@
           <!-- 
             <div class="blog-block about-sidebar-widget">
-            <img src="{{ "/assets/images/{{ page.author.image }}" | relativize_url }}">
+            <img src="{{ "/assets/images/" | append: page.author.image | relativize_url }}">
             <h4><a href="{{ page.author.site }}">{{ page.author }}</a></h4>
             <p>{{ page.author.description }}</p>
             {% include social-block.html %}

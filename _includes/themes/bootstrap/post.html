@@ -14,7 +14,7 @@
             </div>
             <div class="col-xs-12 col-sm-6">
               {% if page.img %}<figure>
-                <img src="{{ "/assets/images/{{ page.img }}" | relativize_url }}" alt="">
+                <img src="{{ "/assets/images/" | append: page.img | relativize_url }}" alt="">
               </figure>{% endif %}
             </div>
           </div>

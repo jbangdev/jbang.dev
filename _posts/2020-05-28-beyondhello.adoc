@@ -1,30 +1,32 @@
----
-layout: post
-category : learn
-tagline: "Understanding dependencies"
-tags : [intro, beginner, jbang, tutorial]
-title: Beyond Hello World!
-img : helloworld.jpg
-img-mobile : 
-img2 : 
-img3 : 
-author : Max Rydahl Andersen
-title2 : 
-title3 : 
-css: 
-js: 
-bgcolor: ff5a71
-keywords: jbang
----
-{% include JB/setup %}
-Beyond Hello World!
-<!--more-->
+# Beyond Hello World!
+:page-layout: post
+:page-tagline: "Understanding dependencies"
+:page-category : learn
+:page-tags : [intro, beginner, jbang, tutorial]
+:page-title: Beyond Hello World!
+:page-img : helloworld.jpg
+:page-img-mobile : 
+:page-img2 : 
+:page-img3 : 
+:page-author : Max Rydahl Andersen
+:page-title2 : 
+:page-title3 : 
+:page-css: 
+:page-js: 
+:page-bgcolor: ff5a71
+:page-keywords: jbang
+:page-excerpt: See the basics of jbang with a bit more than just Hello World!
 
 A simple script you can run with `jbang` is "Hello World" using jshell (`.jsh`).
 
+[source,java]
+----
     System.out.println("Hello " + ((args.length>0)?args[0]:"jbang"));
+----
 
 You can run the above by putting it in a file named: `hello.jsh` and run `jbang hello.jsh`.
+
+//more
 
 To expand on this we will make a Java file (`.java`) which uses an external dependency to make the text a bit more fancy.
 
@@ -38,5 +40,6 @@ Below is a repl.it instance preconfigured with `jbang` ready to run `hello.java`
 
 Try and press the Run button to see how it works and then try edit the code to see how it pick up the changes between each run.
 
+++++
 <iframe height="400px" width="100%" src="https://repl.it/@maxandersen/jbang-replit-demo?lite=true#hello.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
-
+++++

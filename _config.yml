@@ -3,10 +3,8 @@
 permalink: /posts/:categories/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: null
 markdown: kramdown
 extensions: [fenced_code_blocks]
-excerpt_separator: "<!--more-->"
 url: https://jbang.dev
 #baseurl: "jbang.dev"
 # Themes are encouraged to use these universal variables
@@ -151,3 +149,13 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
+
+  keep_files: posts/
+  asciidoctor:
+    icons: "font"
+    base_dir: :docdir
+    safe: unsafe
+    attributes:
+      imagesdir: /images
+      source-highlighter: highlightjs
+
