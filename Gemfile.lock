@@ -32,6 +32,7 @@ GEM
       rouge (~> 3.0)
       safe_yaml (~> 1.0)
       terminal-table (~> 1.8)
+    jekyll-analytics (0.1.14)
     jekyll-asciidoc (3.0.0)
       asciidoctor (>= 1.5.0)
       jekyll (>= 3.0.0)
@@ -80,6 +81,7 @@ PLATFORMS
 DEPENDENCIES
   asciidoctor-diagram
   jekyll (~> 4.0.1)
+  jekyll-analytics
   jekyll-asciidoc
   jekyll-feed (~> 0.12)
   pygments.rb (~> 1.1.2)

@@ -1,3 +1,6 @@
+plugins:
+  - jekyll-analytics
+
 # This is the default format.
 # For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /posts/:categories/:title
@@ -48,6 +51,11 @@ twitter_username: maxandersen
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
 production_url : https://jbang.dev
+
+jekyll_analytics:
+  GoogleAnalytics:
+      id : 'UA-156530423-2'
+
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
