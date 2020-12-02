@@ -1,0 +1,112 @@
+# Exploring new Java APIs!
+:page-layout: post
+:page-tagline: Downloading gravatar images with JBang
+:page-category : learn
+:page-tags : [intro, beginner, jbang, tutorial]
+:page-title: JBang Avatar
+:page-img : avatar.jpg
+:page-img-mobile : 
+:page-img2 : 
+:page-img3 : 
+:page-author : Max Rydahl Andersen
+:page-title2 : 
+:page-title3 : 
+:page-css: 
+:page-js: 
+:page-bgcolor: ff5a71
+:page-keywords: jbang
+:page-excerpt: ...all just to gource JBang!
+
+It is getting very close to the first anniversary of first commit of JBang.
+
+To celebrate I looked around to see what we could do and was reminded about good old https://gource.io[Gource].
+
+With Gource you can render the history of a git repository and get a nice animated video, including flying icons for each author. Trouble is that by default they are just faceless heads - lets get some faces to all those names.
+
+I found a https://gist.github.com/pmdgithub/706587[perl script] that took all committer emails and located their gravatar image; but it was Perl...so lets make that java instead and use JBang.
+
+The full example is available https://github.com/jbangdev/jbang/blob/master/examples/grabavatars.java[here], below I'll walk through the various interesting parts.
+
+If you want to just directly run it do this:
+
+`jbang https://github.com/jbangdev/jbang/blob/master/examples/grabavatars.java`
+
+To begin with you just get started with `jbang init -t cli grab-avatar`.
+
+This will create a file named `grabavatar.java` with some pre-seeded code that does a Hello World! style app using picocli plus it will mark the file as executable.
+
+## Setup dependencies and main class
+
+Then in top we are going to add a few dependencies:
+
+[source,java]
+.Dependencies
+----
+include::_posts/grabavatars.java[lines="1..5"]
+----
+
+The first line is the magic "shebang" line that bash and other shells will interpret but for java it is just a comment. This is what allows you to run the script directly using `./grab-avatar`
+
+The dependencies used are as follows:
+
+  - Picocli for annotation based command line parsing and help generation.
+  - `zt-exec` is a nice library to execute processes in a nice fluent way.
+  - `commons-coded` just because default Java don't have a one-liner for MD5 hash generation.
+  - No Operation slf4j to avoid the default noise slf4j generates. 
+
+When you run `./grabavatars.java` or `jbang grabavatars.java` these starting lines with `//DEPS` in them will be parsed and JBang fetches the dependencies to use during compilation and execution of your script.
+
+The next is the class declaration which is mainly just annotations to define the main picocli command.
+[source,java]
+.class declaration
+----
+include::_posts/grabavatars.java[tags=classdecl]
+----
+
+## Iteration over execution 
+
+Then the meat of the code is to run `git log --pretty=format:%ae|%an"` which will return a line for every commit with email and author, like:
+
+```
+max@xam.dk|Max Rydahl Andersen
+```
+
+To do this I use `zt-exec` which has this great "one-liner" to run the process and for every line output let me process it.
+[source,java]
+.processing command
+----
+include::_posts/grabavatars.java[tags=processFile]
+----
+
+## MD5 and Download
+
+And finally for every identified email and author - generates MD5 and download the url.
+
+[source,java]
+.processing command
+----
+include::_posts/grabavatars.java[tags=downloadFile]
+----
+
+## All together now
+
+Now to run this when I have it locally is just: `./grab-avatars` in root of a git repository.
+
+But you can also run this directly from a url using:
+
+`jbang https://github.com/jbangdev/jbang/blob/master/examples/grab-avatars`
+
+And then then you can go full out and render with gource - notice the `--user-image-dir .git/avatar`:
+
+[source,shell]
+----
+gource --title JBang --stop-at-end --user-image-dir .git/avatar --seconds-per-day 0.05 --auto-skip-seconds 1 -1280x720 --hide filenames -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 1 -threads 0 -bf 0 gource.mp4
+----
+
+Then you get a video which with a little bit of magic of video editing that looks something like this:
+
+video::da0CuVbvWLg[youtube, width=640, height=360]
+
+And that is about it - showed how to get started with jbang to port an existing perl script to java using a few dependencies.
+
+See you next time!
