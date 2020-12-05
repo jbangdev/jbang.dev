@@ -1,0 +1,12 @@
+site:
+  title: JBang Documentation
+content:
+  sources: 
+  - url: ../../jbang
+    start_path: docs
+    branches: HEAD
+ui: 
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+    
