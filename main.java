@@ -2,7 +2,7 @@
 
 import static java.lang.System.*;
 
-public class app {
+public class main {
 
     public static void main(String... args) {
         out.println("Welcome to jbang.dev\n");
