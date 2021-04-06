@@ -55,6 +55,14 @@ keywords: download, install
           <!-- Tab panes -->
           <div class="tab-content">
             <div class="tab-pane active" id="windows" role="tabpanel">
+              <h3>curl/iex</h3>
+              <p>Powershell:
+                <pre>iex "& { $(iwr https://ps.jbang.dev) } app install jbang"</pre>
+              </p> 
+             <p>GitBash/cygwin/mingwin/WSL:
+               <pre>curl -Ls https://sh.jbang.dev | bash -s - app install jbang</pre>
+             </p>
+             
               <h3>Chocolatey</h3>
               <p><pre>choco install jbang</pre></p>
               <h3>Scoop</h3>
@@ -69,6 +77,10 @@ scoop install jbang</pre>
               or if you have bash based shell/terminal <code> curl -Ls https://sh.jbang.dev | bash -s - [jbang arguments]</code></p>
             </div>
             <div class="tab-pane" id="linux" role="tabpanel">
+              <h3>curl</h3>
+             <p>
+               <pre>curl -Ls https://sh.jbang.dev | bash -s - app install jbang</pre>
+             </p>
               <h3>SDKMan</h3>
               <p><pre>sdk install jbang</pre></p>
               <h3><a href="https://copr.fedorainfracloud.org/coprs/g/jbangdev/jbang/">Fedora Copr</a> for CentOS, Fedora, Mageia and OpenSuse</h3>
@@ -82,6 +94,10 @@ dnf install jbang</pre>
               <p>You can run download and run jbang directly using <code>curl -Ls https://sh.jbang.dev | bash -s - [jbang arguments]</code></p>
             </div>
             <div class="tab-pane" id="mac" role="tabpanel">
+              <h3>curl</h3>
+             <p>
+               <pre>curl -Ls https://sh.jbang.dev | bash -s - app install jbang</pre>
+             </p>
               <h3>SDKMan</h3>
               <p><pre>sdk install jbang</pre></p>
               <h3>Homebrew</h3>
@@ -90,6 +106,7 @@ dnf install jbang</pre>
               </p>
               <h3>Manual</h3>
               <p>Unzip the <a href="https://github.com/jbangdev/jbang/releases/latest">latest binary release</a>, put the jbang-[version]/bin folder in to your $PATH and you are set.</p>
+              
               <h3>Zero install</h3>
               <p>You can run download and run jbang directly using <code>curl -Ls https://sh.jbang.dev | bash -s - [jbang arguments]</code></p>
             </div>
