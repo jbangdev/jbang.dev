@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
  */
 @Command(name = "jbangcatloger", mixinStandardHelpOptions = true, version = "jbangcatloger 0.1",
         description = "jbangcatloger made with jbang")
-class jbangcatloger implements Callable<Integer> {
+class jbangcataloger implements Callable<Integer> {
 
   @Option(names = {"-d", "--destDir"}, defaultValue = "./assets/data/", description = "Destination dir to generate cataloger")
   private Path destinationDir;
