@@ -39,7 +39,7 @@ class jbangcataloger implements Callable<Integer> {
   private String ghToken;
 
   public static void main(String... args) {
-    var exitCode = new CommandLine(new jbangcatloger()).execute(args);
+    var exitCode = new CommandLine(new jbangcataloger()).execute(args);
     System.exit(exitCode);
   }
 
