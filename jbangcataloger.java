@@ -25,17 +25,17 @@ import java.util.stream.Collectors;
 /**
  * To run this script, set two environment variables GH_USER and GH_TOKEN. These are used to avoid github rate limiting.
  */
-@Command(name = "jbangcatloger", mixinStandardHelpOptions = true, version = "jbangcatloger 0.1",
-        description = "jbangcatloger made with jbang")
+@Command(name = "jbangcataloger", mixinStandardHelpOptions = true, version = "jbangcataloger 0.1",
+        description = "jbangcataloger made with jbang")
 class jbangcataloger implements Callable<Integer> {
 
   @Option(names = {"-d", "--destDir"}, defaultValue = "./assets/data/", description = "Destination dir to generate cataloger")
   private Path destinationDir;
 
-  @Option(names = {"-ghUser", "--githubUser"}, description = "Github user", defaultValue="${env:GH_USER}")
+  @Option(names = {"-ghUser", "--githubUser"}, description = "Github user", defaultValue="${env:GITHUB_USER}")
   private String ghUser;
 
-  @Option(names = {"-ghToken", "--githubToken"}, description = "Github user token", defaultValue="${env:GH_TOKEN}")
+  @Option(names = {"-ghToken", "--githubToken"}, description = "Github user token", defaultValue="${env:GITHUB_TOKEN}")
   private String ghToken;
 
   public static void main(String... args) {
