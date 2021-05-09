@@ -20,13 +20,19 @@ permalink: /notappstore/
 
         <h2>JBang AppStore (Experimental)</h2>
         <div>
-            JBang supports creating and sharing <a href="https://github.com/jbangdev/jbang#catalogs">catalogs</a>. When shared on github, gitlab, or bitbucket, <a href="https://github.com/jbangdev/jbang#implicit-alias-catalogs">implicit aliasing</a> allows to run scripts from remote repositories.
+            Below is a index of JBang aliases available on GitHub in <a href="https://github.com/jbangdev/jbang#catalogs">JBang Catalogs.</a><br/><br/>
+
+            To use it <a href="/download">Download or Install</a> JBang using or run the following command from any bash compatible terminal: 
+            <br/></br/>
+            <center><code style="font-size:20px;">curl -Ls https://sh.jbang.dev | bash -s - app setup</code></center>
+            <br/> 
+            or in a Windows Powershell:
+            <br/></br/>
+            <center><code style="font-size:20px;">iex "& { $(iwr https://ps.jbang.dev) } app setup jbang"</code></center>
+            <br/> 
+             
             <br/><br/>
-            Executing <code>jbang hello@acme</code> will run <code>hello</code> alias found in <code>acme/jbang-catalog/jbang-catalog.json</code> of the default branch searched on github, gitlab and bitbucket in that order.
-            <br/><br/>
-            This page currently lists jbang aliases found by searching github for `jbang-catalog.json`. If you for some reason do not want your alias listed please open an <a href="https://github.com/jbangdev/jbang/issues">issue</a> stating you would like to have your aliases excluded.
-            <br/><br/>
-            To execute any alias, run <code>jbang [alias]</code>. Example - <code>jbang quarkus-starter@38leinaD</code>.
+            With JBang installed you can run any of the aliases from the JBang AppStore!
             <br/><br/>
 
             <b>NOTE:</b> Always verify a script code before executing it.
