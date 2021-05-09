@@ -64,7 +64,7 @@ function groupByFormatter(item,index,rows) {
 function aliasFormatter(value, row, index) {
   var output;
 
-  output = "<button class='tooltipped tooltipped-sw copyButton' aria-label='Copy jbang command to clipboard'  data-clipboard-text='jbang " + row.command +"'><i class='fa fa-clipboard'></i></button>";
+  output = "<button class='tooltipped tooltipped-se copyButton' aria-label='Copy jbang command to clipboard'  data-clipboard-text='jbang " + row.command +"'><i class='fa fa-clipboard'></i></button>";
   output = output + " <code>" + row.command + "</code>";
   if(row.description) {
      output = output  + "<div style='white-space: pre-wrap'>" + row.description + "</div>";
