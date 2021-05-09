@@ -1,0 +1,24 @@
+name: Build and deploy Jekyll site to GitHub Pages
+
+on:
+  schedule:
+    # 5 AM daily
+    - cron: '0 5 * * *'
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-16.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: jbang
+        uses: jbangdev/jbang-action@v0.70.0
+        with:
+          script: jbangcataloger.java
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit updates
+        run: |
+          git config --global user.name 'Max Rydahl Andersen'
+          git config --global user.email 'max@xam.dk'
+          git commit -am "App store updates"
+          git push

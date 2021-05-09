@@ -1,0 +1,91 @@
+---
+layout: index
+title: AppStore
+#group: navigation
+tagline: AppStore
+tags : [appstore]
+img : /images/splash.png
+img-mobile :
+css:
+js:
+keywords: appstore
+permalink: /notappstore/
+---
+{% include JB/setup %}
+
+<div id="grid-container" style="
+    margin: 45px 0;">
+
+    <div class="container">
+
+        <h2>JBang AppStore (Experimental)</h2>
+        <div>
+            JBang supports creating and sharing <a href="https://github.com/jbangdev/jbang#catalogs">catalogs</a>. When shared on github, gitlab, or bitbucket, <a href="https://github.com/jbangdev/jbang#implicit-alias-catalogs">implicit aliasing</a> allows to run scripts from remote repositories.
+            <br/><br/>
+            Executing <code>jbang hello@acme</code> will run <code>hello</code> alias found in <code>acme/jbang-catalog/jbang-catalog.json</code> of the default branch searched on github, gitlab and bitbucket in that order.
+            <br/><br/>
+            This page currently lists jbang aliases found by searching github for `jbang-catalog.json`. If you for some reason do not want your alias listed please open an <a href="https://github.com/jbangdev/jbang/issues">issue</a> stating you would like to have your aliases excluded.
+            <br/><br/>
+            To execute any alias, run <code>jbang [alias]</code>. Example - <code>jbang quarkus-starter@38leinaD</code>.
+            <br/><br/>
+
+            <b>NOTE:</b> Always verify a script code before executing it.
+        </div>
+
+    <!-- Include jQuery and other required
+files for Bootstrap -->
+    <script
+            src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js">
+    </script>
+    <script>
+function linkFormatter(value, row, index) {
+  return "<a href='"+row.link+"'>"+ "<img style='width: 5vw;' src='"+row.icon_url+"'/>" 
+         + "<br/>"
+         + row.repoOwner+"/"+row.repoName+"</a>";
+}
+
+function aliasFormatter(value, row, index) {
+  var output = "<code>jbang " + row.command + "</code>";
+  
+  if(row.description) {
+     output = output  + "<br/><br>" + row.description;
+  }
+
+  return output;
+}
+function starFormatter(value, row, index) {
+    if(row.stars==0) return "-";
+    return row.stars;
+}
+
+</script>
+    <table
+            id="appstore-table"
+            data-toggle="table"
+            data-flat="true"
+            class="table-appstore"
+            data-search="true"
+            data-search-align="left"
+            data-total-field="itemCount"
+            data-data-field="items"
+            data-url="/assets/data/jbang-appstore.json">
+        <thead>
+        <tr>
+            <th data-field="link" data-sortable="true" data-formatter="linkFormatter">
+                <i class="fa fa-github" aria-hidden="true"></i>
+            </th>
+            <th class="appstore-alias" data-field="command" data-sortable="true" data-formatter="aliasFormatter">Alias</th>
+         <!--   <th data-field="description" data-sortable="true">Description</th> -->
+            <th data-field="stars" data-sortable="true" data-formatter="starFormatter">Stars</th>
+        </tr>
+        </thead>
+    </table>
+
+
+</div>
+</div>
+
