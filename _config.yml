@@ -5,7 +5,7 @@ plugins:
 # For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /posts/:categories/:title
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "jbangcataloger.java"]
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 markdown: kramdown
 extensions: [fenced_code_blocks]
 url: https://jbang.dev
