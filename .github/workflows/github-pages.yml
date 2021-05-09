@@ -4,22 +4,12 @@ on:
   push:
     branches:
       - master
-  schedule:
-    # 5 AM daily
-    - cron: '0 5 * * *'
 
 jobs:
   github-pages:
     runs-on: ubuntu-16.04
     steps:
       - uses: actions/checkout@v2
-      - name: jbang
-        uses: jbangdev/jbang-action@v0.70.0
-        with:
-          script: jbangcataloger.java
-        env:
-          GITHUB_USER: ${{ github.actor }}
-          GITHUB_TOKEN: ${{ secrers.GITHUB_TOKEN }}
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
         with:

@@ -25,33 +25,34 @@ import java.util.stream.Collectors;
 /**
  * To run this script, set two environment variables GH_USER and GH_TOKEN. These are used to avoid github rate limiting.
  */
-@Command(name = "jbangcataloger", mixinStandardHelpOptions = true, version = "jbangcataloger 0.1",
-        description = "jbangcataloger made with jbang")
-class jbangcataloger implements Callable<Integer> {
+@Command(name = "appstore", mixinStandardHelpOptions = true, version = "appstore for JBang 0.1",
+        description = "appstore made with jbang")
+class appstore implements Callable<Integer> {
 
   @Option(names = {"-d", "--destDir"}, defaultValue = "./assets/data/", description = "Destination dir to generate cataloger")
   private Path destinationDir;
 
-  @Option(names = {"-ghUser", "--githubUser"}, description = "Github user", defaultValue="${env:GITHUB_USER}")
-  private String ghUser;
-
-  @Option(names = {"-ghToken", "--githubToken"}, description = "Github user token", defaultValue="${env:GITHUB_TOKEN}")
+  @Option(names = {"--token"}, description = "Github user token", defaultValue="${env:GITHUB_TOKEN}", required = true)
   private String ghToken;
 
+  private GitHub gitHub;
+
+  Map<String, Integer> starCache = new HashMap<>();
+
   public static void main(String... args) {
-    var exitCode = new CommandLine(new jbangcataloger()).execute(args);
+    var exitCode = new CommandLine(new appstore()).execute(args);
     System.exit(exitCode);
   }
 
   @Override
   public Integer call() throws Exception {
-    var gitHub = GitHub.connect(ghUser,ghToken);
+    gitHub = GitHub.connect("",ghToken);
     System.out.println(gitHub.getRateLimit().toString());
-    var gson = new Gson();
+    var gson = new GsonBuilder().setPrettyPrinting().create();
     List<CatalogerItem> catalogerItems = new ArrayList<>();
     PagedSearchIterable<GHContent> ghContents = gitHub.searchContent().filename("jbang-catalog.json").extension(".json").list().withPageSize(500);
     for (GHContent content: ghContents) {
-      System.out.println("Processing - " + content.getOwner().getFullName());
+      System.out.println("Processing - " + content.getOwner().getFullName() + "/" + content.getPath());
       var catalogContent = toJsonElement(gson, content);
       if(catalogContent != null) {
         catalogContent.aliases
@@ -59,11 +60,12 @@ class jbangcataloger implements Callable<Integer> {
                 .forEach(catalogerItems::add);
       }
     }
-    List<CatalogerItem> sorted = catalogerItems.stream().sorted(Comparator.comparing(catalogerItem -> catalogerItem.repoOwner)).collect(Collectors.toList());
+
+    List<CatalogerItem> sorted = catalogerItems.stream().sorted(Comparator.comparing(catalogerItem -> -catalogerItem.stars)).collect(Collectors.toList());
     var cataloger = new Cataloger(sorted);
     String catalogerContent = gson.toJson(cataloger);
     destinationDir.toFile().mkdirs();
-    var path = destinationDir.resolve("jbang-cataloger.json");
+    var path = destinationDir.resolve("jbang-appstore.json");
     Files.writeString(path, catalogerContent);
     System.out.println("Generated file - " + path);
     return 0;
@@ -78,6 +80,24 @@ class jbangcataloger implements Callable<Integer> {
     item.repoName =  ghContent.getOwner().getName();
     item.command = item.alias + "@" + item.repoOwner + (item.repoName.equalsIgnoreCase("jbang-catalog") ? "" : "/".concat(item.repoName));
     item.link =  ghContent.getOwner().getHtmlUrl().toString();
+    try {
+      item.icon_url = ghContent.getOwner().getOwner().getAvatarUrl();
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+
+    // work around https://github.com/hub4j/github-api/issues/1140
+    try {
+      Integer stars = starCache.get(ghContent.getOwner().getFullName());
+      if(stars==null) {
+        stars = gitHub.getRepository(ghContent.getOwner().getFullName()).getStargazersCount();
+        starCache.put(ghContent.getOwner().getFullName(), stars);
+      }
+      item.stars = stars;
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
     return item;
   }
 
@@ -115,6 +135,8 @@ class Cataloger {
   }
 }
 class CatalogerItem {
+  public int stars;
+  public String icon_url;
   public String repoOwner;
   public String repoName;
   public String alias;
