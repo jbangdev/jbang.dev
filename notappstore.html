@@ -55,23 +55,23 @@ function linkFormatter(value, row, index) {
 }
 function groupByFormatter(item,index,rows) {
     var row = rows[0];
-    return "<a href='"+row.link+"'>"+ "<img style='width: 2vw;' src='"+row.icon_url+"'/>  " +
+    return "<a href='"+row.link+"'>"+ "<img style='width: 5vw;' src='"+row.icon_url+"'/>  " +
         "<i class='fa fa-github' aria-hidden='true'></i>  "
         + row.repoOwner+"/"+row.repoName+"</a>"
-        + "  <i class='fa fa-star'></i>" + starFormatter(item, row, index);
+        + " " + starFormatter(item, row, index);
 }
 function aliasFormatter(value, row, index) {
   var output = "<code>jbang " + row.command + "</code>";
   
   if(row.description) {
-     output = output  + "<br/><br>" + row.description;
+     output = output  + "<div style='white-space: pre-wrap'>" + row.description + "</div>";
   }
 
   return output;
 }
 function starFormatter(value, row, index) {
-    if(row.stars==0) return "-";
-    return row.stars;
+    if(row.stars==0) return "";
+    return "<i class='fa fa-star'></i> " + row.stars;
 }
 
 </script>
@@ -80,17 +80,22 @@ function starFormatter(value, row, index) {
             data-toggle="table"
             data-flat="true"
             class="table-appstore"
+            data-sortable="true"
             data-search="true"
             data-search-align="left"
+            data-search-highlight="true"
             data-total-field="itemCount"
             data-data-field="items"
             data-group-by="true"
             data-group-by-field="link"
             data-group-by-formatter="groupByFormatter"
+            data-group-by-toggle="true"
+            data-group-by-show-toggle-icon="true"
+            data-sortable="true"
+            data-sort-name="stars"
             data-url="/assets/data/jbang-appstore.json">
         <thead>
         <tr>
-            <th>&nbsp;</th>
             <th class="appstore-alias" data-field="command" data-formatter="aliasFormatter">Alias</th>
         </tr>
         </thead>
