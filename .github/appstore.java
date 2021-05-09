@@ -79,11 +79,18 @@ class appstore implements Callable<Integer> {
     item.repoOwner = ghContent.getOwner().getOwnerName();
     item.repoName =  ghContent.getOwner().getName();
 
+    StringBuffer cmd = new StringBuffer(item.alias);
     if(item.repoName.equalsIgnoreCase("jbang-catalog")) {
-      item.command = item.alias + "@" + item.repoOwner;
+      cmd.append("@" + item.repoOwner);
     } else {
-      item.command = item.alias + "@" + item.repoOwner + "/".concat(item.repoName);
+      cmd.append("@" + item.repoOwner + "/" + item.repoName); 
+    } 
+
+    if(!ghContent.getPath().equals("jbang-catalog.json")) {
+      cmd.append("~"  + ghContent.getPath().substring(0, ghContent.getPath().length()-"/jbang-catalog.json".length()));
     }
+    
+    item.command = cmd.toString();
 
     item.link =  ghContent.getHtmlUrl().toString();
     try {
