@@ -49,7 +49,13 @@ function linkFormatter(value, row, index) {
 }
 
 function aliasFormatter(value, row, index) {
-  return "<code>jbang " + row.command + "</code>";
+  var output = "<code>jbang " + row.command + "</code>";
+  
+  if(row.description) {
+     output = output  + "<br/><br>" + row.description;
+  }
+
+  return output;
 }
 function starFormatter(value, row, index) {
     if(row.stars==0) return "-";
@@ -73,7 +79,7 @@ function starFormatter(value, row, index) {
                 <i class="fa fa-github" aria-hidden="true"></i>
             </th>
             <th class="appstore-alias" data-field="command" data-sortable="true" data-formatter="aliasFormatter">Alias</th>
-            <th data-field="description" data-sortable="true">Description</th>
+         <!--   <th data-field="description" data-sortable="true">Description</th> -->
             <th data-field="stars" data-sortable="true" data-formatter="starFormatter">Stars</th>
         </tr>
         </thead>

@@ -78,8 +78,14 @@ class appstore implements Callable<Integer> {
     item.description = entry.getValue().description;
     item.repoOwner = ghContent.getOwner().getOwnerName();
     item.repoName =  ghContent.getOwner().getName();
-    item.command = item.alias + "@" + item.repoOwner + (item.repoName.equalsIgnoreCase("jbang-catalog") ? "" : "/".concat(item.repoName));
-    item.link =  ghContent.getOwner().getHtmlUrl().toString();
+
+    if(item.repoName.equalsIgnoreCase("jbang-catalog")) {
+      item.command = item.alias + "@" + item.repoOwner;
+    } else {
+      item.command = item.alias + "@" + item.repoOwner + "/".concat(item.repoName);
+    }
+
+    item.link =  ghContent.getHtmlUrl().toString();
     try {
       item.icon_url = ghContent.getOwner().getOwner().getAvatarUrl();
     } catch (IOException e) {
@@ -135,6 +141,7 @@ class Cataloger {
   }
 }
 class CatalogerItem {
+  public String url;
   public int stars;
   public String icon_url;
   public String repoOwner;
