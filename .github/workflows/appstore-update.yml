@@ -4,7 +4,7 @@ on:
   schedule:
     # 5 AM daily
     - cron: '0 5 * * *'
-
+  workflow_dispatch:
 jobs:
   github-pages:
     runs-on: ubuntu-16.04
