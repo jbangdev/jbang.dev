@@ -1,91 +1,43 @@
 ---
-layout: index
-title: AppStore
-#group: navigation
-tagline: AppStore
-tags : [appstore]
-img : /images/splash.png
-img-mobile :
-css:
-js:
-keywords: appstore
 permalink: /appstore/
 ---
-{% include JB/setup %}
-
-<div id="grid-container" style="
-    margin: 45px 0;">
-
-    <div class="container">
-
-        <h2>JBang AppStore (Experimental)</h2>
-        <div>
-            JBang supports creating and sharing <a href="https://github.com/jbangdev/jbang#catalogs">catalogs</a>. When shared on github, gitlab, or bitbucket, <a href="https://github.com/jbangdev/jbang#implicit-alias-catalogs">implicit aliasing</a> allows to run scripts from remote repositories.
-            <br/><br/>
-            Executing <code>jbang hello@acme</code> will run <code>hello</code> alias found in <code>acme/jbang-catalog/jbang-catalog.json</code> of the default branch searched on github, gitlab and bitbucket in that order.
-            <br/><br/>
-            This page currently lists jbang aliases found by searching github for `jbang-catalog.json`. If you for some reason do not want your alias listed please open an <a href="https://github.com/jbangdev/jbang/issues">issue</a> stating you would like to have your aliases excluded.
-            <br/><br/>
-            To execute any alias, run <code>jbang [alias]</code>. Example - <code>jbang quarkus-starter@38leinaD</code>.
-            <br/><br/>
-
-            <b>NOTE:</b> Always verify a script code before executing it.
-        </div>
-
-    <!-- Include jQuery and other required
-files for Bootstrap -->
-    <script
-            src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js">
-    </script>
-    <script>
-function linkFormatter(value, row, index) {
-  return "<a href='"+row.link+"'>"+ "<img style='width: 5vw;' src='"+row.icon_url+"'/>" 
-         + "<br/>"
-         + row.repoOwner+"/"+row.repoName+"</a>";
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+<title>JBang! App Store Coming Soon</title>
+<style>
+html {
+    background: url(../images/splash.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
-
-function aliasFormatter(value, row, index) {
-  var output = "<code>jbang " + row.command + "</code>";
-  
-  if(row.description) {
-     output = output  + "<br/><br>" + row.description;
-  }
-
-  return output;
+a {color: white;}
+body {
+    padding: 4em 0 0 0;
 }
-function starFormatter(value, row, index) {
-    if(row.stars==0) return "-";
-    return row.stars;
-}
+h1 {
+    margin: 1em 0 0 0;
+    font-size: 3.25em;}
+h2 { font-size: 2.25em;}
+p {font-size: 2em; }
 
-</script>
-    <table
-            id="appstore-table"
-            data-toggle="table"
-            data-flat="true"
-            class="table-appstore"
-            data-search="true"
-            data-search-align="left"
-            data-total-field="itemCount"
-            data-data-field="items"
-            data-url="/assets/data/jbang-appstore.json">
-        <thead>
-        <tr>
-            <th data-field="link" data-sortable="true" data-formatter="linkFormatter">
-                <i class="fa fa-github" aria-hidden="true"></i>
-            </th>
-            <th class="appstore-alias" data-field="command" data-sortable="true" data-formatter="aliasFormatter">Alias</th>
-         <!--   <th data-field="description" data-sortable="true">Description</th> -->
-            <th data-field="stars" data-sortable="true" data-formatter="starFormatter">Stars</th>
-        </tr>
-        </thead>
-    </table>
+	</style>
+</head>
 
-
-</div>
-</div>
-
+<body>
+<div><img src="../images/jbang_appicon.png" width="400" height="400" alt=""/>
+  <h1>JBang AppStore</h1>
+  <h2>Truly run anything anywhere</h2>
+  <p>Coming Soon!</p>
+  <p>Scan or <a href="mailto:appstore@jbang.dev?subject=JBang%20AppStore%20Signup&body=Truly%20Run%20Anything%20Anywhere%0a%0a---%20questions/suggestions%20below%20this%20line%20---">Click</a> to learn more</p>
+  <a href="mailto:appstore@jbang.dev?subject=JBang%20AppStore%20Signup&body=Truly%20Run%20Anything%20Anywhere%0a%0a---%20questions/suggestions%20below%20this%20line%20---"><img src="../images/scan.png" width="300" height="300" alt=""/> </a> </div>
+</body>
+</html>
