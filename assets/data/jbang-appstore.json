@@ -1,9 +1,9 @@
 {
   "itemCount": 144,
-  "generatedAt": "2021-05-09T13:47:16.798475+02:00[Europe/Zurich]",
+  "generatedAt": "2021-05-09T17:15:19.887997+02:00[Europe/Zurich]",
   "items": [
     {
-      "stars": 4761,
+      "stars": 4762,
       "icon_url": "https://avatars.githubusercontent.com/u/2495066?v\u003d4",
       "repoOwner": "intuit",
       "repoName": "karate",
@@ -614,6 +614,91 @@
       "link": "https://github.com/jbangdev/jbang-examples/blob/98a93b46964e7123e6d11999a672d7ca3d4087dc/jbang-catalog.json"
     },
     {
+      "stars": 7,
+      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
+      "repoOwner": "jbangdev",
+      "repoName": "jbang-catalog",
+      "alias": "hello",
+      "description": "Script that says hello back for each argument",
+      "scriptRef": "hello.java",
+      "command": "hello@jbangdev",
+      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
+    },
+    {
+      "stars": 7,
+      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
+      "repoOwner": "jbangdev",
+      "repoName": "jbang-catalog",
+      "alias": "properties",
+      "description": "Dump table of System properties",
+      "scriptRef": "properties.java",
+      "command": "properties@jbangdev",
+      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
+    },
+    {
+      "stars": 7,
+      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
+      "repoOwner": "jbangdev",
+      "repoName": "jbang-catalog",
+      "alias": "env",
+      "description": "Dump table of Environment Variables",
+      "scriptRef": "env.java",
+      "command": "env@jbangdev",
+      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
+    },
+    {
+      "stars": 7,
+      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
+      "repoOwner": "jbangdev",
+      "repoName": "jbang-catalog",
+      "alias": "gavsearch",
+      "description": "Search search.maven.org for maven artifacts.",
+      "scriptRef": "gavsearch.java",
+      "command": "gavsearch@jbangdev",
+      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
+    },
+    {
+      "stars": 7,
+      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
+      "repoOwner": "jbangdev",
+      "repoName": "jbang-catalog",
+      "alias": "git",
+      "description": "Git command line tool implemented with jgit. Lets you do basic git features without installing git!",
+      "scriptRef": "jgit.java",
+      "command": "git@jbangdev",
+      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
+    },
+    {
+      "stars": 7,
+      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
+      "repoOwner": "jbangdev",
+      "repoName": "jbang-catalog",
+      "alias": "bouncinglogo",
+      "scriptRef": "bouncinglogo.java",
+      "command": "bouncinglogo@jbangdev",
+      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
+    },
+    {
+      "stars": 7,
+      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
+      "repoOwner": "jbangdev",
+      "repoName": "jbang-catalog",
+      "alias": "h2",
+      "scriptRef": "com.h2database:h2:1.4.200",
+      "command": "h2@jbangdev",
+      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
+    },
+    {
+      "stars": 7,
+      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
+      "repoOwner": "jbangdev",
+      "repoName": "jbang-catalog",
+      "alias": "catalog2readme",
+      "scriptRef": "catalog2readme.java",
+      "command": "catalog2readme@jbangdev",
+      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
+    },
+    {
       "stars": 6,
       "icon_url": "https://avatars.githubusercontent.com/u/915480?v\u003d4",
       "repoOwner": "ptrthomas",
@@ -909,6 +994,16 @@
     },
     {
       "stars": 2,
+      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
+      "repoOwner": "jbangdev",
+      "repoName": "jbang-minecraft",
+      "alias": "sponge",
+      "scriptRef": "sponge.java",
+      "command": "sponge@jbangdev/jbang-minecraft",
+      "link": "https://github.com/jbangdev/jbang-minecraft/blob/5655cd56ae720fbec4618273d25fd3b1b749c283/jbang-catalog.json"
+    },
+    {
+      "stars": 2,
       "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
       "repoOwner": "grumpyf0x48",
       "repoName": "jbang-catalog",
@@ -985,101 +1080,6 @@
       "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/98be227b8c448f94a2280607728c5203d308ecd8/jbang-catalog.json"
     },
     {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "repoOwner": "jbangdev",
-      "repoName": "jbang-catalog",
-      "alias": "hello",
-      "description": "Script that says hello back for each argument",
-      "scriptRef": "hello.java",
-      "command": "hello@jbangdev",
-      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "repoOwner": "jbangdev",
-      "repoName": "jbang-catalog",
-      "alias": "properties",
-      "description": "Dump table of System properties",
-      "scriptRef": "properties.java",
-      "command": "properties@jbangdev",
-      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "repoOwner": "jbangdev",
-      "repoName": "jbang-catalog",
-      "alias": "env",
-      "description": "Dump table of Environment Variables",
-      "scriptRef": "env.java",
-      "command": "env@jbangdev",
-      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "repoOwner": "jbangdev",
-      "repoName": "jbang-catalog",
-      "alias": "gavsearch",
-      "description": "Search search.maven.org for maven artifacts.",
-      "scriptRef": "gavsearch.java",
-      "command": "gavsearch@jbangdev",
-      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "repoOwner": "jbangdev",
-      "repoName": "jbang-catalog",
-      "alias": "git",
-      "description": "Git command line tool implemented with jgit. Lets you do basic git features without installing git!",
-      "scriptRef": "jgit.java",
-      "command": "git@jbangdev",
-      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "repoOwner": "jbangdev",
-      "repoName": "jbang-catalog",
-      "alias": "bouncinglogo",
-      "scriptRef": "bouncinglogo.java",
-      "command": "bouncinglogo@jbangdev",
-      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "repoOwner": "jbangdev",
-      "repoName": "jbang-catalog",
-      "alias": "h2",
-      "scriptRef": "com.h2database:h2:1.4.200",
-      "command": "h2@jbangdev",
-      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "repoOwner": "jbangdev",
-      "repoName": "jbang-catalog",
-      "alias": "catalog2readme",
-      "scriptRef": "catalog2readme.java",
-      "command": "catalog2readme@jbangdev",
-      "link": "https://github.com/jbangdev/jbang-catalog/blob/6c02d2a71d460718b561ad7f0aa9bda3d9b762ff/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "repoOwner": "jbangdev",
-      "repoName": "jbang-minecraft",
-      "alias": "sponge",
-      "scriptRef": "sponge.java",
-      "command": "sponge@jbangdev/jbang-minecraft",
-      "link": "https://github.com/jbangdev/jbang-minecraft/blob/5655cd56ae720fbec4618273d25fd3b1b749c283/jbang-catalog.json"
-    },
-    {
       "stars": 1,
       "icon_url": "https://avatars.githubusercontent.com/u/1939631?v\u003d4",
       "repoOwner": "jacoco",
@@ -1111,6 +1111,27 @@
       "scriptRef": "https://raw.githubusercontent.com/tbee/mavenToolchains/main/GenerateToolchainsFromSDKMAN.java",
       "command": "sdkman@tbee/mavenToolchains",
       "link": "https://github.com/tbee/mavenToolchains/blob/d2ad3a08fec947a7ddfe661bfd9427b2afc09931/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/114367?v\u003d4",
+      "repoOwner": "mbien",
+      "repoName": "JFRLog",
+      "alias": "jfrprint",
+      "description": "Prints formatted JFR events from JFR dumps or streams them live from repositories.",
+      "scriptRef": "JFRPrint.java",
+      "command": "jfrprint@mbien/JFRLog~cli",
+      "link": "https://github.com/mbien/JFRLog/blob/e9e6e3d17fda51a1e7d09450e0b7f23c1d8adae4/cli/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/27861160?v\u003d4",
+      "repoOwner": "gomezrondon",
+      "repoName": "spring-in-container",
+      "alias": "cleanyaml",
+      "scriptRef": "jscript.java",
+      "command": "cleanyaml@gomezrondon/spring-in-container~script",
+      "link": "https://github.com/gomezrondon/spring-in-container/blob/546df82c9b5bd1159c9866101c79a2fd5d3b1388/script/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -1163,112 +1184,6 @@
       "scriptRef": "awsssm.java",
       "command": "awsssm@base2Services",
       "link": "https://github.com/base2Services/jbang-catalog/blob/b35b5a203947f6e6eae17d5cfd22abb04aa1bbcc/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/114367?v\u003d4",
-      "repoOwner": "mbien",
-      "repoName": "JFRLog",
-      "alias": "jfrprint",
-      "description": "Prints formatted JFR events from JFR dumps or streams them live from repositories.",
-      "scriptRef": "JFRPrint.java",
-      "command": "jfrprint@mbien/JFRLog~cli",
-      "link": "https://github.com/mbien/JFRLog/blob/e9e6e3d17fda51a1e7d09450e0b7f23c1d8adae4/cli/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/27861160?v\u003d4",
-      "repoOwner": "gomezrondon",
-      "repoName": "spring-in-container",
-      "alias": "cleanyaml",
-      "scriptRef": "jscript.java",
-      "command": "cleanyaml@gomezrondon/spring-in-container~script",
-      "link": "https://github.com/gomezrondon/spring-in-container/blob/546df82c9b5bd1159c9866101c79a2fd5d3b1388/script/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/3177316?v\u003d4",
-      "repoOwner": "sansnom",
-      "repoName": "jbang-catalog",
-      "alias": "http-server",
-      "description": "HttpServer to serve files.",
-      "scriptRef": "src/HttpServerJDK.java",
-      "command": "http-server@sansnom",
-      "link": "https://github.com/sansnom/jbang-catalog/blob/4391b0f65282b6ac2dc791f60c16eccbcb355132/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/3177316?v\u003d4",
-      "repoOwner": "sansnom",
-      "repoName": "jbang-catalog",
-      "alias": "tls-client",
-      "description": "Test TLS connection and build keystore.",
-      "scriptRef": "src/TLSClient.java",
-      "command": "tls-client@sansnom",
-      "link": "https://github.com/sansnom/jbang-catalog/blob/4391b0f65282b6ac2dc791f60c16eccbcb355132/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/3177316?v\u003d4",
-      "repoOwner": "sansnom",
-      "repoName": "jbang-catalog",
-      "alias": "keytool",
-      "description": "Display keystore (keytool but less verbose).",
-      "scriptRef": "src/KeyStoreShow.java",
-      "command": "keytool@sansnom",
-      "link": "https://github.com/sansnom/jbang-catalog/blob/4391b0f65282b6ac2dc791f60c16eccbcb355132/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/81020166?v\u003d4",
-      "repoOwner": "jreleaser",
-      "repoName": "jbang-catalog",
-      "alias": "jreleaser",
-      "description": "Release Java projects quickly and easily with JReleaser",
-      "scriptRef": "jreleaser.java",
-      "command": "jreleaser@jreleaser",
-      "link": "https://github.com/jreleaser/jbang-catalog/blob/83a6ca3abba512740e1e6a47705ecbdca2ffaf73/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/81020166?v\u003d4",
-      "repoOwner": "jreleaser",
-      "repoName": "jbang-catalog",
-      "alias": "jreleaser-snapshot",
-      "description": "Release Java projects quickly and easily with JReleaser",
-      "scriptRef": "jreleaser_snapshot.java",
-      "command": "jreleaser-snapshot@jreleaser",
-      "link": "https://github.com/jreleaser/jbang-catalog/blob/83a6ca3abba512740e1e6a47705ecbdca2ffaf73/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/335133?v\u003d4",
-      "repoOwner": "sebastienblanc",
-      "repoName": "limit-request",
-      "alias": "kubectl-limit",
-      "scriptRef": "src/kubectl-limit",
-      "command": "kubectl-limit@sebastienblanc/limit-request",
-      "link": "https://github.com/sebastienblanc/limit-request/blob/010bc8d7617ddfec40ca609cc0e29234735600b0/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/71794210?v\u003d4",
-      "repoOwner": "tgm-templates",
-      "repoName": "jbang-script",
-      "alias": "HelloWorld",
-      "scriptRef": "src/jbang/hello/HelloWorld.java",
-      "command": "HelloWorld@tgm-templates/jbang-script",
-      "link": "https://github.com/tgm-templates/jbang-script/blob/11062629ef2caa1a0b92118eef5d698529dbe008/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/71858344?v\u003d4",
-      "repoOwner": "alibaba-rsocket-broker",
-      "repoName": "jbang-examples",
-      "alias": "BrokerClient",
-      "scriptRef": "src/jbang/hello/RSocketBrokerClientApp.java",
-      "command": "BrokerClient@alibaba-rsocket-broker/jbang-examples",
-      "link": "https://github.com/alibaba-rsocket-broker/jbang-examples/blob/c71c01c32bf1fe39dd11352a27c683090bb24efe/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -1491,6 +1406,91 @@
       "scriptRef": "https://raw.githubusercontent.com/tbee/mavenToolchains/main/GenerateToolchainsFromSDKMAN.java",
       "command": "mvnToolchainsSDKMAN@tbee",
       "link": "https://github.com/tbee/jbang-catalog/blob/6a66ae95836b0aa2565eb9d3840b335b94dce056/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/3177316?v\u003d4",
+      "repoOwner": "sansnom",
+      "repoName": "jbang-catalog",
+      "alias": "http-server",
+      "description": "HttpServer to serve files.",
+      "scriptRef": "src/HttpServerJDK.java",
+      "command": "http-server@sansnom",
+      "link": "https://github.com/sansnom/jbang-catalog/blob/4391b0f65282b6ac2dc791f60c16eccbcb355132/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/3177316?v\u003d4",
+      "repoOwner": "sansnom",
+      "repoName": "jbang-catalog",
+      "alias": "tls-client",
+      "description": "Test TLS connection and build keystore.",
+      "scriptRef": "src/TLSClient.java",
+      "command": "tls-client@sansnom",
+      "link": "https://github.com/sansnom/jbang-catalog/blob/4391b0f65282b6ac2dc791f60c16eccbcb355132/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/3177316?v\u003d4",
+      "repoOwner": "sansnom",
+      "repoName": "jbang-catalog",
+      "alias": "keytool",
+      "description": "Display keystore (keytool but less verbose).",
+      "scriptRef": "src/KeyStoreShow.java",
+      "command": "keytool@sansnom",
+      "link": "https://github.com/sansnom/jbang-catalog/blob/4391b0f65282b6ac2dc791f60c16eccbcb355132/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/81020166?v\u003d4",
+      "repoOwner": "jreleaser",
+      "repoName": "jbang-catalog",
+      "alias": "jreleaser",
+      "description": "Release Java projects quickly and easily with JReleaser",
+      "scriptRef": "jreleaser.java",
+      "command": "jreleaser@jreleaser",
+      "link": "https://github.com/jreleaser/jbang-catalog/blob/83a6ca3abba512740e1e6a47705ecbdca2ffaf73/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/81020166?v\u003d4",
+      "repoOwner": "jreleaser",
+      "repoName": "jbang-catalog",
+      "alias": "jreleaser-snapshot",
+      "description": "Release Java projects quickly and easily with JReleaser",
+      "scriptRef": "jreleaser_snapshot.java",
+      "command": "jreleaser-snapshot@jreleaser",
+      "link": "https://github.com/jreleaser/jbang-catalog/blob/83a6ca3abba512740e1e6a47705ecbdca2ffaf73/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/335133?v\u003d4",
+      "repoOwner": "sebastienblanc",
+      "repoName": "limit-request",
+      "alias": "kubectl-limit",
+      "scriptRef": "src/kubectl-limit",
+      "command": "kubectl-limit@sebastienblanc/limit-request",
+      "link": "https://github.com/sebastienblanc/limit-request/blob/010bc8d7617ddfec40ca609cc0e29234735600b0/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/71794210?v\u003d4",
+      "repoOwner": "tgm-templates",
+      "repoName": "jbang-script",
+      "alias": "HelloWorld",
+      "scriptRef": "src/jbang/hello/HelloWorld.java",
+      "command": "HelloWorld@tgm-templates/jbang-script",
+      "link": "https://github.com/tgm-templates/jbang-script/blob/11062629ef2caa1a0b92118eef5d698529dbe008/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/71858344?v\u003d4",
+      "repoOwner": "alibaba-rsocket-broker",
+      "repoName": "jbang-examples",
+      "alias": "BrokerClient",
+      "scriptRef": "src/jbang/hello/RSocketBrokerClientApp.java",
+      "command": "BrokerClient@alibaba-rsocket-broker/jbang-examples",
+      "link": "https://github.com/alibaba-rsocket-broker/jbang-examples/blob/c71c01c32bf1fe39dd11352a27c683090bb24efe/jbang-catalog.json"
     }
   ]
 }
