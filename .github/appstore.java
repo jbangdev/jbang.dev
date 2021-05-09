@@ -29,6 +29,12 @@ import java.util.stream.Collectors;
         description = "appstore made with jbang")
 class appstore implements Callable<Integer> {
 
+  final static Set<String> excludedCatalogs = new HashSet<>();
+
+  static {
+    excludedCatalogs.add("jbangdev/jbang/itests/jbang-catalog.json");   
+  }
+
   @Option(names = {"-d", "--destDir"}, defaultValue = "./assets/data/", description = "Destination dir to generate cataloger")
   private Path destinationDir;
 
@@ -52,13 +58,20 @@ class appstore implements Callable<Integer> {
     List<CatalogerItem> catalogerItems = new ArrayList<>();
     PagedSearchIterable<GHContent> ghContents = gitHub.searchContent().filename("jbang-catalog.json").extension(".json").list().withPageSize(500);
     for (GHContent content: ghContents) {
-      System.out.println("Processing - " + content.getOwner().getFullName() + "/" + content.getPath());
+      String location = content.getOwner().getFullName() + "/" + content.getPath();
+      if(excludedCatalogs.contains(location)) {
+        System.out.println("Excluded - " + location);
+      } else {
+        System.out.println("Processing - " + location);
       var catalogContent = toJsonElement(gson, content);
       if(catalogContent != null) {
         catalogContent.aliases
-                .entrySet().stream().map(entry -> toCatalogerItem(entry, content))
+                .entrySet().stream()
+                .map(entry -> toCatalogerItem(entry, content))
+                
                 .forEach(catalogerItems::add);
       }
+    }
     }
 
     List<CatalogerItem> sorted = catalogerItems.stream().sorted(Comparator.comparing(catalogerItem -> -catalogerItem.stars)).collect(Collectors.toList());
