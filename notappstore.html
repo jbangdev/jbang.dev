@@ -42,31 +42,36 @@ permalink: /notappstore/
     <!-- Include jQuery and other required
 files for Bootstrap -->
     <script
-            src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
             crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js">
-    </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+        <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/group-by-v2/bootstrap-table-group-by.min.js"></script>
     <script>
 function linkFormatter(value, row, index) {
   return "<a href='"+row.link+"'>"+ "<img style='width: 5vw;' src='"+row.icon_url+"'/>" 
          + "<br/>"
-         + row.repoOwner+"/"+row.repoName+"</a>";
+         + row.repoOwner+"/"+row.repoName+"</a> [ ]";
 }
-
+function groupByFormatter(item,index,rows) {
+    var row = rows[0];
+    return "<a href='"+row.link+"'>"+ "<img style='width: 5vw;' src='"+row.icon_url+"'/>  " +
+        "<i class='fa fa-github' aria-hidden='true'></i>  "
+        + row.repoOwner+"/"+row.repoName+"</a>"
+        + " " + starFormatter(item, row, index);
+}
 function aliasFormatter(value, row, index) {
   var output = "<code>jbang " + row.command + "</code>";
   
   if(row.description) {
-     output = output  + "<br/><br>" + row.description;
+     output = output  + "<div style='white-space: pre-wrap'>" + row.description + "</div>";
   }
 
   return output;
 }
 function starFormatter(value, row, index) {
-    if(row.stars==0) return "-";
-    return row.stars;
+    if(row.stars==0) return "";
+    return "<i class='fa fa-star'></i> " + row.stars;
 }
 
 </script>
@@ -75,23 +80,26 @@ function starFormatter(value, row, index) {
             data-toggle="table"
             data-flat="true"
             class="table-appstore"
+            data-sortable="true"
             data-search="true"
             data-search-align="left"
+            data-search-highlight="true"
             data-total-field="itemCount"
             data-data-field="items"
+            data-group-by="true"
+            data-group-by-field="link"
+            data-group-by-formatter="groupByFormatter"
+            data-group-by-toggle="true"
+            data-group-by-show-toggle-icon="true"
+            data-sortable="true"
+            data-sort-name="stars"
             data-url="/assets/data/jbang-appstore.json">
         <thead>
         <tr>
-            <th data-field="link" data-sortable="true" data-formatter="linkFormatter">
-                <i class="fa fa-github" aria-hidden="true"></i>
-            </th>
-            <th class="appstore-alias" data-field="command" data-sortable="true" data-formatter="aliasFormatter">Alias</th>
-         <!--   <th data-field="description" data-sortable="true">Description</th> -->
-            <th data-field="stars" data-sortable="true" data-formatter="starFormatter">Stars</th>
+            <th class="appstore-alias" data-field="command" data-formatter="aliasFormatter">Alias</th>
         </tr>
         </thead>
     </table>
-
 
 </div>
 </div>
