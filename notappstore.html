@@ -56,10 +56,10 @@ function linkFormatter(value, row, index) {
 }
 function groupByFormatter(item,index,rows) {
     var row = rows[0];
-    return "<a href='"+row.link+"'>"+ "<img style='width: 5vw;' src='"+row.icon_url+"'/>  " +
+    return "<h2><a href='"+row.link+"'>"+ "<img style='width: 5vw;' src='"+row.icon_url+"'/>  " +
         "<i class='fa fa-github' aria-hidden='true'></i>  "
         + row.repoOwner+"/"+row.repoName+"</a>"
-        + " " + starFormatter(item, row, index);
+        + " " + starFormatter(item, row, index) + "</h2>";
 }
 function aliasFormatter(value, row, index) {
   var output;

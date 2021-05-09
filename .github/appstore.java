@@ -2,9 +2,13 @@
 //DEPS info.picocli:picocli:4.5.0
 //DEPS org.kohsuke:github-api:1.128
 //DEPS com.google.code.gson:gson:2.8.6
+//DEPS org.commonmark:commonmark:0.17.1
 
 import com.google.gson.*;
 import com.google.gson.annotations.SerializedName;
+
+import org.commonmark.parser.Parser;
+import org.commonmark.renderer.html.HtmlRenderer;
 import org.kohsuke.github.*;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
@@ -89,6 +93,17 @@ class appstore implements Callable<Integer> {
     item.alias = entry.getKey();
     item.scriptRef = entry.getValue().scriptRef;
     item.description = entry.getValue().description;
+
+    if(item.description!=null){
+    Parser parser = Parser.builder().build();
+    var document = parser.parse(item.description);
+    HtmlRenderer renderer = HtmlRenderer.builder().build();
+    var html = renderer.render(document);
+    System.out.println(item.description + "=>" + html);
+    item.description = html;
+
+    }
+
     item.repoOwner = ghContent.getOwner().getOwnerName();
     item.repoName =  ghContent.getOwner().getName();
 
@@ -152,7 +167,6 @@ class Alias {
 }
 class Cataloger {
   public final int itemCount;
-  public final String generatedAt = ZonedDateTime.now().format(DateTimeFormatter.ISO_ZONED_DATE_TIME);
   public final List<CatalogerItem> items;
 
   public Cataloger(List<CatalogerItem> items) {
