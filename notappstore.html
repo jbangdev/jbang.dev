@@ -42,19 +42,24 @@ permalink: /notappstore/
     <!-- Include jQuery and other required
 files for Bootstrap -->
     <script
-            src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
             crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js">
-    </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+        <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/group-by-v2/bootstrap-table-group-by.min.js"></script>
     <script>
 function linkFormatter(value, row, index) {
   return "<a href='"+row.link+"'>"+ "<img style='width: 5vw;' src='"+row.icon_url+"'/>" 
          + "<br/>"
-         + row.repoOwner+"/"+row.repoName+"</a>";
+         + row.repoOwner+"/"+row.repoName+"</a> [ ]";
 }
-
+function groupByFormatter(item,index,rows) {
+    var row = rows[0];
+    return "<a href='"+row.link+"'>"+ "<img style='width: 2vw;' src='"+row.icon_url+"'/>  " +
+        "<i class='fa fa-github' aria-hidden='true'></i>  "
+        + row.repoOwner+"/"+row.repoName+"</a>"
+        + "  <i class='fa fa-star'></i>" + starFormatter(item, row, index);
+}
 function aliasFormatter(value, row, index) {
   var output = "<code>jbang " + row.command + "</code>";
   
@@ -79,19 +84,17 @@ function starFormatter(value, row, index) {
             data-search-align="left"
             data-total-field="itemCount"
             data-data-field="items"
+            data-group-by="true"
+            data-group-by-field="link"
+            data-group-by-formatter="groupByFormatter"
             data-url="/assets/data/jbang-appstore.json">
         <thead>
         <tr>
-            <th data-field="link" data-sortable="true" data-formatter="linkFormatter">
-                <i class="fa fa-github" aria-hidden="true"></i>
-            </th>
-            <th class="appstore-alias" data-field="command" data-sortable="true" data-formatter="aliasFormatter">Alias</th>
-         <!--   <th data-field="description" data-sortable="true">Description</th> -->
-            <th data-field="stars" data-sortable="true" data-formatter="starFormatter">Stars</th>
+            <th>&nbsp;</th>
+            <th class="appstore-alias" data-field="command" data-formatter="aliasFormatter">Alias</th>
         </tr>
         </thead>
     </table>
-
 
 </div>
 </div>
