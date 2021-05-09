@@ -6,14 +6,14 @@ on:
     - cron: '0 5 * * *'
   workflow_dispatch:
 jobs:
-  github-pages:
+  appstore-update:
     runs-on: ubuntu-16.04
     steps:
       - uses: actions/checkout@v2
       - name: jbang
         uses: jbangdev/jbang-action@v0.70.0
         with:
-          script: jbangcataloger.java
+          script: .github/appstore.java
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit updates
