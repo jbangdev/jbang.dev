@@ -1,5 +1,5 @@
 ---
-layout: index
+layout: appstore
 title: AppStore
 #group: navigation
 tagline: AppStore
@@ -10,103 +10,12 @@ css:
 js:
 keywords: appstore
 permalink: /notappstore/
+store-data-url: /assets/data/jbang-appstore.json
+thing-plural: aliases
+thing-single: alias
+tip-help: With JBang installed you can run any of the aliases from the JBang AppStore!, i.e. <code>jbang jreleaser@jreleaser</code> to run <a href="https://jreleaser.org">jreleaser</a>.
+total-field: aliasCount
+data-field: aliases
 ---
-{% include JB/setup %}
 
-<div id="grid-container" style="
-    margin: 45px 0;">
-
-    <div class="container">
-
-        <h2>JBang AppStore (Experimental)</h2>
-        <h2>Please do not share this page/url yet!</h2>
-        <div>
-            Below is a index of JBang aliases available on GitHub in <a href="https://github.com/jbangdev/jbang#catalogs">JBang Catalogs.</a><br/><br/>
-
-            To use it <a href="/download">Download or Install</a> JBang or run the following command from any bash compatible terminal: 
-            <br/></br/>
-            <center><code style="font-size:20px;">curl -Ls https://sh.jbang.dev | bash -s - app setup</code></center>
-            <br/> 
-            or in a Windows Powershell:
-            <br/></br/>
-            <center><code style="font-size:20px;">iex "& { $(iwr https://ps.jbang.dev) } app setup jbang"</code></center>
-            <br/> 
-             
-            <br/><br/>
-            With JBang installed you can run any of the aliases from the JBang AppStore!, i.e. <code>jbang jreleaser@jreleaser</code> to run <a href="https://jreleaser.org">jreleaser</a>.
-            <br/><br/>
-
-            <b>NOTE:</b> Always verify a script code before executing it.
-        </div>
-
-    <!-- Include jQuery and other required
-files for Bootstrap -->
-    <script
-            src="https://code.jquery.com/jquery-3.6.0.min.js"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
-        <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
-        <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/group-by-v2/bootstrap-table-group-by.min.js"></script>
-    <script>
-function linkFormatter(value, row, index) {
-  return "<a href='"+row.link+"'>"+ "<img style='width: 5vw;' src='"+row.icon_url+"'/>" 
-         + "<br/>"
-         + row.repoOwner+"/"+row.repoName+"</a> [ ]";
-}
-function groupByFormatter(item,index,rows) {
-    var row = rows[0];
-    return "<h2><a href='"+row.link+"'>"+ "<img style='width: 5vw;' src='"+row.icon_url+"'/>  " +
-        "<i class='fa fa-github' aria-hidden='true'></i>  "
-        + row.repoOwner+"/"+row.repoName+"</a>"
-        + " " + starFormatter(item, row, index) + "</h2>";
-}
-function aliasFormatter(value, row, index) {
-  var output;
-
-  output = "<button class='tooltipped tooltipped-se copyButton' aria-label='Copy jbang command to clipboard'  data-clipboard-text='jbang " + row.command +"'><i class='fa fa-clipboard'></i></button>";
-  output = output + " <code>" + row.command + "</code>";
-  if(row.description) {
-     output = output  + "<div style='white-space: pre-wrap'>" + row.description + "</div>";
-  }
-
-  return output;
-}
-function starFormatter(value, row, index) {
-    if(row.stars==0) return "";
-    return "<i class='fa fa-star'></i> " + row.stars;
-}
-
-</script>
-    <table
-            id="appstore-table"
-            data-toggle="table"
-            data-flat="true"
-            class="table-appstore"
-            data-sortable="true"
-            data-search="true"
-            data-search-align="left"
-            data-search-highlight="true"
-            data-total-field="itemCount"
-            data-data-field="items"
-            data-group-by="true"
-            data-group-by-field="link"
-            data-group-by-formatter="groupByFormatter"
-            data-group-by-toggle="true"
-            data-group-by-show-toggle-icon="true"
-            data-sortable="true"
-            data-sort-name="stars"
-            data-url="/assets/data/jbang-appstore.json">
-        <thead>
-        <tr>
-            <th class="appstore-alias" data-field="command" data-formatter="aliasFormatter">Alias</th>
-        </tr>
-        </thead>
-    </table>
-
-        <script>
-            var clipboard = new ClipboardJS('.copyButton');
-        </script>
-</div>
-</div>
 

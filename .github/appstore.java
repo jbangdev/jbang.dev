@@ -46,6 +46,7 @@ class appstore implements Callable<Integer> {
 
   static {
     excludedCatalogs.add("jbangdev/jbang/itests/jbang-catalog.json");
+   // excludedCatalogs.add("jbangdev/jbang/src/main/resources/jbang-catalog.json"); // todo: treat special to just have it be jbang -t xxx ?
   }
 
   @Option(names = { "-d",
@@ -70,7 +71,8 @@ class appstore implements Callable<Integer> {
     gitHub = GitHub.connect("", ghToken);
     System.out.println(gitHub.getRateLimit().toString());
     var gson = new GsonBuilder().setPrettyPrinting().create();
-    List<CatalogerItem> catalogerItems = new ArrayList<>();
+    List<CatalogerItem> aliasItems = new ArrayList<>();
+    List<CatalogerItem> templateItems = new ArrayList<>();
     PagedSearchIterable<GHContent> ghContents = gitHub.searchContent().filename("jbang-catalog.json").extension(".json")
         .list().withPageSize(500);
     for (GHContent content : ghContents) {
@@ -82,15 +84,21 @@ class appstore implements Callable<Integer> {
         var catalogContent = toJsonElement(gson, content);
         if (catalogContent != null) {
           catalogContent.aliases.entrySet().stream().map(entry -> toCatalogerItem(entry, content))
+              .forEach(aliasItems::add);
 
-              .forEach(catalogerItems::add);
+          catalogContent.templates.entrySet().stream().map(entry -> templateToItem(entry, content))
+              .forEach(templateItems::add);
         }
       }
     }
 
-    List<CatalogerItem> sorted = catalogerItems.stream()
+    List<CatalogerItem> sortedAliases = aliasItems.stream()
         .sorted(Comparator.comparing(catalogerItem -> -catalogerItem.stars)).collect(Collectors.toList());
-    var cataloger = new Cataloger(sorted);
+
+        List<CatalogerItem> sortedTemplates = templateItems.stream()
+        .sorted(Comparator.comparing(catalogerItem -> -catalogerItem.stars)).collect(Collectors.toList());
+  
+    var cataloger = new Cataloger(sortedAliases,sortedTemplates);
     String catalogerContent = gson.toJson(cataloger);
     destinationDir.toFile().mkdirs();
     var path = destinationDir.resolve("jbang-appstore.json");
@@ -99,45 +107,27 @@ class appstore implements Callable<Integer> {
     return 0;
   }
 
-  private CatalogerItem toCatalogerItem(Map.Entry<String, Alias> entry, GHContent ghContent) {
+  private CatalogerItem templateToItem(Map.Entry<String, Template> entry, GHContent ghContent) {
     var item = new CatalogerItem();
     item.alias = entry.getKey();
-    item.scriptRef = entry.getValue().scriptRef;
+    item.scriptRef = null;
     item.description = entry.getValue().description;
 
     if (item.description != null) {
-      List<Extension> extensions = Arrays.asList(TablesExtension.create(), AutolinkExtension.create(),
-          StrikethroughExtension.create(), TaskListItemsExtension.create());
-      Parser parser = Parser.builder().extensions(extensions).build();
-      var document = parser.parse(item.description);
-      HtmlRenderer renderer = HtmlRenderer.builder().extensions(extensions).sanitizeUrls(true).escapeHtml(true).build();
-      var html = renderer.render(document);
-      //System.out.println(item.description + "=>" + html);
-      item.description = html;
-
+      item.description = md2html(item.description);
     }
 
     item.repoOwner = ghContent.getOwner().getOwnerName();
     item.repoName = ghContent.getOwner().getName();
 
-    StringBuffer cmd = new StringBuffer(item.alias);
-    if (item.repoName.equalsIgnoreCase("jbang-catalog")) {
-      cmd.append("@" + item.repoOwner);
-    } else {
-      cmd.append("@" + item.repoOwner + "/" + item.repoName);
-    }
-
-    if (!ghContent.getPath().equals("jbang-catalog.json")) {
-      cmd.append("~" + ghContent.getPath().substring(0, ghContent.getPath().length() - "/jbang-catalog.json".length()));
-    }
+    StringBuffer cmd = aliasToCommand(ghContent, item.alias, item.repoName, item.repoOwner);
 
     item.command = cmd.toString();
-
+    item.fullcommand = "jbang init -t " + item.command + " app.java";
     item.link = ghContent.getHtmlUrl().toString();
     try {
       item.icon_url = ghContent.getOwner().getOwner().getAvatarUrl();
     } catch (IOException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
 
@@ -155,6 +145,70 @@ class appstore implements Callable<Integer> {
     return item;
   }
 
+  private CatalogerItem toCatalogerItem(Map.Entry<String, Alias> entry, GHContent ghContent) {
+    var item = new CatalogerItem();
+    item.alias = entry.getKey();
+    item.scriptRef = entry.getValue().scriptRef;
+    item.description = entry.getValue().description;
+
+    if (item.description != null) {
+      item.description = md2html(item.description);
+    }
+
+    item.repoOwner = ghContent.getOwner().getOwnerName();
+    item.repoName = ghContent.getOwner().getName();
+
+    StringBuffer cmd = aliasToCommand(ghContent, item.alias, item.repoName, item.repoOwner);
+
+    item.command = cmd.toString();
+    item.fullcommand = "jbang init -t " + item.command + " app.java";
+
+    item.link = ghContent.getHtmlUrl().toString();
+    try {
+      item.icon_url = ghContent.getOwner().getOwner().getAvatarUrl();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+    // work around https://github.com/hub4j/github-api/issues/1140
+    try {
+      Integer stars = starCache.get(ghContent.getOwner().getFullName());
+      if (stars == null) {
+        stars = gitHub.getRepository(ghContent.getOwner().getFullName()).getStargazersCount();
+        starCache.put(ghContent.getOwner().getFullName(), stars);
+      }
+      item.stars = stars;
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return item;
+  }
+
+  private StringBuffer aliasToCommand(GHContent ghContent, String alias, String repoName, String repoOwner) {
+    StringBuffer cmd = new StringBuffer(alias);
+    if (repoName.equalsIgnoreCase("jbang-catalog")) {
+      cmd.append("@" + repoOwner);
+    } else {
+      cmd.append("@" + repoOwner + "/" + repoName);
+    }
+
+    if (!ghContent.getPath().equals("jbang-catalog.json")) {
+      cmd.append("~" + ghContent.getPath().substring(0, ghContent.getPath().length() - "/jbang-catalog.json".length()));
+    }
+    return cmd;
+  }
+
+  private String md2html(String markdown) {
+    List<Extension> extensions = Arrays.asList(TablesExtension.create(), AutolinkExtension.create(),
+        StrikethroughExtension.create(), TaskListItemsExtension.create());
+    Parser parser = Parser.builder().extensions(extensions).build();
+    var document = parser.parse(markdown);
+    HtmlRenderer renderer = HtmlRenderer.builder().extensions(extensions).sanitizeUrls(true).escapeHtml(true).build();
+    var html = renderer.render(document);
+    //System.out.println(item.description + "=>" + html);
+    return html;
+  }
+
   private Catalog toJsonElement(Gson gson, GHContent catalogContent) throws IOException {
     if (catalogContent == null)
       return null;
@@ -162,6 +216,7 @@ class appstore implements Callable<Integer> {
     try (InputStream stream = catalogContent.read(); InputStreamReader streamR = new InputStreamReader(stream)) {
       try {
         json = gson.fromJson(streamR, Catalog.class);
+   
       } catch (JsonParseException e) {
         e.printStackTrace();
         json = null;
@@ -173,6 +228,14 @@ class appstore implements Callable<Integer> {
 
 class Catalog {
   public Map<String, Alias> aliases = new HashMap<>();
+  public Map<String, Template> templates = new HashMap<>();
+
+  @Override
+  public String toString() {
+     
+      return aliases.toString() +" - " + templates.toString();
+
+  }
 }
 
 class Alias {
@@ -181,13 +244,22 @@ class Alias {
   public String description;
 }
 
-class Cataloger {
-  public final int itemCount;
-  public final List<CatalogerItem> items;
+class Template {
+  public String description;
+}
 
-  public Cataloger(List<CatalogerItem> items) {
-    this.items = items;
-    itemCount = items.size();
+class Cataloger {
+  public final int aliasCount;
+  public final List<CatalogerItem> aliases;
+  private List<CatalogerItem> templates;
+  private int templateCount;
+  
+  public Cataloger(List<CatalogerItem> items, List<CatalogerItem> sortedTemplates) {
+    this.aliases = items;
+    aliasCount = items.size();
+
+    this.templates = sortedTemplates;
+    this.templateCount = sortedTemplates.size();
   }
 }
 
@@ -201,5 +273,6 @@ class CatalogerItem {
   public String description;
   public String scriptRef;
   public String command;
+  public String fullcommand;
   public String link;
 }
