@@ -71,8 +71,8 @@ class appstore implements Callable<Integer> {
     gitHub = GitHub.connect("", ghToken);
     System.out.println(gitHub.getRateLimit().toString());
     var gson = new GsonBuilder().setPrettyPrinting().create();
-    List<CatalogerItem> aliasItems = new ArrayList<>();
-    List<CatalogerItem> templateItems = new ArrayList<>();
+    List<CatalogItem> aliasItems = new ArrayList<>();
+    List<CatalogItem> templateItems = new ArrayList<>();
     PagedSearchIterable<GHContent> ghContents = gitHub.searchContent().filename("jbang-catalog.json").extension(".json")
         .list().withPageSize(500);
     for (GHContent content : ghContents) {
@@ -92,10 +92,10 @@ class appstore implements Callable<Integer> {
       }
     }
 
-    List<CatalogerItem> sortedAliases = aliasItems.stream()
+    List<CatalogItem> sortedAliases = aliasItems.stream()
         .sorted(Comparator.comparing(catalogerItem -> -catalogerItem.stars)).collect(Collectors.toList());
 
-        List<CatalogerItem> sortedTemplates = templateItems.stream()
+        List<CatalogItem> sortedTemplates = templateItems.stream()
         .sorted(Comparator.comparing(catalogerItem -> -catalogerItem.stars)).collect(Collectors.toList());
   
     var cataloger = new Cataloger(sortedAliases,sortedTemplates);
@@ -107,8 +107,8 @@ class appstore implements Callable<Integer> {
     return 0;
   }
 
-  private CatalogerItem templateToItem(Map.Entry<String, Template> entry, GHContent ghContent) {
-    var item = new CatalogerItem();
+  private CatalogItem templateToItem(Map.Entry<String, Template> entry, GHContent ghContent) {
+    var item = new CatalogItem();
     item.alias = entry.getKey();
     item.scriptRef = null;
     item.description = entry.getValue().description;
@@ -117,13 +117,21 @@ class appstore implements Callable<Integer> {
       item.description = md2html(item.description);
     }
 
-    item.repoOwner = ghContent.getOwner().getOwnerName();
-    item.repoName = ghContent.getOwner().getName();
+    setupGeneralInfo(ghContent, item);
 
     StringBuffer cmd = aliasToCommand(ghContent, item.alias, item.repoName, item.repoOwner);
 
     item.command = cmd.toString();
     item.fullcommand = "jbang init -t " + item.command + " app.java";
+
+    return item;
+  }
+
+  private void setupGeneralInfo(GHContent ghContent, CatalogItem item) {
+
+    item.repoOwner = ghContent.getOwner().getOwnerName();
+    item.repoName = ghContent.getOwner().getName();
+
     item.link = ghContent.getHtmlUrl().toString();
     try {
       item.icon_url = ghContent.getOwner().getOwner().getAvatarUrl();
@@ -142,11 +150,10 @@ class appstore implements Callable<Integer> {
     } catch (IOException e) {
       e.printStackTrace();
     }
-    return item;
   }
 
-  private CatalogerItem toCatalogerItem(Map.Entry<String, Alias> entry, GHContent ghContent) {
-    var item = new CatalogerItem();
+  private CatalogItem toCatalogerItem(Map.Entry<String, Alias> entry, GHContent ghContent) {
+    var item = new CatalogItem();
     item.alias = entry.getKey();
     item.scriptRef = entry.getValue().scriptRef;
     item.description = entry.getValue().description;
@@ -155,32 +162,15 @@ class appstore implements Callable<Integer> {
       item.description = md2html(item.description);
     }
 
-    item.repoOwner = ghContent.getOwner().getOwnerName();
-    item.repoName = ghContent.getOwner().getName();
+    
+    setupGeneralInfo(ghContent, item);
 
     StringBuffer cmd = aliasToCommand(ghContent, item.alias, item.repoName, item.repoOwner);
 
     item.command = cmd.toString();
     item.fullcommand = "jbang init -t " + item.command + " app.java";
 
-    item.link = ghContent.getHtmlUrl().toString();
-    try {
-      item.icon_url = ghContent.getOwner().getOwner().getAvatarUrl();
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-
-    // work around https://github.com/hub4j/github-api/issues/1140
-    try {
-      Integer stars = starCache.get(ghContent.getOwner().getFullName());
-      if (stars == null) {
-        stars = gitHub.getRepository(ghContent.getOwner().getFullName()).getStargazersCount();
-        starCache.put(ghContent.getOwner().getFullName(), stars);
-      }
-      item.stars = stars;
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
+    
     return item;
   }
 
@@ -250,11 +240,11 @@ class Template {
 
 class Cataloger {
   public final int aliasCount;
-  public final List<CatalogerItem> aliases;
-  private List<CatalogerItem> templates;
+  public final List<CatalogItem> aliases;
+  private List<CatalogItem> templates;
   private int templateCount;
   
-  public Cataloger(List<CatalogerItem> items, List<CatalogerItem> sortedTemplates) {
+  public Cataloger(List<CatalogItem> items, List<CatalogItem> sortedTemplates) {
     this.aliases = items;
     aliasCount = items.size();
 
@@ -263,7 +253,7 @@ class Cataloger {
   }
 }
 
-class CatalogerItem {
+class CatalogItem {
   public String url;
   public int stars;
   public String icon_url;
