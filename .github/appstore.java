@@ -122,7 +122,7 @@ class appstore implements Callable<Integer> {
     StringBuffer cmd = aliasToCommand(ghContent, item.alias, item.repoName, item.repoOwner);
 
     item.command = cmd.toString();
-    item.fullcommand = "jbang init -t " + item.command + " main.java";
+    item.fullcommand = "jbang init -t " + item.command + " app.java";
 
     return item;
   }
@@ -168,7 +168,7 @@ class appstore implements Callable<Integer> {
     StringBuffer cmd = aliasToCommand(ghContent, item.alias, item.repoName, item.repoOwner);
 
     item.command = cmd.toString();
-    item.fullcommand = "jbang " + item.command;
+    item.fullcommand = "jbang init -t " + item.command + " app.java";
 
     
     return item;
