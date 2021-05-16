@@ -8,6 +8,11 @@
 //DEPS org.commonmark:commonmark-ext-gfm-strikethrough:0.17.1
 //DEPS org.commonmark:commonmark-ext-task-list-items:0.17.1
 
+import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+import java.util.concurrent.Callable;
+
 import com.google.gson.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -19,21 +24,9 @@ import org.commonmark.ext.task.list.items.TaskListItemsExtension;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.HtmlRenderer;
 import org.kohsuke.github.*;
-import picocli.CommandLine;
-import picocli.CommandLine.Command;
-import picocli.CommandLine.Option;
-import picocli.CommandLine.Parameters;
 
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.OpenOption;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
-import java.util.concurrent.Callable;
-import java.util.stream.Collectors;
+import picocli.CommandLine;
+import picocli.CommandLine.*;
 
 /**
  * To run this script, set two environment variables GH_USER and GH_TOKEN. These
@@ -46,7 +39,8 @@ class appstore implements Callable<Integer> {
 
   static {
     excludedCatalogs.add("jbangdev/jbang/itests/jbang-catalog.json");
-   // excludedCatalogs.add("jbangdev/jbang/src/main/resources/jbang-catalog.json"); // todo: treat special to just have it be jbang -t xxx ?
+    // excludedCatalogs.add("jbangdev/jbang/src/main/resources/jbang-catalog.json");
+    // // todo: treat special to just have it be jbang -t xxx ?
   }
 
   @Option(names = { "-d",
@@ -92,39 +86,21 @@ class appstore implements Callable<Integer> {
       }
     }
 
-    List<CatalogItem> sortedAliases = aliasItems.stream()
-        .sorted(Comparator.comparing(catalogerItem -> -catalogerItem.stars)).collect(Collectors.toList());
+    List<CatalogItem> sortedItems = new ArrayList<>();
 
-        List<CatalogItem> sortedTemplates = templateItems.stream()
-        .sorted(Comparator.comparing(catalogerItem -> -catalogerItem.stars)).collect(Collectors.toList());
-  
-    var cataloger = new Cataloger(sortedAliases,sortedTemplates);
+    sortedItems.addAll(aliasItems);
+    sortedItems.addAll(templateItems);
+    sortedItems.sort(Comparator.comparing((CatalogItem item) -> item.link )
+                    //.thenComparing(catalogerItem -> -catalogerItem.stars)
+                    );
+
+    var cataloger = new Cataloger(sortedItems);
     String catalogerContent = gson.toJson(cataloger);
     destinationDir.toFile().mkdirs();
     var path = destinationDir.resolve("jbang-appstore.json");
     Files.writeString(path, catalogerContent);
     System.out.println("Generated file - " + path);
     return 0;
-  }
-
-  private CatalogItem templateToItem(Map.Entry<String, Template> entry, GHContent ghContent) {
-    var item = new CatalogItem();
-    item.alias = entry.getKey();
-    item.scriptRef = null;
-    item.description = entry.getValue().description;
-
-    if (item.description != null) {
-      item.description = md2html(item.description);
-    }
-
-    setupGeneralInfo(ghContent, item);
-
-    StringBuffer cmd = aliasToCommand(ghContent, item.alias, item.repoName, item.repoOwner);
-
-    item.command = cmd.toString();
-    item.fullcommand = "jbang init -t " + item.command + " app.java";
-
-    return item;
   }
 
   private void setupGeneralInfo(GHContent ghContent, CatalogItem item) {
@@ -152,8 +128,31 @@ class appstore implements Callable<Integer> {
     }
   }
 
+  private CatalogItem templateToItem(Map.Entry<String, Template> entry, GHContent ghContent) {
+    var item = new CatalogItem();
+    item.type = "template";
+    item.alias = entry.getKey();
+    item.scriptRef = null;
+    item.description = entry.getValue().description;
+
+    if (item.description != null) {
+      item.description = md2html(item.description);
+    }
+
+    setupGeneralInfo(ghContent, item);
+
+    StringBuffer cmd = aliasToCommand(ghContent, item.alias, item.repoName, item.repoOwner);
+
+    item.command = cmd.toString();
+    item.fullcommand = "jbang init -t " + item.command + " app.java";
+
+    return item;
+  }
+
+  
   private CatalogItem toCatalogerItem(Map.Entry<String, Alias> entry, GHContent ghContent) {
     var item = new CatalogItem();
+    item.type = "alias";
     item.alias = entry.getKey();
     item.scriptRef = entry.getValue().scriptRef;
     item.description = entry.getValue().description;
@@ -162,7 +161,6 @@ class appstore implements Callable<Integer> {
       item.description = md2html(item.description);
     }
 
-    
     setupGeneralInfo(ghContent, item);
 
     StringBuffer cmd = aliasToCommand(ghContent, item.alias, item.repoName, item.repoOwner);
@@ -170,7 +168,6 @@ class appstore implements Callable<Integer> {
     item.command = cmd.toString();
     item.fullcommand = "jbang init -t " + item.command + " app.java";
 
-    
     return item;
   }
 
@@ -195,7 +192,7 @@ class appstore implements Callable<Integer> {
     var document = parser.parse(markdown);
     HtmlRenderer renderer = HtmlRenderer.builder().extensions(extensions).sanitizeUrls(true).escapeHtml(true).build();
     var html = renderer.render(document);
-    //System.out.println(item.description + "=>" + html);
+    // System.out.println(item.description + "=>" + html);
     return html;
   }
 
@@ -206,7 +203,7 @@ class appstore implements Callable<Integer> {
     try (InputStream stream = catalogContent.read(); InputStreamReader streamR = new InputStreamReader(stream)) {
       try {
         json = gson.fromJson(streamR, Catalog.class);
-   
+
       } catch (JsonParseException e) {
         e.printStackTrace();
         json = null;
@@ -222,8 +219,8 @@ class Catalog {
 
   @Override
   public String toString() {
-     
-      return aliases.toString() +" - " + templates.toString();
+
+    return aliases.toString() + " - " + templates.toString();
 
   }
 }
@@ -241,20 +238,16 @@ class Template {
 class Cataloger {
   public final int aliasCount;
   public final List<CatalogItem> aliases;
-  private List<CatalogItem> templates;
-  private int templateCount;
-  
-  public Cataloger(List<CatalogItem> items, List<CatalogItem> sortedTemplates) {
+
+  public Cataloger(List<CatalogItem> items) {
     this.aliases = items;
     aliasCount = items.size();
-
-    this.templates = sortedTemplates;
-    this.templateCount = sortedTemplates.size();
   }
 }
 
 class CatalogItem {
   public String url;
+  public String type;
   public int stars;
   public String icon_url;
   public String repoOwner;
