@@ -25,11 +25,11 @@ With Gource you can render the history of a git repository and get a nice animat
 
 I found a https://gist.github.com/pmdgithub/706587[perl script] that took all committer emails and located their gravatar image; but it was Perl...so lets make that java instead and use JBang.
 
-The full example is available https://github.com/jbangdev/jbang/blob/master/examples/grabavatars.java[here], below I'll walk through the various interesting parts.
+The full example is available https://github.com/jbangdev/jbang/blob/HEAD/examples/grabavatars.java[here], below I'll walk through the various interesting parts.
 
 If you want to just directly run it do this:
 
-`jbang https://github.com/jbangdev/jbang/blob/master/examples/grabavatars.java`
+`jbang https://github.com/jbangdev/jbang/blob/HEAD/examples/grabavatars.java`
 
 To begin with you just get started with `jbang init -t cli grab-avatar`.
 
@@ -94,7 +94,7 @@ Now to run this when I have it locally is just: `./grab-avatars` in root of a gi
 
 But you can also run this directly from a url using:
 
-`jbang https://github.com/jbangdev/jbang/blob/master/examples/grab-avatars`
+`jbang https://github.com/jbangdev/jbang/blob/HEAD/examples/grab-avatars`
 
 And then then you can go full out and render with gource - notice the `--user-image-dir .git/avatar`:
 

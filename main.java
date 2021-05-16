@@ -15,7 +15,7 @@ public class main {
         out.println("It is not really how jbang.dev is best viewed, but congratulations");
         out.println("on having jbang installed.\n");
         out.println("All the best from jbang.dev and its awesome contributors!\n");
-        out.println("https://github.com/jbangdev/jbang/blob/master/CONTRIBUTORS.md\n\n");
+        out.println("https://github.com/jbangdev/jbang/blob/HEAD/CONTRIBUTORS.md\n\n");
 
         URL u = new URL("https://raw.githubusercontent.com/jbangdev/jbang/master/CONTRIBUTORS.md");
 
