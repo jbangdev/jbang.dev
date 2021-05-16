@@ -6,94 +6,149 @@ layout: default
 <div id="grid-container" style="
     margin: 45px 0;">
 
-    <div class="container">
+  <div class="container">
 
-        <h2>JBang AppStore</h2>
-        <div>
-            Below is a index of JBang {{page.thing-plural}} available on GitHub in <a href="https://github.com/jbangdev/jbang#catalogs">JBang Catalogs.</a><br/><br/>
+    <h2>JBang AppStore</h2>
+    <div>
+      Below is a index of JBang {{page.thing-plural}} available on GitHub in <a
+        href="https://github.com/jbangdev/jbang#catalogs">JBang Catalogs.</a><br /><br />
 
-            To use it <a href="/download">Download or Install</a> JBang or run the following command from any bash compatible terminal: 
-            <br/></br/>
-            <center><code style="font-size:20px;">curl -Ls https://sh.jbang.dev | bash -s - app setup</code></center>
-            <br/>
-            or in a Windows Powershell:
-            <br/></br/>
-            <center><code style="font-size:20px;">iex "& { $(iwr https://ps.jbang.dev) } app setup jbang"</code></center>
-            <br/>
-            <br/><br/>
-            {{page.tip-help}}
-            <br/><br/>
+      To use it <a href="/download">Download or Install</a> JBang or run the following command from any bash compatible
+      terminal:
+      <br /></br />
+      <center><code style="font-size:20px;">curl -Ls https://sh.jbang.dev | bash -s - app setup</code></center>
+      <br />
+      or in a Windows Powershell:
+      <br /></br />
+      <center><code style="font-size:20px;">iex "& { $(iwr https://ps.jbang.dev) } app setup jbang"</code></center>
+      <br />
+      <br /><br />
+      {{page.tip-help}}
+      <br /><br />
 
-            <b>NOTE:</b> Always verify a script code before executing it.
-        </div>
+      <b>NOTE:</b> Always verify a script code before executing it.
+    </div>
 
     <!-- Include jQuery and other required
 files for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
     <script
-            src="https://code.jquery.com/jquery-3.6.0.min.js"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
-        <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
-        <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/group-by-v2/bootstrap-table-group-by.min.js"></script>
+      src="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/group-by-v2/bootstrap-table-group-by.min.js"></script>
     <script>
-function linkFormatter(value, row, index) {
-  return "<a href='"+row.link+"'>"+ "<img style='width: 5vw;' src='"+row.icon_url+"'/>" 
-         + "<br/>"
-         + row.repoOwner+"/"+row.repoName+"</a> [ ]";
-}
-function groupByFormatter(item,index,rows) {
-    var row = rows[0];
-    return "<h2><a href='"+row.link+"'>"+ "<img style='width: 5vw;' src='"+row.icon_url+"'/>  " +
-        "<i class='fa fa-github' aria-hidden='true'></i>  "
-        + row.repoOwner+"/"+row.repoName+"</a>"
-        + " " + starFormatter(item, row, index) + "</h2>";
-}
-function aliasFormatter(value, row, index) {
-  var output;
+      function linkFormatter(value, row, index) {
+        return "<a href='" + row.link + "'>" + "<img style='width: 5vw;' src='" + row.icon_url + "'/>"
+          + "<br/>"
+          + row.repoOwner + "/" + row.repoName + "</a> [ ]";
+      }
+      function groupByFormatter(item, index, rows) {
+        var row = rows[0];
+        return "<h2><a href='" + row.link + "'>" + "<img style='width: 5vw;' src='" + row.icon_url + "'/>  " +
+          "<i class='fa fa-github' aria-hidden='true'></i>  "
+          + row.repoOwner + "/" + row.repoName + "</a>"
+          + " " + starFormatter(item, row, index) + "</h2>";
+      }
+      function aliasFormatter(value, row, index) {
+        var output;
 
-  output = "<button class='tooltipped tooltipped-se copyButton' aria-label='Copy jbang command to clipboard'  data-clipboard-text='" + row.fullcommand +"'><i class='fa fa-clipboard'></i></button>";
-  output = output + " <code>" + row.command + "</code>";
-  if(row.description) {
-     output = output  + "<div style='white-space: pre-wrap'>" + row.description + "</div>";
-  }
+        output = "<button class='tooltipped tooltipped-se copyButton' aria-label='Copy jbang command to clipboard'  data-clipboard-text='" + row.fullcommand + "'><i class='fa fa-clipboard'></i></button>";
+        output = output + " <code>" + row.command + "</code>";
+        if (row.description) {
+          output = output + "<div style='white-space: pre-wrap'>" + row.description + "</div>";
+        }
 
-  return output;
-}
-function starFormatter(value, row, index) {
-    if(row.stars==0) return "";
-    return "<i class='fa fa-star'></i> " + row.stars;
-}
+        return output;
+      }
+      function starFormatter(value, row, index) {
+        if (row.stars == 0) return "";
+        return "<i class='fa fa-star'></i> " + row.stars;
+      }
 
-</script>
-    <table
-            id="appstore-table"
-            data-toggle="table"
-            data-flat="true"
-            class="table-appstore"
-            data-sortable="true"
-            data-search="true"
-            data-search-align="left"
-            data-search-highlight="true"
-            data-total-field="{{page.total-field}}"
-            data-data-field="{{page.data-field}}"
-            data-group-by="true"
-            data-group-by-field="link"
-            data-group-by-formatter="groupByFormatter"
-            data-group-by-toggle="true"
-            data-group-by-show-toggle-icon="true"
-            data-sortable="true"
-            data-sort-name="stars"
-            data-url="{{ page.store-data-url }}">
-        <thead>
+    </script>
+
+    <div id="toolbar">
+      <form id="toolbarform">
+        <div class="row">
+          <div class="column">
+            <label for="showtemplates">Show: </label>
+            <select class="form-control" id="showtemplates" name="showtemplates">
+              <option value="all">All</option>
+              <option value="alias">Only Aliases</option>
+              <option value="template">Only Templates</option>
+            </select>
+          </div>
+          <div class="column">
+            <label class="sr-only">test</label>
+          </div>
+          <div class="column">
+            <label for="customsearch">Search:</label>
+            <input class="form-control" type="text" id="customsearch"></input>
+          </div>
+        </div>
+      </form>
+      
+    </div>
+
+    <table 
+      id="appstore-table" 
+      data-toggle="table" 
+      data-flat="true" 
+      class="table-appstore" 
+      data-toolbar="#toolbar"
+      
+      data-sortable="true" 
+      data-sort-name="stars"
+      
+      data-search="true" 
+      data-search-selector="#customsearch"
+      data-search-align="left" 
+      data-search-highlight="true"
+      
+      data-group-by="true"
+      data-group-by-field="link" 
+      data-group-by-formatter="groupByFormatter" 
+      data-group-by-toggle="true"
+      data-group-by-show-toggle-icon="true" 
+      
+      data-total-field="{{page.total-field}}" 
+      data-data-field="{{page.data-field}}" 
+      data-url="{{ page.store-data-url }}"
+      >
+      <thead>
         <tr>
-            <th class="appstore-alias" data-field="command" data-formatter="aliasFormatter">{{page.thing-single | capitalize}}</th>
+          <th class="appstore-alias" data-field="type" data-width="150"></th>
+          <th class="appstore-alias" data-field="command" data-formatter="aliasFormatter">{{page.thing-single |
+            capitalize}}</th>
         </tr>
-        </thead>
+      </thead>
     </table>
 
-        <script>
-            var clipboard = new ClipboardJS('.copyButton');
-        </script>
-</div>
+    <script>
+      var clipboard = new ClipboardJS('.copyButton');
+    </script>
+
+    <script>
+      var $table = $('#appstore-table')
+      var $toggle = $('#showtemplates')
+
+      //avoid enter in search causes form submit so screen does not reload and loose settings
+      $("#toolbarform").submit(function(e){
+        e.preventDefault();
+      });
+
+      $(function () {
+        $toggle.change(function () {
+          if (this.value == "all") {
+            $table.bootstrapTable('filterBy',{})
+          } else {
+            $table.bootstrapTable('filterBy', { type: this.value } );
+          }
+        });
+      })
+    </script>
+  </div>
 </div>
