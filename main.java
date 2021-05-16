@@ -17,7 +17,7 @@ public class main {
         out.println("All the best from jbang.dev and its awesome contributors!\n");
         out.println("https://github.com/jbangdev/jbang/blob/HEAD/CONTRIBUTORS.md\n\n");
 
-        URL u = new URL("https://raw.githubusercontent.com/jbangdev/jbang/master/CONTRIBUTORS.md");
+        URL u = new URL("https://raw.githubusercontent.com/jbangdev/jbang/HEAD/CONTRIBUTORS.md");
 
         try (Scanner scanner = new Scanner(u.openStream(), StandardCharsets.UTF_8.toString())) {
 
