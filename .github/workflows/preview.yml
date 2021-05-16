@@ -24,7 +24,7 @@ jobs:
             ${{ runner.os }}-gems-
 
       - name: Build Jekyll site
-        uses: jerryjvl/jekyll-build-action@v2
+        uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
       - uses: afc163/surge-preview@v1
