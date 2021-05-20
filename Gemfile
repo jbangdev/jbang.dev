@@ -9,6 +9,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 4.0.1"
 gem 'pygments.rb', '~> 1.1.2'
+gem "minimal-mistakes-jekyll"
 
 #gem 'github-pages'
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
@@ -21,6 +22,7 @@ group :jekyll_plugins do
   gem 'jekyll-asciidoc'
   gem "jekyll-feed", "~> 0.12"
   gem 'jekyll-analytics'
+  gem "jekyll-data"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
