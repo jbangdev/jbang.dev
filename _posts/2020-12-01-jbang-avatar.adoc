@@ -1,18 +1,13 @@
+---
+header:
+  teaser: /assets/images/avatar.jpg
+---
 # Exploring new Java APIs!
-:page-layout: post
 :page-tagline: Downloading gravatar images with JBang
 :page-category : learn
 :page-tags : [intro, beginner, jbang, tutorial]
 :page-title: JBang Avatar
-:page-img : avatar.jpg
-:page-img-mobile : 
-:page-img2 : 
-:page-img3 : 
 :page-author : Max Rydahl Andersen
-:page-title2 : 
-:page-title3 : 
-:page-css: 
-:page-js: 
 :page-bgcolor: ff5a71
 :page-keywords: jbang
 :page-excerpt: ...all just to gource JBang!
@@ -42,7 +37,7 @@ Then in top we are going to add a few dependencies:
 [source,java]
 .Dependencies
 ----
-include::_posts/grabavatars.java[lines="1..5"]
+include::grabavatars.java[lines="1..5"]
 ----
 
 The first line is the magic "shebang" line that bash and other shells will interpret but for java it is just a comment. This is what allows you to run the script directly using `./grab-avatar`
@@ -60,7 +55,7 @@ The next is the class declaration which is mainly just annotations to define the
 [source,java]
 .class declaration
 ----
-include::_posts/grabavatars.java[tags=classdecl]
+include::grabavatars.java[tags=classdecl]
 ----
 
 ## Iteration over execution 
@@ -75,7 +70,7 @@ To do this I use `zt-exec` which has this great "one-liner" to run the process a
 [source,java]
 .processing command
 ----
-include::_posts/grabavatars.java[tags=processFile]
+include::grabavatars.java[tags=processFile]
 ----
 
 ## MD5 and Download
@@ -85,7 +80,7 @@ And finally for every identified email and author - generates MD5 and download t
 [source,java]
 .processing command
 ----
-include::_posts/grabavatars.java[tags=downloadFile]
+include::grabavatars.java[tags=downloadFile]
 ----
 
 ## All together now
