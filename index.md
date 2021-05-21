@@ -1,49 +1,42 @@
 ---
 layout: splash
 header:
-  overlay_image: /assets/images/slider/bg-3.jpg
+  overlay_image: /assets/images/slider/bg-1.jpg
   actions:
     - label: "<i class='fas fa-download'></i> Download"
       url: "/download"
     - label: "Try"
       url: "#try"
-excerpt: "Run Java from anywhere"
+excerpt: "Unleash the Power of Java"
 intro: 
-  - excerpt: 'The easiest way to use Java as a beginner as well as experienced developer.'
+  - excerpt: 'Easy to get started. Fun to explore. Limitless.'
 feature_row:
-  - image_path: https://mmistakes.github.io/minimal-mistakes/assets/images/mm-customizable-feature.png
+  - image_path: /assets/images/carbon-deps.svg
     title: "Simplified Dependencies"
     excerpt: "Automatic fetching of any dependency using `//DEPS group:artifact:version` 
               or `@Grab` annotations."
-  - image_path: https://mmistakes.github.io/minimal-mistakes/assets/images/mm-responsive-feature.png
+  - image_path: /assets/images/carbon-install.svg
     title: "Install & Run Anywhere"
     excerpt: "JBang installs and run on Windows, Linux, macOS, Docker and Github Actions"
     url: "/download"
     btn_label: "Download"
     btn_class: "btn--primary"
-  - image_path: https://mmistakes.github.io/minimal-mistakes/assets/images/mm-free-feature.png
+  - image_path: /assets/images/carbon-java.svg
     title: "No Java ? No Problem!"
     excerpt: "Java will automatically be downloaded when needed."
 feature_row2:
-  - image_path: https://mmistakes.github.io/minimal-mistakes/assets/images/mm-customizable-feature.png
-    title: "Easy Repositories"
-    excerpt: "No need to remember the full url of Maven repositories. Use short hand, like `//REPOS jitpack` to easily add major repositories"
-  - image_path: https://mmistakes.github.io/minimal-mistakes/assets/images/mm-responsive-feature.png
-    title: "Executable scripts"
-    excerpt: "`./helloworld.java` works on Linux, Mac & Windows w/bash. Use Java for true scripting."
-  - image_path: https://mmistakes.github.io/minimal-mistakes/assets/images/mm-free-feature.png
+  - image_path: /assets/images/feature-version-juggle.svg
+    title: "Java 8 and higher"
+    excerpt: "You can use any Java, from version 8 and up"
+  - image_path: /assets/images/feature-appstore.png
+    title: "JBang AppStore"
+    excerpt: "Use the JBang AppStore to find others application or publish your own from a git backed `jbang-catalog.json`"
+    url: "/appstore"
+    btn_label: "AppStore"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/feature-ide.png
     title: "Works in your IDE"
     excerpt: "Easy editing in Intellij, Eclipse, Visual Studio Code, Apache Netbeans, vim and emacs. All with proper content assist and debug"
-feature_row3:
-  - image_path: https://mmistakes.github.io/minimal-mistakes/assets/images/mm-customizable-feature.png
-    title: "Scripting Catalogs"
-    excerpt: "Run anyone's script or provide you own aliases from a git backed catalog, i.e. `jbang env@jbangdev`"
-  - image_path: https://mmistakes.github.io/minimal-mistakes/assets/images/mm-responsive-feature.png
-    title: "Java 8 and higher"
-    excerpt: "You can run `.java` as scripts using Java 8+, `.jsh` works with Java 9+"
-  - image_path: https://mmistakes.github.io/minimal-mistakes/assets/images/mm-free-feature.png
-    title: "Cached Builds"
-    excerpt: "Builds are cached making re-runs instant."
 ---
 
 {% include feature_row id="intro" type="center" %}
@@ -51,5 +44,3 @@ feature_row3:
 {% include feature_row %}
 
 {% include feature_row id="feature_row2" %}
-
-{% include feature_row id="feature_row3" %}

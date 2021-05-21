@@ -13,6 +13,8 @@ a:hover {
 }
 
 $link-color:#EB586F;
+    
+
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
