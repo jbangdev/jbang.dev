@@ -1,5 +1,6 @@
 ---
 permalink: /contribute/
+layout: splash
 ---
 
 ## Contribute to JBang
