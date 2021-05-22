@@ -4,16 +4,29 @@
 
 @charset "utf-8";
 
+$serif      : Georgia, Times, serif;
+$sans-serif : "Montserrat",sans-serif;
+
+$link-color:#EB586F;
+
 a {
     text-decoration: none;
+    color: #EB586F;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-$link-color:#EB586F;
-    
+.bootstrap-styles {
+    @import 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
+ }
+
+// tabs 
+.tab-content {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
 
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
