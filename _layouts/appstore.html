@@ -1,99 +1,119 @@
 ---
 layout: splash
 ---
+<h2>JBang AppStore</h2>
+<div>
+    Below is a index of JBang {{page.thing-plural}} available on GitHub in <a href="https://github.com/jbangdev/jbang#catalogs">JBang Catalogs.</a><br/><br/>
 
+    To use it <a href="/download">Download or Install</a> JBang or run the following command from any bash compatible terminal:
+    <br/></br/>
+    <center><code style="font-size:25px;">curl -Ls https://sh.jbang.dev | bash -s - app setup</code></center>
+    <br/>
+    or in a Windows Powershell:
+    <br/></br/>
+    <center><code style="font-size:25px;">iex "& { $(iwr https://ps.jbang.dev) } app setup"</code></center>
+    <br/>
+    <br/><br/>
+    {{page.tip-help}}
+    <br/><br/>
 
-<div id="grid-container" style="
-    margin: 45px 0;">
-
-    <div class="container">
-
-        <h2>JBang AppStore</h2>
-        <div>
-            Below is a index of JBang {{page.thing-plural}} available on GitHub in <a href="https://github.com/jbangdev/jbang#catalogs">JBang Catalogs.</a><br/><br/>
-
-            To use it <a href="/download">Download or Install</a> JBang or run the following command from any bash compatible terminal: 
-            <br/></br/>
-            <center><code style="font-size:25px;">curl -Ls https://sh.jbang.dev | bash -s - app setup</code></center>
-            <br/>
-            or in a Windows Powershell:
-            <br/></br/>
-            <center><code style="font-size:25px;">iex "& { $(iwr https://ps.jbang.dev) } app setup"</code></center>
-            <br/>
-            <br/><br/>
-            {{page.tip-help}}
-            <br/><br/>
-
-            <b>NOTE:</b> Always verify a script code before executing it.
+    <b>NOTE:</b> Always verify a script code before executing it.
         </div>
 
-    <!-- Include jQuery and other required
-files for Bootstrap -->
-    <script
-            src="https://code.jquery.com/jquery-3.6.0.min.js"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
-        <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
-        <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/group-by-v2/bootstrap-table-group-by.min.js"></script>
-    <script>
-function linkFormatter(value, row, index) {
-  return "<a href='"+row.link+"'>"+ "<img style='width: 5vw;' src='"+row.icon_url+"'/>" 
-         + "<br/>"
-         + row.repoOwner+"/"+row.repoName+"</a> [ ]";
-}
-function groupByFormatter(item,index,rows) {
-    var row = rows[0];
-    return "<h2><a href='"+row.link+"'>"+ "<img style='width: 5vw;' src='"+row.icon_url+"'/>  " +
-        "<i class='fa fa-github' aria-hidden='true'></i>  "
-        + row.repoOwner+"/"+row.repoName+"</a>"
-        + " " + starFormatter(item, row, index) + "</h2>";
-}
-function aliasFormatter(value, row, index) {
-  var output;
+{% raw %}
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.5.0/dist/vuetify.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-  output = "<button class='tooltipped tooltipped-se copyButton' aria-label='Copy jbang command to clipboard'  data-clipboard-text='" + row.fullcommand +"'><i class='fa fa-clipboard'></i></button>";
-  output = output + " <code>" + row.command + "</code>";
-  if(row.description) {
-     output = output  + "<div style='white-space: pre-wrap'>" + row.description + "</div>";
-  }
+<div id="app">
+    <v-app id="inspire">
+        <v-layout child-flex>
+        <v-card width="100vw">
+            <v-card-title>
+                AppStore
+                <v-spacer></v-spacer>
+                <v-text-field
+                  v-model="search"
+                  append-icon="mdi-magnify"
+                  label="Search"
+                  single-line
+                  hide-details
+                ></v-text-field>
+              </v-card-title>
+        <v-data-table
+          :headers="headers"
+          :items="appstore.aliases"
+          :search="search"
+          group-by="link"
+          item-key="command"
+          :sort-desc="false"
+          class="elevation-1"
+          disable-pagination
+        >
+        <template v-slot:group.header="{items, isOpen, toggle}">
+            <th colspan="2">
+              <h2>
+                <v-icon @click="toggle"
+                >{{ isOpen ? 'mdi-minus' : 'mdi-plus' }}
+                </v-icon>
+                  <a v-bind:href="items[0].link"><img style='width: 5vw;' v-bind:src='items[0].icon_url'/> 
+                  <i class="fab fa-fw fa-github"></i>
+                  {{items[0].repoOwner}}/{{items[0].repoName}}</a>
+                  <span v-if="items[0].stars>0"><i class='fa fa-star'></i>{{items[0].stars}}</span>
+              </h2>
+            </th>
+          </template>
 
-  return output;
-}
-function starFormatter(value, row, index) {
-    if(row.stars==0) return "";
-    return "<i class='fa fa-star'></i> " + row.stars;
-}
+        <template v-slot:item.command="{ item }">
+            <button class='tooltipped tooltipped-se copyButton' aria-label='Copy jbang command to clipboard'  v-bind:data-clipboard-text='item.fullcommand'><i class='fa fa-clipboard'></i></button>
+            <code>{{item.command}}</code>
+            <div v-if="item.description" v-html="item.description" style='white-space: pre-wrap'>
+            </div>
+            
+          </template>
+        </v-data-table>
+        </v-card>
+    </v-layout>
+      </v-app>
+    
+  </div>
 
+  
+  <script>
+    new Vue({
+    el: "#app",
+    vuetify: new Vuetify(),
+    data() {
+    return {
+        search: '',
+        headers: [{
+            text: "Alias",
+            value: "command",
+            width: "50%"
+        },
+        {
+            text: "link",
+            value: "link",
+        }
+    ],
+        appstore: []
+    }
+    },
+    mounted: function() {
+    axios
+        .get('/assets/data/jbang-appstore.json')
+        .then(response => {
+        this.appstore = response.data
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+    }
+    })
+  </script>
+
+<script>
+    var clipboard = new ClipboardJS('.copyButton');
 </script>
-    <table
-            id="appstore-table"
-            data-toggle="table"
-            data-flat="true"
-            class="table-appstore"
-            data-sortable="true"
-            data-search="true"
-            data-search-align="left"
-            data-search-highlight="true"
-            data-total-field="{{page.total-field}}"
-            data-data-field="{{page.data-field}}"
-            data-group-by="true"
-            data-group-by-field="link"
-            data-group-by-formatter="groupByFormatter"
-            data-group-by-toggle="true"
-            data-group-by-show-toggle-icon="true"
-            data-sortable="true"
-            data-sort-name="stars"
-            data-url="{{ page.store-data-url }}">
-        <thead>
-        <tr>
-            <th class="appstore-alias" data-field="command" data-formatter="aliasFormatter">{{page.thing-single | capitalize}}</th>
-        </tr>
-        </thead>
-    </table>
-
-        <script>
-            var clipboard = new ClipboardJS('.copyButton');
-        </script>
-</div>
-</div>
+{% endraw %}
