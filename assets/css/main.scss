@@ -22,16 +22,10 @@ a:hover {
     text-decoration: underline;
 }
 
-.bootstrap-styles {
-    @import 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
- }
-
-// tabs 
-.tab-content {
+.v-tabs-items {
     padding: 15px;
     border: 1px solid #ddd;
 }
-
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
