@@ -21,10 +21,6 @@ layout: splash
         </div>
 
 {% raw %}
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
-<script src="https://unpkg.com/vue"></script>
-<script src="https://cdn.jsdelivr.net/npm/vuetify@2.5.0/dist/vuetify.min.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <div id="app">
     <v-app id="inspire">
@@ -50,6 +46,7 @@ layout: splash
           :sort-desc="false"
           class="elevation-1"
           disable-pagination
+          hide-default-footer 
         >
         <template v-slot:group.header="{items, isOpen, toggle}">
             <th colspan="2">
