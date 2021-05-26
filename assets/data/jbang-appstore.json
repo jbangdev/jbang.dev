@@ -2,7 +2,7 @@
   "aliasCount": 147,
   "aliases": [
     {
-      "stars": 4814,
+      "stars": 4818,
       "icon_url": "https://avatars.githubusercontent.com/u/2495066?v\u003d4",
       "repoOwner": "intuit",
       "repoName": "karate",
@@ -824,6 +824,17 @@
     },
     {
       "stars": 2,
+      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
+      "repoOwner": "jbangdev",
+      "repoName": "jbang-minecraft",
+      "alias": "sponge",
+      "scriptRef": "sponge.java",
+      "command": "sponge@jbangdev/jbang-minecraft",
+      "fullcommand": "jbang init -t sponge@jbangdev/jbang-minecraft app.java",
+      "link": "https://github.com/jbangdev/jbang-minecraft/blob/5655cd56ae720fbec4618273d25fd3b1b749c283/jbang-catalog.json"
+    },
+    {
+      "stars": 2,
       "icon_url": "https://avatars.githubusercontent.com/u/3737888?v\u003d4",
       "repoOwner": "scratches",
       "repoName": "jbang-catalog",
@@ -1114,17 +1125,6 @@
     },
     {
       "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "repoOwner": "jbangdev",
-      "repoName": "jbang-minecraft",
-      "alias": "sponge",
-      "scriptRef": "sponge.java",
-      "command": "sponge@jbangdev/jbang-minecraft",
-      "fullcommand": "jbang init -t sponge@jbangdev/jbang-minecraft app.java",
-      "link": "https://github.com/jbangdev/jbang-minecraft/blob/5655cd56ae720fbec4618273d25fd3b1b749c283/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
       "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
       "repoOwner": "grumpyf0x48",
       "repoName": "jbang-catalog",
@@ -1242,6 +1242,168 @@
       "command": "agent@jacoco",
       "fullcommand": "jbang init -t agent@jacoco app.java",
       "link": "https://github.com/jacoco/jbang-catalog/blob/678e949a1f87fcb1c92f0f781921e1290bc3ebde/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
+      "repoOwner": "maxandersen",
+      "repoName": "jbang-catalog",
+      "alias": "quarkusinfo",
+      "description": "\u003cp\u003eScript that collects environment info for Quarkus issue reports\u003c/p\u003e\n",
+      "scriptRef": "quarkusissue.java",
+      "command": "quarkusinfo@maxandersen",
+      "fullcommand": "jbang init -t quarkusinfo@maxandersen app.java",
+      "link": "https://github.com/maxandersen/jbang-catalog/blob/2284acb7453c410a2703e4b550b5dedb4b0e0067/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
+      "repoOwner": "maxandersen",
+      "repoName": "jbang-catalog",
+      "alias": "jruby",
+      "description": "\u003cp\u003eRun jruby\u003c/p\u003e\n",
+      "scriptRef": "org.jruby:jruby-complete:9.2.12.0",
+      "command": "jruby@maxandersen",
+      "fullcommand": "jbang init -t jruby@maxandersen app.java",
+      "link": "https://github.com/maxandersen/jbang-catalog/blob/2284acb7453c410a2703e4b550b5dedb4b0e0067/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
+      "repoOwner": "maxandersen",
+      "repoName": "jbang-catalog",
+      "alias": "groovy",
+      "description": "\u003cp\u003eRun groovy\u003c/p\u003e\n",
+      "scriptRef": "org.codehaus.groovy:groovy:3.0.5",
+      "command": "groovy@maxandersen",
+      "fullcommand": "jbang init -t groovy@maxandersen app.java",
+      "link": "https://github.com/maxandersen/jbang-catalog/blob/2284acb7453c410a2703e4b550b5dedb4b0e0067/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
+      "repoOwner": "maxandersen",
+      "repoName": "jbang-catalog",
+      "alias": "ghview",
+      "description": "\u003cp\u003eGitHub View - based on current directory and locate the right \u0027thing\u0027 on github\u003c/p\u003e\n",
+      "scriptRef": "ghview.java",
+      "command": "ghview@maxandersen",
+      "fullcommand": "jbang init -t ghview@maxandersen app.java",
+      "link": "https://github.com/maxandersen/jbang-catalog/blob/2284acb7453c410a2703e4b550b5dedb4b0e0067/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
+      "repoOwner": "maxandersen",
+      "repoName": "jbang-catalog",
+      "alias": "byteman",
+      "scriptRef": "org.jboss.byteman:byteman:4.0.13",
+      "command": "byteman@maxandersen",
+      "fullcommand": "jbang init -t byteman@maxandersen app.java",
+      "link": "https://github.com/maxandersen/jbang-catalog/blob/2284acb7453c410a2703e4b550b5dedb4b0e0067/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
+      "repoOwner": "maxandersen",
+      "repoName": "jbang-catalog",
+      "alias": "jamira",
+      "scriptRef": "jamira.java",
+      "command": "jamira@maxandersen",
+      "fullcommand": "jbang init -t jamira@maxandersen app.java",
+      "link": "https://github.com/maxandersen/jbang-catalog/blob/2284acb7453c410a2703e4b550b5dedb4b0e0067/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
+      "repoOwner": "maxandersen",
+      "repoName": "jbang-catalog",
+      "alias": "dashbuilder",
+      "scriptRef": "dashbuilder/dashbuilder.java",
+      "command": "dashbuilder@maxandersen",
+      "fullcommand": "jbang init -t dashbuilder@maxandersen app.java",
+      "link": "https://github.com/maxandersen/jbang-catalog/blob/2284acb7453c410a2703e4b550b5dedb4b0e0067/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/877286?v\u003d4",
+      "repoOwner": "manikmagar",
+      "repoName": "jbang-catalog",
+      "alias": "mulemeetupsync",
+      "description": "\u003cp\u003eMule Meetup Calendar sync from bevy to google calendar. Requires credentials.json path as argument.\u003c/p\u003e\n",
+      "scriptRef": "MuleMeetupCalendar.java",
+      "command": "mulemeetupsync@manikmagar",
+      "fullcommand": "jbang init -t mulemeetupsync@manikmagar app.java",
+      "link": "https://github.com/manikmagar/jbang-catalog/blob/854da8f60572a5b63d5e2d8838e4192b7a8d91f1/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/877286?v\u003d4",
+      "repoOwner": "manikmagar",
+      "repoName": "jbang-catalog",
+      "alias": "bevygooglesync",
+      "description": "\u003cp\u003eBevy events sync to google calendar.\u003c/p\u003e\n",
+      "scriptRef": "BevyGoogleCalendarSync.java",
+      "command": "bevygooglesync@manikmagar",
+      "fullcommand": "jbang init -t bevygooglesync@manikmagar app.java",
+      "link": "https://github.com/manikmagar/jbang-catalog/blob/854da8f60572a5b63d5e2d8838e4192b7a8d91f1/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/59115480?v\u003d4",
+      "repoOwner": "kordamp",
+      "repoName": "jbang-catalog",
+      "alias": "pomchecker",
+      "description": "\u003cp\u003eChecks POM files may be uploaded to Maven Central\u003c/p\u003e\n",
+      "scriptRef": "pomchecker.java",
+      "command": "pomchecker@kordamp",
+      "fullcommand": "jbang init -t pomchecker@kordamp app.java",
+      "link": "https://github.com/kordamp/jbang-catalog/blob/cd6d13265661ba3e7845f57c2ce920218b65f039/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/59115480?v\u003d4",
+      "repoOwner": "kordamp",
+      "repoName": "jbang-catalog",
+      "alias": "pomchecker-snapshot",
+      "description": "\u003cp\u003eChecks POM files may be uploaded to Maven Central\u003c/p\u003e\n",
+      "scriptRef": "pomchecker_snapshot.java",
+      "command": "pomchecker-snapshot@kordamp",
+      "fullcommand": "jbang init -t pomchecker-snapshot@kordamp app.java",
+      "link": "https://github.com/kordamp/jbang-catalog/blob/cd6d13265661ba3e7845f57c2ce920218b65f039/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/2537804?v\u003d4",
+      "repoOwner": "zemiak",
+      "repoName": "geostats",
+      "alias": "todoist",
+      "scriptRef": "todoist.java",
+      "command": "todoist@zemiak/geostats",
+      "fullcommand": "jbang init -t todoist@zemiak/geostats app.java",
+      "link": "https://github.com/zemiak/geostats/blob/82f5317b2f4651343e4676b2aaac2c4d684c5f61/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
+      "repoOwner": "maxandersen",
+      "repoName": "jmeet",
+      "alias": "run",
+      "scriptRef": "jmeet.java",
+      "command": "run@maxandersen/jmeet",
+      "fullcommand": "jbang init -t run@maxandersen/jmeet app.java",
+      "link": "https://github.com/maxandersen/jmeet/blob/48842f26497b6bb26862777c275753b3107d9306/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
+      "repoOwner": "maxandersen",
+      "repoName": "jmeet",
+      "alias": "clearpto",
+      "scriptRef": "clearpto.java",
+      "command": "clearpto@maxandersen/jmeet",
+      "fullcommand": "jbang init -t clearpto@maxandersen/jmeet app.java",
+      "link": "https://github.com/maxandersen/jmeet/blob/48842f26497b6bb26862777c275753b3107d9306/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -1418,168 +1580,6 @@
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "repoOwner": "maxandersen",
-      "repoName": "jbang-catalog",
-      "alias": "quarkusinfo",
-      "description": "\u003cp\u003eScript that collects environment info for Quarkus issue reports\u003c/p\u003e\n",
-      "scriptRef": "quarkusissue.java",
-      "command": "quarkusinfo@maxandersen",
-      "fullcommand": "jbang init -t quarkusinfo@maxandersen app.java",
-      "link": "https://github.com/maxandersen/jbang-catalog/blob/2284acb7453c410a2703e4b550b5dedb4b0e0067/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "repoOwner": "maxandersen",
-      "repoName": "jbang-catalog",
-      "alias": "jruby",
-      "description": "\u003cp\u003eRun jruby\u003c/p\u003e\n",
-      "scriptRef": "org.jruby:jruby-complete:9.2.12.0",
-      "command": "jruby@maxandersen",
-      "fullcommand": "jbang init -t jruby@maxandersen app.java",
-      "link": "https://github.com/maxandersen/jbang-catalog/blob/2284acb7453c410a2703e4b550b5dedb4b0e0067/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "repoOwner": "maxandersen",
-      "repoName": "jbang-catalog",
-      "alias": "groovy",
-      "description": "\u003cp\u003eRun groovy\u003c/p\u003e\n",
-      "scriptRef": "org.codehaus.groovy:groovy:3.0.5",
-      "command": "groovy@maxandersen",
-      "fullcommand": "jbang init -t groovy@maxandersen app.java",
-      "link": "https://github.com/maxandersen/jbang-catalog/blob/2284acb7453c410a2703e4b550b5dedb4b0e0067/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "repoOwner": "maxandersen",
-      "repoName": "jbang-catalog",
-      "alias": "ghview",
-      "description": "\u003cp\u003eGitHub View - based on current directory and locate the right \u0027thing\u0027 on github\u003c/p\u003e\n",
-      "scriptRef": "ghview.java",
-      "command": "ghview@maxandersen",
-      "fullcommand": "jbang init -t ghview@maxandersen app.java",
-      "link": "https://github.com/maxandersen/jbang-catalog/blob/2284acb7453c410a2703e4b550b5dedb4b0e0067/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "repoOwner": "maxandersen",
-      "repoName": "jbang-catalog",
-      "alias": "byteman",
-      "scriptRef": "org.jboss.byteman:byteman:4.0.13",
-      "command": "byteman@maxandersen",
-      "fullcommand": "jbang init -t byteman@maxandersen app.java",
-      "link": "https://github.com/maxandersen/jbang-catalog/blob/2284acb7453c410a2703e4b550b5dedb4b0e0067/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "repoOwner": "maxandersen",
-      "repoName": "jbang-catalog",
-      "alias": "jamira",
-      "scriptRef": "jamira.java",
-      "command": "jamira@maxandersen",
-      "fullcommand": "jbang init -t jamira@maxandersen app.java",
-      "link": "https://github.com/maxandersen/jbang-catalog/blob/2284acb7453c410a2703e4b550b5dedb4b0e0067/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "repoOwner": "maxandersen",
-      "repoName": "jbang-catalog",
-      "alias": "dashbuilder",
-      "scriptRef": "dashbuilder/dashbuilder.java",
-      "command": "dashbuilder@maxandersen",
-      "fullcommand": "jbang init -t dashbuilder@maxandersen app.java",
-      "link": "https://github.com/maxandersen/jbang-catalog/blob/2284acb7453c410a2703e4b550b5dedb4b0e0067/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/877286?v\u003d4",
-      "repoOwner": "manikmagar",
-      "repoName": "jbang-catalog",
-      "alias": "mulemeetupsync",
-      "description": "\u003cp\u003eMule Meetup Calendar sync from bevy to google calendar. Requires credentials.json path as argument.\u003c/p\u003e\n",
-      "scriptRef": "MuleMeetupCalendar.java",
-      "command": "mulemeetupsync@manikmagar",
-      "fullcommand": "jbang init -t mulemeetupsync@manikmagar app.java",
-      "link": "https://github.com/manikmagar/jbang-catalog/blob/854da8f60572a5b63d5e2d8838e4192b7a8d91f1/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/877286?v\u003d4",
-      "repoOwner": "manikmagar",
-      "repoName": "jbang-catalog",
-      "alias": "bevygooglesync",
-      "description": "\u003cp\u003eBevy events sync to google calendar.\u003c/p\u003e\n",
-      "scriptRef": "BevyGoogleCalendarSync.java",
-      "command": "bevygooglesync@manikmagar",
-      "fullcommand": "jbang init -t bevygooglesync@manikmagar app.java",
-      "link": "https://github.com/manikmagar/jbang-catalog/blob/854da8f60572a5b63d5e2d8838e4192b7a8d91f1/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/59115480?v\u003d4",
-      "repoOwner": "kordamp",
-      "repoName": "jbang-catalog",
-      "alias": "pomchecker",
-      "description": "\u003cp\u003eChecks POM files may be uploaded to Maven Central\u003c/p\u003e\n",
-      "scriptRef": "pomchecker.java",
-      "command": "pomchecker@kordamp",
-      "fullcommand": "jbang init -t pomchecker@kordamp app.java",
-      "link": "https://github.com/kordamp/jbang-catalog/blob/cd6d13265661ba3e7845f57c2ce920218b65f039/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/59115480?v\u003d4",
-      "repoOwner": "kordamp",
-      "repoName": "jbang-catalog",
-      "alias": "pomchecker-snapshot",
-      "description": "\u003cp\u003eChecks POM files may be uploaded to Maven Central\u003c/p\u003e\n",
-      "scriptRef": "pomchecker_snapshot.java",
-      "command": "pomchecker-snapshot@kordamp",
-      "fullcommand": "jbang init -t pomchecker-snapshot@kordamp app.java",
-      "link": "https://github.com/kordamp/jbang-catalog/blob/cd6d13265661ba3e7845f57c2ce920218b65f039/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/2537804?v\u003d4",
-      "repoOwner": "zemiak",
-      "repoName": "geostats",
-      "alias": "todoist",
-      "scriptRef": "todoist.java",
-      "command": "todoist@zemiak/geostats",
-      "fullcommand": "jbang init -t todoist@zemiak/geostats app.java",
-      "link": "https://github.com/zemiak/geostats/blob/82f5317b2f4651343e4676b2aaac2c4d684c5f61/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "repoOwner": "maxandersen",
-      "repoName": "jmeet",
-      "alias": "run",
-      "scriptRef": "jmeet.java",
-      "command": "run@maxandersen/jmeet",
-      "fullcommand": "jbang init -t run@maxandersen/jmeet app.java",
-      "link": "https://github.com/maxandersen/jmeet/blob/48842f26497b6bb26862777c275753b3107d9306/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "repoOwner": "maxandersen",
-      "repoName": "jmeet",
-      "alias": "clearpto",
-      "scriptRef": "clearpto.java",
-      "command": "clearpto@maxandersen/jmeet",
-      "fullcommand": "jbang init -t clearpto@maxandersen/jmeet app.java",
-      "link": "https://github.com/maxandersen/jmeet/blob/48842f26497b6bb26862777c275753b3107d9306/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
       "icon_url": "https://avatars.githubusercontent.com/u/3177316?v\u003d4",
       "repoOwner": "sansnom",
       "repoName": "jbang-catalog",
@@ -1674,7 +1674,7 @@
   ],
   "templates": [
     {
-      "stars": 719,
+      "stars": 720,
       "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "repoOwner": "jbangdev",
       "repoName": "jbang",
@@ -1685,7 +1685,7 @@
       "link": "https://github.com/jbangdev/jbang/blob/211bcaedbde99703cdc346d701c18b97ca8d36bb/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 719,
+      "stars": 720,
       "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "repoOwner": "jbangdev",
       "repoName": "jbang",
@@ -1696,7 +1696,7 @@
       "link": "https://github.com/jbangdev/jbang/blob/211bcaedbde99703cdc346d701c18b97ca8d36bb/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 719,
+      "stars": 720,
       "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "repoOwner": "jbangdev",
       "repoName": "jbang",
@@ -1707,7 +1707,7 @@
       "link": "https://github.com/jbangdev/jbang/blob/211bcaedbde99703cdc346d701c18b97ca8d36bb/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 719,
+      "stars": 720,
       "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "repoOwner": "jbangdev",
       "repoName": "jbang",
@@ -1718,7 +1718,7 @@
       "link": "https://github.com/jbangdev/jbang/blob/211bcaedbde99703cdc346d701c18b97ca8d36bb/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 719,
+      "stars": 720,
       "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "repoOwner": "jbangdev",
       "repoName": "jbang",
@@ -1729,7 +1729,7 @@
       "link": "https://github.com/jbangdev/jbang/blob/211bcaedbde99703cdc346d701c18b97ca8d36bb/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 719,
+      "stars": 720,
       "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "repoOwner": "jbangdev",
       "repoName": "jbang",
@@ -1740,7 +1740,7 @@
       "link": "https://github.com/jbangdev/jbang/blob/211bcaedbde99703cdc346d701c18b97ca8d36bb/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 719,
+      "stars": 720,
       "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "repoOwner": "jbangdev",
       "repoName": "jbang",
