@@ -1,0 +1,566 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.23.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>JBang</title>
+<meta name="description" content="Unleash the Power of Java">
+
+
+  <meta name="author" content="JBang">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="JBang">
+<meta property="og:title" content="JBang">
+<meta property="og:url" content="https://jbang.dev/">
+
+
+  <meta property="og:description" content="Unleash the Power of Java">
+
+
+
+  <meta property="og:image" content="https://jbang.dev/assets/images/slider/bg-1.jpg">
+
+
+
+  <meta name="twitter:site" content="@jbangdev">
+  <meta name="twitter:title" content="JBang">
+  <meta name="twitter:description" content="Unleash the Power of Java">
+  <meta name="twitter:url" content="https://jbang.dev/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://jbang.dev/assets/images/slider/bg-1.jpg">
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://jbang.dev/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Organization",
+      "url": "https://jbang.dev/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="JBang Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+
+
+<!-- vuetify -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.5.0/dist/vuetify.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.5.0/dist/vuetify.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<!-- hilight -->
+<!-- using dark as it looks okey but most importantly does not look like crap with vuetify theme inside apps -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/dark.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+<script>
+Vue.use(hljs.vuePlugin);
+//https://www.metachris.com/2017/02/vuejs-syntax-highlighting-with-highlightjs/
+Vue.directive('highlightjs', {
+  deep: true,
+  bind: function(el, binding) {
+    // on first bind, highlight all targets
+    let targets = el.querySelectorAll('code')
+    targets.forEach((target) => {
+      // if a value is directly assigned to the directive, use this
+      // instead of the element content.
+      if (binding.value) {
+        target.textContent = binding.value
+      }
+      hljs.highlightBlock(target)
+    })
+  },
+  componentUpdated: function(el, binding) {
+    // after an update, re-fill the content and then highlight
+    let targets = el.querySelectorAll('code')
+    targets.forEach((target) => {
+      if (binding.value) {
+        target.textContent = binding.value
+        hljs.highlightBlock(target)
+      }
+    })
+  }
+})
+</script>
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--splash wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/logo.png" alt=" "></a>
+        
+        <a class="site-title" href="/">
+           
+          <span class="site-subtitle">Unleash the power of Java</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/appstore/">AppStore</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contribute/">Contribute</a>
+            </li><li class="masthead__menu-item">
+              <a href="/documentation/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/download/">Download</a>
+            </li><li class="masthead__menu-item">
+              <a href="/learn/">Learn</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/jbangdev"><i class='fab fa-fw fa-github'></i></a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/slider/bg-1.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          JBang
+
+        
+      </h1>
+      
+        <p class="page__lead">Unleash the Power of Java
+</p>
+      
+      
+
+
+      
+      
+        <p>
+        
+          <a href="/download" class="btn btn--light-outline btn--large"><i class='fas fa-download'></i> Download</a>
+        
+          <a href="/#try" class="btn btn--light-outline btn--large">Try</a>
+        
+      
+    </div>
+  
+  
+</div>
+
+
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <meta itemprop="description" content="Unleash the Power of Java">
+    
+    
+
+    <section class="page__content" itemprop="text">
+      
+<div class="feature__wrapper">
+
+  
+    <div class="feature__item--center">
+      <div class="archive__item">
+        
+
+        <div class="archive__item-body">
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Easy to get started. Fun to explore. Limitless.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+<div class="feature__wrapper">
+
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/carbon-deps.png" alt="" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Simplified Dependencies</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Automatic fetching of any dependency using <code class="highlighter-rouge">//DEPS group:artifact:version</code> or <code class="highlighter-rouge">@Grab</code> annotations.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/carbon-install.png" alt="" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Install &amp; Run Anywhere</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>JBang installs and run on Windows, Linux, macOS, Docker and Github Actions</p>
+
+            </div>
+          
+
+          
+            <p><a href="/download" class="btn btn--primary">Download</a></p>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/carbon-java.png" alt="" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">No Java ? No Problem!</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Java will automatically be downloaded when needed.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+<div class="feature__wrapper">
+
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/feature-version-juggle.svg" alt="" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Java 8 and higher</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>You can use any Java, from version 8 and up</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/feature-appstore.png" alt="" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">JBang AppStore</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Use the JBang AppStore to find others application or publish your own from a git backed <code class="highlighter-rouge">jbang-catalog.json</code></p>
+
+            </div>
+          
+
+          
+            <p><a href="/appstore" class="btn btn--primary">AppStore</a></p>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/feature-ide.png" alt="" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Works in your IDE</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Easy editing in Intellij, Eclipse, Visual Studio Code, Apache Netbeans, vim and emacs. All with proper content assist and debug</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+<h3 id="try-">Try <a name="try"></a></h3>
+
+<p>Below is a <a href="https://repl.it">replit</a> window which provides a Java development environment. Run <code class="highlighter-rouge">hello.java</code> by clicking the Run button.
+In the terminal you can use <code class="highlighter-rouge">jbang hello.java</code> or <code class="highlighter-rouge">./hello.java</code> to run it directly.</p>
+
+<iframe height="600px" width="100%" src="https://repl.it/@maxandersen/jbang-replit-demo?lite=true#hello.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<h3 id="watch-">Watch <a name="watch"></a></h3>
+
+<p>Below is latest talk about JBang: “<code class="highlighter-rouge">jbang</code> a better <code class="highlighter-rouge">java</code> ?”</p>
+
+<iframe width="1280" height="720" src="https://youtube.com/embed/u9mfPW3ydjU?start=98" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+
+    </section>
+  </article>
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/jbangdev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/jbangdev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 JBang. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-156530423-2']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

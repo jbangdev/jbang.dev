@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>JBang</title>
+ <link href="/" rel="self"/>
+ <link href=""/>
+ <updated>2021-06-04T08:01:50+00:00</updated>
+ <id></id>
+ <author>
+   <name>JBang</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>JEP 408: Simple Web Server with JBang</title>
+   <link href="/learn/jep-408-with-jbang/"/>
+   <updated>2021-06-03T00:00:00+00:00</updated>
+   <id>/learn/jep-408-with-jbang</id>
+   <content type="html">&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In March &lt;a href=&quot;https://openjdk.java.net/jeps/408&quot;&gt;JEP: 408: Simple Web Server&lt;/a&gt; was announced. One of JEP 408&amp;#8217;s goals is to make an easy to use web server available with Java using &lt;code&gt;java -m jdk.httpserver&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;It is a nice idea and I&amp;#8217;m looking forward to see it happen.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That said - you do not need to wait for Java 18+ to get this. You can use &lt;code&gt;jbang httpd@jbangdev&lt;/code&gt; today with Java 1.8 and upwards.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;It is a &lt;a href=&quot;https://github.com/jbangdev/jbang-catalog/blob/main/httpd.java&quot;&gt;script&lt;/a&gt; I wrote in a few hours after seeing &lt;a href=&quot;https://twitter.com/sebi2706/status/1399966303625097217&quot;&gt;yet another tweet&lt;/a&gt; asking for a simple to use webserver. Like JEP 408 it only uses classes available in the JDK, meaning zero additonal download and setup besides &lt;a href=&quot;https://jbang.dev/download&quot;&gt;installing&lt;/a&gt; &lt;code&gt;jbang&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;By default, &lt;code&gt;httpd@jbangdev&lt;/code&gt; will serve the current directory on &lt;a href=&quot;https://localhost:8000&quot; class=&quot;bare&quot;&gt;https://localhost:8000&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Below is an example of using &lt;code&gt;httpd@jbangdev&lt;/code&gt; to serve this website locally from its statically generated Jekyll &lt;code&gt;_site&lt;/code&gt; folder on port 8080.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-shell hljs&quot; data-lang=&quot;shell&quot;&gt;$ jbang httpd@jbangdev -p 8080 -d _site
+[jbang] Building jar...
+Serving HTTP on 0.0.0.0 port 8080 (http://0.0.0.0:8080/) from /Users/max/code/jbangdev/jbang-catalog/_site ...
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /&quot; 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/css/main.css&quot; 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/js/main.min.js&quot; 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/logo.png&quot; 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/carbon-deps.png&quot; 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/carbon-install.png&quot; 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/carbon-java.png&quot; 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/feature-ide.png&quot; 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/feature-version-juggle.svg&quot; 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/feature-appstore.png&quot; 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/slider/bg-1.jpg&quot; 200 -&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As with any other &lt;code&gt;jbang&lt;/code&gt; capable application you can also choose to install it in your &lt;code&gt;PATH&lt;/code&gt; using &lt;code&gt;jbang app install http@jbangdev&lt;/code&gt;. Once you do that you can run it from anywhere using just &lt;code&gt;httpd&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In case you already have application called &lt;code&gt;httpd&lt;/code&gt; you can use &lt;code&gt;--name&lt;/code&gt; to give it a more unique name:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-shell hljs&quot; data-lang=&quot;shell&quot;&gt;$ jbang app install --name jhttpd httpd@jbangdev
+[jbang] Command installed: jhttpd
+$ jhttpd
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) from /Users/max/code/personal/jbangdev/jbang.dev ...&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Enjoy - and remember you can find &lt;code&gt;httpd@jbangdev&lt;/code&gt; and other apps in &lt;a href=&quot;https://jbang.dev/appstore&quot;&gt;JBang AppStore&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>JBang Avatar</title>
+   <link href="/learn/jbang-avatar/"/>
+   <updated>2020-12-01T00:00:00+00:00</updated>
+   <id>/learn/jbang-avatar</id>
+   <content type="html">&lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;It is getting very close to the first anniversary of first commit of JBang.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;To celebrate I looked around to see what we could do and was reminded about good old &lt;a href=&quot;https://gource.io&quot;&gt;Gource&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;With Gource you can render the history of a git repository and get a nice animated video, including flying icons for each author. Trouble is that by default they are just faceless heads - lets get some faces to all those names.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I found a &lt;a href=&quot;https://gist.github.com/pmdgithub/706587&quot;&gt;perl script&lt;/a&gt; that took all committer emails and located their gravatar image; but it was Perl&amp;#8230;&amp;#8203;so lets make that java instead and use JBang.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The full example is available &lt;a href=&quot;https://github.com/jbangdev/jbang/blob/HEAD/examples/grabavatars.java&quot;&gt;here&lt;/a&gt;, below I&amp;#8217;ll walk through the various interesting parts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you want to just directly run it do this:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;code&gt;jbang &lt;a href=&quot;https://github.com/jbangdev/jbang/blob/HEAD/examples/grabavatars.java&quot; class=&quot;bare&quot;&gt;https://github.com/jbangdev/jbang/blob/HEAD/examples/grabavatars.java&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;To begin with you just get started with &lt;code&gt;jbang init -t cli grab-avatar&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This will create a file named &lt;code&gt;grabavatar.java&lt;/code&gt; with some pre-seeded code that does a Hello World! style app using picocli plus it will mark the file as executable.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;setup-dependencies-and-main-class&quot;&gt;Setup dependencies and main class&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Then in top we are going to add a few dependencies:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;title&quot;&gt;Dependencies&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-java hljs&quot; data-lang=&quot;java&quot;&gt;///usr/bin/env jbang &quot;$0&quot; &quot;$@&quot; ; exit $? 
+//DEPS info.picocli:picocli:4.5.0  
+//DEPS org.zeroturnaround:zt-exec:1.12 
+//DEPS commons-codec:commons-codec:1.15 
+//DEPS org.slf4j:slf4j-nop:1.7.30 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The first line is the magic &quot;shebang&quot; line that bash and other shells will interpret but for java it is just a comment. This is what allows you to run the script directly using &lt;code&gt;./grab-avatar&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The dependencies used are as follows:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Picocli for annotation based command line parsing and help generation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;zt-exec&lt;/code&gt; is a nice library to execute processes in a nice fluent way.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;commons-coded&lt;/code&gt; just because default Java don&amp;#8217;t have a one-liner for MD5 hash generation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;No Operation slf4j to avoid the default noise slf4j generates.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;When you run &lt;code&gt;./grabavatars.java&lt;/code&gt; or &lt;code&gt;jbang grabavatars.java&lt;/code&gt; these starting lines with &lt;code&gt;//DEPS&lt;/code&gt; in them will be parsed and JBang fetches the dependencies to use during compilation and execution of your script.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The next is the class declaration which is mainly just annotations to define the main picocli command.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;title&quot;&gt;class declaration&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-java hljs&quot; data-lang=&quot;java&quot;&gt;@Command(name = &quot;GrabAvatars&quot;, mixinStandardHelpOptions = true, version = &quot;GrabAvatars 0.1&quot;,
+        description = &quot;GrabAvatars made with jbang&quot;)
+class grabavatars implements Callable&amp;lt;Integer&amp;gt; {&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;iteration-over-execution&quot;&gt;Iteration over execution&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Then the meat of the code is to run &lt;code&gt;git log --pretty=format:%ae|%an&quot;&lt;/code&gt; which will return a line for every commit with email and author, like:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-none hljs&quot;&gt;max@xam.dk|Max Rydahl Andersen&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;To do this I use &lt;code&gt;zt-exec&lt;/code&gt; which has this great &quot;one-liner&quot; to run the process and for every line output let me process it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;title&quot;&gt;processing command&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-java hljs&quot; data-lang=&quot;java&quot;&gt;        new ProcessExecutor().command(&quot;git&quot;, &quot;log&quot;, &quot;--pretty=format:%ae|%an&quot;)
+                .redirectOutput(new LogOutputStream() {
+                    @Override
+                    protected void processLine(String line) {
+                        String[] data = line.split(&quot;\\|&quot;);
+                        String email = data[0].toLowerCase();
+                        String author = data[1];&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;md5-and-download&quot;&gt;MD5 and Download&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;And finally for every identified email and author - generates MD5 and download the url.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;title&quot;&gt;processing command&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-java hljs&quot; data-lang=&quot;java&quot;&gt;                        URL grav_url = new URL(&quot;http://www.gravatar.com/avatar/&quot;
+                                    + DigestUtils.md5Hex(email)
+                                    + &quot;?d=404&amp;amp;size=&quot; + size);
+
+                        try(InputStream in = grav_url.openStream()) {
+                            Files.copy(in, authorImageFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                        }&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;all-together-now&quot;&gt;All together now&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Now to run this when I have it locally is just: &lt;code&gt;./grab-avatars&lt;/code&gt; in root of a git repository.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;But you can also run this directly from a url using:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;code&gt;jbang &lt;a href=&quot;https://github.com/jbangdev/jbang/blob/HEAD/examples/grab-avatars&quot; class=&quot;bare&quot;&gt;https://github.com/jbangdev/jbang/blob/HEAD/examples/grab-avatars&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;And then then you can go full out and render with gource - notice the &lt;code&gt;--user-image-dir .git/avatar&lt;/code&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-shell hljs&quot; data-lang=&quot;shell&quot;&gt;gource --title JBang --stop-at-end --user-image-dir .git/avatar --seconds-per-day 0.05 --auto-skip-seconds 1 -1280x720 --hide filenames -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 1 -threads 0 -bf 0 gource.mp4&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Then you get a video which with a little bit of magic of video editing that looks something like this:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;videoblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/da0CuVbvWLg?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;And that is about it - showed how to get started with jbang to port an existing perl script to java using a few dependencies.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;See you next time!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Beyond Hello World!</title>
+   <link href="/learn/beyondhello/"/>
+   <updated>2020-05-28T00:00:00+00:00</updated>
+   <id>/learn/beyondhello</id>
+   <content type="html">&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;A simple script you can run with &lt;code&gt;jbang&lt;/code&gt; is &quot;Hello World&quot; using jshell (&lt;code&gt;.jsh&lt;/code&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-java hljs&quot; data-lang=&quot;java&quot;&gt;    System.out.println(&quot;Hello &quot; + ((args.length&amp;gt;0)?args[0]:&quot;jbang&quot;));&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;You can run the above by putting it in a file named: &lt;code&gt;hello.jsh&lt;/code&gt; and run &lt;code&gt;jbang hello.jsh&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;To expand on this we will make a Java file (&lt;code&gt;.java&lt;/code&gt;) which uses an external dependency to make the text a bit more fancy.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In this case we&amp;#8217;ll use a library called &lt;code&gt;jfiglet&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;We use &lt;code&gt;//DEPS com.github.lalyos:jfiglet:0.0.8&lt;/code&gt; to declare this script should run using the dependency with group id: &lt;code&gt;com.github.lalyos&lt;/code&gt;, artifact id: &lt;code&gt;jfiglet&lt;/code&gt; and with the version &lt;code&gt;0.0.8&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;These are called &quot;artifacts coordinates&quot; or &quot;maven coordinates&quot; as the system originates from the Maven build system; but is today used in almost all Java projects. You can use sites like &lt;a href=&quot;https://mvnrepository.com&quot; class=&quot;bare&quot;&gt;https://mvnrepository.com&lt;/a&gt; to locate the coordinates of projects, and otherwise find them on the website or source repository of the project them self.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Below is a repl.it instance preconfigured with &lt;code&gt;jbang&lt;/code&gt; ready to run &lt;code&gt;hello.java&lt;/code&gt; using the &lt;code&gt;figlet&lt;/code&gt; dependency.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Try and press the Run button to see how it works and then try edit the code to see how it pick up the changes between each run.&lt;/p&gt;
+&lt;/div&gt;
+&lt;iframe height=&quot;400px&quot; width=&quot;100%&quot; src=&quot;https://repl.it/@maxandersen/jbang-replit-demo?lite=true#hello.java&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; sandbox=&quot;allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals&quot;&gt;&lt;/iframe&gt;</content>
+ </entry>
+ 
+ 
+</feed>
