@@ -40,7 +40,7 @@ Serving HTTP on 0.0.0.0 port 8080 (http://0.0.0.0:8080/) from /Users/max/code/jb
 127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] "GET /assets/images/slider/bg-1.jpg" 200 -
 ----
 
-As with any other `jbang` capable application you also choose to install it in your `PATH` using `jbang app install http@jbangdev`. Once you do that you can run it from anywhere using just `httpd`.
+As with any other `jbang` capable application you can also choose to install it in your `PATH` using `jbang app install http@jbangdev`. Once you do that you can run it from anywhere using just `httpd`.
 
 In case you already have application called `httpd` you can use `--name` to give it a more unique name:
 
