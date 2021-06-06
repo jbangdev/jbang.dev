@@ -8,13 +8,9 @@ on:
 jobs:
 
   github-pages:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - name: musl
-        run: |
-          sudo apt-get install -y musl-dev
 
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
@@ -35,7 +31,8 @@ jobs:
 
       - name: Copy antora docs site to jekyll web site
         run: |
-          cp -rf ./docs-site/build/site/* ./_site/docs
+          mkdir -p ./_site/docs
+          cp -rf ./docs-site/build/site ./_site/docs
 
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
