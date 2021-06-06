@@ -23,7 +23,9 @@ jobs:
       - name: Build Jekyll site
         uses: limjh16/jekyll-action-ts@v2
         with:
-          enable_cache: false
+          enable_cache: true
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
 
       - name: Run Antora
         uses: kameshsampath/antora-site-action@master
