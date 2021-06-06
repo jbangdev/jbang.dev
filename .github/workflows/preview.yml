@@ -13,13 +13,14 @@ jobs:
         with:
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
       - uses: n1hility/cancel-previous-runs@v2
+        if: ${{ false }} ## not needed as we are not using all resources
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7      
+          ruby-version: 2.7
       - name: Build Jekyll site
         uses: limjh16/jekyll-action-ts@v2
         with:
