@@ -14,8 +14,8 @@ jobs:
 
       - name: musl
         run: |
-          sudo apt-get install -y musl
-          
+          sudo apt-get install -y musl-dev
+
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
         with:
