@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Java Versions :: JBang</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-156530423-2')</script>
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/docs">JBang</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/appstore">AppStore</a>
+        <a class="navbar-item" href="/contribute">Contribute</a>
+        <a class="navbar-item" href="/documentation">Documentation</a>
+        <a class="navbar-item" href="/download">Download</a>
+        <a class="navbar-item" href="/appstore">Learn</a>
+        <a class="navbar-item" href="https://github.com/jbangdev"><i class="fab fa-fw fa-github"></i></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="guide" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">JBang</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Intro</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="usage.html">Usage</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="dependencies.html">Dependencies</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="javaversions.html">Java Versions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="organizing.html">File Organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="running.html">Running</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="debugging.html">Debugging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="editing.html">Editing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="exporting.html">Exporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install.html">Install Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="templates.html">Templates</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="alias_catalogs.html">Aliases &amp; Catalogs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="caching.html">Caching</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">JBang</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">JBang</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">JBang</a></li>
+    <li><a href="javaversions.html">Java Versions</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/jbangdev/jbang/edit/newantora/docs/modules/ROOT/pages/javaversions.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Java Versions</h1>
+<div id="preamble">
+<div class="sectionbody">
+<!-- toc disabled -->
+<div class="paragraph">
+<p><code>jbang</code> will by default use <code>JAVA_HOME</code> and if not available, check the <code>PATH</code> to locate the <code>java</code> executable to run the script with.</p>
+</div>
+<div class="paragraph">
+<p>If your script requires a specific or minimal version of Java you can use <code>//JAVA &lt;version&gt;(+)</code>.</p>
+</div>
+<div class="paragraph">
+<p>If Jbang finds a java executable using <code>JAVA_HOME</code> or <code>PATH</code> which satisfies the stated java version jbang will use it.
+If no such version is found it will automatically download and install it.</p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="paragraph">
+<p><code>//JAVA 11</code> will force use of Java 11.<br>
+<code>//JAVA 13+</code> will require at least java 13. Java 13 or higher will be used.</p>
+</div>
+<div class="paragraph">
+<p>In case no matching <code>java</code> is found <code>jbang</code> will fail.</p>
+</div>
+<div class="paragraph">
+<p>You can always force running with specific version of <code>java</code> using <code>--java</code> command line option, i.e.
+<code>jbang --java 8 hello.java</code></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="managing-jdks"><a class="anchor" href="#managing-jdks"></a>Managing JDKs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the previous section it was mentioned that Jbang will automatically download and install JDKs when necessary.
+You can use the <code>jdk</code> command to manage JDKs, for example you can run the following:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang jdk list</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>which will list all the JDKs that are currently installed by Jbang.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s easy to <code>install</code> additional JDKs by running:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang jdk install 14</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>which will download and install JDK version 14 into Jbang&#8217;s cache (<code>~/.jbang/cache/jdks</code> by default).
+The list of versions that are available for installation can be found here: <a href="https://adoptopenjdk.net/releases.html" class="bare">https://adoptopenjdk.net/releases.html</a></p>
+</div>
+<div class="paragraph">
+<p>The first JDK that gets installed by Jbang will be set as the "default" JDK. This is from then on the JDK that will be
+used by Jbang if no Java could be found on the system (meaning <code>javac</code> wasn&#8217;t found on the <code>PATH</code> and no <code>JAVA_HOME</code> is set).
+You can change the default JDK by running:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang jdk default 12</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Running it without an argument will return the version of the JDK that is currently set as the default.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+On Windows you might need elevated privileges to create symbolic links. If you don&#8217;t have permissions then
+running the above command  will result in an error. To use it <a href="https://stackoverflow.com/a/24353758">enable symbolic links</a>
+for your user or run your shell/terminal as administrator to have this feature working.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When you <code>uninstall</code> a JDK by running:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang jdk uninstall 12</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and that JDK was set as the default, Jbang will set the next higher version JDK as the default. If no higher version is
+available it will select the next lower version.</p>
+</div>
+<div class="sect2">
+<h3 id="using-managed-jdks-yourself"><a class="anchor" href="#using-managed-jdks-yourself"></a>Using managed JDKs yourself</h3>
+<div class="paragraph">
+<p>Given the fact that Jbang is able to easily download and install JDKs we thought that it might be a good option for
+our users to be able to access those JDKs for their own use instead of having to install yet another version themselves.</p>
+</div>
+<div class="paragraph">
+<p>To make that easy we added a couple of useful commands. The first can be used to set retrieve to location where the JDK
+is installed:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang jdk home</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will return the path to the "default" JDK (by default <code>~/.jbang/currentjdk)</code>, if you want to know the location of a
+specific JDK you can pass the version as an argument: <code>jbang jdk home 14</code>. This command could be used by scripts to find
+a JDK to use to run a Java program for example (eg: <code>JAVA_HOME=$(jbang jdk home)</code>.</p>
+</div>
+<div class="paragraph">
+<p>For setting up your current command line environment there&#8217;s something simpler. You can run:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang jdk java-env</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On Linux, Mac and AIX this will output something like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>export PATH="/home/user/.jbang/currentjdk/bin:$PATH"
+export JAVA_HOME="/home/user/.jbang/currentjdk"
+# Run this command to configure your shell:
+# eval $(jbang jdk java-env)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And the output itself shows how to properly use it to configure your command line to use the JDK. In this case it&#8217;s by
+running:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>eval $(jbang jdk java-env)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To do this by default for all shells you start simply add the above line to your <code>~/.bashrc</code> file.</p>
+</div>
+<div class="paragraph">
+<p>Unfortunately on Windows using CMD things are not as easy as is show by the output of <code>jbang jdk java-env</code> on that  platform:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>set PATH=C:\Users\user\.jbang\currentjdk\bin;%PATH%
+set JAVA_HOME=C:\Users\user\.jbang\currentjdk
+rem Copy &amp; paste the above commands in your CMD window or add
+rem them to your Environment Variables in the System Settings.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Instead of copying and pasting lines you could also redirect the output to a .bat file and execute that instead:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt; jbang jdk java-env &gt; setenv.bat
+&gt; setenv</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="page__footer-follow">
+    <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/jbangdev" rel="nofollow noopener noreferrer"><i
+            class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="https://github.com/jbangdev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+            aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    </ul>
+  </div>
+  <div class="page__footer-copyright">© 2021 JBang Documentation. Powered by <a href="https://antora.org" rel="nofollow">Antora</a>
+    &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+  </div>
+</footer><script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

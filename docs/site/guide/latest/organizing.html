@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>File Organization :: JBang</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-156530423-2')</script>
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/docs">JBang</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/appstore">AppStore</a>
+        <a class="navbar-item" href="/contribute">Contribute</a>
+        <a class="navbar-item" href="/documentation">Documentation</a>
+        <a class="navbar-item" href="/download">Download</a>
+        <a class="navbar-item" href="/appstore">Learn</a>
+        <a class="navbar-item" href="https://github.com/jbangdev"><i class="fab fa-fw fa-github"></i></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="guide" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">JBang</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Intro</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="usage.html">Usage</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="dependencies.html">Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="javaversions.html">Java Versions</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="organizing.html">File Organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="running.html">Running</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="debugging.html">Debugging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="editing.html">Editing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="exporting.html">Exporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install.html">Install Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="templates.html">Templates</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="alias_catalogs.html">Aliases &amp; Catalogs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="caching.html">Caching</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">JBang</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">JBang</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">JBang</a></li>
+    <li><a href="organizing.html">File Organization</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/jbangdev/jbang/edit/newantora/docs/modules/ROOT/pages/organizing.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">File Organization</h1>
+<div id="preamble">
+<div class="sectionbody">
+<!-- toc disabled -->
+</div>
+</div>
+<div class="sect1">
+<h2 id="multiple-source-files"><a class="anchor" href="#multiple-source-files"></a>Multiple source files</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is possible to use multiple source files just by having the files in the same source directory, it will
+even work for a limited extent with packages.</p>
+</div>
+<div class="paragraph">
+<p>For example the example below works by just calling <code>jbang Main.java</code>:</p>
+</div>
+<div class="listingblock">
+<div class="title">Main.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import model.Person;
+
+public class Main {
+
+    public static void main(String... args) {
+        Person p = new Person(args[0]);
+        System.out.println("Hello " + p.getName());
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">model/Person.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package model;
+
+public class Person {
+    String name;
+    public String getName() { return name; }
+    public Person(String n) { this.name = n; }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are some cases where the above does not work; i.e. if two packages refer to each other - i.e. <code>model.Person</code> referring to <code>util.Generator</code>
+will fail. Also <code>jbang edit</code> does not know about multiple sources as it runs and must run before compilation occurs.</p>
+</div>
+<div class="paragraph">
+<p>Thus version 0.46 there is now support for having that all work with multiple source files. The main script file defines all the
+dependencies and you add more source files into the application using <code>//SOURCES &lt;filename&gt;</code>.
+If included source has <code>//SOURCES</code> that will also get included recursively.</p>
+</div>
+<div class="paragraph">
+<p>The listed file name(s) gets added to source list when compiling.</p>
+</div>
+<div class="paragraph">
+<p>Currently there are not <code>*.java</code> style matching or support for these <code>.java</code> files to declare <code>//DEPS</code> or other jbang configuration.
+That will currently only be honored by the main script/app. These will be loosened up in future based on feedback.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adding-more-resources"><a class="anchor" href="#adding-more-resources"></a>Adding more resources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you want to add a <code>META-INF/application.properties</code> or <code>META-INF/resource.index.html</code> or other files to the generated jar
+you can use <code>//FILES</code> to add them.</p>
+</div>
+<div class="paragraph">
+<p>The format is <code>//FILES &lt;mountpoint&gt;[=&lt;sourcefile&gt;]</code>.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>//FILES resource.properties
+//FILES META-INF/resources/index.html=index.html</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here <code>resource.properties</code> will be copied as is and <code>META-INF/resources/index.html</code> gets its content from <code>index.html</code>.</p>
+</div>
+<div class="paragraph">
+<p>All locations are relative to the script location.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Currently <code>jbang edit</code> and http(s) based script do not work with <code>//FILES</code>. Will be added later.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="extension-lessnon-java-files-for-cli-plugins"><a class="anchor" href="#extension-lessnon-java-files-for-cli-plugins"></a>Extension-less/non-java files for cli-plugins</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can use <code>jbang</code> to write plugins for cli&#8217;s like <code>kubectl</code>, <code>git</code>, etc.
+They expect their plugins to be named like <code>&lt;cmd&gt;-&lt;plugin&gt;</code>, i.e. <code>kubectl-myplugin</code>.</p>
+</div>
+<div class="paragraph">
+<p>Furthermore some of them, particularly <code>kubectl</code> currently require the file to start with <code>#!</code> otherwise you get a <code>exec format error</code>.</p>
+</div>
+<div class="paragraph">
+<p>There are two ways to have that work. The first recommended way is to use <code>jbang app install</code> which setups an intermediate script
+to avoid the issue, i.e. <code>jbang app install --name kubectl-my-plugin myplugin.java</code>.</p>
+</div>
+<div class="paragraph">
+<p>The second is to use a bit of auto-magic <code>jbang</code> has to help in case you only want a single file, no intermediate script. That
+is described below.</p>
+</div>
+<div class="sect2">
+<h3 id="kebab-casing-of-filename"><a class="anchor" href="#kebab-casing-of-filename"></a>Kebab casing of filename</h3>
+<div class="paragraph">
+<p><code>jbang</code> lets you name your file without a <code>.java</code> or <code>.jsh</code> extension, such
+as <code>kubectl-my-plugin</code> or <code>myjavascript.sh</code>. <code>jbang</code> will in this case copy the file to a temporary
+directory using kebab-case to map the name to a proper java class name.</p>
+</div>
+<div class="paragraph">
+<p>For example, if you make a file called <code>kubectl-my-plugin</code> then <code>jbang</code> will assume the actual class name to launch
+to be <code>KubectlMyPlugin</code>.</p>
+</div>
+<div class="paragraph">
+<p>Note, similar is done when using <code>jbang edit</code>, here the symbolic link will be made so the IDE will treat it as
+regular camel cased java class.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you do not follow this naming pattern you will get a compile error as <code>javac</code> expects both the public class and file names to be equal.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="she-bang-auto-stripped"><a class="anchor" href="#she-bang-auto-stripped"></a>she-bang auto-stripped</h3>
+<div class="paragraph">
+<p>For extension less scripts, you can put <code>#!' header at the beginning to let apps recognize
+it is to be treated as a script. To avoid issues when compiling, `jbang</code> will remove
+that line before compilation.</p>
+</div>
+<div class="paragraph">
+<p>For now this is required for <code>kubectl</code> plugin but not <code>git</code>. <a href="https://github.com/kubernetes/kubectl/issues/822">Issue opened</a> on this limitation.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="page__footer-follow">
+    <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/jbangdev" rel="nofollow noopener noreferrer"><i
+            class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="https://github.com/jbangdev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+            aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    </ul>
+  </div>
+  <div class="page__footer-copyright">© 2021 JBang Documentation. Powered by <a href="https://antora.org" rel="nofollow">Antora</a>
+    &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+  </div>
+</footer><script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

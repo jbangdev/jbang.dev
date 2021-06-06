@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aliases &amp; Catalogs :: JBang</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-156530423-2')</script>
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/docs">JBang</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/appstore">AppStore</a>
+        <a class="navbar-item" href="/contribute">Contribute</a>
+        <a class="navbar-item" href="/documentation">Documentation</a>
+        <a class="navbar-item" href="/download">Download</a>
+        <a class="navbar-item" href="/appstore">Learn</a>
+        <a class="navbar-item" href="https://github.com/jbangdev"><i class="fab fa-fw fa-github"></i></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="guide" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">JBang</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Intro</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="usage.html">Usage</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="dependencies.html">Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="javaversions.html">Java Versions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="organizing.html">File Organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="running.html">Running</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="debugging.html">Debugging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="editing.html">Editing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="exporting.html">Exporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install.html">Install Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="templates.html">Templates</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="alias_catalogs.html">Aliases &amp; Catalogs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="caching.html">Caching</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">JBang</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">JBang</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">JBang</a></li>
+    <li><a href="alias_catalogs.html">Aliases &amp; Catalogs</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/jbangdev/jbang/edit/newantora/docs/modules/ROOT/pages/alias_catalogs.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Aliases &amp; Catalogs</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>To avoid remembering long paths and to enable easy launch of jbang scripts there is an <code>alias</code> command
+to setup and manage aliases to actual scripts.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang alias add hello https://github.com/jbangdev/jbang-examples/blob/HEAD/examples/helloworld.java</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>will add an alias named <code>hello</code> pointing to that github url which then can be run using <code>jbang hello</code>.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang alias list</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>will show you all the aliases that are defined locally.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="implicit-alias-catalogs"><a class="anchor" href="#implicit-alias-catalogs"></a>Implicit Alias Catalogs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The aliases you create are stored locally (see <a href="#local-alias-catalogs">Local Alias Catalogs</a>), but Jbang can also use remote catalogs.
+You can access those catalogs explicitly (see <a href="#catalogs">Catalogs</a>) but it is much easier to use what we call "implicit catalogs", which
+are aliases that have a special format and Jbang is smart enough to know where to find their definition.</p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="paragraph">
+<p><code>jbang hello@jbangdev</code> will run the alias <code>hello</code> as defined in <code>jbang-catalog.json</code> found in <a href="https://github.com/jbangdev/jbang-catalog" class="bare">https://github.com/jbangdev/jbang-catalog</a>.</p>
+</div>
+<div class="paragraph">
+<p>This allows anyone to provide a set of jbang scripts defined in their github, gitlab or bitbucket repositories.</p>
+</div>
+<div class="paragraph">
+<p>The full format is <code>&lt;alias&gt;@&lt;user/org&gt;(/repository)(/branch)(~path)</code> allowing you to do things like:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Implicit Catalog Examples:</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jbang hello@acme</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hello</code> alias found in <code>acme/jbang-catalog/jbang-catalog.json</code> of the default branch searched on github, gitlab and bitbucket in that order.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jbang hello@acme/mycatalog</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hello</code> found in <code>acme/mycatalog/jbang-catalog.json</code> searched on github, gitlab and bitbucket in that order.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jbang hello@acme/mycatalog/dev</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hello</code> found in <code>acme/mycatalog/jbang-catalog.json</code> in the <code>dev</code> branch searched on github, gitlab and bitbucket in that order.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jbang hello@acme~experimental</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hello</code> found in <code>acme/jbang-catalog/experimental/jbang-catalog.json</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="local-alias-catalogs"><a class="anchor" href="#local-alias-catalogs"></a>Local Alias Catalogs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jbang will also look in the current directory for a <code>jbang-catalog.json</code> file and if it exists it will look up any aliases
+in there too. In fact it will look in several places in the following order:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Current directory, <code>./jbang-catalog.json</code></p>
+</li>
+<li>
+<p>In <code>.jbang/jbang-catalog.json</code></p>
+</li>
+<li>
+<p>In the parent directory, <code>../jbang-catalog.json</code></p>
+</li>
+<li>
+<p>In the parent&#8217;s <code>.jbang</code> directory, ../.jbang/jbang-catalog.json`</p>
+</li>
+<li>
+<p>And repeating steps 3 and 4 recursively upwards to the root of the file system</p>
+</li>
+<li>
+<p>As the last step it will look in <code>$HOME/.jbang/jbang-catalog.json</code></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Jbang will use any aliases defined in those files, but on top of that it will also look at the aliases defined in any
+catalogs mentioned in those files as well. Aliases defined in the file have preference over aliases found in any catalogs
+defined in the same file.</p>
+</div>
+<div class="paragraph">
+<p>When you create aliases using <code>jbang alias add</code>, or add catalogs using <code>jbang catalog add</code> the <em>same</em> ordering will be used
+to determine where to store the alias or catalog. Btw, this will only take into account <em>existing</em> files!
+So if no <code>jbang-catalog.json</code> file exists in the local directory it will <em>not</em> be created for you, but Jbang will keep
+looking until it finds a file to use (as a last option it will always be written to <code>$HOME/.jbang/jbang-catalog.json</code>).</p>
+</div>
+<div class="paragraph">
+<p>This means that if you want to write the alias to <code>jbang-catalog.json</code> in your local folder you will either have to create
+the file first (eg by running <code>touch jbang-catalog.json</code>) or by explicitly specifying the file location:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang alias add -f jbang-catalog.json hello https://github.com/jbangdev/jbang-examples/blob/HEAD/examples/helloworld.java</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Btw, the flag <code>--show-origin</code> is very useful when listing aliases to find out where exactly an alias is defined:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang alias list --show-origin</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="catalogs"><a class="anchor" href="#catalogs"></a>Catalogs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Catalogs are lists of Aliases as defined in the previous section, but while the <code>alias</code> command is used to manage aliases
+within a catalog, the <code>catalog</code> command is for managing references to catalogs. This is mostly useful when dealing with
+remote catalogs. You can for example add a catalog like this:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang catalog add --name demo https://github.com/jbangdev/jbang-catalog/blob/HEAD/jbang-catalog.json</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or simply by using the same "implicit" catalog system described in <a href="#implicit-alias-catalogs">Implicit Alias Catalogs</a>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang catalog add --name demo jbangdev</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The aliases in that catalog are now available by adding <code>@demo</code> to their names. For example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ jbang alias list demo
+env@demo = Dump table of Environment Variables
+gavsearch@demo = Search search.maven.org for maven artifacts.
+hello@demo = Script that says hello back for each argument
+properties@demo = Dump table of System properties
+$ jbang run hello@demo World!
+[jbang] Building jar...
+Hello World!</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In fact, it&#8217;s possible to run the alias just by using <code>jbang run hello</code>, the <code>@demo</code> part is only necessary when trying to
+disambiguate between aliases with the same name from different catalogs.</p>
+</div>
+<div class="paragraph">
+<p>You can list the available catalogs by running:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang catalog list</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>NB: The output will not only show the catalogs you defined yourself but also the ones that get added implicitly when
+running aliases as described in the section <a href="#implicit-alias-catalogs">Implicit Alias Catalogs</a>.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="page__footer-follow">
+    <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/jbangdev" rel="nofollow noopener noreferrer"><i
+            class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="https://github.com/jbangdev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+            aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    </ul>
+  </div>
+  <div class="page__footer-copyright">© 2021 JBang Documentation. Powered by <a href="https://antora.org" rel="nofollow">Antora</a>
+    &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+  </div>
+</footer><script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

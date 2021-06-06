@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Usage :: JBang</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-156530423-2')</script>
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/docs">JBang</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/appstore">AppStore</a>
+        <a class="navbar-item" href="/contribute">Contribute</a>
+        <a class="navbar-item" href="/documentation">Documentation</a>
+        <a class="navbar-item" href="/download">Download</a>
+        <a class="navbar-item" href="/appstore">Learn</a>
+        <a class="navbar-item" href="https://github.com/jbangdev"><i class="fab fa-fw fa-github"></i></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="guide" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">JBang</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Intro</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="usage.html">Usage</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="dependencies.html">Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="javaversions.html">Java Versions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="organizing.html">File Organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="running.html">Running</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="debugging.html">Debugging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="editing.html">Editing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="exporting.html">Exporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install.html">Install Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="templates.html">Templates</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="alias_catalogs.html">Aliases &amp; Catalogs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="caching.html">Caching</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">JBang</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">JBang</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">JBang</a></li>
+    <li><a href="usage.html">Usage</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/jbangdev/jbang/edit/newantora/docs/modules/ROOT/pages/usage.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Usage</h1>
+<div id="preamble">
+<div class="sectionbody">
+<!-- toc disabled -->
+<div class="paragraph">
+<p>A minimal script is a single <code>.java</code> file with a typical <code>static void main</code> method or a <code>.jsh</code> file which will be passed to <code>jshell</code>.</p>
+</div>
+<div class="paragraph">
+<p>Below is an (almost) minimal example you can save in <code>helloworld.java</code> or simply run <code>jbang init helloworld.java</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">///usr/bin/env jbang "$0" "$@" ; exit $? <i class="conum" data-value="1"></i><b>(1)</b>
+
+class helloworld { <i class="conum" data-value="2"></i><b>(2)</b>
+
+    public static void main(String[] args) {
+        if(args.length==0) {
+            System.out.println("Hello World!");
+        } else {
+            System.out.println("Hello " + args[0]);
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>By using this <code>//</code> style instead of shebang <code>#!</code> you trick <code>bash</code>, <code>zsh</code> etc. to run this as a script while still being valid java code.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>A classname, can be anything when using <code>jbang</code> but to be valid java for most IDEs you&#8217;ll want to name it the same as the source file.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Now to run this you can call it via <code>jbang</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>jbang helloworld.java</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or if on Linux/OSX/AIX run it directly. If you created it manually you need to mark it as executable before running it.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>chmod +x helloworld.java
+./helloworld.java jbang!</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When no <a href="#java-version">JDK version</a> is available in the PATH, JDK 11 will be downloaded by default to bootstrap jbang.
+If your script requires a higher version and you don' want to download two JDK&#8217;s, you can define an alternative default with <code>JBANG_DEFAULT_JAVA_VERSION</code> env variable.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ JBANG_DEFAULT_JAVA_VERSION=14 jbang my-script.java</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that if JDK is found in the PATH, <code>JBANG_DEFAULT_JAVA_VERSION</code> will be ignored.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="default-application"><a class="anchor" href="#default-application"></a>Default application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you pass a directory or a url ending in <code>/</code> jbang will look for <code>main.java</code> to run as default application for that directory / location.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="urls-from-trusted-sources"><a class="anchor" href="#urls-from-trusted-sources"></a>URLs from Trusted Sources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can use <code>http(s):/</code> and <code>file:/</code> url&#8217;s for input:.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>jbang https://gist.github.com/maxandersen/f43b4c52dfcfc42dcd59a04e49acf6ec</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For safety reasons jbang will not run arbitrary urls before you indicated you trust their source.
+Thus when running the above for the first time you will see the following warning about the url not being a trusted source:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jbang https://gist.github.com/maxandersen/f43b4c52dfcfc42dcd59a04e49acf6ec
+[jbang] https://gist.github.com/maxandersen/f43b4c52dfcfc42dcd59a04e49acf6ec is not from a trusted source thus not running it automatically.
+
+If you trust the url to be safe to run you can do one of the following:
+0) Trust once: Add no trust, just run this time
+1) Trust this url in future:
+    jbang trust add https://gist.github.com/maxandersen/
+
+
+Any other response will result in exit.
+
+[jbang] Type in your choice (0 or 1) and hit enter. Times out after 10 seconds.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can then choose 0 to run once or 1 to trust the suggested url. If you don&#8217;t answer within 10 seconds jbang will exit.</p>
+</div>
+<div class="paragraph">
+<p>To enable running it without such question you need to mark that url or a sub part of it as a trusted source.
+i.e. <code>jbang trust add <a href="https://github.com/maxandersen/" class="bare">https://github.com/maxandersen/</a></code> will tell <code>jbang</code> to trust anything with that base url.</p>
+</div>
+<div class="paragraph">
+<p>You can see more in the comments of the <code>~/.jbang/trusted-sources.json</code>.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Sites such as GitHub, gitlab, bitbucket, gist, carbon.now.sh jbang will try and extract the proper source rather than the raw html.
+i.e. doing <code>jbang <a href="https://carbon.now.sh/ae51bf967c98f31a13cba976903030d5" class="bare">https://carbon.now.sh/ae51bf967c98f31a13cba976903030d5</a> carbon!</code> is possible.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>URL&#8217;s will follow redirects. In case you need to use it with sites with self-signed/non-trusted certificates you can
+if you trust the site use <code>--insecure</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="build-and-run-native-image-experimental"><a class="anchor" href="#build-and-run-native-image-experimental"></a>Build and run native image (Experimental)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There is support for using <code>native-image</code> from GraalVM project to produce a binary executable.</p>
+</div>
+<div class="paragraph">
+<p>Since not all java libraries can automatically be built with <code>native-image</code> - especially if using reflection feature are considered highly experimental.</p>
+</div>
+<div class="paragraph">
+<p>Just run <code>jbang --native helloworld.java</code> and <code>jbang</code> will use <code>native-image</code> from either <code>$JAVA_HOME/bin</code> or <code>$GRAALVM_HOME/bin</code> or <code>$PATH</code> to
+produce a native image binary.</p>
+</div>
+<div class="paragraph">
+<p>You can install the <code>native-image</code> utility binary e.g. by installing GraalVM from <a href="https://www.graalvm.org/downloads" class="bare">https://www.graalvm.org/downloads</a>, and then once running <code>gu install native-image</code> as per <a href="https://www.graalvm.org/reference-manual/native-image" class="bare">https://www.graalvm.org/reference-manual/native-image</a>.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you use <code>--native</code> with picocli remember to add <code>info.picocli:picocli-codegen</code> as that will ensure it will actually work with <code>native-image</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="using-jsh-for-jshell"><a class="anchor" href="#using-jsh-for-jshell"></a>Using <code>.jsh</code> for <code>jshell</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There is support to run <code>.jsh</code> via <code>jshell</code>. The advantage of <code>jshell</code> is that you do not need to have a class or static main method.</p>
+</div>
+<div class="paragraph">
+<p>Classic <code>jshell</code> does not support passing in arguments nor system properties, <code>jbang</code> does.</p>
+</div>
+<div class="paragraph">
+<p>In the case of <code>.jsh</code> files <code>jbang</code> injects a startup script that declares a <code>String[] args</code> which will contain any passed in arguments,
+and it sets any properties passed in as <code>-Dkey=value</code> as parameters to <code>jbang</code>.</p>
+</div>
+<div class="paragraph">
+<p>That means you can run a script as <code>jbang -Dkey=value helloworld.jsh World</code> and retrieve arguments and properties as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">System.out.println("Hello " + (args.length&gt;0?args[0]:"World")); <i class="conum" data-value="1"></i><b>(1)</b>
+System.out.println(System.getProperty("key")); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Line where <code>args</code> are accessible without previous declaration.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>System properties set when passed as <code>-D</code> arguments to <code>jbang</code></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The script will have the output:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Hello World
+value</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Please note that <code>.jsh</code> files are source only, they are not compiled thus they are <a href="https://github.com/jbangdev/jbang/issues/506">not cached</a> nor can they be <a href="https://github.com/jbangdev/jbang/issues/510">built as native images</a>.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you use <code>-Dkey</code> where no value is specified <code>jbang</code> will interpret this as <code>-Dkey=true</code> allowing you to easily have
+flags passed into, i.e. <code>jbang -DskipTests mytestrunner.java</code>. Now within your script `Boolean.getBoolean('skipTests') will return true.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="running-kotlin-kt-experimental"><a class="anchor" href="#running-kotlin-kt-experimental"></a>Running Kotlin (.kt) (EXPERIMENTAL)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As an experiment since 0.71.0 JBang supports building Kotlin files using <code>kotlinc</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jbang init -t hello.kt hello
+./hello.kt
+[jbang] Downloading Kotlin 1.5.0. Be patient, this can take several minutes...
+[jbang] Installing Kotlin 1.5.0...
+[jbang] Building jar...
+Hello World</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="running-script-from-standard-input"><a class="anchor" href="#running-script-from-standard-input"></a>Running script from standard input</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>jbang can run scripts directly from standard input using <code>-</code> or <code>/dev/stdin</code> as input.</p>
+</div>
+<div class="paragraph">
+<p>i.e.</p>
+</div>
+<div class="paragraph">
+<p><code>echo 'System.out.println("Hello World!");' | jbang -</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you use <code>--interactive</code> <code>jbang</code> will let <code>jshell</code> enter into interactive/REPL mode. You can write <code>/exit</code> to leave this mode.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If your own code needs to handle chained pipes well it is recommended to add the following code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import sun.misc.Signal;
+
+if (!"Windows".equals(System.getProperty("os.name"))) {
+    Signal.handle(new Signal("PIPE"), (final Signal sig) -&gt; System.exit(1));
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It will give a compiler warning as it is internal API; but for now it works.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="running-jars"><a class="anchor" href="#running-jars"></a>Running <code>.jar</code>'s</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>jbang</code> will also run <code>.jar</code> files directly.</p>
+</div>
+<div class="paragraph">
+<p>i.e. <code>jbang helloworld.jar</code> will run <code>helloworld.jar</code> if found on your local file system.</p>
+</div>
+<div class="paragraph">
+<p>The <code>.jar</code> can be a local file or a http/https url.</p>
+</div>
+<div class="paragraph">
+<p>You can also run a <code>.jar</code> file referenced by a Maven coordinate, i.e.:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang info.picocli:picocli-codegen:4.5.0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will fetch the dependency stated and put the transitive dependencies on the class-path.</p>
+</div>
+<div class="paragraph">
+<p>If you need to specify a main class you can do so by using <code>--main</code> i.e.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang --main picocli.codegen.aot.graalvm.ReflectionConfigGenerator info.picocli:picocli-codegen:4.5.0</pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A side effect of running GAV as a jar, the GAV could also be a <code>.java</code> or <code>.jsh</code> file and it would be launched as a script instead of a jar.
+No one would want to do that (right?) but now you know.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="usage-on-windows"><a class="anchor" href="#usage-on-windows"></a>Usage on Windows</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some JBang commands need to create symbolic links when running on Windows.
+For example, this is required for Managing JDKs or editing the files with the <code>edit</code> command.
+To resolve the issue, on Windows 10 you will need to enable symbolic linking for your user account.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Review security considerations and best practices <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/create-symbolic-links">here</a>.</p>
+</li>
+<li>
+<p>Enable the <code>Create symbolic links</code> group policy setting for your user/group
+by following the guidelines on the <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/user-rights-assignment">User Rights Assignment</a> page.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You might also need elevated privileges to create symbolic links
+If the JBang process has no full administrative rights, the execution may result in an error like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>java.nio.file.FileSystemException: &lt;CURRENT_JDK&gt;: A required privilege is not held by the client.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To resolve this issue, see the options in <a href="https://answers.microsoft.com/en-us/windows/forum/windows_10-performance-winpc/how-to-fix-problem-a-required-privilege-is-not/d206b4b3-b6c2-4b0b-8629-5d4dfcb8f8d0">this answers.microsoft.com article</a>.
+There are multiple possible resolutions,
+choose one meeting your needs.</p>
+</div>
+<div class="paragraph">
+<p>For older Windows versions, see this <a href="https://stackoverflow.com/a/24353758">StackOverflow issue</a>.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="page__footer-follow">
+    <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/jbangdev" rel="nofollow noopener noreferrer"><i
+            class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="https://github.com/jbangdev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+            aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    </ul>
+  </div>
+  <div class="page__footer-copyright">© 2021 JBang Documentation. Powered by <a href="https://antora.org" rel="nofollow">Antora</a>
+    &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+  </div>
+</footer><script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

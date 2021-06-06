@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Templates :: JBang</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-156530423-2')</script>
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/docs">JBang</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/appstore">AppStore</a>
+        <a class="navbar-item" href="/contribute">Contribute</a>
+        <a class="navbar-item" href="/documentation">Documentation</a>
+        <a class="navbar-item" href="/download">Download</a>
+        <a class="navbar-item" href="/appstore">Learn</a>
+        <a class="navbar-item" href="https://github.com/jbangdev"><i class="fab fa-fw fa-github"></i></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="guide" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">JBang</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Intro</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="usage.html">Usage</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="dependencies.html">Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="javaversions.html">Java Versions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="organizing.html">File Organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="running.html">Running</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="debugging.html">Debugging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="editing.html">Editing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="exporting.html">Exporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install.html">Install Apps</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="templates.html">Templates</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="alias_catalogs.html">Aliases &amp; Catalogs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="caching.html">Caching</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">JBang</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">JBang</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">JBang</a></li>
+    <li><a href="templates.html">Templates</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/jbangdev/jbang/edit/newantora/docs/modules/ROOT/pages/templates.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Templates</h1>
+<!-- toc disabled -->
+<div class="paragraph">
+<p>To get started you can run <code>jbang init helloworld.java</code> and a simple java class with a static main is generated.</p>
+</div>
+<div class="paragraph">
+<p>Using <code>jbang init --template=cli helloworld.java</code> you get a more complete Hello World CLI using <a href="https://picocli.info/">picocli</a> as dependency.</p>
+</div>
+<div class="paragraph">
+<p>Run <code>jbang template list</code> to see the full list of templates that are available.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s also possible to create your own templates using the <code>jbang template add</code> command. For example, running:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ jbang template add --name logo showlogo.java img.jpg some.properties</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Would add a template named "logo" with 3 files which could then be instantiated running <code>jbang init -t=logo mylogo</code>.</p>
+</div>
+<div class="paragraph">
+<p>When instantiating a template the paths of the source files are ignored. So the following template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ jbang template add --name logo src/showlogo.java images/img.jpg resources/some.properties</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Has the exact same result as the previous example.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s also possible to give the instantiated files (the targets) different names or different paths than their originals
+(the sources), like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ jbang template add --name logo \
+    src/showlogo.java=showlogo.java \
+    img/img.jpg=img.jpg \
+    resources/logo.properties=some.properties</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Btw, if you&#8217;d try to run the last command (and assuming the source files would exist) you&#8217;d get an error saying:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ jbang template add --name logo ...
+[jbang] [ERROR] A target pattern is required. Prefix at least one of the files with '\\{filename}=' or '\\{basename}.ext='</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is because at least one of the files needs a target (the part before the <code>=</code> sign) that contains a "pattern".
+That pattern is the part of the name that will be replaced with the name that you pass to <code>jbang init</code>
+(if you type <code>jbang init helloworld.java</code> any occurrence of <code>{filename}</code> would be replaced with <code>helloworld.java</code>,
+while any occurrence of <code>{basename}</code> would be replaced with <code>helloworld</code>).</p>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t specify a "target patterns" for any of the file Jbang will try to pick one for you.
+Basically if the first file you specify doesn&#8217;t have a target it will use that and add a pattern.
+You will see something like this if it was successful:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ jbang template add showlogo.java img.jpg some.properties
+[jbang] No explicit target pattern was set, using first file: \{basename}.java=showlogo.java
+[jbang] Template 'showlogo' added to '.../jbang-catalog.json'</code></pre>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="page__footer-follow">
+    <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/jbangdev" rel="nofollow noopener noreferrer"><i
+            class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="https://github.com/jbangdev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+            aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    </ul>
+  </div>
+  <div class="page__footer-copyright">© 2021 JBang Documentation. Powered by <a href="https://antora.org" rel="nofollow">Antora</a>
+    &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+  </div>
+</footer><script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
