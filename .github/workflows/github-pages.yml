@@ -23,7 +23,7 @@ jobs:
       - name: Build Jekyll site
         uses: limjh16/jekyll-action-ts@v2
         with:
-          enable_cache: true
+          enable_cache: false
 
       - name: Run Antora
         uses: kameshsampath/antora-site-action@master
