@@ -1,0 +1,17 @@
+site:
+  title: JBang
+  url: /docs
+  start_page: guide::index.adoc
+  keys:
+    google_analytics: 'UA-156530423-2'
+
+content:
+  sources:
+    - url: ../../jbang
+      branches: newantora
+      start_path: docs
+
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+

@@ -31,6 +31,17 @@ jobs:
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
+
+      - name: Run Antora
+        uses: kameshsampath/antora-site-action@master
+        with:
+          antora_playbook: playbook.yml
+          site_sources_path: 'docs-site'
+
+      - name: Copy antora docs site to jekyll web site
+        run: |
+          cp -rf ./docs-site/build/site/* ./_site/docs
+
       - uses: afc163/surge-preview@v1
         id: preview_step
         with:
