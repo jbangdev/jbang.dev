@@ -6,6 +6,7 @@ on:
       - main
 
 jobs:
+
   github-pages:
     runs-on: ubuntu-latest
     steps:
@@ -16,6 +17,28 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      - uses: helaili/jekyll-action@v2
+
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
         with:
-         token: ${{ secrets.JEKYLL_PAT }}
+          ruby-version: 2.7
+      - name: Build Jekyll site
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
+
+      - name: Run Antora
+        uses: kameshsampath/antora-site-action@master
+        with:
+          antora_playbook: playbook.yml
+          site_sources_path: 'docs-site'
+
+      - name: Copy antora docs site to jekyll web site
+        run: |
+          cp -rf ./docs-site/build/site/* ./_site/docs
+
+      - name: 🚀 deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
