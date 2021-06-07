@@ -31,7 +31,6 @@ jobs:
 
       - name: Copy antora docs site to jekyll web site
         run: |
-          mv 
           mkdir -p ./_site/docs
           cp -rfv ./docs-site/build/site/* ./_site/docs
 
