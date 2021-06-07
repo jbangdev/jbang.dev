@@ -29,9 +29,11 @@ jobs:
           antora_playbook: playbook.yml
           site_sources_path: 'docs-site'
 
-      - name: Move antora docs site to jekyll web site
+      - name: Copy antora docs site to jekyll web site
         run: |
-          mv ./docs-site/build/site ./_site/docs
+          mv 
+          mkdir -p ./_site/docs
+          cp -rfv ./docs-site/build/site/* ./_site/docs
 
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
