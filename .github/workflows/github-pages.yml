@@ -45,7 +45,7 @@ jobs:
         run: echo ::set-output name=config::$(cat algolia-config.json)
 
       - name: Update search index
-        uses: docker://algolia/documentation-scrapper
+        uses: docker://algolia/documentation-scrapper:v1.12.0
         env:
           APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
           API_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
