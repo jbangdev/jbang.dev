@@ -17,7 +17,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-   
+
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -26,6 +26,8 @@ jobs:
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
 
       - name: Run Antora
         uses: kameshsampath/antora-site-action@master
@@ -35,6 +37,7 @@ jobs:
 
       - name: Copy antora docs site to jekyll web site
         run: |
+          mkdir -p ./_site/docs
           cp -rf ./docs-site/build/site/* ./_site/docs
 
       - uses: afc163/surge-preview@v1
