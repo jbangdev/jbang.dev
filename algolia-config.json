@@ -1,0 +1,46 @@
+{
+  "index_name": "jbangdev",
+  "start_urls": [
+    {
+      "url": "https://www.jbang.dev/documentation",
+      "selectors_key": "antora"
+    },
+    {
+      "url": "https://www.jbang.dev",
+      "selectors_key": "jekyll"
+    }
+  ],
+  "sitemap_urls": [
+    "https://www.jbang.dev/sitemap.xml"
+  ],
+  "stop_urls": [],
+  "selectors": {
+    "jekyll": {
+      "lvl0": {
+        "selector": "//*[@id='main']/article/section/h2",
+        "type": "xpath",
+        "global": true,
+        "default_value": "Website"
+      },
+      "lvl1": ".initial-content h1",
+      "lvl2": ".initial-content h2",
+      "lvl3": ".initial-content h3",
+      "lvl4": ".initial-content h4",
+      "text": ".initial-content p, .initial-content td.content, .initial-content th.tableblock, .initial-content code, .initial-content pre"
+    },
+    "antora": {
+      "lvl0": {
+        "selector": "//nav[@class='crumbs']//li[@class='crumb'][last()-1]",
+        "type": "xpath",
+        "global": true,
+        "default_value": "Documentation"
+      },
+      "lvl1": ".doc h1",
+      "lvl2": ".doc h2",
+      "lvl3": ".doc h3",
+      "lvl4": ".doc h4",
+      "text": ".doc p, .doc td.content, .doc th.tableblock"
+    }
+  },
+  "nb_hits": 1084
+}

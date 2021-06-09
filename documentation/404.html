@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Page Not Found :: JBang</title>
     <meta name="generator" content="Antora 2.3.4">
-    <link rel="stylesheet" href="/docs/_/css/site.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
+    <link rel="stylesheet" href="/documentation/_/css/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
     <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-156530423-2')</script>
-    <script>var uiRootPath = '/docs/_'</script>
+    <script>var uiRootPath = '/documentation/_'</script>
   </head>
   <body class="status-404">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="/docs">JBang</a>
+      <a class="navbar-item" href="/documentation">JBang</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -31,6 +31,9 @@
         <a class="navbar-item" href="https://github.com/jbangdev"><i class="fab fa-fw fa-github"></i></a>
       </div>
     </div>
+    <div class="navbar-item hide-for-print">
+        <input id="search-input" type="text" placeholder="Search (by Algolia)">
+      </div>
   </nav>
 </header>
 <div class="body">
@@ -40,10 +43,10 @@
 <div class="nav-panel-explore is-active" data-panel="explore">
   <ul class="components">
     <li class="component">
-      <a class="title" href="/docs/guide/latest/index.html">JBang</a>
+      <a class="title" href="/documentation/guide/latest/index.html">JBang</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="/docs/guide/latest/index.html">latest</a>
+          <a href="/documentation/guide/latest/index.html">latest</a>
         </li>
       </ul>
     </li>
@@ -55,7 +58,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="/docs/guide/latest/intro.html" class="home-link"></a>
+  <a href="/documentation/guide/latest/intro.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
 </nav>
 </div>
@@ -87,7 +90,25 @@ If you typed the URL of this page manually, please double check that you entered
   <div class="page__footer-copyright">© 2021 JBang Documentation. Powered by <a href="https://antora.org" rel="nofollow">Antora</a>
     &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
   </div>
-</footer><script src="/docs/_/js/site.js"></script>
-<script async src="/docs/_/js/vendor/highlight.js"></script>
+</footer><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+var search = docsearch({
+  appId: '4EJ1Y6VISV',
+  apiKey: '7ab0733177a5304fe689e52ed96d5cb8',
+  indexName: 'jbangdev',
+  inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
+  algoliaOptions: { hitsPerPage: 10 }
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
+</script>
+<script>
+window.addEventListener('load', function focusSearchInput () {
+  window.removeEventListener('load', focusSearchInput)
+  document.querySelector('#search-input').focus()
+})
+</script>
+<script src="/documentation/_/js/site.js"></script>
+<script async src="/documentation/_/js/vendor/highlight.js"></script>
   </body>
 </html>

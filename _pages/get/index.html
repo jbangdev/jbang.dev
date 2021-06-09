@@ -205,6 +205,8 @@ Vue.directive('highlightjs', {
               <a href="https://github.com/jbangdev"><i class='fab fa-fw fa-github'></i></a>
             </li></ul>
         
+        <input id="search-input" type="text" placeholder="Search...">
+        
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
@@ -214,7 +216,6 @@ Vue.directive('highlightjs', {
     </div>
   </div>
 </div>
-
 
     <div class="initial-content">
       
@@ -572,6 +573,12 @@ Vue.directive('highlightjs', {
     </div>
 
     
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
 
     <div id="footer" class="page__footer">
       <footer>
@@ -619,7 +626,30 @@ Vue.directive('highlightjs', {
   <script src="/assets/js/main.min.js"></script>
 
 
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+var search = docsearch({
+   appId: '4EJ1Y6VISV',
+  
+  apiKey:'7ab0733177a5304fe689e52ed96d5cb8',
+  indexName: 'jbangdev',
+  inputSelector: '#search-input',
+  algoliaOptions: { hitsPerPage: 10 }
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
+</script>
+<script>
+  window.addEventListener('load', function focusSearchInput () {
+    window.removeEventListener('load', focusSearchInput)
+    document.querySelector('#search-input').focus()
+  })
+  </script>
 
 
 
