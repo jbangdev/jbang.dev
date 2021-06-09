@@ -37,8 +37,8 @@ jobs:
 
       - name: Copy antora docs site to jekyll web site
         run: |
-          mkdir -p ./_site/docs
-          cp -rf ./docs-site/build/site/* ./_site/docs
+          mkdir -p ./_site/documentation
+          cp -rf ./docs-site/build/site/* ./_site/documentation
 
       - uses: afc163/surge-preview@v1
         id: preview_step

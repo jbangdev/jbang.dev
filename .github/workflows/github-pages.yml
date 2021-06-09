@@ -31,8 +31,8 @@ jobs:
 
       - name: Copy antora docs site to jekyll web site
         run: |
-          mkdir -p ./_site/docs
-          cp -rfv ./docs-site/build/site/* ./_site/docs
+          mkdir -p ./_site/documentation
+          cp -rfv ./docs-site/build/site/* ./_site/documentation
 
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
