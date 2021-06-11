@@ -22,3 +22,10 @@ jobs:
           git config --global user.email 'max@xam.dk'
           git commit -am "App store updates"
           git push
+      - name: Update website
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: github-pages
+          repo: jbangdev/jbang.dev
+          token: ${{ secrets.BREW_GITHUB_TOKEN }}
