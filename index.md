@@ -41,7 +41,17 @@ feature_row2:
 
 {% include feature_row id="intro" type="center" %}
 
+
 {% include feature_row %}
+
+<div class="feature__wrapper">
+
+{% assign rdtestimonials =site.data.testimonials | sample: 1 %}
+{% for tweet in rdtestimonials %}
+  {% twitter tweet hide_thread=true align=center width=350 %}
+{% endfor %}
+<center><a href="/testimonials" class="btn btn--primary">All Testimonials</a></center>
+</div>
 
 {% include feature_row id="feature_row2" %}
 
