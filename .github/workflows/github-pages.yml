@@ -46,9 +46,9 @@ jobs:
         run: echo ::set-output name=config::$(cat algolia-config.json)
 
       - name: Update search index
-        uses: wangchucheng/algolia-uploader@master
+        uses: rxrw/algolia-index-uploader@v1
         with:
-          app_id: ${{ secrets.ALGOLIA_APPLICATION_ID }}
-          admin_key:  ${{ secrets.ALGOLIA_ADMIN_KEY }}
-          index_name: jbangdev
-          index_file_path: 'algolia-config.json'
+          algolia_index_id: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+          algolia_index_admin_key:  ${{ secrets.ALGOLIA_ADMIN_KEY }}
+          algolia_index_name: jbangdev
+          index_path: 'algolia-config.json'
