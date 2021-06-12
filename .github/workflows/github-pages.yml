@@ -40,7 +40,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-      
+
       - name: Read search configuration
         id: config
         run: echo ::set-output name=config::$(cat algolia-config.json)
