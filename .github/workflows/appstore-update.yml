@@ -27,5 +27,6 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: github-pages
+          token: ${{ secrets.JEKYLL_PAT }}
           repo: jbangdev/jbang.dev
-          token: ${{ secrets.BREW_GITHUB_TOKEN }}
+
