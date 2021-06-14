@@ -6,10 +6,8 @@ header:
     - label: "<i class='fas fa-download'></i> Download"
       url: "/download"
     - label: "Try"
-      url: "#try"
-excerpt: "Unleash the Power of Java"
-intro: 
-  - excerpt: 'Easy to get started. Fun to explore. Limitless.'
+      url: "/try"
+excerpt: "Lets Students, Educators and Professional Developers create, edit and run self-contained source-only Java programs with unprecedented ease."
 feature_row:
   - image_path: /assets/images/carbon-deps.png
     title: "Simplified Dependencies"
@@ -42,6 +40,11 @@ feature_row2:
 {% include feature_row id="intro" type="center" %}
 
 
+<center>
+<script id="asciicast-4AiobRxUwPUPztCtrDYcmoKjs" src="https://asciinema.org/a/4AiobRxUwPUPztCtrDYcmoKjs.js" async data-autoplay="true" data-size="medium" data-rows=25></script>
+</center>
+
+
 {% include feature_row %}
 
 <div class="feature__wrapper">
@@ -55,13 +58,7 @@ feature_row2:
 
 {% include feature_row id="feature_row2" %}
 
-### Try <a name="try"/>
 
-Below is a [replit](https://repl.it) window which provides a Java development environment. Run `hello.java` by clicking the Run button.
-In the terminal you can use `jbang hello.java` or `./hello.java` to run it directly.
-
-  <iframe height="600px" width="100%" src="https://repl.it/@maxandersen/jbang-replit-demo?lite=true#hello.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-  
     
 ### Watch <a name="watch"/>
     
