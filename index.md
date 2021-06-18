@@ -39,11 +39,11 @@ feature_row2:
 
 {% include feature_row id="intro" type="center" %}
 
-
 <center>
-<script id="asciicast-4AiobRxUwPUPztCtrDYcmoKjs" src="https://asciinema.org/a/4AiobRxUwPUPztCtrDYcmoKjs.js" async data-autoplay="true" data-size="medium" data-rows=25></script>
+<script id="asciicast-QuyuMByAAn4mqAbyYIujpEu4n" src="https://asciinema.org/a/QuyuMByAAn4mqAbyYIujpEu4n.js" async data-autoplay="true" data-size="medium" data-rows=25></script>
 </center>
 
+<hr>
 
 {% include feature_row %}
 
