@@ -40,7 +40,7 @@ feature_row2:
 {% include feature_row id="intro" type="center" %}
 
 <center>
-<script id="asciicast-QuyuMByAAn4mqAbyYIujpEu4n" src="https://asciinema.org/a/QuyuMByAAn4mqAbyYIujpEu4n.js" async data-autoplay="true" data-size="medium" data-rows=25></script>
+<script id="asciicast-bBAkVa2IBrS6G8urxPZLR7fdr" src="https://asciinema.org/a/bBAkVa2IBrS6G8urxPZLR7fdr.js" async data-autoplay="true" data-size="medium" data-rows=25></script>
 </center>
 
 <hr>
