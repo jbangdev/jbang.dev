@@ -2,14 +2,19 @@ site:
   title: JBang
   url: /documentation
   start_page: guide::intro.adoc
- 
+
+asciidoc:
+  attributes:
+    page-pagination: ''
+
 content:
   sources:
     - url: ../../jbang
-      branches: main
+      branches: HEAD
       start_path: docs
 
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
-
+    url: https://github.com/jbangdev/jbang-antora-ui/releases/latest/download/ui-bundle.zip
+    # Required when using cache or fetch will not update ui.
+    snapshot: true

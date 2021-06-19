@@ -5,6 +5,10 @@ site:
   keys:
     google_analytics: 'UA-156530423-2'
 
+asciidoc:
+  attributes:
+    page-pagination: ''
+
 content:
   sources:
     - url: https://github.com/jbangdev/jbang
