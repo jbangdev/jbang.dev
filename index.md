@@ -10,12 +10,12 @@ header:
 excerpt: "Lets Students, Educators and Professional Developers create, edit and run self-contained source-only Java programs with unprecedented ease."
 feature_row:
   - image_path: /assets/images/carbon-deps.png
-    title: "Simplified Dependencies"
+    title: "Embedded Dependencies"
     excerpt: "Automatic fetching of any dependency using `//DEPS group:artifact:version` 
-              or `@Grab` annotations."
+              or `@Grab` annotations directly from the source code."
   - image_path: /assets/images/carbon-install.png
     title: "Install & Run Anywhere"
-    excerpt: "JBang installs and run on Windows, Linux, macOS, Docker and Github Actions"
+    excerpt: "JBang installs and run on Windows, Linux, macOS, Docker and Github Actions as well as usable from Maven and Gradle plugins"
     url: "/download"
     btn_label: "Download"
     btn_class: "btn--primary"
