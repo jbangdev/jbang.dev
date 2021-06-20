@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>jbang-export-mavenrepo(1) :: JBang</title>
+    <link rel="prev" href="jbang-export-local.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-156530423-2')</script>
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jbang.dev">JBang</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/appstore">AppStore</a>
+        <a class="navbar-item" href="/try">Try</a>
+        <a class="navbar-item" href="/download">Download</a>
+                <a class="navbar-item" href="/docmentation">Documentation</a>
+      </div>
+    </div>
+    <div class="navbar-item hide-for-print">
+        <input id="search-input" type="text" placeholder="Search (by Algolia)">
+      </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="guide" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">JBang</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../intro.html">Intro</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../usage.html">Usage</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../dependencies.html">Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../javaversions.html">Java Versions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../organizing.html">File Organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../running.html">Running</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../debugging.html">Debugging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../editing.html">Editing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../exporting.html">Exporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install.html">Install Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templates.html">Templates</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../alias_catalogs.html">Aliases &amp; Catalogs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../caching.html">Caching</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">CLI Reference</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="jbang.html">jbang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jbang-run.html">run</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jbang-build.html">build</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jbang-edit.html">edit</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jbang-init.html">init</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="jbang-alias.html">alias</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-alias-add.html">add</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-alias-list.html">list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-alias-remove.html">remove</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="jbang-template.html">template</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-template-add.html">add</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-template-list.html">list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-template-remove.html">remove</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="jbang-catalog.html">catalog</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-catalog-add.html">add</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-catalog-update.html">update</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-catalog-list.html">list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-catalog-remove.html">remove</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="jbang-trust.html">trust</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-trust-add.html">add</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-trust-list.html">list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-trust-remove.html">remove</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="jbang-cache.html">cache</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-cache-clear.html">clear</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jbang-completion.html">completion</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="jbang-jdk.html">jdk</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-jdk-default.html">default</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-jdk-home.html">home</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-jdk-install.html">install</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-jdk-java-env.html">java-env</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-jdk-list.html">list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-jdk-uninstall.html">uninstall</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jbang-version.html">version</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="jbang-wrapper.html">wrapper</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-wrapper-install.html">install</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="jbang-info.html">info</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-info-tools.html">tools</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-info-classpath.html">classpath</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="jbang-app.html">app</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-app-install.html">install</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-app-list.html">list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-app-uninstall.html">uninstall</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-app-setup.html">setup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="jbang-export.html">export</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-portable.html">portable</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-local.html">local</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="jbang-export-mavenrepo.html">mavenrepo</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">JBang</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">JBang</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">JBang</a></li>
+    <li>CLI Reference</li>
+    <li><a href="jbang.html">jbang</a></li>
+    <li><a href="jbang-export.html">export</a></li>
+    <li><a href="jbang-export-mavenrepo.html">mavenrepo</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/jbangdev/jbang/edit/main/docs/modules/cli/pages/jbang-export-mavenrepo.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">jbang-export-mavenrepo(1)</h1>
+<h2 id="_name">Name</h2>
+<div class="sectionbody">
+<p>jbang-export-mavenrepo - Exports directory that can be used to publish as a maven repository</p>
+</div>
+<div class="sect1">
+<h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>Synopsis</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>jbang export mavenrepo</strong> <strong>-o</strong> [<strong>-hnV</strong>] [<strong>--force</strong>] [<strong>--fresh</strong>] [<strong>--insecure</strong>] <strong>--quiet</strong>
+                       <strong>--verbose</strong> [<strong>-j</strong>=<em>&lt;javaVersion&gt;</em>] [<strong>-O</strong>=<em>&lt;outputFile&gt;</em>]
+                       [<strong>--cp</strong>=<em>&lt;classpaths&gt;</em>]&#8230;&#8203; [<strong>-D</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203;
+                       [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203; <em>scriptOrFile</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_description"><a class="anchor" href="#_description"></a>Description</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Exports directory that can be used to publish as a maven repository</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_options"><a class="anchor" href="#_options"></a>Options</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>--cp, --class-path</strong>=<em>&lt;classpaths&gt;</em></dt>
+<dd>
+<p>Add class path entries.</p>
+</dd>
+<dt class="hdlist1"><strong>-D</strong>, <em>&lt;String=String&gt;</em></dt>
+<dd>
+<p>set a system property</p>
+</dd>
+<dt class="hdlist1"><strong>--deps</strong>=<em>&lt;dependencies&gt;</em></dt>
+<dd>
+<p>Add additional dependencies.</p>
+</dd>
+<dt class="hdlist1"><strong>--force</strong></dt>
+<dd>
+<p>Force export, i.e. overwrite exported file if already exists</p>
+</dd>
+<dt class="hdlist1"><strong>--fresh</strong></dt>
+<dd>
+<p>Make sure we use fresh (i.e. non-cached) resources.</p>
+</dd>
+<dt class="hdlist1"><strong>-h</strong>, <strong>--help</strong></dt>
+<dd>
+<p>Display help/info. Use 'jbang &lt;command&gt; -h' for detailed usage.</p>
+</dd>
+<dt class="hdlist1"><strong>--insecure</strong></dt>
+<dd>
+<p>Enable insecure trust of all SSL certificates.</p>
+</dd>
+<dt class="hdlist1"><strong>-j</strong>, <strong>--java</strong>=<em>&lt;javaVersion&gt;</em></dt>
+<dd>
+<p>JDK version to use for running the script.</p>
+</dd>
+<dt class="hdlist1"><strong>-n</strong>, <strong>--native</strong></dt>
+<dd>
+<p>Build using native-image</p>
+</dd>
+<dt class="hdlist1"><strong>-o</strong>, <strong>--offline</strong></dt>
+<dd>
+<p>Work offline. Fail-fast if dependencies are missing. No connections will be attempted</p>
+</dd>
+<dt class="hdlist1"><strong>-O</strong>, <strong>--output</strong>=<em>&lt;outputFile&gt;</em></dt>
+<dd>
+<p>The name or path to use for the exported file. If not specified a name will be determined from the original source reference and export flags.</p>
+</dd>
+<dt class="hdlist1"><strong>--quiet</strong></dt>
+<dd>
+<p>jbang will be quiet, only print when error occurs.</p>
+</dd>
+<dt class="hdlist1"><strong>-V</strong>, <strong>--version</strong></dt>
+<dd>
+<p>Display version info (use <code>jbang --verbose version</code> for more details)</p>
+</dd>
+<dt class="hdlist1"><strong>--verbose</strong></dt>
+<dd>
+<p>jbang will be verbose on what it does.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_arguments"><a class="anchor" href="#_arguments"></a>Arguments</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><em>scriptOrFile</em></dt>
+<dd>
+<p>A file or URL to a Java code file</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="jbang-export-local.html">local</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="page__footer-follow">
+    <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/jbangdev" rel="nofollow noopener noreferrer"><i
+            class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="https://github.com/jbangdev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+            aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    </ul>
+  </div>
+  <div class="page__footer-copyright">© 2021 JBang Documentation. Powered by <a href="https://antora.org" rel="nofollow">Antora</a>
+    &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+var search = docsearch({
+  appId: '4EJ1Y6VISV',
+  apiKey: '7ab0733177a5304fe689e52ed96d5cb8',
+  indexName: 'jbangdev',
+  inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
+  algoliaOptions: { hitsPerPage: 10 }
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
+</script>
+<script>
+window.addEventListener('load', function focusSearchInput () {
+  window.removeEventListener('load', focusSearchInput)
+  document.querySelector('#search-input').focus()
+})
+</script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
