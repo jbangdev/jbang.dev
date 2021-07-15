@@ -320,6 +320,8 @@
 </aside>
 <article class="doc">
 <h1 class="page">Templates</h1>
+<div id="preamble">
+<div class="sectionbody">
 <!-- toc disabled -->
 <div class="paragraph">
 <p>To get started you can run <code>jbang init helloworld.java</code> and a simple java class with a static main is generated.</p>
@@ -389,6 +391,22 @@ You will see something like this if it was successful:</p>
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ jbang template add showlogo.java img.jpg some.properties
 [jbang] No explicit target pattern was set, using first file: \{basename}.java=showlogo.java
 [jbang] Template 'showlogo' added to '.../jbang-catalog.json'</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="properties"><a class="anchor" href="#properties"></a>Properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Templates can refer to properties passed in using <code>-Dkey=value</code> on the <code>jbang init</code> command.</p>
+</div>
+<div class="paragraph">
+<p>Any key specified via <code>-Dkey=value</code> becomes available as <code>{key}</code> inside the templates.</p>
+</div>
+<div class="paragraph">
+<p>It is recommended you write templates where there is some kind of valid default or fallback on behavior as users might not be aware there is need for a key.</p>
+</div>
 </div>
 </div>
 <nav class="pagination">
