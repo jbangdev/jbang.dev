@@ -618,7 +618,7 @@ Hello World</code></pre>
 <p>jbang can run scripts directly from standard input using <code>-</code> or <code>/dev/stdin</code> as input.</p>
 </div>
 <div class="paragraph">
-<p>i.e.</p>
+<p>i.e. then you can "pipe" the script to jbang:</p>
 </div>
 <div class="paragraph">
 <p><code>echo 'System.out.println("Hello World!");' | jbang -</code></p>
@@ -631,7 +631,8 @@ Hello World</code></pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If you use <code>--interactive</code> <code>jbang</code> will let <code>jshell</code> enter into interactive/REPL mode. You can write <code>/exit</code> to leave this mode.</p>
+<p>If you use <code>--interactive</code> <code>jbang</code> will let <code>jshell</code> enter into interactive/REPL mode. You can write <code>/exit</code> to leave this mode.
+If you are after running <code>.java</code> code via piping or curl it is better to use jbang&#8217;s support for running http(s) urls directly, i.e. <code>jbang &lt;urlto-java&gt;</code>.</p>
 </div>
 </td>
 </tr>
