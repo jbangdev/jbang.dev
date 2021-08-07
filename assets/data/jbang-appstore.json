@@ -2,7 +2,7 @@
   "aliasCount": 193,
   "aliases": [
     {
-      "stars": 5064,
+      "stars": 5069,
       "icon_url": "https://avatars.githubusercontent.com/u/2495066?v\u003d4",
       "repoOwner": "intuit",
       "repoName": "karate",
@@ -13,7 +13,7 @@
       "link": "https://github.com/intuit/karate/blob/3a9d5148c3e0ae167736174527040abb8d7fc536/jbang-catalog.json"
     },
     {
-      "stars": 3828,
+      "stars": 3830,
       "icon_url": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
       "repoOwner": "apache",
       "repoName": "camel",
@@ -36,7 +36,7 @@
       "link": "https://github.com/tabulapdf/tabula-java/blob/df9bc34c1f45f58bf9b329490855b8453fdbee7f/jbang-catalog.json"
     },
     {
-      "stars": 303,
+      "stars": 305,
       "icon_url": "https://avatars.githubusercontent.com/u/6154722?v\u003d4",
       "repoOwner": "microsoft",
       "repoName": "playwright-java",
@@ -48,7 +48,7 @@
       "link": "https://github.com/microsoft/playwright-java/blob/04419c7e5f7bc6e78c6403556f2c5a4958a33851/jbang-catalog.json"
     },
     {
-      "stars": 219,
+      "stars": 220,
       "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
       "repoOwner": "hibernate",
       "repoName": "hibernate-reactive",
@@ -60,7 +60,7 @@
       "link": "https://github.com/hibernate/hibernate-reactive/blob/4d8c900c1ba7e59d247eb53cc9dec7ecb8809f24/jbang-catalog.json"
     },
     {
-      "stars": 219,
+      "stars": 220,
       "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
       "repoOwner": "hibernate",
       "repoName": "hibernate-reactive",
@@ -1398,64 +1398,6 @@
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/559221?v\u003d4",
-      "repoOwner": "DavideD",
-      "repoName": "jbang-rep",
-      "alias": "stage-verticle",
-      "description": "",
-      "scriptRef": "StageVerticle.java",
-      "command": "stage-verticle@DavideD/jbang-rep",
-      "fullcommand": "jbang stage-verticle@DavideD/jbang-rep app.java",
-      "link": "https://github.com/DavideD/jbang-rep/blob/ff866d75318ce968039b2cdba2b561275795a11e/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/559221?v\u003d4",
-      "repoOwner": "DavideD",
-      "repoName": "jbang-rep",
-      "alias": "issue886",
-      "description": "",
-      "scriptRef": "Issue886.java",
-      "command": "issue886@DavideD/jbang-rep",
-      "fullcommand": "jbang issue886@DavideD/jbang-rep app.java",
-      "link": "https://github.com/DavideD/jbang-rep/blob/ff866d75318ce968039b2cdba2b561275795a11e/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/559221?v\u003d4",
-      "repoOwner": "DavideD",
-      "repoName": "jbang-rep",
-      "alias": "orm-proxy-update",
-      "scriptRef": "ORMStatelessUpdateProxy.java",
-      "command": "orm-proxy-update@DavideD/jbang-rep",
-      "fullcommand": "jbang orm-proxy-update@DavideD/jbang-rep app.java",
-      "link": "https://github.com/DavideD/jbang-rep/blob/ff866d75318ce968039b2cdba2b561275795a11e/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/114367?v\u003d4",
-      "repoOwner": "mbien",
-      "repoName": "JFRLog",
-      "alias": "jfrprint",
-      "description": "\u003cp\u003ePrints formatted JFR events from JFR dumps or streams them live from repositories.\u003c/p\u003e\n",
-      "scriptRef": "JFRPrint.java",
-      "command": "jfrprint@mbien/JFRLog~cli",
-      "fullcommand": "jbang jfrprint@mbien/JFRLog~cli app.java",
-      "link": "https://github.com/mbien/JFRLog/blob/e9e6e3d17fda51a1e7d09450e0b7f23c1d8adae4/cli/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/27861160?v\u003d4",
-      "repoOwner": "gomezrondon",
-      "repoName": "spring-in-container",
-      "alias": "cleanyaml",
-      "scriptRef": "jscript.java",
-      "command": "cleanyaml@gomezrondon/spring-in-container~script",
-      "fullcommand": "jbang cleanyaml@gomezrondon/spring-in-container~script app.java",
-      "link": "https://github.com/gomezrondon/spring-in-container/blob/546df82c9b5bd1159c9866101c79a2fd5d3b1388/script/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
       "icon_url": "https://avatars.githubusercontent.com/u/73725833?v\u003d4",
       "repoOwner": "RonGermany",
       "repoName": "Karate2",
@@ -1567,6 +1509,64 @@
       "command": "awsssm@base2Services",
       "fullcommand": "jbang awsssm@base2Services app.java",
       "link": "https://github.com/base2Services/jbang-catalog/blob/b35b5a203947f6e6eae17d5cfd22abb04aa1bbcc/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/559221?v\u003d4",
+      "repoOwner": "DavideD",
+      "repoName": "jbang-rep",
+      "alias": "stage-verticle",
+      "description": "",
+      "scriptRef": "StageVerticle.java",
+      "command": "stage-verticle@DavideD/jbang-rep",
+      "fullcommand": "jbang stage-verticle@DavideD/jbang-rep app.java",
+      "link": "https://github.com/DavideD/jbang-rep/blob/ff866d75318ce968039b2cdba2b561275795a11e/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/559221?v\u003d4",
+      "repoOwner": "DavideD",
+      "repoName": "jbang-rep",
+      "alias": "issue886",
+      "description": "",
+      "scriptRef": "Issue886.java",
+      "command": "issue886@DavideD/jbang-rep",
+      "fullcommand": "jbang issue886@DavideD/jbang-rep app.java",
+      "link": "https://github.com/DavideD/jbang-rep/blob/ff866d75318ce968039b2cdba2b561275795a11e/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/559221?v\u003d4",
+      "repoOwner": "DavideD",
+      "repoName": "jbang-rep",
+      "alias": "orm-proxy-update",
+      "scriptRef": "ORMStatelessUpdateProxy.java",
+      "command": "orm-proxy-update@DavideD/jbang-rep",
+      "fullcommand": "jbang orm-proxy-update@DavideD/jbang-rep app.java",
+      "link": "https://github.com/DavideD/jbang-rep/blob/ff866d75318ce968039b2cdba2b561275795a11e/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/114367?v\u003d4",
+      "repoOwner": "mbien",
+      "repoName": "JFRLog",
+      "alias": "jfrprint",
+      "description": "\u003cp\u003ePrints formatted JFR events from JFR dumps or streams them live from repositories.\u003c/p\u003e\n",
+      "scriptRef": "JFRPrint.java",
+      "command": "jfrprint@mbien/JFRLog~cli",
+      "fullcommand": "jbang jfrprint@mbien/JFRLog~cli app.java",
+      "link": "https://github.com/mbien/JFRLog/blob/e9e6e3d17fda51a1e7d09450e0b7f23c1d8adae4/cli/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/27861160?v\u003d4",
+      "repoOwner": "gomezrondon",
+      "repoName": "spring-in-container",
+      "alias": "cleanyaml",
+      "scriptRef": "jscript.java",
+      "command": "cleanyaml@gomezrondon/spring-in-container~script",
+      "fullcommand": "jbang cleanyaml@gomezrondon/spring-in-container~script app.java",
+      "link": "https://github.com/gomezrondon/spring-in-container/blob/546df82c9b5bd1159c9866101c79a2fd5d3b1388/script/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -2273,7 +2273,7 @@
       "link": "https://github.com/jbangdev/jbang/blob/211bcaedbde99703cdc346d701c18b97ca8d36bb/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 219,
+      "stars": 220,
       "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
       "repoOwner": "hibernate",
       "repoName": "hibernate-reactive",
@@ -2284,7 +2284,7 @@
       "link": "https://github.com/hibernate/hibernate-reactive/blob/4d8c900c1ba7e59d247eb53cc9dec7ecb8809f24/jbang-catalog.json"
     },
     {
-      "stars": 219,
+      "stars": 220,
       "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
       "repoOwner": "hibernate",
       "repoName": "hibernate-reactive",
@@ -2295,7 +2295,7 @@
       "link": "https://github.com/hibernate/hibernate-reactive/blob/4d8c900c1ba7e59d247eb53cc9dec7ecb8809f24/jbang-catalog.json"
     },
     {
-      "stars": 219,
+      "stars": 220,
       "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
       "repoOwner": "hibernate",
       "repoName": "hibernate-reactive",
@@ -2306,7 +2306,7 @@
       "link": "https://github.com/hibernate/hibernate-reactive/blob/4d8c900c1ba7e59d247eb53cc9dec7ecb8809f24/jbang-catalog.json"
     },
     {
-      "stars": 219,
+      "stars": 220,
       "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
       "repoOwner": "hibernate",
       "repoName": "hibernate-reactive",
@@ -2317,7 +2317,7 @@
       "link": "https://github.com/hibernate/hibernate-reactive/blob/4d8c900c1ba7e59d247eb53cc9dec7ecb8809f24/jbang-catalog.json"
     },
     {
-      "stars": 219,
+      "stars": 220,
       "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
       "repoOwner": "hibernate",
       "repoName": "hibernate-reactive",
