@@ -1,5 +1,5 @@
 {
-  "aliasCount": 200,
+  "aliasCount": 203,
   "aliases": [
     {
       "stars": 5147,
@@ -1517,6 +1517,40 @@
     },
     {
       "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/88204064?v\u003d4",
+      "repoOwner": "aswiniqaconsultants",
+      "repoName": "jbangdev",
+      "alias": "hello",
+      "scriptRef": "hello.jsh",
+      "command": "hello@aswiniqaconsultants/jbangdev~itests",
+      "fullcommand": "jbang hello@aswiniqaconsultants/jbangdev~itests app.java",
+      "link": "https://github.com/aswiniqaconsultants/jbangdev/blob/fab2f812876055da40b11bf0a175329a7b3ac277/itests/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/88204064?v\u003d4",
+      "repoOwner": "aswiniqaconsultants",
+      "repoName": "jbangdev",
+      "alias": "echo",
+      "description": "\u003cp\u003eecho echo echo description\u003c/p\u003e\n",
+      "scriptRef": "echo.java",
+      "command": "echo@aswiniqaconsultants/jbangdev~itests",
+      "fullcommand": "jbang echo@aswiniqaconsultants/jbangdev~itests app.java",
+      "link": "https://github.com/aswiniqaconsultants/jbangdev/blob/fab2f812876055da40b11bf0a175329a7b3ac277/itests/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/88204064?v\u003d4",
+      "repoOwner": "aswiniqaconsultants",
+      "repoName": "jbangdev",
+      "alias": "resource",
+      "scriptRef": "res/resource.java",
+      "command": "resource@aswiniqaconsultants/jbangdev~itests",
+      "fullcommand": "jbang resource@aswiniqaconsultants/jbangdev~itests app.java",
+      "link": "https://github.com/aswiniqaconsultants/jbangdev/blob/fab2f812876055da40b11bf0a175329a7b3ac277/itests/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
       "icon_url": "https://avatars.githubusercontent.com/u/560654?v\u003d4",
       "repoOwner": "blafond",
       "repoName": "jbang-rep",
@@ -2480,6 +2514,83 @@
     },
     {
       "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/88204064?v\u003d4",
+      "repoOwner": "aswiniqaconsultants",
+      "repoName": "jbangdev",
+      "alias": "agent",
+      "description": "\u003cp\u003eAgent template\u003c/p\u003e\n",
+      "command": "agent@aswiniqaconsultants/jbangdev~src/main/resources",
+      "fullcommand": "jbang init -t agent@aswiniqaconsultants/jbangdev~src/main/resources app.java",
+      "link": "https://github.com/aswiniqaconsultants/jbangdev/blob/fab2f812876055da40b11bf0a175329a7b3ac277/src/main/resources/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/88204064?v\u003d4",
+      "repoOwner": "aswiniqaconsultants",
+      "repoName": "jbangdev",
+      "alias": "cli",
+      "description": "\u003cp\u003eCLI template\u003c/p\u003e\n",
+      "command": "cli@aswiniqaconsultants/jbangdev~src/main/resources",
+      "fullcommand": "jbang init -t cli@aswiniqaconsultants/jbangdev~src/main/resources app.java",
+      "link": "https://github.com/aswiniqaconsultants/jbangdev/blob/fab2f812876055da40b11bf0a175329a7b3ac277/src/main/resources/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/88204064?v\u003d4",
+      "repoOwner": "aswiniqaconsultants",
+      "repoName": "jbangdev",
+      "alias": "hello",
+      "description": "\u003cp\u003eBasic Hello World template\u003c/p\u003e\n",
+      "command": "hello@aswiniqaconsultants/jbangdev~src/main/resources",
+      "fullcommand": "jbang init -t hello@aswiniqaconsultants/jbangdev~src/main/resources app.java",
+      "link": "https://github.com/aswiniqaconsultants/jbangdev/blob/fab2f812876055da40b11bf0a175329a7b3ac277/src/main/resources/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/88204064?v\u003d4",
+      "repoOwner": "aswiniqaconsultants",
+      "repoName": "jbangdev",
+      "alias": "hello.kt",
+      "description": "\u003cp\u003eBasic kotlin Hello World template\u003c/p\u003e\n",
+      "command": "hello.kt@aswiniqaconsultants/jbangdev~src/main/resources",
+      "fullcommand": "jbang init -t hello.kt@aswiniqaconsultants/jbangdev~src/main/resources app.java",
+      "link": "https://github.com/aswiniqaconsultants/jbangdev/blob/fab2f812876055da40b11bf0a175329a7b3ac277/src/main/resources/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/88204064?v\u003d4",
+      "repoOwner": "aswiniqaconsultants",
+      "repoName": "jbangdev",
+      "alias": "qcli",
+      "description": "\u003cp\u003eQuarkus CLI template\u003c/p\u003e\n",
+      "command": "qcli@aswiniqaconsultants/jbangdev~src/main/resources",
+      "fullcommand": "jbang init -t qcli@aswiniqaconsultants/jbangdev~src/main/resources app.java",
+      "link": "https://github.com/aswiniqaconsultants/jbangdev/blob/fab2f812876055da40b11bf0a175329a7b3ac277/src/main/resources/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/88204064?v\u003d4",
+      "repoOwner": "aswiniqaconsultants",
+      "repoName": "jbangdev",
+      "alias": "qmetrics",
+      "description": "\u003cp\u003eQuarkus Metrics template\u003c/p\u003e\n",
+      "command": "qmetrics@aswiniqaconsultants/jbangdev~src/main/resources",
+      "fullcommand": "jbang init -t qmetrics@aswiniqaconsultants/jbangdev~src/main/resources app.java",
+      "link": "https://github.com/aswiniqaconsultants/jbangdev/blob/fab2f812876055da40b11bf0a175329a7b3ac277/src/main/resources/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/88204064?v\u003d4",
+      "repoOwner": "aswiniqaconsultants",
+      "repoName": "jbangdev",
+      "alias": "qrest",
+      "description": "\u003cp\u003eQuarkus REST template\u003c/p\u003e\n",
+      "command": "qrest@aswiniqaconsultants/jbangdev~src/main/resources",
+      "fullcommand": "jbang init -t qrest@aswiniqaconsultants/jbangdev~src/main/resources app.java",
+      "link": "https://github.com/aswiniqaconsultants/jbangdev/blob/fab2f812876055da40b11bf0a175329a7b3ac277/src/main/resources/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
       "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
       "repoOwner": "maxandersen",
       "repoName": "jbang-catalog",
@@ -2510,5 +2621,5 @@
       "link": "https://github.com/DavideD/jbang-rep/blob/ff866d75318ce968039b2cdba2b561275795a11e/jbang-catalog.json"
     }
   ],
-  "templateCount": 21
+  "templateCount": 28
 }
