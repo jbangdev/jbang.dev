@@ -1,8 +1,8 @@
 {
-  "aliasCount": 203,
+  "aliasCount": 193,
   "aliases": [
     {
-      "stars": 5158,
+      "stars": 5163,
       "icon_url": "https://avatars.githubusercontent.com/u/2495066?v\u003d4",
       "repoOwner": "intuit",
       "repoName": "karate",
@@ -13,7 +13,7 @@
       "link": "https://github.com/intuit/karate/blob/3a9d5148c3e0ae167736174527040abb8d7fc536/jbang-catalog.json"
     },
     {
-      "stars": 3879,
+      "stars": 3882,
       "icon_url": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
       "repoOwner": "apache",
       "repoName": "camel",
@@ -25,7 +25,7 @@
       "link": "https://github.com/apache/camel/blob/b0bada2f41029cd8496db4defc09b3a48b403ad4/jbang-catalog.json"
     },
     {
-      "stars": 1263,
+      "stars": 1265,
       "icon_url": "https://avatars.githubusercontent.com/u/8267906?v\u003d4",
       "repoOwner": "tabulapdf",
       "repoName": "tabula-java",
@@ -175,29 +175,6 @@
       "command": "httpd@jbangdev",
       "fullcommand": "jbang httpd@jbangdev app.java",
       "link": "https://github.com/jbangdev/jbang-catalog/blob/547053bc36e184e4b008cd23971470923a8b14e7/jbang-catalog.json"
-    },
-    {
-      "stars": 22,
-      "icon_url": "https://avatars.githubusercontent.com/u/877286?v\u003d4",
-      "repoOwner": "manikmagar",
-      "repoName": "mulefd",
-      "alias": "mulefd",
-      "description": "\u003cp\u003eRuns Mule Flow Diagrams\u003c/p\u003e\n",
-      "scriptRef": "jbang/mulefd.java",
-      "command": "mulefd@manikmagar/mulefd",
-      "fullcommand": "jbang mulefd@manikmagar/mulefd app.java",
-      "link": "https://github.com/manikmagar/mulefd/blob/3883fbc286becb72d665f2dfada21d2aac7a97fb/jbang-catalog.json"
-    },
-    {
-      "stars": 12,
-      "icon_url": "https://avatars.githubusercontent.com/u/2865265?v\u003d4",
-      "repoOwner": "tomitribe",
-      "repoName": "jamira",
-      "alias": "jamira",
-      "scriptRef": "org.tomitribe.jamira:jamira-cli:LATEST:shaded",
-      "command": "jamira@tomitribe/jamira",
-      "fullcommand": "jbang jamira@tomitribe/jamira app.java",
-      "link": "https://github.com/tomitribe/jamira/blob/7976d038dd174723e595ef0d841cd4832412f205/jbang-catalog.json"
     },
     {
       "stars": 8,
@@ -838,15 +815,112 @@
       "link": "https://github.com/davsclaus/camel-visual/blob/1a88b13d52ef674010b84ad1b74105387104262d/jbang-catalog.json"
     },
     {
-      "stars": 6,
-      "icon_url": "https://avatars.githubusercontent.com/u/915480?v\u003d4",
-      "repoOwner": "ptrthomas",
-      "repoName": "karate-todomvc",
-      "alias": "karate",
-      "scriptRef": "com.intuit.karate:karate-core:1.1.0",
-      "command": "karate@ptrthomas/karate-todomvc",
-      "fullcommand": "jbang karate@ptrthomas/karate-todomvc app.java",
-      "link": "https://github.com/ptrthomas/karate-todomvc/blob/9c0c77a0f722ab9cc046d93815f276208b4af385/jbang-catalog.json"
+      "stars": 3,
+      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
+      "repoOwner": "grumpyf0x48",
+      "repoName": "jbang-catalog",
+      "alias": "ssh",
+      "description": "\u003cp\u003eA basic SSH client. Written with Apache Mina, JBang and Picocli\u003c/p\u003e\n",
+      "scriptRef": "Ssh.java",
+      "command": "ssh@grumpyf0x48",
+      "fullcommand": "jbang ssh@grumpyf0x48 app.java",
+      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
+    },
+    {
+      "stars": 3,
+      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
+      "repoOwner": "grumpyf0x48",
+      "repoName": "jbang-catalog",
+      "alias": "sort",
+      "description": "\u003cp\u003eA sample sort program to illustrate Java stream and Array sort use. Written with JBang and Picocli\u003c/p\u003e\n",
+      "scriptRef": "Sort.java",
+      "command": "sort@grumpyf0x48",
+      "fullcommand": "jbang sort@grumpyf0x48 app.java",
+      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
+    },
+    {
+      "stars": 3,
+      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
+      "repoOwner": "grumpyf0x48",
+      "repoName": "jbang-catalog",
+      "alias": "links",
+      "description": "\u003cp\u003eA program to retrieve the posts metadata of my former blog archived on \u003ca rel\u003d\"nofollow\" href\u003d\"https://web.archive.org\"\u003ehttps://web.archive.org\u003c/a\u003e. Written with Jsoup, Gson, JBang and Picocli\u003c/p\u003e\n",
+      "scriptRef": "Links.java",
+      "command": "links@grumpyf0x48",
+      "fullcommand": "jbang links@grumpyf0x48 app.java",
+      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
+    },
+    {
+      "stars": 3,
+      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
+      "repoOwner": "grumpyf0x48",
+      "repoName": "jbang-catalog",
+      "alias": "html",
+      "description": "\u003cp\u003eA program to build the archive page for my new blog from the posts.json file generated by Links. Written with Gson, JBang and Picocli\u003c/p\u003e\n",
+      "scriptRef": "Html.java",
+      "command": "html@grumpyf0x48",
+      "fullcommand": "jbang html@grumpyf0x48 app.java",
+      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
+    },
+    {
+      "stars": 3,
+      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
+      "repoOwner": "grumpyf0x48",
+      "repoName": "jbang-catalog",
+      "alias": "sizeof",
+      "description": "\u003cp\u003eA program to display the memory size of Java primitive types and their corresponding wrapper classes. Written with OpenJDK jol, JBang and Picocli\u003c/p\u003e\n",
+      "scriptRef": "SizeOf.java",
+      "command": "sizeof@grumpyf0x48",
+      "fullcommand": "jbang sizeof@grumpyf0x48 app.java",
+      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
+    },
+    {
+      "stars": 3,
+      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
+      "repoOwner": "grumpyf0x48",
+      "repoName": "jbang-catalog",
+      "alias": "git-clone",
+      "description": "\u003cp\u003eA basic \u003ccode\u003egit clone\u003c/code\u003e replacement in Java. Written with jGit, JBang and Picocli\u003c/p\u003e\n",
+      "scriptRef": "GitClone.java",
+      "command": "git-clone@grumpyf0x48",
+      "fullcommand": "jbang git-clone@grumpyf0x48 app.java",
+      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
+    },
+    {
+      "stars": 3,
+      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
+      "repoOwner": "grumpyf0x48",
+      "repoName": "jbang-catalog",
+      "alias": "git-get",
+      "description": "\u003cp\u003eA command to get one or more files (or directories) from a Git repository. Written with jGit, JBang and Picocli\u003c/p\u003e\n",
+      "scriptRef": "GitGet.java",
+      "command": "git-get@grumpyf0x48",
+      "fullcommand": "jbang git-get@grumpyf0x48 app.java",
+      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
+    },
+    {
+      "stars": 3,
+      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
+      "repoOwner": "grumpyf0x48",
+      "repoName": "jbang-catalog",
+      "alias": "whats-new-in-java",
+      "description": "\u003cp\u003eA command to display methods added to a Java class (or made deprecated) in a given JDK release. Written with Java 11, JBang and Picocli\u003c/p\u003e\n",
+      "scriptRef": "WhatsNewInJava.java",
+      "command": "whats-new-in-java@grumpyf0x48",
+      "fullcommand": "jbang whats-new-in-java@grumpyf0x48 app.java",
+      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
+    },
+    {
+      "stars": 3,
+      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
+      "repoOwner": "grumpyf0x48",
+      "repoName": "jbang-catalog",
+      "alias": "statusCode",
+      "description": "\u003cp\u003eA sample sort program to illustrate Java 11 HttpClient use\u003c/p\u003e\n",
+      "scriptRef": "StatusCode.java",
+      "command": "statusCode@grumpyf0x48",
+      "fullcommand": "jbang statusCode@grumpyf0x48 app.java",
+      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
     },
     {
       "stars": 3,
@@ -1078,114 +1152,6 @@
     },
     {
       "stars": 3,
-      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
-      "repoOwner": "grumpyf0x48",
-      "repoName": "jbang-catalog",
-      "alias": "ssh",
-      "description": "\u003cp\u003eA basic SSH client. Written with Apache Mina, JBang and Picocli\u003c/p\u003e\n",
-      "scriptRef": "Ssh.java",
-      "command": "ssh@grumpyf0x48",
-      "fullcommand": "jbang ssh@grumpyf0x48 app.java",
-      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
-    },
-    {
-      "stars": 3,
-      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
-      "repoOwner": "grumpyf0x48",
-      "repoName": "jbang-catalog",
-      "alias": "sort",
-      "description": "\u003cp\u003eA sample sort program to illustrate Java stream and Array sort use. Written with JBang and Picocli\u003c/p\u003e\n",
-      "scriptRef": "Sort.java",
-      "command": "sort@grumpyf0x48",
-      "fullcommand": "jbang sort@grumpyf0x48 app.java",
-      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
-    },
-    {
-      "stars": 3,
-      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
-      "repoOwner": "grumpyf0x48",
-      "repoName": "jbang-catalog",
-      "alias": "links",
-      "description": "\u003cp\u003eA program to retrieve the posts metadata of my former blog archived on \u003ca rel\u003d\"nofollow\" href\u003d\"https://web.archive.org\"\u003ehttps://web.archive.org\u003c/a\u003e. Written with Jsoup, Gson, JBang and Picocli\u003c/p\u003e\n",
-      "scriptRef": "Links.java",
-      "command": "links@grumpyf0x48",
-      "fullcommand": "jbang links@grumpyf0x48 app.java",
-      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
-    },
-    {
-      "stars": 3,
-      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
-      "repoOwner": "grumpyf0x48",
-      "repoName": "jbang-catalog",
-      "alias": "html",
-      "description": "\u003cp\u003eA program to build the archive page for my new blog from the posts.json file generated by Links. Written with Gson, JBang and Picocli\u003c/p\u003e\n",
-      "scriptRef": "Html.java",
-      "command": "html@grumpyf0x48",
-      "fullcommand": "jbang html@grumpyf0x48 app.java",
-      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
-    },
-    {
-      "stars": 3,
-      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
-      "repoOwner": "grumpyf0x48",
-      "repoName": "jbang-catalog",
-      "alias": "sizeof",
-      "description": "\u003cp\u003eA program to display the memory size of Java primitive types and their corresponding wrapper classes. Written with OpenJDK jol, JBang and Picocli\u003c/p\u003e\n",
-      "scriptRef": "SizeOf.java",
-      "command": "sizeof@grumpyf0x48",
-      "fullcommand": "jbang sizeof@grumpyf0x48 app.java",
-      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
-    },
-    {
-      "stars": 3,
-      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
-      "repoOwner": "grumpyf0x48",
-      "repoName": "jbang-catalog",
-      "alias": "git-clone",
-      "description": "\u003cp\u003eA basic \u003ccode\u003egit clone\u003c/code\u003e replacement in Java. Written with jGit, JBang and Picocli\u003c/p\u003e\n",
-      "scriptRef": "GitClone.java",
-      "command": "git-clone@grumpyf0x48",
-      "fullcommand": "jbang git-clone@grumpyf0x48 app.java",
-      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
-    },
-    {
-      "stars": 3,
-      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
-      "repoOwner": "grumpyf0x48",
-      "repoName": "jbang-catalog",
-      "alias": "git-get",
-      "description": "\u003cp\u003eA command to get one or more files (or directories) from a Git repository. Written with jGit, JBang and Picocli\u003c/p\u003e\n",
-      "scriptRef": "GitGet.java",
-      "command": "git-get@grumpyf0x48",
-      "fullcommand": "jbang git-get@grumpyf0x48 app.java",
-      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
-    },
-    {
-      "stars": 3,
-      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
-      "repoOwner": "grumpyf0x48",
-      "repoName": "jbang-catalog",
-      "alias": "whats-new-in-java",
-      "description": "\u003cp\u003eA command to display methods added to a Java class (or made deprecated) in a given JDK release. Written with Java 11, JBang and Picocli\u003c/p\u003e\n",
-      "scriptRef": "WhatsNewInJava.java",
-      "command": "whats-new-in-java@grumpyf0x48",
-      "fullcommand": "jbang whats-new-in-java@grumpyf0x48 app.java",
-      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
-    },
-    {
-      "stars": 3,
-      "icon_url": "https://avatars.githubusercontent.com/u/33195569?v\u003d4",
-      "repoOwner": "grumpyf0x48",
-      "repoName": "jbang-catalog",
-      "alias": "statusCode",
-      "description": "\u003cp\u003eA sample sort program to illustrate Java 11 HttpClient use\u003c/p\u003e\n",
-      "scriptRef": "StatusCode.java",
-      "command": "statusCode@grumpyf0x48",
-      "fullcommand": "jbang statusCode@grumpyf0x48 app.java",
-      "link": "https://github.com/grumpyf0x48/jbang-catalog/blob/a28433855dd99881056a755b5e6714fb1cd62fb6/jbang-catalog.json"
-    },
-    {
-      "stars": 3,
       "icon_url": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
       "repoOwner": "quarkusio",
       "repoName": "jbang-catalog",
@@ -1252,17 +1218,6 @@
       "command": "quarkus@quarkusio",
       "fullcommand": "jbang quarkus@quarkusio app.java",
       "link": "https://github.com/quarkusio/jbang-catalog/blob/1acdd2d56878981cbdf7c4f13db124347c57cc54/jbang-catalog.json"
-    },
-    {
-      "stars": 3,
-      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "repoOwner": "maxandersen",
-      "repoName": "rewrite-jbang",
-      "alias": "rewrite",
-      "scriptRef": "rewrite.java",
-      "command": "rewrite@maxandersen/rewrite-jbang",
-      "fullcommand": "jbang rewrite@maxandersen/rewrite-jbang app.java",
-      "link": "https://github.com/maxandersen/rewrite-jbang/blob/dd7c5764c184ee0b6a95c92a5f4b146021bda774/jbang-catalog.json"
     },
     {
       "stars": 2,
@@ -1349,41 +1304,6 @@
       "link": "https://github.com/scratches/jbang-catalog/blob/cc228f023a15e7c0cd6bddd0ae03b8f366b6cbf6/jbang-catalog.json"
     },
     {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "repoOwner": "jbangdev",
-      "repoName": "jbang-minecraft",
-      "alias": "sponge",
-      "scriptRef": "sponge.java",
-      "command": "sponge@jbangdev/jbang-minecraft",
-      "fullcommand": "jbang sponge@jbangdev/jbang-minecraft app.java",
-      "link": "https://github.com/jbangdev/jbang-minecraft/blob/5655cd56ae720fbec4618273d25fd3b1b749c283/jbang-catalog.json"
-    },
-    {
-      "stars": 1,
-      "icon_url": "https://avatars.githubusercontent.com/u/1939631?v\u003d4",
-      "repoOwner": "jacoco",
-      "repoName": "jbang-catalog",
-      "alias": "cli",
-      "description": "\u003cp\u003eRuns jacoco cli, see \u003ca rel\u003d\"nofollow\" href\u003d\"https://www.jacoco.org/jacoco/trunk/doc/cli.html\"\u003ehttps://www.jacoco.org/jacoco/trunk/doc/cli.html\u003c/a\u003e for documentation.\u003c/p\u003e\n",
-      "scriptRef": "org.jacoco:org.jacoco.cli:RELEASE:nodeps",
-      "command": "cli@jacoco",
-      "fullcommand": "jbang cli@jacoco app.java",
-      "link": "https://github.com/jacoco/jbang-catalog/blob/678e949a1f87fcb1c92f0f781921e1290bc3ebde/jbang-catalog.json"
-    },
-    {
-      "stars": 1,
-      "icon_url": "https://avatars.githubusercontent.com/u/1939631?v\u003d4",
-      "repoOwner": "jacoco",
-      "repoName": "jbang-catalog",
-      "alias": "agent",
-      "description": "\u003cp\u003ejacoco agent, use like \u003ccode\u003ejbang --javaagent \u0026lt;script\u0026gt;\u003c/code\u003e\u003c/p\u003e\n",
-      "scriptRef": "org.jacoco:org.jacoco.agent:RELEASE:runtime",
-      "command": "agent@jacoco",
-      "fullcommand": "jbang agent@jacoco app.java",
-      "link": "https://github.com/jacoco/jbang-catalog/blob/678e949a1f87fcb1c92f0f781921e1290bc3ebde/jbang-catalog.json"
-    },
-    {
       "stars": 1,
       "icon_url": "https://avatars.githubusercontent.com/u/517980?v\u003d4",
       "repoOwner": "kiegroup",
@@ -1445,14 +1365,27 @@
     },
     {
       "stars": 1,
-      "icon_url": "https://avatars.githubusercontent.com/u/12188140?v\u003d4",
-      "repoOwner": "InduprasadSR",
-      "repoName": "karate_Sample",
-      "alias": "karate",
-      "scriptRef": "com.intuit.karate:karate-core:1.0.0",
-      "command": "karate@InduprasadSR/karate_Sample",
-      "fullcommand": "jbang karate@InduprasadSR/karate_Sample app.java",
-      "link": "https://github.com/InduprasadSR/karate_Sample/blob/79ea6adb62f5584046ba714393719783af049f99/jbang-catalog.json"
+      "icon_url": "https://avatars.githubusercontent.com/u/1939631?v\u003d4",
+      "repoOwner": "jacoco",
+      "repoName": "jbang-catalog",
+      "alias": "cli",
+      "description": "\u003cp\u003eRuns jacoco cli, see \u003ca rel\u003d\"nofollow\" href\u003d\"https://www.jacoco.org/jacoco/trunk/doc/cli.html\"\u003ehttps://www.jacoco.org/jacoco/trunk/doc/cli.html\u003c/a\u003e for documentation.\u003c/p\u003e\n",
+      "scriptRef": "org.jacoco:org.jacoco.cli:RELEASE:nodeps",
+      "command": "cli@jacoco",
+      "fullcommand": "jbang cli@jacoco app.java",
+      "link": "https://github.com/jacoco/jbang-catalog/blob/678e949a1f87fcb1c92f0f781921e1290bc3ebde/jbang-catalog.json"
+    },
+    {
+      "stars": 1,
+      "icon_url": "https://avatars.githubusercontent.com/u/1939631?v\u003d4",
+      "repoOwner": "jacoco",
+      "repoName": "jbang-catalog",
+      "alias": "agent",
+      "description": "\u003cp\u003ejacoco agent, use like \u003ccode\u003ejbang --javaagent \u0026lt;script\u0026gt;\u003c/code\u003e\u003c/p\u003e\n",
+      "scriptRef": "org.jacoco:org.jacoco.agent:RELEASE:runtime",
+      "command": "agent@jacoco",
+      "fullcommand": "jbang agent@jacoco app.java",
+      "link": "https://github.com/jacoco/jbang-catalog/blob/678e949a1f87fcb1c92f0f781921e1290bc3ebde/jbang-catalog.json"
     },
     {
       "stars": 1,
@@ -1465,18 +1398,6 @@
       "command": "sdkman@tbee/mavenToolchains",
       "fullcommand": "jbang sdkman@tbee/mavenToolchains app.java",
       "link": "https://github.com/tbee/mavenToolchains/blob/d2ad3a08fec947a7ddfe661bfd9427b2afc09931/jbang-catalog.json"
-    },
-    {
-      "stars": 1,
-      "icon_url": "https://avatars.githubusercontent.com/u/55687?v\u003d4",
-      "repoOwner": "jruby",
-      "repoName": "jbang-catalog",
-      "alias": "run",
-      "description": "\u003cp\u003eRun a Ruby command line with JRuby\u003c/p\u003e\n",
-      "scriptRef": "org.jruby:jruby-complete:9.2.19.0",
-      "command": "run@jruby",
-      "fullcommand": "jbang run@jruby app.java",
-      "link": "https://github.com/jruby/jbang-catalog/blob/106aa096a558549e5019605d6d72441294ffae28/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -1594,64 +1515,6 @@
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/559221?v\u003d4",
-      "repoOwner": "DavideD",
-      "repoName": "jbang-rep",
-      "alias": "stage-verticle",
-      "description": "",
-      "scriptRef": "StageVerticle.java",
-      "command": "stage-verticle@DavideD/jbang-rep",
-      "fullcommand": "jbang stage-verticle@DavideD/jbang-rep app.java",
-      "link": "https://github.com/DavideD/jbang-rep/blob/ff866d75318ce968039b2cdba2b561275795a11e/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/559221?v\u003d4",
-      "repoOwner": "DavideD",
-      "repoName": "jbang-rep",
-      "alias": "issue886",
-      "description": "",
-      "scriptRef": "Issue886.java",
-      "command": "issue886@DavideD/jbang-rep",
-      "fullcommand": "jbang issue886@DavideD/jbang-rep app.java",
-      "link": "https://github.com/DavideD/jbang-rep/blob/ff866d75318ce968039b2cdba2b561275795a11e/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/559221?v\u003d4",
-      "repoOwner": "DavideD",
-      "repoName": "jbang-rep",
-      "alias": "orm-proxy-update",
-      "scriptRef": "ORMStatelessUpdateProxy.java",
-      "command": "orm-proxy-update@DavideD/jbang-rep",
-      "fullcommand": "jbang orm-proxy-update@DavideD/jbang-rep app.java",
-      "link": "https://github.com/DavideD/jbang-rep/blob/ff866d75318ce968039b2cdba2b561275795a11e/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/114367?v\u003d4",
-      "repoOwner": "mbien",
-      "repoName": "JFRLog",
-      "alias": "jfrprint",
-      "description": "\u003cp\u003ePrints formatted JFR events from JFR dumps or streams them live from repositories.\u003c/p\u003e\n",
-      "scriptRef": "JFRPrint.java",
-      "command": "jfrprint@mbien/JFRLog~cli",
-      "fullcommand": "jbang jfrprint@mbien/JFRLog~cli app.java",
-      "link": "https://github.com/mbien/JFRLog/blob/e9e6e3d17fda51a1e7d09450e0b7f23c1d8adae4/cli/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/27861160?v\u003d4",
-      "repoOwner": "gomezrondon",
-      "repoName": "spring-in-container",
-      "alias": "cleanyaml",
-      "scriptRef": "jscript.java",
-      "command": "cleanyaml@gomezrondon/spring-in-container~script",
-      "fullcommand": "jbang cleanyaml@gomezrondon/spring-in-container~script app.java",
-      "link": "https://github.com/gomezrondon/spring-in-container/blob/546df82c9b5bd1159c9866101c79a2fd5d3b1388/script/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
       "icon_url": "https://avatars.githubusercontent.com/u/28388442?v\u003d4",
       "repoOwner": "TomerFi",
       "repoName": "jbang-catalog",
@@ -1733,109 +1596,61 @@
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/1597979?v\u003d4",
-      "repoOwner": "verhas",
-      "repoName": "jbang-catalog",
-      "alias": "jamal",
-      "scriptRef": "https://raw.githubusercontent.com/verhas/jamal/master/jbangstarter.java",
-      "command": "jamal@verhas",
-      "fullcommand": "jbang jamal@verhas app.java",
-      "link": "https://github.com/verhas/jbang-catalog/blob/99e9c695ee8c30afcb3800a2cd9bf669bd27df37/jbang-catalog.json"
+      "icon_url": "https://avatars.githubusercontent.com/u/559221?v\u003d4",
+      "repoOwner": "DavideD",
+      "repoName": "jbang-rep",
+      "alias": "stage-verticle",
+      "description": "",
+      "scriptRef": "StageVerticle.java",
+      "command": "stage-verticle@DavideD/jbang-rep",
+      "fullcommand": "jbang stage-verticle@DavideD/jbang-rep app.java",
+      "link": "https://github.com/DavideD/jbang-rep/blob/ff866d75318ce968039b2cdba2b561275795a11e/jbang-catalog.json"
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/6814443?v\u003d4",
-      "repoOwner": "lilian-benoit",
-      "repoName": "scripts-keycloak",
-      "alias": "users-csv-to-json",
-      "description": "\u003cp\u003eScript convert from csv file to json for keycloak admin cli\u003c/p\u003e\n",
-      "scriptRef": "UsersCSVtoKeycloakJSON.java",
-      "command": "users-csv-to-json@lilian-benoit/scripts-keycloak",
-      "fullcommand": "jbang users-csv-to-json@lilian-benoit/scripts-keycloak app.java",
-      "link": "https://github.com/lilian-benoit/scripts-keycloak/blob/f60b04770f895bec7a7c735359684e8c65e54c17/jbang-catalog.json"
+      "icon_url": "https://avatars.githubusercontent.com/u/559221?v\u003d4",
+      "repoOwner": "DavideD",
+      "repoName": "jbang-rep",
+      "alias": "issue886",
+      "description": "",
+      "scriptRef": "Issue886.java",
+      "command": "issue886@DavideD/jbang-rep",
+      "fullcommand": "jbang issue886@DavideD/jbang-rep app.java",
+      "link": "https://github.com/DavideD/jbang-rep/blob/ff866d75318ce968039b2cdba2b561275795a11e/jbang-catalog.json"
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/413413?v\u003d4",
-      "repoOwner": "38leinaD",
-      "repoName": "jbang-catalog",
-      "alias": "quarkus-starter",
-      "description": "\u003cp\u003eScript to scaffold a Quarkus project\u003c/p\u003e\n",
-      "scriptRef": "src/QuarkusStarter.java",
-      "command": "quarkus-starter@38leinaD",
-      "fullcommand": "jbang quarkus-starter@38leinaD app.java",
-      "link": "https://github.com/38leinaD/jbang-catalog/blob/956bad5e5a8dc5d7a26d6964ecfe42045810e827/jbang-catalog.json"
+      "icon_url": "https://avatars.githubusercontent.com/u/559221?v\u003d4",
+      "repoOwner": "DavideD",
+      "repoName": "jbang-rep",
+      "alias": "orm-proxy-update",
+      "scriptRef": "ORMStatelessUpdateProxy.java",
+      "command": "orm-proxy-update@DavideD/jbang-rep",
+      "fullcommand": "jbang orm-proxy-update@DavideD/jbang-rep app.java",
+      "link": "https://github.com/DavideD/jbang-rep/blob/ff866d75318ce968039b2cdba2b561275795a11e/jbang-catalog.json"
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/413413?v\u003d4",
-      "repoOwner": "38leinaD",
-      "repoName": "jbang-catalog",
-      "alias": "firestarter",
-      "description": "\u003cp\u003eDisplay a YouTube video on your RasPi or similar (e.g. to build a \u0027virtual fireplace\u0027). Also, simple web-ui to edit the video URL.\u003c/p\u003e\n",
-      "scriptRef": "src/firestarter",
-      "command": "firestarter@38leinaD",
-      "fullcommand": "jbang firestarter@38leinaD app.java",
-      "link": "https://github.com/38leinaD/jbang-catalog/blob/956bad5e5a8dc5d7a26d6964ecfe42045810e827/jbang-catalog.json"
+      "icon_url": "https://avatars.githubusercontent.com/u/114367?v\u003d4",
+      "repoOwner": "mbien",
+      "repoName": "JFRLog",
+      "alias": "jfrprint",
+      "description": "\u003cp\u003ePrints formatted JFR events from JFR dumps or streams them live from repositories.\u003c/p\u003e\n",
+      "scriptRef": "JFRPrint.java",
+      "command": "jfrprint@mbien/JFRLog~cli",
+      "fullcommand": "jbang jfrprint@mbien/JFRLog~cli app.java",
+      "link": "https://github.com/mbien/JFRLog/blob/e9e6e3d17fda51a1e7d09450e0b7f23c1d8adae4/cli/jbang-catalog.json"
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/413413?v\u003d4",
-      "repoOwner": "38leinaD",
-      "repoName": "jbang-catalog",
-      "alias": "httpserver",
-      "description": "\u003cp\u003eMinimalist JDK-internal http-server\u003c/p\u003e\n",
-      "scriptRef": "src/httpserver.java",
-      "command": "httpserver@38leinaD",
-      "fullcommand": "jbang httpserver@38leinaD app.java",
-      "link": "https://github.com/38leinaD/jbang-catalog/blob/956bad5e5a8dc5d7a26d6964ecfe42045810e827/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/477100?v\u003d4",
-      "repoOwner": "davsclaus",
-      "repoName": "camel-bang",
-      "alias": "launch",
-      "scriptRef": "CamelBang.java",
-      "command": "launch@davsclaus/camel-bang",
-      "fullcommand": "jbang launch@davsclaus/camel-bang app.java",
-      "link": "https://github.com/davsclaus/camel-bang/blob/1e6009c78e37ee2016a7c8e7902de5b134538709/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/1429698?v\u003d4",
-      "repoOwner": "tbee",
-      "repoName": "jbang-catalog",
-      "alias": "mvnToolchainsSDKMAN",
-      "description": "\u003cp\u003eGenerate ~/.m2/toolchains.xml jdk entries using the installed Java JDKs in SDKMAN\u003c/p\u003e\n",
-      "scriptRef": "https://raw.githubusercontent.com/tbee/mavenToolchains/main/GenerateToolchainsFromSDKMAN.java",
-      "command": "mvnToolchainsSDKMAN@tbee",
-      "fullcommand": "jbang mvnToolchainsSDKMAN@tbee app.java",
-      "link": "https://github.com/tbee/jbang-catalog/blob/6a66ae95836b0aa2565eb9d3840b335b94dce056/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/5949412?v\u003d4",
-      "repoOwner": "poser55",
-      "repoName": "jbang-catalog",
-      "alias": "db-export-json",
-      "description": "\u003cp\u003eExports a table and its linked tables as JSON. Writes the JSON to stdout (other output to stderr), you can use \u0026gt; myFile.json to get it in a file.\u003c/p\u003e\n",
-      "scriptRef": "https://github.com/poser55/linked-db-rows/blob/HEAD/JsonExport.java",
-      "command": "db-export-json@poser55",
-      "fullcommand": "jbang db-export-json@poser55 app.java",
-      "link": "https://github.com/poser55/jbang-catalog/blob/685ac84edad09cfd1a8013de0f01ddf3fc4e996a/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/5949412?v\u003d4",
-      "repoOwner": "poser55",
-      "repoName": "jbang-catalog",
-      "alias": "db-import-json",
-      "description": "\u003cp\u003eImports a table and its linked tables from JSON.\u003c/p\u003e\n",
-      "scriptRef": "https://github.com/poser55/linked-db-rows/blob/HEAD/JsonImport.java",
-      "command": "db-import-json@poser55",
-      "fullcommand": "jbang db-import-json@poser55 app.java",
-      "link": "https://github.com/poser55/jbang-catalog/blob/685ac84edad09cfd1a8013de0f01ddf3fc4e996a/jbang-catalog.json"
+      "icon_url": "https://avatars.githubusercontent.com/u/27861160?v\u003d4",
+      "repoOwner": "gomezrondon",
+      "repoName": "spring-in-container",
+      "alias": "cleanyaml",
+      "scriptRef": "jscript.java",
+      "command": "cleanyaml@gomezrondon/spring-in-container~script",
+      "fullcommand": "jbang cleanyaml@gomezrondon/spring-in-container~script app.java",
+      "link": "https://github.com/gomezrondon/spring-in-container/blob/546df82c9b5bd1159c9866101c79a2fd5d3b1388/script/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -1894,30 +1709,6 @@
       "command": "resource@aswiniqaconsultants/jbangdev~itests",
       "fullcommand": "jbang resource@aswiniqaconsultants/jbangdev~itests app.java",
       "link": "https://github.com/aswiniqaconsultants/jbangdev/blob/fab2f812876055da40b11bf0a175329a7b3ac277/itests/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/560654?v\u003d4",
-      "repoOwner": "blafond",
-      "repoName": "jbang-rep",
-      "alias": "Issue886WithORM",
-      "description": "\u003cp\u003eReproducer using ORM only\u003c/p\u003e\n",
-      "scriptRef": "Issue886WithORM.java",
-      "command": "Issue886WithORM@blafond/jbang-rep",
-      "fullcommand": "jbang Issue886WithORM@blafond/jbang-rep app.java",
-      "link": "https://github.com/blafond/jbang-rep/blob/d3f01f7aa6c6fa32ec01112ce734acc773e7d664/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/560654?v\u003d4",
-      "repoOwner": "blafond",
-      "repoName": "jbang-rep",
-      "alias": "Issue886",
-      "description": "\u003cp\u003eWorking example using reactive\u003c/p\u003e\n",
-      "scriptRef": "Issue886.java",
-      "command": "Issue886@blafond/jbang-rep",
-      "fullcommand": "jbang Issue886@blafond/jbang-rep app.java",
-      "link": "https://github.com/blafond/jbang-rep/blob/d3f01f7aa6c6fa32ec01112ce734acc773e7d664/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -2311,11 +2102,104 @@
       "command": "clearpto@maxandersen/jmeet",
       "fullcommand": "jbang clearpto@maxandersen/jmeet app.java",
       "link": "https://github.com/maxandersen/jmeet/blob/48842f26497b6bb26862777c275753b3107d9306/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/1597979?v\u003d4",
+      "repoOwner": "verhas",
+      "repoName": "jbang-catalog",
+      "alias": "jamal",
+      "scriptRef": "https://raw.githubusercontent.com/verhas/jamal/master/jbangstarter.java",
+      "command": "jamal@verhas",
+      "fullcommand": "jbang jamal@verhas app.java",
+      "link": "https://github.com/verhas/jbang-catalog/blob/99e9c695ee8c30afcb3800a2cd9bf669bd27df37/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/6814443?v\u003d4",
+      "repoOwner": "lilian-benoit",
+      "repoName": "scripts-keycloak",
+      "alias": "users-csv-to-json",
+      "description": "\u003cp\u003eScript convert from csv file to json for keycloak admin cli\u003c/p\u003e\n",
+      "scriptRef": "UsersCSVtoKeycloakJSON.java",
+      "command": "users-csv-to-json@lilian-benoit/scripts-keycloak",
+      "fullcommand": "jbang users-csv-to-json@lilian-benoit/scripts-keycloak app.java",
+      "link": "https://github.com/lilian-benoit/scripts-keycloak/blob/f60b04770f895bec7a7c735359684e8c65e54c17/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/413413?v\u003d4",
+      "repoOwner": "38leinaD",
+      "repoName": "jbang-catalog",
+      "alias": "quarkus-starter",
+      "description": "\u003cp\u003eScript to scaffold a Quarkus project\u003c/p\u003e\n",
+      "scriptRef": "src/QuarkusStarter.java",
+      "command": "quarkus-starter@38leinaD",
+      "fullcommand": "jbang quarkus-starter@38leinaD app.java",
+      "link": "https://github.com/38leinaD/jbang-catalog/blob/956bad5e5a8dc5d7a26d6964ecfe42045810e827/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/413413?v\u003d4",
+      "repoOwner": "38leinaD",
+      "repoName": "jbang-catalog",
+      "alias": "firestarter",
+      "description": "\u003cp\u003eDisplay a YouTube video on your RasPi or similar (e.g. to build a \u0027virtual fireplace\u0027). Also, simple web-ui to edit the video URL.\u003c/p\u003e\n",
+      "scriptRef": "src/firestarter",
+      "command": "firestarter@38leinaD",
+      "fullcommand": "jbang firestarter@38leinaD app.java",
+      "link": "https://github.com/38leinaD/jbang-catalog/blob/956bad5e5a8dc5d7a26d6964ecfe42045810e827/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/413413?v\u003d4",
+      "repoOwner": "38leinaD",
+      "repoName": "jbang-catalog",
+      "alias": "httpserver",
+      "description": "\u003cp\u003eMinimalist JDK-internal http-server\u003c/p\u003e\n",
+      "scriptRef": "src/httpserver.java",
+      "command": "httpserver@38leinaD",
+      "fullcommand": "jbang httpserver@38leinaD app.java",
+      "link": "https://github.com/38leinaD/jbang-catalog/blob/956bad5e5a8dc5d7a26d6964ecfe42045810e827/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/12188140?v\u003d4",
+      "repoOwner": "InduprasadSR",
+      "repoName": "karate_Sample",
+      "alias": "karate",
+      "scriptRef": "com.intuit.karate:karate-core:1.0.0",
+      "command": "karate@InduprasadSR/karate_Sample",
+      "fullcommand": "jbang karate@InduprasadSR/karate_Sample app.java",
+      "link": "https://github.com/InduprasadSR/karate_Sample/blob/79ea6adb62f5584046ba714393719783af049f99/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/477100?v\u003d4",
+      "repoOwner": "davsclaus",
+      "repoName": "camel-bang",
+      "alias": "launch",
+      "scriptRef": "CamelBang.java",
+      "command": "launch@davsclaus/camel-bang",
+      "fullcommand": "jbang launch@davsclaus/camel-bang app.java",
+      "link": "https://github.com/davsclaus/camel-bang/blob/1e6009c78e37ee2016a7c8e7902de5b134538709/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/1429698?v\u003d4",
+      "repoOwner": "tbee",
+      "repoName": "jbang-catalog",
+      "alias": "mvnToolchainsSDKMAN",
+      "description": "\u003cp\u003eGenerate ~/.m2/toolchains.xml jdk entries using the installed Java JDKs in SDKMAN\u003c/p\u003e\n",
+      "scriptRef": "https://raw.githubusercontent.com/tbee/mavenToolchains/main/GenerateToolchainsFromSDKMAN.java",
+      "command": "mvnToolchainsSDKMAN@tbee",
+      "fullcommand": "jbang mvnToolchainsSDKMAN@tbee app.java",
+      "link": "https://github.com/tbee/jbang-catalog/blob/6a66ae95836b0aa2565eb9d3840b335b94dce056/jbang-catalog.json"
     }
   ],
   "templates": [
     {
-      "stars": 793,
+      "stars": 795,
       "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "repoOwner": "jbangdev",
       "repoName": "jbang",
@@ -2326,7 +2210,7 @@
       "link": "https://github.com/jbangdev/jbang/blob/211bcaedbde99703cdc346d701c18b97ca8d36bb/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 793,
+      "stars": 795,
       "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "repoOwner": "jbangdev",
       "repoName": "jbang",
@@ -2337,7 +2221,7 @@
       "link": "https://github.com/jbangdev/jbang/blob/211bcaedbde99703cdc346d701c18b97ca8d36bb/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 793,
+      "stars": 795,
       "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "repoOwner": "jbangdev",
       "repoName": "jbang",
@@ -2348,7 +2232,7 @@
       "link": "https://github.com/jbangdev/jbang/blob/211bcaedbde99703cdc346d701c18b97ca8d36bb/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 793,
+      "stars": 795,
       "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "repoOwner": "jbangdev",
       "repoName": "jbang",
@@ -2359,7 +2243,7 @@
       "link": "https://github.com/jbangdev/jbang/blob/211bcaedbde99703cdc346d701c18b97ca8d36bb/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 793,
+      "stars": 795,
       "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "repoOwner": "jbangdev",
       "repoName": "jbang",
@@ -2370,7 +2254,7 @@
       "link": "https://github.com/jbangdev/jbang/blob/211bcaedbde99703cdc346d701c18b97ca8d36bb/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 793,
+      "stars": 795,
       "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "repoOwner": "jbangdev",
       "repoName": "jbang",
@@ -2381,7 +2265,7 @@
       "link": "https://github.com/jbangdev/jbang/blob/211bcaedbde99703cdc346d701c18b97ca8d36bb/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 793,
+      "stars": 795,
       "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "repoOwner": "jbangdev",
       "repoName": "jbang",
