@@ -324,19 +324,18 @@
 <div class="sectionbody">
 <!-- toc disabled -->
 <div class="paragraph">
-<p>You can edit your script in an IDE/editor by using <code>jbang edit helloworld.java</code>. This will generate a project in a temporary location with symbolic links to your script
-and output the generated folder name. The easiest way to use that is to use it in a call to your IDE:</p>
+<p>You can edit your script in an IDE/editor by using <code>jbang edit helloworld.java</code>. This will generate a project in a temporary location with symbolic links to your script and open a editor.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">code `jbang edit helloworld.java`</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jbang edit helloworld.java</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>If you add further dependencies to your file just re-run the edit command and the relevant files will be regenerated with the updated dependencies.</p>
+<p>By default <code>jbang</code> will offer to install <a href="https://vscodium.com">VSCodium</a> (free/libre version of Visual Studio code) with default java extensions enabled in so called <a href="https://code.visualstudio.com/docs/editor/portable">"portable mode"</a>. Portable mode means all the installed binaries and configuration does not affect rest of your system; everything is stored in <code>~/.jbang/editor</code>.</p>
 </div>
 <div class="paragraph">
-<p>Above does require using a shell that allows for variable evaluation, if you are on i.e. Windows then you might prefer using:</p>
+<p>This automatic install and setup of editor is fully optional and if you have another IDE or editor already installed use it using <code>jbang edit --open=&lt;editor&gt;</code> or set JBANG_EDITOR environment variable to have jbang use it by default.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -344,8 +343,15 @@ and output the generated folder name. The easiest way to use that is to use it i
 </div>
 </div>
 <div class="paragraph">
-<p>The editor used will be what is specified as the argument to <code>--open</code> or value of <code>JBANG_EDITOR</code> environment variable.
-The editor command must be available on the PATH to be executed from jbang. If you are executing <code>jbang edit --open=code helloworld.java</code> a <code>code</code> executable (visual studio code) must be on the PATH. Next to this you can pass the full path to the <code>open</code> parameter like in <code>--open=/usr/bin/code</code>.</p>
+<p>Finally you can also if you prefer to call the editor/IDE yourself in a shell that supports variable evaluation specify <code>--no-open</code> to tell JBang to not open an editor.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">code `jbang edit --no-open helloworld.java`</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you add further dependencies to your file just re-run the edit command and the relevant files will be regenerated with the updated dependencies.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -360,20 +366,6 @@ for your user or run your shell/terminal as administrator to have this feature w
 </td>
 </tr>
 </table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="install-of-default-vscodium-editor-experimental"><a class="anchor" href="#install-of-default-vscodium-editor-experimental"></a>Install of default vscodium editor [EXPERIMENTAL]</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>If no editor available at all jbang will offer to install <a href="https://vscodium.com">VSCodium</a> (free/libre version of Visual Studio code) with
-default java extensions enabled in so called <a href="https://code.visualstudio.com/docs/editor/portable">"portable mode"</a>. Portable mode means all
-the installed binaries and configuration does not affect rest of your system; everything is stored in <code>~/.jbang/editor</code>.</p>
-</div>
-<div class="paragraph">
-<p>This automatic install and setup of editor is fully optional and if you have another IDE or editor already installed
-use it using <code>jbang edit --open=&lt;editor&gt;</code> or set JBANG_EDITOR environment variable to have jbang use it by default.</p>
 </div>
 </div>
 </div>
