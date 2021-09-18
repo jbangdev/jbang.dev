@@ -348,9 +348,9 @@ to setup and manage aliases to actual scripts.</p>
 <h2 id="implicit-alias-catalogs"><a class="anchor" href="#implicit-alias-catalogs"></a>Implicit Alias Catalogs</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The aliases you create are stored locally (see <a href="#local-alias-catalogs">Local Alias Catalogs</a>), but Jbang can also use remote catalogs.
+<p>The aliases you create are stored locally (see <a href="#local-alias-catalogs">Local Alias Catalogs</a>), but JBang can also use remote catalogs.
 You can access those catalogs explicitly (see <a href="#catalogs">Catalogs</a>) but it is much easier to use what we call "implicit catalogs", which
-are aliases that have a special format and Jbang is smart enough to know where to find their definition.</p>
+are aliases that have a special format and JBang is smart enough to know where to find their definition.</p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -401,7 +401,7 @@ are aliases that have a special format and Jbang is smart enough to know where t
 <h2 id="local-alias-catalogs"><a class="anchor" href="#local-alias-catalogs"></a>Local Alias Catalogs</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Jbang will also look in the current directory for a <code>jbang-catalog.json</code> file and if it exists it will look up any aliases
+<p>JBang will also look in the current directory for a <code>jbang-catalog.json</code> file and if it exists it will look up any aliases
 in there too. In fact it will look in several places in the following order:</p>
 </div>
 <div class="olist arabic">
@@ -427,14 +427,14 @@ in there too. In fact it will look in several places in the following order:</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>Jbang will use any aliases defined in those files, but on top of that it will also look at the aliases defined in any
+<p>JBang will use any aliases defined in those files, but on top of that it will also look at the aliases defined in any
 catalogs mentioned in those files as well. Aliases defined in the file have preference over aliases found in any catalogs
 defined in the same file.</p>
 </div>
 <div class="paragraph">
 <p>When you create aliases using <code>jbang alias add</code>, or add catalogs using <code>jbang catalog add</code> the <em>same</em> ordering will be used
 to determine where to store the alias or catalog. Btw, this will only take into account <em>existing</em> files!
-So if no <code>jbang-catalog.json</code> file exists in the local directory it will <em>not</em> be created for you, but Jbang will keep
+So if no <code>jbang-catalog.json</code> file exists in the local directory it will <em>not</em> be created for you, but JBang will keep
 looking until it finds a file to use (as a last option it will always be written to <code>$HOME/.jbang/jbang-catalog.json</code>).</p>
 </div>
 <div class="paragraph">
