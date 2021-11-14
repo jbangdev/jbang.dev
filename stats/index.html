@@ -1,0 +1,77 @@
+<head>
+	<style> body { margin: 0; } </style>
+      
+	<script src="//unpkg.com/d3"></script>
+	<script src="//unpkg.com/d3-dsv"></script>
+      
+	<script src="//unpkg.com/globe.gl"></script>
+	<!--<script src="../../dist/globe.gl.js"></script>-->
+      </head>
+      <title>JBang Globe</title>
+      <style>
+	body { text-align: center; background-color: black; }
+	h1 { font-size: 50px; }
+	body { font: 20px Helvetica, sans-serif; color: #fff; }
+	article { display: block; text-align: center; width: 650px; margin: 0 auto; }
+	a { color: #dc8100; text-decoration: none; }
+	a:hover { color: #333; text-decoration: none; }
+
+
+	.menu-item {
+
+		cursor: pointer;
+		-webkit-transition: all 0.1s ease-out;
+	}
+
+	.menu-item:hover, .menu-item.active {
+		font-size: 23px;
+		color: #fff;
+	}
+
+      </style>
+      
+      <body>
+
+	<h1>JBang Globe</h1>
+	<p>Below is a visualization of recent <a href="https://www.jbang.dev/documentation/guide/latest/installation.html#version-check">version checks</a> done by JBang users world wide. </p>
+	<div id="menu">
+		<span id="autorotate" class="menu-item">Stop Spin</span>
+	      </div>
+	     
+
+	<div id="globeViz"></div>
+      
+	<script>
+	  const weightColor = d3.scaleSequentialSqrt(d3.interpolateYlOrRd)
+	    .domain([0, 500]);
+      
+	  const world = Globe()
+	    (document.getElementById('globeViz'))
+	    .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+	    .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+	    .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+	  //  .backgroundColor('rgba(0, 0, 0, 0)')  
+	    .hexBinPointWeight('count')
+	    .hexAltitude(d => d.sumWeight * 0.002)
+	    .hexBinResolution(4)
+	    .hexTopColor(d => weightColor(d.sumWeight))
+	    .hexSideColor(d => weightColor(d.sumWeight))
+	    .hexBinMerge(true)
+	    .hexLabel(() => `<b>BLAH!</b>`)
+	    .enablePointerInteraction(true); // performance improvement
+      
+	  fetch('data.csv').then(res => res.text())
+	    .then(csv => d3.csvParse(csv, ({ lat, lng, count }) => ({ lat: +lat, lng: +lng, count: +count })))
+	    .then(data => world.hexBinPointsData(data));
+      
+	  // Add auto-rotation
+	  world.controls().autoRotate = true;
+	  world.controls().autoRotateSpeed = 1.5;
+
+	  document.getElementById("autorotate").onclick = function (e) {
+  		world.controls().autoRotate = !world.controls().autoRotate;
+  		e.target.textContent = world.controls().autoRotate ? "Stop Spin" : "Start Spin";
+	};
+
+	</script>
+      </body>
