@@ -331,8 +331,10 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>jbang build</strong> <strong>-o</strong> [<strong>-hnV</strong>] [<strong>--[no-]cds</strong>] [<strong>--fresh</strong>] [<strong>--insecure</strong>] [<strong>--jsh</strong>] <strong>--quiet</strong>
-            <strong>--verbose</strong> [<strong>-j</strong>=<em>&lt;javaVersion&gt;</em>] [<strong>-m</strong>=<em>&lt;main&gt;</em>] [<strong>--cp</strong>=<em>&lt;classpaths&gt;</em>]&#8230;&#8203;
-            [<strong>-D</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203; [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203; <em>&lt;scriptOrFile&gt;</em></p>
+            <strong>--verbose</strong> [<strong>--catalog</strong>=<em>&lt;catalog&gt;</em>] [<strong>-j</strong>=<em>&lt;javaVersion&gt;</em>] [<strong>-m</strong>=<em>&lt;main&gt;</em>]
+            [<strong>--cp</strong>=<em>&lt;classpaths&gt;</em>]&#8230;&#8203; [<strong>-D</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203;
+            [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203; [<strong>--repos</strong>=<em>&lt;repositories&gt;</em>]&#8230;&#8203;
+            <em>&lt;scriptOrFile&gt;</em></p>
 </div>
 </div>
 </div>
@@ -349,6 +351,10 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
+<dt class="hdlist1"><strong>--catalog</strong>=<em>&lt;catalog&gt;</em></dt>
+<dd>
+<p>path to catalog file</p>
+</dd>
 <dt class="hdlist1"><strong>--[no-]cds</strong></dt>
 <dd>
 <p>If specified Class Data Sharing (CDS) will be used for building and running (requires Java 13+)</p>
@@ -400,6 +406,10 @@
 <dt class="hdlist1"><strong>--quiet</strong></dt>
 <dd>
 <p>jbang will be quiet, only print when error occurs.</p>
+</dd>
+<dt class="hdlist1"><strong>--repos</strong>=<em>&lt;repositories&gt;</em></dt>
+<dd>
+<p>Add additional repositories.</p>
 </dd>
 <dt class="hdlist1"><strong>-V</strong>, <strong>--version</strong></dt>
 <dd>

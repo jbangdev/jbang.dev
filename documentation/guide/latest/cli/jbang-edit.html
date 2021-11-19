@@ -330,9 +330,10 @@
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>jbang edit</strong> <strong>-o</strong> [<strong>-hV</strong>] [<strong>--fresh</strong>] [<strong>--insecure</strong>] [<strong>--jsh</strong>] [<strong>--live</strong>] <strong>--quiet</strong> <strong>--verbose</strong>
-           [<strong>--open</strong>=<em>&lt;editor&gt;</em>] [<strong>--cp</strong>=<em>&lt;classpaths&gt;</em>]&#8230;&#8203; [<strong>-D</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203;
-           [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203; <em>&lt;scriptOrFile&gt;</em></p>
+<p><strong>jbang edit</strong> <strong>-o</strong> [<strong>-hV</strong>] [<strong>--fresh</strong>] [<strong>--insecure</strong>] [<strong>--jsh</strong>] [<strong>--live</strong>] [<strong>--no-open</strong>] <strong>--quiet</strong>
+           <strong>--verbose</strong> [<strong>--open</strong>=<em>&lt;editor&gt;</em>] [<strong>--cp</strong>=<em>&lt;classpaths&gt;</em>]&#8230;&#8203;
+           [<strong>-D</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203; [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203;
+           [<strong>--repos</strong>=<em>&lt;repositories&gt;</em>]&#8230;&#8203; <em>&lt;scriptOrFile&gt;</em></p>
 </div>
 </div>
 </div>
@@ -381,6 +382,7 @@
 <dd>
 <p>Setup temporary project, regenerate project on dependency changes.</p>
 </dd>
+<dt class="hdlist1"><strong>--no-open</strong></dt>
 <dt class="hdlist1"><strong>-o</strong>, <strong>--offline</strong></dt>
 <dd>
 <p>Work offline. Fail-fast if dependencies are missing. No connections will be attempted</p>
@@ -392,6 +394,10 @@
 <dt class="hdlist1"><strong>--quiet</strong></dt>
 <dd>
 <p>jbang will be quiet, only print when error occurs.</p>
+</dd>
+<dt class="hdlist1"><strong>--repos</strong>=<em>&lt;repositories&gt;</em></dt>
+<dd>
+<p>Add additional repositories.</p>
 </dd>
 <dt class="hdlist1"><strong>-V</strong>, <strong>--version</strong></dt>
 <dd>

@@ -332,9 +332,11 @@
 <div class="paragraph">
 <p><strong>jbang run</strong> <strong>-o</strong> [<strong>-hnV</strong>] [<strong>--[no-]cds</strong>] [<strong>--ea</strong>] [<strong>--esa</strong>] [<strong>--fresh</strong>] [<strong>--insecure</strong>]
           [<strong>--interactive</strong>] [<strong>--jsh</strong>] <strong>--quiet</strong> <strong>--verbose</strong> [<strong>-r</strong>
-          [=<em>&lt;flightRecorderString&gt;</em>]] [<strong>-d</strong>=<em>&lt;debugString&gt;</em>] [<strong>-j</strong>=<em>&lt;javaVersion&gt;</em>]
-          [<strong>-m</strong>=<em>&lt;main&gt;</em>] [<strong>--cp</strong>=<em>&lt;classpaths&gt;</em>]&#8230;&#8203; [<strong>-D</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203;
-          [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203; [<strong>--javaagent</strong>=<em>&lt;String=Optional&gt;</em>]&#8230;&#8203;
+          [=<em>&lt;flightRecorderString&gt;</em>]] [<strong>--catalog</strong>=<em>&lt;catalog&gt;</em>] [<strong>-d</strong>=<em>&lt;debugString&gt;</em>]
+          [<strong>-j</strong>=<em>&lt;javaVersion&gt;</em>] [<strong>-m</strong>=<em>&lt;main&gt;</em>] [<strong>--cp</strong>=<em>&lt;classpaths&gt;</em>]&#8230;&#8203;
+          [<strong>-D</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203; [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203;
+          [<strong>--java-options</strong>=<em>&lt;javaRuntimeOptions&gt;</em>]&#8230;&#8203;
+          [<strong>--javaagent</strong>=<em>&lt;String=Optional&gt;</em>]&#8230;&#8203; [<strong>--repos</strong>=<em>&lt;repositories&gt;</em>]&#8230;&#8203;
           <em>&lt;scriptOrFile&gt;</em> [<em>&lt;userParams&gt;</em>&#8230;&#8203;]</p>
 </div>
 </div>
@@ -352,6 +354,10 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
+<dt class="hdlist1"><strong>--catalog</strong>=<em>&lt;catalog&gt;</em></dt>
+<dd>
+<p>path to catalog file</p>
+</dd>
 <dt class="hdlist1"><strong>--[no-]cds</strong></dt>
 <dd>
 <p>If specified Class Data Sharing (CDS) will be used for building and running (requires Java 13+)</p>
@@ -400,6 +406,10 @@
 <dd>
 <p>JDK version to use for running the script.</p>
 </dd>
+<dt class="hdlist1"><strong>--java-options</strong>=<em>&lt;javaRuntimeOptions&gt;</em></dt>
+<dd>
+<p>A Java runtime option</p>
+</dd>
 <dt class="hdlist1"><strong>--javaagent</strong>=<em>&lt;String=Optional&gt;</em></dt>
 <dt class="hdlist1"><strong>--jsh</strong></dt>
 <dd>
@@ -424,6 +434,10 @@
 <dt class="hdlist1"><strong>-r</strong>, <strong>--jfr</strong>[=<em>&lt;flightRecorderString&gt;</em>]</dt>
 <dd>
 <p>Launch with Java Flight Recorder enabled.</p>
+</dd>
+<dt class="hdlist1"><strong>--repos</strong>=<em>&lt;repositories&gt;</em></dt>
+<dd>
+<p>Add additional repositories.</p>
 </dd>
 <dt class="hdlist1"><strong>-V</strong>, <strong>--version</strong></dt>
 <dd>
