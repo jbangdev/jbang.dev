@@ -14,4 +14,4 @@ excerpt: "Lets Students, Educators and Professional Developers create, edit and 
 
 Try `j! https://jbang.dev/tree`
 
-[Hint](https://www.jbang.dev/documentation/guide/latest/usage.html#default-application)
+[Hint 1](https://www.jbang.dev/documentation/guide/latest/usage.html#default-application) [Hint 2](https://github.com/maxandersen/Java-Christmas-Tree/) - Thanks to Milen Dyankov's for the idea :)
