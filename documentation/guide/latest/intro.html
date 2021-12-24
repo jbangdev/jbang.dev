@@ -28,7 +28,7 @@
         <a class="navbar-item" href="/appstore">AppStore</a>
         <a class="navbar-item" href="/try">Try</a>
         <a class="navbar-item" href="/download">Download</a>
-                <a class="navbar-item" href="/docmentation">Documentation</a>
+                <a class="navbar-item" href="/documentation">Documentation</a>
       </div>
     </div>
     <div class="navbar-item hide-for-print">
@@ -87,6 +87,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configuration.html">Configuration</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="caching.html">Caching</a>
@@ -274,6 +277,24 @@
   </li>
 </ul>
   </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/jbang-config.html">config</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-config-get.html">get</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-config-set.html">set</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-config-unset.html">unset</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-config-list.html">list</a>
+  </li>
+</ul>
+  </li>
 </ul>
   </li>
 </ul>
@@ -329,7 +350,7 @@
 <p>Want to learn, explore or use Java instantly without setup ?</p>
 </div>
 <div class="paragraph">
-<p>Do you likeJava but use python, groovy, kotlin or similar languages for scripts, experimentation and exploration ?</p>
+<p>Do you like Java but use python, groovy, kotlin or similar languages for scripts, experimentation and exploration ?</p>
 </div>
 <div class="paragraph">
 <p>Ever wanted to just be able to run java from anywhere without any or very minimal setup ?
@@ -379,7 +400,13 @@ hello made with jbang
 <p><code>.jsh</code> via JShell from Java 9 and upwards</p>
 </li>
 <li>
-<p><code>.kt</code> via kotlinc (EXPERIMENTAL)</p>
+<p>.kt` via kotlinc (EXPERIMENTAL)</p>
+</li>
+<li>
+<p>.groovy` via groovyc (EXPERIMENTAL)</p>
+</li>
+<li>
+<p>Extract codeblocks from Markdown files (<code>.md</code>) (EXPERIMENTAL)</p>
 </li>
 <li>
 <p>Works on <span class="icon"><i class="fa fa-windows"></i></span> Windows, <span class="icon"><i class="fa fa-apple"></i></span> OSX and <span class="icon"><i class="fa fa-linux"></i></span> Linux and AIX</p>

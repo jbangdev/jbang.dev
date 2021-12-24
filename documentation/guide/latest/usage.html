@@ -28,7 +28,7 @@
         <a class="navbar-item" href="/appstore">AppStore</a>
         <a class="navbar-item" href="/try">Try</a>
         <a class="navbar-item" href="/download">Download</a>
-                <a class="navbar-item" href="/docmentation">Documentation</a>
+                <a class="navbar-item" href="/documentation">Documentation</a>
       </div>
     </div>
     <div class="navbar-item hide-for-print">
@@ -87,6 +87,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configuration.html">Configuration</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="caching.html">Caching</a>
@@ -271,6 +274,24 @@
   </li>
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="cli/jbang-export-mavenrepo.html">mavenrepo</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/jbang-config.html">config</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-config-get.html">get</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-config-set.html">set</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-config-unset.html">unset</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-config-list.html">list</a>
   </li>
 </ul>
   </li>
@@ -598,6 +619,45 @@ flags passed into, i.e. <code>jbang -DskipTests mytestrunner.java</code>. Now wi
 <div class="sectionbody">
 <div class="paragraph">
 <p>As an experiment since 0.71.0 JBang supports building Kotlin files using <code>kotlinc</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jbang init -t hello.kt hello.kt
+./hello.kt
+[jbang] Downloading Kotlin 1.5.0. Be patient, this can take several minutes...
+[jbang] Installing Kotlin 1.5.0...
+[jbang] Building jar...
+Hello World</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="running-groovy-groovy-experimental"><a class="anchor" href="#running-groovy-groovy-experimental"></a>Running Groovy (.groovy) (EXPERIMENTAL)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As an experiment since 0.85.0 JBang supports building Groovy files using <code>groovyc</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jbang init -t hello.groovy hello.groovy
+jbang hello.groovy
+[jbang] Downloading Groovy 3.0.9. Be patient, this can take several minutes...
+[jbang] Installing Groovy 3.0.9...
+[jbang] Resolving dependencies...
+[jbang]     Resolving org.codehaus.groovy:groovy:jar:3.0.9...Done
+[jbang] Dependencies resolved
+[jbang] Building jar...
+Hello World</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="running-markdowns-md-experimental"><a class="anchor" href="#running-markdowns-md-experimental"></a>Running Markdowns (.md) (EXPERIMENTAL)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As an experiment since 0.85.0 JBang supports "running" Markdown files (.md)</p>
 </div>
 <div class="listingblock">
 <div class="content">

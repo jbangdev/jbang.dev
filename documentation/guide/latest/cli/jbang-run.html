@@ -28,7 +28,7 @@
         <a class="navbar-item" href="/appstore">AppStore</a>
         <a class="navbar-item" href="/try">Try</a>
         <a class="navbar-item" href="/download">Download</a>
-                <a class="navbar-item" href="/docmentation">Documentation</a>
+                <a class="navbar-item" href="/documentation">Documentation</a>
       </div>
     </div>
     <div class="navbar-item hide-for-print">
@@ -87,6 +87,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../configuration.html">Configuration</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../caching.html">Caching</a>
@@ -274,6 +277,24 @@
   </li>
 </ul>
   </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="jbang-config.html">config</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-config-get.html">get</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-config-set.html">set</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-config-unset.html">unset</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-config-list.html">list</a>
+  </li>
+</ul>
+  </li>
 </ul>
   </li>
 </ul>
@@ -330,9 +351,9 @@
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>jbang run</strong> <strong>-o</strong> [<strong>-hnV</strong>] [<strong>--[no-]cds</strong>] [<strong>--ea</strong>] [<strong>--esa</strong>] [<strong>--fresh</strong>] [<strong>--insecure</strong>]
-          [<strong>--interactive</strong>] [<strong>--jsh</strong>] <strong>--quiet</strong> <strong>--verbose</strong> [<strong>-r</strong>
-          [=<em>&lt;flightRecorderString&gt;</em>]] [<strong>--catalog</strong>=<em>&lt;catalog&gt;</em>] [<strong>-d</strong>=<em>&lt;debugString&gt;</em>]
+<p><strong>jbang run</strong> <strong>-o</strong> [<strong>-hn</strong>] [<strong>--[no-]cds</strong>] [<strong>--ea</strong>] [<strong>--esa</strong>] <strong>--fresh</strong> [<strong>--insecure</strong>]
+          [<strong>--interactive</strong>] [<strong>--jsh</strong>] <strong>--quiet</strong> <strong>--verbose</strong> [<strong>-d</strong>[=<em>&lt;debugString&gt;</em>]] [<strong>-r</strong>
+          [=<em>&lt;flightRecorderString&gt;</em>]] [<strong>--catalog</strong>=<em>&lt;catalog&gt;</em>] [<strong>--config</strong>=<em>&lt;config&gt;</em>]
           [<strong>-j</strong>=<em>&lt;javaVersion&gt;</em>] [<strong>-m</strong>=<em>&lt;main&gt;</em>] [<strong>--cp</strong>=<em>&lt;classpaths&gt;</em>]&#8230;&#8203;
           [<strong>-D</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203; [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203;
           [<strong>--java-options</strong>=<em>&lt;javaRuntimeOptions&gt;</em>]&#8230;&#8203;
@@ -356,19 +377,23 @@
 <dl>
 <dt class="hdlist1"><strong>--catalog</strong>=<em>&lt;catalog&gt;</em></dt>
 <dd>
-<p>path to catalog file</p>
+<p>Path to catalog file to be used instead of the default</p>
 </dd>
 <dt class="hdlist1"><strong>--[no-]cds</strong></dt>
 <dd>
 <p>If specified Class Data Sharing (CDS) will be used for building and running (requires Java 13+)</p>
 </dd>
+<dt class="hdlist1"><strong>--config</strong>=<em>&lt;config&gt;</em></dt>
+<dd>
+<p>Path to config file to be used instead of the default</p>
+</dd>
 <dt class="hdlist1"><strong>--cp, --class-path</strong>=<em>&lt;classpaths&gt;</em></dt>
 <dd>
 <p>Add class path entries.</p>
 </dd>
-<dt class="hdlist1"><strong>-d</strong>, <strong>--debug</strong>=<em>&lt;debugString&gt;</em></dt>
+<dt class="hdlist1"><strong>-d</strong>, <strong>--debug</strong>[=<em>&lt;debugString&gt;</em>]</dt>
 <dd>
-<p>Launch with java debug enabled on specified port (default: 4004)</p>
+<p>Launch with java debug enabled on specified port (default: null)</p>
 </dd>
 <dt class="hdlist1"><strong>-D</strong>, <em>&lt;String=String&gt;</em></dt>
 <dd>
@@ -376,7 +401,7 @@
 </dd>
 <dt class="hdlist1"><strong>--deps</strong>=<em>&lt;dependencies&gt;</em></dt>
 <dd>
-<p>Add additional dependencies.</p>
+<p>Add additional dependencies (Use commas to separate them).</p>
 </dd>
 <dt class="hdlist1"><strong>--ea, --enableassertions</strong></dt>
 <dd>
@@ -438,10 +463,6 @@
 <dt class="hdlist1"><strong>--repos</strong>=<em>&lt;repositories&gt;</em></dt>
 <dd>
 <p>Add additional repositories.</p>
-</dd>
-<dt class="hdlist1"><strong>-V</strong>, <strong>--version</strong></dt>
-<dd>
-<p>Display version info (use <code>jbang --verbose version</code> for more details)</p>
 </dd>
 <dt class="hdlist1"><strong>--verbose</strong></dt>
 <dd>

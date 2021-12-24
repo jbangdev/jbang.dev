@@ -28,7 +28,7 @@
         <a class="navbar-item" href="/appstore">AppStore</a>
         <a class="navbar-item" href="/try">Try</a>
         <a class="navbar-item" href="/download">Download</a>
-                <a class="navbar-item" href="/docmentation">Documentation</a>
+                <a class="navbar-item" href="/documentation">Documentation</a>
       </div>
     </div>
     <div class="navbar-item hide-for-print">
@@ -87,6 +87,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../configuration.html">Configuration</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../caching.html">Caching</a>
@@ -274,6 +277,24 @@
   </li>
 </ul>
   </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="jbang-config.html">config</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-config-get.html">get</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-config-set.html">set</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-config-unset.html">unset</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-config-list.html">list</a>
+  </li>
+</ul>
+  </li>
 </ul>
   </li>
 </ul>
@@ -329,7 +350,7 @@
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>jbang</strong> [<strong>-hV</strong>] [<strong>--verbose</strong> | <strong>--quiet</strong>] [<strong>-o</strong> | [<strong>--fresh</strong>]] [COMMAND]</p>
+<p><strong>jbang</strong> [<strong>-hV</strong>] [<strong>--config</strong>=<em>&lt;config&gt;</em>] [<strong>--verbose</strong> | <strong>--quiet</strong>] [<strong>-o</strong> | <strong>--fresh</strong>] [COMMAND]</p>
 </div>
 </div>
 </div>
@@ -357,6 +378,10 @@ or  jbang group-id:artifact-id:version [args...]
 <div class="sectionbody">
 <div class="dlist">
 <dl>
+<dt class="hdlist1"><strong>--config</strong>=<em>&lt;config&gt;</em></dt>
+<dd>
+<p>Path to config file to be used instead of the default</p>
+</dd>
 <dt class="hdlist1"><strong>--fresh</strong></dt>
 <dd>
 <p>Make sure we use fresh (i.e. non-cached) resources.</p>
@@ -456,6 +481,10 @@ or  jbang group-id:artifact-id:version [args...]
 <dt class="hdlist1"><a href="jbang-export.html" class="page"><strong>export</strong></a></dt>
 <dd>
 <p>Export the result of a build.</p>
+</dd>
+<dt class="hdlist1"><a href="jbang-config.html" class="page"><strong>config</strong></a></dt>
+<dd>
+<p>Read and write configuration options.</p>
 </dd>
 </dl>
 </div>
