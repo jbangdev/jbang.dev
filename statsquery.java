@@ -2,7 +2,7 @@
 //DEPS com.google.cloud:libraries-bom:20.9.0@pom
 //DEPS com.google.cloud:google-cloud-bigquery
 //DEPS info.picocli:picocli:4.5.0
-//JAVA 16
+//JAVA 17
 
 import com.google.cloud.bigquery.BigQuery;
 import com.google.cloud.bigquery.BigQueryException;
@@ -16,17 +16,25 @@ import picocli.CommandLine.Parameters;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.nio.file.Path;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.Callable;
 import java.util.stream.Collectors;
 
 @Command(name = "bigquery", mixinStandardHelpOptions = true, version = "bigquery 0.1",
         description = "bigquery made with jbang")
-class bigquery implements Callable<Integer> {
+class statsquery implements Callable<Integer> {
+
+    @CommandLine.Option(names={"out"},defaultValue = "assets/data/jbang-versionchecks.csv")
+    Path out;
 
     public static void main(String... args) {
-        int exitCode = new CommandLine(new bigquery()).execute(args);
+        int exitCode = new CommandLine(new statsquery()).execute(args);
         System.exit(exitCode);
     }
 
@@ -50,6 +58,8 @@ class bigquery implements Callable<Integer> {
         return 0;
     }
 
+    record latlong( String  latitude, String  longitude) {};
+
     public void query(String query, Path file, String... columns) {
         try {
             // Initialize client that will be used to send requests. This client only needs to be created
@@ -61,13 +71,24 @@ class bigquery implements Callable<Integer> {
 
             TableResult results = bigquery.query(queryConfig);
 
-            try(PrintWriter pw = new PrintWriter(file.toFile())) {
-                System.out.println("Writing results to " + file);
-                pw.println(String.join(",", columns));
-                for (FieldValueList row : results.iterateAll()) {
-                    pw.println(Arrays.stream(columns).map(col -> row.get(col).getStringValue()).collect(Collectors.joining(",")));
+            Map<latlong, Long> hits = new HashMap<>();
 
-                    //         System.out.println(row.get("lat").getStringValue() + "," + row.get("lng").getStringValue() + "," + row.get("count").getStringValue());
+            for (FieldValueList row : results.iterateAll()) {
+                var key = new latlong(row.get("lat").getNumericValue().setScale(0, RoundingMode.HALF_DOWN).toString(), row.get("lng").getNumericValue().setScale(0,RoundingMode.HALF_DOWN).toString());
+                Long count = hits.get(key);
+                if (count == null) count = 0L;
+                System.out.println(row.get("count") + " " + count);
+                count += row.get("count").getLongValue();
+                hits.put(key, count);
+            }
+            
+            
+            try(PrintWriter pw = new PrintWriter(file.toFile())) {
+                System.out.println("Writing resultsxx to " + file);
+                pw.println("lat,lng,count");
+                for (Map.Entry<latlong, Long> entry : hits.entrySet()
+                     ) {
+                    pw.printf("%s,%s,%s\n", entry.getKey().latitude(),entry.getKey().longitude(),entry.getValue());
                 }
             }
         } catch (BigQueryException | InterruptedException | FileNotFoundException e) {
