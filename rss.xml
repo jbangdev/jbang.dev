@@ -5,10 +5,67 @@
         <description>JBang - JBang</description>
         <link></link>
         <link></link>
-        <lastBuildDate>2022-01-03T05:23:49+00:00</lastBuildDate>
-        <pubDate>2022-01-03T05:23:49+00:00</pubDate>
+        <lastBuildDate>2022-01-03T17:35:55+00:00</lastBuildDate>
+        <pubDate>2022-01-03T17:35:55+00:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>JBang Rewind 2021!</title>
+                <description>&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;We just closed on a very busy 2021 for JBang, and especially in the last few weeks, things progressed quite a bit. Therefore I thought it would be nice to give a quick overview to recognize the progress and give you a chance to catch up!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;dlist&quot;&gt;
+&lt;dl&gt;
+&lt;dt class=&quot;hdlist1&quot;&gt;December 31st&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.jdoodle.com/try-jbang/&quot;&gt;JDoodle&lt;/a&gt; updates their iOS and Android versions to include JBang support. You can now edit and run Java/JBang on the go.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;hdlist1&quot;&gt;December 29th&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.baeldung.com/jbang-guide&quot;&gt;Guide to JBang&lt;/a&gt; posted on baeldung.com&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;hdlist1&quot;&gt;December 25th&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;Free IntelliJ License giveaway for one &lt;a href=&quot;https://github.com/jbangdev/jbang/blob/main/CONTRIBUTORS.md&quot;&gt;recognized JBang contributor&lt;/a&gt; following the steps outlined &lt;a href=&quot;https://github.com/jbangdev/jbang/discussions/1155&quot;&gt;here&lt;/a&gt;. It is a time of writing still open; thus, if you ever opened an issue, contributed an idea or code, or want to contribute, it is still possible to get it!&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;hdlist1&quot;&gt;December 22nd&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;&lt;a href=&quot;https://plugins.jetbrains.com/plugin/18257-jbang&quot;&gt;IntelliJ Plugin&lt;/a&gt; made available. Provides direct execution with JBang, content assist for &lt;code&gt;//DEPS&lt;/code&gt; and other keywords, and more.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;hdlist1&quot;&gt;December 1st&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;JBang was the &lt;a href=&quot;https://www.javaadvent.com/2021/12/jbang-gift-that-keeps-on-giving.html&quot;&gt;first entry&lt;/a&gt; of 2021 Java Advent Calendar.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;hdlist1&quot;&gt;November 29th&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;JDoodle added &lt;a href=&quot;https://www.jdoodle.com/try-jbang/&quot;&gt;JBang to its list of supported languages&lt;/a&gt;. Making it possible to edit/write Java code using dependencies in a browser without login and additionally embed JBang examples in your blog/guides.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;hdlist1&quot;&gt;November 24th&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;Microsoft made a &lt;a href=&quot;https://github.com/microsoft/jbang-catalog&quot;&gt;JBang catalog available&lt;/a&gt; providing easy launch of Minecraft and Playwright CLI.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;And in between, we had four releases of JBang in December with features and bug fixes - heading &lt;a href=&quot;https://github.com/orgs/jbangdev/projects/2&quot;&gt;towards the mythical 1.0&lt;/a&gt; release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The latest one is &lt;a href=&quot;https://github.com/jbangdev/jbang/releases/tag/v0.86.0&quot;&gt;0.86.0&lt;/a&gt; which came on the second anniversary of JBang - or at least the &lt;a href=&quot;https://twitter.com/maxandersen/status/1212714007301365761&quot;&gt;first tweet&lt;/a&gt; about it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here, one fix was how JBang deals with &lt;code&gt;lib&lt;/code&gt; vs. &lt;code&gt;libs&lt;/code&gt; that came from a conversation around using JBang in serverless lambda functions. Nándor Holozsnyák just made a &lt;a href=&quot;https://dev.to/nandorholozsnyak/jbang-quarkus-aws-lambda-terraform-3-4ahk&quot;&gt;blog&lt;/a&gt; showing his explorations into this. I was happy to see this as Nandor looked into this because he felt JBang enabled a simple scripting approach comparable to Python/Node - but for Java.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That&amp;#8217;s precisely what JBang is about - enabling easy use of Java - I&amp;#8217;m expecting to see more enablement of using JBang for more than just scripts in 2022!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here is to make 2022 about bringing JBang to version 1.0 and making Java fun!&lt;/p&gt;
+&lt;/div&gt;</description>
+                <link>/learn/jbang-rewind/</link>
+                <guid>/learn/jbang-rewind</guid>
+                <pubDate>2022-01-03T00:00:00+00:00</pubDate>
+        </item>
 
         <item>
                 <title>JEP 408: Simple Web Server with JBang</title>

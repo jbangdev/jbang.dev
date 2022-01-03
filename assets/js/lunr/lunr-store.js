@@ -16,4 +16,10 @@ var store = [{
         "tags": ["intro","beginner","jbang"],
         "url": "/learn/jep-408-with-jbang/",
         "teaser": "/assets/images/httpjbang.jpg"
+      },{
+        "title": "JBang Rewind 2021!",
+        "excerpt":"We just closed on a very busy 2021 for JBang, and especially in the last few weeks, things progressed quite a bit. Therefore I thought it would be nice to give a quick overview to recognize the progress and give you a chance to catch up! December 31st JDoodle updates...","categories": ["learn"],
+        "tags": ["jbang"],
+        "url": "/learn/jbang-rewind/",
+        "teaser": "/assets/images/httpjbang.jpg"
       }]
