@@ -12,6 +12,9 @@ content:
     - url: ../../jbang
       branches: HEAD
       start_path: docs
+    - url: ../../jbang-idea
+      branches: HEAD
+      start_path: docs
 
 ui:
   bundle:
