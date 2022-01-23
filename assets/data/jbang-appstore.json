@@ -1,5 +1,5 @@
 {
-  "aliasCount": 70,
+  "aliasCount": 59,
   "aliases": [
     {
       "stars": 1323,
@@ -14,63 +14,14 @@
     },
     {
       "stars": 6,
-      "icon_url": "https://avatars.githubusercontent.com/u/6154722?v\u003d4",
-      "repoOwner": "microsoft",
-      "repoName": "jbang-catalog",
-      "alias": "minecraft-server",
-      "description": "\u003cp\u003eMinecraft: Java Edition Server\nRequires agreeing to EULA to run. Create \u003ccode\u003eeula.txt\u003c/code\u003e file with \u003ccode\u003eeula\u003dtrue\u003c/code\u003e as content and then run using \u003ccode\u003ejbang minecraft-server@microsoft\u003c/code\u003e\u003c/p\u003e\n",
-      "scriptRef": "https://launcher.mojang.com/v1/objects/3cf24a8694aca6267883b17d934efacc5e44440d/server.jar",
-      "command": "minecraft-server@microsoft",
-      "fullcommand": "jbang minecraft-server@microsoft app.java",
-      "link": "https://github.com/microsoft/jbang-catalog/blob/c78ea752e84f40fa482a28b479a05493103380c7/jbang-catalog.json"
-    },
-    {
-      "stars": 6,
-      "icon_url": "https://avatars.githubusercontent.com/u/6154722?v\u003d4",
-      "repoOwner": "microsoft",
-      "repoName": "jbang-catalog",
-      "alias": "appinsights-agent",
-      "description": "\u003cp\u003eAzure Application Insights Agent 3.2.3\nRun with \u003ccode\u003ejbang --javaagent appinsights-agent@microsoft \u0026lt;yourapp\u0026gt;\u003c/code\u003e. Needs connection string setup - see \u003ca rel\u003d\"nofollow\" href\u003d\"https://docs.microsoft.com/en-us/azure/azure-monitor/app/java-in-process-agent\"\u003ehttps://docs.microsoft.com/en-us/azure/azure-monitor/app/java-in-process-agent\u003c/a\u003e for details.\u003c/p\u003e\n",
-      "scriptRef": "com.microsoft.azure:applicationinsights-agent:3.2.3",
-      "command": "appinsights-agent@microsoft",
-      "fullcommand": "jbang appinsights-agent@microsoft app.java",
-      "link": "https://github.com/microsoft/jbang-catalog/blob/c78ea752e84f40fa482a28b479a05493103380c7/jbang-catalog.json"
-    },
-    {
-      "stars": 6,
-      "icon_url": "https://avatars.githubusercontent.com/u/6154722?v\u003d4",
-      "repoOwner": "microsoft",
-      "repoName": "jbang-catalog",
-      "alias": "playwright",
-      "description": "\u003cp\u003ePlaywright lets you automate Chromium, Firefox and Webkit with a single API.\nWith this CLI you can install, trace, generate pdf and screenshots and more.\nSee all commands available:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e  jbang playwright@microsoft --help\n\u003c/code\u003e\u003c/pre\u003e\n",
-      "scriptRef": "https://github.com/microsoft/playwright-java/blob/master/scripts/playwright.java",
-      "command": "playwright@microsoft",
-      "fullcommand": "jbang playwright@microsoft app.java",
-      "link": "https://github.com/microsoft/jbang-catalog/blob/c78ea752e84f40fa482a28b479a05493103380c7/jbang-catalog.json"
-    },
-    {
-      "stars": 5,
-      "icon_url": "https://avatars.githubusercontent.com/u/1961952?v\u003d4",
-      "repoOwner": "alibaba",
-      "repoName": "jbang-catalog",
-      "alias": "arthas",
-      "description": "\u003cp\u003eLaunch Arthas Java Diagnostic Tool - \u003ca rel\u003d\"nofollow\" href\u003d\"https://github.com/alibaba/arthas\"\u003ehttps://github.com/alibaba/arthas\u003c/a\u003e\u003c/p\u003e\n",
-      "scriptRef": "https://repo1.maven.org/maven2/com/taobao/arthas/arthas-boot/3.5.5/arthas-boot-3.5.5-jar-with-dependencies.jar",
-      "command": "arthas@alibaba",
-      "fullcommand": "jbang arthas@alibaba app.java",
-      "link": "https://github.com/alibaba/jbang-catalog/blob/e6d5bfbbc23d68f3b3f4cf233246fa485bd569d8/jbang-catalog.json"
-    },
-    {
-      "stars": 5,
-      "icon_url": "https://avatars.githubusercontent.com/u/1961952?v\u003d4",
-      "repoOwner": "alibaba",
-      "repoName": "jbang-catalog",
-      "alias": "rsocket-broker",
-      "description": "\u003cp\u003eStart Alibaba RSocket Broker - \u003ca rel\u003d\"nofollow\" href\u003d\"https://github.com/alibaba/alibaba-rsocket-broker\"\u003ehttps://github.com/alibaba/alibaba-rsocket-broker\u003c/a\u003e\u003c/p\u003e\n",
-      "scriptRef": "https://repo1.maven.org/maven2/com/alibaba/rsocket/alibaba-broker-server/1.1.2/alibaba-broker-server-1.1.2.jar",
-      "command": "rsocket-broker@alibaba",
-      "fullcommand": "jbang rsocket-broker@alibaba app.java",
-      "link": "https://github.com/alibaba/jbang-catalog/blob/e6d5bfbbc23d68f3b3f4cf233246fa485bd569d8/jbang-catalog.json"
+      "icon_url": "https://avatars.githubusercontent.com/u/915480?v\u003d4",
+      "repoOwner": "ptrthomas",
+      "repoName": "karate-todomvc",
+      "alias": "karate",
+      "scriptRef": "com.intuit.karate:karate-core:1.1.0",
+      "command": "karate@ptrthomas/karate-todomvc",
+      "fullcommand": "jbang karate@ptrthomas/karate-todomvc app.java",
+      "link": "https://github.com/ptrthomas/karate-todomvc/blob/9c0c77a0f722ab9cc046d93815f276208b4af385/jbang-catalog.json"
     },
     {
       "stars": 3,
@@ -368,54 +319,6 @@
     },
     {
       "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/517980?v\u003d4",
-      "repoOwner": "kiegroup",
-      "repoName": "jbang-catalog",
-      "alias": "dmn",
-      "description": "\u003cp\u003eEvaluate a DMN model using the Drools DMN Engine.\u003c/p\u003e\n",
-      "scriptRef": "dmn.java",
-      "command": "dmn@kiegroup",
-      "fullcommand": "jbang dmn@kiegroup app.java",
-      "link": "https://github.com/kiegroup/jbang-catalog/blob/34ba619e397599a30f331f494846619a3a412b91/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/517980?v\u003d4",
-      "repoOwner": "kiegroup",
-      "repoName": "jbang-catalog",
-      "alias": "feel",
-      "description": "\u003cp\u003eEvaluate a FEEL expression using the Drools DMN Engine.\u003c/p\u003e\n",
-      "scriptRef": "feel.java",
-      "command": "feel@kiegroup",
-      "fullcommand": "jbang feel@kiegroup app.java",
-      "link": "https://github.com/kiegroup/jbang-catalog/blob/34ba619e397599a30f331f494846619a3a412b91/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/517980?v\u003d4",
-      "repoOwner": "kiegroup",
-      "repoName": "jbang-catalog",
-      "alias": "optaplannerHelloWorld",
-      "description": "\u003cp\u003eOptaPlanner Hello world to solve a school timetable to assign lessons to timeslots and rooms.\u003c/p\u003e\n",
-      "scriptRef": "optaplannerHelloWorld.java",
-      "command": "optaplannerHelloWorld@kiegroup",
-      "fullcommand": "jbang optaplannerHelloWorld@kiegroup app.java",
-      "link": "https://github.com/kiegroup/jbang-catalog/blob/34ba619e397599a30f331f494846619a3a412b91/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/517980?v\u003d4",
-      "repoOwner": "kiegroup",
-      "repoName": "jbang-catalog",
-      "alias": "xls2dmn",
-      "description": "\u003cp\u003eJBang script proxy of the Converter for Excel (.xls/.xlsx) files containing DMN decision tables.\u003c/p\u003e\n",
-      "scriptRef": "xls2dmn.java",
-      "command": "xls2dmn@kiegroup",
-      "fullcommand": "jbang xls2dmn@kiegroup app.java",
-      "link": "https://github.com/kiegroup/jbang-catalog/blob/34ba619e397599a30f331f494846619a3a412b91/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
       "icon_url": "https://avatars.githubusercontent.com/u/50187?v\u003d4",
       "repoOwner": "galderz",
       "repoName": "qollider",
@@ -473,6 +376,30 @@
       "command": "mandrel@galderz/qollider",
       "fullcommand": "jbang mandrel@galderz/qollider app.java",
       "link": "https://github.com/galderz/qollider/blob/3726cd0dab3e416997a69f339e7381afbd374512/jbang-catalog.json"
+    },
+    {
+      "stars": 1,
+      "icon_url": "https://avatars.githubusercontent.com/u/55687?v\u003d4",
+      "repoOwner": "jruby",
+      "repoName": "jbang-catalog",
+      "alias": "run",
+      "description": "\u003cp\u003eRun a Ruby command line with JRuby\u003c/p\u003e\n",
+      "scriptRef": "org.jruby:jruby-complete:9.3.3.0",
+      "command": "run@jruby",
+      "fullcommand": "jbang run@jruby app.java",
+      "link": "https://github.com/jruby/jbang-catalog/blob/5b59f411a649e5046167f5a87e5db4e89aeaac74/jbang-catalog.json"
+    },
+    {
+      "stars": 1,
+      "icon_url": "https://avatars.githubusercontent.com/u/55687?v\u003d4",
+      "repoOwner": "jruby",
+      "repoName": "jbang-catalog",
+      "alias": "run9.2",
+      "description": "\u003cp\u003eRun a Ruby command line with JRuby 9.2\u003c/p\u003e\n",
+      "scriptRef": "org.jruby:jruby-complete:9.2.20.1",
+      "command": "run9.2@jruby",
+      "fullcommand": "jbang run9.2@jruby app.java",
+      "link": "https://github.com/jruby/jbang-catalog/blob/5b59f411a649e5046167f5a87e5db4e89aeaac74/jbang-catalog.json"
     },
     {
       "stars": 1,
@@ -583,6 +510,40 @@
     },
     {
       "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/73725833?v\u003d4",
+      "repoOwner": "RonGermany",
+      "repoName": "Karate2",
+      "alias": "karate",
+      "scriptRef": "com.intuit.karate:karate-core:1.0.1",
+      "command": "karate@RonGermany/Karate2",
+      "fullcommand": "jbang karate@RonGermany/Karate2 app.java",
+      "link": "https://github.com/RonGermany/Karate2/blob/9445a2d636a0374c6ae8e61f2fe79359e17f2237/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/6814443?v\u003d4",
+      "repoOwner": "lilian-benoit",
+      "repoName": "scripts-keycloak",
+      "alias": "users-csv-to-json",
+      "description": "\u003cp\u003eScript convert from csv file to json for keycloak admin cli\u003c/p\u003e\n",
+      "scriptRef": "UsersCSVtoKeycloakJSON.java",
+      "command": "users-csv-to-json@lilian-benoit/scripts-keycloak",
+      "fullcommand": "jbang users-csv-to-json@lilian-benoit/scripts-keycloak app.java",
+      "link": "https://github.com/lilian-benoit/scripts-keycloak/blob/f60b04770f895bec7a7c735359684e8c65e54c17/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/477100?v\u003d4",
+      "repoOwner": "davsclaus",
+      "repoName": "camel-bang",
+      "alias": "launch",
+      "scriptRef": "CamelBang.java",
+      "command": "launch@davsclaus/camel-bang",
+      "fullcommand": "jbang launch@davsclaus/camel-bang app.java",
+      "link": "https://github.com/davsclaus/camel-bang/blob/1e6009c78e37ee2016a7c8e7902de5b134538709/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
       "icon_url": "https://avatars.githubusercontent.com/u/71858344?v\u003d4",
       "repoOwner": "alibaba-rsocket-broker",
       "repoName": "jbang-catalog",
@@ -628,30 +589,6 @@
       "command": "brokerConsumer@alibaba-rsocket-broker",
       "fullcommand": "jbang brokerConsumer@alibaba-rsocket-broker app.java",
       "link": "https://github.com/alibaba-rsocket-broker/jbang-catalog/blob/9deba845baf29a3ebd00de844afc56ec2cb50ea3/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/37168181?v\u003d4",
-      "repoOwner": "ArjunSai",
-      "repoName": "camel",
-      "alias": "CamelJBang",
-      "description": "\u003cp\u003eRun Apache Camel routes easily (deprecated - use camel instead)\u003c/p\u003e\n",
-      "scriptRef": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
-      "command": "CamelJBang@ArjunSai/camel",
-      "fullcommand": "jbang CamelJBang@ArjunSai/camel app.java",
-      "link": "https://github.com/ArjunSai/camel/blob/2c1451aab95bc2ee232e4b20ca27e6ebd613ea62/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/37168181?v\u003d4",
-      "repoOwner": "ArjunSai",
-      "repoName": "camel",
-      "alias": "camel",
-      "description": "\u003cp\u003eRun Apache Camel routes easily\u003c/p\u003e\n",
-      "scriptRef": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
-      "command": "camel@ArjunSai/camel",
-      "fullcommand": "jbang camel@ArjunSai/camel app.java",
-      "link": "https://github.com/ArjunSai/camel/blob/2c1451aab95bc2ee232e4b20ca27e6ebd613ea62/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -702,30 +639,6 @@
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/8778468?v\u003d4",
-      "repoOwner": "nbbrd",
-      "repoName": "jbang-catalog",
-      "alias": "hello-nbbrd",
-      "description": "\u003cp\u003eSandbox - Binaries\u003c/p\u003e\n",
-      "scriptRef": "hello_nbbrd.java",
-      "command": "hello-nbbrd@nbbrd",
-      "fullcommand": "jbang hello-nbbrd@nbbrd app.java",
-      "link": "https://github.com/nbbrd/jbang-catalog/blob/a4c9a6357553253190c130b0ddd64cd4ea297fa1/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/8778468?v\u003d4",
-      "repoOwner": "nbbrd",
-      "repoName": "jbang-catalog",
-      "alias": "sdmx-dl",
-      "description": "\u003cp\u003eDownload SDMX data - CLI\u003c/p\u003e\n",
-      "scriptRef": "sdmx_dl.java",
-      "command": "sdmx-dl@nbbrd",
-      "fullcommand": "jbang sdmx-dl@nbbrd app.java",
-      "link": "https://github.com/nbbrd/jbang-catalog/blob/a4c9a6357553253190c130b0ddd64cd4ea297fa1/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
       "icon_url": "https://avatars.githubusercontent.com/u/28388442?v\u003d4",
       "repoOwner": "TomerFi",
       "repoName": "jbang-catalog",
@@ -738,42 +651,6 @@
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/3177316?v\u003d4",
-      "repoOwner": "sansnom",
-      "repoName": "jbang-catalog",
-      "alias": "http-server",
-      "description": "\u003cp\u003eHttpServer to serve files.\u003c/p\u003e\n",
-      "scriptRef": "src/HttpServerJDK.java",
-      "command": "http-server@sansnom",
-      "fullcommand": "jbang http-server@sansnom app.java",
-      "link": "https://github.com/sansnom/jbang-catalog/blob/4391b0f65282b6ac2dc791f60c16eccbcb355132/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/3177316?v\u003d4",
-      "repoOwner": "sansnom",
-      "repoName": "jbang-catalog",
-      "alias": "tls-client",
-      "description": "\u003cp\u003eTest TLS connection and build keystore.\u003c/p\u003e\n",
-      "scriptRef": "src/TLSClient.java",
-      "command": "tls-client@sansnom",
-      "fullcommand": "jbang tls-client@sansnom app.java",
-      "link": "https://github.com/sansnom/jbang-catalog/blob/4391b0f65282b6ac2dc791f60c16eccbcb355132/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/3177316?v\u003d4",
-      "repoOwner": "sansnom",
-      "repoName": "jbang-catalog",
-      "alias": "keytool",
-      "description": "\u003cp\u003eDisplay keystore (keytool but less verbose).\u003c/p\u003e\n",
-      "scriptRef": "src/KeyStoreShow.java",
-      "command": "keytool@sansnom",
-      "fullcommand": "jbang keytool@sansnom app.java",
-      "link": "https://github.com/sansnom/jbang-catalog/blob/4391b0f65282b6ac2dc791f60c16eccbcb355132/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
       "icon_url": "https://avatars.githubusercontent.com/u/335133?v\u003d4",
       "repoOwner": "sebastienblanc",
       "repoName": "limit-request",
@@ -782,18 +659,6 @@
       "command": "kubectl-limit@sebastienblanc/limit-request",
       "fullcommand": "jbang kubectl-limit@sebastienblanc/limit-request app.java",
       "link": "https://github.com/sebastienblanc/limit-request/blob/010bc8d7617ddfec40ca609cc0e29234735600b0/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/6814443?v\u003d4",
-      "repoOwner": "lilian-benoit",
-      "repoName": "scripts-keycloak",
-      "alias": "users-csv-to-json",
-      "description": "\u003cp\u003eScript convert from csv file to json for keycloak admin cli\u003c/p\u003e\n",
-      "scriptRef": "UsersCSVtoKeycloakJSON.java",
-      "command": "users-csv-to-json@lilian-benoit/scripts-keycloak",
-      "fullcommand": "jbang users-csv-to-json@lilian-benoit/scripts-keycloak app.java",
-      "link": "https://github.com/lilian-benoit/scripts-keycloak/blob/f60b04770f895bec7a7c735359684e8c65e54c17/jbang-catalog.json"
     },
     {
       "stars": 0,
