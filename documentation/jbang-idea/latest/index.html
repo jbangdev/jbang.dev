@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Intro :: JBang</title>
+    <link rel="next" href="installation.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-156530423-2')</script>
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jbang.dev">JBang</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/appstore">AppStore</a>
+        <a class="navbar-item" href="/try">Try</a>
+        <a class="navbar-item" href="/download">Download</a>
+                <a class="navbar-item" href="/documentation">Documentation</a>
+      </div>
+    </div>
+    <div class="navbar-item hide-for-print">
+        <input id="search-input" type="text" placeholder="Search (by Algolia)">
+      </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="jbang-idea" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">JBang Idea Plugin</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">Intro</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="usage.html">Usage</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">JBang Idea Plugin</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../guide/latest/index.html">JBang</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../guide/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">JBang Idea Plugin</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../guide/latest/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">JBang Idea Plugin</a></li>
+    <li><a href="index.html">Intro</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/jbangdev/jbang-idea/edit/main/docs/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Intro</h1>
+<div class="paragraph">
+<p>JBang Idea plugin enhances the JBang experience inside Intellij IDEA.</p>
+</div>
+<div class="paragraph">
+<p>The plugin works with and without <code>jbang edit</code> command. You can create jbang scripts, get auto completion and run your script without any setup.</p>
+</div>
+<div class="paragraph">
+<p>A real game changer to get started with Java.</p>
+</div>
+<div class="paragraph">
+<p>The following features are available:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>JBang project wizard: create JBang project by IDEA project wizard</p>
+</li>
+<li>
+<p>JSON Schema for jbang-catalog.json and code completion for <code>script-ref</code></p>
+</li>
+<li>
+<p>JDKs sync with JBang: sync JDKs from JBang to IntelliJ IDEA</p>
+</li>
+<li>
+<p>JBang script creation from file templates: New &#8594; JBang Script</p>
+</li>
+<li>
+<p>JBang directives completion:  for example <code>//DEPS</code>, <code>//SOURCES</code></p>
+</li>
+<li>
+<p>Sync Dependencies between JBang and Gradle</p>
+</li>
+<li>
+<p>Sync Dependencies to IDEA&#8217;s module when using <code>idea .</code> to open JBang project</p>
+</li>
+<li>
+<p>JBang Run Line Marker for <code>///usr/bin/env jbang</code></p>
+</li>
+<li>
+<p>Run Configuration support: run JBang script by right click</p>
+</li>
+<li>
+<p>file name end with '.java', '.kt', '.groovy' or '.jsh'</p>
+</li>
+<li>
+<p>file code should contain <code>///usr/bin/env jbang</code> or <code>//DEPS</code></p>
+</li>
+<li>
+<p>GAV completion for `//DEPS `</p>
+</li>
+<li>
+<p>text without colon - full text search <code>google.guava</code>, and words seperated by <code>.</code> or <code>-</code></p>
+</li>
+<li>
+<p>text with one colon - artifact search based on groupId <code>com.google.guava:</code></p>
+</li>
+<li>
+<p>text with two colons - version search based on groupId and artifactId <code>com.google.guava:guava:</code></p>
+</li>
+</ul>
+</div>
+<nav class="pagination">
+  <span class="next"><a href="installation.html">Installation</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="page__footer-follow">
+    <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/jbangdev" rel="nofollow noopener noreferrer"><i
+            class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="https://github.com/jbangdev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+            aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    </ul>
+  </div>
+  <div class="page__footer-copyright">© 2021 JBang Documentation. Powered by <a href="https://antora.org" rel="nofollow">Antora</a>
+    &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+var search = docsearch({
+  appId: '4EJ1Y6VISV',
+  apiKey: '7ab0733177a5304fe689e52ed96d5cb8',
+  indexName: 'jbangdev',
+  inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
+  algoliaOptions: { hitsPerPage: 10 }
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
+</script>
+<script>
+window.addEventListener('load', function focusSearchInput () {
+  window.removeEventListener('load', focusSearchInput)
+  document.querySelector('#search-input').focus()
+})
+</script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
