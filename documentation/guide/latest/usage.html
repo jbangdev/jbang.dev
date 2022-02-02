@@ -427,7 +427,8 @@ it won&#8217;t be as transparent. Here you will need to run using <code>jbang</c
 <td class="content">
 <div class="paragraph">
 <p>When no <a href="#java-version">JDK version</a> is available in the PATH, JDK 11 will be downloaded by default to bootstrap jbang.
-If your script requires a higher version and you don' want to download two JDK&#8217;s, you can define an alternative default with <code>JBANG_DEFAULT_JAVA_VERSION</code> env variable.</p>
+If your script requires a higher version and you don' want to download two JDK&#8217;s, you can define an alternative default
+with <code>JBANG_DEFAULT_JAVA_VERSION</code> env variable.</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -436,6 +437,25 @@ If your script requires a higher version and you don' want to download two JDK&#
 </div>
 <div class="paragraph">
 <p>Note that if JDK is found in the PATH, <code>JBANG_DEFAULT_JAVA_VERSION</code> will be ignored.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s also possible to override the exact JDK distribution that will be used by setting the <code>JBANG_JDK_VENDOR</code> env variable.
+By default this will either be <code>temurin</code> or <code>aoj</code>, but it can also be set to <code>azul</code>, <code>debian</code>, <code>microsoft</code>, <code>openjdk</code>,
+<code>oracle</code>, <code>oracle_open_jdk</code> or <code>redhat</code>.</p>
+</div>
+<div class="paragraph">
+<p>By default JBang will only install final (GA) JDK releases, if you want to install an Early Access (EA) release you can do
+so by setting the <code>JBANG_JDK_RELEASE</code> env variable to <code>ea</code>.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ JBANG_DEFAULT_JAVA_VERSION=18 JBANG_JDK_VENDOR=oracle JBANG_JDK_RELEASE=ea jbang my-script.java</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that if a JDK of matching version is already installed these env variables will have <em>no</em> effect! They only take
+effect when an actual JDK installation is performed. To force JBang to install such a JDK one would first have to
+uninstall the existing JDK and then reinstall it with these env variables set to their intended values.</p>
 </div>
 </td>
 </tr>
