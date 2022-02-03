@@ -395,9 +395,10 @@ public class Person {
 will fail. Also <code>jbang edit</code> does not know about multiple sources as it runs and must run before compilation occurs.</p>
 </div>
 <div class="paragraph">
-<p>Thus version 0.46 there is now support for having that all work with multiple source files. The main script file defines all the
-dependencies and you add more source files into the application using <code>//SOURCES &lt;filename&gt;</code>.
-If included source has <code>//SOURCES</code> that will also get included recursively.</p>
+<p>Since version 0.46 there is now support for having that all work with multiple source files. The main script file defines all the
+dependencies and you add more source files into the application using <code>//SOURCES &lt;filename&gt;</code>. If included source has <code>//SOURCES</code>
+that will also get included recursively. In the case of <code>.jsh</code> scripts, the included sources will be added in the order they are
+found, depth-first.</p>
 </div>
 <div class="paragraph">
 <p>The listed file name(s) gets added to source list when compiling.</p>
