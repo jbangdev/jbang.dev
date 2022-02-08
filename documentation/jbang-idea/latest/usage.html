@@ -104,9 +104,39 @@
 </aside>
 <article class="doc">
 <h1 class="page">Usage</h1>
+<div id="preamble">
+<div class="sectionbody">
 <!-- toc disabled -->
 <div class="paragraph">
 <p>TBD - sections for each major feature</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="completion"><a class="anchor" href="#completion"></a>Completion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following completions are available in JBang. If they do not open up automatically then do an explicit completion using <span class="keyseq"><kbd>Alt</kbd>+<kbd>Space</kbd></span> or <span class="keyseq"><kbd>^</kbd>+<kbd>Space</kbd></span> dependent on your platform.</p>
+</div>
+<div class="sect2">
+<h3 id="basic-directive-completion"><a class="anchor" href="#basic-directive-completion"></a>Basic directive completion</h3>
+<div class="paragraph">
+<p>Completion for JBang directives like <code>//JAVA</code> and  <code>//DEPS</code> are available at start of comments (<code>//</code>).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/jbang-idea-completion-directives.png" alt="jbang idea completion directives"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="dependency-completion"><a class="anchor" href="#dependency-completion"></a>Dependency completion</h3>
+<div class="paragraph">
+<p><code>//DEPS</code> has completion of Maven artifacts using JBang/Gradle syntax. You can use fully qualified names or just type a substring of the Group and artifact version to get a list of possible matches from Maven Central.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/jbang-idea-deps-completion.png" alt="jbang idea deps completion"></span>]</p>
+</div>
+</div>
+</div>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="installation.html">Installation</a></span>

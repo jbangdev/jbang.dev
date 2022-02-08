@@ -1,5 +1,5 @@
 {
-  "aliasCount": 63,
+  "aliasCount": 62,
   "aliases": [
     {
       "stars": 1328,
@@ -290,17 +290,6 @@
     },
     {
       "stars": 1,
-      "icon_url": "https://avatars.githubusercontent.com/u/1432287?v\u003d4",
-      "repoOwner": "garodriguezlp",
-      "repoName": "banc",
-      "alias": "banc",
-      "scriptRef": "banc.java",
-      "command": "banc@garodriguezlp/banc",
-      "fullcommand": "jbang banc@garodriguezlp/banc app.java",
-      "link": "https://github.com/garodriguezlp/banc/blob/beedd392336f8661ee98665a5f1c7171726d93c5/jbang-catalog.json"
-    },
-    {
-      "stars": 1,
       "icon_url": "https://avatars.githubusercontent.com/u/1939631?v\u003d4",
       "repoOwner": "jacoco",
       "repoName": "jbang-catalog",
@@ -444,26 +433,14 @@
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/6814443?v\u003d4",
-      "repoOwner": "lilian-benoit",
-      "repoName": "scripts-keycloak",
-      "alias": "users-csv-to-json",
-      "description": "\u003cp\u003eScript convert from csv file to json for keycloak admin cli\u003c/p\u003e\n",
-      "scriptRef": "UsersCSVtoKeycloakJSON.java",
-      "command": "users-csv-to-json@lilian-benoit/scripts-keycloak",
-      "fullcommand": "jbang users-csv-to-json@lilian-benoit/scripts-keycloak app.java",
-      "link": "https://github.com/lilian-benoit/scripts-keycloak/blob/f60b04770f895bec7a7c735359684e8c65e54c17/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/477100?v\u003d4",
-      "repoOwner": "davsclaus",
-      "repoName": "camel-bang",
-      "alias": "launch",
-      "scriptRef": "CamelBang.java",
-      "command": "launch@davsclaus/camel-bang",
-      "fullcommand": "jbang launch@davsclaus/camel-bang app.java",
-      "link": "https://github.com/davsclaus/camel-bang/blob/1e6009c78e37ee2016a7c8e7902de5b134538709/jbang-catalog.json"
+      "icon_url": "https://avatars.githubusercontent.com/u/73725833?v\u003d4",
+      "repoOwner": "RonGermany",
+      "repoName": "Karate2",
+      "alias": "karate",
+      "scriptRef": "com.intuit.karate:karate-core:1.0.1",
+      "command": "karate@RonGermany/Karate2",
+      "fullcommand": "jbang karate@RonGermany/Karate2 app.java",
+      "link": "https://github.com/RonGermany/Karate2/blob/9445a2d636a0374c6ae8e61f2fe79359e17f2237/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -509,6 +486,17 @@
       "command": "cleanyaml@gomezrondon/spring-in-container~script",
       "fullcommand": "jbang cleanyaml@gomezrondon/spring-in-container~script app.java",
       "link": "https://github.com/gomezrondon/spring-in-container/blob/546df82c9b5bd1159c9866101c79a2fd5d3b1388/script/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/477100?v\u003d4",
+      "repoOwner": "davsclaus",
+      "repoName": "camel-bang",
+      "alias": "launch",
+      "scriptRef": "CamelBang.java",
+      "command": "launch@davsclaus/camel-bang",
+      "fullcommand": "jbang launch@davsclaus/camel-bang app.java",
+      "link": "https://github.com/davsclaus/camel-bang/blob/1e6009c78e37ee2016a7c8e7902de5b134538709/jbang-catalog.json"
     },
     {
       "stars": 0,
