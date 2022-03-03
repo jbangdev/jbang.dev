@@ -624,10 +624,10 @@ import groovy.lang.Grapes;
 import groovy.lang.GrabResolver;
 
 @GrabResolver("mavenCentral") <i class="conum" data-value="2"></i><b>(2)</b>
-@GrabResolver(name='acme', root='https://maven.acme.local/maven')
+@GrabResolver(name="acme", root="https://maven.acme.local/maven")
 @Grapes({ <i class="conum" data-value="3"></i><b>(3)</b>
-		@Grab(group="org.codehaus.groovy", module="groovy", version="2.5.8"), <i class="conum" data-value="4"></i><b>(4)</b>
-		@Grab(group = "ch.qos.reload4j", module = "reload4j", version = "1.2.19")
+		@Grab(group = "ch.qos.reload4j", module = "reload4j", version = "1.2.19"), <i class="conum" data-value="4"></i><b>(4)</b>
+		@Grab(group = "org.apache.groovy", module = "groovy", version = "4.0.0"), <i class="conum" data-value="5"></i><b>(5)</b>
 })
 class classpath_example {
 
@@ -657,6 +657,10 @@ class classpath_example {
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
 <td><code>jbang</code> will grab any <code>@Grab</code> annotation and assume it is declaring dependencies.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>In particular to be able to import <code>groovy.lang.*</code> annotations, groovy itself must be in the list of dependencies.</td>
 </tr>
 </table>
 </div>
