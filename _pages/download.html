@@ -19,13 +19,13 @@ layout: splash
      centered
      icons-and-text
     >
-      <v-tab>Windows
+      <v-tab id="windows-tab">Windows
         <v-icon>mdi-microsoft-windows</v-icon>
       </v-tab>
-      <v-tab>Linux
+      <v-tab id="linux-tab">Linux
         <v-icon>mdi-linux</v-icon>
       </v-tab>
-      <v-tab>Mac
+      <v-tab id="mac-tab">Mac
         <v-icon>mdi-apple</v-icon>
       </v-tab>
       <v-tab>Docker
@@ -161,7 +161,7 @@ dnf install jbang</pre>
     </v-tabs>
   </v-app>
 </div>
-  <script>
+<script>
 new Vue({
   el: '#app',
   vuetify: new Vuetify(),
@@ -175,5 +175,6 @@ new Vue({
     }
   },
 })
-  </script>
+</script>
+<script src="{{base.url}}/assets/js/os-check.js"></script>
   <!-- Content End -->
