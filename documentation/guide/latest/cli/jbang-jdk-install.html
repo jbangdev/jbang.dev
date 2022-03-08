@@ -360,7 +360,7 @@
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>jbang jdk install</strong> <strong>-o</strong> [<strong>-f</strong>] <strong>--fresh</strong> <strong>--quiet</strong> <strong>--verbose</strong> <em>version</em></p>
+<p><strong>jbang jdk install</strong> <strong>-o</strong> [<strong>-f</strong>] <strong>--fresh</strong> <strong>--quiet</strong> <strong>--verbose</strong> <em>version</em> <em>[existingJdkPath]</em></p>
 </div>
 </div>
 </div>
@@ -409,6 +409,10 @@
 <dt class="hdlist1"><em>version</em></dt>
 <dd>
 <p>The version to install</p>
+</dd>
+<dt class="hdlist1"><em>[existingJdkPath]</em></dt>
+<dd>
+<p>Already existing JDK&#8217;s path on the filesystem. If path is given, its version will be checked against the incoming one, and if the same, the given JDK will be linked successfully.</p>
 </dd>
 </dl>
 </div>
