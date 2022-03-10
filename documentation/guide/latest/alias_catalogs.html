@@ -382,16 +382,23 @@ You can access those catalogs explicitly (see <a href="#catalogs">Catalogs</a>) 
 are aliases that have a special format and JBang is smart enough to know where to find their definition.</p>
 </div>
 <div class="paragraph">
+<p>There are two kinds, one that resolves to a Git backed service (github,gitlab and bitbucket) and one that resolves to
+https sites.</p>
+</div>
+<div class="paragraph">
 <p>Examples:</p>
+</div>
+<div class="paragraph">
+<p><code>jbang <a href="mailto:tree@jbang.dev">tree@jbang.dev</a></code> will (because of the dot in the name) will lookup a catalog first at <a href="https://jbang.dev/jbang-catalog.json" class="bare">https://jbang.dev/jbang-catalog.json</a>.</p>
 </div>
 <div class="paragraph">
 <p><code>jbang hello@jbangdev</code> will run the alias <code>hello</code> as defined in <code>jbang-catalog.json</code> found in <a href="https://github.com/jbangdev/jbang-catalog" class="bare">https://github.com/jbangdev/jbang-catalog</a>.</p>
 </div>
 <div class="paragraph">
-<p>This allows anyone to provide a set of jbang scripts defined in their github, gitlab or bitbucket repositories.</p>
+<p>This allows anyone to provide a set of jbang scripts defined in their website or in a github, gitlab or bitbucket repositories.</p>
 </div>
 <div class="paragraph">
-<p>The full format is <code>&lt;alias&gt;@&lt;user/org&gt;(/repository)(/branch)(~path)</code> allowing you to do things like:</p>
+<p>The full format is <code>&lt;alias&gt;@&lt;user/org&gt;(/repository)(/branch)(~path)</code> or <code>&lt;alias&gt;@&lt;hostname&gt;(/path/to/catalog)</code> allowing you to do things like:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Implicit Catalog Examples:</caption>
@@ -406,6 +413,14 @@ are aliases that have a special format and JBang is smart enough to know where t
 </tr>
 </thead>
 <tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jbang <a href="mailto:hello@acme.corp">hello@acme.corp</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hello</code> alias found in <code><a href="https://acme.corp/jbang-catalog.json" class="bare">https://acme.corp/jbang-catalog.json</a></code> if available or the default branch searched on github, gitlab and bitbucket in that order.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jbang <a href="mailto:hello@acme.corp">hello@acme.corp</a>/a/path/to/jbang-catalog.json</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hello</code> alias found in <code><a href="https://acme.corp/a/path/to/jbang-catalog.json" class="bare">https://acme.corp/a/path/to/jbang-catalog.json</a></code> if available.</p></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jbang hello@acme</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>hello</code> alias found in <code>acme/jbang-catalog/jbang-catalog.json</code> of the default branch searched on github, gitlab and bitbucket in that order.</p></td>
