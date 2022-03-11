@@ -359,9 +359,20 @@
 <p>Note: <code>jbang</code> will download and install <code>java</code> from Adopt OpenJDK if no <code>java</code> is available.</p>
 </div>
 <div class="paragraph">
-<p>Once you hav installed from one of the below approaches it is recommended you run <code>jbang app setup</code>
- your <code>PATH</code> to include jbang app scripts + it will on operating systems that supports
-it setup a <code>j!</code> alias you can use instead of <code>jbang</code>.</p>
+<p>There are multiple ways to install jbang. See below for all available options.</p>
+</div>
+<div class="paragraph">
+<p>Once you have jbang installed, it is recommended you run <code>jbang app setup</code>. This script will make the following changes to your system:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Modify <code>PATH</code> environment variable to include jbang app scripts</p>
+</li>
+<li>
+<p>For supported shells, add <code>j!</code> as an alias for <code>jbang</code>. Try running <code>j! version</code> to verify.</p>
+</li>
+</ol>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -654,7 +665,7 @@ dnf install jbang</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>That will allow your to execute JBang scripts with:</p>
+<p>That will allow you to execute JBang scripts with:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -723,14 +734,14 @@ that will run out of that directory using <code>./jbang</code>.</p>
 <h2 id="version-check"><a class="anchor" href="#version-check"></a>Version check</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><code>jbang</code> will check once a day if a new version is available. If a new version is available a message will be printed with informaton on how to install.</p>
+<p><code>jbang</code> will check once a day if a new version is available. If a new version is available a message will be printed with information on how to install.</p>
 </div>
 <div class="paragraph">
 <p>The check happens in the background and will only be done every 24hrs on the same installation.</p>
 </div>
 <div class="paragraph">
 <p>The version check is done via a HTTP request to fetch a <code>version.txt</code> from <a href="https://jbang.dev" class="bare">https://jbang.dev</a>. The request includes a user-agent that contains the current <code>jbang</code>, <code>java</code> and operating system version with no person identifiable information
-which we use purely to aggreate statistics to know update/usage frequency.</p>
+which we use purely to aggregate statistics to know update/usage frequency.</p>
 </div>
 <div class="paragraph">
 <p><code>jbang</code> will not do its automatic check for version when you run in <code>--offline</code> mode nor if you set <code>JBANG_NO_VERSION_CHECK</code> environment variable.</p>
