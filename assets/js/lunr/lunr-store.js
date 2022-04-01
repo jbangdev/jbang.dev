@@ -22,4 +22,10 @@ var store = [{
         "tags": ["jbang"],
         "url": "/learn/jbang-rewind/",
         "teaser": "/assets/images/httpjbang.jpg"
+      },{
+        "title": "jbang-npm: Java Script in your JavaScript",
+        "excerpt":"Today we are announcing jbang-npm a npm package which brings you Java Script to your JavaScript project. jbang-npm joins jbang-maven and jbang-gradle as tools that brings the power of Java Script to your favourite build setup. jbang-npm supports running any kind java code that JBang supports. Wether that is a...","categories": ["learn"],
+        "tags": ["jbang"],
+        "url": "/learn/jbang-npm/",
+        "teaser": "/assets/images/java_script.png"
       }]
