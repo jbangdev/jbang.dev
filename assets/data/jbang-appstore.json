@@ -1,5 +1,5 @@
 {
-  "aliasCount": 15,
+  "aliasCount": 4,
   "aliases": [
     {
       "stars": 1363,
@@ -14,101 +14,6 @@
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/46711?v\u003d4",
-      "repoOwner": "linux-china",
-      "repoName": "jbang-catalog",
-      "alias": "DemoCli",
-      "description": "\u003cp\u003eDemo CLI\u003c/p\u003e\n",
-      "scriptRef": "src/main/java/org/mvnsearch/DemoCli.java",
-      "command": "DemoCli@linux-china",
-      "fullcommand": "jbang DemoCli@linux-china app.java",
-      "link": "https://github.com/linux-china/jbang-catalog/blob/1664d59b0cc98f22e51fab9b6f645c29ce3ad32f/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/46711?v\u003d4",
-      "repoOwner": "linux-china",
-      "repoName": "jbang-catalog",
-      "alias": "HelloWorld",
-      "description": "\u003cp\u003eHello World\u003c/p\u003e\n",
-      "scriptRef": "src/hello/java/HelloWorld.java",
-      "command": "HelloWorld@linux-china",
-      "fullcommand": "jbang HelloWorld@linux-china app.java",
-      "link": "https://github.com/linux-china/jbang-catalog/blob/1664d59b0cc98f22e51fab9b6f645c29ce3ad32f/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/46711?v\u003d4",
-      "repoOwner": "linux-china",
-      "repoName": "jbang-catalog",
-      "alias": "SpringBootApp",
-      "description": "\u003cp\u003eSpring Boot App\u003c/p\u003e\n",
-      "scriptRef": "src/springBoot/java/demo1/SpringBootApp.java",
-      "command": "SpringBootApp@linux-china",
-      "fullcommand": "jbang SpringBootApp@linux-china app.java",
-      "link": "https://github.com/linux-china/jbang-catalog/blob/1664d59b0cc98f22e51fab9b6f645c29ce3ad32f/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/46711?v\u003d4",
-      "repoOwner": "linux-china",
-      "repoName": "jbang-catalog",
-      "alias": "google-java-format",
-      "scriptRef": "https://github.com/google/google-java-format/releases/download/v1.13.0/google-java-format-1.13.0-all-deps.jar",
-      "command": "google-java-format@linux-china",
-      "fullcommand": "jbang google-java-format@linux-china app.java",
-      "link": "https://github.com/linux-china/jbang-catalog/blob/1664d59b0cc98f22e51fab9b6f645c29ce3ad32f/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/6814443?v\u003d4",
-      "repoOwner": "lilian-benoit",
-      "repoName": "scripts-keycloak",
-      "alias": "users-csv-to-json",
-      "description": "\u003cp\u003eScript convert from csv file to json for keycloak admin cli\u003c/p\u003e\n",
-      "scriptRef": "UsersCSVtoKeycloakJSON.java",
-      "command": "users-csv-to-json@lilian-benoit/scripts-keycloak",
-      "fullcommand": "jbang users-csv-to-json@lilian-benoit/scripts-keycloak app.java",
-      "link": "https://github.com/lilian-benoit/scripts-keycloak/blob/f60b04770f895bec7a7c735359684e8c65e54c17/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/413413?v\u003d4",
-      "repoOwner": "38leinaD",
-      "repoName": "jbang-catalog",
-      "alias": "quarkus-starter",
-      "description": "\u003cp\u003eScript to scaffold a Quarkus project\u003c/p\u003e\n",
-      "scriptRef": "src/QuarkusStarter.java",
-      "command": "quarkus-starter@38leinaD",
-      "fullcommand": "jbang quarkus-starter@38leinaD app.java",
-      "link": "https://github.com/38leinaD/jbang-catalog/blob/956bad5e5a8dc5d7a26d6964ecfe42045810e827/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/413413?v\u003d4",
-      "repoOwner": "38leinaD",
-      "repoName": "jbang-catalog",
-      "alias": "firestarter",
-      "description": "\u003cp\u003eDisplay a YouTube video on your RasPi or similar (e.g. to build a \u0027virtual fireplace\u0027). Also, simple web-ui to edit the video URL.\u003c/p\u003e\n",
-      "scriptRef": "src/firestarter",
-      "command": "firestarter@38leinaD",
-      "fullcommand": "jbang firestarter@38leinaD app.java",
-      "link": "https://github.com/38leinaD/jbang-catalog/blob/956bad5e5a8dc5d7a26d6964ecfe42045810e827/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/413413?v\u003d4",
-      "repoOwner": "38leinaD",
-      "repoName": "jbang-catalog",
-      "alias": "httpserver",
-      "description": "\u003cp\u003eMinimalist JDK-internal http-server\u003c/p\u003e\n",
-      "scriptRef": "src/httpserver.java",
-      "command": "httpserver@38leinaD",
-      "fullcommand": "jbang httpserver@38leinaD app.java",
-      "link": "https://github.com/38leinaD/jbang-catalog/blob/956bad5e5a8dc5d7a26d6964ecfe42045810e827/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
       "icon_url": "https://avatars.githubusercontent.com/u/27861160?v\u003d4",
       "repoOwner": "gomezrondon",
       "repoName": "spring-in-container",
@@ -117,42 +22,6 @@
       "command": "cleanyaml@gomezrondon/spring-in-container~script",
       "fullcommand": "jbang cleanyaml@gomezrondon/spring-in-container~script app.java",
       "link": "https://github.com/gomezrondon/spring-in-container/blob/546df82c9b5bd1159c9866101c79a2fd5d3b1388/script/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/874086?v\u003d4",
-      "repoOwner": "junit-team",
-      "repoName": "jbang-catalog",
-      "alias": "cli",
-      "description": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
-      "scriptRef": "org.junit.platform:junit-platform-console-standalone:1.8.2",
-      "command": "cli@junit-team",
-      "fullcommand": "jbang cli@junit-team app.java",
-      "link": "https://github.com/junit-team/jbang-catalog/blob/d3c25d6992a46e2db0b2d589f878054c0207b795/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/874086?v\u003d4",
-      "repoOwner": "junit-team",
-      "repoName": "jbang-catalog",
-      "alias": "cli-1.8.2",
-      "description": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
-      "scriptRef": "org.junit.platform:junit-platform-console-standalone:1.8.2",
-      "command": "cli-1.8.2@junit-team",
-      "fullcommand": "jbang cli-1.8.2@junit-team app.java",
-      "link": "https://github.com/junit-team/jbang-catalog/blob/d3c25d6992a46e2db0b2d589f878054c0207b795/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/874086?v\u003d4",
-      "repoOwner": "junit-team",
-      "repoName": "jbang-catalog",
-      "alias": "cli-1.8.1",
-      "description": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
-      "scriptRef": "org.junit.platform:junit-platform-console-standalone:1.8.1",
-      "command": "cli-1.8.1@junit-team",
-      "fullcommand": "jbang cli-1.8.1@junit-team app.java",
-      "link": "https://github.com/junit-team/jbang-catalog/blob/d3c25d6992a46e2db0b2d589f878054c0207b795/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -180,16 +49,82 @@
   ],
   "templates": [
     {
-      "stars": 4,
-      "icon_url": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
-      "repoOwner": "quarkusio",
-      "repoName": "quarkus-insights",
-      "alias": "ByteSize",
-      "description": "\u003cp\u003eByteSize example from Quarkus Insights #53 about java memory\u003c/p\u003e\n",
-      "command": "ByteSize@quarkusio/quarkus-insights",
-      "fullcommand": "jbang init -t ByteSize@quarkusio/quarkus-insights app.java",
-      "link": "https://github.com/quarkusio/quarkus-insights/blob/cf15abbd7582a9aeaf7e8a0aa5354cc07a38505a/jbang-catalog.json"
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/11406183?v\u003d4",
+      "repoOwner": "nandorholozsnyak",
+      "repoName": "jbang-cloud",
+      "alias": "q-aws-lambda",
+      "description": "\u003cp\u003eQuarkus AWS Lambda template\u003c/p\u003e\n",
+      "command": "q-aws-lambda@nandorholozsnyak/jbang-cloud",
+      "fullcommand": "jbang init -t q-aws-lambda@nandorholozsnyak/jbang-cloud app.java",
+      "link": "https://github.com/nandorholozsnyak/jbang-cloud/blob/ec44f6783ea023859626e68a38547e11dcfb266d/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/11406183?v\u003d4",
+      "repoOwner": "nandorholozsnyak",
+      "repoName": "jbang-cloud",
+      "alias": "q-aws-lambda-tf",
+      "description": "\u003cp\u003eQuarkus AWS Lambda template with Terraform template. Use the -Dnative-function flag to have native image based Terraform resources\u003c/p\u003e\n",
+      "command": "q-aws-lambda-tf@nandorholozsnyak/jbang-cloud",
+      "fullcommand": "jbang init -t q-aws-lambda-tf@nandorholozsnyak/jbang-cloud app.java",
+      "link": "https://github.com/nandorholozsnyak/jbang-cloud/blob/ec44f6783ea023859626e68a38547e11dcfb266d/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/11406183?v\u003d4",
+      "repoOwner": "nandorholozsnyak",
+      "repoName": "jbang-cloud",
+      "alias": "q-aws-lambda-sqs",
+      "description": "\u003cp\u003eQuarkus AWS Lambda template with incoming SQS event\u003c/p\u003e\n",
+      "command": "q-aws-lambda-sqs@nandorholozsnyak/jbang-cloud",
+      "fullcommand": "jbang init -t q-aws-lambda-sqs@nandorholozsnyak/jbang-cloud app.java",
+      "link": "https://github.com/nandorholozsnyak/jbang-cloud/blob/ec44f6783ea023859626e68a38547e11dcfb266d/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/11406183?v\u003d4",
+      "repoOwner": "nandorholozsnyak",
+      "repoName": "jbang-cloud",
+      "alias": "q-aws-lambda-sqs-tf",
+      "description": "\u003cp\u003eQuarkus AWS Lambda template with incoming SQS event\u003c/p\u003e\n",
+      "command": "q-aws-lambda-sqs-tf@nandorholozsnyak/jbang-cloud",
+      "fullcommand": "jbang init -t q-aws-lambda-sqs-tf@nandorholozsnyak/jbang-cloud app.java",
+      "link": "https://github.com/nandorholozsnyak/jbang-cloud/blob/ec44f6783ea023859626e68a38547e11dcfb266d/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/11406183?v\u003d4",
+      "repoOwner": "nandorholozsnyak",
+      "repoName": "jbang-cloud",
+      "alias": "q-aws-lambda-s3",
+      "description": "\u003cp\u003eQuarkus AWS Lambda template with incoming S3 event\u003c/p\u003e\n",
+      "command": "q-aws-lambda-s3@nandorholozsnyak/jbang-cloud",
+      "fullcommand": "jbang init -t q-aws-lambda-s3@nandorholozsnyak/jbang-cloud app.java",
+      "link": "https://github.com/nandorholozsnyak/jbang-cloud/blob/ec44f6783ea023859626e68a38547e11dcfb266d/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/11406183?v\u003d4",
+      "repoOwner": "nandorholozsnyak",
+      "repoName": "jbang-cloud",
+      "alias": "q-aws-lambda-s3-tf",
+      "description": "\u003cp\u003eQuarkus AWS Lambda template with incoming S3 event\u003c/p\u003e\n",
+      "command": "q-aws-lambda-s3-tf@nandorholozsnyak/jbang-cloud",
+      "fullcommand": "jbang init -t q-aws-lambda-s3-tf@nandorholozsnyak/jbang-cloud app.java",
+      "link": "https://github.com/nandorholozsnyak/jbang-cloud/blob/ec44f6783ea023859626e68a38547e11dcfb266d/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/11406183?v\u003d4",
+      "repoOwner": "nandorholozsnyak",
+      "repoName": "jbang-cloud",
+      "alias": "q-aws-lambda-ecs-event-tf",
+      "description": "\u003cp\u003eQuarkus AWS Lambda template to handle ECS event\u003c/p\u003e\n",
+      "command": "q-aws-lambda-ecs-event-tf@nandorholozsnyak/jbang-cloud",
+      "fullcommand": "jbang init -t q-aws-lambda-ecs-event-tf@nandorholozsnyak/jbang-cloud app.java",
+      "link": "https://github.com/nandorholozsnyak/jbang-cloud/blob/ec44f6783ea023859626e68a38547e11dcfb266d/jbang-catalog.json"
     }
   ],
-  "templateCount": 1
+  "templateCount": 7
 }
