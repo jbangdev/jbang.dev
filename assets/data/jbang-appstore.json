@@ -1,5 +1,5 @@
 {
-  "aliasCount": 4,
+  "aliasCount": 5,
   "aliases": [
     {
       "stars": 1363,
@@ -25,15 +25,26 @@
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/28388442?v\u003d4",
-      "repoOwner": "TomerFi",
-      "repoName": "jbang-catalog",
-      "alias": "shabbat_times",
-      "description": "\u003cp\u003eGet the shabbat times for a geoid.\u003c/p\u003e\n",
-      "scriptRef": "src/shabbat_times.java",
-      "command": "shabbat_times@TomerFi",
-      "fullcommand": "jbang shabbat_times@TomerFi app.java",
-      "link": "https://github.com/TomerFi/jbang-catalog/blob/21ee185b3ab2ebaf2f5387a9de6cc8670a1af3b7/jbang-catalog.json"
+      "icon_url": "https://avatars.githubusercontent.com/u/6814443?v\u003d4",
+      "repoOwner": "lilian-benoit",
+      "repoName": "scripts-keycloak",
+      "alias": "users-csv-to-json",
+      "description": "\u003cp\u003eScript convert from csv file to json for keycloak admin cli\u003c/p\u003e\n",
+      "scriptRef": "UsersCSVtoKeycloakJSON.java",
+      "command": "users-csv-to-json@lilian-benoit/scripts-keycloak",
+      "fullcommand": "jbang users-csv-to-json@lilian-benoit/scripts-keycloak app.java",
+      "link": "https://github.com/lilian-benoit/scripts-keycloak/blob/f60b04770f895bec7a7c735359684e8c65e54c17/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/12188140?v\u003d4",
+      "repoOwner": "InduprasadSR",
+      "repoName": "karate_Sample",
+      "alias": "karate",
+      "scriptRef": "com.intuit.karate:karate-core:1.0.0",
+      "command": "karate@InduprasadSR/karate_Sample",
+      "fullcommand": "jbang karate@InduprasadSR/karate_Sample app.java",
+      "link": "https://github.com/InduprasadSR/karate_Sample/blob/79ea6adb62f5584046ba714393719783af049f99/jbang-catalog.json"
     },
     {
       "stars": 0,
