@@ -1,5 +1,5 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
-
+//JAVA 11+
 import static java.lang.System.*;
 
 import java.io.IOException;
