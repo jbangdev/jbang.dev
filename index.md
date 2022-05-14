@@ -62,7 +62,7 @@ feature_row2:
     
 ### Watch <a name="watch"/>
     
-Below is latest talk about JBang: "`jbang` a better `java` ?"
+Below is latest talk about JBang: "Getting started with Java - The JBang Way"
  
-<iframe width="1280" height="720" src="https://youtube.com/embed/u9mfPW3ydjU?start=98" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1280" height="720" src="https://youtube.com/embed/u0kWB9S_np0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          
