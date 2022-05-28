@@ -440,16 +440,12 @@ with <code>JBANG_DEFAULT_JAVA_VERSION</code> env variable.</p>
 </div>
 <div class="paragraph">
 <p>It&#8217;s also possible to override the exact JDK distribution that will be used by setting the <code>JBANG_JDK_VENDOR</code> env variable.
-By default this will either be <code>temurin</code> or <code>aoj</code>, but it can also be set to <code>azul</code>, <code>debian</code>, <code>microsoft</code>, <code>openjdk</code>,
-<code>oracle</code>, <code>oracle_open_jdk</code> or <code>redhat</code>.</p>
-</div>
-<div class="paragraph">
-<p>By default JBang will only install final (GA) JDK releases, if you want to install an Early Access (EA) release you can do
-so by setting the <code>JBANG_JDK_RELEASE</code> env variable to <code>ea</code>.</p>
+By default this will either be <code>temurin</code> or <code>aoj</code>, but it can also be set to any of the other <a href="https://api.foojay.io/disco/v3.0/distributions?include_versions=false">vendors supported by Foojay</a>, like <code>azul</code>, <code>debian</code>, <code>microsoft</code>, <code>openjdk</code>,
+<code>oracle</code> or <code>redhat</code>.</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>$ JBANG_DEFAULT_JAVA_VERSION=18 JBANG_JDK_VENDOR=oracle JBANG_JDK_RELEASE=ea jbang my-script.java</pre>
+<pre>$ JBANG_DEFAULT_JAVA_VERSION=18 JBANG_JDK_VENDOR=oracle jbang my-script.java</pre>
 </div>
 </div>
 <div class="paragraph">
