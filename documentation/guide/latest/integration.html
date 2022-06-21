@@ -368,19 +368,32 @@ Any classes listed in this file will be loaded and jbang will expect and call th
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">/**
-*
-* @param param build dir directory which will be made into a jar when build is done
-* @param pomFile location of pom.xml representing the projects dependencies
-* @param dependencies list of GAV to Path of artifact/classpath dependencies
-* @param nativeImage true if --native been requested
-* @return Map&lt;String, Object&gt; map of returns; special keys are "native-image" which is a and "files" to
-*          return native-image to be run and list of files to get written to the output directory.
-*
-*/
-Map&lt;String, Object&gt; postBuild(Path builddir, Path pomFile, List&lt;Map.Entry&lt;String, Path&gt;&gt; dependencies,
-            boolean nativeImage)</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class JBangIntegrationExample {
+
+    /**
+    *
+    * @param temporaryJar temporary JAR file path
+    * @param pomFile location of pom.xml representing the projects dependencies
+    * @param repositories list of the used repositories
+    * @param dependencies list of GAV to Path of artifact/classpath dependencies
+    * @param comments comments from the source file
+    * @param nativeImage true if --native been requested
+    * @return Map&lt;String, Object&gt; map of returns; special keys are "native-image" which is a and "files" to
+    *          return native-image to be run and list of files to get written to the output directory.
+    *
+    */
+    public static Map&lt;String, Object&gt; postBuild(Path temporaryJar,
+                                                Path pomFile,
+                                                List&lt;Map.Entry&lt;String, String&gt;&gt; repositories,
+                                                List&lt;Map.Entry&lt;String, Path&gt;&gt; dependencies,
+                                                List&lt;String&gt; comments,
+                                                boolean nativeImage) {
+    }
+}</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Since version 0.92.0 the full path to the JBang script can be acquired by querying the <code>jbang.source</code> system property - <code>System.getProperty("jbang.source")</code></p>
 </div>
 <div class="paragraph">
 <p>Still very experimental and bound to change. Example of its use can be found in <a href="https://github.com/quarkusio/quarkus/pull/11542">Quarkus</a>.</p>
