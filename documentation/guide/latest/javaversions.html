@@ -465,6 +465,22 @@ specific JDK you can pass the version as an argument: <code>jbang jdk home 14</c
 a JDK to use to run a Java program for example (eg: <code>JAVA_HOME=$(jbang jdk home)</code>.</p>
 </div>
 <div class="paragraph">
+<p>The <code>install</code> command decribed in the previous section allows you to specify the path of your existing JDK installation:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang jdk install 17 &lt;path-of-existing-java-17-installation&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So if you are managing your jdk installations with <a href="https://sdkman.io/">SDKMAN!</a> you can easilly configure JBang to use one of your installed version:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbang jdk install 17 `sdk home java 17.0.4.1-tem`</pre>
+</div>
+</div>
+<div class="paragraph">
 <p>For setting up your current command line environment there&#8217;s something simpler. You can run:</p>
 </div>
 <div class="literalblock">
