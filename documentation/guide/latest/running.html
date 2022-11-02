@@ -381,7 +381,7 @@ to your script/class to see it.
 <p>Flight recorder is a feature of the Java VM that lets you gather diagnostic and profiling data about your script.</p>
 </div>
 <div class="paragraph">
-<p>You can use <code>//JAVA_OPTIONS</code> to have full control over it; but for the easiest setup <code>jbang</code> lets you just run with <code>--jfr</code>, e.g.,</p>
+<p>You can use <code>//RUNTIME_OPTIONS</code> to have full control over it; but for the easiest setup <code>jbang</code> lets you just run with <code>--jfr</code>, e.g.,</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -399,22 +399,30 @@ to your script/class to see it.
 by the filename and then added <code>maxage=24h</code> to flight recording options.</p>
 </div>
 <div class="paragraph">
-<p>If you want further control use <code>//JAVAC_OPTIONS -XX:StartFlightRecording=&lt;your options&gt;</code> instead.</p>
+<p>If you want further control use <code>//COMPILE_OPTIONS -XX:StartFlightRecording=&lt;your options&gt;</code> instead.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="java-and-javac-options"><a class="anchor" href="#java-and-javac-options"></a><code>java</code> and <code>javac</code> Options</h2>
+<h2 id="java-javac-and-nativeimage-options"><a class="anchor" href="#java-javac-and-nativeimage-options"></a><code>java</code>, <code>javac</code> and <code>nativeimage</code> Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you want to tweak memory settings or enable preview features you can setup the necessary options using
-<code>//JAVA_OPTIONS</code> and <code>//JAVAC_OPTIONS</code> as in the following example using Java 14 experimental <code>record</code> feature:</p>
+<p>You can pass options directly from JBang to the compiler and runtime tools that it uses to build and run your code.</p>
+</div>
+<div class="paragraph">
+<p>The following source tags are available for setting JVM (<code>java</code>) options, compiler options (<code>javac</code>, <code>kotlinc</code>, etc) and native image builders (<code>nativeimage</code>) respectively: <code>//RUNTIME_OPTIONS</code>, <code>//COMPILE_OPTIONS</code> and <code>//NATIVE_OPTIONS</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can also set the same options from the command line using: <code>--runtime-option</code>, <code>--compile-option</code> and <code>--native-option</code>.</p>
+</div>
+<div class="paragraph">
+<p>As an example, if you want to enable preview features you can set up the necessary options as in the following example that uses Java 14 experimental <code>record</code> feature:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">///usr/bin/env jbang "$0" "$@" ; exit $?
-//JAVAC_OPTIONS --enable-preview -source 14 <i class="conum" data-value="1"></i><b>(1)</b>
-//JAVA_OPTIONS --enable-preview <i class="conum" data-value="2"></i><b>(2)</b>
+//COMPILE_OPTIONS --enable-preview -source 14
+//RUNTIME_OPTIONS --enable-preview
 
 import static java.lang.System.*;
 
