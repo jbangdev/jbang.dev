@@ -25,6 +25,7 @@ import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
 import java.io.*;
+import java.net.HttpURLConnection;
 import java.nio.file.Files;
 import java.nio.file.OpenOption;
 import java.nio.file.Path;
@@ -68,7 +69,10 @@ class appstore implements Callable<Integer> {
 
   @Override
   public Integer call() throws Exception {
-    gitHub = GitHub.connect("", ghToken);
+    gitHub = GitHubBuilder.fromEnvironment().withOAuthToken(ghToken)
+            .withAbuseLimitHandler(AbuseLimitHandler.WAIT)
+            .withRateLimitHandler(RateLimitHandler.WAIT).build();
+
     System.out.println(gitHub.getRateLimit().toString());
     var gson = new GsonBuilder().setPrettyPrinting().create();
     List<CatalogItem> aliasItems = new ArrayList<>();
