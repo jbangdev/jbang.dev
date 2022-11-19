@@ -79,6 +79,7 @@ social:
   links: # An array of links to social media profiles
     - "https://twitter.com/jbangdev"
     - "https://github.com/jbangdev"
+    - "https://fosstodon.org/@jbangdev"
 # Analytics
 analytics:
   provider               : google # false (default), "google", "google-universal", "google-gtag", "custom"
@@ -104,22 +105,25 @@ author:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/jbangdev"
+    - label: "Mastodon"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://fosstodon.org/@jbangdev"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jbangdev"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
-
+    
 # Site Footer
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/jbangdev"
+    - label: "Mastodon"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://fosstodon.org/@jbangdev"  
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
