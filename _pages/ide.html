@@ -1,0 +1,70 @@
+---
+title: IDE
+tagline: IDE/Editor support for JBang
+permalink: /ide/
+layout: splash
+---
+<h2>Editing JBang scripts and applications in an IDE</h2>
+<div class="container">
+  <div class="row">
+    <div class="full-width">
+      <p>
+        Since JBang 0.102 <code>jbang edit [directory]</code> will open the directory as if your IDE has a JBang plugin installed. This has the advantage that editing multiple files and especially related files 'just works'. You can still use <code>jbang edit [filename]</code> to have JBang generate a temporary project with symoblic linked files to edit in any IDE (but with some limits).
+      </p>
+   
+      <p>Below documents the known working IDE and their plugins.</p>
+
+    </div>
+  </div>
+
+<div id="app">
+  <v-app id="inspire">
+    <v-tabs        
+     centered
+     icons-and-text
+    >
+      <v-tab>Visual Studio Code
+        <v-icon>mdi-microsoft-visual-studio-code</v-icon>
+      </v-tab>
+      <v-tab>IntelliJ IDEA
+      </v-tab>
+      <v-tab>Eclipse
+      </v-tab>
+    
+      <v-tab-item>
+        <h3>JBang extension for Visual Studio Code</h3>
+        <p>Available from <a href="https://marketplace.visualstudio.com/items?itemName=jbangdev.jbang-vscode">Microsoft Marketplace</a> and <a href="https://open-vsx.org/extension/jbangdev/jbang-vscode">Open VSX Marketplace</a>. 
+        </p>
+        <p>JBang edit command will offer to setup and install <a href="https://vscodium.com/">VSCodium</a> (a free distribution of VSCode) if no other IDE found.</p> 
+      </v-tab-item>
+      <v-tab-item>
+        <h3>JBang Intellij Plugin</h3>
+         <p>Available from <a href="https://plugins.jetbrains.com/plugin/18257-jbang">JetBrains Marketplace</a>.</p>
+      </v-tab-item>
+      <v-tab-item>
+        <h3>Eclipse Eclipse Integration</h3>
+            
+        <p>Available from <a href="https://marketplace.eclipse.org/content/jbang-eclipse-integration">Eclipse Marketplace</a></p>
+       </v-tab-item>
+
+  
+    </v-tabs>
+  </v-app>
+</div>
+<script>
+new Vue({
+  el: '#app',
+  vuetify: new Vuetify(),
+  data () {
+    return {
+      tab: null,
+      items: [
+        'Appetizers', 'Entrees', 'Deserts', 'Cocktails',
+      ],
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    }
+  },
+})
+</script>
+<script src="{{base.url}}/assets/js/os-check.js"></script>
+  <!-- Content End -->
