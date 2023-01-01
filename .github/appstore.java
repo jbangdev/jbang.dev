@@ -34,6 +34,7 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.concurrent.Callable;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
@@ -85,6 +86,7 @@ class appstore implements Callable<Integer> {
         System.out.println("Excluded - " + location);
       } else {
         System.out.println("Processing - " + location);
+        TimeUnit.SECONDS.sleep(1);
         var catalogContent = toJsonElement(gson, content);
         if (catalogContent != null) {
           catalogContent.aliases.entrySet().stream().map(entry -> toCatalogerItem(entry, content))
