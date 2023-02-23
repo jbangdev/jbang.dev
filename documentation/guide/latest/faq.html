@@ -370,6 +370,10 @@ From there came j&#8217;bang which is a "bad" spelling of how shebang is pronoun
 </div>
 </li>
 <li>
+<p><em>Why is JBang scripting examples using lower case class names ?</em></p>
+<p>JBang works with any valid Java class names including Java&#8217;s standard camel case conventions. The scripting examples are using lower case because the scripts can be used as a command line tool. i.e. <code>./hello.java</code>. Just like people are used to Java using camel case for class names, they are also used to using lower case for command line tools. So JBang is just following the convention most relevant for the scripting use case. Thus <code>helloworld.java</code> instead of <code>HelloWorld.java</code>; but if you prefer the latter you can always use it.</p>
+</li>
+<li>
 <p><em>Why would I use Java to write scripts ? Java sucks for that&#8230;&#8203; Use groovy, kotlin, scala, etc. instead!</em></p>
 <p>  Well, does it really suck ? With Java 8 streams, static imports and greatly improved standard java libraries it is very close to what kscript and grape look like.
 With the following advantages:</p>
