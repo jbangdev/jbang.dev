@@ -353,10 +353,10 @@
 <div class="sectionbody">
 <!-- toc disabled -->
 <div class="paragraph">
-<p>JBang try and have decent defaults, for the cases where they do not fit you can use <code>jbang config</code> to setup better defaults.</p>
+<p>JBang tries to have decent defaults, for the cases where they do not fit you can use <code>jbang config</code> to set up better defaults.</p>
 </div>
 <div class="paragraph">
-<p>Example, the default editor for <code>jbang edit</code> is calculated but sometimes you want it to be one specific editor. Instead of writing <code>jbang edit --open=code hello.java</code> to say it is <code>code</code> you want open with, you can use <code>jbang config set edit.open=code</code>. When you have done that then <code>jbang edit hello.java</code> is all that is needed - JBang will now use <code>code</code> as the default editor.</p>
+<p>Example, the default editor for <code>jbang edit</code> is automatically determined, but sometimes you want it to be one specific editor. Instead of writing <code>jbang edit --open=code hello.java</code> to say it is <code>code</code> you want open with, you can use <code>jbang config set edit.open=code</code>. When you have done that then <code>jbang edit hello.java</code> is all that is needed - JBang will now use <code>code</code> as the default editor.</p>
 </div>
 </div>
 </div>
@@ -367,7 +367,16 @@
 <p>If you noticed it what JBang configuration does is to map a configuration key to a command line argument. Meaning any command and its command line arguments can be given default values to change the default behavior of jbang. i.e. <code>edit.open</code> is the <code>--open</code> argument to <code>edit</code> command.</p>
 </div>
 <div class="paragraph">
-<p>You can see all the available keys by running <code>jbang config list --show-available</code> and if you want to see the current default values use <code>jbang config list</code>.</p>
+<p>Basically any option can be set by taking the full name of the command, which for example is <code>run</code> for <code>jbang run</code> and <code>app.list</code> for <code>jbang app list</code>, together with the name of the option without any dashes. So the option <code>--format</code> for <code>jbang app list</code> becomes <code>app.list.format</code>, and <code>--jdk-providers</code> for <code>build</code> becomes <code>build.jdkproviders</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can see all the available keys by running <code>jbang config list --show-available</code> and if you want to see the current values use <code>jbang config list</code>.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, any option can be set by simply using its name, this is especially useful when there are several commands that all have the same option, and you want ot set them all. So if we take the example above where we set the <code>app.list.format</code>, we can also simply use <code>jbang config set format json</code>. But that will affect <em>all</em> commands that have a format option, like <code>alias list</code>, <code>catalog list</code>, <code>jdk list</code> and others.</p>
+</div>
+<div class="paragraph">
+<p>In the case that you set both a simple value, like <code>format</code>, and a fully named value, like <code>app.list.format</code>, the most specific one takes precedence.</p>
 </div>
 </div>
 </div>
@@ -375,11 +384,10 @@
 <h2 id="local-vs-global-configuration"><a class="anchor" href="#local-vs-global-configuration"></a>Local vs Global configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>JBang has a built-in default value and any config setting will by default be set on a global scope. Meaning it will apply to any <code>jbang</code> run. The default location for this is at <code>~/.jbang/jbang.properties</code>.</p>
+<p>JBang has built-in default values and any config setting will by default be set on a global scope. Meaning it will apply to any <code>jbang</code> run. The default location for this is at <code>~/.jbang/jbang.properties</code>.</p>
 </div>
 <div class="paragraph">
-<p>If you want to have local settings that only apply within a certain diretory tree simply go that directory and run <code>jbang config set --file=. edit.open idea</code>. Then JBang stores settings in a local <code>jbang.properties</code>
-wihch will override any global setting.</p>
+<p>If you want to have local settings that only apply within a certain directory tree simply go into that directory and run, for example, <code>jbang config set --file=. edit.open idea</code>. Then JBang will store that setting in a local <code>jbang.properties</code> file which will override any global setting.</p>
 </div>
 <div class="paragraph">
 <p>To see which keys are configured where and in what order run <code>jbang config list --show-origin</code> and you will get something like:</p>

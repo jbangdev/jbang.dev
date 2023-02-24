@@ -446,6 +446,51 @@ public class records {
 </div>
 </div>
 <div class="sect1">
+<h2 id="module-support-experimental"><a class="anchor" href="#module-support-experimental"></a>Module support (EXPERIMENTAL)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can mark code as being part of a module by adding the following line:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//MODULE &lt;module-name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will make JBang treat the code a being a module with the given name, and it will compile it as such.
+Any declared dependencies are automatically marked as being required.</p>
+</div>
+<div class="paragraph">
+<p>You can also set this on the command line by using the <code>--module=&lt;name&gt;</code> option on the <code>jbang build</code> command.
+The option also exists for <code>jbang run</code> where it will treat anything to be run as a module.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="setting-main-class"><a class="anchor" href="#setting-main-class"></a>Setting main class</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Normally JBang will figure out by itself what your code&#8217;s main class is, but in case you want to override
+this behaviour in code, you can use the following line:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//MAIN &lt;main-class-name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The main class selected by the line is permanent and will be stored as the default main class in the
+resulting JAR file.</p>
+</div>
+<div class="paragraph">
+<p>One can also override the main class on the command line by using <code>--main &lt;name&gt;</code> or <code>-m &lt;name&gt;</code>
+for <code>jbang build</code> or <code>jbang run</code>. Main classes set for <code>jbang build</code> are permanent, just like
+using a <code>//MAIN</code> line in the code. But main classes set for <code>jbang run</code> are temporary and will
+only be used for that execution run.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="adding-entries-to-manifest-mf"><a class="anchor" href="#adding-entries-to-manifest-mf"></a>Adding entries to <code>MANIFEST.MF</code></h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -483,6 +528,72 @@ If an item has no equals sign and no value than the value is taken to be the str
 </div>
 <div class="paragraph">
 <p>You can create a basic agent using <code>jbang init -t agent myagent.java</code> to get started.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="remote-file-arguments"><a class="anchor" href="#remote-file-arguments"></a>Remote File Arguments</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>run</code> command has a special feature where any of the arguments for the code to be
+executed can be a reference to a remote file by appending a <code>%</code> in front  of a URL.
+Imagine for example a <code>wordcount.java</code> script that takes as its argument a path
+to a file. Now with this feature we could write:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">$ jbang run wordcount.java %https://github.com/jbangdev/jbang/blob/main/README.md</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>JBang will download the given file to its local cache and then run the code with the path
+to the file substituted for the URL. It will be as if the code has suddenly acquired the
+feature to read and analyse remote files!</p>
+</div>
+<div class="paragraph">
+<p>There is an alternative syntax in case the substitution needs to be part of an existing
+text, for example when it has to be part of a flag passed to an application:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">$ jbang run analyse.java --file=%{https://github.com/jbangdev/jbang/blob/main/README.md}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case wrap the URL with braces to explicitly mark the beginning and end.</p>
+</div>
+<div class="sect2">
+<h3 id="remote-file-for-javaagent"><a class="anchor" href="#remote-file-for-javaagent"></a>Remote-File for --javaagent</h3>
+<div class="paragraph">
+<p>The remote-file syntax is also available for the <code>--javaagent</code> option for the <code>run</code>
+command, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">$ jbang —javaagent=byteman@maxandersen=script:%{https://xam.dk/myscript.btm myapp.java}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As you can see it&#8217;s necessary here to use the syntax with the braces because it&#8217;s part
+of larger string of text.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="escaping-remote-file-arguments"><a class="anchor" href="#escaping-remote-file-arguments"></a>Escaping Remote-File Arguments</h3>
+<div class="paragraph">
+<p>If, for some reason, you really need to be able to pass the text <code>%http://some.url</code> to
+an application without JBang downloading the file and turning it into a file path for you,
+then you simply add an extra <code>%</code> to the beginning. That will tell JBang to ignore what
+follows and just treat it as an ordinary string of text. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">$ jbang run wordcount.java %%https://github.com/jbangdev/jbang/blob/main/README.md</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Would simply pass <code>%https://github.com/jbangdev/jbang/blob/main/README.md</code> to the script.</p>
+</div>
 </div>
 </div>
 </div>
