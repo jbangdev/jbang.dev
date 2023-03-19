@@ -1,5 +1,5 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
-//DEPS com.google.cloud:libraries-bom:20.9.0@pom
+//DEPS com.google.cloud:libraries-bom:26.8.0@pom
 //DEPS com.google.cloud:google-cloud-bigquery
 //DEPS info.picocli:picocli:4.5.0
 //JAVA 17
@@ -48,13 +48,13 @@ class statsquery implements Callable<Integer> {
                                 UNNEST(m.request) req,
                                 UNNEST(req.cf) cfv,
                                 UNNEST(req.headers) h
-                                WHERE DATE(timestamp) >= "2021-07-28"
+                                WHERE DATE(timestamp) >= "2022-07-01"
                                 AND req.url = "https://www.jbang.dev/releases/latest/download/version.txt"
                                 GROUP BY lat, lng
                                 LIMIT 10000
                                 """;
 
-        query(query, Path.of("data.csv"), "lat", "lng", "count");
+        query(query, out, "lat", "lng", "count");
         return 0;
     }
 
@@ -93,6 +93,7 @@ class statsquery implements Callable<Integer> {
             }
         } catch (BigQueryException | InterruptedException | FileNotFoundException e) {
             System.out.println("Query not performed \n" + e.toString());
+            e.printStackTrace();
         }
     }
 
