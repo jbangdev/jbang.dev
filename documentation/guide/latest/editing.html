@@ -353,11 +353,19 @@
 <div class="sectionbody">
 <!-- toc disabled -->
 <div class="paragraph">
-<p>You can edit your script in an IDE/editor by using <code>jbang edit helloworld.java</code>. This will generate a project in a temporary location with symbolic links to your script and open a editor.</p>
+<p>You can edit your script in an IDE/editor by using <code>jbang edit helloworld.java</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jbang edit helloworld.java</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jbang edit . helloworld.java</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -370,6 +378,9 @@
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jbang edit --open=[editor] helloworld.java</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>If your IDE does not support JBang style project you can use "sandbox" (<code>-b</code>) mode where <code>jbang</code> will generate a project in a temporary location with symbolic links to your script and open a editor.</p>
 </div>
 <div class="paragraph">
 <p>Finally you can also if you prefer to call the editor/IDE yourself in a shell that supports variable evaluation specify <code>--no-open</code> to tell JBang to not open an editor.</p>
@@ -408,13 +419,49 @@ for file changes and regenerate the temporary project to pick up changes in depe
 </div>
 </div>
 <div class="sect1">
-<h2 id="ide-and-editor-support"><a class="anchor" href="#ide-and-editor-support"></a>IDE and Editor support</h2>
+<h2 id="ide-support"><a class="anchor" href="#ide-support"></a>IDE Support</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>edit</code> feature been tested with the following IDE&#8217;s:</p>
+<p>Some IDE&#8217;s have dedicated JBang support and <code>jbang edit</code> assumes your IDE has this support installed.</p>
+</div>
+<div class="paragraph">
+<p>If your IDE does not support JBang directly you can use "sandbox" mode a temporary project is created with
+symoblic links and a project setup that works in most Java based IDE&#8217;s. This is useful for single file scripts.
+If you have multiple files we highly recommend to use a IDE that have JBang plugin.</p>
+</div>
+<div class="paragraph">
+<p>The following IDE&#8217;s have dedicated support (at time of writing):</p>
 </div>
 <table class="tableblock frame-none grid-none" style="width: 75%;">
-<caption class="title">Table 1. IDE&#8217;s and Editors tested with <code>jbang</code></caption>
+<caption class="title">Table 1. IDE&#8217;s with JBang support</caption>
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="https://simpleicons.org/icons/visualstudiocode.svg" alt="50" width="50"></span> <a href="https://code.visualstudio.com">Visual Studio Code</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="https://simpleicons.org/icons/eclipseide.svg" alt="50" width="50"></span> <a href="https://www.eclipse.org/downloads/download.php">Eclipse</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="https://simpleicons.org/icons/intellijidea.svg" alt="50" width="50"></span> <a href="https://www.jetbrains.com/idea/download">IntelliJ Idea</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="https://simpleicons.org/icons/gitpod.svg" alt="50" width="50"></span> <a href="https://www.gitpod.io">GitPod</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sandbox-edit-support"><a class="anchor" href="#sandbox-edit-support"></a>Sandbox edit support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The sandbox <code>edit -b</code> feature using temporary directory and symbolic links been tested with the following IDE&#8217;s:</p>
+</div>
+<table class="tableblock frame-none grid-none" style="width: 75%;">
+<caption class="title">Table 2. IDE&#8217;s and Editors tested with <code>jbang</code></caption>
 <colgroup>
 <col style="width: 100%;">
 </colgroup>

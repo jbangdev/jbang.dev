@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>IDE Support for JBang - JBang</title>
+<!-- begin _includes/seo.html --><title>IDE - JBang</title>
 <meta name="description" content="The following IDE’s today have support for JBang via a plugin - no additional setup needed!">
 
 
@@ -20,7 +20,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="JBang">
-<meta property="og:title" content="IDE Support for JBang">
+<meta property="og:title" content="IDE">
 <meta property="og:url" content="https://jbang.dev/ide/">
 
 
@@ -28,18 +28,16 @@
 
 
 
-  <meta property="og:image" content="https://jbang.dev/assets/images/slider/bg-2.jpg">
-
 
 
   <meta name="twitter:site" content="@jbangdev">
-  <meta name="twitter:title" content="IDE Support for JBang">
+  <meta name="twitter:title" content="IDE">
   <meta name="twitter:description" content="The following IDE’s today have support for JBang via a plugin - no additional setup needed!">
   <meta name="twitter:url" content="https://jbang.dev/ide/">
 
   
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://jbang.dev/assets/images/slider/bg-2.jpg">
+    <meta name="twitter:card" content="summary">
+    
   
 
   
@@ -207,201 +205,145 @@ Vue.directive('highlightjs', {
 
     <div class="initial-content">
       
-  
-
-
-
-
-
-
-
-<div class="page__hero--overlay"
-  style=" background-image: url('/assets/images/slider/bg-2.jpg');"
->
-  
-    <div class="wrapper">
-      <h1 id="page-title" class="page__title" itemprop="headline">
-        
-          IDE Support for JBang
-
-        
-      </h1>
-      
-        <p class="page__lead">The following IDE’s today have support for JBang via a plugin - no additional setup needed!
-</p>
-      
-      
-
-
-      
-      
-    </div>
-  
-  
-</div>
-
-
 
 <div id="main" role="main">
   <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="IDE Support for JBang">
+    <meta itemprop="headline" content="IDE">
     <meta itemprop="description" content="The following IDE’s today have support for JBang via a plugin - no additional setup needed!">
     
     
 
     <section class="page__content" itemprop="text">
-      <hr />
-
-<div class="feature__wrapper">
-
-  
-    <div class="feature__item">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="https://simpleicons.org/icons/visualstudiocode.svg" alt="" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">Visual Studio Code</h2>
-          
-
-          
-
-          
-            <p><a href="https://marketplace.visualstudio.com/items?itemName=jbangdev.jbang-vscode" class="btn btn--primary">Microsoft Marketplace</a></p>
-          
-        </div>
-      </div>
+      <h2>JBang IDE Support</h2>
+<div class="container">
+  <!--<div class="row">
+    <div class="full-width">
+    <p>Note: Java is not required to be installed - JBang will automatically download a Java version<br/> 
+      if no Java 8 or higher Java Development Kit (JDK) version is found.</p>
     </div>
-  
-    <div class="feature__item">
-      <div class="archive__item">
+  </div>-->
+
+<div id="app">
+  <v-app id="inspire">
+    <v-tabs        
+     centered
+     icons-and-text
+    >
+      <v-tab id="vscodium-tab">VSCodium
+        <img src="https://api.faviconkit.com/vscodium.com" width="24" height="24" />
+      </v-tab>
+      <v-tab id="vscode-tab">Visual Studio Code
+        <img src="https://code.visualstudio.com/favicon.ico" width="24" height="24" />
+      </v-tab>
+      <v-tab id="intellij-tab">IntelliJ
+        <img src="https://simpleicons.org/icons/intellijidea.svg" width="24" height="24" />
+      </v-tab>
+      <v-tab id="eclipse-tab">Eclipse
+        <img src="https://simpleicons.org/icons/eclipseide.svg" width="24" height="24" />
+      </v-tab>
+      <v-tab id="replit-tab">repl.it
+        <img src="https://api.faviconkit.com/replit.com" width="24" height="24" />
+      </v-tab>
+      <v-tab id="gitpod-tab">GitPod
+        <img src="https://gitpod.io/favicon.ico" width="24" height="24" />
+      </v-tab>
+      <v-tab id="jdoodle-tab">JDoodle
+        <img src="https://www.jdoodle.com/favicon.ico" width="24" height="24" />
+      </v-tab>
+    
+      <v-tab-item>
+        <h3>VSCodium</h3>
+        <p>
+          VSCodium is a community-driven, freely-licensed binary distribution of Microsoft's editor Visual Studio Code.
+          Providing all the lightweight editor features you need to get started.
+        </p>
+        <p>
+          <code>jbang edit</code> will by defaut install VSCodium; a free distribution of Visual Studio Code. It provides
+           a good default set of extensions to have it configured to use with Java/JBang.
+        </p>
+        <p>
+          JBang is in <a href="https://open-vsx.org/extension/jbangdev/jbang-vscode">Open VSX Registry</a>
+        </p>
+      </v-tab-item>
+      <v-tab-item>
+        <h3>Visual Studio Code</h3>
+        <p>
+        Visual Studio code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux.
+        </p>    
+        <p>
+          JBang is on <a href="https://marketplace.visualstudio.com/items?itemName=jbangdev.jbang-vscode">Visual Studio Marketplace</a>
+        </p>
+      </v-tab-item>
+      <v-tab-item>
+        <h3>IntelliJ</h3>
+        <p>
+          IntelliJ IDEA is a very popular Java IDE. Has a lot of features; especially when it comes to refactoring and code assists.
+        </p>
+        <p>
+          JBang is on <a href="https://plugins.jetbrains.com/plugin/18257-jbang">Jetbrains Marketplace</a>
+        </p>
         
-          <div class="archive__item-teaser">
-            <img src="https://simpleicons.org/icons/intellijidea.svg" alt="" />
-            
-          </div>
+      </v-tab-item>
+
+      <v-tab-item>
+        <h3>Eclipse</h3>
+        <p>
+          Eclipse is a popular opensource Java IDE. Has a large ecosystem of plugins and is 100% free to use.
+        </p>
+          <p>
+            JBang is on <a href="https://marketplace.eclipse.org/content/jbang-eclipse-integration">Eclipse Marketplace</a>
+          </p>
+        </v-tab-item>
+
+        <v-tab-item>
+          <h3>repl.it</h3>
+          <p>
+            repl.it is a free, online code editor that makes it easy to code, compile, run, and share in 50+ programming languages.
+          </p>
+          <p>
+            JBang template for <a href="https://replit.com/@maxandersen/jbang-replit-demo#.replit">Repl.it</a>
+          </p>
+        </v-tab-item>
+        <v-tab-item>
+          <h3>GitPod</h3>
+          <p>
+            GitPod is a free online IDE that allows you to create a dev environment for any GitHub repository.
+          </p>
+          <p>
+            JBang container template for <a href="https://gitpod.io/#https://github.com/jbangdev/jbang-devcontainer-template">GitPod</a>
+          </p>
+          </v-tab-item>
+        <v-tab-item>
+          <h3>JDoodle</h3>
+          <p>
+            JDoodle is a free online compiler, IDE and execution environment for Java, C, C++, PHP, Perl, Python, Ruby and many more.
+          </p>
+          <p>
+            Try JBang on <a href="https://www.jdoodle.com/try-jbang/">JDoodle</a>
+            </p>
+        </v-tab-item>
         
 
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">IntelliJ IDEA</h2>
-          
-
-          
-
-          
-            <p><a href="https://plugins.jetbrains.com/plugin/18257-jbang" class="btn btn--primary">Jetbrains Marketplace</a></p>
-          
-        </div>
-      </div>
-    </div>
-  
-    <div class="feature__item">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="https://simpleicons.org/icons/eclipseide.svg" alt="" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">Eclipse</h2>
-          
-
-          
-
-          
-            <p><a href="https://marketplace.eclipse.org/content/jbang-eclipse-integration" class="btn btn--primary">Eclipse Marketplace</a></p>
-          
-        </div>
-      </div>
-    </div>
-  
-
+    </v-tabs>
+  </v-app>
 </div>
-
-<div class="feature__wrapper">
-
-  
-    <div class="feature__item">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="https://simpleicons.org/icons/vscodium.svg" alt="" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">GitPod</h2>
-          
-
-          
-
-          
-            <p><a href="https://open-vsx.org/extension/jbangdev/jbang-vscode" class="btn btn--primary">Open VSX Marketplace</a></p>
-          
-        </div>
-      </div>
-    </div>
-  
-    <div class="feature__item">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="https://simpleicons.org/icons/gitpod.svg" alt="" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">GitPod</h2>
-          
-
-          
-
-          
-            <p><a href="https://gitpod.io/#https://github.com/jbangdev/jbang-devcontainer-template" class="btn btn--primary">GitPod</a></p>
-          
-        </div>
-      </div>
-    </div>
-  
-    <div class="feature__item">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="https://simpleicons.org/icons/replit.svg" alt="" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">Repl.it</h2>
-          
-
-          
-
-          
-            <p><a href="https://replit.com/@maxandersen/jbang-replit-demo#.replit" class="btn btn--primary">Repl.it</a></p>
-          
-        </div>
-      </div>
-    </div>
-  
-
-</div>
-
+<script>
+new Vue({
+  el: '#app',
+  vuetify: new Vuetify(),
+  data () {
+    return {
+      tab: null,
+      items: [
+        'Appetizers', 'Entrees', 'Deserts', 'Cocktails',
+      ],
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    }
+  },
+})
+</script>
+<script src="/assets/js/os-check.js"></script>
+  <!-- Content End -->
 
     </section>
   </article>
