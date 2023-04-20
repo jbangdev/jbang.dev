@@ -24,6 +24,8 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
+import static java.lang.System.out;
+
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.nio.file.Files;
@@ -48,7 +50,8 @@ class appstore implements Callable<Integer> {
 
   static {
     excludedCatalogs.add("jbangdev/jbang/itests/jbang-catalog.json");
-   // excludedCatalogs.add("jbangdev/jbang/src/main/resources/jbang-catalog.json"); // todo: treat special to just have it be jbang -t xxx ?
+    // excludedCatalogs.add("jbangdev/jbang/src/main/resources/jbang-catalog.json");
+    // // todo: treat special to just have it be jbang -t xxx ?
   }
 
   @Option(names = { "-d",
@@ -68,35 +71,59 @@ class appstore implements Callable<Integer> {
     System.exit(exitCode);
   }
 
+  public static void printExceptionCauseChain(Throwable ex) {
+    while (ex != null) {
+        System.out.println(ex.getClass().getName() + ": " + ex.getMessage());
+        ex = ex.getCause();
+    }
+}
+
   @Override
   public Integer call() throws Exception {
     gitHub = GitHubBuilder.fromEnvironment().withOAuthToken(ghToken)
             .withAbuseLimitHandler(AbuseLimitHandler.WAIT)
             .withRateLimitHandler(RateLimitHandler.WAIT).build();
 
-    System.out.println(gitHub.getRateLimit().toString());
+    out.println(gitHub.getRateLimit().toString());
     var gson = new GsonBuilder().setPrettyPrinting().create();
     List<CatalogItem> aliasItems = new ArrayList<>();
     List<CatalogItem> templateItems = new ArrayList<>();
     PagedSearchIterable<GHContent> ghContents = gitHub.searchContent().filename("jbang-catalog.json").extension(".json")
-        .list().withPageSize(500);
-    for (GHContent content : ghContents) {
-      String location = content.getOwner().getFullName() + "/" + content.getPath();
-      if (excludedCatalogs.contains(location)) {
-        System.out.println("Excluded - " + location);
-      } else {
-        System.out.println("Processing - " + location);
-        TimeUnit.SECONDS.sleep(1);
-        var catalogContent = toJsonElement(gson, content);
-        if (catalogContent != null) {
-          catalogContent.aliases.entrySet().stream().map(entry -> toCatalogerItem(entry, content))
-              .forEach(aliasItems::add);
+        .list().withPageSize(5);
 
-          catalogContent.templates.entrySet().stream().map(entry -> templateToItem(entry, content))
-              .forEach(templateItems::add);
+       var it = ghContents.iterator();
+        int retries = 5;
+
+        while (retries > 0) {
+          try {
+            while (it.hasNext()) {
+              var content = it.next();
+              String location = content.getOwner().getFullName() + "/" + content.getPath();
+              if (excludedCatalogs.contains(location)) {
+                out.println("Excluded - " + location);
+              } else {
+                out.println("Processing - " + location);
+                TimeUnit.SECONDS.sleep(1);
+                var catalogContent = toJsonElement(gson, content);
+                if (catalogContent != null) {
+                  catalogContent.aliases.entrySet().stream().map(entry -> toCatalogerItem(entry, content))
+                      .forEach(aliasItems::add);
+
+                  catalogContent.templates.entrySet().stream().map(entry -> templateToItem(entry, content))
+                      .forEach(templateItems::add);
+                }
+              }
+              retries = 5;
+            }
+          } catch (GHException ghe) {
+            printExceptionCauseChain(ghe);
+            retries--;
+            if (retries > 0) {
+              out.println("Wait 3 minutes...retries:" + retries);
+              TimeUnit.MINUTES.sleep(3);
+            }
+          }
         }
-      }
-    }
 
     List<CatalogItem> sortedAliases = aliasItems.stream()
         .sorted(Comparator.comparing(catalogerItem -> -catalogerItem.stars)).collect(Collectors.toList());
@@ -109,7 +136,7 @@ class appstore implements Callable<Integer> {
     destinationDir.toFile().mkdirs();
     var path = destinationDir.resolve("jbang-appstore.json");
     Files.writeString(path, catalogerContent);
-    System.out.println("Generated file - " + path);
+    out.println("Generated file - " + path);
     return 0;
   }
 
@@ -168,7 +195,6 @@ class appstore implements Callable<Integer> {
       item.description = md2html(item.description);
     }
 
-    
     setupGeneralInfo(ghContent, item);
 
     StringBuffer cmd = aliasToCommand(ghContent, item.alias, item.repoName, item.repoOwner);
@@ -176,7 +202,6 @@ class appstore implements Callable<Integer> {
     item.command = cmd.toString();
     item.fullcommand = "jbang " + item.command + " app.java";
 
-    
     return item;
   }
 
@@ -201,7 +226,7 @@ class appstore implements Callable<Integer> {
     var document = parser.parse(markdown);
     HtmlRenderer renderer = HtmlRenderer.builder().extensions(extensions).sanitizeUrls(true).escapeHtml(true).build();
     var html = renderer.render(document);
-    //System.out.println(item.description + "=>" + html);
+    // System.out.println(item.description + "=>" + html);
     return html;
   }
 
@@ -212,7 +237,7 @@ class appstore implements Callable<Integer> {
     try (InputStream stream = catalogContent.read(); InputStreamReader streamR = new InputStreamReader(stream)) {
       try {
         json = gson.fromJson(streamR, Catalog.class);
-   
+
       } catch (JsonParseException e) {
         e.printStackTrace();
         json = null;
@@ -228,8 +253,8 @@ class Catalog {
 
   @Override
   public String toString() {
-     
-      return aliases.toString() +" - " + templates.toString();
+
+    return aliases.toString() + " - " + templates.toString();
 
   }
 }
@@ -249,7 +274,7 @@ class Cataloger {
   public final List<CatalogItem> aliases;
   private List<CatalogItem> templates;
   private int templateCount;
-  
+
   public Cataloger(List<CatalogItem> items, List<CatalogItem> sortedTemplates) {
     this.aliases = items;
     aliasCount = items.size();
