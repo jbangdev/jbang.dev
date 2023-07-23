@@ -551,7 +551,7 @@ state which repository URL to use.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mavencentral</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>central</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Maven Central (<code><a href="https://repo1.maven.org/maven2/" class="bare">https://repo1.maven.org/maven2/</a></code>)</p></td>
 </tr>
 <tr>
@@ -631,7 +631,7 @@ import groovy.lang.Grab; <i class="conum" data-value="1"></i><b>(1)</b>
 import groovy.lang.Grapes;
 import groovy.lang.GrabResolver;
 
-@GrabResolver("mavenCentral") <i class="conum" data-value="2"></i><b>(2)</b>
+@GrabResolver("central") <i class="conum" data-value="2"></i><b>(2)</b>
 @GrabResolver(name="acme", root="https://maven.acme.local/maven")
 @Grapes({ <i class="conum" data-value="3"></i><b>(3)</b>
 		@Grab(group = "ch.qos.reload4j", module = "reload4j", version = "1.2.19"), <i class="conum" data-value="4"></i><b>(4)</b>
