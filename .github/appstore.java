@@ -113,7 +113,7 @@ class appstore implements Callable<Integer> {
                       .forEach(templateItems::add);
                 }
               }
-              retries = 5;
+              retries = 0;
             }
           } catch (GHException ghe) {
             printExceptionCauseChain(ghe);
