@@ -9,35 +9,35 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>JBang Avatar - JBang</title>
-<meta name="description" content="&#8230;&#8203;all just to gource JBang!">
+<!-- begin _includes/seo.html --><title>jbang-python: Java in your Python - JBang</title>
+<meta name="description" content="Happy to announce jbang-python - a pypi package which brings your Java to your Python project or notebook.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="JBang">
-<meta property="og:title" content="JBang Avatar">
-<meta property="og:url" content="https://jbang.dev/learn/jbang-avatar/">
+<meta property="og:title" content="jbang-python: Java in your Python">
+<meta property="og:url" content="https://jbang.dev/learn/python-with-jbang/">
 
 
-  <meta property="og:description" content="&#8230;&#8203;all just to gource JBang!">
+  <meta property="og:description" content="Happy to announce jbang-python - a pypi package which brings your Java to your Python project or notebook.">
 
 
 
-  <meta property="og:image" content="https://jbang.dev/assets/images/avatar.jpg">
+  <meta property="og:image" content="https://github.com/jbangdev/jbang-python/blob/main/python_jbang.png?raw=true">
 
 
 
   <meta name="twitter:site" content="@jbangdev">
-  <meta name="twitter:title" content="JBang Avatar">
-  <meta name="twitter:description" content="&#8230;&#8203;all just to gource JBang!">
-  <meta name="twitter:url" content="https://jbang.dev/learn/jbang-avatar/">
+  <meta name="twitter:title" content="jbang-python: Java in your Python">
+  <meta name="twitter:description" content="Happy to announce jbang-python - a pypi package which brings your Java to your Python project or notebook.">
+  <meta name="twitter:url" content="https://jbang.dev/learn/python-with-jbang/">
 
   
     <meta name="twitter:card" content="summary">
     
-      <meta name="twitter:image" content="https://jbang.dev/assets/images/avatar.jpg">
+      <meta name="twitter:image" content="https://github.com/jbangdev/jbang-python/blob/main/python_jbang.png?raw=true">
     
   
 
@@ -45,7 +45,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-12-01T00:00:00+00:00">
+  <meta property="article:published_time" content="2023-09-11T00:00:00+00:00">
 
 
 
@@ -56,7 +56,7 @@
   
 
 
-<link rel="canonical" href="https://jbang.dev/learn/jbang-avatar/">
+<link rel="canonical" href="https://jbang.dev/learn/python-with-jbang/">
 
 
 
@@ -216,15 +216,15 @@ Vue.directive('highlightjs', {
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="JBang Avatar">
-    <meta itemprop="description" content="&#8230;&#8203;all just to gource JBang!">
-    <meta itemprop="datePublished" content="2020-12-01T00:00:00+00:00">
+    <meta itemprop="headline" content="jbang-python: Java in your Python">
+    <meta itemprop="description" content="Happy to announce jbang-python - a pypi package which brings your Java to your Python project or notebook.">
+    <meta itemprop="datePublished" content="2023-09-11T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">JBang Avatar
+          <h1 id="page-title" class="page__title" itemprop="headline">jbang-python: Java in your Python
 </h1>
           
 
@@ -240,7 +240,7 @@ Vue.directive('highlightjs', {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 minute read
+          less than 1 minute read
         
       </span>
     
@@ -255,169 +255,72 @@ Vue.directive('highlightjs', {
         <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>It is getting very close to the first anniversary of first commit of JBang.</p>
+<p>Happy to announce <a href="https://github.com/jbangdev/jbang-python">jbang-python</a> - a pypi package which brings your Java to your Python project or notebook.</p>
+</div>
+<div class="paragraph text-center">
+<p><span class="image"><img src="https://github.com/jbangdev/jbang-python/blob/main/python_jbang.png?raw=true" alt="python jbang" width="50%"></span></p>
 </div>
 <div class="paragraph">
-<p>To celebrate I looked around to see what we could do and was reminded about good old <a href="https://gource.io">Gource</a>.</p>
+<p><code>jbang-python</code> supports running any kind java code that JBang supports.</p>
 </div>
 <div class="paragraph">
-<p>With Gource you can render the history of a git repository and get a nice animated video, including flying icons for each author. Trouble is that by default they are just faceless heads - lets get some faces to all those names.</p>
-</div>
-<div class="paragraph">
-<p>I found a <a href="https://gist.github.com/pmdgithub/706587">perl script</a> that took all committer emails and located their gravatar image; but it was Perl&#8230;&#8203;so lets make that java instead and use JBang.</p>
-</div>
-<div class="paragraph">
-<p>The full example is available <a href="https://github.com/jbangdev/jbang/blob/HEAD/examples/grabavatars.java">here</a>, below I&#8217;ll walk through the various interesting parts.</p>
-</div>
-<div class="paragraph">
-<p>If you want to just directly run it do this:</p>
-</div>
-<div class="paragraph">
-<p><code>jbang <a href="https://github.com/jbangdev/jbang/blob/HEAD/examples/grabavatars.java" class="bare">https://github.com/jbangdev/jbang/blob/HEAD/examples/grabavatars.java</a></code></p>
-</div>
-<div class="paragraph">
-<p>To begin with you just get started with <code>jbang init -t cli grab-avatar</code>.</p>
-</div>
-<div class="paragraph">
-<p>This will create a file named <code>grabavatar.java</code> with some pre-seeded code that does a Hello World! style app using picocli plus it will mark the file as executable.</p>
+<p>Wether that is a script from the <a href="https://jbang.dev/appstore">AppStore</a>, a Maven GAV, a jar or simply a java file stored in your project.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="setup-dependencies-and-main-class">Setup dependencies and main class</h2>
+<h2 id="example">Example</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Then in top we are going to add a few dependencies:</p>
-</div>
-<div class="listingblock">
-<div class="title">Dependencies</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">///usr/bin/env jbang "$0" "$@" ; exit $? 
-//DEPS info.picocli:picocli:4.5.0  
-//DEPS org.zeroturnaround:zt-exec:1.12 
-//DEPS commons-codec:commons-codec:1.15 
-//DEPS org.slf4j:slf4j-nop:1.7.30 </code></pre>
-</div>
+<p>In your <code>requirements.txt</code> add:</p>
 </div>
 <div class="paragraph">
-<p>The first line is the magic "shebang" line that bash and other shells will interpret but for java it is just a comment. This is what allows you to run the script directly using <code>./grab-avatar</code></p>
+<p><code>jbang-python</code></p>
 </div>
 <div class="paragraph">
-<p>The dependencies used are as follows:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Picocli for annotation based command line parsing and help generation.</p>
-</li>
-<li>
-<p><code>zt-exec</code> is a nice library to execute processes in a nice fluent way.</p>
-</li>
-<li>
-<p><code>commons-coded</code> just because default Java don&#8217;t have a one-liner for MD5 hash generation.</p>
-</li>
-<li>
-<p>No Operation slf4j to avoid the default noise slf4j generates.</p>
-</li>
-</ul>
+<p>or install it using <code>pip install jbang</code></p>
 </div>
 <div class="paragraph">
-<p>When you run <code>./grabavatars.java</code> or <code>jbang grabavatars.java</code> these starting lines with <code>//DEPS</code> in them will be parsed and JBang fetches the dependencies to use during compilation and execution of your script.</p>
-</div>
-<div class="paragraph">
-<p>The next is the class declaration which is mainly just annotations to define the main picocli command.</p>
-</div>
-<div class="listingblock">
-<div class="title">class declaration</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Command(name = "GrabAvatars", mixinStandardHelpOptions = true, version = "GrabAvatars 0.1",
-        description = "GrabAvatars made with jbang")
-class grabavatars implements Callable&lt;Integer&gt; {</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="iteration-over-execution">Iteration over execution</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Then the meat of the code is to run <code>git log --pretty=format:%ae|%an"</code> which will return a line for every commit with email and author, like:</p>
+<p>Then in your python code you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">max@xam.dk|Max Rydahl Andersen</code></pre>
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">import jbang
+output = jbang.exec('--java 21', 'properties@jbangdev', 'java').stdout
+print(output)
+output = jbang.exec('hello.java').stdout
+print(output)</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>To do this I use <code>zt-exec</code> which has this great "one-liner" to run the process and for every line output let me process it.</p>
+<p>With a <code>hello.java</code> that contains:</p>
 </div>
 <div class="listingblock">
-<div class="title">processing command</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">        new ProcessExecutor().command("git", "log", "--pretty=format:%ae|%an")
-                .redirectOutput(new LogOutputStream() {
-                    @Override
-                    protected void processLine(String line) {
-                        String[] data = line.split("\\|");
-                        String email = data[0].toLowerCase();
-                        String author = data[1];</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="md5-and-download">MD5 and Download</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>And finally for every identified email and author - generates MD5 and download the url.</p>
-</div>
-<div class="listingblock">
-<div class="title">processing command</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">                        URL grav_url = new URL("http://www.gravatar.com/avatar/"
-                                    + DigestUtils.md5Hex(email)
-                                    + "?d=404&amp;size=" + size);
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//DEPS com.github.lalyos:jfiglet:0.0.8
 
-                        try(InputStream in = grav_url.openStream()) {
-                            Files.copy(in, authorImageFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-                        }</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="all-together-now">All together now</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Now to run this when I have it locally is just: <code>./grab-avatars</code> in root of a git repository.</p>
-</div>
-<div class="paragraph">
-<p>But you can also run this directly from a url using:</p>
-</div>
-<div class="paragraph">
-<p><code>jbang <a href="https://github.com/jbangdev/jbang/blob/HEAD/examples/grab-avatars" class="bare">https://github.com/jbangdev/jbang/blob/HEAD/examples/grab-avatars</a></code></p>
-</div>
-<div class="paragraph">
-<p>And then then you can go full out and render with gource - notice the <code>--user-image-dir .git/avatar</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">gource --title JBang --stop-at-end --user-image-dir .git/avatar --seconds-per-day 0.05 --auto-skip-seconds 1 -1280x720 --hide filenames -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 1 -threads 0 -bf 0 gource.mp4</code></pre>
+import com.github.lalyos.jfiglet.FigletFont;
+
+class hello {
+
+    public static void main(String... args) throws Exception {
+        System.out.println(FigletFont.convertOneLine(
+               "Hello " + ((args.length&gt;0)?args[0]:"jbang")));  ;;
+    }
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Then you get a video which with a little bit of magic of video editing that looks something like this:</p>
-</div>
-<div class="videoblock">
-<div class="content">
-<iframe width="640" height="360" src="https://www.youtube.com/embed/da0CuVbvWLg?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
+<p>When you run this it will automatically install JBang and Java if necessary and then run the requested alias and java code.</p>
 </div>
 <div class="paragraph">
-<p>And that is about it - showed how to get started with jbang to port an existing perl script to java using a few dependencies.</p>
+<p>Besides using it in your python code locally you can also use it from Jupyter Notebooks.</p>
 </div>
 <div class="paragraph">
-<p>See you next time!</p>
+<p>The <code>jbang-python</code> package is available on <a href="https://pypi.org/project/jbang/">pypi</a> and the source code is available on <a href="https://github.com/jbangdev/jbang-python" class="bare">https://github.com/jbangdev/jbang-python</a>.</p>
+</div>
+<div class="paragraph">
+<p>Have fun!</p>
 </div>
 </div>
 </div>
@@ -436,13 +339,7 @@ class grabavatars implements Callable&lt;Integer&gt; {</code></pre>
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#beginner" class="page__taxonomy-item" rel="tag">beginner</a><span class="sep">, </span>
-    
-      <a href="/tags/#intro" class="page__taxonomy-item" rel="tag">intro</a><span class="sep">, </span>
-    
-      <a href="/tags/#jbang" class="page__taxonomy-item" rel="tag">jbang</a><span class="sep">, </span>
-    
-      <a href="/tags/#tutorial" class="page__taxonomy-item" rel="tag">tutorial</a>
+      <a href="/tags/#jbang" class="page__taxonomy-item" rel="tag">jbang</a>
     
     </span>
   </p>
@@ -467,7 +364,7 @@ class grabavatars implements Callable&lt;Integer&gt; {</code></pre>
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-12-01T00:00:00+00:00">December 1, 2020</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2023-09-11T00:00:00+00:00">September 11, 2023</time></p>
 
 
       </footer>
@@ -477,23 +374,22 @@ class grabavatars implements Callable&lt;Integer&gt; {</code></pre>
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?via=jbangdev&text=JBang+Avatar%20https%3A%2F%2Fjbang.dev%2Flearn%2Fjbang-avatar%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?via=jbangdev&text=jbang-python%3A+Java+in+your+Python%20https%3A%2F%2Fjbang.dev%2Flearn%2Fpython-with-jbang%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjbang.dev%2Flearn%2Fjbang-avatar%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjbang.dev%2Flearn%2Fpython-with-jbang%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjbang.dev%2Flearn%2Fjbang-avatar%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjbang.dev%2Flearn%2Fpython-with-jbang%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/learn/beyondhello/" class="pagination--pager" title="Beyond Hello World!
+      <a href="/learn/jbang-npm/" class="pagination--pager" title="jbang-npm: Java Script in your JavaScript
 ">Previous</a>
     
     
-      <a href="/learn/jep-408-with-jbang/" class="pagination--pager" title="JEP 408: Simple Web Server with JBang
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -516,52 +412,6 @@ class grabavatars implements Callable&lt;Integer&gt; {</code></pre>
     <div class="page__related">
       <h4 class="page__related-title">You may also enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="https://github.com/jbangdev/jbang-python/blob/main/python_jbang.png?raw=true" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/learn/python-with-jbang/" rel="permalink">jbang-python: Java in your Python
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-Happy to announce jbang-python - a pypi package which brings your Java to your Python project or notebook.
-
-</p>
-  </article>
-</div>
-
         
           
 
@@ -693,6 +543,52 @@ We just closed on a very busy 2021 for JBang, and especially in the last few wee
 
     <p class="archive__item-excerpt" itemprop="description">
 In March JEP: 408: Simple Web Server was announced. One of JEP 408&#8217;s goals is to make an easy to use web server available with Java using java -m jdk....</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/avatar.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/learn/jbang-avatar/" rel="permalink">JBang Avatar
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+&#8230;&#8203;all just to gource JBang!
+
+</p>
   </article>
 </div>
 

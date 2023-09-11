@@ -28,4 +28,10 @@ var store = [{
         "tags": ["jbang"],
         "url": "/learn/jbang-npm/",
         "teaser": "/assets/images/java_script.png"
+      },{
+        "title": "jbang-python: Java in your Python",
+        "excerpt":"Happy to announce jbang-python - a pypi package which brings your Java to your Python project or notebook. jbang-python supports running any kind java code that JBang supports. Wether that is a script from the AppStore, a Maven GAV, a jar or simply a java file stored in your project....","categories": ["learn"],
+        "tags": ["jbang"],
+        "url": "/learn/python-with-jbang/",
+        "teaser": "https://github.com/jbangdev/jbang-python/blob/main/python_jbang.png?raw=true"
       }]
