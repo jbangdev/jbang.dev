@@ -40,6 +40,13 @@ layout: splash
       <v-tab>Gradle
         <v-icon>mdi-hammer</v-icon>
       </v-tab>
+      <v-tab>JavaScript
+        <v-icon>mdi-language-javascript</v-icon>
+      </v-tab>
+      <v-tab>Python
+        <v-icon>mdi-language-python</v-icon>
+      </v-tab>
+
     
       <v-tab-item>
         <h3>curl/iex</h3>
@@ -157,7 +164,40 @@ dnf install jbang</pre>
 }</code>
           </pre>
         </v-tab-item>
+        <v-tab-item>
+          <p>Install and use JBang from JavaScript</p>
 
+          <pre v-highlightjs>
+package.json:
+<code class="language-javascript">{
+  "scripts": {
+    "test": "node test.js"
+  },
+  "devDependencies": {
+    "@jbangdev/jbang": "^0.1.4"
+  }
+}
+</code>
+<code class="language-javascript">#! /usr/bin/env node
+const jbang = require('@jbangdev/jbang');
+jbang.exec('properties@jbangdev');</code>
+          </pre>
+        </v-tab-item>
+        <v-tab-item>
+          <p>Install and use JBang from Python</p>
+
+          <pre v-highlightjs>
+requirements.txt:
+<code>jbang
+</code>
+test.py:
+<code class="language-python">
+#! /usr/bin/env python
+import jbang
+jbang.exec('properties@jbangdev')
+</code>
+          </pre>
+        </v-tab-item>
     </v-tabs>
   </v-app>
 </div>
