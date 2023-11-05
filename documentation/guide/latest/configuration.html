@@ -407,6 +407,69 @@ classpath:/jbang.properties
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="proxy-configuration"><a class="anchor" href="#proxy-configuration"></a>Proxy configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you use proxies there are a few settings to apply to make JBang <strong>fully</strong> work with proxies. Unfortunately Java treats proxy setup a little bit different based on OS and environment.</p>
+</div>
+<div class="paragraph">
+<p>First the proxy settings for bash/zsh scripting part (needed if jbang nor java is not already installed). If you use Windows, OSX or Gnome Linux and have proxy configured it <strong>should</strong> just but if not setting the <code>http_proxy</code> and <code>https_proxy</code> environment variables will enable JBang scripts to access the proxy. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">http_proxy=http://proxyhost:8888
+https_proxy=http://proxyhost:8888</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Second the proxy settings for Java itself. This is done by setting the <code>JAVA_TOOL_OPTIONS</code> environment variable. For systems with proxy setup built in you can use system proxies like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">JAVA_TOOL_OPTIONS="-D-Djava.net.useSystemProxies=true"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>if that does not work set it using Java http.proxy properties:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">export JAVA_TOOL_OPTIONS="-Dhttp.proxyHost=proxyhost -Dhttp.proxyPort=8888 -Dhttps.proxyHost=proxyhost -Dhttps.proxyPort=8888"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Finally JBang uses maven resolver to download dependencies. Maven resolver uses the <code>settings.xml</code> file to configure proxies. The <code>settings.xml</code> file is usually located in <code>~/.m2/settings.xml</code>. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                              http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
+    &lt;proxies&gt;
+        &lt;!-- For HTTP --&gt;
+        &lt;proxy&gt;
+            &lt;id&gt;http-proxy&lt;/id&gt;
+            &lt;active&gt;true&lt;/active&gt;
+            &lt;protocol&gt;http&lt;/protocol&gt;
+            &lt;host&gt;proxyhost&lt;/host&gt;
+            &lt;port&gt;8888&lt;/port&gt;
+        &lt;/proxy&gt;
+        &lt;!-- For HTTPS --&gt;
+        &lt;proxy&gt;
+            &lt;id&gt;https-proxy&lt;/id&gt;
+            &lt;active&gt;true&lt;/active&gt;
+            &lt;protocol&gt;https&lt;/protocol&gt;
+            &lt;host&gt;proxyhost&lt;/host&gt;
+            &lt;port&gt;8888&lt;/port&gt;
+        &lt;/proxy&gt;
+    &lt;/proxies&gt;
+&lt;/settings&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
 <nav class="pagination">
   <span class="prev"><a href="integration.html">Integration</a></span>
   <span class="next"><a href="caching.html">Caching</a></span>
