@@ -1,8 +1,8 @@
 {
-  "aliasCount": 392,
+  "aliasCount": 399,
   "aliases": [
     {
-      "stars": 35274,
+      "stars": 35283,
       "icon_url": "https://avatars.githubusercontent.com/u/1022859?v\u003d4",
       "repoOwner": "eugenp",
       "repoName": "tutorials",
@@ -10,10 +10,10 @@
       "scriptRef": "hello.java",
       "command": "hello@eugenp/tutorials~jbang",
       "fullcommand": "jbang hello@eugenp/tutorials~jbang app.java",
-      "link": "https://github.com/eugenp/tutorials/blob/242d793fa8b836f696ba14d380808b0fc9d85885/jbang/jbang-catalog.json"
+      "link": "https://github.com/eugenp/tutorials/blob/d1a65a0d8f5572102618a7381562e22417240850/jbang/jbang-catalog.json"
     },
     {
-      "stars": 35274,
+      "stars": 35283,
       "icon_url": "https://avatars.githubusercontent.com/u/1022859?v\u003d4",
       "repoOwner": "eugenp",
       "repoName": "tutorials",
@@ -21,10 +21,10 @@
       "scriptRef": "hellocli.java",
       "command": "hellocli@eugenp/tutorials~jbang",
       "fullcommand": "jbang hellocli@eugenp/tutorials~jbang app.java",
-      "link": "https://github.com/eugenp/tutorials/blob/242d793fa8b836f696ba14d380808b0fc9d85885/jbang/jbang-catalog.json"
+      "link": "https://github.com/eugenp/tutorials/blob/d1a65a0d8f5572102618a7381562e22417240850/jbang/jbang-catalog.json"
     },
     {
-      "stars": 35274,
+      "stars": 35283,
       "icon_url": "https://avatars.githubusercontent.com/u/1022859?v\u003d4",
       "repoOwner": "eugenp",
       "repoName": "tutorials",
@@ -32,10 +32,10 @@
       "scriptRef": "jbangquarkus.java",
       "command": "jbangquarkus@eugenp/tutorials~jbang",
       "fullcommand": "jbang jbangquarkus@eugenp/tutorials~jbang app.java",
-      "link": "https://github.com/eugenp/tutorials/blob/242d793fa8b836f696ba14d380808b0fc9d85885/jbang/jbang-catalog.json"
+      "link": "https://github.com/eugenp/tutorials/blob/d1a65a0d8f5572102618a7381562e22417240850/jbang/jbang-catalog.json"
     },
     {
-      "stars": 12620,
+      "stars": 12624,
       "icon_url": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
       "repoOwner": "quarkusio",
       "repoName": "quarkus",
@@ -43,10 +43,10 @@
       "scriptRef": "RevapiUpdate.java",
       "command": "revapi-update@quarkusio/quarkus~.jbang",
       "fullcommand": "jbang revapi-update@quarkusio/quarkus~.jbang app.java",
-      "link": "https://github.com/quarkusio/quarkus/blob/e1c4c96ee8a07149102c830999cbea1edadcf4d2/.jbang/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/quarkus/blob/02a2f75028dd77fe1f582726e605cfe4d992cd4a/.jbang/jbang-catalog.json"
     },
     {
-      "stars": 7547,
+      "stars": 7551,
       "icon_url": "https://avatars.githubusercontent.com/u/91312095?v\u003d4",
       "repoOwner": "karatelabs",
       "repoName": "karate",
@@ -57,7 +57,7 @@
       "link": "https://github.com/karatelabs/karate/blob/628428c5f94772a40ae6f330f806388e6dfb0118/jbang-catalog.json"
     },
     {
-      "stars": 5160,
+      "stars": 5162,
       "icon_url": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
       "repoOwner": "apache",
       "repoName": "camel",
@@ -66,7 +66,7 @@
       "scriptRef": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
       "command": "camel@apache/camel",
       "fullcommand": "jbang camel@apache/camel app.java",
-      "link": "https://github.com/apache/camel/blob/c65a2e6509f4a264cac031e2de013e62c0610fa9/jbang-catalog.json"
+      "link": "https://github.com/apache/camel/blob/7381d932865dfd3abafd081e1a72a9f106ebf856/jbang-catalog.json"
     },
     {
       "stars": 1659,
@@ -89,7 +89,7 @@
       "scriptRef": "hawtio-jbang/dist/HawtioJBang.java",
       "command": "hawtio@hawtio/hawtio",
       "fullcommand": "jbang hawtio@hawtio/hawtio app.java",
-      "link": "https://github.com/hawtio/hawtio/blob/30011b15ca89b2593c0d7bb191cd4171383631ce/jbang-catalog.json"
+      "link": "https://github.com/hawtio/hawtio/blob/e1fe577864e8d208c3ece8b51ef98a962546b4da/jbang-catalog.json"
     },
     {
       "stars": 1051,
@@ -125,7 +125,7 @@
       "scriptRef": "tooling/jbang/Example.java",
       "command": "example@hibernate/hibernate-reactive",
       "fullcommand": "jbang example@hibernate/hibernate-reactive app.java",
-      "link": "https://github.com/hibernate/hibernate-reactive/blob/0f0ec1ac0355e9ae664946993b34e3b17c3dd45d/jbang-catalog.json"
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/56fe152cec3219d36284893d938f44bbfd4bfdbe/jbang-catalog.json"
     },
     {
       "stars": 405,
@@ -137,10 +137,10 @@
       "scriptRef": "tooling/jbang/ReactiveTest.java",
       "command": "testcase@hibernate/hibernate-reactive",
       "fullcommand": "jbang testcase@hibernate/hibernate-reactive app.java",
-      "link": "https://github.com/hibernate/hibernate-reactive/blob/0f0ec1ac0355e9ae664946993b34e3b17c3dd45d/jbang-catalog.json"
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/56fe152cec3219d36284893d938f44bbfd4bfdbe/jbang-catalog.json"
     },
     {
-      "stars": 110,
+      "stars": 111,
       "icon_url": "https://avatars.githubusercontent.com/u/26695883?v\u003d4",
       "repoOwner": "jvm-profiling-tools",
       "repoName": "ap-loader",
@@ -1179,7 +1179,7 @@
       "scriptRef": "main.java",
       "command": "main@jbangdev/jbang.dev",
       "fullcommand": "jbang main@jbangdev/jbang.dev app.java",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/6b5966464b6338a15151deea511185ab8be2389c/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang.dev/blob/862942a1b624840d80c029c2f03f98f1a7a113ff/jbang-catalog.json"
     },
     {
       "stars": 10,
@@ -1190,7 +1190,7 @@
       "scriptRef": "tree/main.java",
       "command": "tree@jbangdev/jbang.dev",
       "fullcommand": "jbang tree@jbangdev/jbang.dev app.java",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/6b5966464b6338a15151deea511185ab8be2389c/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang.dev/blob/862942a1b624840d80c029c2f03f98f1a7a113ff/jbang-catalog.json"
     },
     {
       "stars": 8,
@@ -2278,7 +2278,7 @@
       "scriptRef": "jreleaser.java",
       "command": "jreleaser@jreleaser",
       "fullcommand": "jbang jreleaser@jreleaser app.java",
-      "link": "https://github.com/jreleaser/jbang-catalog/blob/168cdcd70a642e8aa5ccf40465032be402917fd7/jbang-catalog.json"
+      "link": "https://github.com/jreleaser/jbang-catalog/blob/945669c76ac18d8e36bce0cbb69026186d62103e/jbang-catalog.json"
     },
     {
       "stars": 2,
@@ -2290,7 +2290,7 @@
       "scriptRef": "jreleaser_snapshot.java",
       "command": "jreleaser-snapshot@jreleaser",
       "fullcommand": "jbang jreleaser-snapshot@jreleaser app.java",
-      "link": "https://github.com/jreleaser/jbang-catalog/blob/168cdcd70a642e8aa5ccf40465032be402917fd7/jbang-catalog.json"
+      "link": "https://github.com/jreleaser/jbang-catalog/blob/945669c76ac18d8e36bce0cbb69026186d62103e/jbang-catalog.json"
     },
     {
       "stars": 2,
@@ -3245,7 +3245,7 @@
       "scriptRef": "html/html.java",
       "command": "html@jianglibo",
       "fullcommand": "jbang html@jianglibo app.java",
-      "link": "https://github.com/jianglibo/jbang-catalog/blob/393b6de786377db1261f5e3e2fb6541bd3c9778d/jbang-catalog.json"
+      "link": "https://github.com/jianglibo/jbang-catalog/blob/325c41edf5b87e4ab91681b260ce69eda7a6cbe6/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -3257,7 +3257,7 @@
       "scriptRef": "rollup/rollup.java",
       "command": "rollup@jianglibo",
       "fullcommand": "jbang rollup@jianglibo app.java",
-      "link": "https://github.com/jianglibo/jbang-catalog/blob/393b6de786377db1261f5e3e2fb6541bd3c9778d/jbang-catalog.json"
+      "link": "https://github.com/jianglibo/jbang-catalog/blob/325c41edf5b87e4ab91681b260ce69eda7a6cbe6/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -3269,7 +3269,7 @@
       "scriptRef": "text/text.java",
       "command": "text@jianglibo",
       "fullcommand": "jbang text@jianglibo app.java",
-      "link": "https://github.com/jianglibo/jbang-catalog/blob/393b6de786377db1261f5e3e2fb6541bd3c9778d/jbang-catalog.json"
+      "link": "https://github.com/jianglibo/jbang-catalog/blob/325c41edf5b87e4ab91681b260ce69eda7a6cbe6/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -3281,7 +3281,7 @@
       "scriptRef": "snapshot/snapshot.java",
       "command": "snapshot@jianglibo",
       "fullcommand": "jbang snapshot@jianglibo app.java",
-      "link": "https://github.com/jianglibo/jbang-catalog/blob/393b6de786377db1261f5e3e2fb6541bd3c9778d/jbang-catalog.json"
+      "link": "https://github.com/jianglibo/jbang-catalog/blob/325c41edf5b87e4ab91681b260ce69eda7a6cbe6/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -3293,7 +3293,7 @@
       "scriptRef": "command/command.java",
       "command": "command@jianglibo",
       "fullcommand": "jbang command@jianglibo app.java",
-      "link": "https://github.com/jianglibo/jbang-catalog/blob/393b6de786377db1261f5e3e2fb6541bd3c9778d/jbang-catalog.json"
+      "link": "https://github.com/jianglibo/jbang-catalog/blob/325c41edf5b87e4ab91681b260ce69eda7a6cbe6/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -3305,7 +3305,19 @@
       "scriptRef": "download/download.java",
       "command": "download@jianglibo",
       "fullcommand": "jbang download@jianglibo app.java",
-      "link": "https://github.com/jianglibo/jbang-catalog/blob/393b6de786377db1261f5e3e2fb6541bd3c9778d/jbang-catalog.json"
+      "link": "https://github.com/jianglibo/jbang-catalog/blob/325c41edf5b87e4ab91681b260ce69eda7a6cbe6/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/27719?v\u003d4",
+      "repoOwner": "jianglibo",
+      "repoName": "jbang-catalog",
+      "alias": "neovim",
+      "description": "\u003cp\u003ea neovim ide.\u003c/p\u003e\n",
+      "scriptRef": "neovim/neovim.java",
+      "command": "neovim@jianglibo",
+      "fullcommand": "jbang neovim@jianglibo app.java",
+      "link": "https://github.com/jianglibo/jbang-catalog/blob/325c41edf5b87e4ab91681b260ce69eda7a6cbe6/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -3316,7 +3328,7 @@
       "scriptRef": "com.h2database:h2:1.4.200",
       "command": "h2@jianglibo",
       "fullcommand": "jbang h2@jianglibo app.java",
-      "link": "https://github.com/jianglibo/jbang-catalog/blob/393b6de786377db1261f5e3e2fb6541bd3c9778d/jbang-catalog.json"
+      "link": "https://github.com/jianglibo/jbang-catalog/blob/325c41edf5b87e4ab91681b260ce69eda7a6cbe6/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -3327,7 +3339,7 @@
       "scriptRef": "catalog2readme.java",
       "command": "catalog2readme@jianglibo",
       "fullcommand": "jbang catalog2readme@jianglibo app.java",
-      "link": "https://github.com/jianglibo/jbang-catalog/blob/393b6de786377db1261f5e3e2fb6541bd3c9778d/jbang-catalog.json"
+      "link": "https://github.com/jianglibo/jbang-catalog/blob/325c41edf5b87e4ab91681b260ce69eda7a6cbe6/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -3906,7 +3918,7 @@
       "scriptRef": "hello.java",
       "command": "hello@Baeldung/test-history-3~jbang",
       "fullcommand": "jbang hello@Baeldung/test-history-3~jbang app.java",
-      "link": "https://github.com/Baeldung/test-history-3/blob/4cbfcef246858add6ec5741bb18148ef4610cb4f/jbang/jbang-catalog.json"
+      "link": "https://github.com/Baeldung/test-history-3/blob/97b1af3175a7ee5923cfa80b874f356aee0259b1/jbang/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -3917,7 +3929,7 @@
       "scriptRef": "hellocli.java",
       "command": "hellocli@Baeldung/test-history-3~jbang",
       "fullcommand": "jbang hellocli@Baeldung/test-history-3~jbang app.java",
-      "link": "https://github.com/Baeldung/test-history-3/blob/4cbfcef246858add6ec5741bb18148ef4610cb4f/jbang/jbang-catalog.json"
+      "link": "https://github.com/Baeldung/test-history-3/blob/97b1af3175a7ee5923cfa80b874f356aee0259b1/jbang/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -3928,7 +3940,40 @@
       "scriptRef": "jbangquarkus.java",
       "command": "jbangquarkus@Baeldung/test-history-3~jbang",
       "fullcommand": "jbang jbangquarkus@Baeldung/test-history-3~jbang app.java",
-      "link": "https://github.com/Baeldung/test-history-3/blob/4cbfcef246858add6ec5741bb18148ef4610cb4f/jbang/jbang-catalog.json"
+      "link": "https://github.com/Baeldung/test-history-3/blob/97b1af3175a7ee5923cfa80b874f356aee0259b1/jbang/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/22412497?v\u003d4",
+      "repoOwner": "Baeldung",
+      "repoName": "test-history-5",
+      "alias": "hello",
+      "scriptRef": "hello.java",
+      "command": "hello@Baeldung/test-history-5~jbang",
+      "fullcommand": "jbang hello@Baeldung/test-history-5~jbang app.java",
+      "link": "https://github.com/Baeldung/test-history-5/blob/128c9693576f0c1963615f13f99621be9bf3f48e/jbang/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/22412497?v\u003d4",
+      "repoOwner": "Baeldung",
+      "repoName": "test-history-5",
+      "alias": "hellocli",
+      "scriptRef": "hellocli.java",
+      "command": "hellocli@Baeldung/test-history-5~jbang",
+      "fullcommand": "jbang hellocli@Baeldung/test-history-5~jbang app.java",
+      "link": "https://github.com/Baeldung/test-history-5/blob/128c9693576f0c1963615f13f99621be9bf3f48e/jbang/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/22412497?v\u003d4",
+      "repoOwner": "Baeldung",
+      "repoName": "test-history-5",
+      "alias": "jbangquarkus",
+      "scriptRef": "jbangquarkus.java",
+      "command": "jbangquarkus@Baeldung/test-history-5~jbang",
+      "fullcommand": "jbang jbangquarkus@Baeldung/test-history-5~jbang app.java",
+      "link": "https://github.com/Baeldung/test-history-5/blob/128c9693576f0c1963615f13f99621be9bf3f48e/jbang/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -4328,6 +4373,39 @@
     },
     {
       "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/22412497?v\u003d4",
+      "repoOwner": "Baeldung",
+      "repoName": "test-history-4",
+      "alias": "hello",
+      "scriptRef": "hello.java",
+      "command": "hello@Baeldung/test-history-4~jbang",
+      "fullcommand": "jbang hello@Baeldung/test-history-4~jbang app.java",
+      "link": "https://github.com/Baeldung/test-history-4/blob/128c9693576f0c1963615f13f99621be9bf3f48e/jbang/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/22412497?v\u003d4",
+      "repoOwner": "Baeldung",
+      "repoName": "test-history-4",
+      "alias": "hellocli",
+      "scriptRef": "hellocli.java",
+      "command": "hellocli@Baeldung/test-history-4~jbang",
+      "fullcommand": "jbang hellocli@Baeldung/test-history-4~jbang app.java",
+      "link": "https://github.com/Baeldung/test-history-4/blob/128c9693576f0c1963615f13f99621be9bf3f48e/jbang/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/22412497?v\u003d4",
+      "repoOwner": "Baeldung",
+      "repoName": "test-history-4",
+      "alias": "jbangquarkus",
+      "scriptRef": "jbangquarkus.java",
+      "command": "jbangquarkus@Baeldung/test-history-4~jbang",
+      "fullcommand": "jbang jbangquarkus@Baeldung/test-history-4~jbang app.java",
+      "link": "https://github.com/Baeldung/test-history-4/blob/128c9693576f0c1963615f13f99621be9bf3f48e/jbang/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
       "icon_url": "https://avatars.githubusercontent.com/u/31179784?v\u003d4",
       "repoOwner": "zubairmujeeb",
       "repoName": "spring-boot-sample-projects",
@@ -4616,7 +4694,7 @@
       "description": "\u003cp\u003eTemplate for a test with PostgreSQL using Junit 4, Vert.x Unit and Testcontainers\u003c/p\u003e\n",
       "command": "pg-reproducer@hibernate/hibernate-reactive",
       "fullcommand": "jbang init -t pg-reproducer@hibernate/hibernate-reactive app.java",
-      "link": "https://github.com/hibernate/hibernate-reactive/blob/0f0ec1ac0355e9ae664946993b34e3b17c3dd45d/jbang-catalog.json"
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/56fe152cec3219d36284893d938f44bbfd4bfdbe/jbang-catalog.json"
     },
     {
       "stars": 405,
@@ -4627,7 +4705,7 @@
       "description": "\u003cp\u003eTemplate for a test with MySQL using Junit 4, Vert.x Unit and Testcontainers\u003c/p\u003e\n",
       "command": "mysql-reproducer@hibernate/hibernate-reactive",
       "fullcommand": "jbang init -t mysql-reproducer@hibernate/hibernate-reactive app.java",
-      "link": "https://github.com/hibernate/hibernate-reactive/blob/0f0ec1ac0355e9ae664946993b34e3b17c3dd45d/jbang-catalog.json"
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/56fe152cec3219d36284893d938f44bbfd4bfdbe/jbang-catalog.json"
     },
     {
       "stars": 405,
@@ -4638,7 +4716,7 @@
       "description": "\u003cp\u003eTemplate for a test with MariaDB using Junit 4, Vert.x Unit and Testcontainers\u003c/p\u003e\n",
       "command": "mariadb-reproducer@hibernate/hibernate-reactive",
       "fullcommand": "jbang init -t mariadb-reproducer@hibernate/hibernate-reactive app.java",
-      "link": "https://github.com/hibernate/hibernate-reactive/blob/0f0ec1ac0355e9ae664946993b34e3b17c3dd45d/jbang-catalog.json"
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/56fe152cec3219d36284893d938f44bbfd4bfdbe/jbang-catalog.json"
     },
     {
       "stars": 405,
@@ -4649,7 +4727,7 @@
       "description": "\u003cp\u003eTemplate for a test with Db2 using Junit 4, Vert.x Unit and Testcontainers\u003c/p\u003e\n",
       "command": "db2-reproducer@hibernate/hibernate-reactive",
       "fullcommand": "jbang init -t db2-reproducer@hibernate/hibernate-reactive app.java",
-      "link": "https://github.com/hibernate/hibernate-reactive/blob/0f0ec1ac0355e9ae664946993b34e3b17c3dd45d/jbang-catalog.json"
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/56fe152cec3219d36284893d938f44bbfd4bfdbe/jbang-catalog.json"
     },
     {
       "stars": 405,
@@ -4660,7 +4738,7 @@
       "description": "\u003cp\u003eTemplate for a test with CockroachDB using Junit 4, Vert.x Unit and Testcontainers\u003c/p\u003e\n",
       "command": "cockroachdb-reproducer@hibernate/hibernate-reactive",
       "fullcommand": "jbang init -t cockroachdb-reproducer@hibernate/hibernate-reactive app.java",
-      "link": "https://github.com/hibernate/hibernate-reactive/blob/0f0ec1ac0355e9ae664946993b34e3b17c3dd45d/jbang-catalog.json"
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/56fe152cec3219d36284893d938f44bbfd4bfdbe/jbang-catalog.json"
     },
     {
       "stars": 51,
@@ -4846,7 +4924,7 @@
       "description": "\u003cp\u003eSimple cli to querying github\u003c/p\u003e\n",
       "command": "github@jianglibo",
       "fullcommand": "jbang init -t github@jianglibo app.java",
-      "link": "https://github.com/jianglibo/jbang-catalog/blob/393b6de786377db1261f5e3e2fb6541bd3c9778d/jbang-catalog.json"
+      "link": "https://github.com/jianglibo/jbang-catalog/blob/325c41edf5b87e4ab91681b260ce69eda7a6cbe6/jbang-catalog.json"
     },
     {
       "stars": 0,
