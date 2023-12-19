@@ -200,7 +200,7 @@ class appstore implements Callable<Integer> {
     StringBuffer cmd = aliasToCommand(ghContent, item.alias, item.repoName, item.repoOwner);
 
     item.command = cmd.toString();
-    item.fullcommand = "jbang " + item.command + " app.java";
+    item.fullcommand = "jbang " + item.command;
 
     return item;
   }
