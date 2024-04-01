@@ -9,35 +9,35 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>jbang-python: Java in your Python - JBang</title>
-<meta name="description" content="Happy to announce jbang-python - a pypi package which brings your Java to your Python project or notebook.">
+<!-- begin _includes/seo.html --><title>Introducing jbanghub - JBang</title>
+<meta name="description" content="jbang is a tool that makes it easy to get started with java and enable experimentation and exploration without the traditional overhead and ceromony with traditional java tools">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="JBang">
-<meta property="og:title" content="jbang-python: Java in your Python">
-<meta property="og:url" content="https://jbang.dev/learn/python-with-jbang/">
+<meta property="og:title" content="Introducing jbanghub">
+<meta property="og:url" content="https://jbang.dev/learn/jbanghub/">
 
 
-  <meta property="og:description" content="Happy to announce jbang-python - a pypi package which brings your Java to your Python project or notebook.">
+  <meta property="og:description" content="jbang is a tool that makes it easy to get started with java and enable experimentation and exploration without the traditional overhead and ceromony with traditional java tools">
 
 
 
-  <meta property="og:image" content="https://github.com/jbangdev/jbang-python/blob/main/python_jbang.png?raw=true">
+  <meta property="og:image" content="https://jbang.dev/jbanghublaunch.webp">
 
 
 
   <meta name="twitter:site" content="@jbangdev">
-  <meta name="twitter:title" content="jbang-python: Java in your Python">
-  <meta name="twitter:description" content="Happy to announce jbang-python - a pypi package which brings your Java to your Python project or notebook.">
-  <meta name="twitter:url" content="https://jbang.dev/learn/python-with-jbang/">
+  <meta name="twitter:title" content="Introducing jbanghub">
+  <meta name="twitter:description" content="jbang is a tool that makes it easy to get started with java and enable experimentation and exploration without the traditional overhead and ceromony with traditional java tools">
+  <meta name="twitter:url" content="https://jbang.dev/learn/jbanghub/">
 
   
     <meta name="twitter:card" content="summary">
     
-      <meta name="twitter:image" content="https://github.com/jbangdev/jbang-python/blob/main/python_jbang.png?raw=true">
+      <meta name="twitter:image" content="https://jbang.dev/jbanghublaunch.webp">
     
   
 
@@ -45,7 +45,7 @@
 
 
 
-  <meta property="article:published_time" content="2023-09-11T00:00:00+00:00">
+  <meta property="article:published_time" content="2024-04-01T00:00:00+00:00">
 
 
 
@@ -56,7 +56,7 @@
   
 
 
-<link rel="canonical" href="https://jbang.dev/learn/python-with-jbang/">
+<link rel="canonical" href="https://jbang.dev/learn/jbanghub/">
 
 
 
@@ -216,15 +216,15 @@ Vue.directive('highlightjs', {
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="jbang-python: Java in your Python">
-    <meta itemprop="description" content="Happy to announce jbang-python - a pypi package which brings your Java to your Python project or notebook.">
-    <meta itemprop="datePublished" content="2023-09-11T00:00:00+00:00">
+    <meta itemprop="headline" content="Introducing jbanghub">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2024-04-01T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">jbang-python: Java in your Python
+          <h1 id="page-title" class="page__title" itemprop="headline">Introducing jbanghub
 </h1>
           
 
@@ -240,7 +240,7 @@ Vue.directive('highlightjs', {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     
@@ -255,72 +255,57 @@ Vue.directive('highlightjs', {
         <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Happy to announce <a href="https://github.com/jbangdev/jbang-python">jbang-python</a> - a pypi package which brings your Java to your Python project or notebook.</p>
-</div>
-<div class="paragraph text-center">
-<p><span class="image"><img src="https://github.com/jbangdev/jbang-python/blob/main/python_jbang.png?raw=true" alt="python jbang" width="50%"></span></p>
+<p>JBang lets everyone easily make their own java/kotlin/groovy/etc. command line tools available in a jbang catalog. All it takes is that you make a jbang-catalog in your project, organization or website.</p>
 </div>
 <div class="paragraph">
-<p><code>jbang-python</code> supports running any kind java code that JBang supports.</p>
+<p>This is what makes things like <code>jbang jreleaser@jreleaser</code> and <code>jbang minecraft-server@microsoft</code> possible with minimal effort.</p>
 </div>
 <div class="paragraph">
-<p>Wether that is a script from the <a href="https://jbang.dev/appstore">AppStore</a>, a Maven GAV, a jar or simply a java file stored in your project.</p>
+<p>These can then be called as-is or even installed using <code>jbang app install</code> making them available in your PATH directly.</p>
+</div>
+<div class="paragraph">
+<p>Many already added lots of catalogs and they are visible on the <a href="https://www.jbang.dev/appstore/">JBang AppStore</a>, readily available to be used from anywhere with JBang available.</p>
+</div>
+<div class="paragraph">
+<p>This is anywhere you can run java including from <a href="https://www.jbang.dev/learn/jbang-npm/">javascript</a> and <a href="https://www.jbang.dev/learn/python-with-jbang/">python</a> - yes, even Jupyter Notebooks can access Java with JBang.</p>
+</div>
+<div class="paragraph">
+<p>To make it even easier and make it possible for anyone to make their favourite tools available under a nice and simple name we are introducing <a href="https://github.com/jbangdev">JBangHub</a>, a GitHub organization where we invite everyone to contribute scripts and tools they would like to see easily available.</p>
+</div>
+<div class="paragraph">
+<p>JBangHub is there to let anyone help any project become more easily accessible and also to show how little effort is needed to setup and maintain a jbang-catalog.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="example">Example</h2>
+<h2 id="automatic-dependency-updates">Automatic dependency updates</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In your <code>requirements.txt</code> add:</p>
+<p>We made a <code>jbang-catalog</code> template available that setups of a jbang-catalog with automatic renovate bot based updates.</p>
 </div>
 <div class="paragraph">
-<p><code>jbang-python</code></p>
+<p>All repos in JBangHub uses this to ensure any Maven referenced artifacts will get updates, but anyone can use this in their own jbang-catalog outside JBangHub too.</p>
 </div>
 <div class="paragraph">
-<p>or install it using <code>pip install jbang</code></p>
+<p>Just start it using <code>jbang init -t jbang-catalog &lt;reponame&gt;</code> and add aliases to your jbang-catalog.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="default-catalog">Default Catalog</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The latest release (0.116) of JBang adds <code>jbanghub</code> as a default jbang catalog so when you do <code>jbang catalog list</code> you get something like:</p>
 </div>
 <div class="paragraph">
-<p>Then in your python code you can do:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">import jbang
-output = jbang.exec('--java 21', 'properties@jbangdev', 'java').stdout
-print(output)
-output = jbang.exec('hello.java').stdout
-print(output)</code></pre>
-</div>
+<p><span class="image"><img src="/images/jbangcataloglist.svg" alt="jbangcataloglist"></span></p>
 </div>
 <div class="paragraph">
-<p>With a <code>hello.java</code> that contains:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//DEPS com.github.lalyos:jfiglet:0.0.8
-
-import com.github.lalyos.jfiglet.FigletFont;
-
-class hello {
-
-    public static void main(String... args) throws Exception {
-        System.out.println(FigletFont.convertOneLine(
-               "Hello " + ((args.length&gt;0)?args[0]:"jbang")));  ;;
-    }
-}</code></pre>
-</div>
+<p>This list is not intended to be <strong>every</strong> jbang-catalog on the planet - but more a teaser on what is available out there. We encourage and accept edits/updates to that list at <a href="https://github.com/jbanghub/jbang-catalog" class="bare">https://github.com/jbanghub/jbang-catalog</a>.</p>
 </div>
 <div class="paragraph">
-<p>When you run this it will automatically install JBang and Java if necessary and then run the requested alias and java code.</p>
-</div>
-<div class="paragraph">
-<p>Besides using it in your python code locally you can also use it from Jupyter Notebooks.</p>
-</div>
-<div class="paragraph">
-<p>The <code>jbang-python</code> package is available on <a href="https://pypi.org/project/jbang/">pypi</a> and the source code is available on <a href="https://github.com/jbangdev/jbang-python" class="bare">https://github.com/jbangdev/jbang-python</a>.</p>
-</div>
-<div class="paragraph">
-<p>Have fun!</p>
+<p>e
+Have fun!</p>
 </div>
 </div>
 </div>
@@ -364,7 +349,7 @@ class hello {
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2023-09-11T00:00:00+00:00">September 11, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-04-01T00:00:00+00:00">April 1, 2024</time></p>
 
 
       </footer>
@@ -374,23 +359,22 @@ class hello {
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?via=jbangdev&text=jbang-python%3A+Java+in+your+Python%20https%3A%2F%2Fjbang.dev%2Flearn%2Fpython-with-jbang%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?via=jbangdev&text=Introducing+jbanghub%20https%3A%2F%2Fjbang.dev%2Flearn%2Fjbanghub%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjbang.dev%2Flearn%2Fpython-with-jbang%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjbang.dev%2Flearn%2Fjbanghub%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjbang.dev%2Flearn%2Fpython-with-jbang%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjbang.dev%2Flearn%2Fjbanghub%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/learn/jbang-npm/" class="pagination--pager" title="jbang-npm: Java Script in your JavaScript
+      <a href="/learn/python-with-jbang/" class="pagination--pager" title="jbang-python: Java in your Python
 ">Previous</a>
     
     
-      <a href="/learn/jbanghub/" class="pagination--pager" title="Introducing jbanghub
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -422,12 +406,12 @@ class hello {
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
       <div class="archive__item-teaser">
-        <img src="/jbanghublaunch.webp" alt="">
+        <img src="https://github.com/jbangdev/jbang-python/blob/main/python_jbang.png?raw=true" alt="">
       </div>
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/learn/jbanghub/" rel="permalink">Introducing jbanghub
+        <a href="/learn/python-with-jbang/" rel="permalink">jbang-python: Java in your Python
 </a>
       
     </h2>
@@ -445,7 +429,7 @@ class hello {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          less than 1 minute read
         
       </span>
     
@@ -453,6 +437,8 @@ class hello {
 
 
     <p class="archive__item-excerpt" itemprop="description">
+Happy to announce jbang-python - a pypi package which brings your Java to your Python project or notebook.
+
 </p>
   </article>
 </div>
