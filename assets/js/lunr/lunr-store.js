@@ -36,7 +36,7 @@ var store = [{
         "teaser": "https://github.com/jbangdev/jbang-python/blob/main/python_jbang.png?raw=true"
       },{
         "title": "Introducing jbanghub",
-        "excerpt":"JBang lets everyone easily make their own java/kotlin/groovy/etc. command line tools available in a jbang catalog. All it takes is that you make a jbang-catalog in your project, organization or website. This is what makes things like jbang jreleaser@jreleaser and jbang minecraft-server@microsoft possible with minimal effort. These can then be...","categories": ["learn"],
+        "excerpt":"Today we are introducing JBangHub! JBang always allowed everyone easily make their own java/kotlin/groovy/etc. command line tools available in a jbang catalog. All it takes is that you make a jbang-catalog in your project, organization or website. This is what makes things like jbang jreleaser@jreleaser and jbang minecraft-server@microsoft possible with...","categories": ["learn"],
         "tags": ["jbang"],
         "url": "/learn/jbanghub/",
         "teaser": "/jbanghublaunch.webp"
