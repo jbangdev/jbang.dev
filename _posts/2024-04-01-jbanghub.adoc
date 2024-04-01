@@ -14,6 +14,8 @@ ifdef::env-github,env-browser,env-vscode[:imagesdir: ../images]
 
 Today we are introducing https://github.com/jbanghub[JBangHub]!
 
+image:jbanghublaunch.webp[]
+
 JBang always allowed everyone easily make their own java/kotlin/groovy/etc. command line tools available in a jbang catalog. All it takes is that you make a jbang-catalog in your project, organization or website.
 
 This is what makes things like `jbang jreleaser@jreleaser` and `jbang minecraft-server@microsoft` possible with minimal effort.
