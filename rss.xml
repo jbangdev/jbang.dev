@@ -5,8 +5,8 @@
         <description>JBang - JBang</description>
         <link></link>
         <link></link>
-        <lastBuildDate>2024-04-09T07:23:38+00:00</lastBuildDate>
-        <pubDate>2024-04-09T07:23:38+00:00</pubDate>
+        <lastBuildDate>2024-04-09T07:50:43+00:00</lastBuildDate>
+        <pubDate>2024-04-09T07:50:43+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -163,85 +163,6 @@ class hello {
 &lt;/div&gt;</description>
                 <link>/learn/python-with-jbang/</link>
                 <guid>/learn/python-with-jbang</guid>
-                <pubDate>2023-09-11T00:00:00+00:00</pubDate>
-        </item>
-
-        <item>
-                <title>jbang-python: Java in your Python</title>
-                <description>&lt;div id=&quot;preamble&quot;&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Happy to announce &lt;a href=&quot;https://github.com/jbangdev/jbang-python&quot;&gt;jbang-python&lt;/a&gt; - a pypi package which brings your Java to your Python project or notebook.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph text-center&quot;&gt;
-&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;https://github.com/jbangdev/jbang-python/blob/main/python_jbang.png?raw=true&quot; alt=&quot;python jbang&quot; width=&quot;50%&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&lt;code&gt;jbang-python&lt;/code&gt; supports running any kind java code that JBang supports.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Wether that is a script from the &lt;a href=&quot;https://jbang.dev/appstore&quot;&gt;AppStore&lt;/a&gt;, a Maven GAV, a jar or simply a java file stored in your project.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;In your &lt;code&gt;requirements.txt&lt;/code&gt; add:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&lt;code&gt;jbang-python&lt;/code&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;or install it using &lt;code&gt;pip install jbang&lt;/code&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Then in your python code you can do:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-javascript hljs&quot; data-lang=&quot;javascript&quot;&gt;import jbang
-output = jbang.exec('--java 21', 'properties@jbangdev', 'java').stdout
-print(output)
-output = jbang.exec('hello.java').stdout
-print(output)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;With a &lt;code&gt;hello.java&lt;/code&gt; that contains:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-java hljs&quot; data-lang=&quot;java&quot;&gt;//DEPS com.github.lalyos:jfiglet:0.0.8
-
-import com.github.lalyos.jfiglet.FigletFont;
-
-class hello {
-
-    public static void main(String... args) throws Exception {
-        System.out.println(FigletFont.convertOneLine(
-               &quot;Hello &quot; + ((args.length&amp;gt;0)?args[0]:&quot;jbang&quot;)));  ;;
-    }
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;When you run this it will automatically install JBang and Java if necessary and then run the requested alias and java code.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Besides using it in your python code locally you can also use it from Jupyter Notebooks.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;The &lt;code&gt;jbang-python&lt;/code&gt; package is available on &lt;a href=&quot;https://pypi.org/project/jbang/&quot;&gt;pypi&lt;/a&gt; and the source code is available on &lt;a href=&quot;https://github.com/jbangdev/jbang-python&quot; class=&quot;bare&quot;&gt;https://github.com/jbangdev/jbang-python&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Have fun!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-                <link>/learn/python-with-jbang-copy/</link>
-                <guid>/learn/python-with-jbang copy</guid>
                 <pubDate>2023-09-11T00:00:00+00:00</pubDate>
         </item>
 
