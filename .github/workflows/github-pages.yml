@@ -37,9 +37,7 @@ jobs:
 
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
-        with: 
-          limit-access-to-actor: true
-
+       
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
