@@ -4,13 +4,98 @@
  <title>JBang</title>
  <link href="/" rel="self"/>
  <link href=""/>
- <updated>2024-04-09T09:22:32+00:00</updated>
+ <updated>2024-04-09T09:24:48+00:00</updated>
  <id></id>
  <author>
    <name>JBang</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>JBang entering the CommonHaus Foundation</title>
+   <link href="/learn/jbang-and-codehaus/"/>
+   <updated>2024-04-09T00:00:00+00:00</updated>
+   <id>/learn/jbang-and-codehaus</id>
+   <content type="html">&lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;JBang and its associated projects is joining as a founding project of the &lt;a href=&quot;https://www.commonhaus.org/&quot;&gt;CommonHaus foundation&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;CommonHaus is a brand new foundation which focus is on providing a independent home for projects like JBang that are funded by independents and with room for project indivduality.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Other founding projects are &lt;a href=&quot;https://in.relation.to/2024/04/09/hibernate-to-commonhaus/&quot;&gt;Hibernate&lt;/a&gt;, &lt;a href=&quot;https://github.com/FasterXML/jackson&quot;&gt;Jackson&lt;/a&gt;, &lt;a href=&quot;https://docs.openrewrite.org/&quot;&gt;OpenRewrite&lt;/a&gt;, &lt;a href=&quot;https://andresalmiray.com/jreleaser-joins-commonhaus-foundation/&quot;&gt;JReleaser&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://morphia.dev/&quot;&gt;Morphia&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;why-jbang-in-a-foundation&quot;&gt;Why JBang in a foundation?&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The decision to include JBang in a foundation stems from a desire to ensure its long-term sustainability and growth. Being part of a foundation, especially CommonHaus, provides JBang with a stable, independent home that supports its development and promotes collaboration. This move also opens up new opportunities for funding and contributions, further securing the project&amp;#8217;s future and fostering an environment where JBang can thrive alongside other like minded open-source projects.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;why-commonhaus&quot;&gt;Why CommonHaus?&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The &lt;a href=&quot;https://www.commonhaus.org/about/#our-guiding-principles&quot;&gt;guiding principles&lt;/a&gt; of CommonHaus summarizes it well:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Honor project and community identity&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Offer guidance and support instead of imposing mandates&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Maintain transparency in all of our actions&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Encourage long-term thinking for sustained project impact&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;These are important things for JBang - having a place to be hosted for ensuring continuity while still allowing individuality.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;what-does-it-mean-for-users&quot;&gt;What does it mean for users?&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;JBang will stay JBang - if you as a user notices it has moved I will be surprised.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Maybe the about text of the CLI will change; that is about it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;what-does-it-mean-for-contributors&quot;&gt;What does it mean for contributors?&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The exact onboarding implication is still being defined, but it is expected to have minimal impact as we do most of the recommended things anyways.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;whats-next&quot;&gt;What&amp;#8217;s next?&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Try out &lt;a href=&quot;https://jbang.dev/downloads&quot;&gt;JBang&lt;/a&gt; if you haven&amp;#8217;t already. If you see something that could need improvement or have a question join the development on &lt;a href=&quot;https://github.com/jbangdev&quot;&gt;GitHub&lt;/a&gt;, open issues and discussions and lets help make Java truly available to anyone.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Have fun!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+ </entry>
  
  <entry>
    <title>Introducing jbanghub</title>

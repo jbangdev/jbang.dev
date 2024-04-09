@@ -40,4 +40,10 @@ var store = [{
         "tags": ["jbang"],
         "url": "/learn/jbanghub/",
         "teaser": "https://raw.githubusercontent.com/jbangdev/jbang.dev/main/images/jbanghublaunch.webp"
+      },{
+        "title": "JBang entering the CommonHaus Foundation",
+        "excerpt":"JBang and its associated projects is joining as a founding project of the CommonHaus foundation. CommonHaus is a brand new foundation which focus is on providing a independent home for projects like JBang that are funded by independents and with room for project indivduality. Other founding projects are Hibernate, Jackson,...","categories": ["learn"],
+        "tags": ["jbang"],
+        "url": "/learn/jbang-and-codehaus/",
+        "teaser": "https://raw.githubusercontent.com/commonhaus/artwork/main/foundation/brand/svg/CF_icon_default.svg"
       }]
