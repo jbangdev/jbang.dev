@@ -10,7 +10,11 @@ header:
 :page-bgcolor: ff5a71
 :page-keywords: jbang foundation
 
+ifdef::env-github,env-browser,env-vscode[:imagesdir: ../images]
+
 JBang and its associated projects is joining as a founding project of the https://www.commonhaus.org/[CommonHaus foundation]. 
+
+image::https://raw.githubusercontent.com/commonhaus/artwork/main/foundation/brand/svg/CF_icon_default.svg[width=50%]
 
 CommonHaus is a brand new foundation which focus is on providing a independent home for projects like JBang that are funded by independents and with room for project indivduality.
 
