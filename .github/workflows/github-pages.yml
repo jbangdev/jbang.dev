@@ -34,10 +34,7 @@ jobs:
         run: |
           mkdir -p ./_site/documentation
           cp -rfv ./docs-site/build/site/* ./_site/documentation
-
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-       
+ 
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
