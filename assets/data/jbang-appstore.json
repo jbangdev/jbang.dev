@@ -1,8 +1,8 @@
 {
-  "aliasCount": 7,
+  "aliasCount": 15,
   "aliases": [
     {
-      "stars": 36036,
+      "stars": 36045,
       "icon_url": "https://avatars.githubusercontent.com/u/1022859?v\u003d4",
       "repoOwner": "eugenp",
       "repoName": "tutorials",
@@ -10,10 +10,10 @@
       "scriptRef": "hello.java",
       "command": "hello@eugenp/tutorials~jbang",
       "fullcommand": "jbang hello@eugenp/tutorials~jbang",
-      "link": "https://github.com/eugenp/tutorials/blob/eddfa876d62d7e2a18e51ab3026f2ce292d622b0/jbang/jbang-catalog.json"
+      "link": "https://github.com/eugenp/tutorials/blob/743c9af017734c5066c8b898ee1547b416449193/jbang/jbang-catalog.json"
     },
     {
-      "stars": 36036,
+      "stars": 36045,
       "icon_url": "https://avatars.githubusercontent.com/u/1022859?v\u003d4",
       "repoOwner": "eugenp",
       "repoName": "tutorials",
@@ -21,10 +21,10 @@
       "scriptRef": "hellocli.java",
       "command": "hellocli@eugenp/tutorials~jbang",
       "fullcommand": "jbang hellocli@eugenp/tutorials~jbang",
-      "link": "https://github.com/eugenp/tutorials/blob/eddfa876d62d7e2a18e51ab3026f2ce292d622b0/jbang/jbang-catalog.json"
+      "link": "https://github.com/eugenp/tutorials/blob/743c9af017734c5066c8b898ee1547b416449193/jbang/jbang-catalog.json"
     },
     {
-      "stars": 36036,
+      "stars": 36045,
       "icon_url": "https://avatars.githubusercontent.com/u/1022859?v\u003d4",
       "repoOwner": "eugenp",
       "repoName": "tutorials",
@@ -32,10 +32,10 @@
       "scriptRef": "jbangquarkus.java",
       "command": "jbangquarkus@eugenp/tutorials~jbang",
       "fullcommand": "jbang jbangquarkus@eugenp/tutorials~jbang",
-      "link": "https://github.com/eugenp/tutorials/blob/eddfa876d62d7e2a18e51ab3026f2ce292d622b0/jbang/jbang-catalog.json"
+      "link": "https://github.com/eugenp/tutorials/blob/743c9af017734c5066c8b898ee1547b416449193/jbang/jbang-catalog.json"
     },
     {
-      "stars": 5328,
+      "stars": 5329,
       "icon_url": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
       "repoOwner": "apache",
       "repoName": "camel",
@@ -44,7 +44,7 @@
       "scriptRef": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
       "command": "camel@apache/camel",
       "fullcommand": "jbang camel@apache/camel",
-      "link": "https://github.com/apache/camel/blob/477eb74e8a754c749a7cf81a0cf27e0f0896d480/jbang-catalog.json"
+      "link": "https://github.com/apache/camel/blob/9b24ccdae924d9be7345cd0237c686e956a22e79/jbang-catalog.json"
     },
     {
       "stars": 1746,
@@ -58,28 +58,119 @@
       "link": "https://github.com/tabulapdf/tabula-java/blob/8bfa3ad23af34f757f72fe46584a34abfc022ed3/jbang-catalog.json"
     },
     {
-      "stars": 20,
-      "icon_url": "https://avatars.githubusercontent.com/u/46711?v\u003d4",
-      "repoOwner": "linux-china",
-      "repoName": "task-keeper",
-      "alias": "HelloWorld",
-      "description": "\u003cp\u003eHello World\u003c/p\u003e\n",
-      "scriptRef": "src/main/jbang/HelloWorld.java",
-      "command": "HelloWorld@linux-china/task-keeper~src/templates",
-      "fullcommand": "jbang HelloWorld@linux-china/task-keeper~src/templates",
-      "link": "https://github.com/linux-china/task-keeper/blob/6e1eff304c6ddf96d0cf50943e6560d67df3494e/src/templates/jbang-catalog.json"
+      "stars": 421,
+      "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
+      "repoOwner": "hibernate",
+      "repoName": "hibernate-reactive",
+      "alias": "example",
+      "description": "\u003cp\u003eAn application example. The database must be available before running it. See \u003ca rel\u003d\"nofollow\" href\u003d\"https://github.com/hibernate/hibernate-reactive/blob/main/podman.md\"\u003ehttps://github.com/hibernate/hibernate-reactive/blob/main/podman.md\u003c/a\u003e\u003c/p\u003e\n",
+      "scriptRef": "tooling/jbang/Example.java",
+      "command": "example@hibernate/hibernate-reactive",
+      "fullcommand": "jbang example@hibernate/hibernate-reactive",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/9b1b18ae95fcb92f12016ceff8fac3ab8bc45ecb/jbang-catalog.json"
     },
     {
-      "stars": 20,
-      "icon_url": "https://avatars.githubusercontent.com/u/46711?v\u003d4",
-      "repoOwner": "linux-china",
-      "repoName": "task-keeper",
-      "alias": "YourApp",
-      "description": "\u003cp\u003eRun your app\u003c/p\u003e\n",
-      "scriptRef": "src/main/jbang/YourApp.java",
-      "command": "YourApp@linux-china/task-keeper~src/templates",
-      "fullcommand": "jbang YourApp@linux-china/task-keeper~src/templates",
-      "link": "https://github.com/linux-china/task-keeper/blob/6e1eff304c6ddf96d0cf50943e6560d67df3494e/src/templates/jbang-catalog.json"
+      "stars": 421,
+      "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
+      "repoOwner": "hibernate",
+      "repoName": "hibernate-reactive",
+      "alias": "testcase",
+      "description": "\u003cp\u003eA Hibernate Reactive JUnit test using Docker, Testcontainers and Vert.x Unit\u003c/p\u003e\n",
+      "scriptRef": "tooling/jbang/ReactiveTest.java",
+      "command": "testcase@hibernate/hibernate-reactive",
+      "fullcommand": "jbang testcase@hibernate/hibernate-reactive",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/9b1b18ae95fcb92f12016ceff8fac3ab8bc45ecb/jbang-catalog.json"
+    },
+    {
+      "stars": 12,
+      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
+      "repoOwner": "maxandersen",
+      "repoName": "wordle-solve",
+      "alias": "main",
+      "scriptRef": "src/main.java",
+      "command": "main@maxandersen/wordle-solve",
+      "fullcommand": "jbang main@maxandersen/wordle-solve",
+      "link": "https://github.com/maxandersen/wordle-solve/blob/42702ffbd1d39e47eebe96ef8be9f4f9c9489200/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/921666?v\u003d4",
+      "repoOwner": "jlengrand",
+      "repoName": "jbang-catalog",
+      "alias": "app-snapshot",
+      "description": "\u003cp\u003ehelidon-quickstart-se\u003c/p\u003e\n",
+      "scriptRef": "app_snapshot.java",
+      "command": "app-snapshot@jlengrand",
+      "fullcommand": "jbang app-snapshot@jlengrand",
+      "link": "https://github.com/jlengrand/jbang-catalog/blob/20a69fcc6aa072afa05c23ca478693ccf367b382/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/921666?v\u003d4",
+      "repoOwner": "jlengrand",
+      "repoName": "jbang-catalog",
+      "alias": "helidon-quickstart-se-snapshot",
+      "description": "\u003cp\u003ehelidon-quickstart-se\u003c/p\u003e\n",
+      "scriptRef": "helidon_quickstart_se_snapshot.java",
+      "command": "helidon-quickstart-se-snapshot@jlengrand",
+      "fullcommand": "jbang helidon-quickstart-se-snapshot@jlengrand",
+      "link": "https://github.com/jlengrand/jbang-catalog/blob/20a69fcc6aa072afa05c23ca478693ccf367b382/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/46731024?v\u003d4",
+      "repoOwner": "Hyperfoil",
+      "repoName": "jbang-catalog",
+      "alias": "wrk2",
+      "scriptRef": "io.hyperfoil:hyperfoil-cli:0.25.2",
+      "command": "wrk2@Hyperfoil",
+      "fullcommand": "jbang wrk2@Hyperfoil",
+      "link": "https://github.com/Hyperfoil/jbang-catalog/blob/2625cab3787a050d3b217a73c6575af5aa68a8da/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/46731024?v\u003d4",
+      "repoOwner": "Hyperfoil",
+      "repoName": "jbang-catalog",
+      "alias": "wrk",
+      "scriptRef": "io.hyperfoil:hyperfoil-cli:0.25.2",
+      "command": "wrk@Hyperfoil",
+      "fullcommand": "jbang wrk@Hyperfoil",
+      "link": "https://github.com/Hyperfoil/jbang-catalog/blob/2625cab3787a050d3b217a73c6575af5aa68a8da/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/46731024?v\u003d4",
+      "repoOwner": "Hyperfoil",
+      "repoName": "jbang-catalog",
+      "alias": "cli",
+      "scriptRef": "io.hyperfoil:hyperfoil-cli:0.25.2",
+      "command": "cli@Hyperfoil",
+      "fullcommand": "jbang cli@Hyperfoil",
+      "link": "https://github.com/Hyperfoil/jbang-catalog/blob/2625cab3787a050d3b217a73c6575af5aa68a8da/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/82864904?v\u003d4",
+      "repoOwner": "rohankumardubey",
+      "repoName": "karate-core",
+      "alias": "karate",
+      "scriptRef": "com.intuit.karate:karate-core:1.2.0:all",
+      "command": "karate@rohankumardubey/karate-core",
+      "fullcommand": "jbang karate@rohankumardubey/karate-core",
+      "link": "https://github.com/rohankumardubey/karate-core/blob/3b4de72abf93431d8c9fc9301d806c6b931df004/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/147263?v\u003d4",
+      "repoOwner": "jabrena",
+      "repoName": "jbang-catalog",
+      "alias": "raton-loco",
+      "description": "\u003cp\u003e\u0027Raton Loco\u0027 is a Windows utility to avoid the Screensaver\u003c/p\u003e\n",
+      "scriptRef": "https://github.com/jabrena/raton-loco/blob/main/src/main/java/info/jab/utils/RatonLoco.java",
+      "command": "raton-loco@jabrena",
+      "fullcommand": "jbang raton-loco@jabrena",
+      "link": "https://github.com/jabrena/jbang-catalog/blob/6432deffdefd25b4ffc5c9e3498b997317ff3259/jbang-catalog.json"
     }
   ],
   "templates": [
@@ -214,7 +305,62 @@
       "command": "qrest@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t qrest@jbangdev/jbang~src/main/resources",
       "link": "https://github.com/jbangdev/jbang/blob/d863c332d0ff207ef3a88039e701cda09cc54302/src/main/resources/jbang-catalog.json"
+    },
+    {
+      "stars": 421,
+      "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
+      "repoOwner": "hibernate",
+      "repoName": "hibernate-reactive",
+      "alias": "pg-reproducer",
+      "description": "\u003cp\u003eTemplate for a test with PostgreSQL using Junit 4, Vert.x Unit and Testcontainers\u003c/p\u003e\n",
+      "command": "pg-reproducer@hibernate/hibernate-reactive",
+      "fullcommand": "jbang init -t pg-reproducer@hibernate/hibernate-reactive",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/9b1b18ae95fcb92f12016ceff8fac3ab8bc45ecb/jbang-catalog.json"
+    },
+    {
+      "stars": 421,
+      "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
+      "repoOwner": "hibernate",
+      "repoName": "hibernate-reactive",
+      "alias": "mysql-reproducer",
+      "description": "\u003cp\u003eTemplate for a test with MySQL using Junit 4, Vert.x Unit and Testcontainers\u003c/p\u003e\n",
+      "command": "mysql-reproducer@hibernate/hibernate-reactive",
+      "fullcommand": "jbang init -t mysql-reproducer@hibernate/hibernate-reactive",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/9b1b18ae95fcb92f12016ceff8fac3ab8bc45ecb/jbang-catalog.json"
+    },
+    {
+      "stars": 421,
+      "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
+      "repoOwner": "hibernate",
+      "repoName": "hibernate-reactive",
+      "alias": "mariadb-reproducer",
+      "description": "\u003cp\u003eTemplate for a test with MariaDB using Junit 4, Vert.x Unit and Testcontainers\u003c/p\u003e\n",
+      "command": "mariadb-reproducer@hibernate/hibernate-reactive",
+      "fullcommand": "jbang init -t mariadb-reproducer@hibernate/hibernate-reactive",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/9b1b18ae95fcb92f12016ceff8fac3ab8bc45ecb/jbang-catalog.json"
+    },
+    {
+      "stars": 421,
+      "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
+      "repoOwner": "hibernate",
+      "repoName": "hibernate-reactive",
+      "alias": "db2-reproducer",
+      "description": "\u003cp\u003eTemplate for a test with Db2 using Junit 4, Vert.x Unit and Testcontainers\u003c/p\u003e\n",
+      "command": "db2-reproducer@hibernate/hibernate-reactive",
+      "fullcommand": "jbang init -t db2-reproducer@hibernate/hibernate-reactive",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/9b1b18ae95fcb92f12016ceff8fac3ab8bc45ecb/jbang-catalog.json"
+    },
+    {
+      "stars": 421,
+      "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
+      "repoOwner": "hibernate",
+      "repoName": "hibernate-reactive",
+      "alias": "cockroachdb-reproducer",
+      "description": "\u003cp\u003eTemplate for a test with CockroachDB using Junit 4, Vert.x Unit and Testcontainers\u003c/p\u003e\n",
+      "command": "cockroachdb-reproducer@hibernate/hibernate-reactive",
+      "fullcommand": "jbang init -t cockroachdb-reproducer@hibernate/hibernate-reactive",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/9b1b18ae95fcb92f12016ceff8fac3ab8bc45ecb/jbang-catalog.json"
     }
   ],
-  "templateCount": 12
+  "templateCount": 17
 }
