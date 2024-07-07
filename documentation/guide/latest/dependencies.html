@@ -447,6 +447,26 @@ class classpath_example {
 </div>
 </div>
 <div class="sect1">
+<h2 id="fatjar-dependencies-experimental"><a class="anchor" href="#fatjar-dependencies-experimental"></a>'fatjar' dependencies [Experimental]</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Maven 4 introduces a special dependency type called <code>fatjar</code> which can be used to designate that the dependency should be treated as a jar that have all its dependencies included and thus not require fetching declared dependencies.</p>
+</div>
+<div class="paragraph">
+<p>JBang 0.117 adds support for this allowing you to just add <code>@fatjar</code> at the end.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><code>jbang eu.maveniverse.maven.plugins:toolbox:0.1.9:cli@fatjar</code></p>
+</div>
+<div class="paragraph">
+<p>Without <code>@fatjar</code> it would resolve dependencies which would be redundant.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="managed-dependencies-bom-poms-experimental"><a class="anchor" href="#managed-dependencies-bom-poms-experimental"></a>Managed dependencies ("BOM POM"'s) [Experimental]</h2>
 <div class="sectionbody">
 <div class="paragraph">
