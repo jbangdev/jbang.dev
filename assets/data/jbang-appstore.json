@@ -2,7 +2,7 @@
   "aliasCount": 411,
   "aliases": [
     {
-      "stars": 13397,
+      "stars": 13396,
       "icon_url": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
       "repoOwner": "quarkusio",
       "repoName": "quarkus",
@@ -10,10 +10,10 @@
       "scriptRef": "RevapiUpdate.java",
       "command": "revapi-update@quarkusio/quarkus~.jbang",
       "fullcommand": "jbang revapi-update@quarkusio/quarkus~.jbang",
-      "link": "https://github.com/quarkusio/quarkus/blob/ccf1b231f0ab5fd0b7530396382ab14d8156ad1a/.jbang/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/quarkus/blob/75cf0bf94249cebd00ff57f80252ff19a9a1d24a/.jbang/jbang-catalog.json"
     },
     {
-      "stars": 7993,
+      "stars": 7995,
       "icon_url": "https://avatars.githubusercontent.com/u/91312095?v\u003d4",
       "repoOwner": "karatelabs",
       "repoName": "karate",
@@ -24,7 +24,7 @@
       "link": "https://github.com/karatelabs/karate/blob/e4c8cacb21218db76dd7890adfce4c4466d16640/jbang-catalog.json"
     },
     {
-      "stars": 5418,
+      "stars": 5420,
       "icon_url": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
       "repoOwner": "apache",
       "repoName": "camel",
@@ -33,10 +33,10 @@
       "scriptRef": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
       "command": "camel@apache/camel",
       "fullcommand": "jbang camel@apache/camel",
-      "link": "https://github.com/apache/camel/blob/a7b675b56a2d3264a4c46b04427b67ecb7f0c4e2/jbang-catalog.json"
+      "link": "https://github.com/apache/camel/blob/4912c140be44a2250e592271174221a704b96215/jbang-catalog.json"
     },
     {
-      "stars": 1779,
+      "stars": 1780,
       "icon_url": "https://avatars.githubusercontent.com/u/8267906?v\u003d4",
       "repoOwner": "tabulapdf",
       "repoName": "tabula-java",
@@ -44,7 +44,7 @@
       "scriptRef": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
       "command": "tabula@tabulapdf/tabula-java",
       "fullcommand": "jbang tabula@tabulapdf/tabula-java",
-      "link": "https://github.com/tabulapdf/tabula-java/blob/6d59cddd5e4523d74aa03739be5992d35372fdd3/jbang-catalog.json"
+      "link": "https://github.com/tabulapdf/tabula-java/blob/ab7c4bd54bd20ca03c2bfad400c5cc6c26e34d59/jbang-catalog.json"
     },
     {
       "stars": 1406,
@@ -56,10 +56,10 @@
       "scriptRef": "hawtio-jbang/dist/HawtioJBang.java",
       "command": "hawtio@hawtio/hawtio",
       "fullcommand": "jbang hawtio@hawtio/hawtio",
-      "link": "https://github.com/hawtio/hawtio/blob/a807a4d2f57b763bfe27183c9165ead8289aea75/jbang-catalog.json"
+      "link": "https://github.com/hawtio/hawtio/blob/8f3d0a2d1256e19ba0bc4adbed054b01015361f6/jbang-catalog.json"
     },
     {
-      "stars": 1166,
+      "stars": 1167,
       "icon_url": "https://avatars.githubusercontent.com/u/4430336?v\u003d4",
       "repoOwner": "oracle",
       "repoName": "graalpython",
@@ -68,10 +68,10 @@
       "scriptRef": "./graalpython/graalpy-jbang/examples/hello.java",
       "command": "hello@oracle/graalpython",
       "fullcommand": "jbang hello@oracle/graalpython",
-      "link": "https://github.com/oracle/graalpython/blob/b735013634f5e61cb8642eaf22f139ba02e80067/jbang-catalog.json"
+      "link": "https://github.com/oracle/graalpython/blob/401a228c8ca7a12b38965a5328e7178a9a2a4da8/jbang-catalog.json"
     },
     {
-      "stars": 449,
+      "stars": 450,
       "icon_url": "https://avatars.githubusercontent.com/u/27848811?v\u003d4",
       "repoOwner": "citrusframework",
       "repoName": "citrus",
@@ -1234,7 +1234,7 @@
       "scriptRef": "main.java",
       "command": "main@jbangdev/jbang.dev",
       "fullcommand": "jbang main@jbangdev/jbang.dev",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/06160b7cbdae2e22d7959f0158a2b1f5e22cf824/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang.dev/blob/3546c1561b2d330b460db796867075f4a8588659/jbang-catalog.json"
     },
     {
       "stars": 11,
@@ -1245,7 +1245,7 @@
       "scriptRef": "tree/main.java",
       "command": "tree@jbangdev/jbang.dev",
       "fullcommand": "jbang tree@jbangdev/jbang.dev",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/06160b7cbdae2e22d7959f0158a2b1f5e22cf824/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang.dev/blob/3546c1561b2d330b460db796867075f4a8588659/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1281,7 +1281,7 @@
       "scriptRef": "quarkusissue.java",
       "command": "buginfo@quarkusio",
       "fullcommand": "jbang buginfo@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/ceb0d622f621e77985547729e0f092ad44c02267/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/94d94d29bb12b39088f1cdda39a9d5f8b62e8e24/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1293,7 +1293,7 @@
       "scriptRef": "catalog_check_updates.java",
       "command": "catalog_check_updates@quarkusio",
       "fullcommand": "jbang catalog_check_updates@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/ceb0d622f621e77985547729e0f092ad44c02267/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/94d94d29bb12b39088f1cdda39a9d5f8b62e8e24/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1305,7 +1305,7 @@
       "scriptRef": "catalog_publish.java",
       "command": "catalog_publish@quarkusio",
       "fullcommand": "jbang catalog_publish@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/ceb0d622f621e77985547729e0f092ad44c02267/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/94d94d29bb12b39088f1cdda39a9d5f8b62e8e24/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1313,10 +1313,10 @@
       "repoOwner": "quarkusio",
       "repoName": "jbang-catalog",
       "alias": "cli",
-      "scriptRef": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.12.2/quarkus-cli-3.12.2-runner.jar",
+      "scriptRef": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.12.3/quarkus-cli-3.12.3-runner.jar",
       "command": "cli@quarkusio",
       "fullcommand": "jbang cli@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/ceb0d622f621e77985547729e0f092ad44c02267/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/94d94d29bb12b39088f1cdda39a9d5f8b62e8e24/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1324,10 +1324,10 @@
       "repoOwner": "quarkusio",
       "repoName": "jbang-catalog",
       "alias": "qs",
-      "scriptRef": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.12.2/quarkus-cli-3.12.2-runner.jar",
+      "scriptRef": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.12.3/quarkus-cli-3.12.3-runner.jar",
       "command": "qs@quarkusio",
       "fullcommand": "jbang qs@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/ceb0d622f621e77985547729e0f092ad44c02267/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/94d94d29bb12b39088f1cdda39a9d5f8b62e8e24/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1335,10 +1335,10 @@
       "repoOwner": "quarkusio",
       "repoName": "jbang-catalog",
       "alias": "quarkus",
-      "scriptRef": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.12.2/quarkus-cli-3.12.2-runner.jar",
+      "scriptRef": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.12.3/quarkus-cli-3.12.3-runner.jar",
       "command": "quarkus@quarkusio",
       "fullcommand": "jbang quarkus@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/ceb0d622f621e77985547729e0f092ad44c02267/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/94d94d29bb12b39088f1cdda39a9d5f8b62e8e24/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1349,7 +1349,7 @@
       "scriptRef": "kill.java",
       "command": "quarkus-kill@quarkusio",
       "fullcommand": "jbang quarkus-kill@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/ceb0d622f621e77985547729e0f092ad44c02267/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/94d94d29bb12b39088f1cdda39a9d5f8b62e8e24/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1360,7 +1360,7 @@
       "scriptRef": "kill.java",
       "command": "kill@quarkusio",
       "fullcommand": "jbang kill@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/ceb0d622f621e77985547729e0f092ad44c02267/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/94d94d29bb12b39088f1cdda39a9d5f8b62e8e24/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1371,7 +1371,7 @@
       "scriptRef": "fmt.java",
       "command": "quarkus-fmt@quarkusio",
       "fullcommand": "jbang quarkus-fmt@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/ceb0d622f621e77985547729e0f092ad44c02267/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/94d94d29bb12b39088f1cdda39a9d5f8b62e8e24/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1382,7 +1382,7 @@
       "scriptRef": "fmt.java",
       "command": "fmt@quarkusio",
       "fullcommand": "jbang fmt@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/ceb0d622f621e77985547729e0f092ad44c02267/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/94d94d29bb12b39088f1cdda39a9d5f8b62e8e24/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -4829,7 +4829,7 @@
       "link": "https://github.com/jbangdev/jbang/blob/b91bed290cb279f873f94a9f2ef805fb380dc38c/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 1166,
+      "stars": 1167,
       "icon_url": "https://avatars.githubusercontent.com/u/4430336?v\u003d4",
       "repoOwner": "oracle",
       "repoName": "graalpython",
@@ -4837,10 +4837,10 @@
       "description": "\u003cp\u003eBasic template for Graal Python java file.\u003c/p\u003e\n",
       "command": "graalpy@oracle/graalpython",
       "fullcommand": "jbang init -t graalpy@oracle/graalpython",
-      "link": "https://github.com/oracle/graalpython/blob/b735013634f5e61cb8642eaf22f139ba02e80067/jbang-catalog.json"
+      "link": "https://github.com/oracle/graalpython/blob/401a228c8ca7a12b38965a5328e7178a9a2a4da8/jbang-catalog.json"
     },
     {
-      "stars": 1166,
+      "stars": 1167,
       "icon_url": "https://avatars.githubusercontent.com/u/4430336?v\u003d4",
       "repoOwner": "oracle",
       "repoName": "graalpython",
@@ -4848,7 +4848,7 @@
       "description": "\u003cp\u003eBasic template for Graal Python java file. Mainly for testing.\u003c/p\u003e\n",
       "command": "graalpy_local_repo@oracle/graalpython",
       "fullcommand": "jbang init -t graalpy_local_repo@oracle/graalpython",
-      "link": "https://github.com/oracle/graalpython/blob/b735013634f5e61cb8642eaf22f139ba02e80067/jbang-catalog.json"
+      "link": "https://github.com/oracle/graalpython/blob/401a228c8ca7a12b38965a5328e7178a9a2a4da8/jbang-catalog.json"
     },
     {
       "stars": 426,
@@ -4969,7 +4969,7 @@
       "description": "\u003cp\u003eExample of making a github app\u003c/p\u003e\n",
       "command": "githubbot@quarkusio",
       "fullcommand": "jbang init -t githubbot@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/ceb0d622f621e77985547729e0f092ad44c02267/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/94d94d29bb12b39088f1cdda39a9d5f8b62e8e24/jbang-catalog.json"
     },
     {
       "stars": 4,
