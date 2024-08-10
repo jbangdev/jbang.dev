@@ -1,8 +1,8 @@
 {
-  "aliasCount": 8,
+  "aliasCount": 18,
   "aliases": [
     {
-      "stars": 13447,
+      "stars": 13449,
       "icon_url": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
       "repoOwner": "quarkusio",
       "repoName": "quarkus",
@@ -10,7 +10,18 @@
       "scriptRef": "RevapiUpdate.java",
       "command": "revapi-update@quarkusio/quarkus~.jbang",
       "fullcommand": "jbang revapi-update@quarkusio/quarkus~.jbang",
-      "link": "https://github.com/quarkusio/quarkus/blob/a2de5a09499efc223d39e25d28749655c41e020a/.jbang/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/quarkus/blob/57d9d84604b4364a71529f79841173a3985cee4b/.jbang/jbang-catalog.json"
+    },
+    {
+      "stars": 8038,
+      "icon_url": "https://avatars.githubusercontent.com/u/91312095?v\u003d4",
+      "repoOwner": "karatelabs",
+      "repoName": "karate",
+      "alias": "karate",
+      "scriptRef": "io.karatelabs:karate-core:1.5.0:all",
+      "command": "karate@karatelabs/karate",
+      "fullcommand": "jbang karate@karatelabs/karate",
+      "link": "https://github.com/karatelabs/karate/blob/bb7cccedc3a0c8d4acb34ebb21104c76822727cb/jbang-catalog.json"
     },
     {
       "stars": 5439,
@@ -22,7 +33,7 @@
       "scriptRef": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
       "command": "camel@apache/camel",
       "fullcommand": "jbang camel@apache/camel",
-      "link": "https://github.com/apache/camel/blob/230b618c94ca0fff3cc2e7cfc518d6c2a269c8fb/jbang-catalog.json"
+      "link": "https://github.com/apache/camel/blob/ad7d1e7227691e3196c0f0a66e59ffde7c10ae6f/jbang-catalog.json"
     },
     {
       "stars": 453,
@@ -35,6 +46,61 @@
       "command": "citrus@citrusframework/citrus",
       "fullcommand": "jbang citrus@citrusframework/citrus",
       "link": "https://github.com/citrusframework/citrus/blob/b3ead1e1511221776dbc0c0c625ec125750aec00/jbang-catalog.json"
+    },
+    {
+      "stars": 28,
+      "icon_url": "https://avatars.githubusercontent.com/u/93670347?v\u003d4",
+      "repoOwner": "ZenWave360",
+      "repoName": "zenwave-sdk",
+      "alias": "release",
+      "scriptRef": "io.github.zenwave360.zenwave-sdk:zenwave-sdk-cli:RELEASE",
+      "command": "release@ZenWave360/zenwave-sdk",
+      "fullcommand": "jbang release@ZenWave360/zenwave-sdk",
+      "link": "https://github.com/ZenWave360/zenwave-sdk/blob/cf426166eaaf7f3dadf2caacdff429222bc15105/jbang-catalog.json"
+    },
+    {
+      "stars": 28,
+      "icon_url": "https://avatars.githubusercontent.com/u/93670347?v\u003d4",
+      "repoOwner": "ZenWave360",
+      "repoName": "zenwave-sdk",
+      "alias": "snapshots",
+      "scriptRef": "io.github.zenwave360.zenwave-sdk:zenwave-sdk-cli:1.7.0-SNAPSHOT",
+      "command": "snapshots@ZenWave360/zenwave-sdk",
+      "fullcommand": "jbang snapshots@ZenWave360/zenwave-sdk",
+      "link": "https://github.com/ZenWave360/zenwave-sdk/blob/cf426166eaaf7f3dadf2caacdff429222bc15105/jbang-catalog.json"
+    },
+    {
+      "stars": 28,
+      "icon_url": "https://avatars.githubusercontent.com/u/93670347?v\u003d4",
+      "repoOwner": "ZenWave360",
+      "repoName": "zenwave-sdk",
+      "alias": "next",
+      "scriptRef": "io.github.zenwave360.zenwave-sdk:zenwave-sdk-cli:2.0.0-SNAPSHOT",
+      "command": "next@ZenWave360/zenwave-sdk",
+      "fullcommand": "jbang next@ZenWave360/zenwave-sdk",
+      "link": "https://github.com/ZenWave360/zenwave-sdk/blob/cf426166eaaf7f3dadf2caacdff429222bc15105/jbang-catalog.json"
+    },
+    {
+      "stars": 28,
+      "icon_url": "https://avatars.githubusercontent.com/u/93670347?v\u003d4",
+      "repoOwner": "ZenWave360",
+      "repoName": "zenwave-sdk",
+      "alias": "1.0.x",
+      "scriptRef": "io.github.zenwave360.zenwave-sdk:zenwave-sdk-cli:1.0.7",
+      "command": "1.0.x@ZenWave360/zenwave-sdk",
+      "fullcommand": "jbang 1.0.x@ZenWave360/zenwave-sdk",
+      "link": "https://github.com/ZenWave360/zenwave-sdk/blob/cf426166eaaf7f3dadf2caacdff429222bc15105/jbang-catalog.json"
+    },
+    {
+      "stars": 9,
+      "icon_url": "https://avatars.githubusercontent.com/u/20963129?v\u003d4",
+      "repoOwner": "hpcclab",
+      "repoName": "OaaS",
+      "alias": "ocli",
+      "scriptRef": "https://github.com/hpcclab/OaaS/releases/download/0.2.2/ocli.jar",
+      "command": "ocli@hpcclab/OaaS",
+      "fullcommand": "jbang ocli@hpcclab/OaaS",
+      "link": "https://github.com/hpcclab/OaaS/blob/a26a884f1ac58695ae7254b9c5d2d800876cd348/jbang-catalog.json"
     },
     {
       "stars": 3,
@@ -95,6 +161,54 @@
       "command": "mandrel@galderz/qollider",
       "fullcommand": "jbang mandrel@galderz/qollider",
       "link": "https://github.com/galderz/qollider/blob/fcb74445163748ae78df8d138c7fcceb93aeb9c9/jbang-catalog.json"
+    },
+    {
+      "stars": 1,
+      "icon_url": "https://avatars.githubusercontent.com/u/81020166?v\u003d4",
+      "repoOwner": "jreleaser",
+      "repoName": "jbang-catalog",
+      "alias": "jreleaser",
+      "description": "\u003cp\u003eRelease projects quickly and easily with JReleaser\u003c/p\u003e\n",
+      "scriptRef": "jreleaser.java",
+      "command": "jreleaser@jreleaser",
+      "fullcommand": "jbang jreleaser@jreleaser",
+      "link": "https://github.com/jreleaser/jbang-catalog/blob/f5f32936cd791a23ecb5c1e60240e3469711157d/jbang-catalog.json"
+    },
+    {
+      "stars": 1,
+      "icon_url": "https://avatars.githubusercontent.com/u/81020166?v\u003d4",
+      "repoOwner": "jreleaser",
+      "repoName": "jbang-catalog",
+      "alias": "jreleaser-snapshot",
+      "description": "\u003cp\u003eRelease projects quickly and easily with JReleaser\u003c/p\u003e\n",
+      "scriptRef": "jreleaser_snapshot.java",
+      "command": "jreleaser-snapshot@jreleaser",
+      "fullcommand": "jbang jreleaser-snapshot@jreleaser",
+      "link": "https://github.com/jreleaser/jbang-catalog/blob/f5f32936cd791a23ecb5c1e60240e3469711157d/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/37168181?v\u003d4",
+      "repoOwner": "ArjunSai",
+      "repoName": "camel",
+      "alias": "CamelJBang",
+      "description": "\u003cp\u003eRun Apache Camel routes easily (deprecated - use camel instead)\u003c/p\u003e\n",
+      "scriptRef": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
+      "command": "CamelJBang@ArjunSai/camel",
+      "fullcommand": "jbang CamelJBang@ArjunSai/camel",
+      "link": "https://github.com/ArjunSai/camel/blob/2c1451aab95bc2ee232e4b20ca27e6ebd613ea62/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/37168181?v\u003d4",
+      "repoOwner": "ArjunSai",
+      "repoName": "camel",
+      "alias": "camel",
+      "description": "\u003cp\u003eRun Apache Camel routes easily\u003c/p\u003e\n",
+      "scriptRef": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
+      "command": "camel@ArjunSai/camel",
+      "fullcommand": "jbang camel@ArjunSai/camel",
+      "link": "https://github.com/ArjunSai/camel/blob/2c1451aab95bc2ee232e4b20ca27e6ebd613ea62/jbang-catalog.json"
     }
   ],
   "templates": [],
