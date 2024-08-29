@@ -8,7 +8,7 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll", "~> 4.0.1"
-gem 'pygments.rb', '~> 1.1.2'
+gem 'pygments.rb', '~> 1.2.0'
 gem "minimal-mistakes-jekyll"
 
 #gem 'github-pages'
