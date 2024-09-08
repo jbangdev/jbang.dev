@@ -1,8 +1,8 @@
 {
-  "aliasCount": 82,
+  "aliasCount": 66,
   "aliases": [
     {
-      "stars": 13530,
+      "stars": 13532,
       "icon_url": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
       "repoOwner": "quarkusio",
       "repoName": "quarkus",
@@ -10,10 +10,10 @@
       "scriptRef": "RevapiUpdate.java",
       "command": "revapi-update@quarkusio/quarkus~.jbang",
       "fullcommand": "jbang revapi-update@quarkusio/quarkus~.jbang",
-      "link": "https://github.com/quarkusio/quarkus/blob/b37b8b7f5fbd085270575e7e6bda539e657d455b/.jbang/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/quarkus/blob/646c96bd4d4f70010861dff323d212f91d0eb190/.jbang/jbang-catalog.json"
     },
     {
-      "stars": 5488,
+      "stars": 5490,
       "icon_url": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
       "repoOwner": "apache",
       "repoName": "camel",
@@ -22,7 +22,7 @@
       "scriptRef": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
       "command": "camel@apache/camel",
       "fullcommand": "jbang camel@apache/camel",
-      "link": "https://github.com/apache/camel/blob/b5d83c46b431948ffbf8f63a8c30e1cd703bacb8/jbang-catalog.json"
+      "link": "https://github.com/apache/camel/blob/cf70d57b33345a0b82eb1d44f1c0c110874ec65c/jbang-catalog.json"
     },
     {
       "stars": 453,
@@ -321,7 +321,7 @@
       "scriptRef": "scripts/liga.java",
       "command": "liga@tors42/jbang-chariot",
       "fullcommand": "jbang liga@tors42/jbang-chariot",
-      "link": "https://github.com/tors42/jbang-chariot/blob/d74125c60f049ebcce06d2d27fdfe669c405905a/jbang-catalog.json"
+      "link": "https://github.com/tors42/jbang-chariot/blob/76584e82ac009159ff1cf6b0a061f43d283e4136/jbang-catalog.json"
     },
     {
       "stars": 2,
@@ -332,7 +332,7 @@
       "scriptRef": "scripts/nonthematic.java",
       "command": "nonthematic@tors42/jbang-chariot",
       "fullcommand": "jbang nonthematic@tors42/jbang-chariot",
-      "link": "https://github.com/tors42/jbang-chariot/blob/d74125c60f049ebcce06d2d27fdfe669c405905a/jbang-catalog.json"
+      "link": "https://github.com/tors42/jbang-chariot/blob/76584e82ac009159ff1cf6b0a061f43d283e4136/jbang-catalog.json"
     },
     {
       "stars": 2,
@@ -343,7 +343,7 @@
       "scriptRef": "scripts/membercount.java",
       "command": "membercount@tors42/jbang-chariot",
       "fullcommand": "jbang membercount@tors42/jbang-chariot",
-      "link": "https://github.com/tors42/jbang-chariot/blob/d74125c60f049ebcce06d2d27fdfe669c405905a/jbang-catalog.json"
+      "link": "https://github.com/tors42/jbang-chariot/blob/76584e82ac009159ff1cf6b0a061f43d283e4136/jbang-catalog.json"
     },
     {
       "stars": 2,
@@ -354,7 +354,7 @@
       "scriptRef": "scripts/opponents.java",
       "command": "opponents@tors42/jbang-chariot",
       "fullcommand": "jbang opponents@tors42/jbang-chariot",
-      "link": "https://github.com/tors42/jbang-chariot/blob/d74125c60f049ebcce06d2d27fdfe669c405905a/jbang-catalog.json"
+      "link": "https://github.com/tors42/jbang-chariot/blob/76584e82ac009159ff1cf6b0a061f43d283e4136/jbang-catalog.json"
     },
     {
       "stars": 2,
@@ -365,7 +365,7 @@
       "scriptRef": "scripts/flatten.java",
       "command": "flatten@tors42/jbang-chariot",
       "fullcommand": "jbang flatten@tors42/jbang-chariot",
-      "link": "https://github.com/tors42/jbang-chariot/blob/d74125c60f049ebcce06d2d27fdfe669c405905a/jbang-catalog.json"
+      "link": "https://github.com/tors42/jbang-chariot/blob/76584e82ac009159ff1cf6b0a061f43d283e4136/jbang-catalog.json"
     },
     {
       "stars": 2,
@@ -376,7 +376,7 @@
       "scriptRef": "scripts/evalsummary.java",
       "command": "evalsummary@tors42/jbang-chariot",
       "fullcommand": "jbang evalsummary@tors42/jbang-chariot",
-      "link": "https://github.com/tors42/jbang-chariot/blob/d74125c60f049ebcce06d2d27fdfe669c405905a/jbang-catalog.json"
+      "link": "https://github.com/tors42/jbang-chariot/blob/76584e82ac009159ff1cf6b0a061f43d283e4136/jbang-catalog.json"
     },
     {
       "stars": 2,
@@ -387,7 +387,7 @@
       "scriptRef": "scripts/autoscore.java",
       "command": "autoscore@tors42/jbang-chariot",
       "fullcommand": "jbang autoscore@tors42/jbang-chariot",
-      "link": "https://github.com/tors42/jbang-chariot/blob/d74125c60f049ebcce06d2d27fdfe669c405905a/jbang-catalog.json"
+      "link": "https://github.com/tors42/jbang-chariot/blob/76584e82ac009159ff1cf6b0a061f43d283e4136/jbang-catalog.json"
     },
     {
       "stars": 2,
@@ -398,7 +398,7 @@
       "scriptRef": "scripts/uci2san.jsh",
       "command": "uci2san@tors42/jbang-chariot",
       "fullcommand": "jbang uci2san@tors42/jbang-chariot",
-      "link": "https://github.com/tors42/jbang-chariot/blob/d74125c60f049ebcce06d2d27fdfe669c405905a/jbang-catalog.json"
+      "link": "https://github.com/tors42/jbang-chariot/blob/76584e82ac009159ff1cf6b0a061f43d283e4136/jbang-catalog.json"
     },
     {
       "stars": 2,
@@ -409,7 +409,7 @@
       "scriptRef": "scripts/oauth2pkce.java",
       "command": "oauth2pkce@tors42/jbang-chariot",
       "fullcommand": "jbang oauth2pkce@tors42/jbang-chariot",
-      "link": "https://github.com/tors42/jbang-chariot/blob/d74125c60f049ebcce06d2d27fdfe669c405905a/jbang-catalog.json"
+      "link": "https://github.com/tors42/jbang-chariot/blob/76584e82ac009159ff1cf6b0a061f43d283e4136/jbang-catalog.json"
     },
     {
       "stars": 2,
@@ -420,7 +420,7 @@
       "scriptRef": "scripts/updateArena.java",
       "command": "updateArena@tors42/jbang-chariot",
       "fullcommand": "jbang updateArena@tors42/jbang-chariot",
-      "link": "https://github.com/tors42/jbang-chariot/blob/d74125c60f049ebcce06d2d27fdfe669c405905a/jbang-catalog.json"
+      "link": "https://github.com/tors42/jbang-chariot/blob/76584e82ac009159ff1cf6b0a061f43d283e4136/jbang-catalog.json"
     },
     {
       "stars": 2,
@@ -540,114 +540,6 @@
       "command": "mdns@quintesse",
       "fullcommand": "jbang mdns@quintesse",
       "link": "https://github.com/quintesse/jbang-catalog/blob/5f9de78fe388d84d86cc8a96680b29f4ce558df7/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/201120?v\u003d4",
-      "repoOwner": "neo4j",
-      "repoName": "jbang-catalog",
-      "alias": "hello_neo4j",
-      "description": "\u003cp\u003eGet some statistics out of your Neo4j instance.\nCall jbang hello_neo4j@neo4j --help to see the usage.\u003c/p\u003e\n",
-      "scriptRef": "hello_neo4j.java",
-      "command": "hello_neo4j@neo4j",
-      "fullcommand": "jbang hello_neo4j@neo4j",
-      "link": "https://github.com/neo4j/jbang-catalog/blob/df5b4b00ff2e4a4f6ac4e43f92c523e223b64be8/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/201120?v\u003d4",
-      "repoOwner": "neo4j",
-      "repoName": "jbang-catalog",
-      "alias": "cypher",
-      "description": "\u003cp\u003eUse Neo4j\u0027s Cypher shell to execute Cypher queries.\nInteractive shell without parameters or e.g. jbang neo4j@cypher -a \u003ca rel\u003d\"nofollow\" href\u003d\"\"\u003eneo4j://localhost:7687\u003c/a\u003e -u neo4j -p secret \u0027MATCH (n) return n\u0027\u003c/p\u003e\n",
-      "scriptRef": "cypher_shell.java",
-      "command": "cypher@neo4j",
-      "fullcommand": "jbang cypher@neo4j",
-      "link": "https://github.com/neo4j/jbang-catalog/blob/df5b4b00ff2e4a4f6ac4e43f92c523e223b64be8/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/201120?v\u003d4",
-      "repoOwner": "neo4j",
-      "repoName": "jbang-catalog",
-      "alias": "neo4j-migrations",
-      "description": "\u003cp\u003eSimple, Flyway DB inspired migrations for Neo4j.\u003c/p\u003e\n",
-      "scriptRef": "neo4j_migrations.java",
-      "command": "neo4j-migrations@neo4j",
-      "fullcommand": "jbang neo4j-migrations@neo4j",
-      "link": "https://github.com/neo4j/jbang-catalog/blob/df5b4b00ff2e4a4f6ac4e43f92c523e223b64be8/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/201120?v\u003d4",
-      "repoOwner": "neo4j",
-      "repoName": "jbang-catalog",
-      "alias": "rdbms2neo4j",
-      "description": "\u003cp\u003eImports the provided tables from an JDBC-URL (postgres, mysql drivers bundled) into Neo4j.\u003c/p\u003e\n",
-      "scriptRef": "rdbms2neo4j.java",
-      "command": "rdbms2neo4j@neo4j",
-      "fullcommand": "jbang rdbms2neo4j@neo4j",
-      "link": "https://github.com/neo4j/jbang-catalog/blob/df5b4b00ff2e4a4f6ac4e43f92c523e223b64be8/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/201120?v\u003d4",
-      "repoOwner": "neo4j",
-      "repoName": "jbang-catalog",
-      "alias": "liquibase-neo4j",
-      "description": "\u003cp\u003eManage and run your Neo4j database changes with Liquibase\u003c/p\u003e\n",
-      "scriptRef": "liquibase_neo4j.java",
-      "command": "liquibase-neo4j@neo4j",
-      "fullcommand": "jbang liquibase-neo4j@neo4j",
-      "link": "https://github.com/neo4j/jbang-catalog/blob/df5b4b00ff2e4a4f6ac4e43f92c523e223b64be8/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/201120?v\u003d4",
-      "repoOwner": "neo4j",
-      "repoName": "jbang-catalog",
-      "alias": "format-cypher",
-      "description": "\u003cp\u003ePretty print Cypher statements\u003c/p\u003e\n",
-      "scriptRef": "format_cypher.java",
-      "command": "format-cypher@neo4j",
-      "fullcommand": "jbang format-cypher@neo4j",
-      "link": "https://github.com/neo4j/jbang-catalog/blob/df5b4b00ff2e4a4f6ac4e43f92c523e223b64be8/jbang-catalog.json"
-    },
-    {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/201120?v\u003d4",
-      "repoOwner": "neo4j",
-      "repoName": "jbang-catalog",
-      "alias": "enforce-relationship-directions",
-      "description": "\u003cp\u003eValidates and enforces relationship directions in Cypher statements\u003c/p\u003e\n",
-      "scriptRef": "enforce_relationship_directions.java",
-      "command": "enforce-relationship-directions@neo4j",
-      "fullcommand": "jbang enforce-relationship-directions@neo4j",
-      "link": "https://github.com/neo4j/jbang-catalog/blob/df5b4b00ff2e4a4f6ac4e43f92c523e223b64be8/jbang-catalog.json"
-    },
-    {
-      "stars": 1,
-      "icon_url": "https://avatars.githubusercontent.com/u/81020166?v\u003d4",
-      "repoOwner": "jreleaser",
-      "repoName": "jbang-catalog",
-      "alias": "jreleaser",
-      "description": "\u003cp\u003eRelease projects quickly and easily with JReleaser\u003c/p\u003e\n",
-      "scriptRef": "jreleaser.java",
-      "command": "jreleaser@jreleaser",
-      "fullcommand": "jbang jreleaser@jreleaser",
-      "link": "https://github.com/jreleaser/jbang-catalog/blob/4672409c815bbf599351c4ccf0faaeeed5e11593/jbang-catalog.json"
-    },
-    {
-      "stars": 1,
-      "icon_url": "https://avatars.githubusercontent.com/u/81020166?v\u003d4",
-      "repoOwner": "jreleaser",
-      "repoName": "jbang-catalog",
-      "alias": "jreleaser-snapshot",
-      "description": "\u003cp\u003eRelease projects quickly and easily with JReleaser\u003c/p\u003e\n",
-      "scriptRef": "jreleaser_snapshot.java",
-      "command": "jreleaser-snapshot@jreleaser",
-      "fullcommand": "jbang jreleaser-snapshot@jreleaser",
-      "link": "https://github.com/jreleaser/jbang-catalog/blob/4672409c815bbf599351c4ccf0faaeeed5e11593/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -870,89 +762,6 @@
       "command": "pkl-codegen@linux-china",
       "fullcommand": "jbang pkl-codegen@linux-china",
       "link": "https://github.com/linux-china/jbang-catalog/blob/ade4a960fa232ec03920bf9379f25475b68e892a/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/118349365?v\u003d4",
-      "repoOwner": "maveniverse",
-      "repoName": "jbang-catalog",
-      "alias": "mima",
-      "description": "\u003cp\u003eMIMA 2.x CLI (stable) -- deprecated see toolbox@maveniverse\u003c/p\u003e\n",
-      "scriptRef": "eu.maveniverse.maven.mima:cli:2.4.20",
-      "command": "mima@maveniverse",
-      "fullcommand": "jbang mima@maveniverse",
-      "link": "https://github.com/maveniverse/jbang-catalog/blob/c9ac07988a58d8e545f3c6d910931ca397e46360/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/118349365?v\u003d4",
-      "repoOwner": "maveniverse",
-      "repoName": "jbang-catalog",
-      "alias": "mima2",
-      "description": "\u003cp\u003eMIMA 2.x CLI (stable) -- deprecated see toolbox@maveniverse\u003c/p\u003e\n",
-      "scriptRef": "eu.maveniverse.maven.mima:cli:2.4.20",
-      "command": "mima2@maveniverse",
-      "fullcommand": "jbang mima2@maveniverse",
-      "link": "https://github.com/maveniverse/jbang-catalog/blob/c9ac07988a58d8e545f3c6d910931ca397e46360/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/118349365?v\u003d4",
-      "repoOwner": "maveniverse",
-      "repoName": "jbang-catalog",
-      "alias": "mima3",
-      "description": "\u003cp\u003eMIMA 3.x CLI (alpha) -- deprecated see toolbox@maveniverse\u003c/p\u003e\n",
-      "scriptRef": "eu.maveniverse.maven.mima:cli:3.0.0-alpha-3",
-      "command": "mima3@maveniverse",
-      "fullcommand": "jbang mima3@maveniverse",
-      "link": "https://github.com/maveniverse/jbang-catalog/blob/c9ac07988a58d8e545f3c6d910931ca397e46360/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/118349365?v\u003d4",
-      "repoOwner": "maveniverse",
-      "repoName": "jbang-catalog",
-      "alias": "toolbox",
-      "description": "\u003cp\u003eToolbox 0.x CLI (alpha)\u003c/p\u003e\n",
-      "scriptRef": "https://repo.maven.apache.org/maven2/eu/maveniverse/maven/plugins/toolbox/0.2.5/toolbox-0.2.5-cli.jar",
-      "command": "toolbox@maveniverse",
-      "fullcommand": "jbang toolbox@maveniverse",
-      "link": "https://github.com/maveniverse/jbang-catalog/blob/c9ac07988a58d8e545f3c6d910931ca397e46360/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/921666?v\u003d4",
-      "repoOwner": "jlengrand",
-      "repoName": "jbang-catalog",
-      "alias": "app-snapshot",
-      "description": "\u003cp\u003ehelidon-quickstart-se\u003c/p\u003e\n",
-      "scriptRef": "app_snapshot.java",
-      "command": "app-snapshot@jlengrand",
-      "fullcommand": "jbang app-snapshot@jlengrand",
-      "link": "https://github.com/jlengrand/jbang-catalog/blob/20a69fcc6aa072afa05c23ca478693ccf367b382/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/921666?v\u003d4",
-      "repoOwner": "jlengrand",
-      "repoName": "jbang-catalog",
-      "alias": "helidon-quickstart-se-snapshot",
-      "description": "\u003cp\u003ehelidon-quickstart-se\u003c/p\u003e\n",
-      "scriptRef": "helidon_quickstart_se_snapshot.java",
-      "command": "helidon-quickstart-se-snapshot@jlengrand",
-      "fullcommand": "jbang helidon-quickstart-se-snapshot@jlengrand",
-      "link": "https://github.com/jlengrand/jbang-catalog/blob/20a69fcc6aa072afa05c23ca478693ccf367b382/jbang-catalog.json"
-    },
-    {
-      "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/91312095?v\u003d4",
-      "repoOwner": "karatelabs",
-      "repoName": "jbang-catalog",
-      "alias": "karate",
-      "scriptRef": "io.karatelabs:karate-core:1.5.0:all",
-      "command": "karate@karatelabs",
-      "fullcommand": "jbang karate@karatelabs",
-      "link": "https://github.com/karatelabs/jbang-catalog/blob/17cb2f8cc00c93dcaab418b9b349aebd17b033f6/jbang-catalog.json"
     }
   ],
   "templates": [
@@ -1001,17 +810,6 @@
       "link": "https://github.com/jbangdev/jbang-catalog/blob/eb960406f3e9a6d54045a30e7399857ae684f766/jbang-catalog.json"
     },
     {
-      "stars": 2,
-      "icon_url": "https://avatars.githubusercontent.com/u/201120?v\u003d4",
-      "repoOwner": "neo4j",
-      "repoName": "jbang-catalog",
-      "alias": "run-neo4j",
-      "description": "\u003cp\u003eBasic Neo4j Driver example\u003c/p\u003e\n",
-      "command": "run-neo4j@neo4j",
-      "fullcommand": "jbang init -t run-neo4j@neo4j",
-      "link": "https://github.com/neo4j/jbang-catalog/blob/df5b4b00ff2e4a4f6ac4e43f92c523e223b64be8/jbang-catalog.json"
-    },
-    {
       "stars": 0,
       "icon_url": "https://avatars.githubusercontent.com/u/11406183?v\u003d4",
       "repoOwner": "nandorholozsnyak",
@@ -1023,5 +821,5 @@
       "link": "https://github.com/nandorholozsnyak/jbang-catalog-doc-generator/blob/5b0a0d3627b30fe46c51d7f1ef1dba50a5c8dd34/jbang-catalog.json"
     }
   ],
-  "templateCount": 6
+  "templateCount": 5
 }
