@@ -2,7 +2,7 @@
   "aliasCount": 431,
   "aliases": [
     {
-      "stars": 13563,
+      "stars": 13564,
       "icon_url": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
       "repoOwner": "quarkusio",
       "repoName": "quarkus",
@@ -10,10 +10,10 @@
       "scriptRef": "RevapiUpdate.java",
       "command": "revapi-update@quarkusio/quarkus~.jbang",
       "fullcommand": "jbang revapi-update@quarkusio/quarkus~.jbang",
-      "link": "https://github.com/quarkusio/quarkus/blob/283f8b1bd993a5e5e3ceddb74b22f5672659f825/.jbang/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/quarkus/blob/dac2bb637fde764806ca930cf1305e961765fcd5/.jbang/jbang-catalog.json"
     },
     {
-      "stars": 8085,
+      "stars": 8083,
       "icon_url": "https://avatars.githubusercontent.com/u/91312095?v\u003d4",
       "repoOwner": "karatelabs",
       "repoName": "karate",
@@ -24,7 +24,7 @@
       "link": "https://github.com/karatelabs/karate/blob/7cbdb904e04e45f71c376f5962ce5a3cb80e19a6/jbang-catalog.json"
     },
     {
-      "stars": 5501,
+      "stars": 5506,
       "icon_url": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
       "repoOwner": "apache",
       "repoName": "camel",
@@ -33,7 +33,7 @@
       "scriptRef": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
       "command": "camel@apache/camel",
       "fullcommand": "jbang camel@apache/camel",
-      "link": "https://github.com/apache/camel/blob/f50459385bc348630022fd57b9d6fbcba9b34af8/jbang-catalog.json"
+      "link": "https://github.com/apache/camel/blob/18069cc0fa92b4eeafb4ede05c2da6a52ddf86b0/jbang-catalog.json"
     },
     {
       "stars": 1807,
@@ -1270,7 +1270,7 @@
       "scriptRef": "quarkusissue.java",
       "command": "buginfo@quarkusio",
       "fullcommand": "jbang buginfo@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/a0f9b8980985458ac947e13f620e46eb0f5aac3a/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/99821c287fd92cbc3524df033969f851c4320caa/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1282,7 +1282,7 @@
       "scriptRef": "catalog_check_updates.java",
       "command": "catalog_check_updates@quarkusio",
       "fullcommand": "jbang catalog_check_updates@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/a0f9b8980985458ac947e13f620e46eb0f5aac3a/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/99821c287fd92cbc3524df033969f851c4320caa/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1294,7 +1294,7 @@
       "scriptRef": "catalog_publish.java",
       "command": "catalog_publish@quarkusio",
       "fullcommand": "jbang catalog_publish@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/a0f9b8980985458ac947e13f620e46eb0f5aac3a/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/99821c287fd92cbc3524df033969f851c4320caa/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1302,10 +1302,10 @@
       "repoOwner": "quarkusio",
       "repoName": "jbang-catalog",
       "alias": "cli",
-      "scriptRef": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.14.3/quarkus-cli-3.14.3-runner.jar",
+      "scriptRef": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.14.4/quarkus-cli-3.14.4-runner.jar",
       "command": "cli@quarkusio",
       "fullcommand": "jbang cli@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/a0f9b8980985458ac947e13f620e46eb0f5aac3a/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/99821c287fd92cbc3524df033969f851c4320caa/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1313,10 +1313,10 @@
       "repoOwner": "quarkusio",
       "repoName": "jbang-catalog",
       "alias": "qs",
-      "scriptRef": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.14.3/quarkus-cli-3.14.3-runner.jar",
+      "scriptRef": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.14.4/quarkus-cli-3.14.4-runner.jar",
       "command": "qs@quarkusio",
       "fullcommand": "jbang qs@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/a0f9b8980985458ac947e13f620e46eb0f5aac3a/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/99821c287fd92cbc3524df033969f851c4320caa/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1324,10 +1324,10 @@
       "repoOwner": "quarkusio",
       "repoName": "jbang-catalog",
       "alias": "quarkus",
-      "scriptRef": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.14.3/quarkus-cli-3.14.3-runner.jar",
+      "scriptRef": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.14.4/quarkus-cli-3.14.4-runner.jar",
       "command": "quarkus@quarkusio",
       "fullcommand": "jbang quarkus@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/a0f9b8980985458ac947e13f620e46eb0f5aac3a/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/99821c287fd92cbc3524df033969f851c4320caa/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1338,7 +1338,7 @@
       "scriptRef": "kill.java",
       "command": "quarkus-kill@quarkusio",
       "fullcommand": "jbang quarkus-kill@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/a0f9b8980985458ac947e13f620e46eb0f5aac3a/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/99821c287fd92cbc3524df033969f851c4320caa/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1349,7 +1349,7 @@
       "scriptRef": "kill.java",
       "command": "kill@quarkusio",
       "fullcommand": "jbang kill@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/a0f9b8980985458ac947e13f620e46eb0f5aac3a/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/99821c287fd92cbc3524df033969f851c4320caa/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1360,7 +1360,7 @@
       "scriptRef": "fmt.java",
       "command": "quarkus-fmt@quarkusio",
       "fullcommand": "jbang quarkus-fmt@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/a0f9b8980985458ac947e13f620e46eb0f5aac3a/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/99821c287fd92cbc3524df033969f851c4320caa/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -1371,7 +1371,7 @@
       "scriptRef": "fmt.java",
       "command": "fmt@quarkusio",
       "fullcommand": "jbang fmt@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/a0f9b8980985458ac947e13f620e46eb0f5aac3a/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/99821c287fd92cbc3524df033969f851c4320caa/jbang-catalog.json"
     },
     {
       "stars": 7,
@@ -5202,7 +5202,7 @@
       "description": "\u003cp\u003eExample of making a github app\u003c/p\u003e\n",
       "command": "githubbot@quarkusio",
       "fullcommand": "jbang init -t githubbot@quarkusio",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/a0f9b8980985458ac947e13f620e46eb0f5aac3a/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/99821c287fd92cbc3524df033969f851c4320caa/jbang-catalog.json"
     },
     {
       "stars": 7,
