@@ -1,8 +1,8 @@
 {
-  "aliasCount": 27,
+  "aliasCount": 54,
   "aliases": [
     {
-      "stars": 13564,
+      "stars": 13567,
       "icon_url": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
       "repoOwner": "quarkusio",
       "repoName": "quarkus",
@@ -10,10 +10,10 @@
       "scriptRef": "RevapiUpdate.java",
       "command": "revapi-update@quarkusio/quarkus~.jbang",
       "fullcommand": "jbang revapi-update@quarkusio/quarkus~.jbang",
-      "link": "https://github.com/quarkusio/quarkus/blob/dac2bb637fde764806ca930cf1305e961765fcd5/.jbang/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/quarkus/blob/586592e86f2eb96088d2b6c7f99460ab5dcb7c3a/.jbang/jbang-catalog.json"
     },
     {
-      "stars": 5506,
+      "stars": 5510,
       "icon_url": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
       "repoOwner": "apache",
       "repoName": "camel",
@@ -22,7 +22,7 @@
       "scriptRef": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
       "command": "camel@apache/camel",
       "fullcommand": "jbang camel@apache/camel",
-      "link": "https://github.com/apache/camel/blob/18069cc0fa92b4eeafb4ede05c2da6a52ddf86b0/jbang-catalog.json"
+      "link": "https://github.com/apache/camel/blob/5876dac8df70841aa8e2013574942a16a3fe0ad2/jbang-catalog.json"
     },
     {
       "stars": 453,
@@ -34,7 +34,53 @@
       "scriptRef": "tools/jbang/dist/CitrusJBang.java",
       "command": "citrus@citrusframework/citrus",
       "fullcommand": "jbang citrus@citrusframework/citrus",
-      "link": "https://github.com/citrusframework/citrus/blob/02e8069ee1e09dfab623472c5a1813b018e53011/jbang-catalog.json"
+      "link": "https://github.com/citrusframework/citrus/blob/e0c7cb82bd6fd748e28bbee514f1bbaeb74ca223/jbang-catalog.json"
+    },
+    {
+      "stars": 432,
+      "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
+      "repoOwner": "hibernate",
+      "repoName": "hibernate-reactive",
+      "alias": "example",
+      "description": "\u003cp\u003eAn application example. The database must be available before running it. See \u003ca rel\u003d\"nofollow\" href\u003d\"https://github.com/hibernate/hibernate-reactive/blob/main/podman.md\"\u003ehttps://github.com/hibernate/hibernate-reactive/blob/main/podman.md\u003c/a\u003e\u003c/p\u003e\n",
+      "scriptRef": "tooling/jbang/Example.java",
+      "command": "example@hibernate/hibernate-reactive",
+      "fullcommand": "jbang example@hibernate/hibernate-reactive",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/72a78e9091fe4c0b68ddb2cedb6d5dc40c86c1bd/jbang-catalog.json"
+    },
+    {
+      "stars": 432,
+      "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
+      "repoOwner": "hibernate",
+      "repoName": "hibernate-reactive",
+      "alias": "testcase",
+      "description": "\u003cp\u003eA Hibernate Reactive JUnit test using Docker, Testcontainers and Vert.x Unit\u003c/p\u003e\n",
+      "scriptRef": "tooling/jbang/ReactiveTest.java",
+      "command": "testcase@hibernate/hibernate-reactive",
+      "fullcommand": "jbang testcase@hibernate/hibernate-reactive",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/72a78e9091fe4c0b68ddb2cedb6d5dc40c86c1bd/jbang-catalog.json"
+    },
+    {
+      "stars": 11,
+      "icon_url": "https://avatars.githubusercontent.com/u/1366654?v\u003d4",
+      "repoOwner": "koppor",
+      "repoName": "github-contributors-list",
+      "alias": "gcl",
+      "scriptRef": "gcl.java",
+      "command": "gcl@koppor/github-contributors-list",
+      "fullcommand": "jbang gcl@koppor/github-contributors-list",
+      "link": "https://github.com/koppor/github-contributors-list/blob/89a361e07d09631a534a1aaf0efb2bb956b41404/jbang-catalog.json"
+    },
+    {
+      "stars": 9,
+      "icon_url": "https://avatars.githubusercontent.com/u/20963129?v\u003d4",
+      "repoOwner": "hpcclab",
+      "repoName": "OaaS",
+      "alias": "ocli",
+      "scriptRef": "https://github.com/hpcclab/OaaS/releases/download/0.2.2/ocli.jar",
+      "command": "ocli@hpcclab/OaaS",
+      "fullcommand": "jbang ocli@hpcclab/OaaS",
+      "link": "https://github.com/hpcclab/OaaS/blob/51ab24511ba224be953e224e73e47dcc53ad61a7/jbang-catalog.json"
     },
     {
       "stars": 2,
@@ -308,8 +354,335 @@
       "command": "gen-cwe-dict@DependencyTrack",
       "fullcommand": "jbang gen-cwe-dict@DependencyTrack",
       "link": "https://github.com/DependencyTrack/jbang-catalog/blob/2ac0971f6c63972a33dde8a2cd06f7c42259c744/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
+      "repoOwner": "maxandersen",
+      "repoName": "jfabric",
+      "alias": "fabric",
+      "scriptRef": "fabric.java",
+      "command": "fabric@maxandersen/jfabric",
+      "fullcommand": "jbang fabric@maxandersen/jfabric",
+      "link": "https://github.com/maxandersen/jfabric/blob/52024698743f88ff89e72b2c333e59f8ab480633/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/478604?v\u003d4",
+      "repoOwner": "base2Services",
+      "repoName": "jbang-catalog",
+      "alias": "env",
+      "description": "\u003cp\u003eDump table of Environment Variables\u003c/p\u003e\n",
+      "scriptRef": "env.java",
+      "command": "env@base2Services",
+      "fullcommand": "jbang env@base2Services",
+      "link": "https://github.com/base2Services/jbang-catalog/blob/b35b5a203947f6e6eae17d5cfd22abb04aa1bbcc/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/478604?v\u003d4",
+      "repoOwner": "base2Services",
+      "repoName": "jbang-catalog",
+      "alias": "awsssm",
+      "description": "\u003cp\u003eAWS SSM Session Manager Tunnels\u003c/p\u003e\n",
+      "scriptRef": "awsssm.java",
+      "command": "awsssm@base2Services",
+      "fullcommand": "jbang awsssm@base2Services",
+      "link": "https://github.com/base2Services/jbang-catalog/blob/b35b5a203947f6e6eae17d5cfd22abb04aa1bbcc/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/98075537?v\u003d4",
+      "repoOwner": "gaurabhok",
+      "repoName": "karate-automation",
+      "alias": "karate",
+      "scriptRef": "com.intuit.karate:karate-core:1.3.1:all",
+      "command": "karate@gaurabhok/karate-automation",
+      "fullcommand": "jbang karate@gaurabhok/karate-automation",
+      "link": "https://github.com/gaurabhok/karate-automation/blob/dae22a4de2a39e0a6a8c3be5ddef28ed3bdd7c39/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/1005263?v\u003d4",
+      "repoOwner": "dotCMS",
+      "repoName": "jbang-catalog",
+      "alias": "qcli-jbang",
+      "description": "\u003cp\u003eapp -- Sample Quarkus CLI application\u003c/p\u003e\n",
+      "scriptRef": "qcli_jbang.java",
+      "command": "qcli-jbang@dotCMS",
+      "fullcommand": "jbang qcli-jbang@dotCMS",
+      "link": "https://github.com/dotCMS/jbang-catalog/blob/27796bbff9fe53ff9bde15ba1ca37dbf991ab064/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/1005263?v\u003d4",
+      "repoOwner": "dotCMS",
+      "repoName": "jbang-catalog",
+      "alias": "jreleaser-cli-snapshot",
+      "description": "\u003cp\u003eapp -- Sample Quarkus CLI application\u003c/p\u003e\n",
+      "scriptRef": "jreleaser_cli_snapshot.java",
+      "command": "jreleaser-cli-snapshot@dotCMS",
+      "fullcommand": "jbang jreleaser-cli-snapshot@dotCMS",
+      "link": "https://github.com/dotCMS/jbang-catalog/blob/27796bbff9fe53ff9bde15ba1ca37dbf991ab064/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/1005263?v\u003d4",
+      "repoOwner": "dotCMS",
+      "repoName": "jbang-catalog",
+      "alias": "dotcms-cli-snapshot",
+      "description": "\u003cp\u003eapp -- DotCMS CLI\u003c/p\u003e\n",
+      "scriptRef": "dotcms_cli_snapshot.java",
+      "command": "dotcms-cli-snapshot@dotCMS",
+      "fullcommand": "jbang dotcms-cli-snapshot@dotCMS",
+      "link": "https://github.com/dotCMS/jbang-catalog/blob/27796bbff9fe53ff9bde15ba1ca37dbf991ab064/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/1005263?v\u003d4",
+      "repoOwner": "dotCMS",
+      "repoName": "jbang-catalog",
+      "alias": "dotcms-cli",
+      "description": "\u003cp\u003eapp -- DotCMS CLI\u003c/p\u003e\n",
+      "scriptRef": "dotcms_cli.java",
+      "command": "dotcms-cli@dotCMS",
+      "fullcommand": "jbang dotcms-cli@dotCMS",
+      "link": "https://github.com/dotCMS/jbang-catalog/blob/27796bbff9fe53ff9bde15ba1ca37dbf991ab064/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/335133?v\u003d4",
+      "repoOwner": "sebastienblanc",
+      "repoName": "limit-request",
+      "alias": "kubectl-limit",
+      "scriptRef": "src/kubectl-limit",
+      "command": "kubectl-limit@sebastienblanc/limit-request",
+      "fullcommand": "jbang kubectl-limit@sebastienblanc/limit-request",
+      "link": "https://github.com/sebastienblanc/limit-request/blob/010bc8d7617ddfec40ca609cc0e29234735600b0/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/4481387?v\u003d4",
+      "repoOwner": "aucampia",
+      "repoName": "issues",
+      "alias": "datahub-protobuf-old",
+      "scriptRef": "https://raw.githubusercontent.com/datahub-project/datahub/b9068ffd2ef527a2b24b5d3828a9cc6c0f23b4fb/metadata-integration/java/datahub-protobuf-example/libs/datahub-protobuf.jar",
+      "command": "datahub-protobuf-old@aucampia/issues~20220908-datahub-protobuf",
+      "fullcommand": "jbang datahub-protobuf-old@aucampia/issues~20220908-datahub-protobuf",
+      "link": "https://github.com/aucampia/issues/blob/4a8aeb316241c551075869ab890f76d7fa22eae2/20220908-datahub-protobuf/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/4481387?v\u003d4",
+      "repoOwner": "aucampia",
+      "repoName": "issues",
+      "alias": "datahub-protobuf",
+      "scriptRef": "io.acryl:datahub-protobuf:0.8.44-2rc1",
+      "command": "datahub-protobuf@aucampia/issues~20220908-datahub-protobuf",
+      "fullcommand": "jbang datahub-protobuf@aucampia/issues~20220908-datahub-protobuf",
+      "link": "https://github.com/aucampia/issues/blob/4a8aeb316241c551075869ab890f76d7fa22eae2/20220908-datahub-protobuf/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/874086?v\u003d4",
+      "repoOwner": "junit-team",
+      "repoName": "jbang-catalog",
+      "alias": "cli",
+      "description": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
+      "scriptRef": "org.junit.platform:junit-platform-console-standalone:1.11.0",
+      "command": "cli@junit-team",
+      "fullcommand": "jbang cli@junit-team",
+      "link": "https://github.com/junit-team/jbang-catalog/blob/b77202018dd36635cdc947d2253c6c5c316d1576/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/874086?v\u003d4",
+      "repoOwner": "junit-team",
+      "repoName": "jbang-catalog",
+      "alias": "cli-1.11.0",
+      "description": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
+      "scriptRef": "org.junit.platform:junit-platform-console-standalone:1.11.0",
+      "command": "cli-1.11.0@junit-team",
+      "fullcommand": "jbang cli-1.11.0@junit-team",
+      "link": "https://github.com/junit-team/jbang-catalog/blob/b77202018dd36635cdc947d2253c6c5c316d1576/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/874086?v\u003d4",
+      "repoOwner": "junit-team",
+      "repoName": "jbang-catalog",
+      "alias": "cli-1.10.3",
+      "description": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
+      "scriptRef": "org.junit.platform:junit-platform-console-standalone:1.10.3",
+      "command": "cli-1.10.3@junit-team",
+      "fullcommand": "jbang cli-1.10.3@junit-team",
+      "link": "https://github.com/junit-team/jbang-catalog/blob/b77202018dd36635cdc947d2253c6c5c316d1576/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/874086?v\u003d4",
+      "repoOwner": "junit-team",
+      "repoName": "jbang-catalog",
+      "alias": "cli-1.10.2",
+      "description": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
+      "scriptRef": "org.junit.platform:junit-platform-console-standalone:1.10.2",
+      "command": "cli-1.10.2@junit-team",
+      "fullcommand": "jbang cli-1.10.2@junit-team",
+      "link": "https://github.com/junit-team/jbang-catalog/blob/b77202018dd36635cdc947d2253c6c5c316d1576/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/874086?v\u003d4",
+      "repoOwner": "junit-team",
+      "repoName": "jbang-catalog",
+      "alias": "cli-1.10.1",
+      "description": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
+      "scriptRef": "org.junit.platform:junit-platform-console-standalone:1.10.1",
+      "command": "cli-1.10.1@junit-team",
+      "fullcommand": "jbang cli-1.10.1@junit-team",
+      "link": "https://github.com/junit-team/jbang-catalog/blob/b77202018dd36635cdc947d2253c6c5c316d1576/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/874086?v\u003d4",
+      "repoOwner": "junit-team",
+      "repoName": "jbang-catalog",
+      "alias": "cli-1.10.0",
+      "description": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
+      "scriptRef": "org.junit.platform:junit-platform-console-standalone:1.10.0",
+      "command": "cli-1.10.0@junit-team",
+      "fullcommand": "jbang cli-1.10.0@junit-team",
+      "link": "https://github.com/junit-team/jbang-catalog/blob/b77202018dd36635cdc947d2253c6c5c316d1576/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/874086?v\u003d4",
+      "repoOwner": "junit-team",
+      "repoName": "jbang-catalog",
+      "alias": "cli-1.9.3",
+      "description": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
+      "scriptRef": "org.junit.platform:junit-platform-console-standalone:1.9.3",
+      "command": "cli-1.9.3@junit-team",
+      "fullcommand": "jbang cli-1.9.3@junit-team",
+      "link": "https://github.com/junit-team/jbang-catalog/blob/b77202018dd36635cdc947d2253c6c5c316d1576/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/874086?v\u003d4",
+      "repoOwner": "junit-team",
+      "repoName": "jbang-catalog",
+      "alias": "cli-1.9.2",
+      "description": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
+      "scriptRef": "org.junit.platform:junit-platform-console-standalone:1.9.2",
+      "command": "cli-1.9.2@junit-team",
+      "fullcommand": "jbang cli-1.9.2@junit-team",
+      "link": "https://github.com/junit-team/jbang-catalog/blob/b77202018dd36635cdc947d2253c6c5c316d1576/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/874086?v\u003d4",
+      "repoOwner": "junit-team",
+      "repoName": "jbang-catalog",
+      "alias": "cli-1.9.1",
+      "description": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
+      "scriptRef": "org.junit.platform:junit-platform-console-standalone:1.9.1",
+      "command": "cli-1.9.1@junit-team",
+      "fullcommand": "jbang cli-1.9.1@junit-team",
+      "link": "https://github.com/junit-team/jbang-catalog/blob/b77202018dd36635cdc947d2253c6c5c316d1576/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/874086?v\u003d4",
+      "repoOwner": "junit-team",
+      "repoName": "jbang-catalog",
+      "alias": "cli-1.9.0",
+      "description": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
+      "scriptRef": "org.junit.platform:junit-platform-console-standalone:1.9.0",
+      "command": "cli-1.9.0@junit-team",
+      "fullcommand": "jbang cli-1.9.0@junit-team",
+      "link": "https://github.com/junit-team/jbang-catalog/blob/b77202018dd36635cdc947d2253c6c5c316d1576/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/874086?v\u003d4",
+      "repoOwner": "junit-team",
+      "repoName": "jbang-catalog",
+      "alias": "cli-1.8.2",
+      "description": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
+      "scriptRef": "org.junit.platform:junit-platform-console-standalone:1.8.2",
+      "command": "cli-1.8.2@junit-team",
+      "fullcommand": "jbang cli-1.8.2@junit-team",
+      "link": "https://github.com/junit-team/jbang-catalog/blob/b77202018dd36635cdc947d2253c6c5c316d1576/jbang-catalog.json"
+    },
+    {
+      "stars": 0,
+      "icon_url": "https://avatars.githubusercontent.com/u/874086?v\u003d4",
+      "repoOwner": "junit-team",
+      "repoName": "jbang-catalog",
+      "alias": "cli-1.8.1",
+      "description": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
+      "scriptRef": "org.junit.platform:junit-platform-console-standalone:1.8.1",
+      "command": "cli-1.8.1@junit-team",
+      "fullcommand": "jbang cli-1.8.1@junit-team",
+      "link": "https://github.com/junit-team/jbang-catalog/blob/b77202018dd36635cdc947d2253c6c5c316d1576/jbang-catalog.json"
     }
   ],
-  "templates": [],
-  "templateCount": 0
+  "templates": [
+    {
+      "stars": 432,
+      "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
+      "repoOwner": "hibernate",
+      "repoName": "hibernate-reactive",
+      "alias": "pg-reproducer",
+      "description": "\u003cp\u003eTemplate for a test with PostgreSQL using Junit 4, Vert.x Unit and Testcontainers\u003c/p\u003e\n",
+      "command": "pg-reproducer@hibernate/hibernate-reactive",
+      "fullcommand": "jbang init -t pg-reproducer@hibernate/hibernate-reactive",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/72a78e9091fe4c0b68ddb2cedb6d5dc40c86c1bd/jbang-catalog.json"
+    },
+    {
+      "stars": 432,
+      "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
+      "repoOwner": "hibernate",
+      "repoName": "hibernate-reactive",
+      "alias": "mysql-reproducer",
+      "description": "\u003cp\u003eTemplate for a test with MySQL using Junit 4, Vert.x Unit and Testcontainers\u003c/p\u003e\n",
+      "command": "mysql-reproducer@hibernate/hibernate-reactive",
+      "fullcommand": "jbang init -t mysql-reproducer@hibernate/hibernate-reactive",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/72a78e9091fe4c0b68ddb2cedb6d5dc40c86c1bd/jbang-catalog.json"
+    },
+    {
+      "stars": 432,
+      "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
+      "repoOwner": "hibernate",
+      "repoName": "hibernate-reactive",
+      "alias": "mariadb-reproducer",
+      "description": "\u003cp\u003eTemplate for a test with MariaDB using Junit 4, Vert.x Unit and Testcontainers\u003c/p\u003e\n",
+      "command": "mariadb-reproducer@hibernate/hibernate-reactive",
+      "fullcommand": "jbang init -t mariadb-reproducer@hibernate/hibernate-reactive",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/72a78e9091fe4c0b68ddb2cedb6d5dc40c86c1bd/jbang-catalog.json"
+    },
+    {
+      "stars": 432,
+      "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
+      "repoOwner": "hibernate",
+      "repoName": "hibernate-reactive",
+      "alias": "db2-reproducer",
+      "description": "\u003cp\u003eTemplate for a test with Db2 using Junit 4, Vert.x Unit and Testcontainers\u003c/p\u003e\n",
+      "command": "db2-reproducer@hibernate/hibernate-reactive",
+      "fullcommand": "jbang init -t db2-reproducer@hibernate/hibernate-reactive",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/72a78e9091fe4c0b68ddb2cedb6d5dc40c86c1bd/jbang-catalog.json"
+    },
+    {
+      "stars": 432,
+      "icon_url": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
+      "repoOwner": "hibernate",
+      "repoName": "hibernate-reactive",
+      "alias": "cockroachdb-reproducer",
+      "description": "\u003cp\u003eTemplate for a test with CockroachDB using Junit 4, Vert.x Unit and Testcontainers\u003c/p\u003e\n",
+      "command": "cockroachdb-reproducer@hibernate/hibernate-reactive",
+      "fullcommand": "jbang init -t cockroachdb-reproducer@hibernate/hibernate-reactive",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/72a78e9091fe4c0b68ddb2cedb6d5dc40c86c1bd/jbang-catalog.json"
+    }
+  ],
+  "templateCount": 5
 }
