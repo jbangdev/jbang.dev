@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: jbang
-        uses: jbangdev/jbang-action@v0.70.0
+        uses: jbangdev/jbang-action@v0.119.0
         with:
           script: .github/appstore.java
         env:
