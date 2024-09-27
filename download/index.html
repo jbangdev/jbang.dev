@@ -436,6 +436,44 @@ new Vue({
     }
   },
 })
+
+function copyToClipboard(button) {
+  const text = button.textContent;//.innerText;
+  
+  navigator.clipboard.writeText(text).then(() => {
+    //alert('Copied to clipboard ' + text);
+  }).catch(err => {
+    console.error('Failed to copy: ', err);
+  });
+}
+
+function addCopyButtons() {
+  document.querySelectorAll('pre').forEach(pre => {
+    if (pre.style.cursor != 'pointer') {
+      pre.style.cursor = 'pointer';
+      pre.onclick = () => copyToClipboard(pre);
+      pre.title = 'Click to copy';
+      // Add a flash effect on click
+      pre.addEventListener('click', function() {
+        this.style.transition = 'background-color 0.1s';
+        this.style.backgroundColor = '#f0f0f0';
+        setTimeout(() => {
+          this.style.backgroundColor = '';
+          setTimeout(() => {
+            this.style.transition = '';
+          }, 100);
+        }, 100);
+      });
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  addCopyButtons();
+
+  const observer = new MutationObserver(addCopyButtons);
+  observer.observe(document.body, { childList: true, subtree: true });
+});
 </script>
 <script src="/assets/js/os-check.js"></script>
   <!-- Content End -->
