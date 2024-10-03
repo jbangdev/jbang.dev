@@ -340,19 +340,16 @@ asdf install jbang latest</pre>
               </p>
         </v-tab-item>
         <v-tab-item>
-          <p>There are a pre-built github Action you can use in your github workflows:</p>
+          <p>setup-jbang action:</p>
           <pre v-highlightjs>
-            <code class="language-yaml">- name: jbang
-  uses: jbangdev/jbang-action@v0.70.0
-  with:
-  script: createissue.java
-  scriptargs: "my world"
-  env:
-  JBANG_REPO: /root/.jbang/repository
-  GITHUB_TOKEN: $
-</code>
+            <code class="language-yaml">- name: Setup JBang
+              uses: jbangdev/setup-jbang@main
+
+              - name: properties
+                run: |
+                jbang properties@jbangdev
           </pre>
-          <p>Install and see details at <a href="https://github.com/marketplace/actions/java-scripting-w-jbang">Github Action Marketplace</a></p>
+          <p>Install and see details at <a href="https://github.com/marketplace/actions/setup-jbang">Github Action Marketplace</a></p>
         </v-tab-item>
         <v-tab-item>
           <p>Plugin to run jbang as part of a Apache Maven build available from  <a href="https://github.com/jbangdev/jbang-maven-plugin/">jbang-maven-plugin</a></p>
