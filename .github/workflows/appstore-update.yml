@@ -1,9 +1,9 @@
 name: appstore-update
 
 on:
-  schedule:
+  #schedule:
     # 5 AM daily
-    - cron: '0 5 * * *'
+   # - cron: '0 5 * * *'
   workflow_dispatch:
 jobs:
   appstore-update:
