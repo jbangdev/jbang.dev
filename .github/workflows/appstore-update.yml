@@ -1,17 +1,23 @@
 name: appstore-update
 
 on:
-  #schedule:
+  schedule:
     # 5 AM daily
-   # - cron: '0 5 * * *'
+    - cron: '0 5 * * *'
   workflow_dispatch:
 jobs:
   appstore-update:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+      - name: stats
+        uses: jbangdev/jbang-action@v0.119.0
+        with:
+          script: statsquery2.java --token ${{ secrets.CLOUDFLARE_TOKEN }} --account ${{ secrets.CLOUDFLARE_ACCOUNT }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: jbang
-        uses: jbangdev/jbang-action@v0.70.0
+        uses: jbangdev/jbang-action@v0.119.0
         with:
           script: .github/appstore.java
         env:
