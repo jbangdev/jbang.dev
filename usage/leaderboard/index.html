@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>JBang</title>
-<meta name="description" content="Lets Students, Educators and Professional Developers create, edit and run self-contained source-only Java programs with unprecedented ease.">
+<!-- begin _includes/seo.html --><title>JBang Leaderboard - JBang</title>
+<meta name="description" content="jbang is a tool that makes it easy to get started with java and enable experimentation and exploration without the traditional overhead and ceromony with traditional java tools">
 
 
   <meta name="author" content="JBang">
@@ -20,42 +20,40 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="JBang">
-<meta property="og:title" content="JBang">
-<meta property="og:url" content="https://jbang.dev/">
+<meta property="og:title" content="JBang Leaderboard">
+<meta property="og:url" content="https://jbang.dev/usage/leaderboard/">
 
 
-  <meta property="og:description" content="Lets Students, Educators and Professional Developers create, edit and run self-contained source-only Java programs with unprecedented ease.">
+  <meta property="og:description" content="jbang is a tool that makes it easy to get started with java and enable experimentation and exploration without the traditional overhead and ceromony with traditional java tools">
 
 
-
-  <meta property="og:image" content="https://jbang.dev/assets/images/slider/bg-1.jpg">
 
 
 
   <meta name="twitter:site" content="@jbangdev">
-  <meta name="twitter:title" content="JBang">
-  <meta name="twitter:description" content="Lets Students, Educators and Professional Developers create, edit and run self-contained source-only Java programs with unprecedented ease.">
-  <meta name="twitter:url" content="https://jbang.dev/">
+  <meta name="twitter:title" content="JBang Leaderboard">
+  <meta name="twitter:description" content="jbang is a tool that makes it easy to get started with java and enable experimentation and exploration without the traditional overhead and ceromony with traditional java tools">
+  <meta name="twitter:url" content="https://jbang.dev/usage/leaderboard/">
 
   
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://jbang.dev/assets/images/slider/bg-1.jpg">
-  
-
-  
-
-
-
-
-
-
-
+    <meta name="twitter:card" content="summary">
+    
   
 
   
 
 
-<link rel="canonical" href="https://jbang.dev/">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://jbang.dev/usage/leaderboard/">
 
 
 
@@ -207,259 +205,400 @@ Vue.directive('highlightjs', {
 
     <div class="initial-content">
       
-  
-
-
-
-
-
-
-
-<div class="page__hero--overlay"
-  style=" background-image: url('/assets/images/slider/bg-1.jpg');"
->
-  
-    <div class="wrapper">
-      <h1 id="page-title" class="page__title" itemprop="headline">
-        
-          JBang
-
-        
-      </h1>
-      
-        <p class="page__lead">Lets Students, Educators and Professional Developers create, edit and run self-contained source-only Java programs with unprecedented ease.
-</p>
-      
-      
-
-
-      
-      
-        <p>
-        
-          <a href="/download" class="btn btn--light-outline btn--large"><i class='fas fa-download'></i> Download</a>
-        
-          <a href="/try" class="btn btn--light-outline btn--large">Try</a>
-        
-      
-    </div>
-  
-  
-</div>
-
-
 
 <div id="main" role="main">
   <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="JBang Leaderboard">
     
-    <meta itemprop="description" content="Lets Students, Educators and Professional Developers create, edit and run self-contained source-only Java programs with unprecedented ease.">
     
     
 
     <section class="page__content" itemprop="text">
-      
-<div class="feature__wrapper">
+      <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .non-rated {
+        margin-top: 20px;
+    }
+</style>
 
-  
+<h1>JBang Usage Leaderboard</h1>
 
+<p>This is a work in progress. The data is collected from the JBang version checking <a href="https://www.jbang.dev/documentation/guide/latest/installation.html#version-check">here</a>.</p>
+<p>The data is updated once a day. It will show data for maximum last 3 months, starting from 2024-10-19.</p>
+<p>% is calculated as unique per approximate location info used for the http request. Meaning if the same approximate area makes multiple requests using the same version/country it is counted only once.</p>
+
+<h2>Top 10 Countries</h2>
+<table>
+    <tr>
+        <th>Position</th>
+        <th>Country</th>
+        <th>% of Total</th>
+    </tr>
+    
+    <tr>
+        <td>1</td>
+        <td>United States</td>
+        <td>13.6%</td>
+    </tr>
+    
+    <tr>
+        <td>2</td>
+        <td>Germany</td>
+        <td>11.4%</td>
+    </tr>
+    
+    <tr>
+        <td>3</td>
+        <td>India</td>
+        <td>6.1%</td>
+    </tr>
+    
+    <tr>
+        <td>4</td>
+        <td>France</td>
+        <td>6.1%</td>
+    </tr>
+    
+    <tr>
+        <td>5</td>
+        <td>Brazil</td>
+        <td>5.3%</td>
+    </tr>
+    
+    <tr>
+        <td>6</td>
+        <td>Switzerland</td>
+        <td>4.4%</td>
+    </tr>
+    
+    <tr>
+        <td>7</td>
+        <td>Netherlands</td>
+        <td>3.5%</td>
+    </tr>
+    
+    <tr>
+        <td>8</td>
+        <td>Belgium</td>
+        <td>2.6%</td>
+    </tr>
+    
+    <tr>
+        <td>9</td>
+        <td>United Kingdom</td>
+        <td>2.6%</td>
+    </tr>
+    
+    <tr>
+        <td>10</td>
+        <td>Italy</td>
+        <td>2.2%</td>
+    </tr>
+    
+</table>
+
+<div class="non-rated">
+    <h3>Other Countries (in no particular order)</h3>
+    <p>
+    
+        Japan, 
+    
+        Poland, 
+    
+        Spain, 
+    
+        Türkiye, 
+    
+        South Africa, 
+    
+        Indonesia, 
+    
+        Canada, 
+    
+        Ireland, 
+    
+        Portugal, 
+    
+        Mexico, 
+    
+        Colombia, 
+    
+        Denmark, 
+    
+        Finland, 
+    
+        Austria, 
+    
+        Egypt, 
+    
+        New Zealand, 
+    
+        Ukraine, 
+    
+        Slovakia, 
+    
+        Romania, 
+    
+        Norway, 
+    
+        Thailand, 
+    
+        Hungary, 
+    
+        Vietnam, 
+    
+        Czechia, 
+    
+        Singapore, 
+    
+        United Arab Emirates, 
+    
+        Serbia, 
+    
+        Australia, 
+    
+        Albania, 
+    
+        Cape Verde, 
+    
+        Paraguay, 
+    
+        Saudi Arabia, 
+    
+        Kenya, 
+    
+        Costa Rica, 
+    
+        South Korea, 
+    
+        Côte d’Ivoire, 
+    
+        Croatia, 
+    
+        Cyprus, 
+    
+        Slovenia, 
+    
+        Lebanon, 
+    
+        Chile, 
+    
+        Greece, 
+    
+        Cambodia, 
+    
+        Curaçao, 
+    
+        Senegal, 
+    
+        Sweden, 
+    
+        Bulgaria, 
+    
+        Russia, 
+    
+        New Caledonia
+    
+    </p>
 </div>
 
-<center>
-<script id="asciicast-bBAkVa2IBrS6G8urxPZLR7fdr" src="https://asciinema.org/a/bBAkVa2IBrS6G8urxPZLR7fdr.js" async="" data-autoplay="true" data-size="medium" data-rows="25"></script>
-</center>
+<h2>Top 10 JBang Versions</h2>
+<table>
+    <tr>
+        <th>Position</th>
+        <th>Version</th>
+        <th>% of Total</th>
+    </tr>
+    
+    <tr>
+        <td>1</td>
+        <td>0.119.0</td>
+        <td>28.3%</td>
+    </tr>
+    
+    <tr>
+        <td>2</td>
+        <td>0.117.1</td>
+        <td>13.2%</td>
+    </tr>
+    
+    <tr>
+        <td>3</td>
+        <td>0.116.0</td>
+        <td>12.8%</td>
+    </tr>
+    
+    <tr>
+        <td>4</td>
+        <td></td>
+        <td>10.9%</td>
+    </tr>
+    
+    <tr>
+        <td>5</td>
+        <td>0.118.0</td>
+        <td>8.3%</td>
+    </tr>
+    
+    <tr>
+        <td>6</td>
+        <td>0.114.0</td>
+        <td>8.3%</td>
+    </tr>
+    
+    <tr>
+        <td>7</td>
+        <td>0.110.1</td>
+        <td>3.0%</td>
+    </tr>
+    
+    <tr>
+        <td>8</td>
+        <td>0.115.0</td>
+        <td>2.6%</td>
+    </tr>
+    
+    <tr>
+        <td>9</td>
+        <td>0.111.0</td>
+        <td>2.6%</td>
+    </tr>
+    
+    <tr>
+        <td>10</td>
+        <td>0.113.0</td>
+        <td>1.5%</td>
+    </tr>
+    
+</table>
 
-<hr />
-
-<div class="feature__wrapper">
-
-  
-    <div class="feature__item">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="/assets/images/carbon-deps.png" alt="" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">Embedded Dependencies</h2>
-          
-
-          
-            <div class="archive__item-excerpt">
-              <p>Automatic fetching of any dependency using <code class="highlighter-rouge">//DEPS group:artifact:version</code> or <code class="highlighter-rouge">@Grab</code> annotations directly from the source code.</p>
-
-            </div>
-          
-
-          
-        </div>
-      </div>
-    </div>
-  
-    <div class="feature__item">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="/assets/images/carbon-install.png" alt="" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">Install &amp; Run Anywhere</h2>
-          
-
-          
-            <div class="archive__item-excerpt">
-              <p>JBang installs and run on Windows, Linux, macOS, Docker and Github Actions as well as usable from Maven and Gradle plugins</p>
-
-            </div>
-          
-
-          
-            <p><a href="/download" class="btn btn--primary">Download</a></p>
-          
-        </div>
-      </div>
-    </div>
-  
-    <div class="feature__item">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="/assets/images/carbon-java.png" alt="" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">No Java ? No Problem!</h2>
-          
-
-          
-            <div class="archive__item-excerpt">
-              <p>Java will automatically be downloaded when needed.</p>
-
-            </div>
-          
-
-          
-        </div>
-      </div>
-    </div>
-  
-
+<div class="non-rated">
+    <h3>Other Versions (in no particular order)</h3>
+    <p>
+    
+        0.106.1, 
+    
+        0.107.0, 
+    
+        0.112.4, 
+    
+        0.78.0, 
+    
+        0.101.0, 
+    
+        0.104.0, 
+    
+        0.86.0, 
+    
+        0.108.0, 
+    
+        0.106.3, 
+    
+        0.109.0, 
+    
+        0.92.1, 
+    
+        0.70.0, 
+    
+        0.95.0, 
+    
+        0.97.0, 
+    
+        0.94.0
+    
+    </p>
 </div>
 
-<div class="feature__wrapper">
+<h2>Top 10 Java Versions</h2>
+<table>
+    <tr>
+        <th>Position</th>
+        <th>Java Version</th>
+        <th>% of Total</th>
+    </tr>
+    
+    <tr>
+        <td>1</td>
+        <td>21.0</td>
+        <td>37.9%</td>
+    </tr>
+    
+    <tr>
+        <td>2</td>
+        <td>17.0</td>
+        <td>29.0%</td>
+    </tr>
+    
+    <tr>
+        <td>3</td>
+        <td>Unknown</td>
+        <td>10.7%</td>
+    </tr>
+    
+    <tr>
+        <td>4</td>
+        <td>11.0</td>
+        <td>8.1%</td>
+    </tr>
+    
+    <tr>
+        <td>5</td>
+        <td>22.0</td>
+        <td>5.9%</td>
+    </tr>
+    
+    <tr>
+        <td>6</td>
+        <td>23.0</td>
+        <td>5.1%</td>
+    </tr>
+    
+    <tr>
+        <td>7</td>
+        <td>19.0</td>
+        <td>1.5%</td>
+    </tr>
+    
+    <tr>
+        <td>8</td>
+        <td>1.8</td>
+        <td>0.7%</td>
+    </tr>
+    
+    <tr>
+        <td>9</td>
+        <td>16.0</td>
+        <td>0.4%</td>
+    </tr>
+    
+    <tr>
+        <td>10</td>
+        <td>24.0</td>
+        <td>0.4%</td>
+    </tr>
+    
+</table>
 
-
-
-  <div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet" data-conversation="none" align="center"><p lang="en" dir="ltr">I could not imagine this is now possible in Java. Thanks, jbang for this wonderful project. You&#39;re simply amazing! 😊</p>&mdash; Julian Jupiter (@julianvjupiter) <a href="https://twitter.com/julianvjupiter/status/1309977110748962816?ref_src=twsrc%5Etfw">September 26, 2020</a></blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+<div class="non-rated">
+    <h3>Other Java Versions (in no particular order)</h3>
+    <p>
+    
+        18.0
+    
+    </p>
 </div>
-
-<center><a href="/testimonials" class="btn btn--primary">All Testimonials</a></center>
-</div>
-
-<div class="feature__wrapper">
-
-  
-    <div class="feature__item">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="/assets/images/feature-version-juggle.svg" alt="" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">Java 8 and higher</h2>
-          
-
-          
-            <div class="archive__item-excerpt">
-              <p>You can use any Java, from version 8 and up</p>
-
-            </div>
-          
-
-          
-        </div>
-      </div>
-    </div>
-  
-    <div class="feature__item">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="/assets/images/feature-appstore.png" alt="" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">JBang AppStore</h2>
-          
-
-          
-            <div class="archive__item-excerpt">
-              <p>Use the JBang AppStore to find others application or publish your own from a git backed <code class="highlighter-rouge">jbang-catalog.json</code></p>
-
-            </div>
-          
-
-          
-            <p><a href="/appstore" class="btn btn--primary">AppStore</a></p>
-          
-        </div>
-      </div>
-    </div>
-  
-    <div class="feature__item">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="/assets/images/feature-ide.png" alt="" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">Works in your IDE</h2>
-          
-
-          
-            <div class="archive__item-excerpt">
-              <p>Easy editing in Intellij, Eclipse, Visual Studio Code, Apache Netbeans, vim and emacs. All with proper content assist and debug</p>
-
-            </div>
-          
-
-          
-        </div>
-      </div>
-    </div>
-  
-
-</div>
-
-<h3 id="watch-">Watch <a name="watch"></a></h3>
-
-<p>Below is latest talk about JBang: “Getting started with Java - The JBang Way”</p>
-
-<iframe width="1280" height="720" src="https://youtube.com/embed/u0kWB9S_np0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
 
     </section>
   </article>
