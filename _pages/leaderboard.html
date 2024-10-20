@@ -1,0 +1,106 @@
+---
+title: JBang Leaderboard
+tagline: JBang Usage Leaderboard
+permalink: /usage/leaderboard/
+layout: splash
+---
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .non-rated {
+        margin-top: 20px;
+    }
+</style>
+
+<h1>JBang Usage Leaderboard</h1>
+
+<p>This is a work in progress. The data is collected from the JBang version checking <a href="https://www.jbang.dev/documentation/guide/latest/installation.html#version-check">here</a>.</p>
+<p>The data is updated once a day. It will show data for maximum last 3 months, starting from 2024-10-19.</p>
+<p>% is calculated as unique per approximate location info used for the http request. Meaning if the same approximate area makes multiple requests using the same version/country it is counted only once.</p>
+
+<h2>Top 10 Countries</h2>
+<table>
+    <tr>
+        <th>Position</th>
+        <th>Country</th>
+        <th>% of Total</th>
+    </tr>
+    {% for country in site.data.leaderboard.countries limit:10 %}
+    <tr>
+        <td>{{ forloop.index }}</td>
+        <td>{{ country.name }}</td>
+        <td>{{ country.percentage }}%</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div class="non-rated">
+    <h3>Other Countries (in no particular order)</h3>
+    <p>
+    {% for country in site.data.leaderboard.countries offset:10 %}
+        {{ country.name }}{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+    </p>
+</div>
+
+<h2>Top 10 JBang Versions</h2>
+<table>
+    <tr>
+        <th>Position</th>
+        <th>Version</th>
+        <th>% of Total</th>
+    </tr>
+    {% for version in site.data.leaderboard.jbang_versions limit:10 %}
+    <tr>
+        <td>{{ forloop.index }}</td>
+        <td>{{ version.name }}</td>
+        <td>{{ version.percentage }}%</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div class="non-rated">
+    <h3>Other Versions (in no particular order)</h3>
+    <p>
+    {% for version in site.data.leaderboard.jbang_versions offset:10 %}
+        {{ version.name }}{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+    </p>
+</div>
+
+<h2>Top 10 Java Versions</h2>
+<table>
+    <tr>
+        <th>Position</th>
+        <th>Java Version</th>
+        <th>% of Total</th>
+    </tr>
+    {% for java_version in site.data.leaderboard.java_versions limit:10 %}
+    <tr>
+        <td>{{ forloop.index }}</td>
+        <td>{{ java_version.name }}</td>
+        <td>{{ java_version.percentage }}%</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div class="non-rated">
+    <h3>Other Java Versions (in no particular order)</h3>
+    <p>
+    {% for java_version in site.data.leaderboard.java_versions offset:10 %}
+        {{ java_version.name }}{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+    </p>
+</div>

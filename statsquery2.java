@@ -16,10 +16,15 @@
 
 
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
+import java.util.function.Function;
 
 import org.eclipse.microprofile.rest.client.annotation.ClientHeaderParam;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
@@ -51,32 +56,128 @@ public class statsquery2 implements Runnable {
     @RestClient
     private AnalyticsEngine analyticsEngine;
 
+    // Helper method to transform version string
+    String transformVersion(String version) {
+        if (version == null || version.isEmpty()) {
+            return "Unknown";
+        }
+        String[] parts = version.split("\\.");
+        if (parts.length == 0) {
+            return "Unknown";
+        } else if (parts.length == 1) {
+            return parts[0] + ".0";
+        } else {
+            return parts[0] + "." + parts[1];
+        }
+    }
+
     @Override
     public void run() {
-       var result = analyticsEngine.sql(accountid, "Select count() as count, double2 as longitude, double3 as latitude from JBANG_METRICS group by longitude,latitude", token);
+       extractGlobeData();
 
-       Map<latlong, Long> hits = new HashMap<>();
+       var result = getLeaderboard("blob12");
+       // Transform and recalculate the result
+       Map<String, Long> transformedData = new HashMap<>();
+       long totalCount = 0;
+       
+       for (Leaderboard item : result.data) {
+           String version = item.name;
+           long count = item.count;
+           
+           // Transform version to x.y format
+           String transformedVersion = transformVersion(version);
+           
+           // Aggregate counts for the same x.y version
+           transformedData.merge(transformedVersion, count, Long::sum);
+           totalCount += count;
+       }
+       
+       // Create new list of Leaderboard items with transformed data
+       List<Leaderboard> newData = transformedData.entrySet().stream()
+           .map(entry -> new Leaderboard(entry.getKey(), entry.getValue()))
+           .sorted((a, b) -> Long.compare(b.count, a.count))
+           .collect(java.util.stream.Collectors.toList());
+       
+       // Create a new AnalyticsResponse with the transformed data
+       var result2 = new AnalyticsResponse<Leaderboard>(null,newData,0,0);
+       
+       saveLeaderboard(result2, Paths.get("_data/leaderboard/java_versions.yaml"), Function.identity());
+       result = getLeaderboard("blob8");
+       
+       saveLeaderboard(result, Paths.get("_data/leaderboard/jbang_versions.yaml"), Function.identity());
+       result = getLeaderboard("blob3");
+       saveLeaderboard(result, Paths.get("_data/leaderboard/countries.yaml"), code -> {
+           try {
+               Locale locale = new Locale("", code);
+               String countryName = locale.getDisplayCountry(Locale.ENGLISH);
+               return countryName.equals(code) ? code : countryName;
+           } catch (Exception e) {
+               return code;
+           }
+       });
+       
+    }
 
-        for (DataPoint dp : result.data) {
-            var key = new latlong(dp.latitude, dp.longitude);
-            Long count = hits.get(key);
-            if (count == null) count = 0L;
-            count += dp.count;
-            hits.put(key, count);
+    
+    private void saveLeaderboard(AnalyticsResponse<Leaderboard> result, java.nio.file.Path out, java.util.function.Function<String, String> nameMapper) {
+    
+        long totalCount = 0;
+        for (var dp : result.data) {
+            totalCount += dp.count;
         }
 
-        try(PrintWriter pw = new PrintWriter(out.toFile())) {
-                System.out.println("Writing resultsxx to " + out);
-                pw.println("lat,lng,count");
-                for (Map.Entry<latlong, Long> entry : hits.entrySet()
-                     ) {
-                    pw.printf("%d,%d,%s\n", Math.round(entry.getKey().latitude()), Math.round(entry.getKey().longitude()), entry.getValue());
-                }
-        } catch (FileNotFoundException e) {
-            System.out.println("Error writing to " + out);
+        System.out.println("Writing results to " + out);
+        try (PrintWriter pw = new PrintWriter(new FileWriter(out.toFile()))) {
+            pw.println("# JBang versions usage data total count: " + totalCount);
+            for (var dp : result.data) {
+                String mappedName = nameMapper != null ? nameMapper.apply(dp.name) : dp.name;
+                pw.printf("- name: %s%n", mappedName);
+                pw.printf(Locale.US, "  percentage: %.1f%n", (double) dp.count / totalCount * 100);
+            }
+        } catch (IOException e) {
+            System.err.println("Error writing to " + out);
             e.printStackTrace();
         }
+    }
 
+
+    private statsquery2.AnalyticsResponse<statsquery2.Leaderboard> getLeaderboard(String column) {
+        var result = analyticsEngine.Leaderboard(accountid,
+        """
+            Select count(DISTINCT format('{}-{}',double2,double3)) as count, $column as name 
+            FROM JBANG_METRICS
+            WHERE blob1='https://www.jbang.dev/releases/latest/download/version.txt'
+            GROUP BY name
+            ORDER BY count DESC
+        """.replace("$column", column), token);
+        return result;
+    }
+
+
+    private void extractGlobeData() {
+        AnalyticsResponse<DataPoint> result = analyticsEngine.sql(accountid, "Select count() as count, double2 as longitude, double3 as latitude from JBANG_METRICS group by longitude,latitude", token);
+
+           Map<latlong, Long> hits = new HashMap<>();
+
+            for (DataPoint dp : result.data) {
+                var key = new latlong(dp.latitude, dp.longitude);
+                Long count = hits.get(key);
+                if (count == null) count = 0L;
+                count += dp.count;
+                hits.put(key, count);
+            }
+
+            try(PrintWriter pw = new PrintWriter(out.toFile())) {
+                    System.out.println("Writing resultsxx to " + out);
+                    pw.println("lat,lng,count");
+                    for (Map.Entry<latlong, Long> entry : hits.entrySet()
+                         ) {
+                        pw.printf("%d,%d,%s\n", Math.round(entry.getKey().latitude()), Math.round(entry.getKey().longitude()), entry.getValue());
+                    }
+            } catch (FileNotFoundException e) {
+                System.out.println("Error writing to " + out);
+                e.printStackTrace();
+            }
     }
 
     @RegisterRestClient(configKey = "analytics-engine")
@@ -87,14 +188,21 @@ public class statsquery2 implements Runnable {
         @Path("/sql")
         @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
         @ClientHeaderParam(name = "Authorization", value = "Bearer {token}")
-        AnalyticsResponse sql(@RestPath String account, String query, @NotBody String token);
+        AnalyticsResponse<DataPoint> sql(@RestPath String account, String query, @NotBody String token);
+
+        @POST
+        @Path("/sql")
+        @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+        @ClientHeaderParam(name = "Authorization", value = "Bearer {token}")
+        AnalyticsResponse<Leaderboard> Leaderboard(@RestPath String account, String query, @NotBody String token);
     }
 
     static record latlong( double  latitude, double  longitude) {};
 
     public static record Meta(String name, String type) {}
+    public static record Leaderboard(String name, long count) {}
     public static record DataPoint(long count, double longitude, double latitude) {}
-    public static record AnalyticsResponse(List<Meta> meta, List<DataPoint> data, int rows, int rows_before_limit_at_least) {}
+    public static record AnalyticsResponse<DP>(List<Meta> meta, List<DP> data, int rows, int rows_before_limit_at_least) {}
 
 }
 
