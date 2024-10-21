@@ -129,10 +129,11 @@ public class statsquery2 implements Runnable {
         System.out.println("Writing results to " + out);
         try (PrintWriter pw = new PrintWriter(new FileWriter(out.toFile()))) {
             pw.println("# JBang versions usage data total count: " + totalCount);
+            pw.println("data: ");
             for (var dp : result.data) {
                 String mappedName = nameMapper != null ? nameMapper.apply(dp.name) : dp.name;
-                pw.printf("- name: %s%n", mappedName);
-                pw.printf(Locale.US, "  percentage: %.1f%n", (double) dp.count / totalCount * 100);
+                pw.printf("  - name: %s%n", mappedName);
+                pw.printf(Locale.US, "    percentage: %.1f%n", (double) dp.count / totalCount * 100);
             }
         } catch (IOException e) {
             System.err.println("Error writing to " + out);
@@ -155,7 +156,7 @@ public class statsquery2 implements Runnable {
 
 
     private void extractGlobeData() {
-        AnalyticsResponse<DataPoint> result = analyticsEngine.sql(accountid, "Select count() as count, double2 as longitude, double3 as latitude from JBANG_METRICS group by longitude,latitude", token);
+        AnalyticsResponse<DataPoint> result = analyticsEngine.sql(DataPoint.class, accountid, "Select count() as count, double2 as longitude, double3 as latitude from JBANG_METRICS group by longitude,latitude", token);
 
            Map<latlong, Long> hits = new HashMap<>();
 
@@ -188,7 +189,7 @@ public class statsquery2 implements Runnable {
         @Path("/sql")
         @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
         @ClientHeaderParam(name = "Authorization", value = "Bearer {token}")
-        AnalyticsResponse<DataPoint> sql(@RestPath String account, String query, @NotBody String token);
+        <T> AnalyticsResponse<T> sql(@NotBody Class<T> resultType, @RestPath String account, String query, @NotBody String token);
 
         @POST
         @Path("/sql")
