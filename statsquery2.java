@@ -141,6 +141,35 @@ public class statsquery2 implements Runnable {
     }
 
 
+    /// https://github.com/jbangdev/cloudflare-worker-ga4/blob/main/src/analytics.ts#L57
+    /// const dataPoint = {
+    //     'blobs': [
+    //         request.url, // 1
+    //         cfProperties.city as string, // 2
+    //         cfProperties.country as string, // 3
+    //         cfProperties.continent as string, // 4
+    //         cfProperties.region as string, // 5
+    //         cfProperties.regionCode as string, // 6
+    //         cfProperties.timezone as string, // 7
+    //         jbangVersion as string, // 8
+    //         osName as string, // 9
+    //         osVersion as string, // 10
+    //         osArch as string, // 11
+    //         javaVersion as string, // 12
+    //         javaVendor as string, // 13
+    //         ip as string, // 14
+    //         cfProperties.asOrganization as string, // 15
+    //         ua as string // 16
+    //     ],
+    //     'doubles': [
+    //         cfProperties.metroCode as number,
+    //         cfProperties.longitude as number,
+    //         cfProperties.latitude as number
+    //     ],
+    //     'indexes': [
+    //         index as string
+    //     ]
+    // };
     private statsquery2.AnalyticsResponse<statsquery2.Leaderboard> getLeaderboard(String column) {
         var result = analyticsEngine.Leaderboard(accountid,
         """
