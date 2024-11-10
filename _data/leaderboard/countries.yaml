@@ -1,24 +1,24 @@
-# JBang versions usage data total count: 2180
+# JBang versions usage data total count: 2218
 - name: Germany
-  percentage: 16.9
+  percentage: 17.0
 - name: United States
-  percentage: 14.6
+  percentage: 14.7
 - name: France
-  percentage: 6.0
+  percentage: 5.9
 - name: Brazil
   percentage: 4.9
 - name: Netherlands
   percentage: 4.0
 - name: Spain
-  percentage: 3.9
+  percentage: 3.8
 - name: Italy
-  percentage: 3.6
-- name: Canada
   percentage: 3.5
+- name: Canada
+  percentage: 3.4
 - name: Switzerland
-  percentage: 3.1
+  percentage: 3.2
 - name: United Kingdom
-  percentage: 2.7
+  percentage: 2.8
 - name: Mexico
   percentage: 2.1
 - name: Poland
@@ -31,16 +31,16 @@
   percentage: 1.8
 - name: Austria
   percentage: 1.7
-- name: Belgium
-  percentage: 1.7
 - name: Sweden
   percentage: 1.7
+- name: Belgium
+  percentage: 1.7
 - name: Denmark
-  percentage: 1.6
+  percentage: 1.5
 - name: Australia
   percentage: 1.2
 - name: Turkey
-  percentage: 1.1
+  percentage: 1.0
 - name: Finland
   percentage: 0.9
 - name: Russia
@@ -59,6 +59,8 @@
   percentage: 0.6
 - name: Romania
   percentage: 0.6
+- name: China
+  percentage: 0.5
 - name: Ireland
   percentage: 0.5
 - name: Malaysia
@@ -67,19 +69,23 @@
   percentage: 0.5
 - name: Thailand
   percentage: 0.5
-- name: China
-  percentage: 0.5
 - name: Ukraine
   percentage: 0.4
 - name: Croatia
   percentage: 0.4
 - name: New Zealand
   percentage: 0.4
+- name: Tunisia
+  percentage: 0.4
 - name: Egypt
   percentage: 0.4
 - name: Uruguay
   percentage: 0.3
-- name: Hong Kong SAR China
+- name: Morocco
+  percentage: 0.3
+- name: Vietnam
+  percentage: 0.3
+- name: Singapore
   percentage: 0.3
 - name: Taiwan
   percentage: 0.3
@@ -87,105 +93,99 @@
   percentage: 0.3
 - name: South Africa
   percentage: 0.3
-- name: Vietnam
-  percentage: 0.3
-- name: Tunisia
-  percentage: 0.3
-- name: Morocco
-  percentage: 0.3
-- name: Singapore
-  percentage: 0.3
-- name: Hungary
+- name: Hong Kong SAR China
   percentage: 0.3
 - name: Chile
   percentage: 0.3
+- name: Hungary
+  percentage: 0.3
+- name: Sri Lanka
+  percentage: 0.2
 - name: Bulgaria
   percentage: 0.2
 - name: Slovenia
   percentage: 0.2
-- name: Sri Lanka
-  percentage: 0.2
 - name: Dominican Republic
   percentage: 0.2
-- name: Pakistan
-  percentage: 0.1
-- name: Greece
+- name: Bosnia & Herzegovina
   percentage: 0.1
 - name: Ecuador
   percentage: 0.1
-- name: Bosnia & Herzegovina
+- name: Greece
   percentage: 0.1
-- name: Zambia
-  percentage: 0.1
-- name: Ghana
-  percentage: 0.1
-- name: Guatemala
-  percentage: 0.1
-- name: Belarus
-  percentage: 0.1
-- name: Senegal
-  percentage: 0.1
-- name: Nigeria
-  percentage: 0.1
-- name: Uganda
-  percentage: 0.1
-- name: Cyprus
-  percentage: 0.1
-- name: Kenya
-  percentage: 0.1
-- name: Lebanon
-  percentage: 0.1
-- name: Lithuania
-  percentage: 0.1
-- name: New Caledonia
-  percentage: 0.1
-- name: Saudi Arabia
-  percentage: 0.1
-- name: United Arab Emirates
-  percentage: 0.1
-- name: Mongolia
-  percentage: 0.1
-- name: Malta
-  percentage: 0.1
-- name: Serbia
-  percentage: 0.1
-- name: Kazakhstan
+- name: Pakistan
   percentage: 0.1
 - name: Venezuela
   percentage: 0.1
-- name: Nicaragua
+- name: Zambia
+  percentage: 0.1
+- name: Lebanon
+  percentage: 0.1
+- name: Guatemala
+  percentage: 0.1
+- name: Malta
+  percentage: 0.1
+- name: Belarus
+  percentage: 0.1
+- name: Nigeria
+  percentage: 0.1
+- name: Kazakhstan
+  percentage: 0.1
+- name: Kenya
+  percentage: 0.1
+- name: Saudi Arabia
+  percentage: 0.1
+- name: Uganda
+  percentage: 0.1
+- name: New Caledonia
+  percentage: 0.1
+- name: Senegal
+  percentage: 0.1
+- name: Ghana
+  percentage: 0.1
+- name: Cyprus
+  percentage: 0.1
+- name: Mongolia
+  percentage: 0.1
+- name: Lithuania
+  percentage: 0.1
+- name: United Arab Emirates
+  percentage: 0.1
+- name: Serbia
+  percentage: 0.1
+- name: Costa Rica
   percentage: 0.0
 - name: Azerbaijan
   percentage: 0.0
-- name: Paraguay
-  percentage: 0.0
 - name: Montenegro
   percentage: 0.0
-- name: Luxembourg
+- name: Cape Verde
   percentage: 0.0
 - name: Oman
+  percentage: 0.0
+- name: Luxembourg
   percentage: 0.0
 - name: Mali
   percentage: 0.0
 - name: Bolivia
   percentage: 0.0
-- name: North Macedonia
+- name: Iceland
   percentage: 0.0
-- name: Uzbekistan
+- name: North Macedonia
   percentage: 0.0
 - name: Angola
   percentage: 0.0
 - name: Mozambique
   percentage: 0.0
-- name: Iceland
+- name: Uzbekistan
   percentage: 0.0
 - name: Côte d’Ivoire
   percentage: 0.0
 - name: Panama
   percentage: 0.0
-- name: Georgia
-  percentage: 0.0
 - name: Albania
+  percentage: 0.0
+- name: Georgia
   percentage: 0.0
 - name: Peru
   percentage: 0.0
@@ -193,11 +193,11 @@
   percentage: 0.0
 - name: Suriname
   percentage: 0.0
-- name: Mauritius
-  percentage: 0.0
 - name: Moldova
   percentage: 0.0
 - name: Philippines
+  percentage: 0.0
+- name: Curaçao
   percentage: 0.0
 - name: Cambodia
   percentage: 0.0
@@ -205,9 +205,11 @@
   percentage: 0.0
 - name: Rwanda
   percentage: 0.0
-- name: Curaçao
+- name: Mauritius
   percentage: 0.0
 - name: French Guiana
+  percentage: 0.0
+- name: Togo
   percentage: 0.0
 - name: Yemen
   percentage: 0.0
@@ -215,15 +217,13 @@
   percentage: 0.0
 - name: Iran
   percentage: 0.0
-- name: Togo
-  percentage: 0.0
 - name: El Salvador
   percentage: 0.0
 - name: Kosovo
   percentage: 0.0
+- name: Nicaragua
+  percentage: 0.0
 - name: Qatar
   percentage: 0.0
-- name: Costa Rica
-  percentage: 0.0
-- name: Cape Verde
+- name: Paraguay
   percentage: 0.0
