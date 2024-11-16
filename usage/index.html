@@ -1,11 +1,12 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="en" class="no-js">
+
+<html lang="en-US" class="no-js">
   <head>
     <meta charset="utf-8">
 
@@ -58,15 +59,7 @@
 
 
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    
-      "@type": "Organization",
-      "url": "https://jbang.dev/"
-    
-  }
-</script>
+
 
 
 
@@ -79,19 +72,17 @@
 
 
   <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="JBang Feed">
-
-
-<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script>
+<script type="text/javascript">
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
 
 
@@ -159,10 +150,6 @@ Vue.directive('highlightjs', {
     <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
   </ul>
 </nav>
-
-    <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
-<![endif]-->
 
     
 
@@ -240,8 +227,83 @@ Vue.directive('highlightjs', {
       
       <body>
 
-	<h1>JBang Globe</h1>
-	<p>Below is a visualization of recent <a href="https://www.jbang.dev/documentation/guide/latest/installation.html#version-check">version checks</a> done by JBang users world wide. </p>
+	<h1>JBangUsage</h1>
+	<p>Below is a visualization of recent <a href="https://www.jbang.dev/documentation/guide/latest/installation.html#version-check">version checks</a> done by JBang users the last 90 days.</p>
+	
+	<style>
+		.counters {
+  display: flex;
+  gap: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.counter {
+  text-align: center;
+}
+
+.number {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #4a90e2;
+}
+
+.label {
+  display: block;
+  margin-top: 8px;
+  font-size: 1em;
+  color: #666;
+  text-transform: uppercase;
+}
+	</style>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+	  const counters = document.querySelectorAll(".number");
+	  counters.forEach(counter => {
+		counter.innerText = '0';
+		const updateCounter = () => {
+		  const target = +counter.getAttribute('data-target');
+		  const count = +counter.innerText;
+		  const increment = target / 200;
+		  if (count < target) {
+			counter.innerText = Math.ceil(count + increment);
+			setTimeout(updateCounter, 20);
+		  } else {
+			counter.innerText = target.toLocaleString();
+		  }
+		};
+		updateCounter();
+	  });
+	});
+	</script>
+
+	<div class="counters">
+		<div class="counter">
+			<span class="number" data-target="6">6</span>
+			<span class="label">Continents</span>
+		  </div>
+		<div class="counter">
+		  <span class="number" data-target="117">117</span>
+		  <span class="label">Countries</span>
+		</div>
+		
+		  <div class="counter">
+			<span class="number" data-target="156">156</span>
+			<span class="label">Timezones</span>
+		  </div>
+		
+		<div class="counter">
+			<span class="number" data-target="1752">1752</span>
+			<span class="label">Cities</span>
+		  </div>
+		  <div class="counter">
+			<span class="number" data-target="80328">80328</span>
+			<span class="label">Version Checks</span>
+		  </div>
+	</div>
+
 	<div id="menu">
 		<span id="autorotate" class="menu-item">Stop Spin</span>
 	</div>
@@ -287,6 +349,7 @@ Vue.directive('highlightjs', {
   </article>
 </div>
 
+      
     </div>
 
     
@@ -384,7 +447,6 @@ search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
 
   gtag('config', 'G-TNC3Y6H2XY', { 'anonymize_ip': false});
 </script>
-
 
 
 

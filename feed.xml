@@ -1,201 +1,201 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://jbang.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jbang.dev/" rel="alternate" type="text/html" /><updated>2024-11-16T17:03:01+00:00</updated><id>https://jbang.dev/feed.xml</id><title type="html">JBang</title><subtitle>jbang is a tool that makes it easy to get started with java and enable experimentation and exploration without the traditional overhead and ceromony with traditional java tools</subtitle><author><name>JBang</name></author><entry><title type="html">JBang moving into CommonHaus Foundation</title><link href="https://jbang.dev/learn/jbang-and-commonhaus/" rel="alternate" type="text/html" title="JBang moving into CommonHaus Foundation" /><published>2024-04-09T00:00:00+00:00</published><updated>2024-04-09T00:00:00+00:00</updated><id>https://jbang.dev/learn/jbang-and-commonhaus</id><content type="html" xml:base="https://jbang.dev/learn/jbang-and-commonhaus/">&lt;div id=&quot;preamble&quot;&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;JBang and its associated projects is joining as a founding project of the &lt;a href=&quot;https://www.commonhaus.org/&quot;&gt;CommonHaus foundation&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;imageblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/commonhaus/artwork/main/foundation/brand/svg/CF_icon_default.svg&quot; alt=&quot;CF icon default&quot; width=&quot;50%&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;CommonHaus is a brand new foundation which focus is on providing a independent home for projects like JBang that are funded by independents and with room for project indivduality.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Other founding projects are &lt;a href=&quot;https://in.relation.to/2024/04/09/hibernate-to-commonhaus/&quot;&gt;Hibernate&lt;/a&gt;, &lt;a href=&quot;https://github.com/FasterXML/jackson&quot;&gt;Jackson&lt;/a&gt;, &lt;a href=&quot;https://docs.openrewrite.org/&quot;&gt;OpenRewrite&lt;/a&gt;, &lt;a href=&quot;https://andresalmiray.com/jreleaser-joins-commonhaus-foundation/&quot;&gt;JReleaser&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://morphia.dev/&quot;&gt;Morphia&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;why-jbang-in-a-foundation&quot;&gt;Why JBang in a foundation?&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;The decision to include JBang in a foundation stems from a desire to ensure its long-term sustainability and growth. Being part of a foundation, especially CommonHaus, provides JBang with a stable, independent home that supports its development and promotes collaboration. This move also opens up new opportunities for funding and contributions, further securing the project&amp;#8217;s future and fostering an environment where JBang can thrive alongside other like minded open-source projects.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;why-commonhaus&quot;&gt;Why CommonHaus?&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;The &lt;a href=&quot;https://www.commonhaus.org/about/#our-guiding-principles&quot;&gt;guiding principles&lt;/a&gt; of CommonHaus summarizes it well:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;ulist&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Honor project and community identity&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Offer guidance and support instead of imposing mandates&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Maintain transparency in all of our actions&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Encourage long-term thinking for sustained project impact&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;These are important things for JBang - having a place to be hosted for ensuring continuity while still allowing individuality.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;what-does-it-mean-for-users&quot;&gt;What does it mean for users?&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;JBang will stay JBang - if you as a user notices it has moved I will be surprised.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Maybe the about text of the CLI will change; that is about it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;what-does-it-mean-for-contributors&quot;&gt;What does it mean for contributors?&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;The exact onboarding implication is still being defined, but it is expected to have minimal impact as we do most of the recommended things anyways.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;whats-next&quot;&gt;What&amp;#8217;s next?&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Try out &lt;a href=&quot;https://jbang.dev/downloads&quot;&gt;JBang&lt;/a&gt; if you haven&amp;#8217;t already. If you see something that could need improvement or have a question join the development on &lt;a href=&quot;https://github.com/jbangdev&quot;&gt;GitHub&lt;/a&gt;, open issues and discussions and lets help make Java truly available to anyone
-.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Have fun!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="jbang" /></entry><entry><title type="html">Introducing jbanghub</title><link href="https://jbang.dev/learn/jbanghub/" rel="alternate" type="text/html" title="Introducing jbanghub" /><published>2024-04-01T00:00:00+00:00</published><updated>2024-04-01T00:00:00+00:00</updated><id>https://jbang.dev/learn/jbanghub</id><content type="html" xml:base="https://jbang.dev/learn/jbanghub/">&lt;div id=&quot;preamble&quot;&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Today we are introducing &lt;a href=&quot;https://github.com/jbanghub&quot;&gt;JBangHub&lt;/a&gt;!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;/images/jbanghublaunch.webp&quot; alt=&quot;jbanghublaunch&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;JBang always allowed everyone easily make their own java/kotlin/groovy/etc. command line tools available in a jbang catalog. All it takes is that you make a jbang-catalog in your project, organization or website.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;This is what makes things like &lt;code&gt;jbang jreleaser@jreleaser&lt;/code&gt; and &lt;code&gt;jbang minecraft-server@microsoft&lt;/code&gt; possible with minimal effort.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;These can then be called as-is or even installed using &lt;code&gt;jbang app install&lt;/code&gt; making them available in your PATH directly.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Many already added lots of catalogs and they are visible on the &lt;a href=&quot;https://www.jbang.dev/appstore/&quot;&gt;JBang AppStore&lt;/a&gt;, readily available to be used from anywhere with JBang available.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;This is anywhere you can run java including from &lt;a href=&quot;https://www.jbang.dev/learn/jbang-npm/&quot;&gt;javascript&lt;/a&gt; and &lt;a href=&quot;https://www.jbang.dev/learn/python-with-jbang/&quot;&gt;python&lt;/a&gt; - yes, even Jupyter Notebooks can access Java with JBang.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;To make it even easier and make it possible for anyone to make their favourite tools available under a nice and simple name we are introducing &lt;a href=&quot;https://github.com/jbangdev&quot;&gt;JBangHub&lt;/a&gt;, a GitHub organization where we invite everyone to contribute scripts and tools they would like to see easily available.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;JBangHub is there to let anyone help any project become more easily accessible to the Java community.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;automatic-dependency-updates&quot;&gt;Automatic dependency updates&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;We made a &lt;code&gt;jbang-catalog&lt;/code&gt; template available that setups of a jbang-catalog with automatic renovate bot based updates.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;All repos in JBangHub uses this to ensure any Maven referenced artifacts will get updates, but anyone can use this in their own jbang-catalog outside JBangHub too.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Just start it using &lt;code&gt;jbang init -t jbang-catalog &amp;lt;reponame&amp;gt;&lt;/code&gt; and add aliases to your jbang-catalog.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;default-catalog&quot;&gt;Default Catalog&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;The latest release (0.116) of JBang adds &lt;code&gt;jbanghub&lt;/code&gt; as a default jbang catalog so when you do &lt;code&gt;jbang catalog list&lt;/code&gt; you get something like:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;/images/jbangcataloglist.svg&quot; alt=&quot;jbangcataloglist&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;This list is not intended to be &lt;strong&gt;every&lt;/strong&gt; jbang-catalog on the planet - but more a teaser on what is available out there. We encourage and accept edits/updates to that list at &lt;a href=&quot;https://github.com/jbanghub/jbang-catalog&quot; class=&quot;bare&quot;&gt;https://github.com/jbanghub/jbang-catalog&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;help-expand&quot;&gt;Help expand&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Think something is missing - come contribute your favourite tool at &lt;a href=&quot;https://github.com/jbanghub&quot;&gt;JBangHub&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Have fun!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="jbang" /></entry><entry><title type="html">jbang-python: Java in your Python</title><link href="https://jbang.dev/learn/python-with-jbang/" rel="alternate" type="text/html" title="jbang-python: Java in your Python" /><published>2023-09-11T00:00:00+00:00</published><updated>2023-09-11T00:00:00+00:00</updated><id>https://jbang.dev/learn/python-with-jbang</id><content type="html" xml:base="https://jbang.dev/learn/python-with-jbang/">&lt;div id=&quot;preamble&quot;&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Happy to announce &lt;a href=&quot;https://github.com/jbangdev/jbang-python&quot;&gt;jbang-python&lt;/a&gt; - a pypi package which brings your Java to your Python project or notebook.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph text-center&quot;&gt;
-&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;https://github.com/jbangdev/jbang-python/blob/main/python_jbang.png?raw=true&quot; alt=&quot;python jbang&quot; width=&quot;50%&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&lt;code&gt;jbang-python&lt;/code&gt; supports running any kind java code that JBang supports.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Wether that is a script from the &lt;a href=&quot;https://jbang.dev/appstore&quot;&gt;AppStore&lt;/a&gt;, a Maven GAV, a jar or simply a java file stored in your project.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;In your &lt;code&gt;requirements.txt&lt;/code&gt; add:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&lt;code&gt;jbang-python&lt;/code&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;or install it using &lt;code&gt;pip install jbang&lt;/code&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Then in your python code you can do:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-javascript hljs&quot; data-lang=&quot;javascript&quot;&gt;import jbang
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://jbang.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jbang.dev/" rel="alternate" type="text/html" /><updated>2024-11-16T23:53:39+00:00</updated><id>https://jbang.dev/feed.xml</id><title type="html">JBang</title><subtitle>jbang is a tool that makes it easy to get started with java and enable experimentation and exploration without the traditional overhead and ceromony with traditional java tools</subtitle><author><name>JBang</name></author><entry><title type="html">JBang moving into CommonHaus Foundation</title><link href="https://jbang.dev/learn/jbang-and-commonhaus/" rel="alternate" type="text/html" title="JBang moving into CommonHaus Foundation" /><published>2024-04-09T00:00:00+00:00</published><updated>2024-04-09T00:00:00+00:00</updated><id>https://jbang.dev/learn/jbang-and-commonhaus</id><content type="html" xml:base="https://jbang.dev/learn/jbang-and-commonhaus/"><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>JBang and its associated projects is joining as a founding project of the <a href="https://www.commonhaus.org/">CommonHaus foundation</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://raw.githubusercontent.com/commonhaus/artwork/main/foundation/brand/svg/CF_icon_default.svg" alt="CF icon default" width="50%">
+</div>
+</div>
+<div class="paragraph">
+<p>CommonHaus is a brand new foundation which focus is on providing a independent home for projects like JBang that are funded by independents and with room for project indivduality.</p>
+</div>
+<div class="paragraph">
+<p>Other founding projects are <a href="https://in.relation.to/2024/04/09/hibernate-to-commonhaus/">Hibernate</a>, <a href="https://github.com/FasterXML/jackson">Jackson</a>, <a href="https://docs.openrewrite.org/">OpenRewrite</a>, <a href="https://andresalmiray.com/jreleaser-joins-commonhaus-foundation/">JReleaser</a> &amp; <a href="https://morphia.dev/">Morphia</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="why-jbang-in-a-foundation">Why JBang in a foundation?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The decision to include JBang in a foundation stems from a desire to ensure its long-term sustainability and growth. Being part of a foundation, especially CommonHaus, provides JBang with a stable, independent home that supports its development and promotes collaboration. This move also opens up new opportunities for funding and contributions, further securing the project&#8217;s future and fostering an environment where JBang can thrive alongside other like minded open-source projects.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="why-commonhaus">Why CommonHaus?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="https://www.commonhaus.org/about/#our-guiding-principles">guiding principles</a> of CommonHaus summarizes it well:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Honor project and community identity</p>
+</li>
+<li>
+<p>Offer guidance and support instead of imposing mandates</p>
+</li>
+<li>
+<p>Maintain transparency in all of our actions</p>
+</li>
+<li>
+<p>Encourage long-term thinking for sustained project impact</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These are important things for JBang - having a place to be hosted for ensuring continuity while still allowing individuality.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="what-does-it-mean-for-users">What does it mean for users?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>JBang will stay JBang - if you as a user notices it has moved I will be surprised.</p>
+</div>
+<div class="paragraph">
+<p>Maybe the about text of the CLI will change; that is about it.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="what-does-it-mean-for-contributors">What does it mean for contributors?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The exact onboarding implication is still being defined, but it is expected to have minimal impact as we do most of the recommended things anyways.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="whats-next">What&#8217;s next?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Try out <a href="https://jbang.dev/downloads">JBang</a> if you haven&#8217;t already. If you see something that could need improvement or have a question join the development on <a href="https://github.com/jbangdev">GitHub</a>, open issues and discussions and lets help make Java truly available to anyone
+.</p>
+</div>
+<div class="paragraph">
+<p>Have fun!</p>
+</div>
+</div>
+</div>]]></content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="jbang" /></entry><entry><title type="html">Introducing jbanghub</title><link href="https://jbang.dev/learn/jbanghub/" rel="alternate" type="text/html" title="Introducing jbanghub" /><published>2024-04-01T00:00:00+00:00</published><updated>2024-04-01T00:00:00+00:00</updated><id>https://jbang.dev/learn/jbanghub</id><content type="html" xml:base="https://jbang.dev/learn/jbanghub/"><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Today we are introducing <a href="https://github.com/jbanghub">JBangHub</a>!</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="/images/jbanghublaunch.webp" alt="jbanghublaunch"></span></p>
+</div>
+<div class="paragraph">
+<p>JBang always allowed everyone easily make their own java/kotlin/groovy/etc. command line tools available in a jbang catalog. All it takes is that you make a jbang-catalog in your project, organization or website.</p>
+</div>
+<div class="paragraph">
+<p>This is what makes things like <code>jbang jreleaser@jreleaser</code> and <code>jbang minecraft-server@microsoft</code> possible with minimal effort.</p>
+</div>
+<div class="paragraph">
+<p>These can then be called as-is or even installed using <code>jbang app install</code> making them available in your PATH directly.</p>
+</div>
+<div class="paragraph">
+<p>Many already added lots of catalogs and they are visible on the <a href="https://www.jbang.dev/appstore/">JBang AppStore</a>, readily available to be used from anywhere with JBang available.</p>
+</div>
+<div class="paragraph">
+<p>This is anywhere you can run java including from <a href="https://www.jbang.dev/learn/jbang-npm/">javascript</a> and <a href="https://www.jbang.dev/learn/python-with-jbang/">python</a> - yes, even Jupyter Notebooks can access Java with JBang.</p>
+</div>
+<div class="paragraph">
+<p>To make it even easier and make it possible for anyone to make their favourite tools available under a nice and simple name we are introducing <a href="https://github.com/jbangdev">JBangHub</a>, a GitHub organization where we invite everyone to contribute scripts and tools they would like to see easily available.</p>
+</div>
+<div class="paragraph">
+<p>JBangHub is there to let anyone help any project become more easily accessible to the Java community.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="automatic-dependency-updates">Automatic dependency updates</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We made a <code>jbang-catalog</code> template available that setups of a jbang-catalog with automatic renovate bot based updates.</p>
+</div>
+<div class="paragraph">
+<p>All repos in JBangHub uses this to ensure any Maven referenced artifacts will get updates, but anyone can use this in their own jbang-catalog outside JBangHub too.</p>
+</div>
+<div class="paragraph">
+<p>Just start it using <code>jbang init -t jbang-catalog &lt;reponame&gt;</code> and add aliases to your jbang-catalog.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="default-catalog">Default Catalog</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The latest release (0.116) of JBang adds <code>jbanghub</code> as a default jbang catalog so when you do <code>jbang catalog list</code> you get something like:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="/images/jbangcataloglist.svg" alt="jbangcataloglist"></span></p>
+</div>
+<div class="paragraph">
+<p>This list is not intended to be <strong>every</strong> jbang-catalog on the planet - but more a teaser on what is available out there. We encourage and accept edits/updates to that list at <a href="https://github.com/jbanghub/jbang-catalog" class="bare">https://github.com/jbanghub/jbang-catalog</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="help-expand">Help expand</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Think something is missing - come contribute your favourite tool at <a href="https://github.com/jbanghub">JBangHub</a>.</p>
+</div>
+<div class="paragraph">
+<p>Have fun!</p>
+</div>
+</div>
+</div>]]></content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="jbang" /></entry><entry><title type="html">jbang-python: Java in your Python</title><link href="https://jbang.dev/learn/python-with-jbang/" rel="alternate" type="text/html" title="jbang-python: Java in your Python" /><published>2023-09-11T00:00:00+00:00</published><updated>2023-09-11T00:00:00+00:00</updated><id>https://jbang.dev/learn/python-with-jbang</id><content type="html" xml:base="https://jbang.dev/learn/python-with-jbang/"><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Happy to announce <a href="https://github.com/jbangdev/jbang-python">jbang-python</a> - a pypi package which brings your Java to your Python project or notebook.</p>
+</div>
+<div class="paragraph text-center">
+<p><span class="image"><img src="https://github.com/jbangdev/jbang-python/blob/main/python_jbang.png?raw=true" alt="python jbang" width="50%"></span></p>
+</div>
+<div class="paragraph">
+<p><code>jbang-python</code> supports running any kind java code that JBang supports.</p>
+</div>
+<div class="paragraph">
+<p>Wether that is a script from the <a href="https://jbang.dev/appstore">AppStore</a>, a Maven GAV, a jar or simply a java file stored in your project.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="example">Example</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In your <code>requirements.txt</code> add:</p>
+</div>
+<div class="paragraph">
+<p><code>jbang-python</code></p>
+</div>
+<div class="paragraph">
+<p>or install it using <code>pip install jbang</code></p>
+</div>
+<div class="paragraph">
+<p>Then in your python code you can do:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">import jbang
 output = jbang.exec('--java 21', 'properties@jbangdev', 'java').stdout
 print(output)
 output = jbang.exec('hello.java').stdout
-print(output)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;With a &lt;code&gt;hello.java&lt;/code&gt; that contains:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-java hljs&quot; data-lang=&quot;java&quot;&gt;//DEPS com.github.lalyos:jfiglet:0.0.8
+print(output)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With a <code>hello.java</code> that contains:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//DEPS com.github.lalyos:jfiglet:0.0.8
 
 import com.github.lalyos.jfiglet.FigletFont;
 
@@ -203,78 +203,78 @@ class hello {
 
     public static void main(String... args) throws Exception {
         System.out.println(FigletFont.convertOneLine(
-               &quot;Hello &quot; + ((args.length&amp;gt;0)?args[0]:&quot;jbang&quot;)));  ;;
+               "Hello " + ((args.length&gt;0)?args[0]:"jbang")));  ;;
     }
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;When you run this it will automatically install JBang and Java if necessary and then run the requested alias and java code.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Besides using it in your python code locally you can also use it from Jupyter Notebooks.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;The &lt;code&gt;jbang-python&lt;/code&gt; package is available on &lt;a href=&quot;https://pypi.org/project/jbang/&quot;&gt;pypi&lt;/a&gt; and the source code is available on &lt;a href=&quot;https://github.com/jbangdev/jbang-python&quot; class=&quot;bare&quot;&gt;https://github.com/jbangdev/jbang-python&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Have fun!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="jbang" /><summary type="html">Happy to announce jbang-python - a pypi package which brings your Java to your Python project or notebook.</summary></entry><entry><title type="html">jbang-npm: Java Script in your JavaScript</title><link href="https://jbang.dev/learn/jbang-npm/" rel="alternate" type="text/html" title="jbang-npm: Java Script in your JavaScript" /><published>2022-04-01T00:00:00+00:00</published><updated>2022-04-01T00:00:00+00:00</updated><id>https://jbang.dev/learn/jbang-npm</id><content type="html" xml:base="https://jbang.dev/learn/jbang-npm/">&lt;div id=&quot;preamble&quot;&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Today we are announcing &lt;a href=&quot;https://github.com/jbangdev/jbang-npm&quot;&gt;jbang-npm&lt;/a&gt; a npm package which brings you Java Script to your JavaScript project.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&lt;code&gt;jbang-npm&lt;/code&gt; joins &lt;code&gt;&lt;a href=&quot;https://github.com/jbangdev/jbang-maven-plugin&quot;&gt;jbang-maven&lt;/a&gt;&lt;/code&gt; and &lt;code&gt;&lt;a href=&quot;https://github.com/jbangdev/jbang-gradle-plugin&quot;&gt;jbang-gradle&lt;/a&gt;&lt;/code&gt; as tools that brings the power of Java Script to your favourite build setup.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph text-center&quot;&gt;
-&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;https://github.com/jbangdev/jbang-npm/raw/main/java_script.png&quot; alt=&quot;java script&quot; width=&quot;50%&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&lt;code&gt;jbang-npm&lt;/code&gt; supports running any kind java code that JBang supports.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Wether that is a script from the &lt;a href=&quot;https://jbang.dev/appstore&quot;&gt;AppStore&lt;/a&gt;, a Maven GAV, a jar or simply a java file stored in your project.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Given you have a script name &lt;code&gt;test.js&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-javascript hljs&quot; data-lang=&quot;javascript&quot;&gt;#! /usr/bin/env node
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When you run this it will automatically install JBang and Java if necessary and then run the requested alias and java code.</p>
+</div>
+<div class="paragraph">
+<p>Besides using it in your python code locally you can also use it from Jupyter Notebooks.</p>
+</div>
+<div class="paragraph">
+<p>The <code>jbang-python</code> package is available on <a href="https://pypi.org/project/jbang/">pypi</a> and the source code is available on <a href="https://github.com/jbangdev/jbang-python" class="bare">https://github.com/jbangdev/jbang-python</a>.</p>
+</div>
+<div class="paragraph">
+<p>Have fun!</p>
+</div>
+</div>
+</div>]]></content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="jbang" /><summary type="html"><![CDATA[Happy to announce jbang-python - a pypi package which brings your Java to your Python project or notebook.]]></summary></entry><entry><title type="html">jbang-npm: Java Script in your JavaScript</title><link href="https://jbang.dev/learn/jbang-npm/" rel="alternate" type="text/html" title="jbang-npm: Java Script in your JavaScript" /><published>2022-04-01T00:00:00+00:00</published><updated>2022-04-01T00:00:00+00:00</updated><id>https://jbang.dev/learn/jbang-npm</id><content type="html" xml:base="https://jbang.dev/learn/jbang-npm/"><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Today we are announcing <a href="https://github.com/jbangdev/jbang-npm">jbang-npm</a> a npm package which brings you Java Script to your JavaScript project.</p>
+</div>
+<div class="paragraph">
+<p><code>jbang-npm</code> joins <code><a href="https://github.com/jbangdev/jbang-maven-plugin">jbang-maven</a></code> and <code><a href="https://github.com/jbangdev/jbang-gradle-plugin">jbang-gradle</a></code> as tools that brings the power of Java Script to your favourite build setup.</p>
+</div>
+<div class="paragraph text-center">
+<p><span class="image"><img src="https://github.com/jbangdev/jbang-npm/raw/main/java_script.png" alt="java script" width="50%"></span></p>
+</div>
+<div class="paragraph">
+<p><code>jbang-npm</code> supports running any kind java code that JBang supports.</p>
+</div>
+<div class="paragraph">
+<p>Wether that is a script from the <a href="https://jbang.dev/appstore">AppStore</a>, a Maven GAV, a jar or simply a java file stored in your project.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="example">Example</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Given you have a script name <code>test.js</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">#! /usr/bin/env node
 const jbang = require('@jbangdev/jbang');
 jbang.exec('--java 18', 'properties@jbangdev', 'java');
-jbang.exec('hello.java', '&quot;Java Script&quot;')&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;And in &lt;code&gt;package.json&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-json hljs&quot; data-lang=&quot;json&quot;&gt;{
-  &quot;scripts&quot;: {
-    &quot;test&quot;: &quot;node test.js&quot;
+jbang.exec('hello.java', '"Java Script"')</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And in <code>package.json</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "scripts": {
+    "test": "node test.js"
   },
-  &quot;devDependencies&quot;: {
-    &quot;@jbangdev/jbang&quot;: &quot;^0.1.4&quot;
+  "devDependencies": {
+    "@jbangdev/jbang": "^0.1.4"
   }
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;With a &lt;code&gt;hello.java&lt;/code&gt; that contains:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-java hljs&quot; data-lang=&quot;java&quot;&gt;//DEPS com.github.lalyos:jfiglet:0.0.8
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With a <code>hello.java</code> that contains:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//DEPS com.github.lalyos:jfiglet:0.0.8
 
 import com.github.lalyos.jfiglet.FigletFont;
 
@@ -282,329 +282,329 @@ class hello {
 
     public static void main(String... args) throws Exception {
         System.out.println(FigletFont.convertOneLine(
-               &quot;Hello &quot; + ((args.length&amp;gt;0)?args[0]:&quot;jbang&quot;)));  ;;
+               "Hello " + ((args.length&gt;0)?args[0]:"jbang")));  ;;
     }
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;When you run this using &lt;code&gt;npm run test&lt;/code&gt; it will automatically install JBang and Java if necessary and you get an output like:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;/images/jbang-npm-output.png&quot; alt=&quot;jbang npm output&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;In this case JBang was already installed but it did go transparently and downloaded Java 18 as one of the scripts was called with &lt;code&gt;--java 18&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;The opportunities are endless!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&lt;code&gt;jbang-npm&lt;/code&gt; was contributed by Peter Thomas and Pallafor Yodis from &lt;a href=&quot;https://karatelabs.github.io/karate/&quot;&gt;Karate&lt;/a&gt; hall of fame.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Very much appreciated and looking forward to see what you make happen with Java Script in your JavaScript!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Have fun!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="jbang" /><summary type="html">Today we are announcing jbang-npm a npm package which brings you Java Script to your JavaScript project.</summary></entry><entry><title type="html">JBang Rewind 2021!</title><link href="https://jbang.dev/learn/jbang-rewind/" rel="alternate" type="text/html" title="JBang Rewind 2021!" /><published>2022-01-03T00:00:00+00:00</published><updated>2022-01-03T00:00:00+00:00</updated><id>https://jbang.dev/learn/jbang-rewind</id><content type="html" xml:base="https://jbang.dev/learn/jbang-rewind/">&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;We just closed on a very busy 2021 for JBang, and especially in the last few weeks, things progressed quite a bit. Therefore I thought it would be nice to give a quick overview to recognize the progress and give you a chance to catch up!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;dlist&quot;&gt;
-&lt;dl&gt;
-&lt;dt class=&quot;hdlist1&quot;&gt;December 31st&lt;/dt&gt;
-&lt;dd&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.jdoodle.com/try-jbang/&quot;&gt;JDoodle&lt;/a&gt; updates their iOS and Android versions to include JBang support. You can now edit and run Java/JBang on the go.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;hdlist1&quot;&gt;December 29th&lt;/dt&gt;
-&lt;dd&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.baeldung.com/jbang-guide&quot;&gt;Guide to JBang&lt;/a&gt; posted on baeldung.com&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;hdlist1&quot;&gt;December 25th&lt;/dt&gt;
-&lt;dd&gt;
-&lt;p&gt;Free IntelliJ License giveaway for one &lt;a href=&quot;https://github.com/jbangdev/jbang/blob/main/CONTRIBUTORS.md&quot;&gt;recognized JBang contributor&lt;/a&gt; following the steps outlined &lt;a href=&quot;https://github.com/jbangdev/jbang/discussions/1155&quot;&gt;here&lt;/a&gt;. It is a time of writing still open; thus, if you ever opened an issue, contributed an idea or code, or want to contribute, it is still possible to get it!&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;hdlist1&quot;&gt;December 22nd&lt;/dt&gt;
-&lt;dd&gt;
-&lt;p&gt;&lt;a href=&quot;https://plugins.jetbrains.com/plugin/18257-jbang&quot;&gt;IntelliJ Plugin&lt;/a&gt; made available. Provides direct execution with JBang, content assist for &lt;code&gt;//DEPS&lt;/code&gt; and other keywords, and more.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;hdlist1&quot;&gt;December 1st&lt;/dt&gt;
-&lt;dd&gt;
-&lt;p&gt;JBang was the &lt;a href=&quot;https://www.javaadvent.com/2021/12/jbang-gift-that-keeps-on-giving.html&quot;&gt;first entry&lt;/a&gt; of 2021 Java Advent Calendar.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;hdlist1&quot;&gt;November 29th&lt;/dt&gt;
-&lt;dd&gt;
-&lt;p&gt;JDoodle added &lt;a href=&quot;https://www.jdoodle.com/try-jbang/&quot;&gt;JBang to its list of supported languages&lt;/a&gt;. Making it possible to edit/write Java code using dependencies in a browser without login and additionally embed JBang examples in your blog/guides.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;hdlist1&quot;&gt;November 24th&lt;/dt&gt;
-&lt;dd&gt;
-&lt;p&gt;Microsoft made a &lt;a href=&quot;https://github.com/microsoft/jbang-catalog&quot;&gt;JBang catalog available&lt;/a&gt; providing easy launch of Minecraft and Playwright CLI.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;And in between, we had four releases of JBang in December with features and bug fixes - heading &lt;a href=&quot;https://github.com/orgs/jbangdev/projects/2&quot;&gt;towards the mythical 1.0&lt;/a&gt; release.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;The latest one is &lt;a href=&quot;https://github.com/jbangdev/jbang/releases/tag/v0.86.0&quot;&gt;0.86.0&lt;/a&gt; which came on the second anniversary of JBang - or at least the &lt;a href=&quot;https://twitter.com/maxandersen/status/1212714007301365761&quot;&gt;first tweet&lt;/a&gt; about it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Here, one fix was how JBang deals with &lt;code&gt;lib&lt;/code&gt; vs. &lt;code&gt;libs&lt;/code&gt; that came from a conversation around using JBang in serverless lambda functions. Nándor Holozsnyák just made a &lt;a href=&quot;https://dev.to/nandorholozsnyak/jbang-quarkus-aws-lambda-terraform-3-4ahk&quot;&gt;blog&lt;/a&gt; showing his explorations into this. I was happy to see this as Nandor looked into this because he felt JBang enabled a simple scripting approach comparable to Python/Node - but for Java.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;That&amp;#8217;s precisely what JBang is about - enabling easy use of Java - I&amp;#8217;m expecting to see more enablement of using JBang for more than just scripts in 2022!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Here is to make 2022 about bringing JBang to version 1.0 and making Java fun!&lt;/p&gt;
-&lt;/div&gt;</content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="jbang" /><summary type="html">We just closed on a very busy 2021 for JBang, and especially in the last few weeks, things progressed quite a bit. Therefore I thought it would be nice to give a quick overview to recognize the progress and give you a chance to catch up!</summary></entry><entry><title type="html">JEP 408: Simple Web Server with JBang</title><link href="https://jbang.dev/learn/jep-408-with-jbang/" rel="alternate" type="text/html" title="JEP 408: Simple Web Server with JBang" /><published>2021-06-03T00:00:00+00:00</published><updated>2021-06-03T00:00:00+00:00</updated><id>https://jbang.dev/learn/jep-408-with-jbang</id><content type="html" xml:base="https://jbang.dev/learn/jep-408-with-jbang/">&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;In March &lt;a href=&quot;https://openjdk.java.net/jeps/408&quot;&gt;JEP: 408: Simple Web Server&lt;/a&gt; was announced. One of JEP 408&amp;#8217;s goals is to make an easy to use web server available with Java using &lt;code&gt;java -m jdk.httpserver&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;It is a nice idea and I&amp;#8217;m looking forward to see it happen.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;That said - you do not need to wait for Java 18+ to get this. You can use &lt;code&gt;jbang httpd@jbangdev&lt;/code&gt; today with Java 1.8 and upwards.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;It is a &lt;a href=&quot;https://github.com/jbangdev/jbang-catalog/blob/main/httpd.java&quot;&gt;script&lt;/a&gt; I wrote in a few hours after seeing &lt;a href=&quot;https://twitter.com/sebi2706/status/1399966303625097217&quot;&gt;yet another tweet&lt;/a&gt; asking for a simple to use webserver. Like JEP 408 it only uses classes available in the JDK, meaning zero additonal download and setup besides &lt;a href=&quot;https://jbang.dev/download&quot;&gt;installing&lt;/a&gt; &lt;code&gt;jbang&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;By default, &lt;code&gt;httpd@jbangdev&lt;/code&gt; will serve the current directory on &lt;a href=&quot;https://localhost:8000&quot; class=&quot;bare&quot;&gt;https://localhost:8000&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Below is an example of using &lt;code&gt;httpd@jbangdev&lt;/code&gt; to serve this website locally from its statically generated Jekyll &lt;code&gt;_site&lt;/code&gt; folder on port 8080.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-shell hljs&quot; data-lang=&quot;shell&quot;&gt;$ jbang httpd@jbangdev -p 8080 -d _site
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When you run this using <code>npm run test</code> it will automatically install JBang and Java if necessary and you get an output like:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="/images/jbang-npm-output.png" alt="jbang npm output"></span></p>
+</div>
+<div class="paragraph">
+<p>In this case JBang was already installed but it did go transparently and downloaded Java 18 as one of the scripts was called with <code>--java 18</code>.</p>
+</div>
+<div class="paragraph">
+<p>The opportunities are endless!</p>
+</div>
+<div class="paragraph">
+<p><code>jbang-npm</code> was contributed by Peter Thomas and Pallafor Yodis from <a href="https://karatelabs.github.io/karate/">Karate</a> hall of fame.</p>
+</div>
+<div class="paragraph">
+<p>Very much appreciated and looking forward to see what you make happen with Java Script in your JavaScript!</p>
+</div>
+<div class="paragraph">
+<p>Have fun!</p>
+</div>
+</div>
+</div>]]></content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="jbang" /><summary type="html"><![CDATA[Today we are announcing jbang-npm a npm package which brings you Java Script to your JavaScript project.]]></summary></entry><entry><title type="html">JBang Rewind 2021!</title><link href="https://jbang.dev/learn/jbang-rewind/" rel="alternate" type="text/html" title="JBang Rewind 2021!" /><published>2022-01-03T00:00:00+00:00</published><updated>2022-01-03T00:00:00+00:00</updated><id>https://jbang.dev/learn/jbang-rewind</id><content type="html" xml:base="https://jbang.dev/learn/jbang-rewind/"><![CDATA[<div class="paragraph">
+<p>We just closed on a very busy 2021 for JBang, and especially in the last few weeks, things progressed quite a bit. Therefore I thought it would be nice to give a quick overview to recognize the progress and give you a chance to catch up!</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">December 31st</dt>
+<dd>
+<p><a href="https://www.jdoodle.com/try-jbang/">JDoodle</a> updates their iOS and Android versions to include JBang support. You can now edit and run Java/JBang on the go.</p>
+</dd>
+<dt class="hdlist1">December 29th</dt>
+<dd>
+<p><a href="https://www.baeldung.com/jbang-guide">Guide to JBang</a> posted on baeldung.com</p>
+</dd>
+<dt class="hdlist1">December 25th</dt>
+<dd>
+<p>Free IntelliJ License giveaway for one <a href="https://github.com/jbangdev/jbang/blob/main/CONTRIBUTORS.md">recognized JBang contributor</a> following the steps outlined <a href="https://github.com/jbangdev/jbang/discussions/1155">here</a>. It is a time of writing still open; thus, if you ever opened an issue, contributed an idea or code, or want to contribute, it is still possible to get it!</p>
+</dd>
+<dt class="hdlist1">December 22nd</dt>
+<dd>
+<p><a href="https://plugins.jetbrains.com/plugin/18257-jbang">IntelliJ Plugin</a> made available. Provides direct execution with JBang, content assist for <code>//DEPS</code> and other keywords, and more.</p>
+</dd>
+<dt class="hdlist1">December 1st</dt>
+<dd>
+<p>JBang was the <a href="https://www.javaadvent.com/2021/12/jbang-gift-that-keeps-on-giving.html">first entry</a> of 2021 Java Advent Calendar.</p>
+</dd>
+<dt class="hdlist1">November 29th</dt>
+<dd>
+<p>JDoodle added <a href="https://www.jdoodle.com/try-jbang/">JBang to its list of supported languages</a>. Making it possible to edit/write Java code using dependencies in a browser without login and additionally embed JBang examples in your blog/guides.</p>
+</dd>
+<dt class="hdlist1">November 24th</dt>
+<dd>
+<p>Microsoft made a <a href="https://github.com/microsoft/jbang-catalog">JBang catalog available</a> providing easy launch of Minecraft and Playwright CLI.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>And in between, we had four releases of JBang in December with features and bug fixes - heading <a href="https://github.com/orgs/jbangdev/projects/2">towards the mythical 1.0</a> release.</p>
+</div>
+<div class="paragraph">
+<p>The latest one is <a href="https://github.com/jbangdev/jbang/releases/tag/v0.86.0">0.86.0</a> which came on the second anniversary of JBang - or at least the <a href="https://twitter.com/maxandersen/status/1212714007301365761">first tweet</a> about it.</p>
+</div>
+<div class="paragraph">
+<p>Here, one fix was how JBang deals with <code>lib</code> vs. <code>libs</code> that came from a conversation around using JBang in serverless lambda functions. Nándor Holozsnyák just made a <a href="https://dev.to/nandorholozsnyak/jbang-quarkus-aws-lambda-terraform-3-4ahk">blog</a> showing his explorations into this. I was happy to see this as Nandor looked into this because he felt JBang enabled a simple scripting approach comparable to Python/Node - but for Java.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s precisely what JBang is about - enabling easy use of Java - I&#8217;m expecting to see more enablement of using JBang for more than just scripts in 2022!</p>
+</div>
+<div class="paragraph">
+<p>Here is to make 2022 about bringing JBang to version 1.0 and making Java fun!</p>
+</div>]]></content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="jbang" /><summary type="html"><![CDATA[We just closed on a very busy 2021 for JBang, and especially in the last few weeks, things progressed quite a bit. Therefore I thought it would be nice to give a quick overview to recognize the progress and give you a chance to catch up!]]></summary></entry><entry><title type="html">JEP 408: Simple Web Server with JBang</title><link href="https://jbang.dev/learn/jep-408-with-jbang/" rel="alternate" type="text/html" title="JEP 408: Simple Web Server with JBang" /><published>2021-06-03T00:00:00+00:00</published><updated>2021-06-03T00:00:00+00:00</updated><id>https://jbang.dev/learn/jep-408-with-jbang</id><content type="html" xml:base="https://jbang.dev/learn/jep-408-with-jbang/"><![CDATA[<div class="paragraph">
+<p>In March <a href="https://openjdk.java.net/jeps/408">JEP: 408: Simple Web Server</a> was announced. One of JEP 408&#8217;s goals is to make an easy to use web server available with Java using <code>java -m jdk.httpserver</code>.</p>
+</div>
+<div class="paragraph">
+<p>It is a nice idea and I&#8217;m looking forward to see it happen.</p>
+</div>
+<div class="paragraph">
+<p>That said - you do not need to wait for Java 18+ to get this. You can use <code>jbang httpd@jbangdev</code> today with Java 1.8 and upwards.</p>
+</div>
+<div class="paragraph">
+<p>It is a <a href="https://github.com/jbangdev/jbang-catalog/blob/main/httpd.java">script</a> I wrote in a few hours after seeing <a href="https://twitter.com/sebi2706/status/1399966303625097217">yet another tweet</a> asking for a simple to use webserver. Like JEP 408 it only uses classes available in the JDK, meaning zero additonal download and setup besides <a href="https://jbang.dev/download">installing</a> <code>jbang</code>.</p>
+</div>
+<div class="paragraph">
+<p>By default, <code>httpd@jbangdev</code> will serve the current directory on <a href="https://localhost:8000" class="bare">https://localhost:8000</a>.</p>
+</div>
+<div class="paragraph">
+<p>Below is an example of using <code>httpd@jbangdev</code> to serve this website locally from its statically generated Jekyll <code>_site</code> folder on port 8080.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ jbang httpd@jbangdev -p 8080 -d _site
 [jbang] Building jar...
 Serving HTTP on 0.0.0.0 port 8080 (http://0.0.0.0:8080/) from /Users/max/code/jbangdev/jbang-catalog/_site ...
-127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /&quot; 200 -
-127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/css/main.css&quot; 200 -
-127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/js/main.min.js&quot; 200 -
-127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/logo.png&quot; 200 -
-127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/carbon-deps.png&quot; 200 -
-127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/carbon-install.png&quot; 200 -
-127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/carbon-java.png&quot; 200 -
-127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/feature-ide.png&quot; 200 -
-127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/feature-version-juggle.svg&quot; 200 -
-127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/feature-appstore.png&quot; 200 -
-127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] &quot;GET /assets/images/slider/bg-1.jpg&quot; 200 -&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;As with any other &lt;code&gt;jbang&lt;/code&gt; capable application you can also choose to install it in your &lt;code&gt;PATH&lt;/code&gt; using &lt;code&gt;jbang app install http@jbangdev&lt;/code&gt;. Once you do that you can run it from anywhere using just &lt;code&gt;httpd&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;In case you already have application called &lt;code&gt;httpd&lt;/code&gt; you can use &lt;code&gt;--name&lt;/code&gt; to give it a more unique name:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-shell hljs&quot; data-lang=&quot;shell&quot;&gt;$ jbang app install --name jhttpd httpd@jbangdev
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] "GET /" 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] "GET /assets/css/main.css" 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] "GET /assets/js/main.min.js" 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] "GET /assets/images/logo.png" 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] "GET /assets/images/carbon-deps.png" 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] "GET /assets/images/carbon-install.png" 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] "GET /assets/images/carbon-java.png" 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] "GET /assets/images/feature-ide.png" 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] "GET /assets/images/feature-version-juggle.svg" 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] "GET /assets/images/feature-appstore.png" 200 -
+127.0.0.1 - - [04/Jun/2021:00:50:36 +0200] "GET /assets/images/slider/bg-1.jpg" 200 -</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As with any other <code>jbang</code> capable application you can also choose to install it in your <code>PATH</code> using <code>jbang app install http@jbangdev</code>. Once you do that you can run it from anywhere using just <code>httpd</code>.</p>
+</div>
+<div class="paragraph">
+<p>In case you already have application called <code>httpd</code> you can use <code>--name</code> to give it a more unique name:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ jbang app install --name jhttpd httpd@jbangdev
 [jbang] Command installed: jhttpd
 $ jhttpd
-Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) from /Users/max/code/personal/jbangdev/jbang.dev ...&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Enjoy - and remember you can find &lt;code&gt;httpd@jbangdev&lt;/code&gt; and other apps in &lt;a href=&quot;https://jbang.dev/appstore&quot;&gt;JBang AppStore&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;</content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="intro" /><category term="beginner" /><category term="jbang" /><summary type="html">In March JEP: 408: Simple Web Server was announced. One of JEP 408&amp;#8217;s goals is to make an easy to use web server available with Java using java -m jdk.httpserver.</summary></entry><entry><title type="html">JBang Avatar</title><link href="https://jbang.dev/learn/jbang-avatar/" rel="alternate" type="text/html" title="JBang Avatar" /><published>2020-12-01T00:00:00+00:00</published><updated>2020-12-01T00:00:00+00:00</updated><id>https://jbang.dev/learn/jbang-avatar</id><content type="html" xml:base="https://jbang.dev/learn/jbang-avatar/">&lt;div id=&quot;preamble&quot;&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;It is getting very close to the first anniversary of first commit of JBang.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;To celebrate I looked around to see what we could do and was reminded about good old &lt;a href=&quot;https://gource.io&quot;&gt;Gource&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;With Gource you can render the history of a git repository and get a nice animated video, including flying icons for each author. Trouble is that by default they are just faceless heads - lets get some faces to all those names.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;I found a &lt;a href=&quot;https://gist.github.com/pmdgithub/706587&quot;&gt;perl script&lt;/a&gt; that took all committer emails and located their gravatar image; but it was Perl&amp;#8230;&amp;#8203;so lets make that java instead and use JBang.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;The full example is available &lt;a href=&quot;https://github.com/jbangdev/jbang/blob/HEAD/examples/grabavatars.java&quot;&gt;here&lt;/a&gt;, below I&amp;#8217;ll walk through the various interesting parts.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;If you want to just directly run it do this:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&lt;code&gt;jbang &lt;a href=&quot;https://github.com/jbangdev/jbang/blob/HEAD/examples/grabavatars.java&quot; class=&quot;bare&quot;&gt;https://github.com/jbangdev/jbang/blob/HEAD/examples/grabavatars.java&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;To begin with you just get started with &lt;code&gt;jbang init -t cli grab-avatar&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;This will create a file named &lt;code&gt;grabavatar.java&lt;/code&gt; with some pre-seeded code that does a Hello World! style app using picocli plus it will mark the file as executable.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;setup-dependencies-and-main-class&quot;&gt;Setup dependencies and main class&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Then in top we are going to add a few dependencies:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;title&quot;&gt;Dependencies&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-java hljs&quot; data-lang=&quot;java&quot;&gt;///usr/bin/env jbang &quot;$0&quot; &quot;$@&quot; ; exit $? 
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) from /Users/max/code/personal/jbangdev/jbang.dev ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Enjoy - and remember you can find <code>httpd@jbangdev</code> and other apps in <a href="https://jbang.dev/appstore">JBang AppStore</a>.</p>
+</div>]]></content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="intro" /><category term="beginner" /><category term="jbang" /><summary type="html"><![CDATA[In March JEP: 408: Simple Web Server was announced. One of JEP 408&#8217;s goals is to make an easy to use web server available with Java using java -m jdk.httpserver.]]></summary></entry><entry><title type="html">JBang Avatar</title><link href="https://jbang.dev/learn/jbang-avatar/" rel="alternate" type="text/html" title="JBang Avatar" /><published>2020-12-01T00:00:00+00:00</published><updated>2020-12-01T00:00:00+00:00</updated><id>https://jbang.dev/learn/jbang-avatar</id><content type="html" xml:base="https://jbang.dev/learn/jbang-avatar/"><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is getting very close to the first anniversary of first commit of JBang.</p>
+</div>
+<div class="paragraph">
+<p>To celebrate I looked around to see what we could do and was reminded about good old <a href="https://gource.io">Gource</a>.</p>
+</div>
+<div class="paragraph">
+<p>With Gource you can render the history of a git repository and get a nice animated video, including flying icons for each author. Trouble is that by default they are just faceless heads - lets get some faces to all those names.</p>
+</div>
+<div class="paragraph">
+<p>I found a <a href="https://gist.github.com/pmdgithub/706587">perl script</a> that took all committer emails and located their gravatar image; but it was Perl&#8230;&#8203;so lets make that java instead and use JBang.</p>
+</div>
+<div class="paragraph">
+<p>The full example is available <a href="https://github.com/jbangdev/jbang/blob/HEAD/examples/grabavatars.java">here</a>, below I&#8217;ll walk through the various interesting parts.</p>
+</div>
+<div class="paragraph">
+<p>If you want to just directly run it do this:</p>
+</div>
+<div class="paragraph">
+<p><code>jbang <a href="https://github.com/jbangdev/jbang/blob/HEAD/examples/grabavatars.java" class="bare">https://github.com/jbangdev/jbang/blob/HEAD/examples/grabavatars.java</a></code></p>
+</div>
+<div class="paragraph">
+<p>To begin with you just get started with <code>jbang init -t cli grab-avatar</code>.</p>
+</div>
+<div class="paragraph">
+<p>This will create a file named <code>grabavatar.java</code> with some pre-seeded code that does a Hello World! style app using picocli plus it will mark the file as executable.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="setup-dependencies-and-main-class">Setup dependencies and main class</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Then in top we are going to add a few dependencies:</p>
+</div>
+<div class="listingblock">
+<div class="title">Dependencies</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">///usr/bin/env jbang "$0" "$@" ; exit $? 
 //DEPS info.picocli:picocli:4.5.0  
 //DEPS org.zeroturnaround:zt-exec:1.12 
 //DEPS commons-codec:commons-codec:1.15 
-//DEPS org.slf4j:slf4j-nop:1.7.30 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;The first line is the magic &quot;shebang&quot; line that bash and other shells will interpret but for java it is just a comment. This is what allows you to run the script directly using &lt;code&gt;./grab-avatar&lt;/code&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;The dependencies used are as follows:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;ulist&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Picocli for annotation based command line parsing and help generation.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;zt-exec&lt;/code&gt; is a nice library to execute processes in a nice fluent way.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;commons-coded&lt;/code&gt; just because default Java don&amp;#8217;t have a one-liner for MD5 hash generation.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;No Operation slf4j to avoid the default noise slf4j generates.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;When you run &lt;code&gt;./grabavatars.java&lt;/code&gt; or &lt;code&gt;jbang grabavatars.java&lt;/code&gt; these starting lines with &lt;code&gt;//DEPS&lt;/code&gt; in them will be parsed and JBang fetches the dependencies to use during compilation and execution of your script.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;The next is the class declaration which is mainly just annotations to define the main picocli command.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;title&quot;&gt;class declaration&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-java hljs&quot; data-lang=&quot;java&quot;&gt;@Command(name = &quot;GrabAvatars&quot;, mixinStandardHelpOptions = true, version = &quot;GrabAvatars 0.1&quot;,
-        description = &quot;GrabAvatars made with jbang&quot;)
-class grabavatars implements Callable&amp;lt;Integer&amp;gt; {&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;iteration-over-execution&quot;&gt;Iteration over execution&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Then the meat of the code is to run &lt;code&gt;git log --pretty=format:%ae|%an&quot;&lt;/code&gt; which will return a line for every commit with email and author, like:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-none hljs&quot;&gt;max@xam.dk|Max Rydahl Andersen&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;To do this I use &lt;code&gt;zt-exec&lt;/code&gt; which has this great &quot;one-liner&quot; to run the process and for every line output let me process it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;title&quot;&gt;processing command&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-java hljs&quot; data-lang=&quot;java&quot;&gt;        new ProcessExecutor().command(&quot;git&quot;, &quot;log&quot;, &quot;--pretty=format:%ae|%an&quot;)
+//DEPS org.slf4j:slf4j-nop:1.7.30 </code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first line is the magic "shebang" line that bash and other shells will interpret but for java it is just a comment. This is what allows you to run the script directly using <code>./grab-avatar</code></p>
+</div>
+<div class="paragraph">
+<p>The dependencies used are as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Picocli for annotation based command line parsing and help generation.</p>
+</li>
+<li>
+<p><code>zt-exec</code> is a nice library to execute processes in a nice fluent way.</p>
+</li>
+<li>
+<p><code>commons-coded</code> just because default Java don&#8217;t have a one-liner for MD5 hash generation.</p>
+</li>
+<li>
+<p>No Operation slf4j to avoid the default noise slf4j generates.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When you run <code>./grabavatars.java</code> or <code>jbang grabavatars.java</code> these starting lines with <code>//DEPS</code> in them will be parsed and JBang fetches the dependencies to use during compilation and execution of your script.</p>
+</div>
+<div class="paragraph">
+<p>The next is the class declaration which is mainly just annotations to define the main picocli command.</p>
+</div>
+<div class="listingblock">
+<div class="title">class declaration</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Command(name = "GrabAvatars", mixinStandardHelpOptions = true, version = "GrabAvatars 0.1",
+        description = "GrabAvatars made with jbang")
+class grabavatars implements Callable&lt;Integer&gt; {</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="iteration-over-execution">Iteration over execution</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Then the meat of the code is to run <code>git log --pretty=format:%ae|%an"</code> which will return a line for every commit with email and author, like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">max@xam.dk|Max Rydahl Andersen</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To do this I use <code>zt-exec</code> which has this great "one-liner" to run the process and for every line output let me process it.</p>
+</div>
+<div class="listingblock">
+<div class="title">processing command</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">        new ProcessExecutor().command("git", "log", "--pretty=format:%ae|%an")
                 .redirectOutput(new LogOutputStream() {
                     @Override
                     protected void processLine(String line) {
-                        String[] data = line.split(&quot;\\|&quot;);
+                        String[] data = line.split("\\|");
                         String email = data[0].toLowerCase();
-                        String author = data[1];&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;md5-and-download&quot;&gt;MD5 and Download&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;And finally for every identified email and author - generates MD5 and download the url.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;title&quot;&gt;processing command&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-java hljs&quot; data-lang=&quot;java&quot;&gt;                        URL grav_url = new URL(&quot;http://www.gravatar.com/avatar/&quot;
+                        String author = data[1];</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="md5-and-download">MD5 and Download</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>And finally for every identified email and author - generates MD5 and download the url.</p>
+</div>
+<div class="listingblock">
+<div class="title">processing command</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">                        URL grav_url = new URL("http://www.gravatar.com/avatar/"
                                     + DigestUtils.md5Hex(email)
-                                    + &quot;?d=404&amp;amp;size=&quot; + size);
+                                    + "?d=404&amp;size=" + size);
 
                         try(InputStream in = grav_url.openStream()) {
                             Files.copy(in, authorImageFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-                        }&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;all-together-now&quot;&gt;All together now&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Now to run this when I have it locally is just: &lt;code&gt;./grab-avatars&lt;/code&gt; in root of a git repository.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;But you can also run this directly from a url using:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&lt;code&gt;jbang &lt;a href=&quot;https://github.com/jbangdev/jbang/blob/HEAD/examples/grab-avatars&quot; class=&quot;bare&quot;&gt;https://github.com/jbangdev/jbang/blob/HEAD/examples/grab-avatars&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;And then then you can go full out and render with gource - notice the &lt;code&gt;--user-image-dir .git/avatar&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-shell hljs&quot; data-lang=&quot;shell&quot;&gt;gource --title JBang --stop-at-end --user-image-dir .git/avatar --seconds-per-day 0.05 --auto-skip-seconds 1 -1280x720 --hide filenames -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 1 -threads 0 -bf 0 gource.mp4&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Then you get a video which with a little bit of magic of video editing that looks something like this:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;videoblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/da0CuVbvWLg?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;And that is about it - showed how to get started with jbang to port an existing perl script to java using a few dependencies.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;See you next time!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="intro" /><category term="beginner" /><category term="jbang" /><category term="tutorial" /><summary type="html">&amp;#8230;&amp;#8203;all just to gource JBang!</summary></entry><entry><title type="html">Beyond Hello World!</title><link href="https://jbang.dev/learn/beyondhello/" rel="alternate" type="text/html" title="Beyond Hello World!" /><published>2020-05-28T00:00:00+00:00</published><updated>2020-05-28T00:00:00+00:00</updated><id>https://jbang.dev/learn/beyondhello</id><content type="html" xml:base="https://jbang.dev/learn/beyondhello/">&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;A simple script you can run with &lt;code&gt;jbang&lt;/code&gt; is &quot;Hello World&quot; using jshell (&lt;code&gt;.jsh&lt;/code&gt;).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-java hljs&quot; data-lang=&quot;java&quot;&gt;    System.out.println(&quot;Hello &quot; + ((args.length&amp;gt;0)?args[0]:&quot;jbang&quot;));&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;You can run the above by putting it in a file named: &lt;code&gt;hello.jsh&lt;/code&gt; and run &lt;code&gt;jbang hello.jsh&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;To expand on this we will make a Java file (&lt;code&gt;.java&lt;/code&gt;) which uses an external dependency to make the text a bit more fancy.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;In this case we&amp;#8217;ll use a library called &lt;code&gt;jfiglet&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;We use &lt;code&gt;//DEPS com.github.lalyos:jfiglet:0.0.8&lt;/code&gt; to declare this script should run using the dependency with group id: &lt;code&gt;com.github.lalyos&lt;/code&gt;, artifact id: &lt;code&gt;jfiglet&lt;/code&gt; and with the version &lt;code&gt;0.0.8&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;These are called &quot;artifacts coordinates&quot; or &quot;maven coordinates&quot; as the system originates from the Maven build system; but is today used in almost all Java projects. You can use sites like &lt;a href=&quot;https://mvnrepository.com&quot; class=&quot;bare&quot;&gt;https://mvnrepository.com&lt;/a&gt; to locate the coordinates of projects, and otherwise find them on the website or source repository of the project them self.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Below is a repl.it instance preconfigured with &lt;code&gt;jbang&lt;/code&gt; ready to run &lt;code&gt;hello.java&lt;/code&gt; using the &lt;code&gt;figlet&lt;/code&gt; dependency.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Try and press the Run button to see how it works and then try edit the code to see how it pick up the changes between each run.&lt;/p&gt;
-&lt;/div&gt;
-&lt;iframe height=&quot;400px&quot; width=&quot;100%&quot; src=&quot;https://repl.it/@maxandersen/jbang-replit-demo?lite=true#hello.java&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; sandbox=&quot;allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals&quot;&gt;&lt;/iframe&gt;</content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="intro" /><category term="beginner" /><category term="jbang" /><category term="tutorial" /><summary type="html">See the basics of jbang with a bit more than just Hello World!</summary></entry></feed>
+                        }</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="all-together-now">All together now</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now to run this when I have it locally is just: <code>./grab-avatars</code> in root of a git repository.</p>
+</div>
+<div class="paragraph">
+<p>But you can also run this directly from a url using:</p>
+</div>
+<div class="paragraph">
+<p><code>jbang <a href="https://github.com/jbangdev/jbang/blob/HEAD/examples/grab-avatars" class="bare">https://github.com/jbangdev/jbang/blob/HEAD/examples/grab-avatars</a></code></p>
+</div>
+<div class="paragraph">
+<p>And then then you can go full out and render with gource - notice the <code>--user-image-dir .git/avatar</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">gource --title JBang --stop-at-end --user-image-dir .git/avatar --seconds-per-day 0.05 --auto-skip-seconds 1 -1280x720 --hide filenames -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 1 -threads 0 -bf 0 gource.mp4</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you get a video which with a little bit of magic of video editing that looks something like this:</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe width="640" height="360" src="https://www.youtube.com/embed/da0CuVbvWLg?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>And that is about it - showed how to get started with jbang to port an existing perl script to java using a few dependencies.</p>
+</div>
+<div class="paragraph">
+<p>See you next time!</p>
+</div>
+</div>
+</div>]]></content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="intro" /><category term="beginner" /><category term="jbang" /><category term="tutorial" /><summary type="html"><![CDATA[&#8230;&#8203;all just to gource JBang!]]></summary></entry><entry><title type="html">Beyond Hello World!</title><link href="https://jbang.dev/learn/beyondhello/" rel="alternate" type="text/html" title="Beyond Hello World!" /><published>2020-05-28T00:00:00+00:00</published><updated>2020-05-28T00:00:00+00:00</updated><id>https://jbang.dev/learn/beyondhello</id><content type="html" xml:base="https://jbang.dev/learn/beyondhello/"><![CDATA[<div class="paragraph">
+<p>A simple script you can run with <code>jbang</code> is "Hello World" using jshell (<code>.jsh</code>).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">    System.out.println("Hello " + ((args.length&gt;0)?args[0]:"jbang"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can run the above by putting it in a file named: <code>hello.jsh</code> and run <code>jbang hello.jsh</code>.</p>
+</div>
+<div class="paragraph">
+<p>To expand on this we will make a Java file (<code>.java</code>) which uses an external dependency to make the text a bit more fancy.</p>
+</div>
+<div class="paragraph">
+<p>In this case we&#8217;ll use a library called <code>jfiglet</code>.</p>
+</div>
+<div class="paragraph">
+<p>We use <code>//DEPS com.github.lalyos:jfiglet:0.0.8</code> to declare this script should run using the dependency with group id: <code>com.github.lalyos</code>, artifact id: <code>jfiglet</code> and with the version <code>0.0.8</code>.</p>
+</div>
+<div class="paragraph">
+<p>These are called "artifacts coordinates" or "maven coordinates" as the system originates from the Maven build system; but is today used in almost all Java projects. You can use sites like <a href="https://mvnrepository.com" class="bare">https://mvnrepository.com</a> to locate the coordinates of projects, and otherwise find them on the website or source repository of the project them self.</p>
+</div>
+<div class="paragraph">
+<p>Below is a repl.it instance preconfigured with <code>jbang</code> ready to run <code>hello.java</code> using the <code>figlet</code> dependency.</p>
+</div>
+<div class="paragraph">
+<p>Try and press the Run button to see how it works and then try edit the code to see how it pick up the changes between each run.</p>
+</div>
+<iframe height="400px" width="100%" src="https://repl.it/@maxandersen/jbang-replit-demo?lite=true#hello.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>]]></content><author><name>Max Rydahl Andersen</name></author><category term="learn" /><category term="intro" /><category term="beginner" /><category term="jbang" /><category term="tutorial" /><summary type="html"><![CDATA[See the basics of jbang with a bit more than just Hello World!]]></summary></entry></feed>

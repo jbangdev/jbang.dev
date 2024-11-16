@@ -4,7 +4,7 @@
  <title>JBang</title>
  <link href="/" rel="self"/>
  <link href=""/>
- <updated>2024-11-16T17:03:01+00:00</updated>
+ <updated>2024-11-16T23:53:39+00:00</updated>
  <id></id>
  <author>
    <name>JBang</name>
@@ -219,9 +219,9 @@
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
 &lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-javascript hljs&quot; data-lang=&quot;javascript&quot;&gt;import jbang
-output = jbang.exec('--java 21', 'properties@jbangdev', 'java').stdout
+output = jbang.exec(&apos;--java 21&apos;, &apos;properties@jbangdev&apos;, &apos;java&apos;).stdout
 print(output)
-output = jbang.exec('hello.java').stdout
+output = jbang.exec(&apos;hello.java&apos;).stdout
 print(output)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -292,9 +292,9 @@ class hello {
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
 &lt;pre class=&quot;highlightjs highlight&quot;&gt;&lt;code class=&quot;language-javascript hljs&quot; data-lang=&quot;javascript&quot;&gt;#! /usr/bin/env node
-const jbang = require('@jbangdev/jbang');
-jbang.exec('--java 18', 'properties@jbangdev', 'java');
-jbang.exec('hello.java', '&quot;Java Script&quot;')&lt;/code&gt;&lt;/pre&gt;
+const jbang = require(&apos;@jbangdev/jbang&apos;);
+jbang.exec(&apos;--java 18&apos;, &apos;properties@jbangdev&apos;, &apos;java&apos;);
+jbang.exec(&apos;hello.java&apos;, &apos;&quot;Java Script&quot;&apos;)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
