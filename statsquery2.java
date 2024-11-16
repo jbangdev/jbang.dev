@@ -30,14 +30,11 @@ import org.eclipse.microprofile.rest.client.annotation.ClientHeaderParam;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.jboss.resteasy.reactive.RestPath;
-import org.jboss.resteasy.reactive.RestQuery;
 
 import io.quarkus.rest.client.reactive.NotBody;
-import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
-import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 import picocli.CommandLine;
 
@@ -102,9 +99,25 @@ public class statsquery2 implements Runnable {
        var result2 = new AnalyticsResponse<Leaderboard>(null,newData,0,0);
        
        saveLeaderboard(result2, Paths.get("_data/leaderboard/java_versions.yaml"), Function.identity());
-       result = getLeaderboard("blob8");
+      
+       result = getLeaderboard("blob13");
+       saveLeaderboard(result, Paths.get("_data/leaderboard/jbang_vendors.yaml"), Function.identity());
        
+       var vendorCount = getCount("DISTINCT blob13", "vendors");
+       var countries = getCount("DISTINCT blob3", "countries");
+       var uniques = getCount("", "uniques");
+       Map<String, Long> numbers = new HashMap<>();
+       var d = vendorCount.data.get(0);
+       numbers.put(d.name, d.count);
+       d = countries.data.get(0);
+       numbers.put(d.name, d.count);
+       d = uniques.data.get(0);
+       numbers.put(d.name, d.count);
+       System.out.println(numbers);
+       saveNumbers(numbers, Paths.get("_data/leaderboard/jbang_numbers.yaml"), null);
+       result = getLeaderboard("blob8");
        saveLeaderboard(result, Paths.get("_data/leaderboard/jbang_versions.yaml"), Function.identity());
+       
        result = getLeaderboard("blob3");
        saveLeaderboard(result, Paths.get("_data/leaderboard/countries.yaml"), code -> {
            try {
@@ -140,6 +153,20 @@ public class statsquery2 implements Runnable {
         }
     }
 
+    private void saveNumbers(Map<String, Long> result, java.nio.file.Path out, java.util.function.Function<String, String> nameMapper) {
+    
+
+        System.out.println("Writing results to " + out);
+        try (PrintWriter pw = new PrintWriter(new FileWriter(out.toFile()))) {
+            pw.println("# JBang data");
+            for (var dp : result.entrySet()) {
+                pw.printf("  %s: %s\n", dp.getKey(), dp.getValue());
+            }
+        } catch (IOException e) {
+            System.err.println("Error writing to " + out);
+            e.printStackTrace();
+        }
+    }
 
     /// https://github.com/jbangdev/cloudflare-worker-ga4/blob/main/src/analytics.ts#L57
     /// const dataPoint = {
@@ -179,6 +206,17 @@ public class statsquery2 implements Runnable {
             GROUP BY name
             ORDER BY count DESC
         """.replace("$column", column), token);
+        return result;
+    }
+
+    private statsquery2.AnalyticsResponse<statsquery2.Count> getCount(String column, String name) {
+        var result = analyticsEngine.count(accountid,
+        """
+            Select count($column) as count, '$name' as name 
+            FROM JBANG_METRICS
+            WHERE blob1='https://www.jbang.dev/releases/latest/download/version.txt'
+            ORDER BY count DESC
+        """.replace("$column", column).replace("$name", name), token);
         return result;
     }
 
@@ -224,12 +262,20 @@ public class statsquery2 implements Runnable {
         @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
         @ClientHeaderParam(name = "Authorization", value = "Bearer {token}")
         AnalyticsResponse<Leaderboard> Leaderboard(@RestPath String account, String query, @NotBody String token);
+  
+        @POST
+        @Path("/sql")
+        @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+        @ClientHeaderParam(name = "Authorization", value = "Bearer {token}")
+        AnalyticsResponse<Count> count(@RestPath String account, String query, @NotBody String token);
+  
     }
 
     static record latlong( double  latitude, double  longitude) {};
 
     public static record Meta(String name, String type) {}
     public static record Leaderboard(String name, long count) {}
+    public static record Count(String name, long count) {}
     public static record DataPoint(long count, double longitude, double latitude) {}
     public static record AnalyticsResponse<DP>(List<Meta> meta, List<DP> data, int rows, int rows_before_limit_at_least) {}
 

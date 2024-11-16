@@ -22,14 +22,78 @@ layout: splash
     .non-rated {
         margin-top: 20px;
     }
+
+.counters {
+  display: flex;
+  gap: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.counter {
+  text-align: center;
+}
+
+.number {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #4a90e2;
+}
+
+.label {
+  display: block;
+  margin-top: 8px;
+  font-size: 1em;
+  color: #666;
+  text-transform: uppercase;
+}
 </style>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll(".number");
+  counters.forEach(counter => {
+    counter.innerText = '0';
+    const updateCounter = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / 200;
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCounter, 20);
+      } else {
+        counter.innerText = target.toLocaleString();
+      }
+    };
+    updateCounter();
+  });
+});
+</script>
 <h1>JBang Usage Leaderboard</h1>
 
 <p>This is a work in progress. The data is collected from the JBang version checking <a href="https://www.jbang.dev/documentation/guide/latest/installation.html#version-check">here</a>.</p>
 <p>The data is updated once a day. It will show data for maximum last 3 months, starting from 2024-10-19.</p>
 <p>% is calculated as unique per approximate location info used for the http request. Meaning if the same approximate area makes multiple requests using the same version/country it is counted only once.</p>
 <p>NOTE: The data is an approximation. This is not seeing all invocations, just those that reach the version check endpoint. Meaning nothing behind proxies, nothing that runs jbang very fast (as in no time to do an update check) or just don't do an update check. The total count is unknowingly higher - thus just use this as a interesting data point - mainly for fun!</p>
+
+
+<div class="counters">
+    <div class="counter">
+      <span class="number" data-target="{{site.data.leaderboard.jbang_numbers.uniques}}">{{site.data.leaderboard.jbang_numbers.uniques}}</span>
+      <span class="label">Checks</span>
+    </div>
+    <div class="counter">
+      <span class="number" data-target="{{site.data.leaderboard.jbang_numbers.countries}}">{{site.data.leaderboard.jbang_numbers.countries}}</span>
+      <span class="label">Countries</span>
+    </div>
+    <div class="counter">
+      <span class="number" data-target="{{site.data.leaderboard.jbang_numbers.vendors}}">{{site.data.leaderboard.jbang_numbers.vendors}}</span>
+      <span class="label">Java Vendors</span>
+    </div>
+  </div>
+
 <h2>Top 10 Countries</h2>
 <table>
     <tr>
@@ -101,6 +165,31 @@ layout: splash
     <p>
     {% for java_version in site.data.leaderboard.java_versions offset:10 %}
         {{ java_version.name }}{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+    </p>
+</div>
+
+<h2>Top 10 Java Vendors</h2>
+<table>
+    <tr>
+        <th>Position</th>
+        <th>Vendor</th>
+        <th>% of Total</th>
+    </tr>
+    {% for vendor in site.data.leaderboard.jbang_vendors limit:10 %}
+    <tr>
+        <td>{{ forloop.index }}</td>
+        <td>{{ vendor.name }}</td>
+        <td>{{ vendor.percentage }}%</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div class="non-rated">
+    <h3>Other Vendors (in no particular order)</h3>
+    <p>
+    {% for vendor in site.data.leaderboard.jbang_vendors offset:10 %}
+        {{ vendor.name }}{% unless forloop.last %}, {% endunless %}
     {% endfor %}
     </p>
 </div>
