@@ -68,6 +68,10 @@ public class statsquery2 implements Runnable {
         }
     }
 
+    void add(Map<String, Long> transformedData, Count count) {
+        System.out.println("Adding " + count.name + " " + count.count);
+        transformedData.put(count.name, count.count);
+    }
     @Override
     public void run() {
        extractGlobeData();
@@ -103,17 +107,17 @@ public class statsquery2 implements Runnable {
        result = getLeaderboard("blob13");
        saveLeaderboard(result, Paths.get("_data/leaderboard/jbang_vendors.yaml"), Function.identity());
        
-       var vendorCount = getCount("DISTINCT blob13", "vendors");
-       var countries = getCount("DISTINCT blob3", "countries");
-       var uniques = getCount("", "uniques");
        Map<String, Long> numbers = new HashMap<>();
-       var d = vendorCount.data.get(0);
-       numbers.put(d.name, d.count);
-       d = countries.data.get(0);
-       numbers.put(d.name, d.count);
-       d = uniques.data.get(0);
-       numbers.put(d.name, d.count);
-       System.out.println(numbers);
+
+       add(numbers,getCount("DISTINCT blob13", "vendors"));
+       add(numbers,getCount("DISTINCT blob3", "countries"));
+       add(numbers,getCount("DISTINCT blob2", "cities"));
+       add(numbers,getCount("DISTINCT blob4", "continents"));
+       add(numbers,getCount("DISTINCT blob7", "timezones"));
+
+
+       add(numbers,getCount("", "uniques"));
+
        saveNumbers(numbers, Paths.get("_data/leaderboard/jbang_numbers.yaml"), null);
        result = getLeaderboard("blob8");
        saveLeaderboard(result, Paths.get("_data/leaderboard/jbang_versions.yaml"), Function.identity());
@@ -206,10 +210,11 @@ public class statsquery2 implements Runnable {
             GROUP BY name
             ORDER BY count DESC
         """.replace("$column", column), token);
+        System.out.println("Got leaderboard " + column + " with " + result.data.size() + " items");
         return result;
     }
 
-    private statsquery2.AnalyticsResponse<statsquery2.Count> getCount(String column, String name) {
+    private statsquery2.Count getCount(String column, String name) {
         var result = analyticsEngine.count(accountid,
         """
             Select count($column) as count, '$name' as name 
@@ -217,7 +222,7 @@ public class statsquery2 implements Runnable {
             WHERE blob1='https://www.jbang.dev/releases/latest/download/version.txt'
             ORDER BY count DESC
         """.replace("$column", column).replace("$name", name), token);
-        return result;
+        return result.data.get(0);
     }
 
 

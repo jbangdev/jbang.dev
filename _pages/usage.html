@@ -31,7 +31,7 @@ layout: splash
       <body>
 
 	<h1>JBang Globe</h1>
-	<p>Below is a visualization of recent <a href="https://www.jbang.dev/documentation/guide/latest/installation.html#version-check">version checks</a> done by JBang users world wide. </p>
+	<p>Below is a visualization of recent <a href="https://www.jbang.dev/documentation/guide/latest/installation.html#version-check">version checks</a> done by JBang users the last 90 days. </p>
 	
 	<style>
 		.counters {
@@ -84,17 +84,27 @@ layout: splash
 
 	<div class="counters">
 		<div class="counter">
-		  <span class="number" data-target="{{site.data.leaderboard.jbang_numbers.uniques}}">{{site.data.leaderboard.jbang_numbers.uniques}}</span>
-		  <span class="label">Checks</span>
-		</div>
+			<span class="number" data-target="{{site.data.leaderboard.jbang_numbers.continents}}">{{site.data.leaderboard.jbang_numbers.continents}}</span>
+			<span class="label">Continents</span>
+		  </div>
 		<div class="counter">
 		  <span class="number" data-target="{{site.data.leaderboard.jbang_numbers.countries}}">{{site.data.leaderboard.jbang_numbers.countries}}</span>
 		  <span class="label">Countries</span>
 		</div>
+		
+		  <div class="counter">
+			<span class="number" data-target="{{site.data.leaderboard.jbang_numbers.timezones}}">{{site.data.leaderboard.jbang_numbers.timezones}}</span>
+			<span class="label">Timezones</span>
+		  </div>
+		
 		<div class="counter">
-		  <span class="number" data-target="{{site.data.leaderboard.jbang_numbers.vendors}}">{{site.data.leaderboard.jbang_numbers.vendors}}</span>
-		  <span class="label">Java Vendors</span>
-		</div>
+			<span class="number" data-target="{{site.data.leaderboard.jbang_numbers.cities}}">{{site.data.leaderboard.jbang_numbers.cities}}</span>
+			<span class="label">Cities</span>
+		  </div>
+		  <div class="counter">
+			<span class="number" data-target="{{site.data.leaderboard.jbang_numbers.uniques}}">{{site.data.leaderboard.jbang_numbers.uniques}}</span>
+			<span class="label">Version Checks</span>
+		  </div>
 	</div>
 
 	<div id="menu">
