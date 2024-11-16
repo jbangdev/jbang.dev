@@ -520,6 +520,10 @@ name of the module by appending <code>#name-of-module</code> to the URL.</p>
 <p>And finally if the link you provide is to a specific branch of the project then you need to append
 <code>#:SNAPSHOT</code> to the URL. (If you have both a branch and a module name then use <code>#name-of-module:SNAPSHOT</code>)</p>
 </div>
+<div class="paragraph">
+<p>Note: if no branch specified <code>main-SNAPSHOT</code> will be used and if you list <code>main</code> or <code>master</code> they will both
+be treated as if you want the snapshot version.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Examples of links and their resulting locator:</caption>
 <colgroup>
@@ -533,7 +537,7 @@ name of the module by appending <code>#name-of-module</code> to the URL.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbangdev/jbang" class="bare">https://github.com/jbangdev/jbang</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.github.jbangdev:jbang:HEAD-SNAPSHOT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.github.jbangdev:jbang:main-SNAPSHOT</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbangdev/jbang/tree/v1.2.3" class="bare">https://github.com/jbangdev/jbang/tree/v1.2.3</a></p></td>
@@ -545,7 +549,7 @@ name of the module by appending <code>#name-of-module</code> to the URL.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbangdev/jbang#mymodule" class="bare">https://github.com/jbangdev/jbang#mymodule</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.github.jbangdev.jbang:mymodule:HEAD-SNAPSHOT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.github.jbangdev.jbang:mymodule:main-SNAPSHOT</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbangdev/jbang/tree/mybranch#:SNAPSHOT" class="bare">https://github.com/jbangdev/jbang/tree/mybranch#:SNAPSHOT</a></p></td>
@@ -553,7 +557,7 @@ name of the module by appending <code>#name-of-module</code> to the URL.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbangdev/jbang/tree/mybranch#mymodule:SNAPSHOT" class="bare">https://github.com/jbangdev/jbang/tree/mybranch#mymodule:SNAPSHOT</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.github.jbangdev.jbang.mymodule:mybranch-SNAPSHOT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.github.jbangdev.jbang: mymodule:mybranch-SNAPSHOT</p></td>
 </tr>
 </tbody>
 </table>
@@ -659,6 +663,15 @@ username/passwords.</p>
 </div>
 <div class="paragraph">
 <p>By default, <code>jbang</code> uses <code>~/.m2</code> as local repository, but this can be overwritten by the environment variable <code>JBANG_REPO</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="transitive-repositories"><a class="anchor" href="#transitive-repositories"></a>Transitive repositories</h3>
+<div class="paragraph">
+<p>JBang honors by default the repositories found in transitive dependencies (similar to how Maven does).</p>
+</div>
+<div class="paragraph">
+<p>You can however disable this by using the <code>--ignore-transitive-repositories</code> (or <code>-itr</code>) option.</p>
+</div>
 </div>
 </div>
 </div>
