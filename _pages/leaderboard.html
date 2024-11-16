@@ -30,6 +30,11 @@ layout: splash
 <p>The data is updated once a day. It will show data for maximum last 3 months, starting from 2024-10-19.</p>
 <p>% is calculated as unique per approximate location info used for the http request. Meaning if the same approximate area makes multiple requests using the same version/country it is counted only once.</p>
 <p>NOTE: The data is an approximation. This is not seeing all invocations, just those that reach the version check endpoint. Meaning nothing behind proxies, nothing that runs jbang very fast (as in no time to do an update check) or just don't do an update check. The total count is unknowingly higher - thus just use this as a interesting data point - mainly for fun!</p>
+
+{% for data in site.data.leaderboard.jbang_numbers %}
+{data.name}
+{% endfor %}
+
 <h2>Top 10 Countries</h2>
 <table>
     <tr>
@@ -101,6 +106,31 @@ layout: splash
     <p>
     {% for java_version in site.data.leaderboard.java_versions offset:10 %}
         {{ java_version.name }}{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+    </p>
+</div>
+
+<h2>Top 10 Java Vendors</h2>
+<table>
+    <tr>
+        <th>Position</th>
+        <th>Vendor</th>
+        <th>% of Total</th>
+    </tr>
+    {% for vendor in site.data.leaderboard.jbang_vendors limit:10 %}
+    <tr>
+        <td>{{ forloop.index }}</td>
+        <td>{{ vendor.name }}</td>
+        <td>{{ vendor.percentage }}%</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div class="non-rated">
+    <h3>Other Vendors (in no particular order)</h3>
+    <p>
+    {% for vendor in site.data.leaderboard.jbang_vendors offset:10 %}
+        {{ vendor.name }}{% unless forloop.last %}, {% endunless %}
     {% endfor %}
     </p>
 </div>
