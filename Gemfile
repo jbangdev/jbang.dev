@@ -7,8 +7,8 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.0.1"
-gem 'pygments.rb', '~> 1.1.2'
+gem "jekyll"
+gem 'pygments.rb'
 gem "minimal-mistakes-jekyll"
 
 #gem 'github-pages'
@@ -20,7 +20,7 @@ gem "minimal-mistakes-jekyll"
 group :jekyll_plugins do
   gem 'asciidoctor-diagram'
   gem 'jekyll-asciidoc'
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-feed"
   gem 'jekyll-analytics'
   gem "jekyll-data"
   gem 'jekyll-twitter-plugin'
@@ -29,10 +29,10 @@ end
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
 install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
-  gem "tzinfo", "~> 1.2"
+  gem "tzinfo"
   gem "tzinfo-data"
 end
 
 # Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
+gem "wdm", :install_if => Gem.win_platform?
 
