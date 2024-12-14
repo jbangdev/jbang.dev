@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
-      - uses: n1hility/cancel-previous-runs@v2
+      - uses: n1hility/cancel-previous-runs@v3
         if: ${{ false }} ## not needed as we are not using all resources
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
