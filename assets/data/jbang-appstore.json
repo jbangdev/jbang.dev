@@ -10,10 +10,10 @@
       "scriptRef": "RevapiUpdate.java",
       "command": "revapi-update@quarkusio/quarkus~.jbang",
       "fullcommand": "jbang revapi-update@quarkusio/quarkus~.jbang",
-      "link": "https://github.com/quarkusio/quarkus/blob/6d38d5048dd57aa146dd48d4e2d7a5c56ae3e716/.jbang/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/quarkus/blob/0e9d883b6c09b9e5859439734436e548758dcdd6/.jbang/jbang-catalog.json"
     },
     {
-      "stars": 10450,
+      "stars": 10457,
       "icon_url": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "repoOwner": "apple",
       "repoName": "pkl",
@@ -24,7 +24,7 @@
       "link": "https://github.com/apple/pkl/blob/467e64f98e45745312201b3e4f44c968e5a1f1a3/jbang-catalog.json"
     },
     {
-      "stars": 10450,
+      "stars": 10457,
       "icon_url": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "repoOwner": "apple",
       "repoName": "pkl",
@@ -35,7 +35,7 @@
       "link": "https://github.com/apple/pkl/blob/467e64f98e45745312201b3e4f44c968e5a1f1a3/jbang-catalog.json"
     },
     {
-      "stars": 10450,
+      "stars": 10457,
       "icon_url": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "repoOwner": "apple",
       "repoName": "pkl",
@@ -46,7 +46,7 @@
       "link": "https://github.com/apple/pkl/blob/467e64f98e45745312201b3e4f44c968e5a1f1a3/jbang-catalog.json"
     },
     {
-      "stars": 8393,
+      "stars": 8394,
       "icon_url": "https://avatars.githubusercontent.com/u/91312095?v\u003d4",
       "repoOwner": "karatelabs",
       "repoName": "karate",
@@ -57,7 +57,7 @@
       "link": "https://github.com/karatelabs/karate/blob/160be56362bd6630dd084a3636406840cc9a145b/jbang-catalog.json"
     },
     {
-      "stars": 5662,
+      "stars": 5664,
       "icon_url": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
       "repoOwner": "apache",
       "repoName": "camel",
@@ -66,7 +66,7 @@
       "scriptRef": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
       "command": "camel@apache/camel",
       "fullcommand": "jbang camel@apache/camel",
-      "link": "https://github.com/apache/camel/blob/3775cce688c58d33b27b672bee2ed761da163105/jbang-catalog.json"
+      "link": "https://github.com/apache/camel/blob/53491a1f1c9aad6acef3ec76b029d19cab6a7a31/jbang-catalog.json"
     },
     {
       "stars": 1863,
@@ -80,7 +80,7 @@
       "link": "https://github.com/tabulapdf/tabula-java/blob/5d91f1d733c4895d31854a641c152220f8c5f341/jbang-catalog.json"
     },
     {
-      "stars": 1665,
+      "stars": 1670,
       "icon_url": "https://avatars.githubusercontent.com/u/185941913?v\u003d4",
       "repoOwner": "NanowarOfSteel",
       "repoName": "HelloWorld",
@@ -103,7 +103,7 @@
       "link": "https://github.com/hawtio/hawtio/blob/a28869a6131cb0792ac703384642e4d10a8d564e/jbang-catalog.json"
     },
     {
-      "stars": 1286,
+      "stars": 1285,
       "icon_url": "https://avatars.githubusercontent.com/u/4430336?v\u003d4",
       "repoOwner": "oracle",
       "repoName": "graalpython",
@@ -1280,7 +1280,7 @@
       "scriptRef": "main.java",
       "command": "main@jbangdev/jbang.dev",
       "fullcommand": "jbang main@jbangdev/jbang.dev",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/532d60137b3deb16298015fd672f8a9e3f50bc85/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang.dev/blob/ccd310b366b59a8cca65cdce8c5cce898be81ae4/jbang-catalog.json"
     },
     {
       "stars": 12,
@@ -1291,7 +1291,7 @@
       "scriptRef": "tree/main.java",
       "command": "tree@jbangdev/jbang.dev",
       "fullcommand": "jbang tree@jbangdev/jbang.dev",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/532d60137b3deb16298015fd672f8a9e3f50bc85/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang.dev/blob/ccd310b366b59a8cca65cdce8c5cce898be81ae4/jbang-catalog.json"
     },
     {
       "stars": 12,
@@ -3194,28 +3194,6 @@
     },
     {
       "stars": 1,
-      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "repoOwner": "maxandersen",
-      "repoName": "xam.dk",
-      "alias": "tree",
-      "scriptRef": "tree/main.java",
-      "command": "tree@maxandersen/xam.dk",
-      "fullcommand": "jbang tree@maxandersen/xam.dk",
-      "link": "https://github.com/maxandersen/xam.dk/blob/de714be075b704214a2157445d57bbad45339829/jbang-catalog.json"
-    },
-    {
-      "stars": 1,
-      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "repoOwner": "maxandersen",
-      "repoName": "xam.dk",
-      "alias": "qrcode",
-      "scriptRef": "qrcode/main.java",
-      "command": "qrcode@maxandersen/xam.dk",
-      "fullcommand": "jbang qrcode@maxandersen/xam.dk",
-      "link": "https://github.com/maxandersen/xam.dk/blob/de714be075b704214a2157445d57bbad45339829/jbang-catalog.json"
-    },
-    {
-      "stars": 1,
       "icon_url": "https://avatars.githubusercontent.com/u/413413?v\u003d4",
       "repoOwner": "38leinaD",
       "repoName": "jbang-catalog",
@@ -3356,6 +3334,28 @@
       "command": "agent@jacoco",
       "fullcommand": "jbang agent@jacoco",
       "link": "https://github.com/jacoco/jbang-catalog/blob/678e949a1f87fcb1c92f0f781921e1290bc3ebde/jbang-catalog.json"
+    },
+    {
+      "stars": 1,
+      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
+      "repoOwner": "maxandersen",
+      "repoName": "xam.dk",
+      "alias": "tree",
+      "scriptRef": "tree/main.java",
+      "command": "tree@maxandersen/xam.dk",
+      "fullcommand": "jbang tree@maxandersen/xam.dk",
+      "link": "https://github.com/maxandersen/xam.dk/blob/de714be075b704214a2157445d57bbad45339829/jbang-catalog.json"
+    },
+    {
+      "stars": 1,
+      "icon_url": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
+      "repoOwner": "maxandersen",
+      "repoName": "xam.dk",
+      "alias": "qrcode",
+      "scriptRef": "qrcode/main.java",
+      "command": "qrcode@maxandersen/xam.dk",
+      "fullcommand": "jbang qrcode@maxandersen/xam.dk",
+      "link": "https://github.com/maxandersen/xam.dk/blob/de714be075b704214a2157445d57bbad45339829/jbang-catalog.json"
     },
     {
       "stars": 1,
@@ -5274,7 +5274,7 @@
       "scriptRef": "io.karatelabs:karate-core:1.5.0:all",
       "command": "karate@0J27VWx/UNi57cV7lgY",
       "fullcommand": "jbang karate@0J27VWx/UNi57cV7lgY",
-      "link": "https://github.com/0J27VWx/UNi57cV7lgY/blob/767c7085884d24708d54c0254eae763998b0a10b/jbang-catalog.json"
+      "link": "https://github.com/0J27VWx/UNi57cV7lgY/blob/b2a5fcf409a2410d7dacac53468da4de59997eec/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -5671,36 +5671,36 @@
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/31179784?v\u003d4",
-      "repoOwner": "zubairmujeeb",
-      "repoName": "spring-boot-sample-projects",
+      "icon_url": "https://avatars.githubusercontent.com/u/82864904?v\u003d4",
+      "repoOwner": "rohan-flutterint",
+      "repoName": "tutorials-eugenp",
       "alias": "hello",
       "scriptRef": "hello.java",
-      "command": "hello@zubairmujeeb/spring-boot-sample-projects~tutorials-master/jbang",
-      "fullcommand": "jbang hello@zubairmujeeb/spring-boot-sample-projects~tutorials-master/jbang",
-      "link": "https://github.com/zubairmujeeb/spring-boot-sample-projects/blob/8d0fd0c195c714adde5d22b7b247abbe3b968786/tutorials-master/jbang/jbang-catalog.json"
+      "command": "hello@rohan-flutterint/tutorials-eugenp~jbang",
+      "fullcommand": "jbang hello@rohan-flutterint/tutorials-eugenp~jbang",
+      "link": "https://github.com/rohan-flutterint/tutorials-eugenp/blob/ae5c947fff12d52f42c4db04e7d1aadabf70d3bf/jbang/jbang-catalog.json"
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/31179784?v\u003d4",
-      "repoOwner": "zubairmujeeb",
-      "repoName": "spring-boot-sample-projects",
+      "icon_url": "https://avatars.githubusercontent.com/u/82864904?v\u003d4",
+      "repoOwner": "rohan-flutterint",
+      "repoName": "tutorials-eugenp",
       "alias": "hellocli",
       "scriptRef": "hellocli.java",
-      "command": "hellocli@zubairmujeeb/spring-boot-sample-projects~tutorials-master/jbang",
-      "fullcommand": "jbang hellocli@zubairmujeeb/spring-boot-sample-projects~tutorials-master/jbang",
-      "link": "https://github.com/zubairmujeeb/spring-boot-sample-projects/blob/8d0fd0c195c714adde5d22b7b247abbe3b968786/tutorials-master/jbang/jbang-catalog.json"
+      "command": "hellocli@rohan-flutterint/tutorials-eugenp~jbang",
+      "fullcommand": "jbang hellocli@rohan-flutterint/tutorials-eugenp~jbang",
+      "link": "https://github.com/rohan-flutterint/tutorials-eugenp/blob/ae5c947fff12d52f42c4db04e7d1aadabf70d3bf/jbang/jbang-catalog.json"
     },
     {
       "stars": 0,
-      "icon_url": "https://avatars.githubusercontent.com/u/31179784?v\u003d4",
-      "repoOwner": "zubairmujeeb",
-      "repoName": "spring-boot-sample-projects",
+      "icon_url": "https://avatars.githubusercontent.com/u/82864904?v\u003d4",
+      "repoOwner": "rohan-flutterint",
+      "repoName": "tutorials-eugenp",
       "alias": "jbangquarkus",
       "scriptRef": "jbangquarkus.java",
-      "command": "jbangquarkus@zubairmujeeb/spring-boot-sample-projects~tutorials-master/jbang",
-      "fullcommand": "jbang jbangquarkus@zubairmujeeb/spring-boot-sample-projects~tutorials-master/jbang",
-      "link": "https://github.com/zubairmujeeb/spring-boot-sample-projects/blob/8d0fd0c195c714adde5d22b7b247abbe3b968786/tutorials-master/jbang/jbang-catalog.json"
+      "command": "jbangquarkus@rohan-flutterint/tutorials-eugenp~jbang",
+      "fullcommand": "jbang jbangquarkus@rohan-flutterint/tutorials-eugenp~jbang",
+      "link": "https://github.com/rohan-flutterint/tutorials-eugenp/blob/ae5c947fff12d52f42c4db04e7d1aadabf70d3bf/jbang/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -5736,7 +5736,7 @@
       "description": "\u003cp\u003eTemplate using ChatGPT (requires --preview and OPENAI_API_KEY)\u003c/p\u003e\n",
       "command": "gpt@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t gpt@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/bc8577413fba87aef3840c443035efb5cd8b75a1/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/455cde25c650912fabdc383f99d39e731d02db85/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1467,
@@ -5747,7 +5747,7 @@
       "description": "\u003cp\u003eTemplate using ChatGPT for kotlin (requires --preview and OPENAI_API_KEY)\u003c/p\u003e\n",
       "command": "gpt.kt@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t gpt.kt@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/bc8577413fba87aef3840c443035efb5cd8b75a1/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/455cde25c650912fabdc383f99d39e731d02db85/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1467,
@@ -5758,7 +5758,7 @@
       "description": "\u003cp\u003eTemplate using ChatGPT for groovy (requires --preview and OPENAI_API_KEY)\u003c/p\u003e\n",
       "command": "gpt.groovy@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t gpt.groovy@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/bc8577413fba87aef3840c443035efb5cd8b75a1/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/455cde25c650912fabdc383f99d39e731d02db85/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1467,
@@ -5769,7 +5769,7 @@
       "description": "\u003cp\u003eAgent template\u003c/p\u003e\n",
       "command": "agent@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t agent@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/bc8577413fba87aef3840c443035efb5cd8b75a1/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/455cde25c650912fabdc383f99d39e731d02db85/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1467,
@@ -5780,7 +5780,7 @@
       "description": "\u003cp\u003eCLI template\u003c/p\u003e\n",
       "command": "cli@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t cli@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/bc8577413fba87aef3840c443035efb5cd8b75a1/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/455cde25c650912fabdc383f99d39e731d02db85/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1467,
@@ -5791,7 +5791,7 @@
       "description": "\u003cp\u003eBasic Hello World template\u003c/p\u003e\n",
       "command": "hello@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t hello@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/bc8577413fba87aef3840c443035efb5cd8b75a1/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/455cde25c650912fabdc383f99d39e731d02db85/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1467,
@@ -5802,7 +5802,7 @@
       "description": "\u003cp\u003eBasic kotlin Hello World template\u003c/p\u003e\n",
       "command": "hello.kt@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t hello.kt@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/bc8577413fba87aef3840c443035efb5cd8b75a1/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/455cde25c650912fabdc383f99d39e731d02db85/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1467,
@@ -5813,7 +5813,7 @@
       "description": "\u003cp\u003eBasic groovy Hello World template\u003c/p\u003e\n",
       "command": "hello.groovy@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t hello.groovy@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/bc8577413fba87aef3840c443035efb5cd8b75a1/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/455cde25c650912fabdc383f99d39e731d02db85/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1467,
@@ -5824,7 +5824,7 @@
       "description": "\u003cp\u003eBasic markdown readme template\u003c/p\u003e\n",
       "command": "readme.md@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t readme.md@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/bc8577413fba87aef3840c443035efb5cd8b75a1/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/455cde25c650912fabdc383f99d39e731d02db85/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1467,
@@ -5835,7 +5835,7 @@
       "description": "\u003cp\u003eQuarkus CLI template\u003c/p\u003e\n",
       "command": "qcli@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t qcli@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/bc8577413fba87aef3840c443035efb5cd8b75a1/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/455cde25c650912fabdc383f99d39e731d02db85/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1467,
@@ -5846,7 +5846,7 @@
       "description": "\u003cp\u003eQuarkus Metrics template\u003c/p\u003e\n",
       "command": "qmetrics@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t qmetrics@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/bc8577413fba87aef3840c443035efb5cd8b75a1/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/455cde25c650912fabdc383f99d39e731d02db85/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1467,
@@ -5857,10 +5857,10 @@
       "description": "\u003cp\u003eQuarkus REST template\u003c/p\u003e\n",
       "command": "qrest@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t qrest@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/bc8577413fba87aef3840c443035efb5cd8b75a1/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/455cde25c650912fabdc383f99d39e731d02db85/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 1286,
+      "stars": 1285,
       "icon_url": "https://avatars.githubusercontent.com/u/4430336?v\u003d4",
       "repoOwner": "oracle",
       "repoName": "graalpython",
@@ -5871,7 +5871,7 @@
       "link": "https://github.com/oracle/graalpython/blob/f0d4ebe1ccac43bf3c60d228ae1ae774d9137a75/jbang-catalog.json"
     },
     {
-      "stars": 1286,
+      "stars": 1285,
       "icon_url": "https://avatars.githubusercontent.com/u/4430336?v\u003d4",
       "repoOwner": "oracle",
       "repoName": "graalpython",
