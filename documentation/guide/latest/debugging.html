@@ -406,6 +406,14 @@ connect to the IDE and suspend the execution when it connects as opposed to havi
 <p>For finer and more explicit control the scripts, <code>jbang</code> will add <code>JBANG_JAVA_OPTIONS</code> to the call to <code>jbang</code> itself.
 Thus if you want to enable debug or other details for <code>jbang</code> set that environment variable.</p>
 </div>
+<div class="paragraph">
+<p>Example that will enable debug on port 1044 and wait/suspend for debugger to connect:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">JBANG_JAVA_OPTIONS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=1044 jbang env@jbangdev</code></pre>
+</div>
+</div>
 </div>
 </div>
 <nav class="pagination">
