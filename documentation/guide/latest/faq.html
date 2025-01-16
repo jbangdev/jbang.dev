@@ -397,8 +397,9 @@ Use it at your own risk :)</p>
 </li>
 <li>
 <p><em>Why not use normal shebang(<code>#!</code>) in the header ?</em></p>
-<p>  You can use normal shebang (<code>#!/usr/bin/env jbang</code>) and Java 10+ will actually work with it from the command line. Not recommended though as
-many tools and especially IDE&#8217;s will start complaining about syntax errors as they don&#8217;t ignore the first line in this case.</p>
+<p>  You can use normal shebang (<code>#!/usr/bin/env jbang</code>) and the Java 10+ launcher (<code>java test.java</code>) will actually work with it from the command line.
+However the Java compiler will still not accept it (<code>javac test.java</code> with shebang fails.) This is thus not recommended, as
+many tools, code formatters ([example](<a href="https://github.com/google/google-java-format/issues/1214)" class="bare">https://github.com/google/google-java-format/issues/1214)</a>), and especially IDE&#8217;s will start complaining about syntax errors as they don&#8217;t ignore the first line in this case.</p>
 <div class="paragraph">
 <p>By using the <code>//</code> form it is treated as both a bash/shell file AND a valid java file and thus works everywhere a java file will work.</p>
 </div>
