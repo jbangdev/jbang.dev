@@ -2,7 +2,7 @@
   "aliasCount": 511,
   "aliases": [
     {
-      "stars": 14079,
+      "stars": 14084,
       "icon_url": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
       "repoOwner": "quarkusio",
       "repoName": "quarkus",
@@ -10,10 +10,10 @@
       "scriptRef": "RevapiUpdate.java",
       "command": "revapi-update@quarkusio/quarkus~.jbang",
       "fullcommand": "jbang revapi-update@quarkusio/quarkus~.jbang",
-      "link": "https://github.com/quarkusio/quarkus/blob/d477662af73dd4984b9d6d42b748c2b614d12509/.jbang/jbang-catalog.json"
+      "link": "https://github.com/quarkusio/quarkus/blob/f47e0f523fee2de66e8fc6aa96ced4ec35a32962/.jbang/jbang-catalog.json"
     },
     {
-      "stars": 10480,
+      "stars": 10479,
       "icon_url": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "repoOwner": "apple",
       "repoName": "pkl",
@@ -24,7 +24,7 @@
       "link": "https://github.com/apple/pkl/blob/e85e888f9223f24bd74bb4c9564c99f87c99f111/jbang-catalog.json"
     },
     {
-      "stars": 10480,
+      "stars": 10479,
       "icon_url": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "repoOwner": "apple",
       "repoName": "pkl",
@@ -35,7 +35,7 @@
       "link": "https://github.com/apple/pkl/blob/e85e888f9223f24bd74bb4c9564c99f87c99f111/jbang-catalog.json"
     },
     {
-      "stars": 10480,
+      "stars": 10479,
       "icon_url": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "repoOwner": "apple",
       "repoName": "pkl",
@@ -46,7 +46,7 @@
       "link": "https://github.com/apple/pkl/blob/e85e888f9223f24bd74bb4c9564c99f87c99f111/jbang-catalog.json"
     },
     {
-      "stars": 8436,
+      "stars": 8437,
       "icon_url": "https://avatars.githubusercontent.com/u/91312095?v\u003d4",
       "repoOwner": "karatelabs",
       "repoName": "karate",
@@ -57,7 +57,7 @@
       "link": "https://github.com/karatelabs/karate/blob/522930907af61ca8ce5ebd9908b615cd71e2e6b0/jbang-catalog.json"
     },
     {
-      "stars": 5690,
+      "stars": 5693,
       "icon_url": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
       "repoOwner": "apache",
       "repoName": "camel",
@@ -66,7 +66,7 @@
       "scriptRef": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
       "command": "camel@apache/camel",
       "fullcommand": "jbang camel@apache/camel",
-      "link": "https://github.com/apache/camel/blob/1e0d9c88c3e92957f536d6d65fb104ac63e733cc/jbang-catalog.json"
+      "link": "https://github.com/apache/camel/blob/9f4a2ed6a36abf5fc41e5c43bf6c37f08e1055d3/jbang-catalog.json"
     },
     {
       "stars": 1877,
@@ -80,7 +80,7 @@
       "link": "https://github.com/tabulapdf/tabula-java/blob/5d91f1d733c4895d31854a641c152220f8c5f341/jbang-catalog.json"
     },
     {
-      "stars": 1755,
+      "stars": 1760,
       "icon_url": "https://avatars.githubusercontent.com/u/185941913?v\u003d4",
       "repoOwner": "NanowarOfSteel",
       "repoName": "HelloWorld",
@@ -100,10 +100,10 @@
       "scriptRef": "hawtio-jbang/dist/HawtioJBang.java",
       "command": "hawtio@hawtio/hawtio",
       "fullcommand": "jbang hawtio@hawtio/hawtio",
-      "link": "https://github.com/hawtio/hawtio/blob/855968fe62e791f6a8f144e3aec7cb0785cadf67/jbang-catalog.json"
+      "link": "https://github.com/hawtio/hawtio/blob/c220e7cf0c57a5e9554f2b519b3a86c5f8522fb7/jbang-catalog.json"
     },
     {
-      "stars": 1300,
+      "stars": 1302,
       "icon_url": "https://avatars.githubusercontent.com/u/4430336?v\u003d4",
       "repoOwner": "oracle",
       "repoName": "graalpython",
@@ -249,7 +249,7 @@
       "scriptRef": "templates/PolicyPanda.java",
       "command": "policypanda@commonhaus/foundation",
       "fullcommand": "jbang policypanda@commonhaus/foundation",
-      "link": "https://github.com/commonhaus/foundation/blob/9c7b1fae1d451faef9b1aea7d9ff5e2970471c9f/jbang-catalog.json"
+      "link": "https://github.com/commonhaus/foundation/blob/a36265e7a1ab661ef960e0b7435b4da8fdcc3ea4/jbang-catalog.json"
     },
     {
       "stars": 56,
@@ -1251,6 +1251,105 @@
     },
     {
       "stars": 13,
+      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
+      "repoOwner": "quarkiverse",
+      "repoName": "quarkus-mcp-servers",
+      "alias": "mcp-server-filesystem",
+      "scriptRef": "https://github.com/quarkiverse/quarkus-mcp-servers/releases/download/early-access/mcp-server-filesystem.jar",
+      "command": "mcp-server-filesystem@quarkiverse/quarkus-mcp-servers",
+      "fullcommand": "jbang mcp-server-filesystem@quarkiverse/quarkus-mcp-servers",
+      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
+    },
+    {
+      "stars": 13,
+      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
+      "repoOwner": "quarkiverse",
+      "repoName": "quarkus-mcp-servers",
+      "alias": "filesystem",
+      "scriptRef": "https://github.com/quarkiverse/quarkus-mcp-servers/releases/download/early-access/mcp-server-filesystem.jar",
+      "command": "filesystem@quarkiverse/quarkus-mcp-servers",
+      "fullcommand": "jbang filesystem@quarkiverse/quarkus-mcp-servers",
+      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
+    },
+    {
+      "stars": 13,
+      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
+      "repoOwner": "quarkiverse",
+      "repoName": "quarkus-mcp-servers",
+      "alias": "mcp-server-jdbc",
+      "scriptRef": "jdbc/.scripts/mcpjdbc.java",
+      "command": "mcp-server-jdbc@quarkiverse/quarkus-mcp-servers",
+      "fullcommand": "jbang mcp-server-jdbc@quarkiverse/quarkus-mcp-servers",
+      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
+    },
+    {
+      "stars": 13,
+      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
+      "repoOwner": "quarkiverse",
+      "repoName": "quarkus-mcp-servers",
+      "alias": "jdbc",
+      "scriptRef": "jdbc/.scripts/mcpjdbc.java",
+      "command": "jdbc@quarkiverse/quarkus-mcp-servers",
+      "fullcommand": "jbang jdbc@quarkiverse/quarkus-mcp-servers",
+      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
+    },
+    {
+      "stars": 13,
+      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
+      "repoOwner": "quarkiverse",
+      "repoName": "quarkus-mcp-servers",
+      "alias": "mcp-server-jfx-script",
+      "scriptRef": "jfx/src/main/java/io/quarkus/mcp/servers/jfx/MCPServerJFX.java",
+      "command": "mcp-server-jfx-script@quarkiverse/quarkus-mcp-servers",
+      "fullcommand": "jbang mcp-server-jfx-script@quarkiverse/quarkus-mcp-servers",
+      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
+    },
+    {
+      "stars": 13,
+      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
+      "repoOwner": "quarkiverse",
+      "repoName": "quarkus-mcp-servers",
+      "alias": "jfx-script",
+      "scriptRef": "jfx/src/main/java/io/quarkus/mcp/servers/jfx/MCPServerJFX.java",
+      "command": "jfx-script@quarkiverse/quarkus-mcp-servers",
+      "fullcommand": "jbang jfx-script@quarkiverse/quarkus-mcp-servers",
+      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
+    },
+    {
+      "stars": 13,
+      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
+      "repoOwner": "quarkiverse",
+      "repoName": "quarkus-mcp-servers",
+      "alias": "mcp-server-jfx",
+      "scriptRef": "https://github.com/quarkiverse/quarkus-mcp-servers/releases/download/early-access/mcp-server-jfx.jar",
+      "command": "mcp-server-jfx@quarkiverse/quarkus-mcp-servers",
+      "fullcommand": "jbang mcp-server-jfx@quarkiverse/quarkus-mcp-servers",
+      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
+    },
+    {
+      "stars": 13,
+      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
+      "repoOwner": "quarkiverse",
+      "repoName": "quarkus-mcp-servers",
+      "alias": "jfx",
+      "scriptRef": "https://github.com/quarkiverse/quarkus-mcp-servers/releases/download/early-access/mcp-server-jfx.jar",
+      "command": "jfx@quarkiverse/quarkus-mcp-servers",
+      "fullcommand": "jbang jfx@quarkiverse/quarkus-mcp-servers",
+      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
+    },
+    {
+      "stars": 13,
+      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
+      "repoOwner": "quarkiverse",
+      "repoName": "quarkus-mcp-servers",
+      "alias": "kubernetes",
+      "scriptRef": "kubernetes/src/main/java/io/quarkus/mcp/servers/kubernetes/MCPServerKubernetes.java",
+      "command": "kubernetes@quarkiverse/quarkus-mcp-servers",
+      "fullcommand": "jbang kubernetes@quarkiverse/quarkus-mcp-servers",
+      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
+    },
+    {
+      "stars": 13,
       "icon_url": "https://avatars.githubusercontent.com/u/2865265?v\u003d4",
       "repoOwner": "tomitribe",
       "repoName": "jamira",
@@ -1284,105 +1383,6 @@
     },
     {
       "stars": 12,
-      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "repoOwner": "quarkiverse",
-      "repoName": "quarkus-mcp-servers",
-      "alias": "mcp-server-filesystem",
-      "scriptRef": "https://github.com/quarkiverse/quarkus-mcp-servers/releases/download/early-access/mcp-server-filesystem.jar",
-      "command": "mcp-server-filesystem@quarkiverse/quarkus-mcp-servers",
-      "fullcommand": "jbang mcp-server-filesystem@quarkiverse/quarkus-mcp-servers",
-      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
-    },
-    {
-      "stars": 12,
-      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "repoOwner": "quarkiverse",
-      "repoName": "quarkus-mcp-servers",
-      "alias": "filesystem",
-      "scriptRef": "https://github.com/quarkiverse/quarkus-mcp-servers/releases/download/early-access/mcp-server-filesystem.jar",
-      "command": "filesystem@quarkiverse/quarkus-mcp-servers",
-      "fullcommand": "jbang filesystem@quarkiverse/quarkus-mcp-servers",
-      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
-    },
-    {
-      "stars": 12,
-      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "repoOwner": "quarkiverse",
-      "repoName": "quarkus-mcp-servers",
-      "alias": "mcp-server-jdbc",
-      "scriptRef": "jdbc/.scripts/mcpjdbc.java",
-      "command": "mcp-server-jdbc@quarkiverse/quarkus-mcp-servers",
-      "fullcommand": "jbang mcp-server-jdbc@quarkiverse/quarkus-mcp-servers",
-      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
-    },
-    {
-      "stars": 12,
-      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "repoOwner": "quarkiverse",
-      "repoName": "quarkus-mcp-servers",
-      "alias": "jdbc",
-      "scriptRef": "jdbc/.scripts/mcpjdbc.java",
-      "command": "jdbc@quarkiverse/quarkus-mcp-servers",
-      "fullcommand": "jbang jdbc@quarkiverse/quarkus-mcp-servers",
-      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
-    },
-    {
-      "stars": 12,
-      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "repoOwner": "quarkiverse",
-      "repoName": "quarkus-mcp-servers",
-      "alias": "mcp-server-jfx-script",
-      "scriptRef": "jfx/src/main/java/io/quarkus/mcp/servers/jfx/MCPServerJFX.java",
-      "command": "mcp-server-jfx-script@quarkiverse/quarkus-mcp-servers",
-      "fullcommand": "jbang mcp-server-jfx-script@quarkiverse/quarkus-mcp-servers",
-      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
-    },
-    {
-      "stars": 12,
-      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "repoOwner": "quarkiverse",
-      "repoName": "quarkus-mcp-servers",
-      "alias": "jfx-script",
-      "scriptRef": "jfx/src/main/java/io/quarkus/mcp/servers/jfx/MCPServerJFX.java",
-      "command": "jfx-script@quarkiverse/quarkus-mcp-servers",
-      "fullcommand": "jbang jfx-script@quarkiverse/quarkus-mcp-servers",
-      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
-    },
-    {
-      "stars": 12,
-      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "repoOwner": "quarkiverse",
-      "repoName": "quarkus-mcp-servers",
-      "alias": "mcp-server-jfx",
-      "scriptRef": "https://github.com/quarkiverse/quarkus-mcp-servers/releases/download/early-access/mcp-server-jfx.jar",
-      "command": "mcp-server-jfx@quarkiverse/quarkus-mcp-servers",
-      "fullcommand": "jbang mcp-server-jfx@quarkiverse/quarkus-mcp-servers",
-      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
-    },
-    {
-      "stars": 12,
-      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "repoOwner": "quarkiverse",
-      "repoName": "quarkus-mcp-servers",
-      "alias": "jfx",
-      "scriptRef": "https://github.com/quarkiverse/quarkus-mcp-servers/releases/download/early-access/mcp-server-jfx.jar",
-      "command": "jfx@quarkiverse/quarkus-mcp-servers",
-      "fullcommand": "jbang jfx@quarkiverse/quarkus-mcp-servers",
-      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
-    },
-    {
-      "stars": 12,
-      "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "repoOwner": "quarkiverse",
-      "repoName": "quarkus-mcp-servers",
-      "alias": "kubernetes",
-      "scriptRef": "kubernetes/src/main/java/io/quarkus/mcp/servers/kubernetes/MCPServerKubernetes.java",
-      "command": "kubernetes@quarkiverse/quarkus-mcp-servers",
-      "fullcommand": "jbang kubernetes@quarkiverse/quarkus-mcp-servers",
-      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/dcb4b5cda941e8cceaf3484606640b165065ca96/jbang-catalog.json"
-    },
-    {
-      "stars": 12,
       "icon_url": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "repoOwner": "jbangdev",
       "repoName": "jbang.dev",
@@ -1390,7 +1390,7 @@
       "scriptRef": "main.java",
       "command": "main@jbangdev/jbang.dev",
       "fullcommand": "jbang main@jbangdev/jbang.dev",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/287153000eb0c509b965fe0a0b3ff5b8dbf660ff/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang.dev/blob/d8b9fa1ceff932187e8c0672475e390edf378bd9/jbang-catalog.json"
     },
     {
       "stars": 12,
@@ -1401,7 +1401,7 @@
       "scriptRef": "tree/main.java",
       "command": "tree@jbangdev/jbang.dev",
       "fullcommand": "jbang tree@jbangdev/jbang.dev",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/287153000eb0c509b965fe0a0b3ff5b8dbf660ff/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang.dev/blob/d8b9fa1ceff932187e8c0672475e390edf378bd9/jbang-catalog.json"
     },
     {
       "stars": 11,
@@ -5735,7 +5735,7 @@
       "scriptRef": "io.karatelabs:karate-core:1.5.0:all",
       "command": "karate@0J27VWx/UNi57cV7lgY",
       "fullcommand": "jbang karate@0J27VWx/UNi57cV7lgY",
-      "link": "https://github.com/0J27VWx/UNi57cV7lgY/blob/3f8af426344bcfaabe0d8caedbdb4842eb37bf42/jbang-catalog.json"
+      "link": "https://github.com/0J27VWx/UNi57cV7lgY/blob/ba446b4bd083b3d104feb698d3f644b3bc2c5173/jbang-catalog.json"
     },
     {
       "stars": 0,
@@ -5869,7 +5869,7 @@
       "description": "\u003cp\u003eTemplate using ChatGPT (requires --preview and OPENAI_API_KEY)\u003c/p\u003e\n",
       "command": "gpt@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t gpt@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/a5ac52ff101af01553487e997848cf6f82e2432d/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/004cc6444d23995ca62b62b17f4853691395a231/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1479,
@@ -5880,7 +5880,7 @@
       "description": "\u003cp\u003eTemplate using ChatGPT for kotlin (requires --preview and OPENAI_API_KEY)\u003c/p\u003e\n",
       "command": "gpt.kt@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t gpt.kt@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/a5ac52ff101af01553487e997848cf6f82e2432d/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/004cc6444d23995ca62b62b17f4853691395a231/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1479,
@@ -5891,7 +5891,7 @@
       "description": "\u003cp\u003eTemplate using ChatGPT for groovy (requires --preview and OPENAI_API_KEY)\u003c/p\u003e\n",
       "command": "gpt.groovy@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t gpt.groovy@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/a5ac52ff101af01553487e997848cf6f82e2432d/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/004cc6444d23995ca62b62b17f4853691395a231/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1479,
@@ -5902,7 +5902,7 @@
       "description": "\u003cp\u003eAgent template\u003c/p\u003e\n",
       "command": "agent@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t agent@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/a5ac52ff101af01553487e997848cf6f82e2432d/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/004cc6444d23995ca62b62b17f4853691395a231/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1479,
@@ -5913,7 +5913,7 @@
       "description": "\u003cp\u003eCLI template\u003c/p\u003e\n",
       "command": "cli@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t cli@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/a5ac52ff101af01553487e997848cf6f82e2432d/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/004cc6444d23995ca62b62b17f4853691395a231/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1479,
@@ -5924,7 +5924,7 @@
       "description": "\u003cp\u003eBasic Hello World template\u003c/p\u003e\n",
       "command": "hello@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t hello@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/a5ac52ff101af01553487e997848cf6f82e2432d/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/004cc6444d23995ca62b62b17f4853691395a231/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1479,
@@ -5935,7 +5935,7 @@
       "description": "\u003cp\u003eBasic kotlin Hello World template\u003c/p\u003e\n",
       "command": "hello.kt@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t hello.kt@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/a5ac52ff101af01553487e997848cf6f82e2432d/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/004cc6444d23995ca62b62b17f4853691395a231/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1479,
@@ -5946,7 +5946,7 @@
       "description": "\u003cp\u003eBasic groovy Hello World template\u003c/p\u003e\n",
       "command": "hello.groovy@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t hello.groovy@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/a5ac52ff101af01553487e997848cf6f82e2432d/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/004cc6444d23995ca62b62b17f4853691395a231/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1479,
@@ -5957,7 +5957,7 @@
       "description": "\u003cp\u003eBasic markdown readme template\u003c/p\u003e\n",
       "command": "readme.md@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t readme.md@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/a5ac52ff101af01553487e997848cf6f82e2432d/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/004cc6444d23995ca62b62b17f4853691395a231/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1479,
@@ -5968,7 +5968,7 @@
       "description": "\u003cp\u003eQuarkus CLI template\u003c/p\u003e\n",
       "command": "qcli@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t qcli@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/a5ac52ff101af01553487e997848cf6f82e2432d/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/004cc6444d23995ca62b62b17f4853691395a231/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1479,
@@ -5979,7 +5979,7 @@
       "description": "\u003cp\u003eQuarkus Metrics template\u003c/p\u003e\n",
       "command": "qmetrics@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t qmetrics@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/a5ac52ff101af01553487e997848cf6f82e2432d/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/004cc6444d23995ca62b62b17f4853691395a231/src/main/resources/jbang-catalog.json"
     },
     {
       "stars": 1479,
@@ -5990,10 +5990,10 @@
       "description": "\u003cp\u003eQuarkus REST template\u003c/p\u003e\n",
       "command": "qrest@jbangdev/jbang~src/main/resources",
       "fullcommand": "jbang init -t qrest@jbangdev/jbang~src/main/resources",
-      "link": "https://github.com/jbangdev/jbang/blob/a5ac52ff101af01553487e997848cf6f82e2432d/src/main/resources/jbang-catalog.json"
+      "link": "https://github.com/jbangdev/jbang/blob/004cc6444d23995ca62b62b17f4853691395a231/src/main/resources/jbang-catalog.json"
     },
     {
-      "stars": 1300,
+      "stars": 1302,
       "icon_url": "https://avatars.githubusercontent.com/u/4430336?v\u003d4",
       "repoOwner": "oracle",
       "repoName": "graalpython",
@@ -6004,7 +6004,7 @@
       "link": "https://github.com/oracle/graalpython/blob/f8f4e1ef3fd091cdc2c91b5868d307d12f8b4203/jbang-catalog.json"
     },
     {
-      "stars": 1300,
+      "stars": 1302,
       "icon_url": "https://avatars.githubusercontent.com/u/4430336?v\u003d4",
       "repoOwner": "oracle",
       "repoName": "graalpython",
@@ -6136,7 +6136,7 @@
       "link": "https://github.com/worldline/learning-kotlin/blob/f238e6e5dcc34da4a95e5f04e5ae8122c6392df1/jbang-catalog.json"
     },
     {
-      "stars": 12,
+      "stars": 13,
       "icon_url": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
       "repoOwner": "quarkiverse",
       "repoName": "quarkus-mcp-servers",
