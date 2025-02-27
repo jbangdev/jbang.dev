@@ -16,7 +16,7 @@
 - name: GraalVM Community
   percentage: 4.4
 - name: Microsoft
-  percentage: 1.8
+  percentage: 1.7
 - name: AdoptOpenJDK
   percentage: 1.6
 - name: Arch Linux
@@ -43,10 +43,10 @@
   percentage: 0.1
 - name: OpenLogic-OpenJDK
   percentage: 0.1
+- name: SAP SE
+  percentage: 0.1
 - name: MacPorts
   percentage: 0.1
-- name: SAP SE
-  percentage: 0.0
 - name: Void
   percentage: 0.0
 - name: Alibaba
