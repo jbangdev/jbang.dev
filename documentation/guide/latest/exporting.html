@@ -242,6 +242,9 @@
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="cli/jbang-info-classpath.html">classpath</a>
   </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-info-jar.html">jar</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="3">
@@ -274,6 +277,21 @@
   </li>
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="cli/jbang-export-mavenrepo.html">mavenrepo</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-export-native.html">native</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-export-fatjar.html">fatjar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-export-jlink.html">jlink</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#jbang-export-gradle.adoc">gradle</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#jbang-export-maven.adoc">maven</a>
   </li>
 </ul>
   </li>
@@ -360,6 +378,9 @@ for you to use directly.</p>
 jar use <code>jbang export portable &lt;script&gt;</code> and the dependent jars will be put in <code>lib</code> directory and
 generated jar will have relative references to the jars in the <code>lib</code> folder.</p>
 </div>
+<div class="paragraph">
+<p>You can also use <code>jbang export gradle|maven &lt;script&gt;</code> to export the set of the script, its additional sources and resources, along with their dependencies, to a Gradle or Maven project, allowing you to proceed with full-scale development in your favorite IDE.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -393,6 +414,128 @@ install:
 </div>
 <div class="paragraph">
 <p>You can read more about how jitpack handle builds at <a href="https://jitpack.io/docs/BUILDING/" class="bare">https://jitpack.io/docs/BUILDING/</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="exporting-as-a-project"><a class="anchor" href="#exporting-as-a-project"></a>Exporting as a project</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you want to transition your developed script to a full-scale Java project, you can use <code>jbang export gradle|maven &lt;script&gt;</code> to export it as a Gradle or Maven project. If you have specified multiple sources or resources using <code>//SOURCES</code> or <code>//FILES</code> in the script, they will also be exported. Tags such as <code>//JAVA</code>, <code>//DEPS</code>, <code>//REPOS</code>, <code>//GAV</code>, and <code>//DESCRIPTION</code> will also be reflected in the exported <code>build.gradle</code> or <code>pom.xml</code>.</p>
+</div>
+<div class="paragraph">
+<p>Unless explicitly specified via command options or tags, the GAV of the exported project defaults to <code>org.example:&lt;script name&gt;:999-SNAPSHOT</code>.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s say you want to export the following <code>hello.java</code> to a project:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">///usr/bin/env jbang "$0" "$@" ; exit $?
+
+//SOURCES model/Message.java
+//FILES application.properties
+//DEPS org.slf4j:slf4j-simple:2.0.17
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import model.Message;
+
+public class hello {
+    private static final Logger log = LoggerFactory.getLogger(hello.class);
+
+    public static void main(String... args) {
+        log.info("{}", new Message());
+    }
+}</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="to-a-gradle-project"><a class="anchor" href="#to-a-gradle-project"></a>To a Gradle project</h3>
+<div class="paragraph">
+<p>You can export the script to a Gradle project with the GAV <code>org.acme:myapp:1.0.0-SNAPSHOT</code> as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jbang export gradle --group org.acme --artifact myapp --version 1.0.0-SNAPSHOT hello.java</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The generated project would look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">hello
+├── build.gradle
+└── src
+    └── main
+        ├── java
+        │   ├── model
+        │   │   └── Message.java
+        │   └── org
+        │       └── acme
+        │           └── myapp
+        │               └── hello.java
+        └── resources
+            └── application.properties</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>build.gradle</code> file would include the following dependencies:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">dependencies {
+    implementation 'org.slf4j:slf4j-simple:2.0.17'
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="to-a-maven-project"><a class="anchor" href="#to-a-maven-project"></a>To a Maven project</h3>
+<div class="paragraph">
+<p>You can export the script to a Maven project with the GAV <code>org.acme:myapp:1.0.0-SNAPSHOT</code> as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jbang export maven --group org.acme --artifact myapp --version 1.0.0-SNAPSHOT hello.java</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The generated project would look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">hello
+├── pom.xml
+└── src
+    └── main
+        ├── java
+        │   ├── model
+        │   │   └── Message.java
+        │   └── org
+        │       └── acme
+        │           └── myapp
+        │               └── hello.java
+        └── resources
+            └── application.properties</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>pom.xml</code> file would include the following dependencies:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+        &lt;artifactId&gt;slf4j-simple&lt;/artifactId&gt;
+        &lt;version&gt;2.0.17&lt;/version&gt;
+        &lt;scope&gt;compile&lt;/scope&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+</div>
 </div>
 </div>
 </div>

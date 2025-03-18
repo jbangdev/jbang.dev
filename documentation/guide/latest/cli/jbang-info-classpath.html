@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>jbang-info-classpath(1) :: JBang</title>
     <link rel="prev" href="jbang-info-tools.html">
-    <link rel="next" href="jbang-app.html">
+    <link rel="next" href="jbang-info-jar.html">
     <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
@@ -242,6 +242,9 @@
   <li class="nav-item is-current-page" data-depth="4">
     <a class="nav-link" href="jbang-info-classpath.html">classpath</a>
   </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-info-jar.html">jar</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="3">
@@ -274,6 +277,21 @@
   </li>
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="jbang-export-mavenrepo.html">mavenrepo</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-native.html">native</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-fatjar.html">fatjar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-jlink.html">jlink</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#jbang-export-gradle.adoc">gradle</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#jbang-export-maven.adoc">maven</a>
   </li>
 </ul>
   </li>
@@ -354,16 +372,20 @@
 <h1 class="page">jbang-info-classpath(1)</h1>
 <h2 id="_name">Name</h2>
 <div class="sectionbody">
-<p>jbang-info-classpath - Prints classpath used for this application using operating system specific path separation.</p>
+<p>jbang-info-classpath - Prints class-path used for this application using operating system specific path separation.</p>
 </div>
 <div class="sect1">
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>jbang info classpath</strong> <strong>-o</strong> [<strong>-h</strong>] <strong>--fresh</strong> [<strong>--insecure</strong>] [<strong>--jsh</strong>] <strong>--quiet</strong> <strong>--verbose</strong>
-                     [<strong>--config</strong>=<em>&lt;config&gt;</em>] [<strong>--cp</strong>=<em>&lt;classpaths&gt;</em>]&#8230;&#8203;
-                     [<strong>-D</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203; [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203;
-                     [<strong>--repos</strong>=<em>&lt;repositories&gt;</em>]&#8230;&#8203; <em>&lt;scriptOrFile&gt;</em></p>
+<p><strong>jbang info classpath</strong> <strong>-o</strong> [<strong>-h</strong>] [<strong>--deps-only</strong>] <strong>--fresh</strong> [<strong>--insecure</strong>] [<strong>--itr</strong>] [<strong>--jsh</strong>]
+                     <strong>--quiet</strong> <strong>--verbose</strong> [<strong>--module</strong>[=<em>&lt;module&gt;</em>]]
+                     [<strong>--build-dir</strong>=<em>&lt;buildDir&gt;</em>] [<strong>--catalog</strong>=<em>&lt;catalog&gt;</em>]
+                     [<strong>--config</strong>=<em>&lt;config&gt;</em>] [<strong>--source-type</strong>=<em>&lt;forceType&gt;</em>]
+                     [<strong>--cp</strong>=<em>&lt;classpaths&gt;</em>]&#8230;&#8203; [<strong>-D</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203;
+                     [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203; [<strong>--files</strong>=<em>&lt;resources&gt;</em>]&#8230;&#8203;
+                     [<strong>--repos</strong>=<em>&lt;repositories&gt;</em>]&#8230;&#8203; [<strong>-s</strong>=<em>&lt;sources&gt;</em>]&#8230;&#8203;
+                     [<em>&lt;scriptOrFile&gt;</em>]</p>
 </div>
 </div>
 </div>
@@ -371,7 +393,7 @@
 <h2 id="_description"><a class="anchor" href="#_description"></a>Description</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Prints classpath used for this application using operating system specific path separation.</p>
+<p>Prints class-path used for this application using operating system specific path separation.</p>
 </div>
 </div>
 </div>
@@ -380,6 +402,14 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
+<dt class="hdlist1"><strong>--build-dir</strong>=<em>&lt;buildDir&gt;</em></dt>
+<dd>
+<p>Use given directory for build results</p>
+</dd>
+<dt class="hdlist1"><strong>--catalog</strong>=<em>&lt;catalog&gt;</em></dt>
+<dd>
+<p>Path to catalog file to be used instead of the default</p>
+</dd>
 <dt class="hdlist1"><strong>--config</strong>=<em>&lt;config&gt;</em></dt>
 <dd>
 <p>Path to config file to be used instead of the default</p>
@@ -396,6 +426,14 @@
 <dd>
 <p>Add additional dependencies (Use commas to separate them).</p>
 </dd>
+<dt class="hdlist1"><strong>--deps-only</strong></dt>
+<dd>
+<p>Only include the dependencies in the output, not the application jar itself</p>
+</dd>
+<dt class="hdlist1"><strong>--files</strong>=<em>&lt;resources&gt;</em></dt>
+<dd>
+<p>Add additional files.</p>
+</dd>
 <dt class="hdlist1"><strong>--fresh</strong></dt>
 <dd>
 <p>Make sure we use fresh (i.e. non-cached) resources.</p>
@@ -408,9 +446,17 @@
 <dd>
 <p>Enable insecure trust of all SSL certificates.</p>
 </dd>
+<dt class="hdlist1"><strong>--itr, --ignore-transitive-repositories</strong></dt>
+<dd>
+<p>Ignore remote repositories found in transitive dependencies</p>
+</dd>
 <dt class="hdlist1"><strong>--jsh</strong></dt>
 <dd>
-<p>Force input to be interpreted with jsh/jshell</p>
+<p>Force input to be interpreted with jsh/jshell. Deprecated: use '--source-type jshell'</p>
+</dd>
+<dt class="hdlist1"><strong>--module</strong>[=<em>&lt;module&gt;</em>]</dt>
+<dd>
+<p>Treat resource as a module. Optionally with the given module name</p>
 </dd>
 <dt class="hdlist1"><strong>-o</strong>, <strong>--offline</strong></dt>
 <dd>
@@ -423,6 +469,14 @@
 <dt class="hdlist1"><strong>--repos</strong>=<em>&lt;repositories&gt;</em></dt>
 <dd>
 <p>Add additional repositories.</p>
+</dd>
+<dt class="hdlist1"><strong>-s</strong>, <strong>--sources</strong>=<em>&lt;sources&gt;</em></dt>
+<dd>
+<p>Add additional sources.</p>
+</dd>
+<dt class="hdlist1"><strong>--source-type</strong>=<em>&lt;forceType&gt;</em></dt>
+<dd>
+<p>Force input to be interpreted as the given type. Can be: java, jshell, groovy, kotlin, or markdown</p>
 </dd>
 <dt class="hdlist1"><strong>--verbose</strong></dt>
 <dd>
@@ -437,9 +491,9 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><em>&lt;scriptOrFile&gt;</em></dt>
+<dt class="hdlist1">[<em>&lt;scriptOrFile&gt;</em>]</dt>
 <dd>
-<p>A file with java code or if named .jsh will be run with jshell</p>
+<p>A reference to a source file</p>
 </dd>
 </dl>
 </div>
@@ -447,7 +501,7 @@
 </div>
 <nav class="pagination">
   <span class="prev"><a href="jbang-info-tools.html">tools</a></span>
-  <span class="next"><a href="jbang-app.html">app</a></span>
+  <span class="next"><a href="jbang-info-jar.html">jar</a></span>
 </nav>
 </article>
   </div>

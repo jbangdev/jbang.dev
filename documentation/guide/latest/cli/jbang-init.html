@@ -242,6 +242,9 @@
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="jbang-info-classpath.html">classpath</a>
   </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-info-jar.html">jar</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="3">
@@ -274,6 +277,21 @@
   </li>
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="jbang-export-mavenrepo.html">mavenrepo</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-native.html">native</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-fatjar.html">fatjar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-jlink.html">jlink</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#jbang-export-gradle.adoc">gradle</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#jbang-export-maven.adoc">maven</a>
   </li>
 </ul>
   </li>
@@ -359,9 +377,9 @@
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>jbang init</strong> <strong>-o</strong> [<strong>-h</strong>] [<strong>--force</strong>] <strong>--fresh</strong> [<strong>--insecure</strong>] [<strong>--jsh</strong>] <strong>--quiet</strong> <strong>--verbose</strong>
+<p><strong>jbang init</strong> <strong>-o</strong> [<strong>-h</strong>] [<strong>--edit</strong>] [<strong>--force</strong>] <strong>--fresh</strong> [<strong>--insecure</strong>] <strong>--quiet</strong> <strong>--verbose</strong>
            [<strong>--config</strong>=<em>&lt;config&gt;</em>] [<strong>-t</strong>=<em>&lt;initTemplate&gt;</em>] [<strong>-D</strong>=<em>&lt;String=Object&gt;</em>]&#8230;&#8203;
-           [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203; <em>&lt;scriptOrFile&gt;</em></p>
+           [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203; <em>scriptOrFile</em> [<em>params</em>&#8230;&#8203;]</p>
 </div>
 </div>
 </div>
@@ -390,6 +408,10 @@
 <dd>
 <p>Add additional dependencies (Use commas to separate them).</p>
 </dd>
+<dt class="hdlist1"><strong>--edit</strong></dt>
+<dd>
+<p>Open editor on the generated file(s)</p>
+</dd>
 <dt class="hdlist1"><strong>--force</strong></dt>
 <dd>
 <p>Force overwrite of existing files</p>
@@ -405,10 +427,6 @@
 <dt class="hdlist1"><strong>--insecure</strong></dt>
 <dd>
 <p>Enable insecure trust of all SSL certificates.</p>
-</dd>
-<dt class="hdlist1"><strong>--jsh</strong></dt>
-<dd>
-<p>Force input to be interpreted with jsh/jshell</p>
 </dd>
 <dt class="hdlist1"><strong>-o</strong>, <strong>--offline</strong></dt>
 <dd>
@@ -435,9 +453,13 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><em>&lt;scriptOrFile&gt;</em></dt>
+<dt class="hdlist1"><em>scriptOrFile</em></dt>
 <dd>
-<p>A file with java code or if named .jsh will be run with jshell</p>
+<p>A file or URL to a Java code file</p>
+</dd>
+<dt class="hdlist1">[<em>params</em>&#8230;&#8203;]</dt>
+<dd>
+<p>Parameters to pass on to the generation</p>
 </dd>
 </dl>
 </div>

@@ -242,6 +242,9 @@
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="jbang-info-classpath.html">classpath</a>
   </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-info-jar.html">jar</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="3">
@@ -274,6 +277,21 @@
   </li>
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="jbang-export-mavenrepo.html">mavenrepo</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-native.html">native</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-fatjar.html">fatjar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-jlink.html">jlink</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#jbang-export-gradle.adoc">gradle</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#jbang-export-maven.adoc">maven</a>
   </li>
 </ul>
   </li>
@@ -360,12 +378,20 @@
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>jbang alias add</strong> <strong>-o</strong> [<strong>-gh</strong>] <strong>--fresh</strong> <strong>--quiet</strong> <strong>--verbose</strong> [<strong>--config</strong>=<em>&lt;config&gt;</em>]
-                [<strong>-d</strong>=<em>&lt;description&gt;</em>] [<strong>-f</strong>=<em>&lt;catalogFile&gt;</em>] [<strong>-j</strong>=<em>&lt;javaVersion&gt;</em>]
-                [<strong>-m</strong>=<em>&lt;mainClass&gt;</em>] [<strong>--name</strong>=<em>&lt;name&gt;</em>] [<strong>--cp</strong>=<em>&lt;classpaths&gt;</em>]&#8230;&#8203;
-                [<strong>-D</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203; [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203;
-                [<strong>--java-options</strong>=<em>&lt;javaRuntimeOptions&gt;</em>]&#8230;&#8203;
-                [<strong>--repos</strong>=<em>&lt;repositories&gt;</em>]&#8230;&#8203; <em>scriptOrFile</em> [<em>params</em>&#8230;&#8203;]</p>
+<p><strong>jbang alias add</strong> <strong>-o</strong> [<strong>-ghin</strong>] [<strong>--[no-]cds</strong>] [<strong>--ea</strong>] [<strong>--enable-preview</strong>] [<strong>--esa</strong>]
+                [<strong>--force</strong>] <strong>--fresh</strong> [<strong>--insecure</strong>] [<strong>--[no-]integrations</strong>] [<strong>--itr</strong>]
+                [<strong>--jsh</strong>] <strong>--quiet</strong> <strong>--verbose</strong> [<strong>--jfr</strong>[=<em>&lt;flightRecorderString&gt;</em>]]
+                [<strong>--module</strong>[=<em>&lt;module&gt;</em>]] [<strong>-d</strong>[=<em>&lt;String=String&gt;</em>]]&#8230;&#8203;
+                [<strong>--catalog</strong>=<em>&lt;catalog&gt;</em>] [<strong>--config</strong>=<em>&lt;config&gt;</em>]
+                [<strong>--description</strong>=<em>&lt;description&gt;</em>] [<strong>-f</strong>=<em>&lt;catalogFile&gt;</em>]
+                [<strong>-j</strong>=<em>&lt;javaVersion&gt;</em>] [<strong>-m</strong>=<em>&lt;main&gt;</em>] [<strong>--name</strong>=<em>&lt;name&gt;</em>]
+                [<strong>--source-type</strong>=<em>&lt;forceType&gt;</em>] [<strong>-C</strong>=<em>&lt;compileOptions&gt;</em>]&#8230;&#8203;
+                [<strong>--cp</strong>=<em>&lt;classpaths&gt;</em>]&#8230;&#8203; [<strong>-D</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203;
+                [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203; [<strong>--files</strong>=<em>&lt;resources&gt;</em>]&#8230;&#8203;
+                [<strong>--javaagent</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203;
+                [<strong>--manifest</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203; [<strong>-N</strong>=<em>&lt;nativeOptions&gt;</em>]&#8230;&#8203;
+                [<strong>-R</strong>=<em>&lt;javaRuntimeOptions&gt;</em>]&#8230;&#8203; [<strong>--repos</strong>=<em>&lt;repositories&gt;</em>]&#8230;&#8203;
+                [<strong>-s</strong>=<em>&lt;sources&gt;</em>]&#8230;&#8203; [<em>&lt;scriptOrFile&gt;</em>] [<em>params</em>&#8230;&#8203;]</p>
 </div>
 </div>
 </div>
@@ -382,6 +408,18 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
+<dt class="hdlist1"><strong>-C</strong>, <strong>--compile-option</strong>=<em>&lt;compileOptions&gt;</em></dt>
+<dd>
+<p>Options to pass to the compiler</p>
+</dd>
+<dt class="hdlist1"><strong>--catalog</strong>=<em>&lt;catalog&gt;</em></dt>
+<dd>
+<p>Path to catalog file to be used instead of the default</p>
+</dd>
+<dt class="hdlist1"><strong>--[no-]cds</strong></dt>
+<dd>
+<p>If specified Class Data Sharing (CDS) will be used for building and running (requires Java 13+)</p>
+</dd>
 <dt class="hdlist1"><strong>--config</strong>=<em>&lt;config&gt;</em></dt>
 <dd>
 <p>Path to config file to be used instead of the default</p>
@@ -390,9 +428,9 @@
 <dd>
 <p>Add class path entries.</p>
 </dd>
-<dt class="hdlist1"><strong>-d</strong>, <strong>--description</strong>=<em>&lt;description&gt;</em></dt>
+<dt class="hdlist1"><strong>-d</strong>, <strong>--debug</strong>[=<em>&lt;String=String&gt;</em>]</dt>
 <dd>
-<p>A description for the alias</p>
+<p>Launch with java debug enabled. Set host/port or provide key/value list of JPDA options (default: null)</p>
 </dd>
 <dt class="hdlist1"><strong>-D</strong>, <em>&lt;String=String&gt;</em></dt>
 <dd>
@@ -402,9 +440,33 @@
 <dd>
 <p>Add additional dependencies (Use commas to separate them).</p>
 </dd>
+<dt class="hdlist1"><strong>--description</strong>=<em>&lt;description&gt;</em></dt>
+<dd>
+<p>A description for the alias</p>
+</dd>
+<dt class="hdlist1"><strong>--ea, --enableassertions</strong></dt>
+<dd>
+<p>Enable assertions</p>
+</dd>
+<dt class="hdlist1"><strong>--enable-preview</strong></dt>
+<dd>
+<p>Activate Java preview features</p>
+</dd>
+<dt class="hdlist1"><strong>--esa, --enablesystemassertions</strong></dt>
+<dd>
+<p>Enable system assertions</p>
+</dd>
 <dt class="hdlist1"><strong>-f</strong>, <strong>--file</strong>=<em>&lt;catalogFile&gt;</em></dt>
 <dd>
 <p>Path to the catalog file to use</p>
+</dd>
+<dt class="hdlist1"><strong>--files</strong>=<em>&lt;resources&gt;</em></dt>
+<dd>
+<p>Add additional files.</p>
+</dd>
+<dt class="hdlist1"><strong>--force</strong></dt>
+<dd>
+<p>Force overwriting of existing alias</p>
 </dd>
 <dt class="hdlist1"><strong>--fresh</strong></dt>
 <dd>
@@ -418,17 +480,51 @@
 <dd>
 <p>Display help/info. Use 'jbang &lt;command&gt; -h' for detailed usage.</p>
 </dd>
+<dt class="hdlist1"><strong>-i</strong>, <strong>--interactive</strong></dt>
+<dd>
+<p>Activate interactive mode</p>
+</dd>
+<dt class="hdlist1"><strong>--insecure</strong></dt>
+<dd>
+<p>Enable insecure trust of all SSL certificates.</p>
+</dd>
+<dt class="hdlist1"><strong>--[no-]integrations</strong></dt>
+<dd>
+<p>Enable integration execution (default: true)</p>
+</dd>
+<dt class="hdlist1"><strong>--itr, --ignore-transitive-repositories</strong></dt>
+<dd>
+<p>Ignore remote repositories found in transitive dependencies</p>
+</dd>
 <dt class="hdlist1"><strong>-j</strong>, <strong>--java</strong>=<em>&lt;javaVersion&gt;</em></dt>
 <dd>
-<p>JDK version to use for running the alias.</p>
+<p>JDK version to use for running the script.</p>
 </dd>
-<dt class="hdlist1"><strong>--java-options</strong>=<em>&lt;javaRuntimeOptions&gt;</em></dt>
+<dt class="hdlist1"><strong>--javaagent</strong>=<em>&lt;String=String&gt;</em></dt>
+<dt class="hdlist1"><strong>--jfr</strong>[=<em>&lt;flightRecorderString&gt;</em>]</dt>
 <dd>
-<p>A Java runtime option</p>
+<p>Launch with Java Flight Recorder enabled.</p>
 </dd>
-<dt class="hdlist1"><strong>-m</strong>, <strong>--main</strong>=<em>&lt;mainClass&gt;</em></dt>
+<dt class="hdlist1"><strong>--jsh</strong></dt>
+<dd>
+<p>Force input to be interpreted with jsh/jshell. Deprecated: use '--source-type jshell'</p>
+</dd>
+<dt class="hdlist1"><strong>-m</strong>, <strong>--main</strong>=<em>&lt;main&gt;</em></dt>
 <dd>
 <p>Main class to use when running. Used primarily for running jar&#8217;s.</p>
+</dd>
+<dt class="hdlist1"><strong>--manifest</strong>=<em>&lt;String=String&gt;</em></dt>
+<dt class="hdlist1"><strong>--module</strong>[=<em>&lt;module&gt;</em>]</dt>
+<dd>
+<p>Treat resource as a module. Optionally with the given module name</p>
+</dd>
+<dt class="hdlist1"><strong>-n</strong>, <strong>--native</strong></dt>
+<dd>
+<p>Build using native-image</p>
+</dd>
+<dt class="hdlist1"><strong>-N</strong>, <strong>--native-option</strong>=<em>&lt;nativeOptions&gt;</em></dt>
+<dd>
+<p>Options to pass to the native image tool</p>
 </dd>
 <dt class="hdlist1"><strong>--name</strong>=<em>&lt;name&gt;</em></dt>
 <dd>
@@ -442,9 +538,21 @@
 <dd>
 <p>jbang will be quiet, only print when error occurs.</p>
 </dd>
+<dt class="hdlist1"><strong>-R</strong>, <strong>--java-options, --runtime-option</strong>=<em>&lt;javaRuntimeOptions&gt;</em></dt>
+<dd>
+<p>Options to pass to the Java runtime</p>
+</dd>
 <dt class="hdlist1"><strong>--repos</strong>=<em>&lt;repositories&gt;</em></dt>
 <dd>
 <p>Add additional repositories.</p>
+</dd>
+<dt class="hdlist1"><strong>-s</strong>, <strong>--sources</strong>=<em>&lt;sources&gt;</em></dt>
+<dd>
+<p>Add additional sources.</p>
+</dd>
+<dt class="hdlist1"><strong>--source-type</strong>=<em>&lt;forceType&gt;</em></dt>
+<dd>
+<p>Force input to be interpreted as the given type. Can be: java, jshell, groovy, kotlin, or markdown</p>
 </dd>
 <dt class="hdlist1"><strong>--verbose</strong></dt>
 <dd>
@@ -459,9 +567,9 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><em>scriptOrFile</em></dt>
+<dt class="hdlist1">[<em>&lt;scriptOrFile&gt;</em>]</dt>
 <dd>
-<p>A file or URL to a Java code file</p>
+<p>A reference to a source file</p>
 </dd>
 <dt class="hdlist1">[<em>params</em>&#8230;&#8203;]</dt>
 <dd>

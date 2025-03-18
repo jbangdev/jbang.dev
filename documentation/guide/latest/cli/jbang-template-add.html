@@ -242,6 +242,9 @@
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="jbang-info-classpath.html">classpath</a>
   </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-info-jar.html">jar</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="3">
@@ -274,6 +277,21 @@
   </li>
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="jbang-export-mavenrepo.html">mavenrepo</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-native.html">native</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-fatjar.html">fatjar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-jlink.html">jlink</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#jbang-export-gradle.adoc">gradle</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#jbang-export-maven.adoc">maven</a>
   </li>
 </ul>
   </li>
@@ -360,9 +378,9 @@
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>jbang template add</strong> <strong>-o</strong> [<strong>-gh</strong>] <strong>--fresh</strong> <strong>--quiet</strong> <strong>--verbose</strong> [<strong>--config</strong>=<em>&lt;config&gt;</em>]
-                   [<strong>-d</strong>=<em>&lt;description&gt;</em>] [<strong>-f</strong>=<em>&lt;catalogFile&gt;</em>] [<strong>--name</strong>=<em>&lt;name&gt;</em>] [<strong>--property</strong>=<em>&lt;property&gt;</em>&#8230;&#8203;]
-                   <em>files</em>&#8230;&#8203;</p>
+<p><strong>jbang template add</strong> <strong>-o</strong> [<strong>-gh</strong>] [<strong>--force</strong>] <strong>--fresh</strong> [<strong>--insecure</strong>] <strong>--quiet</strong> <strong>--verbose</strong>
+                   [<strong>--config</strong>=<em>&lt;config&gt;</em>] [<strong>-d</strong>=<em>&lt;description&gt;</em>] [<strong>-f</strong>=<em>&lt;catalogFile&gt;</em>]
+                   [<strong>--name</strong>=<em>&lt;name&gt;</em>] [<strong>-P</strong>=<em>&lt;properties&gt;</em>]&#8230;&#8203; <em>files</em>&#8230;&#8203;</p>
 </div>
 </div>
 </div>
@@ -391,6 +409,10 @@
 <dd>
 <p>Path to the catalog file to use</p>
 </dd>
+<dt class="hdlist1"><strong>--force</strong></dt>
+<dd>
+<p>Force overwriting of existing template</p>
+</dd>
 <dt class="hdlist1"><strong>--fresh</strong></dt>
 <dd>
 <p>Make sure we use fresh (i.e. non-cached) resources.</p>
@@ -403,6 +425,10 @@
 <dd>
 <p>Display help/info. Use 'jbang &lt;command&gt; -h' for detailed usage.</p>
 </dd>
+<dt class="hdlist1"><strong>--insecure</strong></dt>
+<dd>
+<p>Enable insecure trust of all SSL certificates.</p>
+</dd>
 <dt class="hdlist1"><strong>--name</strong>=<em>&lt;name&gt;</em></dt>
 <dd>
 <p>A name for the template</p>
@@ -411,6 +437,10 @@
 <dd>
 <p>Work offline. Fail-fast if dependencies are missing. No connections will be attempted</p>
 </dd>
+<dt class="hdlist1"><strong>-P</strong>, <strong>--property</strong>=<em>&lt;properties&gt;</em></dt>
+<dd>
+<p>Template property</p>
+</dd>
 <dt class="hdlist1"><strong>--quiet</strong></dt>
 <dd>
 <p>jbang will be quiet, only print when error occurs.</p>
@@ -418,10 +448,6 @@
 <dt class="hdlist1"><strong>--verbose</strong></dt>
 <dd>
 <p>jbang will be verbose on what it does.</p>
-</dd>
-<dt class="hdlist1"><strong>-P</strong>, <strong>--property</strong>=<em>&lt;property-name:[property-description]:[default-value]&gt;</em></dt>
-<dd>
-<p>Specifying property for the newly created or existing template.</p>
 </dd>
 </dl>
 </div>

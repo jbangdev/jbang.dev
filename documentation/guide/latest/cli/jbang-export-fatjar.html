@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>jbang-trust-remove(1) :: JBang</title>
-    <link rel="prev" href="jbang-trust-list.html">
-    <link rel="next" href="jbang-cache.html">
+    <title>jbang-export-fatjar(1) :: JBang</title>
+    <link rel="prev" href="jbang-export-native.html">
+    <link rel="next" href="jbang-export-jlink.html">
     <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
@@ -179,7 +179,7 @@
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="jbang-trust-list.html">list</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="4">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="jbang-trust-remove.html">remove</a>
   </li>
 </ul>
@@ -281,7 +281,7 @@
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="jbang-export-native.html">native</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item is-current-page" data-depth="4">
     <a class="nav-link" href="jbang-export-fatjar.html">fatjar</a>
   </li>
   <li class="nav-item" data-depth="4">
@@ -358,27 +358,35 @@
     <li><a href="../index.html">JBang</a></li>
     <li>CLI Reference</li>
     <li><a href="jbang.html">jbang</a></li>
-    <li><a href="jbang-trust.html">trust</a></li>
-    <li><a href="jbang-trust-remove.html">remove</a></li>
+    <li><a href="jbang-export.html">export</a></li>
+    <li><a href="jbang-export-fatjar.html">fatjar</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/jbangdev/jbang/edit/main/docs/modules/cli/pages/jbang-trust-remove.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/jbangdev/jbang/edit/main/docs/modules/cli/pages/jbang-export-fatjar.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">jbang-trust-remove(1)</h1>
+<h1 class="page">jbang-export-fatjar(1)</h1>
 <h2 id="_name">Name</h2>
 <div class="sectionbody">
-<p>jbang-trust-remove - Remove trust domains.</p>
+<p>jbang-export-fatjar - Exports an executable jar with all necessary dependencies included inside</p>
 </div>
 <div class="sect1">
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>jbang trust remove</strong> <strong>-o</strong> <strong>--fresh</strong> <strong>--quiet</strong> <strong>--verbose</strong> <em>&lt;arg0&gt;</em>&#8230;&#8203;</p>
+<p><strong>jbang export fatjar</strong> <strong>-o</strong> [<strong>-h</strong>] [<strong>--force</strong>] <strong>--fresh</strong> [<strong>--insecure</strong>] [<strong>--[no-]</strong>
+             *       integrations*] [<strong>--itr</strong>] [<strong>--jsh</strong>] <strong>--quiet</strong> <strong>--verbose</strong> [<strong>--module</strong>
+                    [=<em>&lt;module&gt;</em>]] [<strong>--catalog</strong>=<em>&lt;catalog&gt;</em>] [<strong>--config</strong>=<em>&lt;config&gt;</em>]
+                    [<strong>-j</strong>=<em>&lt;javaVersion&gt;</em>] [<strong>-m</strong>=<em>&lt;main&gt;</em>] [<strong>-O</strong>=<em>&lt;outputFile&gt;</em>]
+                    [<strong>--source-type</strong>=<em>&lt;forceType&gt;</em>] [<strong>-C</strong>=<em>&lt;compileOptions&gt;</em>]&#8230;&#8203;
+                    [<strong>--cp</strong>=<em>&lt;classpaths&gt;</em>]&#8230;&#8203; [<strong>-D</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203;
+                    [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203; [<strong>--files</strong>=<em>&lt;resources&gt;</em>]&#8230;&#8203;
+                    [<strong>--manifest</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203; [<strong>--repos</strong>=<em>&lt;repositories&gt;</em>]&#8230;&#8203;
+                    [<strong>-s</strong>=<em>&lt;sources&gt;</em>]&#8230;&#8203; [<em>&lt;scriptOrFile&gt;</em>]</p>
 </div>
 </div>
 </div>
@@ -386,7 +394,7 @@
 <h2 id="_description"><a class="anchor" href="#_description"></a>Description</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Remove trust domains.</p>
+<p>Exports an executable jar with all necessary dependencies included inside</p>
 </div>
 </div>
 </div>
@@ -395,17 +403,98 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
+<dt class="hdlist1"><strong>-C</strong>, <strong>--compile-option</strong>=<em>&lt;compileOptions&gt;</em></dt>
+<dd>
+<p>Options to pass to the compiler</p>
+</dd>
+<dt class="hdlist1"><strong>--catalog</strong>=<em>&lt;catalog&gt;</em></dt>
+<dd>
+<p>Path to catalog file to be used instead of the default</p>
+</dd>
+<dt class="hdlist1"><strong>--config</strong>=<em>&lt;config&gt;</em></dt>
+<dd>
+<p>Path to config file to be used instead of the default</p>
+</dd>
+<dt class="hdlist1"><strong>--cp, --class-path</strong>=<em>&lt;classpaths&gt;</em></dt>
+<dd>
+<p>Add class path entries.</p>
+</dd>
+<dt class="hdlist1"><strong>-D</strong>, <em>&lt;String=String&gt;</em></dt>
+<dd>
+<p>set a system property</p>
+</dd>
+<dt class="hdlist1"><strong>--deps</strong>=<em>&lt;dependencies&gt;</em></dt>
+<dd>
+<p>Add additional dependencies (Use commas to separate them).</p>
+</dd>
+<dt class="hdlist1"><strong>--files</strong>=<em>&lt;resources&gt;</em></dt>
+<dd>
+<p>Add additional files.</p>
+</dd>
+<dt class="hdlist1"><strong>--force</strong></dt>
+<dd>
+<p>Force export, i.e. overwrite exported file if already exists</p>
+</dd>
 <dt class="hdlist1"><strong>--fresh</strong></dt>
 <dd>
 <p>Make sure we use fresh (i.e. non-cached) resources.</p>
+</dd>
+<dt class="hdlist1"><strong>-h</strong>, <strong>--help</strong></dt>
+<dd>
+<p>Display help/info. Use 'jbang &lt;command&gt; -h' for detailed usage.</p>
+</dd>
+<dt class="hdlist1"><strong>--insecure</strong></dt>
+<dd>
+<p>Enable insecure trust of all SSL certificates.</p>
+</dd>
+<dt class="hdlist1"><strong>--[no-]integrations</strong></dt>
+<dd>
+<p>Enable integration execution (default: true)</p>
+</dd>
+<dt class="hdlist1"><strong>--itr, --ignore-transitive-repositories</strong></dt>
+<dd>
+<p>Ignore remote repositories found in transitive dependencies</p>
+</dd>
+<dt class="hdlist1"><strong>-j</strong>, <strong>--java</strong>=<em>&lt;javaVersion&gt;</em></dt>
+<dd>
+<p>JDK version to use for running the script.</p>
+</dd>
+<dt class="hdlist1"><strong>--jsh</strong></dt>
+<dd>
+<p>Force input to be interpreted with jsh/jshell. Deprecated: use '--source-type jshell'</p>
+</dd>
+<dt class="hdlist1"><strong>-m</strong>, <strong>--main</strong>=<em>&lt;main&gt;</em></dt>
+<dd>
+<p>Main class to use when running. Used primarily for running jar&#8217;s.</p>
+</dd>
+<dt class="hdlist1"><strong>--manifest</strong>=<em>&lt;String=String&gt;</em></dt>
+<dt class="hdlist1"><strong>--module</strong>[=<em>&lt;module&gt;</em>]</dt>
+<dd>
+<p>Treat resource as a module. Optionally with the given module name</p>
 </dd>
 <dt class="hdlist1"><strong>-o</strong>, <strong>--offline</strong></dt>
 <dd>
 <p>Work offline. Fail-fast if dependencies are missing. No connections will be attempted</p>
 </dd>
+<dt class="hdlist1"><strong>-O</strong>, <strong>--output</strong>=<em>&lt;outputFile&gt;</em></dt>
+<dd>
+<p>The name or path to use for the exported file. If not specified a name will be determined from the original source reference and export flags.</p>
+</dd>
 <dt class="hdlist1"><strong>--quiet</strong></dt>
 <dd>
 <p>jbang will be quiet, only print when error occurs.</p>
+</dd>
+<dt class="hdlist1"><strong>--repos</strong>=<em>&lt;repositories&gt;</em></dt>
+<dd>
+<p>Add additional repositories.</p>
+</dd>
+<dt class="hdlist1"><strong>-s</strong>, <strong>--sources</strong>=<em>&lt;sources&gt;</em></dt>
+<dd>
+<p>Add additional sources.</p>
+</dd>
+<dt class="hdlist1"><strong>--source-type</strong>=<em>&lt;forceType&gt;</em></dt>
+<dd>
+<p>Force input to be interpreted as the given type. Can be: java, jshell, groovy, kotlin, or markdown</p>
 </dd>
 <dt class="hdlist1"><strong>--verbose</strong></dt>
 <dd>
@@ -420,17 +509,17 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><em>&lt;arg0&gt;</em>&#8230;&#8203;</dt>
+<dt class="hdlist1">[<em>&lt;scriptOrFile&gt;</em>]</dt>
 <dd>
-<p>Rules for trusted sources</p>
+<p>A reference to a source file</p>
 </dd>
 </dl>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="jbang-trust-list.html">list</a></span>
-  <span class="next"><a href="jbang-cache.html">cache</a></span>
+  <span class="prev"><a href="jbang-export-native.html">native</a></span>
+  <span class="next"><a href="jbang-export-jlink.html">jlink</a></span>
 </nav>
 </article>
   </div>

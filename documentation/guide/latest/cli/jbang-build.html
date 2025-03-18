@@ -242,6 +242,9 @@
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="jbang-info-classpath.html">classpath</a>
   </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-info-jar.html">jar</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="3">
@@ -274,6 +277,21 @@
   </li>
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="jbang-export-mavenrepo.html">mavenrepo</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-native.html">native</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-fatjar.html">fatjar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-jlink.html">jlink</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#jbang-export-gradle.adoc">gradle</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#jbang-export-maven.adoc">maven</a>
   </li>
 </ul>
   </li>
@@ -359,11 +377,15 @@
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>jbang build</strong> <strong>-o</strong> [<strong>-hn</strong>] [<strong>--[no-]cds</strong>] <strong>--fresh</strong> [<strong>--insecure</strong>] [<strong>--jsh</strong>] <strong>--quiet</strong>
-            <strong>--verbose</strong> [<strong>--catalog</strong>=<em>&lt;catalog&gt;</em>] [<strong>--config</strong>=<em>&lt;config&gt;</em>]
-            [<strong>-j</strong>=<em>&lt;javaVersion&gt;</em>] [<strong>-m</strong>=<em>&lt;main&gt;</em>] [<strong>--cp</strong>=<em>&lt;classpaths&gt;</em>]&#8230;&#8203;
-            [<strong>-D</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203; [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203;
-            [<strong>--repos</strong>=<em>&lt;repositories&gt;</em>]&#8230;&#8203; <em>&lt;scriptOrFile&gt;</em></p>
+<p><strong>jbang build</strong> <strong>-o</strong> [<strong>-hn</strong>] [<strong>--enable-preview</strong>] <strong>--fresh</strong> [<strong>--insecure</strong>] [<strong>--[no-]</strong>
+     *       integrations*] [<strong>--itr</strong>] [<strong>--jsh</strong>] <strong>--quiet</strong> <strong>--verbose</strong> [<strong>--module</strong>
+            [=<em>&lt;module&gt;</em>]] [<strong>--build-dir</strong>=<em>&lt;buildDir&gt;</em>] [<strong>--catalog</strong>=<em>&lt;catalog&gt;</em>]
+            [<strong>--config</strong>=<em>&lt;config&gt;</em>] [<strong>-j</strong>=<em>&lt;javaVersion&gt;</em>] [<strong>-m</strong>=<em>&lt;main&gt;</em>]
+            [<strong>--source-type</strong>=<em>&lt;forceType&gt;</em>] [<strong>-C</strong>=<em>&lt;compileOptions&gt;</em>]&#8230;&#8203;
+            [<strong>--cp</strong>=<em>&lt;classpaths&gt;</em>]&#8230;&#8203; [<strong>-D</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203;
+            [<strong>--deps</strong>=<em>&lt;dependencies&gt;</em>]&#8230;&#8203; [<strong>--files</strong>=<em>&lt;resources&gt;</em>]&#8230;&#8203;
+            [<strong>--manifest</strong>=<em>&lt;String=String&gt;</em>]&#8230;&#8203; [<strong>-N</strong>=<em>&lt;nativeOptions&gt;</em>]&#8230;&#8203;
+            [<strong>--repos</strong>=<em>&lt;repositories&gt;</em>]&#8230;&#8203; [<strong>-s</strong>=<em>&lt;sources&gt;</em>]&#8230;&#8203; [<em>&lt;scriptOrFile&gt;</em>]</p>
 </div>
 </div>
 </div>
@@ -380,13 +402,17 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
+<dt class="hdlist1"><strong>--build-dir</strong>=<em>&lt;buildDir&gt;</em></dt>
+<dd>
+<p>Use given directory for build results</p>
+</dd>
+<dt class="hdlist1"><strong>-C</strong>, <strong>--compile-option</strong>=<em>&lt;compileOptions&gt;</em></dt>
+<dd>
+<p>Options to pass to the compiler</p>
+</dd>
 <dt class="hdlist1"><strong>--catalog</strong>=<em>&lt;catalog&gt;</em></dt>
 <dd>
 <p>Path to catalog file to be used instead of the default</p>
-</dd>
-<dt class="hdlist1"><strong>--[no-]cds</strong></dt>
-<dd>
-<p>If specified Class Data Sharing (CDS) will be used for building and running (requires Java 13+)</p>
 </dd>
 <dt class="hdlist1"><strong>--config</strong>=<em>&lt;config&gt;</em></dt>
 <dd>
@@ -404,6 +430,14 @@
 <dd>
 <p>Add additional dependencies (Use commas to separate them).</p>
 </dd>
+<dt class="hdlist1"><strong>--enable-preview</strong></dt>
+<dd>
+<p>Activate Java preview features</p>
+</dd>
+<dt class="hdlist1"><strong>--files</strong>=<em>&lt;resources&gt;</em></dt>
+<dd>
+<p>Add additional files.</p>
+</dd>
 <dt class="hdlist1"><strong>--fresh</strong></dt>
 <dd>
 <p>Make sure we use fresh (i.e. non-cached) resources.</p>
@@ -416,21 +450,38 @@
 <dd>
 <p>Enable insecure trust of all SSL certificates.</p>
 </dd>
+<dt class="hdlist1"><strong>--[no-]integrations</strong></dt>
+<dd>
+<p>Enable integration execution (default: true)</p>
+</dd>
+<dt class="hdlist1"><strong>--itr, --ignore-transitive-repositories</strong></dt>
+<dd>
+<p>Ignore remote repositories found in transitive dependencies</p>
+</dd>
 <dt class="hdlist1"><strong>-j</strong>, <strong>--java</strong>=<em>&lt;javaVersion&gt;</em></dt>
 <dd>
 <p>JDK version to use for running the script.</p>
 </dd>
 <dt class="hdlist1"><strong>--jsh</strong></dt>
 <dd>
-<p>Force input to be interpreted with jsh/jshell</p>
+<p>Force input to be interpreted with jsh/jshell. Deprecated: use '--source-type jshell'</p>
 </dd>
 <dt class="hdlist1"><strong>-m</strong>, <strong>--main</strong>=<em>&lt;main&gt;</em></dt>
 <dd>
 <p>Main class to use when running. Used primarily for running jar&#8217;s.</p>
 </dd>
+<dt class="hdlist1"><strong>--manifest</strong>=<em>&lt;String=String&gt;</em></dt>
+<dt class="hdlist1"><strong>--module</strong>[=<em>&lt;module&gt;</em>]</dt>
+<dd>
+<p>Treat resource as a module. Optionally with the given module name</p>
+</dd>
 <dt class="hdlist1"><strong>-n</strong>, <strong>--native</strong></dt>
 <dd>
 <p>Build using native-image</p>
+</dd>
+<dt class="hdlist1"><strong>-N</strong>, <strong>--native-option</strong>=<em>&lt;nativeOptions&gt;</em></dt>
+<dd>
+<p>Options to pass to the native image tool</p>
 </dd>
 <dt class="hdlist1"><strong>-o</strong>, <strong>--offline</strong></dt>
 <dd>
@@ -443,6 +494,14 @@
 <dt class="hdlist1"><strong>--repos</strong>=<em>&lt;repositories&gt;</em></dt>
 <dd>
 <p>Add additional repositories.</p>
+</dd>
+<dt class="hdlist1"><strong>-s</strong>, <strong>--sources</strong>=<em>&lt;sources&gt;</em></dt>
+<dd>
+<p>Add additional sources.</p>
+</dd>
+<dt class="hdlist1"><strong>--source-type</strong>=<em>&lt;forceType&gt;</em></dt>
+<dd>
+<p>Force input to be interpreted as the given type. Can be: java, jshell, groovy, kotlin, or markdown</p>
 </dd>
 <dt class="hdlist1"><strong>--verbose</strong></dt>
 <dd>
@@ -457,9 +516,9 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><em>&lt;scriptOrFile&gt;</em></dt>
+<dt class="hdlist1">[<em>&lt;scriptOrFile&gt;</em>]</dt>
 <dd>
-<p>A file with java code or if named .jsh will be run with jshell</p>
+<p>A reference to a source file</p>
 </dd>
 </dl>
 </div>

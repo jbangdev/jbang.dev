@@ -242,6 +242,9 @@
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="jbang-info-classpath.html">classpath</a>
   </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-info-jar.html">jar</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="3">
@@ -274,6 +277,21 @@
   </li>
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="jbang-export-mavenrepo.html">mavenrepo</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-native.html">native</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-fatjar.html">fatjar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="jbang-export-jlink.html">jlink</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#jbang-export-gradle.adoc">gradle</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#jbang-export-maven.adoc">maven</a>
   </li>
 </ul>
   </li>
@@ -360,7 +378,8 @@
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>jbang jdk install</strong> <strong>-o</strong> [<strong>-f</strong>] <strong>--fresh</strong> <strong>--quiet</strong> <strong>--verbose</strong> <em>version</em> <em>[existingJdkPath]</em></p>
+<p><strong>jbang jdk install</strong> <strong>-o</strong> [<strong>-f</strong>] <strong>--fresh</strong> <strong>--quiet</strong> <strong>--verbose</strong> <em>versionOrId</em>
+                  [<em>existingJdkPath</em>]</p>
 </div>
 </div>
 </div>
@@ -406,13 +425,13 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><em>version</em></dt>
+<dt class="hdlist1"><em>versionOrId</em></dt>
 <dd>
-<p>The version to install</p>
+<p>The version or id to install</p>
 </dd>
-<dt class="hdlist1"><em>[existingJdkPath]</em></dt>
+<dt class="hdlist1">[<em>existingJdkPath</em>]</dt>
 <dd>
-<p>Already existing JDK&#8217;s path on the filesystem. If path is given, its version will be checked against the incoming one, and if the same, the given JDK will be linked successfully.</p>
+<p>Pre installed JDK path</p>
 </dd>
 </dl>
 </div>
