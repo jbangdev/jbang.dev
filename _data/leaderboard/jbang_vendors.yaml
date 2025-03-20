@@ -1,4 +1,4 @@
-# JBang versions usage data total count: 8184
+# JBang versions usage data total count: 8176
 - name: Eclipse Adoptium
   percentage: 27.4
 - name: Oracle Corporation
@@ -9,10 +9,10 @@
   percentage: 7.2
 - name: Azul Systems, Inc.
   percentage: 5.7
+- name: Homebrew
+  percentage: 5.0
 - name: Red Hat, Inc.
   percentage: 5.0
-- name: Homebrew
-  percentage: 4.9
 - name: GraalVM Community
   percentage: 4.2
 - name: Microsoft
@@ -60,8 +60,6 @@
 - name: Tencent
   percentage: 0.0
 - name: ojdkbuild
-  percentage: 0.0
-- name: IBM Corporation
   percentage: 0.0
 - name: Termux
   percentage: 0.0
