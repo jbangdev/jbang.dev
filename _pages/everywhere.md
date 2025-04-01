@@ -6,7 +6,7 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /images/jbang-everywhere-banner.jpg
-excerpt: "Run Java apps anywhere, anyway you want"
+excerpt: "Run Java apps anywhere, Run anything you want"
 ---
 
 <div class="slot-machine-container">
@@ -38,7 +38,7 @@ excerpt: "Run Java apps anywhere, anyway you want"
   </div>
   <div class="slot-machine-controls">
     <button id="spin-button" class="btn btn--primary">Spin!</button>
-    <button id="copy-button" class="btn btn--success">Copy Command</button>
+    <button id="copy-button" class="btn btn--success">Copy</button>
     <span id="copy-feedback" class="copy-feedback">Copied!</span>
   </div>
 </div>
