@@ -26,24 +26,29 @@ excerpt: "Run Java apps anywhere, anyway you want"
       <div class="slot-wheel">
         <div class="slot-item">gavsearch@jbangdev</div>
         <div class="slot-item">pkl@apple</div>
+        <div class="slot-item">jdbc@quarkiverse/quarkus-mcp-servers</div>
         <div class="slot-item">playwright@microsoft</div>
         <div class="slot-item">arthas@alibaba</div>
         <div class="slot-item">mcp-proxy@quarkus.ai</div>
-        <div class="slot-item">container</div>
+        <div class="slot-item">container@quarkiverse/quarkus-mcp-servers</div>
         <div class="slot-item">camel@apache/camel</div>
         <div class="slot-item">com.h2database:h2:2.3.232</div>
-        <div class="slot-item">io.quarkiverse.mcp.servers:mcp-server-containers:0.0.4@fatjar</div>
       </div>
     </div>
   </div>
-  <button id="spin-button" class="btn btn--primary">Spin!</button>
+  <div class="slot-machine-controls">
+    <button id="spin-button" class="btn btn--primary">Spin!</button>
+    <button id="copy-button" class="btn btn--success">Copy Command</button>
+    <span id="copy-feedback" class="copy-feedback">Copied!</span>
+  </div>
 </div>
 
 <style>
 .slot-machine-container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 2rem auto;
   text-align: center;
+  padding: 0 1rem;
 }
 
 .slot-machine {
@@ -54,17 +59,19 @@ excerpt: "Run Java apps anywhere, anyway you want"
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  flex-wrap: nowrap;
 }
 
 .slot-viewport {
   background: #fff;
-  padding: 1rem;
+  padding: 0.75rem;
   border-radius: 0.5rem;
-  height: 60px;
+  height: 70px;
   position: relative;
   overflow: hidden;
   cursor: grab;
   touch-action: pan-y;
+  margin: 0.5rem 0;
 }
 
 .slot-viewport.dragging {
@@ -86,26 +93,38 @@ excerpt: "Run Java apps anywhere, anyway you want"
 }
 
 .launcher {
-  min-width: 400px;
-  width: 400px;
+  width: 500px;
+  flex: 0 1 500px;
+  min-width: 0;
 }
 
 .target {
-  min-width: 300px;
-  width: 300px;
+  width: 450px;
+  flex: 0 1 450px;
+  min-width: 0;
 }
 
 .slot-item {
-  height: 60px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: monospace;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: #333;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   white-space: nowrap;
   text-align: center;
+}
+
+.launcher .slot-item {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.target .slot-item {
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .slot-viewport::before,
@@ -129,10 +148,67 @@ excerpt: "Run Java apps anywhere, anyway you want"
   background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 }
 
-#spin-button {
+.slot-machine-controls {
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#spin-button, #copy-button {
   font-size: 1.2rem;
   padding: 0.8rem 2rem;
+}
+
+.copy-feedback {
+  position: absolute;
+  background: #4BB543;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.copy-feedback.visible {
+  opacity: 1;
+}
+
+@media (max-width: 1050px) {
+  .slot-machine {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .launcher, .target {
+    width: 100%;
+    max-width: 550px;
+    flex: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .slot-item {
+    font-size: 0.85rem;
+  }
+  
+  .slot-machine {
+    padding: 1.5rem 1rem;
+    width: 95%;
+  }
+  
+  .slot-viewport {
+    height: 60px;
+  }
+  
+  .slot-item {
+    height: 60px;
+  }
 }
 </style>
 
@@ -141,6 +217,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const wheels = document.querySelectorAll('.slot-wheel');
   const viewports = document.querySelectorAll('.slot-viewport');
   const spinButton = document.getElementById('spin-button');
+  const copyButton = document.getElementById('copy-button');
+  const copyFeedback = document.getElementById('copy-feedback');
   let isSpinning = false;
 
   // Store original items for each wheel
@@ -371,6 +449,64 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', function() {
     isSpinning = false;
     setTimeout(resetWheels, 100);
+  });
+
+  // Function to get the current visible items in both slots
+  function getCurrentCombination() {
+    const result = [];
+    
+    wheels.forEach((wheel, wheelIndex) => {
+      const items = originalItems[wheelIndex];
+      const itemHeight = wheel.querySelector('.slot-item').offsetHeight;
+      const viewportHeight = wheel.closest('.slot-viewport').offsetHeight;
+      const offset = (viewportHeight - itemHeight) / 2;
+      
+      // Get current position
+      const currentPosition = getTranslateY(wheel);
+      
+      // Calculate current visible item index
+      const currentIndex = Math.round((currentPosition - offset) / -itemHeight) - 1;
+      
+      // Get the text of the visible item (accounting for index boundaries)
+      let safeIndex = currentIndex;
+      if (safeIndex < 0) safeIndex = 0;
+      if (safeIndex >= items.length) safeIndex = items.length - 1;
+      
+      result.push(items[safeIndex].textContent);
+    });
+    
+    return result.join(' ');
+  }
+  
+  // Copy button click handler
+  copyButton.addEventListener('click', function() {
+    const combination = getCurrentCombination();
+    
+    // Copy to clipboard
+    navigator.clipboard.writeText(combination).then(() => {
+      // Show feedback
+      copyFeedback.classList.add('visible');
+      
+      // Position the feedback near the button
+      const buttonRect = copyButton.getBoundingClientRect();
+      copyFeedback.style.top = `${buttonRect.top - 40}px`;
+      copyFeedback.style.left = `${buttonRect.left + buttonRect.width/2 - 40}px`;
+      
+      // Hide feedback after a delay
+      setTimeout(() => {
+        copyFeedback.classList.remove('visible');
+      }, 2000);
+    }).catch(err => {
+      console.error('Could not copy text: ', err);
+    });
+  });
+  
+  // Also add copy function to transitionend events for both wheels
+  wheels.forEach((wheel, wheelIndex) => {
+    wheel.addEventListener('transitionend', function() {
+      // Update copy button text to show current combination
+      copyButton.setAttribute('aria-label', `Copy: ${getCurrentCombination()}`);
+    });
   });
 });
 </script> 
