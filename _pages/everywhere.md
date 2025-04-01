@@ -68,8 +68,8 @@ excerpt: "Run Java apps anywhere, anyway you want"
   position: absolute;
   width: 100%;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  transform: translateY(0);
   transition: transform 2.5s cubic-bezier(0.21, 0.53, 0.29, 0.99);
   user-select: none;
 }
@@ -145,6 +145,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const items = wheel.querySelectorAll('.slot-item');
     const itemsArray = Array.from(items);
     
+    // Add some padding items at the top and bottom to prevent white space
+    const paddingItem = document.createElement('div');
+    paddingItem.className = 'slot-item';
+    paddingItem.style.visibility = 'hidden';
+    wheel.prepend(paddingItem.cloneNode(true));
+    wheel.append(paddingItem.cloneNode(true));
+    
     // Clone items multiple times to ensure smooth infinite scroll
     for (let i = 0; i < 4; i++) {
       itemsArray.forEach(item => {
@@ -153,12 +160,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // Calculate vertical offset to center item in viewport
+  function calculateCenterOffset(wheel, index) {
+    const viewport = wheel.closest('.slot-viewport');
+    const itemHeight = wheel.querySelector('.slot-item').offsetHeight;
+    const viewportHeight = viewport.offsetHeight;
+    const offset = (viewportHeight - itemHeight) / 2;
+    return -index * itemHeight + offset;
+  }
+
   // Center the items in the viewport
   function centerItems() {
     wheels.forEach(wheel => {
-      const itemHeight = wheel.querySelector('.slot-item').offsetHeight;
-      const visibleIndex = Math.floor(Math.random() * 4); // Random starting position
-      wheel.style.transform = `translateY(${-itemHeight * visibleIndex}px)`;
+      const visibleIndex = Math.floor(Math.random() * 4) + 1; // +1 to account for padding item
+      const offset = calculateCenterOffset(wheel, visibleIndex);
+      wheel.style.transform = `translateY(${offset}px)`;
     });
   }
 
@@ -172,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let startY = 0;
     let wheelStartY = 0;
     const items = wheel.querySelectorAll('.slot-item');
-    const originalSetCount = items.length / 5; // Original item count
+    const originalSetCount = (items.length - 2) / 5; // Original item count (minus padding items)
 
     function getTranslateY(element) {
       const style = window.getComputedStyle(element);
@@ -182,13 +198,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getBounds() {
       const itemHeight = wheel.querySelector('.slot-item').offsetHeight;
+      const viewportHeight = viewport.offsetHeight;
+      const offset = (viewportHeight - itemHeight) / 2;
       const totalOriginalHeight = itemHeight * originalSetCount;
       
-      // Allow scrolling from -totalOriginalHeight to 0
+      // Allow scrolling with appropriate bounds
       return {
-        min: -totalOriginalHeight + itemHeight,
-        max: 0,
-        itemHeight: itemHeight
+        min: -totalOriginalHeight + offset,
+        max: offset + itemHeight,
+        itemHeight: itemHeight,
+        offset: offset
       };
     }
 
@@ -239,8 +258,9 @@ document.addEventListener('DOMContentLoaded', function() {
       } else if (currentY < bounds.min) {
         wheel.style.transform = `translateY(${bounds.min}px)`;
       } else {
-        // Snap to nearest item
-        const snapY = Math.round(currentY / bounds.itemHeight) * bounds.itemHeight;
+        // Snap to nearest item, adjusted for center offset
+        const snapIndex = Math.round((currentY - bounds.offset) / bounds.itemHeight);
+        const snapY = snapIndex * bounds.itemHeight + bounds.offset;
         wheel.style.transform = `translateY(${snapY}px)`;
       }
     }
@@ -262,32 +282,55 @@ document.addEventListener('DOMContentLoaded', function() {
     
     wheels.forEach(wheel => {
       wheel.classList.remove('no-transition');
-      const items = wheel.querySelectorAll('.slot-item');
-      const itemHeight = items[0].offsetHeight;
-      const originalSetCount = items.length / 5;
       
-      // Calculate where we are now
+      // Get all items and identify the original items (not clones or padding)
+      const allItems = wheel.querySelectorAll('.slot-item');
+      const originals = [];
+      
+      // Find the original visible items
+      for (let i = 1; i < allItems.length; i++) {
+        // Skip hidden items
+        if (allItems[i].style && allItems[i].style.visibility === 'hidden') continue;
+        
+        // Collect only the first set of items
+        if (originals.length < 5) {
+          originals.push(allItems[i]);
+        } else {
+          break;
+        }
+      }
+      
+      const itemHeight = originals[0].offsetHeight;
+      const viewport = wheel.closest('.slot-viewport');
+      const viewportHeight = viewport.offsetHeight;
+      const offset = (viewportHeight - itemHeight) / 2;
+      
+      // Pick a random index from the original set of items
+      const finalIndex = getRandomInt(0, originals.length - 1);
+      
+      // Calculate final position - this is where we want to land
+      const finalPosition = -(finalIndex + 1) * itemHeight + offset;
+      
+      // First determine where we are now
       const currentPos = getTranslateY(wheel);
       
-      // Calculate spins (2-4 full rotations)
-      const spins = 2 + getRandomInt(2, 4);
-      const totalSpin = spins * originalSetCount * itemHeight;
+      // Calculate rotations - full rotations plus distance to final item
+      // Each original set is 5 items
+      const spins = 2 + getRandomInt(0, 1); // 2-3 full rotations
+      const spinDistance = spins * originals.length * itemHeight;
       
-      // Calculate final index (0 to originalSetCount-1)
-      const finalIndex = getRandomInt(0, originalSetCount - 1);
-      const finalPosition = -finalIndex * itemHeight;
+      // Calculate exact target position so the animation ends at final position
+      // We need to get from current position to final position plus full spins
+      // This ensures we end exactly where we want
+      const targetPosition = currentPos - spinDistance - 
+                            (Math.abs(currentPos - finalPosition) % (originals.length * itemHeight));
       
-      // Set target position based on current + spin + final
-      const targetPosition = currentPos - totalSpin + (currentPos - finalPosition);
-      
+      // Animate to target
+      wheel.style.transition = 'transform 2.5s cubic-bezier(0.21, 0.53, 0.29, 0.99)';
       wheel.style.transform = `translateY(${targetPosition}px)`;
-
-      wheel.addEventListener('transitionend', function resetWheel() {
-        wheel.style.transition = 'none';
-        wheel.style.transform = `translateY(${finalPosition}px)`;
-        wheel.offsetHeight;
-        wheel.style.transition = 'transform 2.5s cubic-bezier(0.21, 0.53, 0.29, 0.99)';
-        wheel.removeEventListener('transitionend', resetWheel);
+      
+      // No need to reset, we calculated to end at final position
+      wheel.addEventListener('transitionend', function() {
         isSpinning = false;
       }, { once: true });
     });
