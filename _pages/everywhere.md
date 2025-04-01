@@ -14,18 +14,25 @@ excerpt: "Run Java apps anywhere, anyway you want"
     <div class="slot-viewport launcher">
       <div class="slot-wheel">
         <div class="slot-item">jbang</div>
+        <div class="slot-item">curl -Ls https://sh.jbang.dev | bash -s -</div>
+        <div class="slot-item">podman run -it jbangdev/jbang</div>
+        <div class="slot-item">docker run -it jbangdev/jbang</div>
         <div class="slot-item">npx @jbangdev/java</div>
         <div class="slot-item">uvx jbang</div>
         <div class="slot-item">pipx jbang</div>
-        <div class="slot-item">docker run jbangdev/jbang</div>
       </div>
     </div>
     <div class="slot-viewport target">
       <div class="slot-wheel">
-        <div class="slot-item">app.java</div>
-        <div class="slot-item">https://example.com/app.jar</div>
-        <div class="slot-item">org.example:cool-app:1.0</div>
-        <div class="slot-item">@catalog-alias</div>
+        <div class="slot-item">gavsearch@jbangdev</div>
+        <div class="slot-item">pkl@apple</div>
+        <div class="slot-item">playwright@microsoft</div>
+        <div class="slot-item">arthas@alibaba</div>
+        <div class="slot-item">mcp-proxy@quarkus.ai</div>
+        <div class="slot-item">container</div>
+        <div class="slot-item">camel@apache/camel</div>
+        <div class="slot-item">com.h2database:h2:2.3.232</div>
+        <div class="slot-item">io.quarkiverse.mcp.servers:mcp-server-containers:0.0.4@fatjar</div>
       </div>
     </div>
   </div>
@@ -136,213 +143,234 @@ document.addEventListener('DOMContentLoaded', function() {
   const spinButton = document.getElementById('spin-button');
   let isSpinning = false;
 
-  function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  // Clone items for infinite scroll
+  // Store original items for each wheel
+  const originalItems = [];
+  
+  // Set up each wheel with cloned items
   wheels.forEach(wheel => {
-    const items = wheel.querySelectorAll('.slot-item');
-    const itemsArray = Array.from(items);
+    // Store the original items to use as a reference
+    const initialItems = Array.from(wheel.querySelectorAll('.slot-item'));
+    originalItems.push(initialItems);
     
-    // Add some padding items at the top and bottom to prevent white space
-    const paddingItem = document.createElement('div');
-    paddingItem.className = 'slot-item';
-    paddingItem.style.visibility = 'hidden';
-    wheel.prepend(paddingItem.cloneNode(true));
-    wheel.append(paddingItem.cloneNode(true));
+    // Clear the wheel
+    wheel.innerHTML = '';
     
-    // Clone items multiple times to ensure smooth infinite scroll
-    for (let i = 0; i < 4; i++) {
-      itemsArray.forEach(item => {
+    // Now add many sets of the original items
+    // First add an invisible padding item
+    const paddingTop = document.createElement('div');
+    paddingTop.className = 'slot-item';
+    paddingTop.style.visibility = 'hidden';
+    wheel.appendChild(paddingTop);
+    
+    // Add 5 sets of the original items
+    for (let i = 0; i < 5; i++) {
+      initialItems.forEach(item => {
         wheel.appendChild(item.cloneNode(true));
       });
     }
+    
+    // Add another invisible padding item at the end
+    const paddingBottom = document.createElement('div');
+    paddingBottom.className = 'slot-item';
+    paddingBottom.style.visibility = 'hidden';
+    wheel.appendChild(paddingBottom);
   });
-
-  // Calculate vertical offset to center item in viewport
-  function calculateCenterOffset(wheel, index) {
-    const viewport = wheel.closest('.slot-viewport');
-    const itemHeight = wheel.querySelector('.slot-item').offsetHeight;
-    const viewportHeight = viewport.offsetHeight;
-    const offset = (viewportHeight - itemHeight) / 2;
-    return -index * itemHeight + offset;
-  }
-
-  // Center the items in the viewport
-  function centerItems() {
-    wheels.forEach(wheel => {
-      const visibleIndex = Math.floor(Math.random() * 4) + 1; // +1 to account for padding item
-      const offset = calculateCenterOffset(wheel, visibleIndex);
-      wheel.style.transform = `translateY(${offset}px)`;
+  
+  // Place each wheel at a random starting position
+  function resetWheels() {
+    wheels.forEach((wheel, index) => {
+      const items = originalItems[index];
+      const itemHeight = wheel.querySelector('.slot-item').offsetHeight;
+      const viewportHeight = wheel.closest('.slot-viewport').offsetHeight;
+      const offset = (viewportHeight - itemHeight) / 2;
+      
+      // Pick a random item to show (from 0 to items.length - 1)
+      const randomIndex = Math.floor(Math.random() * items.length);
+      
+      // Set the wheel position to show this item (add 1 for the padding item)
+      const position = -(randomIndex + 1) * itemHeight + offset;
+      wheel.style.transition = 'none';
+      wheel.style.transform = `translateY(${position}px)`;
     });
   }
-
-  // Call centerItems after a short delay to ensure layout is complete
-  setTimeout(centerItems, 100);
-
-  // Add drag functionality
+  
+  // Initialize wheels with a small delay to ensure styles are applied
+  setTimeout(resetWheels, 100);
+  
+  // Helper function to get translation Y value
+  function getTranslateY(element) {
+    try {
+      const transform = window.getComputedStyle(element).transform;
+      if (transform === 'none') return 0;
+      
+      const matrix = new WebKitCSSMatrix(transform);
+      return matrix.m42;
+    } catch (e) {
+      console.error('Error getting transform:', e);
+      return 0;
+    }
+  }
+  
+  // Helper to safely set transform
+  function setTransformY(element, y) {
+    element.style.transform = `translateY(${y}px)`;
+  }
+  
+  // Setup dragging
   viewports.forEach((viewport, index) => {
     const wheel = wheels[index];
+    const items = originalItems[index];
+    
     let isDragging = false;
     let startY = 0;
-    let wheelStartY = 0;
-    const items = wheel.querySelectorAll('.slot-item');
-    const originalSetCount = (items.length - 2) / 5; // Original item count (minus padding items)
-
-    function getTranslateY(element) {
-      const style = window.getComputedStyle(element);
-      const matrix = new WebKitCSSMatrix(style.transform);
-      return matrix.m42;
-    }
-
-    function getBounds() {
-      const itemHeight = wheel.querySelector('.slot-item').offsetHeight;
-      const viewportHeight = viewport.offsetHeight;
-      const offset = (viewportHeight - itemHeight) / 2;
-      const totalOriginalHeight = itemHeight * originalSetCount;
-      
-      // Allow scrolling with appropriate bounds
-      return {
-        min: -totalOriginalHeight + offset,
-        max: offset + itemHeight,
-        itemHeight: itemHeight,
-        offset: offset
-      };
-    }
-
+    let startWheelY = 0;
+    
     function onDragStart(e) {
       if (isSpinning) return;
       isDragging = true;
       viewport.classList.add('dragging');
       wheel.classList.add('no-transition');
       startY = e.type === 'mousedown' ? e.clientY : e.touches[0].clientY;
-      wheelStartY = getTranslateY(wheel);
+      startWheelY = getTranslateY(wheel);
     }
-
+    
     function onDragMove(e) {
       if (!isDragging) return;
       e.preventDefault();
       const currentY = e.type === 'mousemove' ? e.clientY : e.touches[0].clientY;
       const deltaY = currentY - startY;
       
-      // Apply resistance as we approach boundaries
-      const bounds = getBounds();
-      let newPosition = wheelStartY + deltaY;
-      
-      // Add resistance at boundaries
-      if (newPosition > bounds.max) {
-        const overscroll = newPosition - bounds.max;
-        newPosition = bounds.max + overscroll * 0.3; // Resistance factor
-      } else if (newPosition < bounds.min) {
-        const overscroll = bounds.min - newPosition;
-        newPosition = bounds.min - overscroll * 0.3; // Resistance factor
-      }
-      
-      wheel.style.transform = `translateY(${newPosition}px)`;
+      // Move the wheel
+      setTransformY(wheel, startWheelY + deltaY);
     }
-
+    
     function onDragEnd() {
       if (!isDragging) return;
       isDragging = false;
       viewport.classList.remove('dragging');
-      wheel.classList.remove('no-transition');
-
-      // Get bounds
-      const bounds = getBounds();
+      
+      // Snap to nearest item
+      const itemHeight = wheel.querySelector('.slot-item').offsetHeight;
+      const viewportHeight = viewport.offsetHeight;
+      const offset = (viewportHeight - itemHeight) / 2;
       const currentY = getTranslateY(wheel);
       
-      // If we're outside bounds, animate back
-      if (currentY > bounds.max) {
-        wheel.style.transform = `translateY(${bounds.max}px)`;
-      } else if (currentY < bounds.min) {
-        wheel.style.transform = `translateY(${bounds.min}px)`;
-      } else {
-        // Snap to nearest item, adjusted for center offset
-        const snapIndex = Math.round((currentY - bounds.offset) / bounds.itemHeight);
-        const snapY = snapIndex * bounds.itemHeight + bounds.offset;
-        wheel.style.transform = `translateY(${snapY}px)`;
-      }
+      // Calculate the item index (compensate for offset)
+      const indexFromTop = Math.round((currentY - offset) / -itemHeight);
+      
+      // Ensure we stay within valid range (1 to items.length)
+      const validIndex = Math.max(1, Math.min(items.length, indexFromTop));
+      
+      // Calculate the final position
+      const finalY = -(validIndex * itemHeight) + offset;
+      
+      // Animate to final position
+      wheel.classList.remove('no-transition');
+      setTransformY(wheel, finalY);
     }
-
+    
     // Mouse events
     viewport.addEventListener('mousedown', onDragStart);
     window.addEventListener('mousemove', onDragMove);
     window.addEventListener('mouseup', onDragEnd);
-
+    
     // Touch events
     viewport.addEventListener('touchstart', onDragStart);
     window.addEventListener('touchmove', onDragMove, { passive: false });
     window.addEventListener('touchend', onDragEnd);
   });
-
+  
+  // Spin function
   function spin() {
     if (isSpinning) return;
     isSpinning = true;
     
-    wheels.forEach(wheel => {
-      wheel.classList.remove('no-transition');
-      
-      // Get all items and identify the original items (not clones or padding)
-      const allItems = wheel.querySelectorAll('.slot-item');
-      const originals = [];
-      
-      // Find the original visible items
-      for (let i = 1; i < allItems.length; i++) {
-        // Skip hidden items
-        if (allItems[i].style && allItems[i].style.visibility === 'hidden') continue;
-        
-        // Collect only the first set of items
-        if (originals.length < 5) {
-          originals.push(allItems[i]);
-        } else {
-          break;
-        }
-      }
-      
-      const itemHeight = originals[0].offsetHeight;
-      const viewport = wheel.closest('.slot-viewport');
-      const viewportHeight = viewport.offsetHeight;
+    wheels.forEach((wheel, wheelIndex) => {
+      const items = originalItems[wheelIndex];
+      const itemHeight = wheel.querySelector('.slot-item').offsetHeight;
+      const viewportHeight = wheel.closest('.slot-viewport').offsetHeight;
       const offset = (viewportHeight - itemHeight) / 2;
       
-      // Pick a random index from the original set of items
-      const finalIndex = getRandomInt(0, originals.length - 1);
+      // Choose a random final item
+      const finalItemIndex = Math.floor(Math.random() * items.length);
       
-      // Calculate final position - this is where we want to land
-      const finalPosition = -(finalIndex + 1) * itemHeight + offset;
+      // Calculate the final position (add 1 for padding)
+      const finalPosition = -((finalItemIndex + 1) * itemHeight) + offset;
       
-      // First determine where we are now
-      const currentPos = getTranslateY(wheel);
+      // Get current position
+      const currentPosition = getTranslateY(wheel);
       
-      // Calculate rotations - full rotations plus distance to final item
-      // Each original set is 5 items
-      const spins = 2 + getRandomInt(0, 1); // 2-3 full rotations
-      const spinDistance = spins * originals.length * itemHeight;
+      // Calculate how many items to spin through
+      const rotations = 2 + Math.floor(Math.random() * 2); // 2-3 rotations
+      const spinItems = rotations * items.length;
       
-      // Calculate exact target position so the animation ends at final position
-      // We need to get from current position to final position plus full spins
-      // This ensures we end exactly where we want
-      const targetPosition = currentPos - spinDistance - 
-                            (Math.abs(currentPos - finalPosition) % (originals.length * itemHeight));
+      // Calculate the exact target position to land directly on the final position
+      // This ensures there's no need to reset at the end
+      // We need to determine how many items to spin through to land at finalPosition
+      let itemsToFinalPosition = finalItemIndex + 1; // +1 for padding
       
-      // Animate to target
-      wheel.style.transition = 'transform 2.5s cubic-bezier(0.21, 0.53, 0.29, 0.99)';
-      wheel.style.transform = `translateY(${targetPosition}px)`;
+      // Determine current item index (adjusted for offset)
+      const currentIndex = Math.round((currentPosition - offset) / -itemHeight);
       
-      // No need to reset, we calculated to end at final position
-      wheel.addEventListener('transitionend', function() {
-        isSpinning = false;
-      }, { once: true });
+      // Calculate items to spin through to reach final position
+      let itemsToSpin = itemsToFinalPosition - currentIndex;
+      
+      // If we need to go backwards, add full rotation instead
+      if (itemsToSpin <= 0) {
+        itemsToSpin += items.length;
+      }
+      
+      // Add full rotations
+      itemsToSpin += rotations * items.length;
+      
+      // Calculate exact target position
+      const targetPosition = currentPosition - (itemsToSpin * itemHeight);
+      
+      // Apply an immediate reset if needed
+      if (isNaN(currentPosition) || currentPosition === 0) {
+        wheel.style.transition = 'none';
+        const resetPosition = -(items.length / 2) * itemHeight + offset;
+        setTransformY(wheel, resetPosition);
+        wheel.offsetHeight; // Force reflow
+      }
+      
+      // Start the spin with delay to ensure any resets are applied
+      setTimeout(() => {
+        wheel.style.transition = 'transform 2.5s cubic-bezier(0.21, 0.53, 0.29, 0.99)';
+        setTransformY(wheel, targetPosition);
+        
+        wheel.addEventListener('transitionend', function onEnd() {
+          // Directly ensure we're at the final position
+          if (getTranslateY(wheel) !== finalPosition) {
+            wheel.style.transition = 'none';
+            setTransformY(wheel, finalPosition);
+            wheel.offsetHeight; // Force reflow
+            wheel.style.transition = 'transform 2.5s cubic-bezier(0.21, 0.53, 0.29, 0.99)';
+          }
+          
+          // Clean up
+          wheel.removeEventListener('transitionend', onEnd);
+          
+          // Allow spins again when all wheels are done
+          if (wheelIndex === wheels.length - 1) {
+            isSpinning = false;
+          }
+        }, { once: true });
+      }, 50);
     });
   }
   
-  // Helper function to get translateY value
-  function getTranslateY(element) {
-    const style = window.getComputedStyle(element);
-    const matrix = new WebKitCSSMatrix(style.transform);
-    return matrix.m42;
-  }
-
-  spinButton.addEventListener('click', spin);
+  // Add click handler to spin button
+  spinButton.addEventListener('click', function() {
+    if (!isSpinning) {
+      spin();
+    }
+  });
+  
+  // If things get stuck, reset on window resize
+  window.addEventListener('resize', function() {
+    isSpinning = false;
+    setTimeout(resetWheels, 100);
+  });
 });
 </script> 
