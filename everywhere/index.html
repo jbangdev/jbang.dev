@@ -29,7 +29,7 @@
 
 
 
-  <meta property="og:image" content="https://jbang.dev/images/jbang-everywhere-banner.jpg">
+  <meta property="og:image" content="https://jbang.dev/assets/images/slider/bg-1.jpg">
 
 
 
@@ -40,7 +40,7 @@
 
   
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://jbang.dev/images/jbang-everywhere-banner.jpg">
+    <meta name="twitter:image" content="https://jbang.dev/assets/images/slider/bg-1.jpg">
   
 
   
@@ -203,7 +203,7 @@ Vue.directive('highlightjs', {
 
 
 <div class="page__hero--overlay"
-  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/jbang-everywhere-banner.jpg');"
+  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/slider/bg-1.jpg');"
 >
   
     <div class="wrapper">
@@ -247,7 +247,7 @@ Vue.directive('highlightjs', {
 
       <section class="page__content" itemprop="text">
         
-        <div class="slot-machine-container">
+        <div class="slot-machine-container" style="max-width: 800px;">
   <div class="slot-machine">
     <div class="slot-viewport launcher">
       <div class="slot-wheel">
@@ -276,7 +276,8 @@ Vue.directive('highlightjs', {
   </div>
   <div class="slot-machine-controls">
     <button id="spin-button" class="btn btn--primary">Spin!</button>
-    <button id="copy-button" class="btn btn--success">Copy Command</button>
+    <button id="copy-button" class="btn btn--success">Copy</button>
+    
     <span id="copy-feedback" class="copy-feedback">Copied!</span>
   </div>
 </div>
@@ -395,7 +396,7 @@ Vue.directive('highlightjs', {
   flex-wrap: wrap;
 }
 
-#spin-button, #copy-button {
+#spin-button, #copy-button, .slot-machine-controls .btn {
   font-size: 1.2rem;
   padding: 0.8rem 2rem;
 }
@@ -616,10 +617,6 @@ document.addEventListener('DOMContentLoaded', function() {
       // Get current position
       const currentPosition = getTranslateY(wheel);
       
-      // Calculate how many items to spin through
-      const rotations = 2 + Math.floor(Math.random() * 2); // 2-3 rotations
-      const spinItems = rotations * items.length;
-      
       // Calculate the exact target position to land directly on the final position
       // This ensures there's no need to reset at the end
       // We need to determine how many items to spin through to land at finalPosition
@@ -637,7 +634,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       // Add full rotations
-      itemsToSpin += rotations * items.length;
+      itemsToSpin += (2 + Math.floor(Math.random() * 2)) * items.length;
       
       // Calculate exact target position
       const targetPosition = currentPosition - (itemsToSpin * itemHeight);
@@ -676,19 +673,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Add click handler to spin button
-  spinButton.addEventListener('click', function() {
-    if (!isSpinning) {
-      spin();
-    }
-  });
-  
-  // If things get stuck, reset on window resize
-  window.addEventListener('resize', function() {
-    isSpinning = false;
-    setTimeout(resetWheels, 100);
-  });
-
   // Function to get the current visible items in both slots
   function getCurrentCombination() {
     const result = [];
@@ -715,6 +699,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     return result.join(' ');
   }
+  
+  // Add click handler to spin button
+  spinButton.addEventListener('click', function() {
+    if (!isSpinning) {
+      spin();
+    }
+  });
   
   // Copy button click handler
   copyButton.addEventListener('click', function() {
@@ -746,8 +737,49 @@ document.addEventListener('DOMContentLoaded', function() {
       copyButton.setAttribute('aria-label', `Copy: ${getCurrentCombination()}`);
     });
   });
+  
+  // If things get stuck, reset on window resize
+  window.addEventListener('resize', function() {
+    isSpinning = false;
+    setTimeout(resetWheels, 100);
+  });
+  
+  // Auto-spin when page loads
+  setTimeout(function() {
+    spin();
+  }, 800);
 });
 </script>
+
+<center><b>Take JBang for a spin, press copy and paste that command in your terminal.</b></center>
+
+<h3 id="anything">Anything</h3>
+
+<p>JBang is not just for scripts. It is a tool that allows you to run any Java application you want from the command line.</p>
+
+<p>There is already a growing ecosystem of tools that use JBang, try some above or see <a href="http://jbang.dev/appstore/">AppStore</a> for more!</p>
+
+<h3 id="everywhere">Everywhere</h3>
+
+<p>JBang allows you and your users to run Java applications from the command line
+using the tools they already know and love.</p>
+
+<p>JBang is available on all major platforms, including Linux, macOS, and Windows.</p>
+
+<h3 id="anywhere">Anywhere</h3>
+
+<p>With JBang, running Java has never been easier or more versatile! Whether you’re a seasoned developer or just starting out, JBang offers a multitude of ways to get your Java applications up and running in no time.</p>
+
+<ul>
+  <li><strong>Directly from the Command Line</strong>: Simply use <code class="language-plaintext highlighter-rouge">jbang yourfile.java</code> to run your Java files instantly.</li>
+  <li><strong>Using Scripts</strong>: Embed dependencies directly in your scripts with <code class="language-plaintext highlighter-rouge">//DEPS</code> and run them effortlessly.</li>
+  <li><strong>Docker and Podman</strong>: Run your Java apps in isolated containers using <code class="language-plaintext highlighter-rouge">docker run -it jbangdev/jbang</code> or <code class="language-plaintext highlighter-rouge">podman run -it jbangdev/jbang</code>.</li>
+  <li><strong>Node Package Manager (NPM)</strong>: Integrate with Node.js using <code class="language-plaintext highlighter-rouge">npx @jbangdev/java</code> for seamless Java execution.</li>
+  <li><strong>UV Package Manager )UVX)</strong>: Use <code class="language-plaintext highlighter-rouge">uvx jbang</code> to run Java apps with super-fast packager for Python.</li>
+  <li><strong>Python Package Manager (PIPX)</strong>: Execute Java applications with <code class="language-plaintext highlighter-rouge">pipx jbang</code> for a classic Pythonic touch.</li>
+</ul>
+
+<p>No matter where you are or what platform you’re on, JBang ensures that Java is always at your fingertips. Give it a spin and experience the power of Java, unleashed!</p>
 
 
         
