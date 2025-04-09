@@ -1,8 +1,8 @@
-# JBang versions usage data total count: 8534
+# JBang versions usage data total count: 8587
 - name: Eclipse Adoptium
-  percentage: 27.9
+  percentage: 28.0
 - name: Oracle Corporation
-  percentage: 26.7
+  percentage: 26.5
 - name: Ubuntu
   percentage: 7.5
 - name: Amazon.com Inc.
@@ -10,9 +10,9 @@
 - name: Azul Systems, Inc.
   percentage: 5.9
 - name: Homebrew
-  percentage: 5.1
+  percentage: 5.0
 - name: Red Hat, Inc.
-  percentage: 4.9
+  percentage: 5.0
 - name: GraalVM Community
   percentage: 4.1
 - name: Microsoft
@@ -27,9 +27,9 @@
   percentage: 0.8
 - name: BellSoft
   percentage: 0.8
-- name: Temurin
-  percentage: 0.5
 - name: JetBrains s.r.o.
+  percentage: 0.5
+- name: Temurin
   percentage: 0.4
 - name: Eclipse OpenJ9
   percentage: 0.4
@@ -47,12 +47,12 @@
   percentage: 0.1
 - name: Void
   percentage: 0.1
+- name: ojdkbuild
+  percentage: 0.1
 - name: MacPorts
   percentage: 0.1
 - name: Alibaba
   percentage: 0.1
-- name: ojdkbuild
-  percentage: 0.0
 - name: IcedTea
   percentage: 0.0
 - name: Flathub
