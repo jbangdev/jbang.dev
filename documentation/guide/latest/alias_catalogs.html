@@ -391,6 +391,42 @@ to setup and manage aliases to actual scripts.</p>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="describe-aliases"><a class="anchor" href="#describe-aliases"></a>Describe Aliases</h3>
+<div class="paragraph">
+<p>When an alias is added to a catalog, it can also include a meaningful description of what the script does.
+It can be added either through an explicit command-line parameter or by extracting it from the //DESCRIPTION tags present in the script.</p>
+</div>
+<div class="paragraph">
+<p>Example:
+  <code>jbang alias add --description="Best hello world application" --name best_hello <a href="https://github.com/jbangdev/jbang-examples/blob/HEAD/examples/helloworld.java" class="bare">https://github.com/jbangdev/jbang-examples/blob/HEAD/examples/helloworld.java</a></code></p>
+</div>
+<div class="paragraph">
+<p>If you want the description to be automatically extracted from your script, include one or more //DESCRIPTION tags directly within it.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>//DESCRIPTION Best hello world application
+//DESCRIPTION Use to cheer your friends</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>class helloworld {</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}</pre>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="implicit-alias-catalogs"><a class="anchor" href="#implicit-alias-catalogs"></a>Implicit Alias Catalogs</h2>
 <div class="sectionbody">
