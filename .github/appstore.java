@@ -8,8 +8,24 @@
 //DEPS org.commonmark:commonmark-ext-gfm-strikethrough:0.17.1
 //DEPS org.commonmark:commonmark-ext-task-list-items:0.17.1
 
-import com.google.gson.*;
-import com.google.gson.annotations.SerializedName;
+import static java.lang.System.out;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.Callable;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 import org.commonmark.Extension;
 import org.commonmark.ext.autolink.AutolinkExtension;
@@ -18,26 +34,22 @@ import org.commonmark.ext.gfm.tables.TablesExtension;
 import org.commonmark.ext.task.list.items.TaskListItemsExtension;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.HtmlRenderer;
-import org.kohsuke.github.*;
+import org.kohsuke.github.AbuseLimitHandler;
+import org.kohsuke.github.GHContent;
+import org.kohsuke.github.GHException;
+import org.kohsuke.github.GitHub;
+import org.kohsuke.github.GitHubBuilder;
+import org.kohsuke.github.PagedSearchIterable;
+import org.kohsuke.github.RateLimitHandler;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonParseException;
+import com.google.gson.annotations.SerializedName;
+
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
-import picocli.CommandLine.Parameters;
-
-import static java.lang.System.out;
-
-import java.io.*;
-import java.net.HttpURLConnection;
-import java.nio.file.Files;
-import java.nio.file.OpenOption;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
-import java.util.concurrent.Callable;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
 
 /**
  * To run this script, set two environment variables GH_USER and GH_TOKEN. These
@@ -92,12 +104,20 @@ class appstore implements Callable<Integer> {
         .list().withPageSize(5);
 
        var it = ghContents.iterator();
-        int retries = 5;
+
+        List<GHContent> contents = new ArrayList<>();
+
+       while(it.hasNext()) {
+        contents.add(it.next());
+       }
+
+       out.println("Found " + contents.size() + " catalogs");
+       
+       int retries = 5;
 
         while (retries > 0) {
           try {
-            while (it.hasNext()) {
-              var content = it.next();
+            for (GHContent content : contents) {
               String location = content.getOwner().getFullName() + "/" + content.getPath();
               if (excludedCatalogs.contains(location)) {
                 out.println("Excluded - " + location);
