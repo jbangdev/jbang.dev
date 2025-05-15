@@ -202,146 +202,203 @@ Vue.directive('highlightjs', {
 
     <section class="page__content" itemprop="text">
       <h2>Download JBang</h2>
+
+<style>
+.tab-container {
+  margin: 20px 0;
+}
+
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.tab-button {
+  padding: 16px 24px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.tab-button i {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.tab-button:hover {
+  background: #e5e5e5;
+}
+
+.tab-button.active {
+  background: #0066cc;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+pre {
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+pre:hover {
+  background: #f5f5f5;
+}
+
+pre::after {
+  content: "Click to copy";
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 12px;
+  color: #666;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+pre:hover::after {
+  opacity: 1;
+}
+</style>
+
 <div class="container">
   <div class="row">
     <div class="full-width">
-    <p>Note: Java is not required to be installed - JBang will automatically download a Java version<br/> 
-      if no Java 8 or higher Java Development Kit (JDK) version is found.</p>
+      <p>Note: Java is not required to be installed - JBang will automatically download a Java version<br/> 
+        if no Java 8 or higher Java Development Kit (JDK) version is found.</p>
     </div>
   </div>
+</div>
 
-<div id="app">
-  <v-app id="inspire">
-    <v-tabs        
-     centered
-     icons-and-text
-    >
-      <v-tab id="windows-tab">Windows
-        <v-icon>mdi-microsoft-windows</v-icon>
-      </v-tab>
-      <v-tab id="linux-tab">Linux
-        <v-icon>mdi-linux</v-icon>
-      </v-tab>
-      <v-tab id="mac-tab">Mac
-        <v-icon>mdi-apple</v-icon>
-      </v-tab>
-      <v-tab>Docker
-        <v-icon>mdi-docker</v-icon>
-      </v-tab>
-      <v-tab>Github Actions
-        <v-icon>mdi-github</v-icon>
-      </v-tab>
-      <v-tab>Maven
-        <v-icon>mdi-screwdriver</v-icon>
-      </v-tab>
-      <v-tab>Gradle
-        <v-icon>mdi-hammer</v-icon>
-      </v-tab>
-      <v-tab>JavaScript
-        <v-icon>mdi-language-javascript</v-icon>
-      </v-tab>
-      <v-tab>Python
-        <v-icon>mdi-language-python</v-icon>
-      </v-tab>
+<div class="tab-container">
+  <div class="tab-buttons">
+    <button class="tab-button" data-tab="windows">
+      <i class="mdi mdi-microsoft-windows"></i> Windows
+    </button>
+    <button class="tab-button" data-tab="linux">
+      <i class="mdi mdi-linux"></i> Linux
+    </button>
+    <button class="tab-button" data-tab="mac">
+      <i class="mdi mdi-apple"></i> macOS
+    </button>
+    <button class="tab-button" data-tab="docker">
+      <i class="mdi mdi-docker"></i> Docker
+    </button>
+    <button class="tab-button" data-tab="github">
+      <i class="mdi mdi-github"></i> GitHub Actions
+    </button>
+    <button class="tab-button" data-tab="maven">
+      <i class="mdi mdi-screwdriver"></i> Maven
+    </button>
+    <button class="tab-button" data-tab="gradle">
+      <i class="mdi mdi-hammer"></i> Gradle
+    </button>
+    <button class="tab-button" data-tab="javascript">
+      <i class="mdi mdi-language-javascript"></i> JavaScript
+    </button>
+    <button class="tab-button" data-tab="python">
+      <i class="mdi mdi-language-python"></i> Python
+    </button>
+  </div>
 
-    
-      <v-tab-item>
-        <h3>curl/iex</h3>
-        <p>Powershell:
-          <pre>iex "& { $(iwr https://ps.jbang.dev) } app setup"</pre>
-        </p> 
-       <p>GitBash/cygwin/mingwin/WSL:
-         <pre>curl -Ls https://sh.jbang.dev | bash -s - app setup</pre>
-       </p>
-       
-        <h3>Chocolatey</h3>
-        <p><pre>choco install jbang</pre></p>
-        <h3>Scoop</h3>
-        <p>
-          <pre>scoop bucket add jbangdev https://github.com/jbangdev/scoop-bucket
+  <div id="windows" class="tab-content">
+    <h3>curl/iex</h3>
+    <p>Powershell:</p>
+    <pre>iex "& { $(iwr https://ps.jbang.dev) } app setup"</pre>
+    <p>GitBash/cygwin/mingwin/WSL:</p>
+    <pre>curl -Ls https://sh.jbang.dev | bash -s - app setup</pre>
+    <h3>Chocolatey</h3>
+    <pre>choco install jbang</pre>
+    <h3>Scoop</h3>
+    <pre>scoop bucket add jbangdev https://github.com/jbangdev/scoop-bucket
 scoop install jbang</pre>
-        </p>
-        <h3>Manual</h3>
-        <p>Unzip the <a href="https://github.com/jbangdev/jbang/releases/latest">latest binary release</a>, put the jbang-[version]/bin folder in to your $PATH and you are set.</p>
-        <h3>Zero install</h3>
-        <p>You can run download and run jbang directly using Powershell with:
-          <pre>iex "& { $(iwr https://ps.jbang.dev) } [jbang arguments]"</pre>
-        <p>or if you have bash based shell/terminal:</p>
-        <pre>curl -Ls https://sh.jbang.dev | bash -s - [jbang arguments]</pre></p>
-      </v-tab-item>
-      <v-tab-item>
-        <h3>curl</h3>
-        <p>
-          <pre>curl -Ls https://sh.jbang.dev | bash -s - app setup</pre>
-        </p>
-         <h3>SDKMan</h3>
-         <p><pre>sdk install jbang</pre></p>
-         <h3><a href="https://github.com/jbangdev/jbang-asdf">asdf</a></h3>
-              <p>
-                <pre>asdf plugin-add jbang
+    <h3>Manual</h3>
+    <p>Unzip the <a href="https://github.com/jbangdev/jbang/releases/latest">latest binary release</a>, put the jbang-[version]/bin folder in to your $PATH and you are set.</p>
+    <h3>Zero install</h3>
+    <p>You can run download and run jbang directly using Powershell with:</p>
+    <pre>iex "& { $(iwr https://ps.jbang.dev) } [jbang arguments]"</pre>
+    <p>or if you have bash based shell/terminal:</p>
+    <pre>curl -Ls https://sh.jbang.dev | bash -s - [jbang arguments]</pre>
+  </div>
+
+  <div id="linux" class="tab-content">
+    <h3>curl</h3>
+    <pre>curl -Ls https://sh.jbang.dev | bash -s - app setup</pre>
+    <h3>SDKMan</h3>
+    <pre>sdk install jbang</pre>
+    <h3>asdf</h3>
+    <pre>asdf plugin-add jbang
 asdf install jbang latest</pre>
-              </p>
-        
-         <h3><a href="https://copr.fedorainfracloud.org/coprs/g/jbangdev/jbang/">Fedora Copr</a> for CentOS, Fedora, Mageia and OpenSuse</h3>
-         <p>
-           <pre>dnf copr enable @jbangdev/jbang 
+    <h3>Fedora Copr</h3>
+    <p>For CentOS, Fedora, Mageia and OpenSuse:</p>
+    <pre>dnf copr enable @jbangdev/jbang 
 dnf install jbang</pre>
-         </p>
-         <h3>Manual</h3>
-         <p>Unzip the <a href="https://github.com/jbangdev/jbang/releases/latest">latest binary release</a>, put the jbang-[version]/bin folder in to your $PATH and you are set.</p>
-         <h3>Zero install</h3>
-         <p>You can run download and run jbang directly using <code>curl -Ls https://sh.jbang.dev | bash -s - [jbang arguments]</code></p>
-      </v-tab-item>
+    <h3>Manual</h3>
+    <p>Unzip the <a href="https://github.com/jbangdev/jbang/releases/latest">latest binary release</a>, put the jbang-[version]/bin folder in to your $PATH and you are set.</p>
+    <h3>Zero install</h3>
+    <pre>curl -Ls https://sh.jbang.dev | bash -s - [jbang arguments]</pre>
+  </div>
 
-      <v-tab-item>
-        <h3>curl</h3>
-             <p>
-               <pre>curl -Ls https://sh.jbang.dev | bash -s - app setup</pre>
-             </p>
-              <h3>SDKMan</h3>
-              <p><pre>sdk install jbang</pre></p>
-              <h3>Homebrew</h3>
-              <p>
-                <pre>brew install jbangdev/tap/jbang</pre>
-              </p>
-              <h3><a href="https://github.com/jbangdev/jbang-asdf">asdf</a></h3>
-              <p>
-                <pre>asdf plugin-add jbang
+  <div id="mac" class="tab-content">
+    <h3>curl</h3>
+    <pre>curl -Ls https://sh.jbang.dev | bash -s - app setup</pre>
+    <h3>SDKMan</h3>
+    <pre>sdk install jbang</pre>
+    <h3>Homebrew</h3>
+    <pre>brew install jbangdev/tap/jbang</pre>
+    <h3>asdf</h3>
+    <pre>asdf plugin-add jbang
 asdf install jbang latest</pre>
-              </p>
-              <h3>Manual</h3>
-              <p>Unzip the <a href="https://github.com/jbangdev/jbang/releases/latest">latest binary release</a>, put the jbang-[version]/bin folder in to your $PATH and you are set.</p>
-              
-              <h3>Zero install</h3>
-              <p>You can run jbang directly: 
-                <pre>curl -Ls https://sh.jbang.dev | bash -s - [jbang arguments]</pre>
-              </p>
-        </v-tab-item>
+    <h3>Manual</h3>
+    <p>Unzip the <a href="https://github.com/jbangdev/jbang/releases/latest">latest binary release</a>, put the jbang-[version]/bin folder in to your $PATH and you are set.</p>
+    <h3>Zero install</h3>
+    <pre>curl -Ls https://sh.jbang.dev | bash -s - [jbang arguments]</pre>
+  </div>
 
-        <v-tab-item>
-          <h3><a href="https://hub.docker.com/repository/docker/jbangdev/jbang-action">docker.io</a></h3>
-              <p><pre>docker run -v `pwd`:/ws --workdir=/ws jbangdev/jbang-action helloworld.java</pre></p>
-              <h3><a href="https://quay.io/repository/jbangdev/jbang-action">Quay.io</a></h3>
-              <p>
-                <p><pre>docker run -v `pwd`:/ws --workdir=/ws quay.io/jbangdev/jbang-action helloworld.java</pre></p>
-              </p>
-        </v-tab-item>
-        <v-tab-item>
-          <p>setup-jbang action:</p>
-          <pre v-highlightjs>
-            <code class="language-yaml">- name: Setup JBang
+  <div id="docker" class="tab-content">
+    <h3>docker.io</h3>
+    <pre>docker run -v `pwd`:/ws --workdir=/ws jbangdev/jbang-action helloworld.java</pre>
+    <h3>Quay.io</h3>
+    <pre>docker run -v `pwd`:/ws --workdir=/ws quay.io/jbangdev/jbang-action helloworld.java</pre>
+  </div>
+
+  <div id="github" class="tab-content">
+    <p>setup-jbang action:</p>
+    <pre>- name: Setup JBang
 uses: jbangdev/setup-jbang@main
 
 - name: properties
   run: |
-  jbang properties@jbangdev
-          </pre>
-          <p>Install and see details at <a href="https://github.com/marketplace/actions/setup-jbang">Github Action Marketplace</a></p>
-        </v-tab-item>
-        <v-tab-item>
-          <p>Plugin to run jbang as part of a Apache Maven build available from  <a href="https://github.com/jbangdev/jbang-maven-plugin/">jbang-maven-plugin</a></p>
-          <pre v-highlightjs>
-            <code class="language-xml">&lt;plugin&gt;
+  jbang properties@jbangdev</pre>
+    <p>Install and see details at <a href="https://github.com/marketplace/actions/setup-jbang">Github Action Marketplace</a></p>
+  </div>
+
+  <div id="maven" class="tab-content">
+    <p>Plugin to run jbang as part of a Apache Maven build available from <a href="https://github.com/jbangdev/jbang-maven-plugin/">jbang-maven-plugin</a></p>
+    <pre>&lt;plugin&gt;
   &lt;groupId&gt;dev.jbang&lt;/groupId&gt;
   &lt;artifactId&gt;jbang-maven-plugin&lt;/artifactId&gt;
   &lt;version&gt;0.0.7&lt;/version&gt;
@@ -357,110 +414,120 @@ uses: jbangdev/setup-jbang@main
       &lt;/configuration&gt;
     &lt;/execution&gt;
   &lt;/executions&gt;
-&lt;/plugin&gt;</code>
-</pre>
-        </v-tab-item>
-        <v-tab-item>
-          <p>Plugin to run jbang as part of a Gradle build available from  <a href="https://github.com/jbangdev/jbang-gradle-plugin/">jbang-gradle-plugin</a></p>
-          
-          <pre v-highlightjs>
-            <code class="language-java">plugins {
-  id 'dev.jbang' version '0.2.0'
-}</code>
-          </pre>
-        </v-tab-item>
-        <v-tab-item>
-          <p>Install and use JBang from JavaScript</p>
+&lt;/plugin&gt;</pre>
+  </div>
 
-          <pre v-highlightjs>
-package.json:
-<code class="language-javascript">{
+  <div id="gradle" class="tab-content">
+    <p>Plugin to run jbang as part of a Gradle build available from <a href="https://github.com/jbangdev/jbang-gradle-plugin/">jbang-gradle-plugin</a></p>
+    <pre>plugins {
+  id 'dev.jbang' version '0.2.0'
+}</pre>
+  </div>
+
+  <div id="javascript" class="tab-content">
+    <h3>npx</h3>
+    <pre>npx @jbangdev/jbang app setup</pre>
+
+    <h3>npm</h3>
+    <pre>// package.json:
+{
   "scripts": {
     "test": "node test.js"
   },
   "devDependencies": {
     "@jbangdev/jbang": "^0.1.4"
   }
-}
-</code>
-<code class="language-javascript">#! /usr/bin/env node
+}</pre>
+    <pre>// test.js:
+#! /usr/bin/env node
 const jbang = require('@jbangdev/jbang');
-jbang.exec('properties@jbangdev');</code>
-          </pre>
-        </v-tab-item>
-        <v-tab-item>
-          <p>Install and use JBang from Python</p>
+jbang.exec('properties@jbangdev');</pre>
+  </div>
 
-          <pre v-highlightjs>
-requirements.txt:
-<code>jbang
-</code>
-test.py:
-<code class="language-python">
-#! /usr/bin/env python
+  <div id="python" class="tab-content">
+    <h3>pipx</h3>
+    <pre>pipx jbang app setup</pre>
+    <h3>uvx</h3>
+    <pre>uvx jbang app setup</pre>
+    <h3>pip/jupiter notebook</h3>
+    <pre>!pip install jbang
 import jbang
-jbang.exec('properties@jbangdev')
-</code>
-          </pre>
-        </v-tab-item>
-    </v-tabs>
-  </v-app>
+jbang.exec('properties@jbangdev')</pre>
+  </div>
 </div>
+
 <script>
-new Vue({
-  el: '#app',
-  vuetify: new Vuetify(),
-  data () {
-    return {
-      tab: null,
-      items: [
-        'Appetizers', 'Entrees', 'Deserts', 'Cocktails',
-      ],
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    }
-  },
-})
+document.addEventListener('DOMContentLoaded', function() {
+  // OS detection
+  function detectOS() {
+    const platform = navigator.platform.toLowerCase();
+    const userAgent = navigator.userAgent.toLowerCase();
+    
+    // More robust OS detection
+    if (userAgent.includes('windows')) return 'windows';
+    if (userAgent.includes('mac os x')) return 'mac';
+    if (userAgent.includes('linux')) return 'linux';
+    
+    // Fallback to platform checking
+    if (platform.includes('win')) return 'windows';
+    if (platform.includes('mac')) return 'mac';
+    if (platform.includes('linux')) return 'linux';
+    
+    return 'windows'; // default fallback
+  }
 
-function copyToClipboard(button) {
-  const text = button.textContent;//.innerText;
-  
-  navigator.clipboard.writeText(text).then(() => {
-    //alert('Copied to clipboard ' + text);
-  }).catch(err => {
-    console.error('Failed to copy: ', err);
+  // Tab switching functionality
+  function switchTab(tabId) {
+    // Hide all tabs
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.classList.remove('active');
+    });
+
+    // Show selected tab
+    const selectedTab = document.getElementById(tabId);
+    const selectedButton = document.querySelector(`[data-tab="${tabId}"]`);
+    if (selectedTab) selectedTab.classList.add('active');
+    if (selectedButton) selectedButton.classList.add('active');
+  }
+
+  // Add click handlers to all tab buttons
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      switchTab(button.dataset.tab);
+    });
   });
-}
 
-function addCopyButtons() {
+  // Add click handlers to all pre elements for copying
   document.querySelectorAll('pre').forEach(pre => {
-    if (pre.style.cursor != 'pointer') {
-      pre.style.cursor = 'pointer';
-      pre.onclick = () => copyToClipboard(pre);
-      pre.title = 'Click to copy';
-      // Add a flash effect on click
-      pre.addEventListener('click', function() {
-        this.style.transition = 'background-color 0.1s';
-        this.style.backgroundColor = '#f0f0f0';
+    pre.addEventListener('click', () => {
+      const text = pre.textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        // Visual feedback
+        const originalBg = pre.style.background;
+        pre.style.background = '#e6ffe6';
         setTimeout(() => {
-          this.style.backgroundColor = '';
-          setTimeout(() => {
-            this.style.transition = '';
-          }, 100);
-        }, 100);
+          pre.style.background = originalBg;
+        }, 200);
       });
-    }
+    });
   });
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-  addCopyButtons();
-
-  const observer = new MutationObserver(addCopyButtons);
-  observer.observe(document.body, { childList: true, subtree: true });
+  // Show the OS-specific tab on load
+  try {
+    const detectedOS = detectOS();
+    console.log('Detected OS:', detectedOS);
+    switchTab(detectedOS);
+  } catch (error) {
+    console.error('Error during OS detection:', error);
+    // Fallback to windows tab if there's an error
+    switchTab('windows');
+  }
 });
 </script>
-<script src="/assets/js/os-check.js"></script>
-  <!-- Content End -->
+<!-- Content End -->
 
     </section>
   </article>
