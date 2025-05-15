@@ -5,6 +5,8 @@ permalink: /download/
 layout: splash
 ---
 
+<h2>Download JBang</h2>
+
 <style>
 .tab-container {
   margin: 20px 0;
@@ -15,18 +17,27 @@ layout: splash
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 .tab-button {
-  padding: 10px 20px;
+  padding: 16px 24px;
   background: #f5f5f5;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 8px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.tab-button i {
+  font-size: 32px;
+  margin-bottom: 4px;
 }
 
 .tab-button:hover {
@@ -89,31 +100,31 @@ pre:hover::after {
 <div class="tab-container">
   <div class="tab-buttons">
     <button class="tab-button" data-tab="windows">
-      <i class="fas fa-windows"></i> Windows
+      <i class="mdi mdi-microsoft-windows"></i> Windows
     </button>
     <button class="tab-button" data-tab="linux">
-      <i class="fas fa-linux"></i> Linux
+      <i class="mdi mdi-linux"></i> Linux
     </button>
     <button class="tab-button" data-tab="mac">
-      <i class="fas fa-apple"></i> macOS
+      <i class="mdi mdi-apple"></i> macOS
     </button>
     <button class="tab-button" data-tab="docker">
-      <i class="fab fa-docker"></i> Docker
+      <i class="mdi mdi-docker"></i> Docker
     </button>
     <button class="tab-button" data-tab="github">
-      <i class="fab fa-github"></i> GitHub Actions
+      <i class="mdi mdi-github"></i> GitHub Actions
     </button>
     <button class="tab-button" data-tab="maven">
-      <i class="fas fa-cog"></i> Maven
+      <i class="mdi mdi-screwdriver"></i> Maven
     </button>
     <button class="tab-button" data-tab="gradle">
-      <i class="fas fa-cog"></i> Gradle
+      <i class="mdi mdi-hammer"></i> Gradle
     </button>
     <button class="tab-button" data-tab="javascript">
-      <i class="fab fa-js"></i> JavaScript
+      <i class="mdi mdi-language-javascript"></i> JavaScript
     </button>
     <button class="tab-button" data-tab="python">
-      <i class="fab fa-python"></i> Python
+      <i class="mdi mdi-language-python"></i> Python
     </button>
   </div>
 
@@ -218,7 +229,10 @@ uses: jbangdev/setup-jbang@main
   </div>
 
   <div id="javascript" class="tab-content">
-    <p>Install and use JBang from JavaScript</p>
+    <h3>npx</h3>
+    <pre>npx @jbangdev/jbang app setup</pre>
+
+    <h3>npm</h3>
     <pre>// package.json:
 {
   "scripts": {
@@ -235,11 +249,12 @@ jbang.exec('properties@jbangdev');</pre>
   </div>
 
   <div id="python" class="tab-content">
-    <p>Install and use JBang from Python</p>
-    <pre># requirements.txt:
-jbang</pre>
-    <pre># test.py:
-#! /usr/bin/env python
+    <h3>pipx</h3>
+    <pre>pipx jbang app setup</pre>
+    <h3>uvx</h3>
+    <pre>uvx jbang app setup</pre>
+    <h3>pip/jupiter notebook</h3>
+    <pre>!pip install jbang
 import jbang
 jbang.exec('properties@jbangdev')</pre>
   </div>
@@ -250,10 +265,19 @@ document.addEventListener('DOMContentLoaded', function() {
   // OS detection
   function detectOS() {
     const platform = navigator.platform.toLowerCase();
+    const userAgent = navigator.userAgent.toLowerCase();
+    
+    // More robust OS detection
+    if (userAgent.includes('windows')) return 'windows';
+    if (userAgent.includes('mac os x')) return 'mac';
+    if (userAgent.includes('linux')) return 'linux';
+    
+    // Fallback to platform checking
     if (platform.includes('win')) return 'windows';
     if (platform.includes('mac')) return 'mac';
     if (platform.includes('linux')) return 'linux';
-    return 'windows'; // default to windows if unknown
+    
+    return 'windows'; // default fallback
   }
 
   // Tab switching functionality
@@ -296,8 +320,15 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Show the OS-specific tab on load
-  switchTab(detectOS());
+  try {
+    const detectedOS = detectOS();
+    console.log('Detected OS:', detectedOS);
+    switchTab(detectedOS);
+  } catch (error) {
+    console.error('Error during OS detection:', error);
+    // Fallback to windows tab if there's an error
+    switchTab('windows');
+  }
 });
 </script>
-<script src="{{base.url}}/assets/js/os-check.js"></script>
-  <!-- Content End -->
+<!-- Content End -->
