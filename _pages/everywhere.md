@@ -33,9 +33,9 @@ With JBang, running Java has never been easier or more versatile! Whether you're
 - **Directly from the Command Line**: Simply use `jbang yourfile.java` to run your Java files instantly.
 - **Using Scripts**: Embed dependencies directly in your scripts with `//DEPS` and run them effortlessly.
 - **Docker and Podman**: Run your Java apps in isolated containers using `docker run -it jbangdev/jbang` or `podman run -it jbangdev/jbang`.
-- **Node Package Manager (NPM)**: Integrate with Node.js using `npx @jbangdev/java` for seamless Java execution.
+- **Node Package Manager (NPM)**: Integrate with Node.js using `npx @jbangdev/jbang` for seamless Java execution.
 - **UV Package Manager )UVX)**: Use `uvx jbang` to run Java apps with super-fast packager for Python.
-- **Python Package Manager (PIPX)**: Execute Java applications with `pipx jbang` for a classic Pythonic touch.
+- **Python Package Manager (PIPX)**: Execute Java applications with `pipx run jbang` for a classic Pythonic touch.
 
 No matter where you are or what platform you're on, JBang ensures that Java is always at your fingertips. Give it a spin and experience the power of Java, unleashed!
 
