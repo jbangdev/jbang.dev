@@ -1,0 +1,28 @@
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-logo" href="{site.url}"><img src="{cdi:metadata.logo}" alt="{cdi:metadata.masthead_title}"></a>
+        <a class="site-title" href="{site.url}">
+          {cdi:metadata.masthead_title}
+          <span class="site-subtitle">{cdi:metadata.subtitle}</span>
+        </a>
+        <ul class="visible-links">
+          {#for link in cdi:navigation.main}
+            <li class="masthead__menu-item">
+              <a href="{link.url}">{link.title.raw}</a>
+            </li>
+          {/for}
+        </ul>
+        {#if cdi:metadata.search == true}
+        <input id="search-input" type="text" placeholder="Search...">
+        {/if}
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>

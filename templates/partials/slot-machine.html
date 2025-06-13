@@ -1,0 +1,507 @@
+<div class="slot-machine-container" style="max-width: 800px;">
+  <div class="slot-machine">
+    <div class="slot-viewport launcher">
+      <div class="slot-wheel">
+        <div class="slot-item">jbang</div>
+        <div class="slot-item">curl -Ls https://sh.jbang.dev | bash -s -</div>
+        <div class="slot-item">podman run -it jbangdev/jbang</div>
+        <div class="slot-item">docker run -it jbangdev/jbang</div>
+        <div class="slot-item">npx @jbangdev/java</div>
+        <div class="slot-item">uvx jbang</div>
+        <div class="slot-item">pipx jbang</div>
+      </div>
+    </div>
+    <div class="slot-viewport target">
+      <div class="slot-wheel">
+        <div class="slot-item">gavsearch@jbangdev</div>
+        <div class="slot-item">pkl@apple</div>
+        <div class="slot-item">jdbc@quarkiverse/quarkus-mcp-servers</div>
+        <div class="slot-item">playwright@microsoft</div>
+        <div class="slot-item">arthas@alibaba</div>
+        <div class="slot-item">mcp-proxy@quarkus.ai</div>
+        <div class="slot-item">container@quarkiverse/quarkus-mcp-servers</div>
+        <div class="slot-item">camel@apache/camel</div>
+        <div class="slot-item">com.h2database:h2:2.3.232</div>
+      </div>
+    </div>
+  </div>
+  <div class="slot-machine-controls">
+    <button id="spin-button" class="btn btn--primary">Spin!</button>
+    <button id="copy-button" class="btn btn--success">Copy</button>
+    {#if learn_more_url.or("empty") != "empty"}
+    <a href="{learn_more_url}" class="btn btn--info">Learn More</a>
+    {/if}
+    <span id="copy-feedback" class="copy-feedback">Copied!</span>
+  </div>
+</div>
+
+<style>
+.slot-machine-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.slot-machine {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: #2a2a2a;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  flex-wrap: nowrap;
+}
+
+.slot-viewport {
+  background: #fff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  margin: 0.5rem 0;
+}
+
+.slot-viewport.dragging {
+  cursor: grabbing;
+}
+
+.slot-wheel {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transform: translateY(0);
+  transition: transform 2.5s cubic-bezier(0.21, 0.53, 0.29, 0.99);
+  user-select: none;
+}
+
+.slot-wheel.no-transition {
+  transition: none;
+}
+
+.launcher {
+  width: 500px;
+  flex: 0 1 500px;
+  min-width: 0;
+}
+
+.target {
+  width: 450px;
+  flex: 0 1 450px;
+  min-width: 0;
+}
+
+.slot-item {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 0.95rem;
+  color: #333;
+  padding: 0 0.5rem;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.launcher .slot-item {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.target .slot-item {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.slot-viewport::before,
+.slot-viewport::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 25px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.slot-viewport::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.slot-viewport::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.slot-machine-controls {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#spin-button, #copy-button, .slot-machine-controls .btn {
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+}
+
+.copy-feedback {
+  position: absolute;
+  background: #4BB543;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.copy-feedback.visible {
+  opacity: 1;
+}
+
+@media (max-width: 1050px) {
+  .slot-machine {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .launcher, .target {
+    width: 100%;
+    max-width: 550px;
+    flex: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .slot-item {
+    font-size: 0.85rem;
+  }
+
+  .slot-machine {
+    padding: 1.5rem 1rem;
+    width: 95%;
+  }
+
+  .slot-viewport {
+    height: 60px;
+  }
+
+  .slot-item {
+    height: 60px;
+  }
+}
+</style>
+
+{|
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const wheels = document.querySelectorAll('.slot-wheel');
+  const viewports = document.querySelectorAll('.slot-viewport');
+  const spinButton = document.getElementById('spin-button');
+  const copyButton = document.getElementById('copy-button');
+  const copyFeedback = document.getElementById('copy-feedback');
+  let isSpinning = false;
+
+  // Store original items for each wheel
+  const originalItems = [];
+
+  // Set up each wheel with cloned items
+  wheels.forEach(wheel => {
+    // Store the original items to use as a reference
+    const initialItems = Array.from(wheel.querySelectorAll('.slot-item'));
+    originalItems.push(initialItems);
+
+    // Clear the wheel
+    wheel.innerHTML = '';
+
+    // Now add many sets of the original items
+    // First add an invisible padding item
+    const paddingTop = document.createElement('div');
+    paddingTop.className = 'slot-item';
+    paddingTop.style.visibility = 'hidden';
+    wheel.appendChild(paddingTop);
+
+    // Add 5 sets of the original items
+    for (let i = 0; i < 5; i++) {
+      initialItems.forEach(item => {
+        wheel.appendChild(item.cloneNode(true));
+      });
+    }
+
+    // Add another invisible padding item at the end
+    const paddingBottom = document.createElement('div');
+    paddingBottom.className = 'slot-item';
+    paddingBottom.style.visibility = 'hidden';
+    wheel.appendChild(paddingBottom);
+  });
+
+  // Place each wheel at a random starting position
+  function resetWheels() {
+    wheels.forEach((wheel, index) => {
+      const items = originalItems[index];
+      const itemHeight = wheel.querySelector('.slot-item').offsetHeight;
+      const viewportHeight = wheel.closest('.slot-viewport').offsetHeight;
+      const offset = (viewportHeight - itemHeight) / 2;
+
+      // Pick a random item to show (from 0 to items.length - 1)
+      const randomIndex = Math.floor(Math.random() * items.length);
+
+      // Set the wheel position to show this item (add 1 for the padding item)
+      const position = -(randomIndex + 1) * itemHeight + offset;
+      wheel.style.transition = 'none';
+      wheel.style.transform = `translateY(${position}px)`;
+    });
+  }
+
+  // Initialize wheels with a small delay to ensure styles are applied
+  setTimeout(resetWheels, 100);
+
+  // Helper function to get translation Y value
+  function getTranslateY(element) {
+    try {
+      const transform = window.getComputedStyle(element).transform;
+      if (transform === 'none') return 0;
+
+      const matrix = new WebKitCSSMatrix(transform);
+      return matrix.m42;
+    } catch (e) {
+      console.error('Error getting transform:', e);
+      return 0;
+    }
+  }
+
+  // Helper to safely set transform
+  function setTransformY(element, y) {
+    element.style.transform = `translateY(${y}px)`;
+  }
+
+  // Setup dragging
+  viewports.forEach((viewport, index) => {
+    const wheel = wheels[index];
+    const items = originalItems[index];
+
+    let isDragging = false;
+    let startY = 0;
+    let startWheelY = 0;
+
+    function onDragStart(e) {
+      if (isSpinning) return;
+      isDragging = true;
+      viewport.classList.add('dragging');
+      wheel.classList.add('no-transition');
+      startY = e.type === 'mousedown' ? e.clientY : e.touches[0].clientY;
+      startWheelY = getTranslateY(wheel);
+    }
+
+    function onDragMove(e) {
+      if (!isDragging) return;
+      e.preventDefault();
+      const currentY = e.type === 'mousemove' ? e.clientY : e.touches[0].clientY;
+      const deltaY = currentY - startY;
+
+      // Move the wheel
+      setTransformY(wheel, startWheelY + deltaY);
+    }
+
+    function onDragEnd() {
+      if (!isDragging) return;
+      isDragging = false;
+      viewport.classList.remove('dragging');
+
+      // Snap to nearest item
+      const itemHeight = wheel.querySelector('.slot-item').offsetHeight;
+      const viewportHeight = viewport.offsetHeight;
+      const offset = (viewportHeight - itemHeight) / 2;
+      const currentY = getTranslateY(wheel);
+
+      // Calculate the item index (compensate for offset)
+      const indexFromTop = Math.round((currentY - offset) / -itemHeight);
+
+      // Ensure we stay within valid range (1 to items.length)
+      const validIndex = Math.max(1, Math.min(items.length, indexFromTop));
+
+      // Calculate the final position
+      const finalY = -(validIndex * itemHeight) + offset;
+
+      // Animate to final position
+      wheel.classList.remove('no-transition');
+      setTransformY(wheel, finalY);
+    }
+
+    // Mouse events
+    viewport.addEventListener('mousedown', onDragStart);
+    window.addEventListener('mousemove', onDragMove);
+    window.addEventListener('mouseup', onDragEnd);
+
+    // Touch events
+    viewport.addEventListener('touchstart', onDragStart);
+    window.addEventListener('touchmove', onDragMove, { passive: false });
+    window.addEventListener('touchend', onDragEnd);
+  });
+
+  // Spin function
+  function spin() {
+    if (isSpinning) return;
+    isSpinning = true;
+
+    wheels.forEach((wheel, wheelIndex) => {
+      const items = originalItems[wheelIndex];
+      const itemHeight = wheel.querySelector('.slot-item').offsetHeight;
+      const viewportHeight = wheel.closest('.slot-viewport').offsetHeight;
+      const offset = (viewportHeight - itemHeight) / 2;
+
+      // Choose a random final item
+      const finalItemIndex = Math.floor(Math.random() * items.length);
+
+      // Calculate the final position (add 1 for padding)
+      const finalPosition = -((finalItemIndex + 1) * itemHeight) + offset;
+
+      // Get current position
+      const currentPosition = getTranslateY(wheel);
+
+      // Calculate the exact target position to land directly on the final position
+      // This ensures there's no need to reset at the end
+      // We need to determine how many items to spin through to land at finalPosition
+      let itemsToFinalPosition = finalItemIndex + 1; // +1 for padding
+
+      // Determine current item index (adjusted for offset)
+      const currentIndex = Math.round((currentPosition - offset) / -itemHeight);
+
+      // Calculate items to spin through to reach final position
+      let itemsToSpin = itemsToFinalPosition - currentIndex;
+
+      // If we need to go backwards, add full rotation instead
+      if (itemsToSpin <= 0) {
+        itemsToSpin += items.length;
+      }
+
+      // Add full rotations
+      itemsToSpin += (2 + Math.floor(Math.random() * 2)) * items.length;
+
+      // Calculate exact target position
+      const targetPosition = currentPosition - (itemsToSpin * itemHeight);
+
+      // Apply an immediate reset if needed
+      if (isNaN(currentPosition) || currentPosition === 0) {
+        wheel.style.transition = 'none';
+        const resetPosition = -(items.length / 2) * itemHeight + offset;
+        setTransformY(wheel, resetPosition);
+        wheel.offsetHeight; // Force reflow
+      }
+
+      // Start the spin with delay to ensure any resets are applied
+      setTimeout(() => {
+        wheel.style.transition = 'transform 2.5s cubic-bezier(0.21, 0.53, 0.29, 0.99)';
+        setTransformY(wheel, targetPosition);
+
+        wheel.addEventListener('transitionend', function onEnd() {
+          // Directly ensure we're at the final position
+          if (getTranslateY(wheel) !== finalPosition) {
+            wheel.style.transition = 'none';
+            setTransformY(wheel, finalPosition);
+            wheel.offsetHeight; // Force reflow
+            wheel.style.transition = 'transform 2.5s cubic-bezier(0.21, 0.53, 0.29, 0.99)';
+          }
+
+          // Clean up
+          wheel.removeEventListener('transitionend', onEnd);
+
+          // Allow spins again when all wheels are done
+          if (wheelIndex === wheels.length - 1) {
+            isSpinning = false;
+          }
+        }, { once: true });
+      }, 50);
+    });
+  }
+
+  // Function to get the current visible items in both slots
+  function getCurrentCombination() {
+    const result = [];
+
+    wheels.forEach((wheel, wheelIndex) => {
+      const items = originalItems[wheelIndex];
+      const itemHeight = wheel.querySelector('.slot-item').offsetHeight;
+      const viewportHeight = wheel.closest('.slot-viewport').offsetHeight;
+      const offset = (viewportHeight - itemHeight) / 2;
+
+      // Get current position
+      const currentPosition = getTranslateY(wheel);
+
+      // Calculate current visible item index
+      const currentIndex = Math.round((currentPosition - offset) / -itemHeight) - 1;
+
+      // Get the text of the visible item (accounting for index boundaries)
+      let safeIndex = currentIndex;
+      if (safeIndex < 0) safeIndex = 0;
+      if (safeIndex >= items.length) safeIndex = items.length - 1;
+
+      result.push(items[safeIndex].textContent);
+    });
+
+    return result.join(' ');
+  }
+
+  // Add click handler to spin button
+  spinButton.addEventListener('click', function() {
+    if (!isSpinning) {
+      spin();
+    }
+  });
+
+  // Copy button click handler
+  copyButton.addEventListener('click', function() {
+    const combination = getCurrentCombination();
+
+    // Copy to clipboard
+    navigator.clipboard.writeText(combination).then(() => {
+      // Show feedback
+      copyFeedback.classList.add('visible');
+
+      // Position the feedback near the button
+      const buttonRect = copyButton.getBoundingClientRect();
+      copyFeedback.style.top = `${buttonRect.top - 40}px`;
+      copyFeedback.style.left = `${buttonRect.left + buttonRect.width/2 - 40}px`;
+
+      // Hide feedback after a delay
+      setTimeout(() => {
+        copyFeedback.classList.remove('visible');
+      }, 2000);
+    }).catch(err => {
+      console.error('Could not copy text: ', err);
+    });
+  });
+
+  // Also add copy function to transitionend events for both wheels
+  wheels.forEach((wheel, wheelIndex) => {
+    wheel.addEventListener('transitionend', function() {
+      // Update copy button text to show current combination
+      copyButton.setAttribute('aria-label', `Copy: ${getCurrentCombination()}`);
+    });
+  });
+
+  // If things get stuck, reset on window resize
+  window.addEventListener('resize', function() {
+    isSpinning = false;
+    setTimeout(resetWheels, 100);
+  });
+
+  // Auto-spin when page loads
+  setTimeout(function() {
+    spin();
+  }, 800);
+});
+</script>
+|}

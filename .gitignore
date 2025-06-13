@@ -1,13 +1,14 @@
-# Created by https://www.gitignore.io/api/jekyll
-### Jekyll ###
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-# End of https://www.gitignore.io/api/jekyll
-.idea
-build
-.gradle
-.tweet-cache
-.vscode
+public/documentation
+target
 node_modules
+
+## IDE
+.settings
+.project
+.buildpath
+.idea
+*.iml
+.vscode
+
+## OS related
+*.DS_Store

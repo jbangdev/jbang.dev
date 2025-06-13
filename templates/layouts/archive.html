@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{#let header=page.header()}
+
+{#if header.has_overlay}
+  {#include partials/page__hero.html /}
+{/if}
+
+<div id="main" role="main">
+  <div class="archive">
+      {#if !header.has_overlay}
+      <h1 id="page-title" class="page__title">{page.data.title}</h1>
+      {/if}
+    {#insert /}
+  </div>
+</div>

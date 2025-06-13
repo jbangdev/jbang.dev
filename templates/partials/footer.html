@@ -1,0 +1,27 @@
+{#let md=cdi:metadata}
+<div class="page__footer-follow">
+    <ul class="social-icons">
+        <li><strong>Follow:</strong></li>
+      {#for link in md.footer.links}
+        {#if link.containsKey('url') and link.containsKey('label')}
+        <li>
+            <a href="{link.url}" rel="me">
+                <i class="{link.icon ?: 'fas fa-link'}" aria-hidden="true"></i>
+                {link.label}
+            </a>
+        </li>
+        {/if}
+      {/for}
+
+      <li>
+          <a href="{site.page('feed.xml')}">
+              <i class="fas fa-fw fa-rss-square" aria-hidden="true"></i>
+              Feed
+          </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="page__footer-copyright">
+      &copy;2025 {md.name}. Powered by <a href="https://iamroq.com" rel="nofollow">Roq</a>.
+  </div>

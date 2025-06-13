@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+$serif      : Georgia, Times, serif;
+$sans-serif : "Montserrat",sans-serif;
+
+$link-color:#EB586F;
+
+a {
+    text-decoration: none;
+    color: #EB586F;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.v-tabs-items {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+/* button styling */
+.copyButton {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-left: 5px;
+    margin-right: 10px;
+    background-color: transparent;
+}
+.copyButton:hover {
+    opacity: 0.8;
+}
+@import "minimal-mistakes/skins/contrast"; // skin
+@import "minimal-mistakes"; // main partials
+
+@import "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css";

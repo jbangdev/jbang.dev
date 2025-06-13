@@ -1,0 +1,25 @@
+{#let md=cdi:metadata}
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+var search = docsearch({
+   appId: '{md.algolia.application_id}',
+
+  apiKey:'{md.algolia.search_only_api_key }',
+  indexName: '{md.algolia.index_name }',
+  inputSelector: '#search-input',
+  algoliaOptions: { hitsPerPage: 10 }
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
+</script>
+<script>
+  window.addEventListener('load', function focusSearchInput () {
+    window.removeEventListener('load', focusSearchInput)
+    document.querySelector('#search-input').focus()
+  })
+  </script>
