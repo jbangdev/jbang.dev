@@ -1,7 +1,7 @@
 site:
   title: JBang
   url: /documentation
-  start_page: guide::index.adoc
+  start_page: jbang-all::index.adoc
   keys:
     google_analytics: 'UA-156530423-2'
 
@@ -11,15 +11,32 @@ asciidoc:
 
 content:
   sources:
+    - url: https://github.com/jbangdev/jbang.dev
+      branches: main
+      start_path: docs-site
     - url: https://github.com/jbangdev/jbang
       branches: main
       start_path: docs
     - url: https://github.com/jbangdev/jbang-idea
       branches: main
       start_path: docs
+    - url: https://github.com/jbangdev/jbang-vscode
+      branches: main
+      start_path: docs
+    - url: https://github.com/jbangdev/jbang-maven-plugin
+      branches: main
+      start_path: docs
+    - url: https://github.com/jbangdev/jbang-gradle-plugin
+      branches: main
+      start_path: docs
+
+antora:
+  extensions:
+    - require: '@antora/collector-extension'
 
 ui:
   bundle:
     url: https://github.com/jbangdev/jbang-antora-ui/releases/latest/download/ui-bundle.zip
     # Required when using cache or fetch will not update ui.
     snapshot: true
+

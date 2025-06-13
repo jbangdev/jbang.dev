@@ -1,7 +1,7 @@
 site:
   title: JBang
   url: /documentation
-  start_page: guide::index.adoc
+  start_page: jbang-all::index.adoc
 
 asciidoc:
   attributes:
@@ -9,12 +9,28 @@ asciidoc:
 
 content:
   sources:
+    - url: ../../jbang.dev
+      branches: HEAD
+      start_path: docs-site
     - url: ../../jbang
       branches: HEAD
       start_path: docs
     - url: ../../jbang-idea
       branches: HEAD
       start_path: docs
+    - url: ../../jbang-vscode
+      branches: HEAD
+      start_path: docs
+    - url: ../../jbang-maven-plugin
+      branches: HEAD
+      start_path: docs
+    - url: ../../jbang-gradle-plugin
+      branches: HEAD
+      start_path: docs
+
+antora:
+  extensions:
+    - require: '@antora/collector-extension'
 
 ui:
   bundle:

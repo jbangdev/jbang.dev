@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+{#let header=page.header()}
+
+{#if header.has_overlay}
+{#include partials/page__hero.html /}
+{/if}
+
+<div id="main" role="main">
+  <article class="page">
+    {#include partials/metacontent.html /}
+
+    <div class="page__inner-wrap">
+        {#if !header.overlay_color and !header.overlay_image}
+        <header>
+          {#if page.data.containsKey('title')}
+          <h1 id="page-title" class="page__title">
+            <a href="{page.url}">{page.title.markdown}</a>
+          </h1>
+          {/if}
+          {#include partials/page__meta.html /}
+        </header>
+        {/if}
+
+      <section class="page__content">
+        {#insert /}
+      </section>
+
+      <footer class="page__meta">
+        <h4><i>TODO: Roq tagging support</i></h4>
+        {!
+        {#include partials/page__taxonomy.html /}
+        {% include page__date.html %}
+        !}
+      </footer>
+
+      {#if page.data.getBoolean("share", false)}
+      {#include partials/social-share.html /}
+      {/if}
+
+      {#if page.data.getBoolean("navigate", false)}
+      {#include partials/post_pagination.html /}
+      {/if}
+    </div>
+
+    {#if cdi:metadata.comments.provider and page.data.getBoolean("comments", false)}
+    {#include partials/comments.html /}
+    {/if}
+  </article>
+
+  {#if page.id and page.data.getBoolean("related", false)}
+  {#include partials/page__related.html posts=site.collections.posts /}
+  {/if}
+</div>

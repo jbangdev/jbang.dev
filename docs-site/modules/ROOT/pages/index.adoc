@@ -1,0 +1,39 @@
+= JBang All Documentation
+:idprefix:
+:idseparator: -
+ifndef::env-github[]
+:icons: font
+endif::[]
+ifdef::env-github[]
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
+Welcome to the JBang documentation hub! Use the links below to explore guides, references, and integrations.
+
+== JBang
+
+* xref:jbang:ROOT:index.adoc[JBang]
+  - Core JBang: installation, usage, and features
+
+== JBang Command Line
+
+* xref:jbang:cli:jbang.adoc[JBang Command Line]
+  - `jbang` command-line interface reference
+
+== Build Tools Support
+
+* xref:jbang-gradle-plugin:ROOT:index.adoc[JBang Gradle Plugin]
+  - Gradle plugin for JBang integration
+* xref:jbang-maven-plugin:ROOT:index.adoc[JBang Maven Plugin]
+  - Maven plugin for JBang integration
+
+== IDE Support
+
+* xref:jbang-vscode:ROOT:index.adoc[JBang VSCode]
+  - Visual Studio Code extension for JBang
+* xref:jbang-idea:ROOT:index.adoc[JBang IDEA]
+  - IntelliJ IDEA plugin for JBang

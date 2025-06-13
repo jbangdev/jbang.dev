@@ -1,0 +1,38 @@
+---
+read_time: false
+comments: false
+share: false
+related: false
+---
+
+<!doctype html>
+{#include partials/copyright.html /}
+<html lang="en-US" class="no-js">
+  <head>
+    {#include partials/head.html /}
+    {#include partials/head/custom.html /}
+  </head>
+
+  <body class="layout--{page.data.layout} {page.data.getString('classes').or('')}">
+    {#include partials/skip-links.html /}
+    {#include partials/masthead.html /}
+
+    <div class="initial-content">
+      {#insert /}
+    </div>
+
+    {#if cdi:metadata.search == true}
+      <div class="search-content">
+        {#include partials/search/search_form.html /}
+      </div>
+    {/if}
+
+    <div id="footer" class="page__footer">
+      <footer>
+        {#include partials/footer.html /}
+      </footer>
+    </div>
+
+    {#include partials/scripts.html /}
+  </body>
+</html>

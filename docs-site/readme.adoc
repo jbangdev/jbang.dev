@@ -1,0 +1,42 @@
+[#jbang-documentation-site]
+# JBang Documentation Site
+
+JBang https://jbang.dev/documentation[documentation site] is using Antora to gather and generate the documentation from all the various parts of the JBang "family", i.e. jbang itself, Intellij & VSCode plugin and more as they are added.
+
+This `docs-site` folder has two key parts:
+
+1. the antora playbooks used for defining what is included
+2. the "landing" page navigation on how the whole set gets shown to the user
+
+## Getting started
+
+You can generate the "production" sites using `just docs` command then you can see what the next push to jbang.dev would look like.
+
+For actual writing and being able to update you need a local copy of the repositories. You can use `just setup-docs` to have it automatically checked out.
+
+[source]
+----
+just setup-docs
+----
+
+When that has run - and don't worry if you already have the folders checked out it will show an error that dir already exist; that is expected.
+
+Now run local-docs generation:
+
+[source]
+----
+just local-docs
+----
+
+This will generate all the needed docs using antora and open up the generated site.
+
+You can now edit the .adoc files with decent preview (Intellij and VSCode has good asciidoc support - especially intellij) and use `just local-docs` to get full site preview.
+
+## "live-reload" of docs
+
+If you have `watchexec` installed you can use `just watch-local-docs` that will monitor for documentation changes and regenerate.
+
+
+
+
+
