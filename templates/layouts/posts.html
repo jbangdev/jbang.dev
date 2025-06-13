@@ -1,0 +1,39 @@
+---
+layout: archive
+paginate:
+    collection: posts
+---
+
+{#insert /}
+
+{!
+
+{#for post in site.collections.posts.paginated(page.paginator)}
+
+!}
+{#let entries_layout = page.data.entries_layout.or("list") }
+{#let postsInYear = site.collections.posts.getPostsInYear()}
+
+<ul class="taxonomy__index">
+  {! % assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' % !}
+  {#for year in postsInYear}
+    <li>
+      <a href="#{year.key}">
+        <strong>{year.key}</strong> <span class="taxonomy__count">{year.value.size}</span>
+      </a>
+    </li>
+  {/for}
+</ul>
+
+
+{#for year in postsInYear}
+  <section id="{year.key}" class="taxonomy__section">
+    <h2 class="archive__subtitle">{year.key}</h2>
+    <div class="entries-{{ entries_layout }}">
+      {#for post in year.value %}
+        {#include partials/archive-single.html type=entries_layout /}
+      {/for}
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+{/for}

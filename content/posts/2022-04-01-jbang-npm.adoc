@@ -1,0 +1,79 @@
+---
+header:
+  teaser: /assets/images/java_script.png
+title: "jbang-npm: Java Script in your JavaScript"
+tagline: Java Script in your JavaScript
+category : learn
+tags : [jbang]
+author : Max Rydahl Andersen
+bgcolor: ff5a71
+keywords: jbang npm javascript
+excerpt: Today we are announcing jbang-npm a npm package which brings you Java Script to your JavaScript project.
+---
+Today we are announcing https://github.com/jbangdev/jbang-npm[jbang-npm] a npm package which brings you Java Script to your JavaScript project.
+
+`jbang-npm` joins `https://github.com/jbangdev/jbang-maven-plugin[jbang-maven]` and `https://github.com/jbangdev/jbang-gradle-plugin[jbang-gradle]` as tools that brings the power of Java Script to your favourite build setup.
+
+[.text-center]
+image:https://github.com/jbangdev/jbang-npm/raw/main/java_script.png[width=50%]
+
+`jbang-npm` supports running any kind java code that JBang supports.
+
+Whether that is a script from the https://jbang.dev/appstore[AppStore], a Maven GAV, a jar or simply a java file stored in your project.
+
+== Example
+
+Given you have a script name `test.js`:
+
+[source,javascript]
+----
+#! /usr/bin/env node
+const jbang = require('@jbangdev/jbang');
+jbang.exec('--java 18', 'properties@jbangdev', 'java');
+jbang.exec('hello.java', '"Java Script"')
+----
+
+And in `package.json`:
+
+[source,json]
+----
+{
+  "scripts": {
+    "test": "node test.js"
+  },
+  "devDependencies": {
+    "@jbangdev/jbang": "^0.1.4"
+  }
+}
+----
+
+With a `hello.java` that contains:
+
+[source,java]
+----
+//DEPS com.github.lalyos:jfiglet:0.0.8
+
+import com.github.lalyos.jfiglet.FigletFont;
+
+class hello {
+
+    public static void main(String... args) throws Exception {
+        System.out.println(FigletFont.convertOneLine(
+               "Hello " + ((args.length>0)?args[0]:"jbang")));  ;;
+    }
+}
+----
+
+When you run this using `npm run test` it will automatically install JBang and Java if necessary and you get an output like:
+
+image::/assets/images/jbang-npm-output.png[]
+
+In this case JBang was already installed but it did go transparently and downloaded Java 18 as one of the scripts was called with `--java 18`.
+
+The opportunities are endless!
+
+`jbang-npm` was contributed by Peter Thomas and Pallafor Yodis from https://karatelabs.github.io/karate/[Karate] hall of fame.
+
+Very much appreciated and looking forward to see what you make happen with Java Script in your JavaScript!
+
+Have fun!

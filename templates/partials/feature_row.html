@@ -1,0 +1,27 @@
+<div class="feature__wrapper">
+  {#for f in feature_row }
+  <div class="feature__item{type ?: ""}">
+    <div class="archive__item">
+      {#if f.containsKey('image_path') }
+      <div class="archive__item-teaser">
+        <img src="{f.image_path}" alt="{f.alt ?: "" }">
+        {#if f.containsKey('image_caption')}
+          <span class="archive__item-caption">{f.image_caption.raw}</span> {! | markdownify | remove: "<p>" | remove: "</p>" } !}
+        {/if}
+      </div>
+      {/if}
+      <div class="archive__item-body">
+        {#if f.containsKey('title')}
+        <h2 class="archive__item-title">{f.title.raw}</h2>
+        {/if}
+        {#if f.containsKey('excerpt')}
+        <div class="archive__item-excerpt">{f.excerpt.raw} {! | markdownify !}</div>
+        {/if}
+        {#if f.containsKey('url')}
+        <p><a href="{f.url}" class="btn {f.btn_class}">{f.btn_label ?: "Learn More"}</a></p>
+        {/if}
+      </div>
+    </div>
+  </div>
+  {/for}
+</div>
