@@ -1,7 +1,7 @@
 site:
   title: JBang
   url: /documentation
-  start_page: guide::index.adoc
+  start_page: jbang-all::index.adoc
   keys:
     google_analytics: 'UA-156530423-2'
 
@@ -11,6 +11,9 @@ asciidoc:
 
 content:
   sources:
+    - url: https://github.com/jbangdev/jbang.dev
+      branches: HEAD
+      start_path: docs-site
     - url: https://github.com/jbangdev/jbang
       branches: main
       start_path: docs
@@ -23,3 +26,4 @@ ui:
     url: https://github.com/jbangdev/jbang-antora-ui/releases/latest/download/ui-bundle.zip
     # Required when using cache or fetch will not update ui.
     snapshot: true
+

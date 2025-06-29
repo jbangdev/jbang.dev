@@ -1,0 +1,29 @@
+= JBang All Documentation
+:idprefix:
+:idseparator: -
+ifndef::env-github[]
+:icons: font
+endif::[]
+ifdef::env-github[]
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
+See table below and/or index on the left for JBang Documentation.
+
+[cols="1,1"]
+|===
+|Documentation |Description
+
+|xref:jbang:ROOT:index.adoc[JBang]
+|Core JBang documentation covering installation, usage and features
+
+|xref:jbang:cli:jbang.adoc[CLI Reference]
+|Detailed command-line interface documentation
+
+|xref:jbang-idea:ROOT:index.adoc[JBang IDEA]
+|Documentation for the JBang IntelliJ IDEA plugin
+|===

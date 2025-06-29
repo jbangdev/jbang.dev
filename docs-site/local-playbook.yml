@@ -1,7 +1,7 @@
 site:
   title: JBang
   url: /documentation
-  start_page: guide::index.adoc
+  start_page: jbang-all::index.adoc
 
 asciidoc:
   attributes:
@@ -9,6 +9,9 @@ asciidoc:
 
 content:
   sources:
+    - url: ../../jbang.dev
+      branches: HEAD
+      start_path: docs-site
     - url: ../../jbang
       branches: HEAD
       start_path: docs
