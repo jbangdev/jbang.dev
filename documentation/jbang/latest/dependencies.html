@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dependencies :: JBang</title>
+    <link rel="prev" href="usage.html">
+    <link rel="next" href="javaversions.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-156530423-2')</script>
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jbang.dev">JBang</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/appstore">AppStore</a>
+        <a class="navbar-item" href="/try">Try</a>
+        <a class="navbar-item" href="/download">Download</a>
+                <a class="navbar-item" href="/documentation">Documentation</a>
+      </div>
+    </div>
+    <div class="navbar-item hide-for-print">
+        <input id="search-input" type="text" placeholder="Search (by Algolia)">
+      </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="jbang" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">JBang</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Intro</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="usage.html">Usage</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="dependencies.html">Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="javaversions.html">Java Versions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="organizing.html">File Organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="running.html">Running</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="debugging.html">Debugging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="editing.html">Editing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="exporting.html">Exporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install.html">Install Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="templates.html">Templates</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="alias_catalogs.html">Aliases &amp; Catalogs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="caching.html">Caching</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">CLI Reference</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/jbang.html">jbang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cli/jbang-run.html">run</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cli/jbang-build.html">build</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cli/jbang-edit.html">edit</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cli/jbang-init.html">init</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/jbang-alias.html">alias</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-alias-add.html">add</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-alias-list.html">list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-alias-remove.html">remove</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/jbang-template.html">template</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-template-add.html">add</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-template-list.html">list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-template-remove.html">remove</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/jbang-catalog.html">catalog</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-catalog-add.html">add</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-catalog-update.html">update</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-catalog-list.html">list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-catalog-remove.html">remove</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/jbang-trust.html">trust</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-trust-add.html">add</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-trust-list.html">list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-trust-remove.html">remove</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/jbang-cache.html">cache</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-cache-clear.html">clear</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cli/jbang-completion.html">completion</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/jbang-jdk.html">jdk</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-jdk-default.html">default</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-jdk-home.html">home</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-jdk-install.html">install</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-jdk-java-env.html">java-env, env</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-jdk-list.html">list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-jdk-uninstall.html">uninstall</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cli/jbang-version.html">version</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/jbang-wrapper.html">wrapper</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-wrapper-install.html">install</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/jbang-info.html">info</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-info-tools.html">tools</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-info-classpath.html">classpath</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-info-jar.html">jar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-info-docs.html">docs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/jbang-app.html">app</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-app-install.html">install</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-app-list.html">list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-app-uninstall.html">uninstall</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-app-setup.html">setup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/jbang-export.html">export</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-export-portable.html">portable</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-export-local.html">local</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-export-mavenrepo.html">mavenrepo</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-export-native.html">native</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-export-fatjar.html">fatjar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-export-jlink.html">jlink</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-export-gradle.html">gradle</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-export-maven.html">maven</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/jbang-config.html">config</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-config-get.html">get</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-config-set.html">set</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-config-unset.html">unset</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cli/jbang-config-list.html">list</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">JBang</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">JBang</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../jbang-all/latest/index.html">JBang All Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang-all/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../jbang-idea/latest/index.html">JBang Idea Plugin</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang-idea/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../jbang-all/latest/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">JBang</a></li>
+    <li><a href="dependencies.html">Dependencies</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/jbangdev/jbang/edit/main/docs/modules/ROOT/pages/dependencies.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Dependencies</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you want to write real scripts you will want to use some java libraries.
+To specify dependencies you use gradle-style locators or links to Git sources. Below are examples for <code>log4j</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="using-deps"><a class="anchor" href="#using-deps"></a>Using <code>//DEPS</code></h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">///usr/bin/env jbang "$0" "$@" ; exit $?
+<i class="conum" data-value="1"></i><b>(1)</b>
+//DEPS ch.qos.reload4j:reload4j:1.2.19
+
+import static java.lang.System.out;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.BasicConfigurator;
+
+import java.util.Arrays;
+
+class classpath_example {
+
+	static final Logger logger = Logger.getLogger(classpath_example.class);
+
+	public static void main(String[] args) {
+		BasicConfigurator.configure(); <i class="conum" data-value="2"></i><b>(2)</b>
+		logger.info("Welcome to jbang");
+
+		Arrays.asList(args).forEach(arg -&gt; logger.warn("arg: " + arg));
+		logger.info("Hello from Java!");
+	}
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>//DEPS</code> must be placed at the start of line and can be one or more space separated dependencies. Note that there must be no space between <code>//</code> and <code>DEPS</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Minimal logging setup - required by log4j.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Now when you run this, the first time with no existing dependencies installed you should get an output like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">$ ./classpath_example.java
+[jbang] Resolving dependencies...
+[jbang]     Resolving ch.qos.reload4j:reload4j:1.2.19...Done
+[jbang] Dependencies resolved
+0 [main] INFO classpath_example  - Welcome to jbang
+1 [main] INFO classpath_example  - Hello from Java!</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Dependency classifiers shall be put <em>after</em> the version number:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//DEPS io.netty:netty-transport-native-kqueue:4.1.107.Final:osx-aarch_64</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>is the equivalent of the following Maven dependency declaration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;io.netty&lt;/groupId&gt;
+    &lt;artifactId&gt;netty-transport-native-kqueue&lt;/artifactId&gt;
+    &lt;version&gt;4.1.107.Final&lt;/version&gt;
+    &lt;classifier&gt;osx-aarch_64&lt;/classifier&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="fatjar-dependencies-experimental"><a class="anchor" href="#fatjar-dependencies-experimental"></a>'fatjar' dependencies [Experimental]</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Maven 4 introduces a special dependency type called <code>fatjar</code> which can be used to designate that the dependency should be treated as a jar that have all its dependencies included and thus not require fetching declared dependencies.</p>
+</div>
+<div class="paragraph">
+<p>JBang 0.117 adds support for this allowing you to just add <code>@fatjar</code> at the end.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><code>jbang eu.maveniverse.maven.plugins:toolbox:0.1.9:cli@fatjar</code></p>
+</div>
+<div class="paragraph">
+<p>Without <code>@fatjar</code> it would resolve dependencies which would be redundant.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="managed-dependencies-bom-poms-experimental"><a class="anchor" href="#managed-dependencies-bom-poms-experimental"></a>Managed dependencies ("BOM POM"'s) [Experimental]</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When using libraries and frameworks it can get tedious to manage and update multiple versions.
+For that jbang started since 0.62 to support so called "BOM POM"'s which are commonly used for managing versions.</p>
+</div>
+<div class="paragraph">
+<p>You use it by having as the very first dependency a <code>@pom</code> reference. This first reference will be used
+to define your managed dependences. Below is an example how that could look like when using Quarkus:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//DEPS io.quarkus:quarkus-bom:2.11.2.Final@pom
+//DEPS io.quarkus:quarkus-resteasy
+//DEPS io.quarkus:quarkus-smallrye-openapi
+//DEPS io.quarkus:quarkus-swagger-ui</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice the <code>@pom</code> at first line and then following dependencies are not required to use explicit versions.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+At the moment jbang support only one bom pom; in future it should be expanded to multiple.
+For now you can workaround this by reusing a published pom that includes all the dependency management
+sections you need.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="using-links-to-git-sources"><a class="anchor" href="#using-links-to-git-sources"></a>Using links to Git sources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Instead of gradle-style locators you can also use URLs to projects on GitHub, GitLab or BitBucket.
+Links to those projects will then be converted to artifacts references on <a href="https://jitpack.io/">jitpack</a>.
+You can use links to the root of the project, to the root of a tag/release and to specific commits.</p>
+</div>
+<div class="paragraph">
+<p>If the project you link to has multiple modules and you want only a specific module you can specify the
+name of the module by appending <code>#name-of-module</code> to the URL.</p>
+</div>
+<div class="paragraph">
+<p>And finally if the link you provide is to a specific branch of the project then you need to append
+<code>#:SNAPSHOT</code> to the URL. (If you have both a branch and a module name then use <code>#name-of-module:SNAPSHOT</code>)</p>
+</div>
+<div class="paragraph">
+<p>Note: if no branch specified <code>main-SNAPSHOT</code> will be used and if you list <code>main</code> or <code>master</code> they will both
+be treated as if you want the snapshot version.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Examples of links and their resulting locator:</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Locator</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbangdev/jbang" class="bare">https://github.com/jbangdev/jbang</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.github.jbangdev:jbang:main-SNAPSHOT</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbangdev/jbang/tree/v1.2.3" class="bare">https://github.com/jbangdev/jbang/tree/v1.2.3</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.github.jbangdev:jbang:v1.2.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbangdev/jbang/tree/f1f34b031d2163e0cdc6f9a3725b59f47129c923">https://github.com/jbangdev/jbang/tree/f1f34b031&#8230;&#8203;</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.github.jbangdev:jbang:f1f34b031d</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbangdev/jbang#mymodule" class="bare">https://github.com/jbangdev/jbang#mymodule</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.github.jbangdev.jbang:mymodule:main-SNAPSHOT</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbangdev/jbang/tree/mybranch#:SNAPSHOT" class="bare">https://github.com/jbangdev/jbang/tree/mybranch#:SNAPSHOT</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.github.jbangdev:jbang:mybranch-SNAPSHOT</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jbangdev/jbang/tree/mybranch#mymodule:SNAPSHOT" class="bare">https://github.com/jbangdev/jbang/tree/mybranch#mymodule:SNAPSHOT</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.github.jbangdev.jbang: mymodule:mybranch-SNAPSHOT</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="offline-mode"><a class="anchor" href="#offline-mode"></a>Offline mode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In case you prefer <code>jbang</code> to just fail-fast when dependencies cannot be found locally you can run <code>jbang</code> in offline mode using
+<code>jbang -o</code> or <code>jbang --offline</code>. In this mode <code>jbang</code> will simply fail if dependencies have not been cached already.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="downloading-sources"><a class="anchor" href="#downloading-sources"></a>Downloading Sources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>JBang can download sources for your dependencies and make them available in your IDE. <code>jbang edit</code> will do it automatically but you can also enable it globally by setting environment variable <code>JBANG_DOWNLOAD_SOURCES</code> to <code>true</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="repositories"><a class="anchor" href="#repositories"></a>Repositories</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default <code>jbang</code> uses <a href="https://repo1.maven.org/maven2/">maven central</a>.</p>
+</div>
+<div class="paragraph">
+<p>And if you are using the above mentioned URL dependencies <a href="https://jitpack.io">jitpack</a> will be added automatically as well.</p>
+</div>
+<div class="paragraph">
+<p>If that is not sufficient for you or need some custom repo you can use <code>//REPOS id=repourl</code> to
+state which repository URL to use.</p>
+</div>
+<div class="paragraph">
+<p>For ease of use there are also a few shorthands to use popular commonly available repositories.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Short name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>central</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven Central (<code><a href="https://repo1.maven.org/maven2/" class="bare">https://repo1.maven.org/maven2/</a></code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcenter</code> <strong>(deprecated, do not use)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://jcenter.bintray.com/" class="bare">https://jcenter.bintray.com/</a></code> <strong>(defunct, redirects to Maven Central; do not use)</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>google</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://maven.google.com/" class="bare">https://maven.google.com/</a></code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jitpack</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://jitpack.io/" class="bare">https://jitpack.io/</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Following example enables use of Maven Central and add a custom <code>acme</code> repository.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//REPOS mavencentral,acme=https://maven.acme.local/maven</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you add any <code>//REPOS</code> lines <code>jbang</code> will no longer consult <code>mavencentral</code> thus you need to explicitly add it if needed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For secure authentication <code>jbang</code> will honor <code>~/.m2/settings-security.xml</code> for configuring
+username/passwords.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>By default, <code>jbang</code> uses <code>~/.m2</code> as local repository, but this can be overwritten by the environment variable <code>JBANG_REPO</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="transitive-repositories"><a class="anchor" href="#transitive-repositories"></a>Transitive repositories</h3>
+<div class="paragraph">
+<p>JBang honors by default the repositories found in transitive dependencies (similar to how Maven does).</p>
+</div>
+<div class="paragraph">
+<p>You can however disable this by using the <code>--ignore-transitive-repositories</code> (or <code>-itr</code>) option.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="using-grab"><a class="anchor" href="#using-grab"></a>Using <code>@Grab</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There is also support for using Groovy lang style <code>@Grab</code> syntax.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">///usr/bin/env jbang "$0" "$@" ; exit $?
+
+import static java.lang.System.out;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.BasicConfigurator;
+
+import java.util.Arrays;
+
+import groovy.lang.Grab; <i class="conum" data-value="1"></i><b>(1)</b>
+import groovy.lang.Grapes;
+import groovy.lang.GrabResolver;
+
+@GrabResolver("central") <i class="conum" data-value="2"></i><b>(2)</b>
+@GrabResolver(name="acme", root="https://maven.acme.local/maven")
+@Grapes({ <i class="conum" data-value="3"></i><b>(3)</b>
+		@Grab(group = "ch.qos.reload4j", module = "reload4j", version = "1.2.19"), <i class="conum" data-value="4"></i><b>(4)</b>
+		@Grab(group = "org.apache.groovy", module = "groovy", version = "4.0.0"), <i class="conum" data-value="5"></i><b>(5)</b>
+})
+class classpath_example {
+
+	static final Logger logger = Logger.getLogger(classpath_example.class);
+
+	public static void main(String[] args) {
+		BasicConfigurator.configure();
+		Arrays.asList(args).forEach(out::println);
+	}
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Import needed to make the compiler be okey with <code>@Grab</code> annotation.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Using <code>GrabResolver</code> to enable <code>mavenCentral</code> and custom <code>acme</code> repository</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>In Groovy you normally put <code>@Grab</code> on import statements. That is not allowed in Java thus when having multiple imports you need to put them in a <code>@Grapes</code> annotation first.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><code>jbang</code> will grab any <code>@Grab</code> annotation and assume it is declaring dependencies.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>In particular to be able to import <code>groovy.lang.*</code> annotations, groovy itself must be in the list of dependencies.</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="system-properties-and-environment-variables"><a class="anchor" href="#system-properties-and-environment-variables"></a>System properties and Environment variables</h3>
+<div class="paragraph">
+<p>In dependencies you can refer to environment and system properties to parameterize the dependencies.
+It uses the format <code>${[env.]propertyname:&lt;defaultvalue&gt;}</code>.</p>
+</div>
+<div class="paragraph">
+<p>Furthermore to align with properties commonly used to make dependency resolution portable
+<code>jbang</code> exposes properties similar to what the <code><a href="https://github.com/trustin/os-maven-plugin">os-maven-plugin</a></code> does.
+Plus for ease of use for javafx dependencies it also setups a property named <code>${os.detected.jfxname}</code>.</p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">${env.USER} = 'max'
+${os.name} = 'Mac OS X'
+${non.existing.key:empty} = 'empty'
+${os.detected.jfxname} = 'mac'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This can be put to use in <code>//DEPS</code> like so:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>//DEPS org.openjfx:javafx-graphics:11.0.2:${os.detected.jfxname}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here we use the properties to avoid hardcoding your script to a specific operating system.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="javafx"><a class="anchor" href="#javafx"></a>JavaFX</h3>
+<div class="paragraph">
+<p>If <code>jbang</code> detects you have a <code>javafx-</code> dependency in your list of dependencies
+it will if you <code>java</code> command supports Java modules automatically set the necessary
+<code>--module-path</code> and <code>--add-modules</code>.</p>
+</div>
+<div class="paragraph">
+<p>See <code><a href="https://github.com/jbangdev/jbang-examples/blob/main/examples/jfx.java">jfx.java</a></code> and <code><a href="https://github.com/jbangdev/jbang-examples/blob/main/examples/jfxtiles.java">jfxtiles.java</a></code> for examples of this.</p>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="usage.html">Usage</a></span>
+  <span class="next"><a href="javaversions.html">Java Versions</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="page__footer-follow">
+    <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/jbangdev" rel="nofollow noopener noreferrer"><i
+            class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="https://github.com/jbangdev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+            aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    </ul>
+  </div>
+  <div class="page__footer-copyright">© 2021 JBang Documentation. Powered by <a href="https://antora.org" rel="nofollow">Antora</a>
+    &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+var search = docsearch({
+  appId: '4EJ1Y6VISV',
+  apiKey: '7ab0733177a5304fe689e52ed96d5cb8',
+  indexName: 'jbangdev',
+  inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
+  algoliaOptions: { hitsPerPage: 10 }
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
+</script>
+<script>
+window.addEventListener('load', function focusSearchInput () {
+  window.removeEventListener('load', focusSearchInput)
+  document.querySelector('#search-input').focus()
+})
+</script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
