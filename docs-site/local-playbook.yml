@@ -30,7 +30,7 @@ content:
 
 antora:
   extensions:
-    - register: '@antora/collector-extension'
+    - require: '@antora/collector-extension'
 
 ui:
   bundle:

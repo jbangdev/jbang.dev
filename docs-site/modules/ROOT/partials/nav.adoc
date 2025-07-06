@@ -1,22 +1,25 @@
 * JBang
 +
 --
-include::jbang:ROOT:partial$nav.adoc[]
+// include::jbang:ROOT:partial$nav.adoc[]
 --
+
 * CLI Reference
 +
 --
-include::jbang:cli:partial$nav-jbang.adoc[]
+// include::jbang:cli:partial$nav-jbang.adoc[]
 --
 
-include::jbang-maven-plugin:ROOT:partial$nav.adoc[]
+include::jbang-gradle-plugin:ROOT:partial$nav.adoc[]
+
 * JBang VSCode
 +
 --
-include::jbang-vscode:ROOT:partial$nav.adoc[]
+// include::jbang-vscode:ROOT:partial$nav.adoc[]
 --
+
 * JBang IDEA
 +
 --
-include::jbang-idea:ROOT:partial$nav.adoc[]
+// include::jbang-idea:ROOT:partial$nav.adoc[]
 --
