@@ -18,6 +18,8 @@ content:
     - url: ../../jbang-idea
       branches: HEAD
       start_path: docs
+    - url: ../../jbang-vscode
+      start_path: docs
 
 ui:
   bundle:
