@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Getting Started :: JBang</title>
+    <link rel="next" href="installation.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-156530423-2')</script>
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jbang.dev">JBang</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/appstore">AppStore</a>
+        <a class="navbar-item" href="/try">Try</a>
+        <a class="navbar-item" href="/download">Download</a>
+                <a class="navbar-item" href="/documentation">Documentation</a>
+      </div>
+    </div>
+    <div class="navbar-item hide-for-print">
+        <input id="search-input" type="text" placeholder="Search (by Algolia)">
+      </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="jbang-vscode" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">JBang VSCode Extension</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="usage.html">Usage</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">JBang VSCode Extension</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../jbang/latest/index.html">JBang</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../jbang-all/latest/index.html">JBang All Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang-all/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../jbang-gradle-plugin/latest/index.html">JBang Gradle Plugin</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang-gradle-plugin/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../jbang-idea/latest/index.html">JBang Idea Plugin</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang-idea/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../jbang-maven-plugin/latest/index.html">JBang Maven Plugin</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang-maven-plugin/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">JBang VSCode Extension</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../jbang-all/latest/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">JBang VSCode Extension</a></li>
+    <li><a href="index.html">Getting Started</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/jbangdev/jbang-vscode/edit/main/docs/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Getting Started</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_features">Features</a></li>
+<li><a href="#_getting_started">Getting Started</a></li>
+<li><a href="#_preferences">Preferences</a></li>
+<li><a href="#_troubleshooting">Troubleshooting</a></li>
+<li><a href="#_more_information">More Information</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The JBang VS Code extension brings the power and convenience of <a href="https://www.jbang.dev/">JBang</a> scripts to Visual Studio Code, with rich editing, completion, and project management features for Java scripts.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/deps-completions.png" alt="deps completions"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_features"><a class="anchor" href="#_features"></a>Features</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>JBang Script Project Support</strong>: Open a folder with JBang scripts to automatically configure classpaths and project structure.</p>
+</li>
+<li>
+<p><strong>Directive Snippets &amp; Completion</strong>: Autocomplete for JBang directives like <code>//DEPS</code>, <code>//SOURCES</code>, <code>//FILES</code>, and more.</p>
+</li>
+<li>
+<p><strong>Dependency Completion</strong>: Smart suggestions for Maven coordinates in <code>//DEPS</code>, including group, artifact, and version.</p>
+</li>
+<li>
+<p><strong>Hover Documentation</strong>: See dependency documentation and details on hover and completion.</p>
+</li>
+<li>
+<p><strong>Run &amp; Debug</strong>: Run or debug JBang scripts directly from the editor using codelens or context menu.</p>
+</li>
+<li>
+<p><strong>Synchronize with Build Tools</strong>: Sync JBang dependencies with Maven/Gradle projects.</p>
+</li>
+<li>
+<p><strong>Script Templates</strong>: Create new scripts from templates with the <code>JBang: Create a new script</code> command.</p>
+</li>
+<li>
+<p><strong>Annotation Processor Support</strong>: Automatically configures annotation processors for your scripts.</p>
+</li>
+<li>
+<p><strong>Install as Application</strong>: Install scripts as command-line applications.</p>
+</li>
+<li>
+<p><strong>JBang Catalogs</strong>: Autocomplete for <code>jbang-catalog.json</code> files.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_started"><a class="anchor" href="#_getting_started"></a>Getting Started</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Install Prerequisites</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.jbang.dev/download/">JBang</a> (add to your PATH or set <code>jbang.home</code> in VS Code settings)</p>
+</li>
+<li>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=redhat.java">Language Support for Java</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Install the Extension</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Search for "JBang" in the VS Code Marketplace and install.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Open or Create a JBang Script</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Open a folder with <code>.java</code> scripts containing JBang directives (e.g., <code>//DEPS</code>).</p>
+</li>
+<li>
+<p>Use the command palette (<code>Cmd+Shift+P</code>) and run <code>JBang: Create a new script</code> to start from a template.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Edit, Run, and Debug</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use autocompletion for dependencies and directives.</p>
+</li>
+<li>
+<p>Run or debug scripts via codelens above the main method or type declaration, or right-click for more options.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_preferences"><a class="anchor" href="#_preferences"></a>Preferences</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><code>jbang.home</code>: Path to JBang installation (if not in PATH)</p>
+</li>
+<li>
+<p><code>jbang.wizard.templates.showDescriptions</code>: Show template descriptions in the script wizard</p>
+</li>
+<li>
+<p><code>java.import.jbang.projectPerScript</code>: Import each script as its own project (requires workspace clean to take effect)</p>
+</li>
+<li>
+<p><code>jbang.completion.onSelect.autosave</code>: Auto-save after selecting a dependency completion</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting"><a class="anchor" href="#_troubleshooting"></a>Troubleshooting</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>If classpath or completions do not update, try running <code>Java: Clean Java Language Server Workspace</code> and reload the window.</p>
+</li>
+<li>
+<p>For issues with <code>build.jbang</code>, manual synchronization may be required.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_more_information"><a class="anchor" href="#_more_information"></a>More Information</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.jbang.dev/documentation/">JBang Documentation</a></p>
+</li>
+<li>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=jbangdev.jbang-vscode">VS Code Extension Marketplace</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jbangdev/jbang-vscode">GitHub Repository</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="next"><a href="installation.html">Installation</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="page__footer-follow">
+    <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/jbangdev" rel="nofollow noopener noreferrer"><i
+            class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="https://github.com/jbangdev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+            aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    </ul>
+  </div>
+  <div class="page__footer-copyright">© 2021 JBang Documentation. Powered by <a href="https://antora.org" rel="nofollow">Antora</a>
+    &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+var search = docsearch({
+  appId: '4EJ1Y6VISV',
+  apiKey: '7ab0733177a5304fe689e52ed96d5cb8',
+  indexName: 'jbangdev',
+  inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
+  algoliaOptions: { hitsPerPage: 10 }
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
+</script>
+<script>
+window.addEventListener('load', function focusSearchInput () {
+  window.removeEventListener('load', focusSearchInput)
+  document.querySelector('#search-input').focus()
+})
+</script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

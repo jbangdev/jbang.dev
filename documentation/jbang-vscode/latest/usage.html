@@ -36,17 +36,17 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="jbang-idea" data-version="latest">
+<div class="nav-container" data-component="jbang-vscode" data-version="latest">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="index.html">JBang Idea Plugin</a></h3>
+    <h3 class="title"><a href="index.html">JBang VSCode Extension</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="index.html">Intro</a>
+    <a class="nav-link" href="index.html">Getting Started</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="installation.html">Installation</a>
@@ -61,7 +61,7 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">JBang Idea Plugin</span>
+    <span class="title">JBang VSCode Extension</span>
     <span class="version">latest</span>
   </div>
   <ul class="components">
@@ -89,11 +89,11 @@
         </li>
       </ul>
     </li>
-    <li class="component is-current">
-      <a class="title" href="index.html">JBang Idea Plugin</a>
+    <li class="component">
+      <a class="title" href="../../jbang-idea/latest/index.html">JBang Idea Plugin</a>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">latest</a>
+        <li class="version is-latest">
+          <a href="../../jbang-idea/latest/index.html">latest</a>
         </li>
       </ul>
     </li>
@@ -105,11 +105,11 @@
         </li>
       </ul>
     </li>
-    <li class="component">
-      <a class="title" href="../../jbang-vscode/latest/index.html">JBang VSCode Extension</a>
+    <li class="component is-current">
+      <a class="title" href="index.html">JBang VSCode Extension</a>
       <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../jbang-vscode/latest/index.html">latest</a>
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
         </li>
       </ul>
     </li>
@@ -124,11 +124,11 @@
   <a href="../../jbang-all/latest/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">JBang Idea Plugin</a></li>
+    <li><a href="index.html">JBang VSCode Extension</a></li>
     <li><a href="usage.html">Usage</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/jbangdev/jbang-idea/edit/main/docs/modules/ROOT/pages/usage.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/jbangdev/jbang-vscode/edit/main/docs/modules/ROOT/pages/usage.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -140,33 +140,94 @@
 <div class="sectionbody">
 <!-- toc disabled -->
 <div class="paragraph">
-<p>TBD - sections for each major feature</p>
+<p>This page describes how to use the JBang extension for Visual Studio Code to work with Java scripts.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="completion"><a class="anchor" href="#completion"></a>Completion</h2>
+<h2 id="_completion"><a class="anchor" href="#_completion"></a>Completion</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>The following completions are available in JBang. If they do not open up automatically then do an explicit completion using <span class="keyseq"><kbd>Alt</kbd>+<kbd>Space</kbd></span> or <span class="keyseq"><kbd>^</kbd>+<kbd>Space</kbd></span> dependent on your platform.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Directive Completion</strong>: Start typing <code>//</code> at the top of your Java file to get completions for JBang directives like <code>//DEPS</code>, <code>//SOURCES</code>, etc.</p>
+</li>
+<li>
+<p><strong>Dependency Completion</strong>: In a <code>//DEPS</code> line, start typing a Maven group or artifact (e.g., <code>org.apache.commons:</code>) and press <code>Ctrl+Space</code> (or <code>Cmd+Space</code> on Mac) to trigger completion for Maven artifacts and versions.</p>
+</li>
+<li>
+<p><strong>Catalog Completion</strong>: In <code>jbang-catalog.json</code>, get completion for script references and aliases.</p>
+</li>
+</ul>
 </div>
-<div class="sect2">
-<h3 id="basic-directive-completion"><a class="anchor" href="#basic-directive-completion"></a>Basic directive completion</h3>
-<div class="paragraph">
-<p>Completion for JBang directives like <code>//JAVA</code> and  <code>//DEPS</code> are available at start of comments (<code>//</code>).</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jbang-idea-completion-directives.png" alt="jbang idea completion directives"></span></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="dependency-completion"><a class="anchor" href="#dependency-completion"></a>Dependency completion</h3>
-<div class="paragraph">
-<p><code>//DEPS</code> has completion of Maven artifacts using JBang/Gradle syntax. You can use fully qualified names or just type a substring of the Group and artifact version to get a list of possible matches from Maven Central.</p>
+<div class="sect1">
+<h2 id="_running_and_debugging"><a class="anchor" href="#_running_and_debugging"></a>Running and Debugging</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Use the codelens links ("Run JBang" or "Debug JBang") that appear above the main method or class declaration in your script.</p>
+</li>
+<li>
+<p>You can also right-click a script file and select <code>Run JBang</code> or <code>Debug JBang</code> from the context menu.</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jbang-idea-deps-completion.png" alt="jbang idea deps completion"></span>]</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_dependency_management"><a class="anchor" href="#_dependency_management"></a>Dependency Management</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>When you edit <code>//DEPS</code> lines, the classpath is automatically updated for the script.</p>
+</li>
+<li>
+<p>To synchronize dependencies explicitly, right-click the script and select <code>JBang &gt; Synchronize JBang</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_script_templates"><a class="anchor" href="#_script_templates"></a>Script Templates</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Use the command palette (<code>Ctrl+Shift+P</code> or <code>Cmd+Shift+P</code>) and run <code>JBang: Create a new script</code> to start a new script from a template.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_advanced_usage"><a class="anchor" href="#_advanced_usage"></a>Advanced Usage</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Install as Application</strong>: Right-click a script and select <code>JBang &gt; install application</code> to add it to your PATH.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tips"><a class="anchor" href="#_tips"></a>Tips</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>If completions or classpath updates do not work as expected, try running <code>Java: Clean Java Language Server Workspace</code> from the command palette and reload the window.</p>
+</li>
+<li>
+<p>For more information, see the <a href="https://github.com/jbangdev/jbang-vscode#readme">project README</a> or the <a href="https://www.jbang.dev/documentation/">JBang documentation</a>.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>

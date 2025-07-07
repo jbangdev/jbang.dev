@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Usage :: JBang</title>
-    <link rel="prev" href="installation.html">
+    <title>Installation :: JBang</title>
+    <link rel="prev" href="index.html">
+    <link rel="next" href="usage.html">
     <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
@@ -36,22 +37,22 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="jbang-idea" data-version="latest">
+<div class="nav-container" data-component="jbang-vscode" data-version="latest">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="index.html">JBang Idea Plugin</a></h3>
+    <h3 class="title"><a href="index.html">JBang VSCode Extension</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="index.html">Intro</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="installation.html">Installation</a>
+    <a class="nav-link" href="index.html">Getting Started</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="usage.html">Usage</a>
   </li>
 </ul>
@@ -61,7 +62,7 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">JBang Idea Plugin</span>
+    <span class="title">JBang VSCode Extension</span>
     <span class="version">latest</span>
   </div>
   <ul class="components">
@@ -89,11 +90,11 @@
         </li>
       </ul>
     </li>
-    <li class="component is-current">
-      <a class="title" href="index.html">JBang Idea Plugin</a>
+    <li class="component">
+      <a class="title" href="../../jbang-idea/latest/index.html">JBang Idea Plugin</a>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">latest</a>
+        <li class="version is-latest">
+          <a href="../../jbang-idea/latest/index.html">latest</a>
         </li>
       </ul>
     </li>
@@ -105,11 +106,11 @@
         </li>
       </ul>
     </li>
-    <li class="component">
-      <a class="title" href="../../jbang-vscode/latest/index.html">JBang VSCode Extension</a>
+    <li class="component is-current">
+      <a class="title" href="index.html">JBang VSCode Extension</a>
       <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../jbang-vscode/latest/index.html">latest</a>
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
         </li>
       </ul>
     </li>
@@ -124,54 +125,67 @@
   <a href="../../jbang-all/latest/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">JBang Idea Plugin</a></li>
-    <li><a href="usage.html">Usage</a></li>
+    <li><a href="index.html">JBang VSCode Extension</a></li>
+    <li><a href="installation.html">Installation</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/jbangdev/jbang-idea/edit/main/docs/modules/ROOT/pages/usage.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/jbangdev/jbang-vscode/edit/main/docs/modules/ROOT/pages/installation.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Usage</h1>
-<div id="preamble">
-<div class="sectionbody">
+<h1 class="page">Installation</h1>
 <!-- toc disabled -->
 <div class="paragraph">
-<p>TBD - sections for each major feature</p>
+<p>To install the JBang extension for Visual Studio Code:</p>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Install Prerequisites</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.jbang.dev/download/">JBang</a> (ensure it is available in your PATH, or set the <code>jbang.home</code> setting in VS Code)</p>
+</li>
+<li>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=redhat.java">Language Support for Java</a></p>
+</li>
+</ul>
 </div>
+</li>
+<li>
+<p><strong>Install the JBang Extension</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Open Visual Studio Code</p>
+</li>
+<li>
+<p>Go to the Extensions view (<code>Ctrl+Shift+X</code> or <code>Cmd+Shift+X</code>)</p>
+</li>
+<li>
+<p>Search for <code>jbang</code></p>
+</li>
+<li>
+<p>Click <strong>Install</strong> on the "JBang support for VS Code" extension</p>
+</li>
+</ul>
 </div>
-<div class="sect1">
-<h2 id="completion"><a class="anchor" href="#completion"></a>Completion</h2>
-<div class="sectionbody">
+</li>
+</ol>
+</div>
 <div class="paragraph">
-<p>The following completions are available in JBang. If they do not open up automatically then do an explicit completion using <span class="keyseq"><kbd>Alt</kbd>+<kbd>Space</kbd></span> or <span class="keyseq"><kbd>^</kbd>+<kbd>Space</kbd></span> dependent on your platform.</p>
-</div>
-<div class="sect2">
-<h3 id="basic-directive-completion"><a class="anchor" href="#basic-directive-completion"></a>Basic directive completion</h3>
-<div class="paragraph">
-<p>Completion for JBang directives like <code>//JAVA</code> and  <code>//DEPS</code> are available at start of comments (<code>//</code>).</p>
+<p>Alternatively, you can install from the <a href="https://marketplace.visualstudio.com/items?itemName=jbangdev.jbang-vscode">Visual Studio Marketplace</a> or by downloading the latest <code>.vsix</code> release from <a href="https://github.com/jbangdev/jbang-vscode/releases">GitHub Releases</a> and using the <code>Extensions: Install from VSIX&#8230;&#8203;</code> command.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="_images/jbang-idea-completion-directives.png" alt="jbang idea completion directives"></span></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="dependency-completion"><a class="anchor" href="#dependency-completion"></a>Dependency completion</h3>
-<div class="paragraph">
-<p><code>//DEPS</code> has completion of Maven artifacts using JBang/Gradle syntax. You can use fully qualified names or just type a substring of the Group and artifact version to get a list of possible matches from Maven Central.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jbang-idea-deps-completion.png" alt="jbang idea deps completion"></span>]</p>
-</div>
-</div>
-</div>
+<p>Once installed, you can open or create a JBang script and start using the features described in the documentation.</p>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="installation.html">Installation</a></span>
+  <span class="prev"><a href="index.html">Getting Started</a></span>
+  <span class="next"><a href="usage.html">Usage</a></span>
 </nav>
 </article>
   </div>
