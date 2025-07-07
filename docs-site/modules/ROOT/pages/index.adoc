@@ -14,16 +14,24 @@ endif::[]
 
 See table below and/or index on the left for JBang Documentation.
 
-[cols="1,1"]
+[cols="a,a", options="header"]
 |===
 |Name |Documentation for
 
-|xref:jbang:ROOT:index.adoc[JBang]
+| JBang
+
+[comment]
+xref:jbang:ROOT:index.adoc[JBang]
+
 |Core JBang covering installation, usage and features
 
-|xref:jbang:cli:jbang.adoc[CLI Reference]
+| CLI Reference
+[comment]
+xref:jbang:cli:jbang.adoc[CLI Reference]
 |`jbang` command-line interface
 
-|xref:jbang-idea:ROOT:index.adoc[JBang IDEA]
+| JBang IDEA
+[comment]
+xref:jbang-idea:ROOT:index.adoc[JBang IDEA]
 |JBang IntelliJ IDEA plugin
 |===

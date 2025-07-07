@@ -19,7 +19,18 @@ content:
       branches: HEAD
       start_path: docs
     - url: ../../jbang-vscode
+      branches: HEAD
       start_path: docs
+    - url: ../../jbang-maven-plugin
+      branches: HEAD
+      start_path: docs
+    - url: ../../jbang-gradle-plugin
+      branches: HEAD
+      start_path: docs
+
+antora:
+  extensions:
+    - require: '@antora/collector-extension'
 
 ui:
   bundle:
