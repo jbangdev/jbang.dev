@@ -12,26 +12,28 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-See table below and/or index on the left for JBang Documentation.
+Welcome to the JBang documentation hub! Use the links below to explore guides, references, and integrations.
 
-[cols="a,a", options="header"]
-|===
-|Name |Documentation for
+== JBang
 
-| JBang
+* xref:jbang:ROOT:index.adoc[JBang]
+  - Core JBang: installation, usage, and features
 
-[comment]
-xref:jbang:ROOT:index.adoc[JBang]
+== JBang Command Line
 
-|Core JBang covering installation, usage and features
+* xref:jbang:cli:jbang.adoc[JBang Command Line]
+  - `jbang` command-line interface reference
 
-| CLI Reference
-[comment]
-xref:jbang:cli:jbang.adoc[CLI Reference]
-|`jbang` command-line interface
+== Build Tools Support
 
-| JBang IDEA
-[comment]
-xref:jbang-idea:ROOT:index.adoc[JBang IDEA]
-|JBang IntelliJ IDEA plugin
-|===
+* xref:jbang-gradle-plugin:ROOT:index.adoc[JBang Gradle Plugin]
+  - Gradle plugin for JBang integration
+* xref:jbang-maven-plugin:ROOT:index.adoc[JBang Maven Plugin]
+  - Maven plugin for JBang integration
+
+== IDE Support
+
+* xref:jbang-vscode:ROOT:index.adoc[JBang VSCode]
+  - Visual Studio Code extension for JBang
+* xref:jbang-idea:ROOT:index.adoc[JBang IDEA]
+  - IntelliJ IDEA plugin for JBang
