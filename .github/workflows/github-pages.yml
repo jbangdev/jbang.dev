@@ -24,6 +24,16 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
 
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'maven'
+
+      - name: Setup jbang
+        uses: jbangdev/setup-jbang@main
+
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
