@@ -30,6 +30,10 @@ content:
       branches: main
       start_path: docs
 
+antora:
+  extensions:
+    - require: '@antora/collector-extension'
+
 ui:
   bundle:
     url: https://github.com/jbangdev/jbang-antora-ui/releases/latest/download/ui-bundle.zip
