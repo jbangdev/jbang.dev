@@ -30,6 +30,7 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
           cache: 'maven'
+          cache-dependency-path: 'docs-site/**/*.java'
 
       - name: Setup jbang
         uses: jbangdev/setup-jbang@main
