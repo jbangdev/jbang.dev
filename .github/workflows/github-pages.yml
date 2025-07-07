@@ -30,6 +30,7 @@ jobs:
           node-version: '18'
       - name: Install Antora
         run: |
+          cd docs-site
           npm i antora
           npm i
       - name: Generate Site
