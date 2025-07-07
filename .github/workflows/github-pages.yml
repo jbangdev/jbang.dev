@@ -24,11 +24,14 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
 
-      - name: Run Antora
-        uses: kameshsampath/antora-site-action@master
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
-          antora_playbook: playbook.yml
-          site_sources_path: 'docs-site'
+          node-version: '18'
+      - name: Install Antora
+        run: npm i antora
+      - name: Generate Site
+        run: npx antora docs-site/playbook.yml
 
       - name: Copy antora docs site to jekyll web site
         run: |
