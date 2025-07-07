@@ -20,6 +20,15 @@ content:
     - url: https://github.com/jbangdev/jbang-idea
       branches: main
       start_path: docs
+    - url: https://github.com/jbangdev/jbang-vscode
+      branches: main
+      start_path: docs
+    - url: https://github.com/jbangdev/jbang-maven-plugin
+      branches: main
+      start_path: docs
+    - url: https://github.com/jbangdev/jbang-gradle-plugin
+      branches: main
+      start_path: docs
 
 ui:
   bundle:

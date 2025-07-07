@@ -3,7 +3,7 @@ watch-local-docs:
     watchexec --bell -w .. --print-events  -e adoc,png,yml just local-docs
 
 local-docs:
-    cd docs-site; npx antora  --stacktrace generate --log-level all --log-file antora.log --clean local-playbook.yml
+    cd docs-site; npx antora  --stacktrace generate --clean local-playbook.yml
 
 docs:
     cd docs-site; npx antora generate playbook.yml
