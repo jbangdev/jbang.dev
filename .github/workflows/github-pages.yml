@@ -29,7 +29,9 @@ jobs:
         with:
           node-version: '18'
       - name: Install Antora
-        run: npm i antora
+        run: |
+          npm i antora
+          npm i
       - name: Generate Site
         run: npx antora docs-site/playbook.yml
 
