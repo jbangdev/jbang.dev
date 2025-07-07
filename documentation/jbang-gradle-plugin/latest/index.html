@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JBang Gradle Plugin :: JBang</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-156530423-2')</script>
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jbang.dev">JBang</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/appstore">AppStore</a>
+        <a class="navbar-item" href="/try">Try</a>
+        <a class="navbar-item" href="/download">Download</a>
+                <a class="navbar-item" href="/documentation">Documentation</a>
+      </div>
+    </div>
+    <div class="navbar-item hide-for-print">
+        <input id="search-input" type="text" placeholder="Search (by Algolia)">
+      </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="jbang-gradle-plugin" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">JBang Gradle Plugin</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">JBang Gradle Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">JBang Gradle Plugin</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../jbang/latest/index.html">JBang</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../jbang-all/latest/index.html">JBang All Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang-all/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">JBang Gradle Plugin</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../jbang-idea/latest/index.html">JBang Idea Plugin</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang-idea/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../jbang-maven-plugin/latest/index.html">JBang Maven Plugin</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang-maven-plugin/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../jbang-vscode/latest/index.html">JBang VSCode Extension</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang-vscode/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../jbang-all/latest/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">JBang Gradle Plugin</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">JBang Gradle Plugin</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><a class="image" href="https://github.com/jbangdev/jbang-gradle-plugin/actions"><img src="https://github.com/jbangdev/jbang-gradle-plugin/workflows/Build/badge.svg" alt="Build Status"></a></span>
+<span class="image"><a class="image" href="http://opensource.org/licenses/MIT"><img src="http://img.shields.io/badge/license-MIT-blue.svg" alt="MIT Licensed"></a></span>
+<span class="image"><img src="https://img.shields.io/maven-metadata/v?label=Plugin%20Portal&amp;metadataUrl=https://plugins.gradle.org/m2/dev/jbang/dev.jbang.gradle.plugin/maven-metadata.xml" alt="Gradle Plugin Portal, link=" width="https://plugins.gradle.org/plugin/dev.jbang""></span>
+<span class="image"><a class="image" href="https://www.patreon.com/user?u=6609318"><img src="https://img.shields.io/badge/donations-Patreon-orange.svg" alt="donations Patreon orange"></a></span></p>
+</div>
+<hr>
+<div class="paragraph">
+<p>The JBang Gradle plugin allows JBang scripts to be executed during a Gradle build.</p>
+</div>
+<div class="paragraph">
+<p>The plugin attempts to use an existing JBang installation. If no JBang installation is found, the plugin will install
+JBang by downloading and caching the latest version binaries (in your local Gradle cache directory) for subsequent runs.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This plugin adds a new task of type <code>dev.jbang.gradle.tasks.JBangTask</code> named <code>jbang</code> that accepts the
+following properties</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">System</th>
+<th class="tableblock halign-left valign-top">Environment</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-center valign-top">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">script</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jbang-script</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jbang.script</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JBANG_SCRIPT</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon green"><i class="fa fa-check"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jbangArgs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List&lt;String&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jbang-jbang-args</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jbang.jbangArgs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JBANG_JBANG_ARGS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[ ]</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon red"><i class="fa fa-times"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">args</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List&lt;String&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jbang-args</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jbang.args</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JBANG_ARGS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[ ]</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon red"><i class="fa fa-times"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">trusts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List&lt;String&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jbang-trusts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jbang.trusts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JBANG_TRUSTS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[ ]</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon red"><i class="fa fa-times"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jbang-version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jbang.version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JBANG_VERSION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">latest</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon red"><i class="fa fa-times"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">installDir</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Directory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jbang.install.dir</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JBANG_INSTALL_DIR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">$gradleUserHomeDir/caches/jbang</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="icon red"><i class="fa fa-times"></i></span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+script
+</td>
+<td class="hdlist2">
+<p>The script to be executed by JBang.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+args
+</td>
+<td class="hdlist2">
+<p>The arguments to be used in the JBang script (if any)</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+trusts
+</td>
+<td class="hdlist2">
+<p>If the script resides in a remote location, this parameter specifies what URLs should be trusted. See
+<a href="https://github.com/jbangdev/jbang#urls-from-trusted-sources">URLs from Trusted Sources</a> for more information</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+version
+</td>
+<td class="hdlist2">
+<p>If your environment lacks the JBang binaries in the PATH, you can specify the JBang version to be installed.
+The default value is set to <code>latest</code>, in which case the plugin will always check if the latest jbang release is installed
+and proceed to download it if that&#8217;s not the case.</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Task property values may be specified directly or using their respective environment variable, System property, project
+property, or task option respectively, for example the following invocations are equivalent</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">$ gradle jbang --jbang-script hello.jsh --jbang-args="Hello world"
+
+// system properties
+$ gradle jbang -Djbang.script=hello.jsh -Djbang.args="Hello world"
+
+// project properties
+$ gradle jbang -Pjbang.script=hello.jsh -Pjbang.args="Hello world"
+
+// environment variables
+$ export JBANG_SCRIPT="hello.jsh"
+$ export JBANG_ARGS="Hello world"
+$ gradle jbang</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation"><a class="anchor" href="#_installation"></a>Installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Option #1</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">buildscript {
+    repositories {
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath 'dev.jbang:jbang-gradle-plugin:0.3.0'
+    }
+}
+apply plugin: 'dev.jbang'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Option #2</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">plugins {
+    id 'dev.jbang' version '0.3.0'
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_building"><a class="anchor" href="#_building"></a>Building</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you want to build your own release then execute the following</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">$ ./gradlew -Prelease=true publishToMavenLocal</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will push all artifacts to your local Maven repository from which you may consume them.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="page__footer-follow">
+    <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/jbangdev" rel="nofollow noopener noreferrer"><i
+            class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="https://github.com/jbangdev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+            aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    </ul>
+  </div>
+  <div class="page__footer-copyright">© 2021 JBang Documentation. Powered by <a href="https://antora.org" rel="nofollow">Antora</a>
+    &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+var search = docsearch({
+  appId: '4EJ1Y6VISV',
+  apiKey: '7ab0733177a5304fe689e52ed96d5cb8',
+  indexName: 'jbangdev',
+  inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
+  algoliaOptions: { hitsPerPage: 10 }
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
+</script>
+<script>
+window.addEventListener('load', function focusSearchInput () {
+  window.removeEventListener('load', focusSearchInput)
+  document.querySelector('#search-input').focus()
+})
+</script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

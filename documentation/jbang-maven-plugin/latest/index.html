@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JBang Maven Plugin :: JBang</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156530423-2"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-156530423-2')</script>
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jbang.dev">JBang</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/appstore">AppStore</a>
+        <a class="navbar-item" href="/try">Try</a>
+        <a class="navbar-item" href="/download">Download</a>
+                <a class="navbar-item" href="/documentation">Documentation</a>
+      </div>
+    </div>
+    <div class="navbar-item hide-for-print">
+        <input id="search-input" type="text" placeholder="Search (by Algolia)">
+      </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="jbang-maven-plugin" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">JBang Maven Plugin</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">JBang Maven Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">JBang Maven Plugin</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../jbang/latest/index.html">JBang</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../jbang-all/latest/index.html">JBang All Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang-all/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../jbang-gradle-plugin/latest/index.html">JBang Gradle Plugin</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang-gradle-plugin/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../jbang-idea/latest/index.html">JBang Idea Plugin</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang-idea/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">JBang Maven Plugin</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../jbang-vscode/latest/index.html">JBang VSCode Extension</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../jbang-vscode/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../jbang-all/latest/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">JBang Maven Plugin</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">JBang Maven Plugin</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="https://img.shields.io/github/actions/workflow/status/jbangdev/jbang-maven-plugin/ci.yml?style=for-the-badge" alt="GitHub Workflow Status"></span>
+<span class="image"><a class="image" href="https://search.maven.org/search?q=g:%22dev.jbang%22%20AND%20a:%22jbang-maven-plugin%22"><img src="https://img.shields.io/maven-central/v/dev.jbang/jbang-maven-plugin.svg?label=Maven-Central&amp;style=for-the-badge" alt="Maven Central"></a></span></p>
+</div>
+<div class="paragraph">
+<p>The JBang Maven plugin allows JBang scripts to be executed during a Maven build, or through <code>mvn</code> command-line (without pom file).</p>
+</div>
+<div class="paragraph">
+<p>The plugin attempts to use an existing JBang installation. If no JBang installation is found, the plugin will install JBang by downloading and caching the latest version binaries (by default in your Maven project directory) for subsequent runs.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_arguments"><a class="anchor" href="#_arguments"></a>Arguments</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><code>script</code>: The script to be executed by JBang</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_example"><a class="anchor" href="#_example"></a>Example</h3>
+<div class="paragraph">
+<p>From inside a Maven buid:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;plugin&gt;
+  &lt;groupId&gt;dev.jbang&lt;/groupId&gt;
+  &lt;artifactId&gt;jbang-maven-plugin&lt;/artifactId&gt;
+  &lt;version&gt;0.0.7&lt;/version&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;run&lt;/id&gt;
+      &lt;phase&gt;process-resources&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;run&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+          &lt;script&gt;hello.java&lt;/script&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or with command-line <code>$ mvn dev.jbang:jbang-maven-plugin:0.0.8:run -Djbang.script="helloworld/helloworld.java"</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>args</code>: The arguments to be used in the JBang script (if any)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_2"><a class="anchor" href="#_example_2"></a>Example</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;plugin&gt;
+  &lt;groupId&gt;dev.jbang&lt;/groupId&gt;
+  &lt;artifactId&gt;jbang-maven-plugin&lt;/artifactId&gt;
+  &lt;version&gt;0.0.7&lt;/version&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;run&lt;/id&gt;
+      &lt;phase&gt;process-resources&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;run&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+          &lt;script&gt;hello.java&lt;/script&gt;
+          &lt;args&gt;
+            &lt;arg&gt;--option1=foo&lt;/arg&gt;
+          &lt;/args&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>trusts</code>: If the script resides in a remote location, this parameter specifies what URLs should be trusted. See <a href="https://github.com/jbangdev/jbang#urls-from-trusted-sources">URLs from Trusted Sources</a> for more information</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_3"><a class="anchor" href="#_example_3"></a>Example</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;plugin&gt;
+  &lt;groupId&gt;dev.jbang&lt;/groupId&gt;
+  &lt;artifactId&gt;jbang-maven-plugin&lt;/artifactId&gt;
+  &lt;version&gt;0.0.7&lt;/version&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;run&lt;/id&gt;
+      &lt;phase&gt;process-resources&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;run&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+          &lt;script&gt;https://github.com/jbangdev/jbang-examples/blob/master/examples/lang.java&lt;/script&gt;
+          &lt;trusts&gt;
+            &lt;trust&gt;https://github.com&lt;/trust&gt;
+          &lt;/trusts&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>jbangargs</code>: Arguments for <code>jbang</code> (not the script)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_4"><a class="anchor" href="#_example_4"></a>Example</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;plugin&gt;
+  &lt;groupId&gt;dev.jbang&lt;/groupId&gt;
+  &lt;artifactId&gt;jbang-maven-plugin&lt;/artifactId&gt;
+  &lt;version&gt;0.0.7&lt;/version&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;run&lt;/id&gt;
+      &lt;phase&gt;process-resources&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;run&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+          &lt;jbangargs&gt;
+                &lt;jbangarg&gt;--quiet&lt;/jbangarg&gt;
+          &lt;/jbangargs&gt;
+          &lt;script&gt;hello.java&lt;/script&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>jbangVersion</code>: If your envronment lacks the JBang binaries in the PATH, you can specify the JBang version to be installed. If not specified, the plugin will resolve to the latest JBang release available</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_5"><a class="anchor" href="#_example_5"></a>Example</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;plugin&gt;
+  &lt;groupId&gt;dev.jbang&lt;/groupId&gt;
+  &lt;artifactId&gt;jbang-maven-plugin&lt;/artifactId&gt;
+  &lt;version&gt;0.0.7&lt;/version&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;run&lt;/id&gt;
+      &lt;phase&gt;process-resources&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;run&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+          &lt;script&gt;hello.java&lt;/script&gt;
+          &lt;jbangVersion&gt;0.47.1&lt;/jbangVersion&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>jbangInstallDir</code>: Alternative location of JBang installation. The default value is <code>${project.basedir}</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_6"><a class="anchor" href="#_example_6"></a>Example</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;plugin&gt;
+  &lt;groupId&gt;dev.jbang&lt;/groupId&gt;
+  &lt;artifactId&gt;jbang-maven-plugin&lt;/artifactId&gt;
+  &lt;version&gt;0.0.7&lt;/version&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;run&lt;/id&gt;
+      &lt;phase&gt;process-resources&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;run&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+          &lt;script&gt;hello.java&lt;/script&gt;
+          &lt;jbangInstallDir&gt;${project.build.directory}&lt;/jbangInstallDir&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reporting_bugsissuesfeatures"><a class="anchor" href="#_reporting_bugsissuesfeatures"></a>Reporting bugs/issues/features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Please use <a href="https://github.com/jbangdev/jbang" class="bare">https://github.com/jbangdev/jbang</a> for reporting bugs/issues/features.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_releasing"><a class="anchor" href="#_releasing"></a>Releasing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To release a new version of the plugin, run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">mvn versions:set -DnewVersion=0.0.Z
+git commit -a -m "release 0.0.Z"
+git tag -a 0.0.Z -m "release 0.0.Z"
+git push</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When completed correctly, the new version will be available in Maven Central within some time (usually less than 30 minutes).</p>
+</div>
+<div class="paragraph">
+<p>To prepare for the next development iteration, run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">mvn versions:set -DnewVersion=0.0.Z+1-SNAPSHOT
+git commit -a -m "prepare for next development iteration"
+git push</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="page__footer-follow">
+    <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/jbangdev" rel="nofollow noopener noreferrer"><i
+            class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="https://github.com/jbangdev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+            aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    </ul>
+  </div>
+  <div class="page__footer-copyright">© 2021 JBang Documentation. Powered by <a href="https://antora.org" rel="nofollow">Antora</a>
+    &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+var search = docsearch({
+  appId: '4EJ1Y6VISV',
+  apiKey: '7ab0733177a5304fe689e52ed96d5cb8',
+  indexName: 'jbangdev',
+  inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
+  algoliaOptions: { hitsPerPage: 10 }
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
+</script>
+<script>
+window.addEventListener('load', function focusSearchInput () {
+  window.removeEventListener('load', focusSearchInput)
+  document.querySelector('#search-input').focus()
+})
+</script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
