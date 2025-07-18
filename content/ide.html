@@ -1,0 +1,137 @@
+---
+title: IDE
+tagline: JBang IDE Support
+link: /ide/
+layout: splash
+excerpt: "The following IDEs today have support for JBang via a plugin - no additional setup needed!"
+---
+<h2>JBang IDE Support</h2>
+<div class="container">
+  <!--<div class="row">
+    <div class="full-width">
+    <p>Note: Java is not required to be installed - JBang will automatically download a Java version<br/> 
+      if no Java 8 or higher Java Development Kit (JDK) version is found.</p>
+    </div>
+  </div>-->
+
+<div id="app">
+  <v-app id="inspire">
+    <v-tabs        
+     centered
+     icons-and-text
+    >
+      <v-tab id="vscodium-tab">VSCodium
+        <img src="https://api.faviconkit.com/vscodium.com" width="24" height="24" />
+      </v-tab>
+      <v-tab id="vscode-tab">Visual Studio Code
+        <img src="https://code.visualstudio.com/favicon.ico" width="24" height="24" />
+      </v-tab>
+      <v-tab id="intellij-tab">IntelliJ
+        <img src="https://simpleicons.org/icons/intellijidea.svg" width="24" height="24" />
+      </v-tab>
+      <v-tab id="eclipse-tab">Eclipse
+        <img src="https://simpleicons.org/icons/eclipseide.svg" width="24" height="24" />
+      </v-tab>
+      <v-tab id="replit-tab">repl.it
+        <img src="https://api.faviconkit.com/replit.com" width="24" height="24" />
+      </v-tab>
+      <v-tab id="gitpod-tab">GitPod
+        <img src="https://gitpod.io/favicon.ico" width="24" height="24" />
+      </v-tab>
+      <v-tab id="jdoodle-tab">JDoodle
+        <img src="https://www.jdoodle.com/favicon.ico" width="24" height="24" />
+      </v-tab>
+    
+      <v-tab-item>
+        <h3>VSCodium</h3>
+        <p>
+          VSCodium is a community-driven, freely-licensed binary distribution of Microsoft's editor Visual Studio Code.
+          Providing all the lightweight editor features you need to get started.
+        </p>
+        <p>
+          <code>jbang edit</code> will by defaut install VSCodium; a free distribution of Visual Studio Code. It provides
+           a good default set of extensions to have it configured to use with Java/JBang.
+        </p>
+        <p>
+          JBang is in <a href="https://open-vsx.org/extension/jbangdev/jbang-vscode">Open VSX Registry</a>
+        </p>
+      </v-tab-item>
+      <v-tab-item>
+        <h3>Visual Studio Code</h3>
+        <p>
+        Visual Studio code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux.
+        </p>    
+        <p>
+          JBang is on <a href="https://marketplace.visualstudio.com/items?itemName=jbangdev.jbang-vscode">Visual Studio Marketplace</a>
+        </p>
+      </v-tab-item>
+      <v-tab-item>
+        <h3>IntelliJ</h3>
+        <p>
+          IntelliJ IDEA is a very popular Java IDE. Has a lot of features; especially when it comes to refactoring and code assists.
+        </p>
+        <p>
+          JBang is on <a href="https://plugins.jetbrains.com/plugin/18257-jbang">Jetbrains Marketplace</a>
+        </p>
+        
+      </v-tab-item>
+
+      <v-tab-item>
+        <h3>Eclipse</h3>
+        <p>
+          Eclipse is a popular opensource Java IDE. Has a large ecosystem of plugins and is 100% free to use.
+        </p>
+          <p>
+            JBang is on <a href="https://marketplace.eclipse.org/content/jbang-eclipse-integration">Eclipse Marketplace</a>
+          </p>
+        </v-tab-item>
+
+        <v-tab-item>
+          <h3>repl.it</h3>
+          <p>
+            repl.it is a free, online code editor that makes it easy to code, compile, run, and share in 50+ programming languages.
+          </p>
+          <p>
+            JBang template for <a href="https://replit.com/@maxandersen/jbang-replit-demo#.replit">Repl.it</a>
+          </p>
+        </v-tab-item>
+        <v-tab-item>
+          <h3>GitPod</h3>
+          <p>
+            GitPod is a free online IDE that allows you to create a dev environment for any GitHub repository.
+          </p>
+          <p>
+            JBang container template for <a href="https://gitpod.io/#https://github.com/jbangdev/jbang-devcontainer-template">GitPod</a>
+          </p>
+          </v-tab-item>
+        <v-tab-item>
+          <h3>JDoodle</h3>
+          <p>
+            JDoodle is a free online compiler, IDE and execution environment for Java, C, C++, PHP, Perl, Python, Ruby and many more.
+          </p>
+          <p>
+            Try JBang on <a href="https://www.jdoodle.com/try-jbang/">JDoodle</a>
+          </p>
+        </v-tab-item>
+        
+
+    </v-tabs>
+  </v-app>
+</div>
+<script>
+new Vue({
+  el: '#app',
+  vuetify: new Vuetify(),
+  data () {
+    return {
+      tab: null,
+      items: [
+        'Appetizers', 'Entrees', 'Deserts', 'Cocktails',
+      ],
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    }
+  },
+})
+</script>
+<script src="{{base.url}}/assets/js/os-check.js"></script>
+  <!-- Content End -->

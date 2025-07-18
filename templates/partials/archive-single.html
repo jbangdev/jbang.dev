@@ -1,0 +1,20 @@
+{#let teaser = post.data.header.teaser.or(cdi:metadata.teaser)}
+
+<div class="{type.or("list")}__item">
+  <article class="archive__item" >
+    {#if type == "grid" and teaser}
+      <div class="archive__item-teaser">
+        <img src="{teaser}" alt="">
+      </div>
+    {/if}
+    <h2 class="archive__item-title no_toc">
+        <a href="{post.url}" rel="permalink">{post.data.title}</a>
+    </h2>
+    {#include partials/page__meta.html type=type /}
+    {#if post.data.containsKey('excerpt')}
+    <p class="archive__item-excerpt">
+        {post.data.excerpt.markdown.wordLimit(160)}
+    </p>
+    {/if}
+  </article>
+</div>

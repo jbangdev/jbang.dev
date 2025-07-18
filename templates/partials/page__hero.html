@@ -1,0 +1,26 @@
+{#let header=page.header()}
+
+<div class="page__hero{#if header.has_overlay}--overlay{/if}"
+  style="{#if header.overlay_color}background-color: {header.overlay_color};{/if} {#if header.overlay_image}background-image: {#if header.overlay_filter}{header.overlay_filter}, {/if}url('{header.overlay_image}');{/if}"
+>
+  {#if header.has_overlay}
+  <div class="wrapper">
+    <h1 id="page-title" class="page__title">{page.title.markdown}</h1>
+    {#if page.data.containsKey('tagline')}
+    <p class="page__lead">{page.data.tagline.markdown}</p>
+    {#else if page.data.containsKey('excerpt')}
+    <p class="page__lead">{page.data.excerpt.markdown.raw}</p>
+    {/if}
+    {#include partials/page__meta.html /}
+    {#if header.actions.size > 0 }
+    <p>
+        {#for action in header.actions}
+        <a href="{action.url}" class="btn btn--light-outline btn--large">
+            {action.label.raw ?: "Learn More"}
+        </a>
+        {/for}
+    </p>
+    {/if}
+  </div>
+  {/if}
+</div>

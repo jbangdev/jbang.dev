@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{@io.vertx.core.json.JsonObject page.data}
+
+{#include partials/page__hero.html /}
+
+<div id="main" role="main">
+  <article class="splash" lang="{cdi:metadata.locale}">
+    {#include partials/metacontent.html /}
+
+    <section class="page__content">
+      {#insert /}
+    </section>
+  </article>
+</div>

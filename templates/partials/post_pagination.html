@@ -1,0 +1,17 @@
+{!
+Roq seems to treat collections in the opposite order than Jekyll does. With Jekyll, if I'm on a post from July 17 and
+I click "Next", I would get a post from, say, July 18. With Roq, however, I would get a post from July, say 16. To
+keep the navigation the same, we'll have to use next/previous with the opposite label.
+!}
+<nav class="pagination">
+  {#if page.next}
+    <a href="{page.next.url}" class="pagination--pager" title="{page.next.title.markdown.stripHtml}">Previous</a>
+  {#else}
+    <a href="#" class="pagination--pager disabled">Previous</a>
+  {/if}
+  {#if page.previous}
+    <a href="{page.previous.url}" class="pagination--pager" title="{page.previous.title.markdown.stripHtml}">Next</a>
+  {#else}
+    <a href="#" class="pagination--pager disabled">Next</a>
+  {/if}
+</nav>

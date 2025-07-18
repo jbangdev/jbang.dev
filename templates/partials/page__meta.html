@@ -1,0 +1,18 @@
+
+{#if page.data.read_time }
+  <p class="page__meta">
+    {#let words_per_minute = cdi:metadata.words_per_minute}
+    {#let words = page.rawContent.stripHtml.numberOfWords}
+
+    <span class="page__meta-readtime">
+      <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+      {#if words < words_per_minute}
+        less than 1 minute read
+      {#else if words == words_per_minute}
+        1 minute read
+      {#else}
+        {page.readTime} minute read
+      {/if}
+    </span>
+  </p>
+{/if}

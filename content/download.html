@@ -1,0 +1,336 @@
+---
+title: Download
+tagline: Download and install jbang
+link: /download/
+layout: splash
+---
+
+{|
+<h2>Download JBang</h2>
+
+<style>
+.tab-container {
+  margin: 20px 0;
+}
+
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.tab-button {
+  padding: 16px 24px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.tab-button i {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.tab-button:hover {
+  background: #e5e5e5;
+}
+
+.tab-button.active {
+  background: #0066cc;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+pre {
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+pre:hover {
+  background: #f5f5f5;
+}
+
+pre::after {
+  content: "Click to copy";
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 12px;
+  color: #666;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+pre:hover::after {
+  opacity: 1;
+}
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="full-width">
+      <p>Note: Java is not required to be installed - JBang will automatically download a Java version<br/>
+        if no Java 8 or higher Java Development Kit (JDK) version is found.</p>
+    </div>
+  </div>
+</div>
+
+<div class="tab-container">
+  <div class="tab-buttons">
+    <button class="tab-button" data-tab="windows">
+      <i class="mdi mdi-microsoft-windows"></i> Windows
+    </button>
+    <button class="tab-button" data-tab="linux">
+      <i class="mdi mdi-linux"></i> Linux
+    </button>
+    <button class="tab-button" data-tab="mac">
+      <i class="mdi mdi-apple"></i> macOS
+    </button>
+    <button class="tab-button" data-tab="docker">
+      <i class="mdi mdi-docker"></i> Docker
+    </button>
+    <button class="tab-button" data-tab="github">
+      <i class="mdi mdi-github"></i> GitHub Actions
+    </button>
+    <button class="tab-button" data-tab="maven">
+      <i class="mdi mdi-screwdriver"></i> Maven
+    </button>
+    <button class="tab-button" data-tab="gradle">
+      <i class="mdi mdi-hammer"></i> Gradle
+    </button>
+    <button class="tab-button" data-tab="javascript">
+      <i class="mdi mdi-language-javascript"></i> JavaScript
+    </button>
+    <button class="tab-button" data-tab="python">
+      <i class="mdi mdi-language-python"></i> Python
+    </button>
+  </div>
+
+  <div id="windows" class="tab-content">
+    <h3>curl/iex</h3>
+    <p>Powershell:</p>
+    <pre>iex "& { $(iwr https://ps.jbang.dev) } app setup"</pre>
+    <p>GitBash/cygwin/mingwin/WSL:</p>
+    <pre>curl -Ls https://sh.jbang.dev | bash -s - app setup</pre>
+    <h3>Chocolatey</h3>
+    <pre>choco install jbang</pre>
+    <h3>Scoop</h3>
+    <pre>scoop bucket add jbangdev https://github.com/jbangdev/scoop-bucket
+scoop install jbang</pre>
+    <h3>Manual</h3>
+    <p>Unzip the <a href="https://github.com/jbangdev/jbang/releases/latest">latest binary release</a>, put the jbang-[version]/bin folder in to your $PATH and you are set.</p>
+    <h3>Zero install</h3>
+    <p>You can run download and run jbang directly using Powershell with:</p>
+    <pre>iex "& { $(iwr https://ps.jbang.dev) } [jbang arguments]"</pre>
+    <p>or if you have bash based shell/terminal:</p>
+    <pre>curl -Ls https://sh.jbang.dev | bash -s - [jbang arguments]</pre>
+  </div>
+
+  <div id="linux" class="tab-content">
+    <h3>curl</h3>
+    <pre>curl -Ls https://sh.jbang.dev | bash -s - app setup</pre>
+    <h3>SDKMan</h3>
+    <pre>sdk install jbang</pre>
+    <h3>asdf</h3>
+    <pre>asdf plugin-add jbang
+asdf install jbang latest</pre>
+    <h3>Fedora Copr</h3>
+    <p>For CentOS, Fedora, Mageia and OpenSuse:</p>
+    <pre>dnf copr enable @jbangdev/jbang
+dnf install jbang</pre>
+    <h3>Manual</h3>
+    <p>Unzip the <a href="https://github.com/jbangdev/jbang/releases/latest">latest binary release</a>, put the jbang-[version]/bin folder in to your $PATH and you are set.</p>
+    <h3>Zero install</h3>
+    <pre>curl -Ls https://sh.jbang.dev | bash -s - [jbang arguments]</pre>
+  </div>
+
+  <div id="mac" class="tab-content">
+    <h3>curl</h3>
+    <pre>curl -Ls https://sh.jbang.dev | bash -s - app setup</pre>
+    <h3>SDKMan</h3>
+    <pre>sdk install jbang</pre>
+    <h3>Homebrew</h3>
+    <pre>brew install jbangdev/tap/jbang</pre>
+    <h3>asdf</h3>
+    <pre>asdf plugin-add jbang
+asdf install jbang latest</pre>
+    <h3>Manual</h3>
+    <p>Unzip the <a href="https://github.com/jbangdev/jbang/releases/latest">latest binary release</a>, put the jbang-[version]/bin folder in to your $PATH and you are set.</p>
+    <h3>Zero install</h3>
+    <pre>curl -Ls https://sh.jbang.dev | bash -s - [jbang arguments]</pre>
+  </div>
+
+  <div id="docker" class="tab-content">
+    <h3>docker.io</h3>
+    <pre>docker run -v `pwd`:/ws --workdir=/ws jbangdev/jbang-action helloworld.java</pre>
+    <h3>Quay.io</h3>
+    <pre>docker run -v `pwd`:/ws --workdir=/ws quay.io/jbangdev/jbang-action helloworld.java</pre>
+  </div>
+
+  <div id="github" class="tab-content">
+    <p>setup-jbang action:</p>
+    <pre>- name: Setup JBang
+uses: jbangdev/setup-jbang@main
+
+- name: properties
+  run: |
+  jbang properties@jbangdev</pre>
+    <p>Install and see details at <a href="https://github.com/marketplace/actions/setup-jbang">Github Action Marketplace</a></p>
+  </div>
+
+  <div id="maven" class="tab-content">
+    <p>Plugin to run jbang as part of a Apache Maven build available from <a href="https://github.com/jbangdev/jbang-maven-plugin/">jbang-maven-plugin</a></p>
+    <pre>&lt;plugin&gt;
+  &lt;groupId&gt;dev.jbang&lt;/groupId&gt;
+  &lt;artifactId&gt;jbang-maven-plugin&lt;/artifactId&gt;
+  &lt;version&gt;0.0.7&lt;/version&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;run&lt;/id&gt;
+      &lt;phase&gt;process-resources&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;run&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+          &lt;script&gt;hello.java&lt;/script&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</pre>
+  </div>
+
+  <div id="gradle" class="tab-content">
+    <p>Plugin to run jbang as part of a Gradle build available from <a href="https://github.com/jbangdev/jbang-gradle-plugin/">jbang-gradle-plugin</a></p>
+    <pre>plugins {
+  id 'dev.jbang' version '0.2.0'
+}</pre>
+  </div>
+
+  <div id="javascript" class="tab-content">
+    <h3>npx</h3>
+    <pre>npx @jbangdev/jbang app setup</pre>
+
+    <h3>npm</h3>
+    <pre>// package.json:
+{
+  "scripts": {
+    "test": "node test.js"
+  },
+  "devDependencies": {
+    "@jbangdev/jbang": "^0.1.4"
+  }
+}</pre>
+    <pre>// test.js:
+#! /usr/bin/env node
+const jbang = require('@jbangdev/jbang');
+jbang.exec('properties@jbangdev');</pre>
+  </div>
+
+  <div id="python" class="tab-content">
+    <h3>pipx</h3>
+    <pre>pipx jbang app setup</pre>
+    <h3>uvx</h3>
+    <pre>uvx jbang app setup</pre>
+    <h3>pip/jupiter notebook</h3>
+    <pre>!pip install jbang
+import jbang
+jbang.exec('properties@jbangdev')</pre>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // OS detection
+  function detectOS() {
+    const platform = navigator.platform.toLowerCase();
+    const userAgent = navigator.userAgent.toLowerCase();
+
+    // More robust OS detection
+    if (userAgent.includes('windows')) return 'windows';
+    if (userAgent.includes('mac os x')) return 'mac';
+    if (userAgent.includes('linux')) return 'linux';
+
+    // Fallback to platform checking
+    if (platform.includes('win')) return 'windows';
+    if (platform.includes('mac')) return 'mac';
+    if (platform.includes('linux')) return 'linux';
+
+    return 'windows'; // default fallback
+  }
+
+  // Tab switching functionality
+  function switchTab(tabId) {
+    // Hide all tabs
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.classList.remove('active');
+    });
+
+    // Show selected tab
+    const selectedTab = document.getElementById(tabId);
+    const selectedButton = document.querySelector(`[data-tab="${tabId}"]`);
+    if (selectedTab) selectedTab.classList.add('active');
+    if (selectedButton) selectedButton.classList.add('active');
+  }
+
+  // Add click handlers to all tab buttons
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      switchTab(button.dataset.tab);
+    });
+  });
+
+  // Add click handlers to all pre elements for copying
+  document.querySelectorAll('pre').forEach(pre => {
+    pre.addEventListener('click', () => {
+      const text = pre.textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        // Visual feedback
+        const originalBg = pre.style.background;
+        pre.style.background = '#e6ffe6';
+        setTimeout(() => {
+          pre.style.background = originalBg;
+        }, 200);
+      });
+    });
+  });
+
+  // Show the OS-specific tab on load
+  try {
+    const detectedOS = detectOS();
+    console.log('Detected OS:', detectedOS);
+    switchTab(detectedOS);
+  } catch (error) {
+    console.error('Error during OS detection:', error);
+    // Fallback to windows tab if there's an error
+    switchTab('windows');
+  }
+});
+</script>
+<!-- Content End -->
+|}

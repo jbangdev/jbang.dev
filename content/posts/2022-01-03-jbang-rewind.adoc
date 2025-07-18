@@ -1,0 +1,37 @@
+---
+header:
+  teaser: /assets/images/httpjbang.jpg
+title: JBang Rewind 2021!
+tagline: JBang Rewind 2021
+category : learn
+tags : [jbang]
+author : Max Rydahl Andersen
+bgcolor: ff5a71
+keywords: jbang
+excerpt: We just closed on a very busy 2021 for JBang, and especially in the last few weeks, things progressed quite a bit. Therefore I thought it would be nice to give a quick overview to recognize the progress and give you a chance to catch up!
+---
+We just closed on a very busy 2021 for JBang, and especially in the last few weeks, things progressed quite a bit. Therefore, I thought it would be nice to give a quick overview to recognize the progress and give you a chance to catch up!
+
+December 31st:: https://www.jdoodle.com/try-jbang/[JDoodle] updates their iOS and Android versions to include JBang support. You can now edit and run Java/JBang on the go.
+
+December 29th:: https://www.baeldung.com/jbang-guide[Guide to JBang] posted on baeldung.com
+
+December 25th:: Free IntelliJ License giveaway for one https://github.com/jbangdev/jbang/blob/main/CONTRIBUTORS.md[recognized JBang contributor] following the steps outlined https://github.com/jbangdev/jbang/discussions/1155[here]. It is a time of writing still open; thus, if you ever opened an issue, contributed an idea or code, or want to contribute, it is still possible to get it!
+
+December 22nd:: https://plugins.jetbrains.com/plugin/18257-jbang[IntelliJ Plugin] made available. Provides direct execution with JBang, content assist for `//DEPS` and other keywords, and more.
+
+December 1st:: JBang was the https://www.javaadvent.com/2021/12/jbang-gift-that-keeps-on-giving.html[first entry] of 2021 Java Advent Calendar.
+
+November 29th:: JDoodle added https://www.jdoodle.com/try-jbang/[JBang to its list of supported languages]. Making it possible to edit/write Java code using dependencies in a browser without login and additionally embed JBang examples in your blog/guides.
+
+November 24th:: Microsoft made a https://github.com/microsoft/jbang-catalog[JBang catalog available] providing easy launch of Minecraft and Playwright CLI.
+
+And in between, we had four releases of JBang in December with features and bug fixes - heading https://github.com/orgs/jbangdev/projects/2[towards the mythical 1.0] release.
+
+The latest one is https://github.com/jbangdev/jbang/releases/tag/v0.86.0[0.86.0] which came on the second anniversary of JBang - or at least the https://twitter.com/maxandersen/status/1212714007301365761[first tweet] about it.
+
+Here, one fix was how JBang deals with `lib` vs. `libs` that came from a conversation around using JBang in serverless lambda functions. Nándor Holozsnyák just made a https://dev.to/nandorholozsnyak/jbang-quarkus-aws-lambda-terraform-3-4ahk[blog] showing his explorations into this. I was happy to see this as Nandor looked into this because he felt JBang enabled a simple scripting approach comparable to Python/Node - but for Java.
+
+That's precisely what JBang is about - enabling easy use of Java - I'm expecting to see more enablement of using JBang for more than just scripts in 2022!
+
+Here is to make 2022 about bringing JBang to version 1.0 and making Java fun!

@@ -1,0 +1,20 @@
+.table-appstore > thead > tr > th {
+    text-align: left;
+    color: white;
+}
+
+.table-appstore > tbody > tr > td {
+    text-align: left;
+}
+
+/* button styling */
+.copyButton {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-left: 5px;
+    background-color: transparent;
+}
+.copyButton:hover {
+    opacity: 0.8;
+}
