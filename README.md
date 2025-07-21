@@ -5,28 +5,28 @@
 
 Source code for https://jbang.dev
 
-### Build and run with bundle
+### Preview
 
-Install ruby with bundler and then do:
-
-```
-bundle install
-bundle exec jekyll serve --livereload
-```
-
-### Build and run with docker
-
-First choose your jekyll version tag from [Docker Hub](https://hub.docker.com/r/jekyll/jekyll/tags?page=1&ordering=last_updated).
-
-Example, when building with Jekyll 4.2.0 -
+Install just and run:
 
 ```
-docker run --rm -p 4000:4000 \
-  --volume="$PWD:/srv/jekyll" \
-  -it jekyll/jekyll:4.2.0 \
-  jekyll serve --livereload
+just preview
 ```
-Navigate to http://localhost:4000 for local site.
+
+and visit http://localhost:8080
+
+This is running in "dev mode" meaning changes should be picked up automatically.
+
+### Generate/Serve
+
+The following will generate "production" site and serve it out.
+
+```
+just serve
+```
+
+The generated content is in `target/roq` and is being served out on `http://localhost:8181`
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
