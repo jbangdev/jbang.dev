@@ -24,7 +24,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: |
+            21
+            
       - name: Setup JBang
         uses: jbangdev/setup-jbang@main
 
@@ -32,6 +38,7 @@ jobs:
         uses: quarkiverse/quarkus-roq@v1
         with:
             github-token: ${{ secrets.GITHUB_TOKEN }}   # Used to automatically get the GitHub Pages url
+  
   github-pages:
     environment:
       name: github-pages
