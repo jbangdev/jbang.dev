@@ -12,6 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup JBang
+        uses: jbangdev/setup-jbang@main
+
       - name: Build Website
         uses: quarkiverse/quarkus-roq@v1
         with:
