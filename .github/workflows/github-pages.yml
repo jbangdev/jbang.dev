@@ -7,54 +7,29 @@ on:
       - main
 
 jobs:
-
-  github-pages:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - name: 💎 setup ruby
-        uses: ruby/setup-ruby@v1
+      - name: Build Website
+        uses: quarkiverse/quarkus-roq@v1
         with:
-          ruby-version: 3.3.1
-      - name: Build Jekyll site
-        uses: limjh16/jekyll-action-ts@v2
-        with:
-          enable_cache: true
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '21'
-
-      - name: Setup jbang
-        uses: jbangdev/setup-jbang@main
-
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-      - name: Install Antora
-        run: |
-          cd docs-site
-          npm i antora
-          npm i
-      - name: Generate Site
-        run: npx antora docs-site/playbook.yml
-
-      - name: Copy antora docs site to jekyll web site
-        run: |
-          mkdir -p ./_site/documentation
-          cp -rfv ./docs-site/build/site/* ./_site/documentation
+            github-token: ${{ secrets.GITHUB_TOKEN }}   # Used to automatically get the GitHub Pages url
  
-      - name: 🚀 deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+  github-pages:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       - name: Read search configuration
         id: config
