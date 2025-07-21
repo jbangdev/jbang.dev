@@ -2,7 +2,6 @@ quarkus := require('quarkus')
 mvn := require('mvn')
 jbang := require('jbang')
 
-
 generate:
     quarkus build -Dquarkus.roq.generator.batch
     quarkus run
