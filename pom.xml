@@ -177,14 +177,13 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <nodeInstallDirectory>${project.build.directory}</nodeInstallDirectory>
                     <packages>
                         <package>@antora/site-generator</package>
                         <package>@antora/collector-extension@1.0</package>
                     </packages>
                     <playbookFile>docs-site/playbook.yml</playbookFile>
                     <options>
-                        <option>to-dir ${project.build.directory}/roq/documentation</option>
+                        <option>to-dir public/documentation</option>
                     </options>
                 </configuration>
             </plugin>
