@@ -6,46 +6,29 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  preview:
-    runs-on: ubuntu-20.04
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: refs/pull/${{ github.event.pull_request.number }}/merge
-      - uses: n1hility/cancel-previous-runs@v2
-        if: ${{ false }} ## not needed as we are not using all resources
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout
+        uses: actions/checkout@v4
 
-
-      - name: 💎 setup ruby
-        uses: ruby/setup-ruby@v1
+      - name: Build Website
+        uses: quarkiverse/quarkus-roq@
         with:
-          ruby-version: 2.7
-      - name: Build Jekyll site
-        uses: limjh16/jekyll-action-ts@v2
-        with:
-          enable_cache: true
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+            setup-java: 'false'
+            github-pages: 'false'
+            site-future: 'true'
 
-      - name: Run Antora
-        uses: kameshsampath/antora-site-action@master
-        with:
-          antora_playbook: playbook.yml
-          site_sources_path: 'docs-site'
-
-      - name: Copy antora docs site to jekyll web site
-        run: |
-          mkdir -p ./_site/documentation
-          cp -rf ./docs-site/build/site/* ./_site/documentation
-
+  preview:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - uses: afc163/surge-preview@v1
         id: preview_step
         with:
           surge_token: ${{ secrets.SURGE_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          dist: _site
+          dist: target/roq
           failOnError: 'true'
           build: |
             echo Deploying to surge.sh
