@@ -52,14 +52,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      - name: Read search configuration
-        id: config
-        run: echo ::set-output name=config::$(cat algolia-config.json)
-
-      - name: Update search index
-        uses: darrenjennings/algolia-docsearch-action@master
-        with:
-          algolia_application_id: ${{ secrets.ALGOLIA_APPLICATION_ID }}
-          algolia_api_key: ${{ secrets.ALGOLIA_ADMIN_KEY }}
-          file: 'algolia-config.json'
