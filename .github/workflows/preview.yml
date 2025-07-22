@@ -28,15 +28,23 @@ jobs:
         with:
             setup-java: 'false'
             site-future: 'true'
+            github-pages: 'false'
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview
+          path: target/roq
+
 
   preview:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
-          name: github-pages
+          name: preview
           path: target/roq
           
       - uses: afc163/surge-preview@v1
