@@ -18,6 +18,7 @@
         <version.quarkus-roq>1.6.3</version.quarkus-roq>
         <version.quarkus.platform>3.24.2</version.quarkus.platform>
         <version.surefire-plugin>3.5.3</version.surefire-plugin>
+        <antora.output-dir>public/documentation</antora.output-dir>
     </properties>
 
     <dependencyManagement>
@@ -136,6 +137,17 @@
                 </configuration>
             </plugin>
             <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>${antora.output-dir}</directory>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+            <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${version.surefire-plugin}</version>
                 <configuration>
@@ -170,7 +182,7 @@
                 <version>1.0.0-alpha.5</version>
                 <executions>
                     <execution>
-                        <phase>package</phase>
+                        <phase>process-resources</phase>
                         <goals>
                             <goal>antora</goal>
                         </goals>
@@ -183,7 +195,7 @@
                     </packages>
                     <playbookFile>docs-site/playbook.yml</playbookFile>
                     <options>
-                        <option>to-dir public/documentation</option>
+                        <option>to-dir ${antora.output-dir}</option>
                     </options>
                 </configuration>
             </plugin>
