@@ -27,7 +27,6 @@ jobs:
         uses: quarkiverse/quarkus-roq@v1
         with:
             setup-java: 'false'
-            github-pages: 'false'
             site-future: 'true'
 
   preview:
