@@ -22,9 +22,16 @@ public class JBangSiteTest {
     }
 
     @Test
-    public void testIndex() {
+    public void testDocumentation() {
         RestAssured.when().get("/documentation")
                 .then()
                 .statusCode(200);
+    }
+
+    @Test
+    public void testFail() {
+        RestAssured.when().get("/documentation")
+                .then()
+                .statusCode(404);
     }
 } 
