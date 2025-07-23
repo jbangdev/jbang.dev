@@ -32,6 +32,9 @@ public class JBangSiteTest {
     public void testFail() {
         RestAssured.when().get("/documentation")
                 .then()
-                .statusCode(404);
+                .statusCode(200)
+                .body(containsString(
+                    "The page you requested has been relocated to"
+                ));
     }
 } 
