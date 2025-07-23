@@ -24,7 +24,7 @@ jobs:
           github-pages: 'false'
 
       - name: Store PR id
-        run: echo ${{ github.event.number }} > ./_site/pr-id.txt
+        run: echo ${{ github.event.number }} > ./target/roq/pr-id.txt
 
       - name: Publishing directory for PR preview
         uses: actions/upload-artifact@v4
