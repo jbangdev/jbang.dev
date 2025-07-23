@@ -1,7 +1,13 @@
 package dev.jbang.site;
 
-import static io.quarkiverse.roq.frontmatter.runtime.RoqTemplateExtension.numberOfWords;
-import static io.quarkiverse.roq.frontmatter.runtime.RoqTemplateExtension.stripHtml;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 import io.quarkiverse.qute.web.markdown.runtime.MdConverter;
 import io.quarkiverse.roq.frontmatter.runtime.model.DocumentPage;
@@ -9,12 +15,6 @@ import io.quarkiverse.roq.frontmatter.runtime.model.Page;
 import io.quarkiverse.roq.frontmatter.runtime.model.RoqCollection;
 import io.quarkus.arc.Arc;
 import io.quarkus.qute.TemplateExtension;
-
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.regex.MatchResult;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 @TemplateExtension
 public class Extensions {
