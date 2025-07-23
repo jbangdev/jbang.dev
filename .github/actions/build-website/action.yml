@@ -23,12 +23,12 @@ inputs:
 runs:
   using: 'composite'
   steps:
-
-    # not sure this is needed, but inspired from quarkusio build
-    - name: Install git-restore-time
+    - name: Install git-restore-time 
+      shell: bash
       run: sudo apt-get install -y git-restore-mtime
 
     - name: Restore mtime
+      shell: bash
       run: git restore-mtime
 
     - name: Setup Java
