@@ -12,24 +12,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          cache: 'maven'
-          distribution: 'temurin'
-          java-version: |
-            21
-
-      - name: Setup JBang
-        uses: jbangdev/setup-jbang@main
-
       - name: Build Website
-        uses: quarkiverse/quarkus-roq@v1
+        uses: ./.github/actions/build-website
         with:
-            setup-java: 'false'
-            site-future: 'true'
-            github-pages: 'false'
-            maven-build-args: '-DskipTests=false'
+          site-future: 'true'
+          github-pages: 'false'
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4

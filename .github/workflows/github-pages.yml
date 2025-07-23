@@ -24,22 +24,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          cache: 'maven'
-          distribution: 'temurin'
-          java-version: |
-            21
-            
-      - name: Setup JBang
-        uses: jbangdev/setup-jbang@main
-
       - name: Build Website
-        uses: quarkiverse/quarkus-roq@v1
+        uses: ./.github/actions/build-website
         with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}   # Used to automatically get the GitHub Pages url
-            maven-build-args: '-DskipTests=false' 
+          github-token: ${{ secrets.GITHUB_TOKEN }}
   
   github-pages:
     environment:

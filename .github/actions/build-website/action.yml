@@ -1,0 +1,42 @@
+name: 'Build Website'
+description: 'Sets up Java, JBang, and builds the website with configurable options.'
+inputs:
+  java-version:
+    description: 'Java version to use'
+    required: false
+    default: '21'
+  maven-build-args:
+    description: 'Arguments to pass to Maven build'
+    required: false
+    default: '-DskipTests=false'
+  site-future:
+    description: 'Enable site-future option for build'
+    required: false
+    default: 'false'
+  github-pages:
+    description: 'Enable github-pages option for build'
+    required: false
+    default: 'true'
+  github-token:
+    description: 'GitHub token for build (if needed)'
+    required: false
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        cache: 'maven'
+        distribution: 'temurin'
+        java-version: ${{ inputs.java-version }}
+
+    - name: Setup JBang
+      uses: jbangdev/setup-jbang@main
+
+    - name: Build Website
+      uses: quarkiverse/quarkus-roq@v1
+      with:
+        github-token: ${{ inputs.github-token }}
+        maven-build-args: ${{ inputs.maven-build-args }}
+        site-future: ${{ inputs.site-future }}
+        github-pages: ${{ inputs.github-pages }} 
