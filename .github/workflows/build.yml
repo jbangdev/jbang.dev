@@ -1,0 +1,34 @@
+name: Build
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 5000
+          fetch-tags: false
+
+      - name: Build Website
+        uses: ./.github/actions/build-website
+        with:
+          site-future: 'true'
+          github-pages: 'false'
+
+      - name: Store PR id
+        run: echo ${{ github.event.number }} > ./_site/pr-id.txt
+
+      - name: Publishing directory for PR preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: ./target/roq
+          retention-days: 3

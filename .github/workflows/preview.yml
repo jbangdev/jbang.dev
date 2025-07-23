@@ -1,49 +1,65 @@
 name: Surge.sh Preview
 
 on:
-  pull_request_target:
-    # when using teardown: 'true', add default event types + closed event type
-    types: [opened, synchronize, reopened]
+  workflow_run:
+    workflows: ["Build"]
+    types:
+      - completed
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Build Website
-        uses: ./.github/actions/build-website
-        with:
-          site-future: 'true'
-          github-pages: 'false'
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: preview
-          path: target/roq
-
-
   preview:
-    needs: build
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      issues: write
+      # this is unfortunately needed to be able to write comments on pull requests
+      pull-requests: write
+    if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success'
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: preview
-          path: target/roq
-          
-      - uses: afc163/surge-preview@v1
-        id: preview_step
-        with:
-          surge_token: ${{ secrets.SURGE_TOKEN }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          dist: target/roq
-          failOnError: 'true'
-          build: |
-            echo Deploying to surge.sh
+    - name: Download PR Artifact
+      uses: actions/download-artifact@v4
+      with:
+        run-id: ${{ github.event.workflow_run.id }}
+        name: site
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Store PR id as variable
+      id: pr
+      run: |
+        pr=$(<pr-id.txt)
+        if ! [[ $pr =~ ^[0-9]+$ ]] ; then
+          echo "PR id extracted from pr-id.txt is not a number: $pr"
+          exit 1
+        fi
+        echo "id=${pr}" >> $GITHUB_OUTPUT
+        rm -f pr-id.txt
+    - name: Publishing to surge for preview
+      id: deploy
+      run: npx surge@0.23.1 ./ --domain https://jbangdev-preview-pr-${PR_ID}.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      env:
+        PR_ID: ${{  steps.pr.outputs.id }}
 
-      - name: Get the preview_url
-        run: echo "url => ${{ steps.preview_step.outputs.preview_url }}"
+    - name: Update PR status comment on success
+      uses: quarkusio/action-helpers@main
+      with:
+        action: maintain-one-comment
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        pr-number: ${{ steps.pr.outputs.id }}
+        body: |
+          🎊 PR Preview ${{ github.sha }} has been successfully built and deployed to https://jbangdev-preview-pr-${{ steps.pr.outputs.id }}.surge.sh
+
+        body-marker: <!-- Preview status comment marker -->
+    - name: Update PR status comment on failure
+      uses: quarkusio/action-helpers@main
+      if: ${{ failure() }}
+      with:
+        action: maintain-one-comment
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        pr-number: ${{ steps.pr.outputs.id }}
+        body: |
+          😭 Deploy PR Preview failed.
+          <img width="300" src="https://user-images.githubusercontent.com/507615/90250824-4e066700-de6f-11ea-8230-600ecc3d6a6b.png">
+        body-marker: <!-- Preview status comment marker -->

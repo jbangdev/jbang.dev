@@ -1,20 +1,23 @@
-name: Surge.sh Teardown
+name: Surge.sh Preview Teardown
 
 on:
   pull_request_target:
-    # when using teardown: 'true', add default event types + closed event type
     types: [closed]
 
 jobs:
-  preview:
+  preview-teardown:
     runs-on: ubuntu-latest
     steps:
-      - uses: afc163/surge-preview@v1
-        id: preview_step
+      - name: Teardown surge preview
+        id: deploy
+        run: npx surge teardown https://jbangdev-preview-pr-${{ github.event.number }}.surge.sh --token ${{ secrets.SURGE_TOKEN }} || echo "NOT_TORNDOWN=true" >> "$GITHUB_ENV"
+      - name: Update PR status comment
+        uses: quarkusio/action-helpers@main
+        if: env.NOT_TORNDOWN != 'true'
         with:
-          surge_token: ${{ secrets.SURGE_TOKEN }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          teardown: 'true'
-          failOnError: 'false'
-          build: |
-            echo Deploying to surge.sh
+          action: maintain-one-comment
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pr-number: ${{ github.event.number }}
+          body: |
+            🙈 The PR is closed and the preview is expired.
+          body-marker: <!-- Preview status comment marker -->
