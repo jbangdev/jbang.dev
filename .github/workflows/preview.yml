@@ -26,7 +26,7 @@ jobs:
         run-id: ${{ github.event.workflow_run.id }}
         name: site
         github-token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Store PR id as variable
+    - name: Store PR id and shaas variable
       id: pr
       run: |
         pr=$(<pr-id.txt)
@@ -36,6 +36,11 @@ jobs:
         fi
         echo "id=${pr}" >> $GITHUB_OUTPUT
         rm -f pr-id.txt
+        # github.sha is not (properly)set for pull_request events
+        if [ "$GITHUB_EVENT_NAME" == "pull_request" ]; then
+          SHA=$(cat $GITHUB_EVENT_PATH | jq -r .pull_request.head.sha)
+        fi
+        echo "sha=${GITHUB_SHA}" >> $GITHUB_OUTPUT
     - name: Publishing to surge for preview
       id: deploy
       run: npx surge@0.23.1 ./ --domain https://jbangdev-preview-pr-${PR_ID}.surge.sh --token ${{ secrets.SURGE_TOKEN }}
@@ -49,7 +54,7 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         pr-number: ${{ steps.pr.outputs.id }}
         body: |
-          🎊 PR Preview ${{ github.sha }} has been successfully built and deployed to https://jbangdev-preview-pr-${{ steps.pr.outputs.id }}.surge.sh
+          🎊 PR Preview ${{ steps.pr.outputs.sha }} has been successfully built and deployed to https://jbangdev-preview-pr-${{ steps.pr.outputs.id }}.surge.sh
 
         body-marker: <!-- Preview status comment marker -->
     - name: Update PR status comment on failure
