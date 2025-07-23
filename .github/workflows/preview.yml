@@ -29,6 +29,7 @@ jobs:
             setup-java: 'false'
             site-future: 'true'
             github-pages: 'false'
+            maven-build-args: ''
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
