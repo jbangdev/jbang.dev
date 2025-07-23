@@ -23,11 +23,12 @@ inputs:
 runs:
   using: 'composite'
   steps:
-
     - name: Install git-restore-time 
+      shell: bash
       run: sudo apt-get install -y git-restore-mtime
 
     - name: Restore mtime
+      shell: bash
       run: git restore-mtime
 
     - name: Setup Java
