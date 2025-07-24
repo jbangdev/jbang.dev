@@ -67,7 +67,7 @@ class appstore implements Callable<Integer> {
   }
 
   @Option(names = { "-d",
-      "--destDir" }, defaultValue = "./assets/data/", description = "Destination dir to generate cataloger")
+      "--destDir" }, defaultValue = "./public/assets/data/", description = "Destination dir to generate cataloger")
   private Path destinationDir;
 
   @Option(names = {
