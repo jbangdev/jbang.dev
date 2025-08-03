@@ -10,7 +10,7 @@ ifdef::env-github,env-browser,env-vscode[:imagesdir: ../images]
 
 Say hello to `mf@jbangdev` — the new, delightfully simple way to peek inside any JAR’s manifest!
 
-Ever wondered what secrets lurk in `META-INF/MANIFEST.MF`? Tired of squinting at cryptic key-value pairs or wrangling with unzip just to see what’s inside? Now you can summon manifest magic with a single command:
+Ever wondered what secrets lurk in `META-INF/MANIFEST.MF`? Tired of squinting at cryptic key-value pairs or wrangling with unzip just to see what's inside? Now you can summon manifest magic with a single command:
 
 [source,bash]
 ----
@@ -43,6 +43,12 @@ Export-Package: org.h2;version="2.2.224",org.h2.api;version="2.2.224",org.h2.con
 Provide-Capability: osgi.service;objectClass:List<String>=org.osgi.service.jdbc.DataSourceFactory
 Premain-Class: org.h2.util.Profiler
 ```
+
+== Installation
+
+You can run it directly using `jbang mf@jbangdev` or install it using `jbang install mf@jbangdev` to get it as a standalone tool.
+
+== Structured output
 
 You'll notice keys like `Import-Package` and `Export-Package` are very long and hard to read. `mf` allows enabling structured output (`-s` or `--structured`) that supports certain well-known keys and when enabled will print the values as lists or maps.
 
