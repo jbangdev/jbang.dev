@@ -1,0 +1,175 @@
+---
+title: Manifest Tool
+tagline: Manifest Tool is a tool for creating and managing manifest files for Jars
+category : learn
+tags : [jbang]
+author : Max Rydahl Andersen
+bgcolor: ff5a71
+---
+ifdef::env-github,env-browser,env-vscode[:imagesdir: ../images]
+
+Say hello to `mf@jbangdev` — the new, delightfully simple way to peek inside any JAR’s manifest!
+
+Ever wondered what secrets lurk in `META-INF/MANIFEST.MF`? Tired of squinting at cryptic key-value pairs or wrangling with unzip just to see what’s inside? Now you can summon manifest magic with a single command:
+
+[source,bash]
+----
+mf `jbang info jar com.h2database:h2:2.2.224` 
+----
+
+This will use `jbang` to fetch the jar for h2 and then use `mf` to print the manifest.
+
+[source,txt]
+```
+Manifest-Version: 1.0
+Implementation-Title: H2 Database Engine
+Implementation-URL: https://h2database.com
+Implementation-Version: 2.2.224
+Build-Jdk: 1.8
+Created-By: 1.8.0_281-b09 (Oracle Corporation)
+Main-Class: org.h2.tools.Console
+Automatic-Module-Name: com.h2database
+Bundle-Activator: org.h2.util.DbDriverActivator
+Bundle-ManifestVersion: 2
+Bundle-Name: H2 Database Engine
+Bundle-SymbolicName: com.h2database
+Bundle-Vendor: H2 Group
+Bundle-Version: 2.2.224
+Bundle-License: https://h2database.com/html/license.html
+Bundle-Category: jdbc
+Multi-Release: true
+Import-Package: javax.crypto,javax.crypto.spec,javax.management,javax.naming;resolution:=optional,javax.naming.directory;resolution:=optional,..
+Export-Package: org.h2;version="2.2.224",org.h2.api;version="2.2.224",org.h2.constant;version="2.2.224",org.h2.fulltext;version="2.2.224"...
+Provide-Capability: osgi.service;objectClass:List<String>=org.osgi.service.jdbc.DataSourceFactory
+Premain-Class: org.h2.util.Profiler
+```
+
+You'll notice keys like `Import-Package` and `Export-Package` are very long and hard to read. `mf` allows enabling structured output (`-s` or `--structured`) that supports certain well-known keys and when enabled will print the values as lists or maps.
+
+[source,console]
+----
+mf `jbang info jar com.h2database:h2:2.2.224` -s 
+----
+
+[source,bash]
+----
+Manifest-Version: 1.0
+Implementation-Title: H2 Database Engine
+...
+Import-Package:
+  javax.crypto: true
+  javax.crypto.spec: true
+  javax.management: true
+  javax.naming:
+    resolution: optional
+  javax.naming.directory:
+    resolution: optional
+  javax.naming.spi:
+    resolution: optional
+  ...
+Export-Package:
+  org.h2:
+    version: 2.2.224
+  org.h2.api:
+    version: 2.2.224
+  org.h2.constant:
+    version: 2.2.224
+  org.h2.fulltext:
+    version: 2.2.224
+...
+Provide-Capability: osgi.service;objectClass:List<String>=org.osgi.service.jdbc.DataSourceFactory
+Premain-Class: org.h2.util.Profiler
+----
+
+Still long, but much easier to read.
+
+== Filtering
+
+`mf` supports filtering the manifest keys using a regex.
+
+In its simplest form it lets you substring on keys
+
+[source,bash]
+----
+mf `jbang info jar com.h2database:h2:2.2.224` -s version
+----
+
+[source,bash]
+----
+Manifest-Version: 1.0
+Implementation-Version: 2.2.224
+...
+----
+
+but you can also use a regex to filter the keys.
+
+[source,bash]
+----
+mf `jbang info jar com.h2database:h2:2.2.224` "bundle|version"
+----
+
+[source,bash]
+----
+Manifest-Version: 1.0
+Implementation-Version: 2.2.224
+Bundle-Activator: org.h2.util.DbDriverActivator
+Bundle-ManifestVersion: 2
+Bundle-Name: H2 Database Engine
+Bundle-SymbolicName: com.h2database
+Bundle-Vendor: H2 Group
+Bundle-Version: 2.2.224
+Bundle-License: https://h2database.com/html/license.html
+Bundle-Category: jdbc
+----
+
+== JSON & YAML
+
+Finally, `mf` supports JSON(`--json`) and YAML(`--yaml`) output.
+
+[source,bash]
+----
+mf `jbang info jar com.h2database:h2:2.2.224` --json
+----
+
+and they can be combined with the other options:
+
+[source,bash]
+----
+mf `jbang info jar com.h2database:h2:2.2.224` --yaml -s "version|package"
+----
+
+[source,yaml]
+----
+Manifest-Version: "1.0"
+Implementation-Version: "2.2.224"
+Bundle-ManifestVersion: "2"
+Bundle-Version: "2.2.224"
+Import-Package:
+  javax.crypto: true
+  javax.crypto.spec: true
+  javax.management: true
+  javax.naming:
+    resolution: "optional"
+  javax.naming.directory:
+    resolution: "optional"
+  javax.naming.spi:
+    resolution: "optional"
+  javax.net: true
+  javax.net.ssl: true
+  javax.script:
+    resolution: "optional"
+  ...
+Export-Package:
+  org.h2:
+    version: "2.2.224"
+  org.h2.api:
+    version: "2.2.224"
+  org.h2.constant:
+    version: "2.2.224"
+  org.h2.fulltext:
+    version: "2.2.224"
+  org.h2.jdbc:
+    version: "2.2.224"
+  ...
+----
+

@@ -17,10 +17,12 @@
 <!-- using dark as it looks okey but most importantly does not look like crap with vuetify theme inside apps -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/dark.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
 
-<script>hljs.highlightAll();</script>
+<script>hljs.highlightAll(); hljs.addPlugin(new CopyButtonPlugin());</script>
 
 <script>
+hljs.addPlugin(new CopyButtonPlugin());
 Vue.use(hljs.vuePlugin);
 //https://www.metachris.com/2017/02/vuejs-syntax-highlighting-with-highlightjs/
 Vue.directive('highlightjs', {

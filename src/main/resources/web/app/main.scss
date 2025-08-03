@@ -31,6 +31,9 @@ a:hover {
 .copyButton:hover {
     opacity: 0.8;
 }
+
+@import "highlightjs-copy";
+
 @import "minimal-mistakes/skins/contrast"; // skin
 @import "minimal-mistakes"; // main partials
 
