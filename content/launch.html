@@ -1,0 +1,119 @@
+---
+title: Launch JBang
+tagline: Launch JBang from a URL
+link: /launch/
+layout: splash
+---
+
+{|
+<center>
+    <h2>🚀 Launching JBang</h2>
+    
+    <bold>JBang Launch is an experimental feature!</bold>
+
+    <p>Trying to open your application via JBang:</p>
+    <div class="uri-display" id="uri-display">jbang://...</div>
+    
+    <p>Click the button below to launch JBang:</p>
+    <button id="launch-btn" class="btn btn--primary" style="margin: 1rem 0;">🚀 Launch JBang Now</button>
+    
+    <p>If nothing happens, JBang might not be installed.</p>
+
+    <div class="launch-message">
+      <strong>JBang lets you run Java scripts with zero setup.</strong><br>
+      It's fast. It's flexible. It's Java, reimagined.<br>
+      <strong>Why wait? Give it a spin.</strong>
+    </div>
+
+    <div>
+      <h2>🛠 You can still try it right now</h2>
+      
+      <div>
+        <a href="https://jbang.dev/download" class="btn btn--primary">Install JBang</a>
+      </div>
+      
+      <div>
+        <p>Or run the command manually in your terminal:</p>
+        <coe id="cli-command"></code>
+        <a href="#" id="copy-btn" class="btn btn--light-outline">📋 Copy Command</a>
+      </div>
+    </div>
+</center>
+
+<script>
+  function getJBangURI() {
+    if(window.location.search.startsWith("?jbang://")) {
+      return window.location.search.substring(1);
+    }
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("uri")) {
+      return decodeURIComponent(params.get("uri"));
+    }
+
+    // Check if any query parameter starts with jbang://
+    for (const [key, value] of params.entries()) {
+      if (value.startsWith("jbang://")) {
+        return decodeURIComponent(value);
+      }
+    }
+    if (window.location.hash.startsWith("#jbang://")) {
+      return decodeURIComponent(window.location.hash.slice(1));
+    }
+    const path = window.location.pathname;
+    if (path.startsWith("/launch/")) {
+      return "jbang://" + decodeURIComponent(path.replace("/launch/", ""));
+    }
+    return null;
+  }
+
+  function parseToCLI(jbangUri) {
+  //TODO: convert uri to cli command
+    try {
+      const uri = new URL(jbangUri);
+      const segments = uri.pathname.split("/").filter(Boolean);
+      const command = segments[0] || "run";
+      const target = segments[1] || "";
+      const args = uri.searchParams.get("args")?.split(",").join(" ") || "";
+      return `jbang ${command} ${target} ${args}`.trim();
+    } catch {
+      return jbangUri;
+    }
+  }
+
+  const jbangUri = getJBangURI();
+  document.getElementById("uri-display").textContent = jbangUri || "unknown";
+
+  if (jbangUri && jbangUri.startsWith("jbang://")) {
+    const cliCmd = parseToCLI(jbangUri);
+    document.getElementById("cli-command").textContent = cliCmd;
+
+    // Add event listener for copy button
+    document.getElementById("copy-btn").addEventListener("click", (e) => {
+      e.preventDefault();
+      navigator.clipboard.writeText(cliCmd);
+    });
+
+    // Add event listener for manual launch button
+    document.getElementById("launch-btn").addEventListener("click", (e) => {
+      e.preventDefault();
+      try {
+        window.location.href = jbangUri;
+      } catch (e) {
+        console.log("Could not redirect to jbang:// URI");
+      }
+    });
+
+    // Try to launch JBang immediately (like the original)
+    try {
+      window.location.href = jbangUri;
+    } catch (e) {
+      console.log("Could not redirect to jbang:// URI");
+    }
+
+    // Show fallback after 3 seconds
+    setTimeout(() => {
+      document.getElementById("fallback").classList.remove("hidden");
+    }, 3000);
+  }
+</script>
+|}
