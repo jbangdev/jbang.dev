@@ -19,6 +19,7 @@
         <version.quarkus.platform>3.24.5</version.quarkus.platform>
         <version.surefire-plugin>3.5.3</version.surefire-plugin>
         <antora.output-dir>public/documentation</antora.output-dir>
+        <antora.playbook>docs-site/playbook.yml</antora.playbook>
     </properties>
 
     <dependencyManagement>
@@ -193,7 +194,7 @@
                         <package>@antora/site-generator</package>
                         <package>@antora/collector-extension@1.0</package>
                     </packages>
-                    <playbookFile>docs-site/playbook.yml</playbookFile>
+                    <playbookFile>${antora.playbook}</playbookFile>
                     <options>
                         <option>to-dir ${antora.output-dir}</option>
                     </options>
