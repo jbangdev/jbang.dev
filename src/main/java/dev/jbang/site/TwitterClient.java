@@ -5,6 +5,8 @@ import jakarta.inject.Named;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import io.quarkus.logging.Log;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.URLEncoder;
@@ -71,7 +73,8 @@ public class TwitterClient {
 
             } catch (IOException | InterruptedException e) {
                 if (attempt == maxAttempts) {
-                    throw new IOException("Failed after " + maxAttempts + " attempts: " + e.getMessage(), e);
+                    Log.warn("Failed after " + maxAttempts + " attempts: " + e.getMessage(), e);
+                    return "<p>Failed to fetch tweet</p>";
                 }
                 try {
                     Thread.sleep(waitTimeMs);
@@ -83,7 +86,7 @@ public class TwitterClient {
             }
         }
 
-        throw new IOException("Unreachable code reached in getTweetEmbedHtml()");
+        return "<p>Failed to fetch tweet</p>";
     }
 
     public void clearCache() {
