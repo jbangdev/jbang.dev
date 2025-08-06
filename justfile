@@ -1,17 +1,8 @@
+quarkus := require('quarkus')
+mvn := require('mvn')
+jbang := require('jbang')
 
-[linux,macos]
-requirements:
-    quarkus := require('quarkus')
-    mvn := require('mvn')
-    jbang := require('jbang')
-
-[windows]
-requirements:
-    quarkus := require('quarkus.cmd')
-    mvn := require('mvn.cmd')
-    jbang := require('jbang.cmd')
-
-generate: requirements
+generate:
     quarkus build -Dquarkus.roq.generator.batch
     quarkus run
     echo 'Open target/roq/index.html'
@@ -32,7 +23,7 @@ watch-local-docs:
     watchexec --bell -w .. --print-events  -e adoc,png,yml just local-docs
 
 local-docs:
-    cd docs-site; npx antora --stacktrace generate --clean local-playbook.yml
+    cd docs-site; npx antora  --stacktrace generate --clean local-playbook.yml
 
 docs:
     cd docs-site; npx antora generate playbook.yml

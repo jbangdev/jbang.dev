@@ -9,22 +9,22 @@ asciidoc:
 
 content:
   sources:
-    - url: ../jbang.dev
+    - url: ../../jbang.dev
       branches: HEAD
       start_path: docs-site
-    - url: ../jbang
+    - url: ../../jbang
       branches: HEAD
       start_path: docs
-    - url: ../jbang-idea
+    - url: ../../jbang-idea
       branches: HEAD
       start_path: docs
-    - url: ../jbang-vscode
+    - url: ../../jbang-vscode
       branches: HEAD
       start_path: docs
-    - url: ../jbang-maven-plugin
+    - url: ../../jbang-maven-plugin
       branches: HEAD
       start_path: docs
-    - url: ../jbang-gradle-plugin
+    - url: ../../jbang-gradle-plugin
       branches: HEAD
       start_path: docs
 
