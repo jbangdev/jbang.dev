@@ -32,7 +32,9 @@ runs:
 
     - uses: jdx/mise-action@v2
 
-    - run: jbang version --verbose
+    - run: |
+        mise doctor
+        jbang version --verbose
       shell: bash
 
     - name: Build Website
