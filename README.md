@@ -5,6 +5,29 @@
 
 Source code for https://jbang.dev
 
+### Prerequisites
+
+Install `just`:
+
+```
+# Debian / Ubuntu / Mint
+sudo apt install just
+```
+
+or
+
+```
+# Fedora / CentOS / RHEL
+sudo dnf install just
+```
+
+Install `quarkus`:
+
+```
+# Use SDKMAN to install Quarkus
+sdk install quarkus
+```
+
 ### Preview
 
 Install just and run:

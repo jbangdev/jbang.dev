@@ -8,6 +8,7 @@ site:
 asciidoc:
   attributes:
     page-pagination: ''
+    source-highlighter: shiki
 
 content:
   sources:
@@ -33,6 +34,17 @@ content:
 antora:
   extensions:
     - require: '@antora/collector-extension'
+    - require: 'antora-shiki-extension'
+      theme: "github-light"
+      themes: ["material-theme", "dracula", "slack-dark", "github-light"]
+      languages:
+        - java
+        - xml
+        - kotlin
+        - groovy
+        - python
+        - shellscript
+        - json
 
 ui:
   bundle:

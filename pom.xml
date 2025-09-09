@@ -192,6 +192,7 @@
                     <packages>
                         <package>@antora/site-generator</package>
                         <package>@antora/collector-extension@1.0</package>
+                        <package>antora-shiki-extension@1.0.0</package>
                     </packages>
                     <playbookFile>docs-site/playbook.yml</playbookFile>
                     <options>
