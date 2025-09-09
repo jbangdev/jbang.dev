@@ -7,30 +7,14 @@ Source code for https://jbang.dev
 
 ### Prerequisites
 
-Install `just`:
+Install [mise](https://mise.jdx.dev/), activate it or use `mise x -- <command>` to run below commands. 
 
-```
-# Debian / Ubuntu / Mint
-sudo apt install just
-```
-
-or
-
-```
-# Fedora / CentOS / RHEL
-sudo dnf install just
-```
-
-Install `quarkus`:
-
-```
-# Use SDKMAN to install Quarkus
-sdk install quarkus
-```
+Example: `just preview` works automatially with `mise activate` but if you do not have that
+run it using `mise x -- just preview`
 
 ### Preview
 
-Install just and run:
+Run:
 
 ```
 just preview

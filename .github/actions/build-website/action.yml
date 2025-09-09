@@ -30,8 +30,7 @@ runs:
         distribution: 'temurin'
         java-version: ${{ inputs.java-version }}
 
-    - name: Setup JBang
-      uses: jbangdev/setup-jbang@main
+    - uses: jdx/mise-action@v2
 
     - name: Build Website
       uses: quarkiverse/quarkus-roq@v1

@@ -3,36 +3,32 @@ mvn := require('mvn')
 jbang := require('jbang')
 
 generate:
-    quarkus build -Dquarkus.roq.generator.batch
-    quarkus run
-    echo 'Open target/roq/index.html'
+    mise run generate
 
-serve: generate
-    jbang roq@quarkiverse/quarkus-roq
+serve:
+    mise run serve
 
 build:
     # mvn package is to ensure antora dev is present
-    mvn package
+    mise run build
 
-preview: build
-    quarkus dev
+preview:
+    mise run preview
 
 
 # watch docs-site for changes
 watch-local-docs:
-    watchexec --bell -w .. --print-events  -e adoc,png,yml just local-docs
+    mise run watch-local-docs
 
 local-docs:
-    cd docs-site; npx antora  --stacktrace generate --clean local-playbook.yml
+    mise run local-docs
 
 docs:
-    cd docs-site; npx antora generate playbook.yml
+    mise run docs
 
 open-docs:
-    open docs-site/build/site/index.html
+    mise run open-docs
 
 # clone the relevant folders for documentation
 setup-docs:
-    -git clone https://github.com/jbangdev/jbang ../jbang
-    -git clone https://github.com/jbangdev/jbang-vscode ../jbang-vscode
-    -git clone https://github.com/jbangdev/jbang-idea ../jbang-idea
+    mise run setup-docs
