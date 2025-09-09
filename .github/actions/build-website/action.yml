@@ -32,6 +32,8 @@ runs:
 
     - uses: jdx/mise-action@v2
 
+    - run: jbang version --verbose
+
     - name: Build Website
       uses: quarkiverse/quarkus-roq@v1
       with:
