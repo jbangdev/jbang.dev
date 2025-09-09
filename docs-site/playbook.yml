@@ -36,7 +36,6 @@ antora:
     - require: '@antora/collector-extension'
     - require: 'antora-shiki-extension'
       theme: "github-light"
-      themes: ["material-theme", "dracula", "slack-dark", "github-light"]
       languages:
         - java
         - xml

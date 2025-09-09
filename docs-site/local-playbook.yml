@@ -31,6 +31,21 @@ content:
 antora:
   extensions:
     - require: '@antora/collector-extension'
+    - require: 'antora-shiki-extension'
+      theme: "github-light"
+      languages:
+        - java
+        - xml
+        - docker
+        - javascript
+        - kotlin
+        - groovy
+        - markdown
+        - powershell
+        - python
+        - shellscript
+        - json
+        - yaml
 
 ui:
   bundle:
