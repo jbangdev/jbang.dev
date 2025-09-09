@@ -1,0 +1,48 @@
+[tools]
+java = "21.0.2"
+maven = "3.9.11"
+quarkus = "3.26.2"
+jbang = "latest"
+just = "1.42.4"
+node = "lts"
+watchexec = "latest"
+
+[tasks.generate]
+description = "Build and run Roq generator; show output hint"
+run = "quarkus build -Dquarkus.roq.generator.batch && quarkus run && echo 'Open target/roq/index.html'"
+
+[tasks.serve]
+description = "Serve Roq UI"
+depends = ["generate"]
+run = "jbang roq@quarkiverse/quarkus-roq"
+
+[tasks.build]
+description = "Maven package to ensure Antora dev is present"
+run = "mvn package"
+
+[tasks.preview]
+description = "Run Quarkus in dev mode"
+depends = ["build"]
+run = "quarkus dev"
+
+[tasks.watch-local-docs]
+description = "Watch docs-site for changes"
+run = "watchexec --bell -w .. --print-events -e adoc,png,yml mise run local-docs"
+
+[tasks.local-docs]
+description = "Generate local Antora docs"
+dir = "docs-site"
+run = "npx antora  --stacktrace generate --clean local-playbook.yml"
+
+[tasks.docs]
+description = "Generate Antora docs"
+dir = "docs-site"
+run = "npx antora generate playbook.yml"
+
+[tasks.open-docs]
+description = "Open built docs site"
+run = "open docs-site/build/site/index.html"
+
+[tasks.setup-docs]
+description = "Clone the relevant folders for documentation"
+run = "([ -d ../jbang ] || git clone https://github.com/jbangdev/jbang ../jbang) && ([ -d ../jbang-vscode ] || git clone https://github.com/jbangdev/jbang-vscode ../jbang-vscode) && ([ -d ../jbang-idea ] || git clone https://github.com/jbangdev/jbang-idea ../jbang-idea)"

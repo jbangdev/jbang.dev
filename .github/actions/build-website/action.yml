@@ -31,7 +31,6 @@ runs:
         java-version: ${{ inputs.java-version }}
 
     - uses: jdx/mise-action@v2
-      run: eval "$(mise activate bash)"
 
     - run: jbang version --verbose
       shell: bash
