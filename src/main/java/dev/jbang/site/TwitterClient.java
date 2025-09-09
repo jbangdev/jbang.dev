@@ -68,13 +68,13 @@ public class TwitterClient {
 
                     return html;
                 } else {
-                    throw new IOException("Failed to fetch tweet (HTTP " + response.statusCode() + ")");
+                    throw new IOException("Failed to fetch tweet " + tweetUrl + " (HTTP " + response.statusCode() + ")");
                 }
 
             } catch (IOException | InterruptedException e) {
                 if (attempt == maxAttempts) {
                     Log.warn("Failed after " + maxAttempts + " attempts: " + e.getMessage(), e);
-                    return "<p>Failed to fetch tweet</p>";
+                    return "<p>Failed to fetch tweet at " + tweetUrl + "</p>";
                 }
                 try {
                     Thread.sleep(waitTimeMs);
