@@ -33,7 +33,7 @@ runs:
     - uses: jdx/mise-action@v2
 
     - run: |
-        mise doctor
+        mise use -g jbang
         jbang version --verbose
       shell: bash
 
