@@ -7,17 +7,14 @@ Source code for https://jbang.dev
 
 ### Prerequisites
 
-Install [mise](https://mise.jdx.dev/), activate it or use `mise x -- <command>` to run below commands. 
-
-Example: `just preview` works automatially with `mise activate` but if you do not have that
-run it using `mise x -- just preview`
+Install [mise](https://mise.jdx.dev/)
 
 ### Preview
 
 Run:
 
 ```
-just preview
+mise preview
 ```
 
 and visit http://localhost:8080
@@ -29,7 +26,7 @@ This is running in "dev mode" meaning changes should be picked up automatically.
 The following will generate "production" site and serve it out.
 
 ```
-just serve
+mise serve
 ```
 
 The generated content is in `target/roq` and is being served out on `http://localhost:8181`

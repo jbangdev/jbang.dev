@@ -6,15 +6,15 @@
 - `src/main/resources/`: Site configuration (e.g., `application.properties`).
 - `templates/`: Roq page layouts and partials used to render content.
 - `docs-site/`: Antora-based docs; builds to `docs-site/build/site` locally and to `public/documentation` via Maven.
-- `justfile`: Developer commands for dev, build, and docs.
+- `mise.toml`: Tool installs Developer commands for dev, build, and docs.
 - `pom.xml`: Quarkus + Roq build (Java 21, Maven). Output site under `target/roq/`.
 
 ## Build, Test, and Development Commands
-- `just preview`: Run Quarkus dev mode; live-reloads content at `http://localhost:8080`.
-- `just serve`: Generate production site to `target/roq` and serve it on `http://localhost:8181`.
-- `just build`: Run `mvn package` to build and generate docs to `public/documentation`.
+- `mise preview`: Run Quarkus dev mode; live-reloads content at `http://localhost:8080`.
+- `mise serve`: Generate production site to `target/roq` and serve it on `http://localhost:8181`.
+- `mise build`: Run `mvn package` to build and generate docs to `public/documentation`.
 - `mvn test`: Run unit tests (JUnit 5, Quarkus testing).
-- Docs: `just local-docs` (local Antora playbook), `just docs` (full docs build), `just open-docs`.
+- Docs: `mise local-docs` (local Antora playbook), `mise docs` (full docs build), `mise open-docs`.
 
 ## Coding Style & Naming Conventions
 - Java: Use Java 21, 4-space indentation, descriptive names; keep classes small and cohesive.

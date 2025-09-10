@@ -1,3 +1,5 @@
+## DEPRECATED - use mise instaed!
+
 quarkus := require('quarkus')
 mvn := require('mvn')
 jbang := require('jbang')
