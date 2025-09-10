@@ -33,7 +33,7 @@ antora:
   extensions:
     - require: '@antora/collector-extension'
     - require: 'antora-shiki-extension'
-      theme: "github-light"
+      theme: "light-plus"
       languages:
         - bat
         - java
