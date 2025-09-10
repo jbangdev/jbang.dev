@@ -35,9 +35,11 @@ antora:
     - require: 'antora-shiki-extension'
       theme: "github-light"
       languages:
+        - bat
         - java
         - xml
         - docker
+        - ini
         - javascript
         - kotlin
         - groovy
