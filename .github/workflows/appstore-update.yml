@@ -10,16 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: stats
-        uses: jbangdev/jbang-action@v0.119.0
-        with:
-          script: statsquery2.java --token ${{ secrets.CLOUDFLARE_TOKEN }} --account ${{ secrets.CLOUDFLARE_ACCOUNT }}
+      - uses: jdx/mise-action@v2
+      - run: jbang statsquery2.java --token ${{ secrets.CLOUDFLARE_TOKEN }} --account ${{ secrets.CLOUDFLARE_ACCOUNT }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: jbang
-        uses: jbangdev/jbang-action@v0.119.0
-        with:
-          script: .github/appstore.java
+      - run: jbang .github/appstore.java
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit updates
