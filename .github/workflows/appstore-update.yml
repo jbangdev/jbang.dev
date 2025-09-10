@@ -11,13 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: stats
-        uses: jbangdev/jbang-action@v0.119.0
+        uses: jbangdev/jbang-action@v0.130.0
         with:
           script: statsquery2.java --token ${{ secrets.CLOUDFLARE_TOKEN }} --account ${{ secrets.CLOUDFLARE_ACCOUNT }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: jbang
-        uses: jbangdev/jbang-action@v0.119.0
+        uses: jbangdev/jbang-action@v0.130.0
         with:
           script: .github/appstore.java
         env:
