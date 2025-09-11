@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: jdx/mise-action@v2
+      - uses: jdx/mise-action@v3
       - run: jbang statsquery2.java --token ${{ secrets.CLOUDFLARE_TOKEN }} --account ${{ secrets.CLOUDFLARE_ACCOUNT }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
