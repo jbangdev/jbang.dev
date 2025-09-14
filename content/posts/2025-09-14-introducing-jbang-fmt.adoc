@@ -1,0 +1,73 @@
+---
+header:
+  teaser: https://raw.githubusercontent.com/jbangdev/jbang-fmt/main/images/jbang-fmt.png
+title: Introducing jbanghub
+title: Introducing jbang-fmt
+tagline: jbang-fmt is a tool for formatting Java code
+category : learn
+tags : [jbang]
+author : Max Rydahl Andersen
+bgcolor: ff5a71
+---
+ifdef::env-github,env-browser,env-vscode[:imagesdir: ../images]
+
+I really did not want to do this, but after I and others tried to convince google-java-format https://github.com/google/google-java-format/issues/1218[one] https://github.com/google/google-java-format/issues/1218[too] https://github.com/google/google-java-format/issues/1215[many] times to not mess with JBang directives like `//DEPS` or the `///usr/bin/env` lines and tools like Spotless (which I love!) is still a bit too clunky to use on command line - I finally gave up and made my own - all in hope this will be adopted by others and make it self irrelevant.
+
+So here it is: https://github.com/jbangdev/jbang-fmt
+
+image:https://raw.githubusercontent.com/jbangdev/jbang-fmt/main/images/jbang-fmt.png[width=50%]
+
+It is a simple tool that formats Java code using Eclipse Formatter!footnote:[I wanted to offer both Google Java Format and Eclipse but Google Java Format even on API level link:https://github.com/google/google-java-format/issues/1276[seems to have] no consistent ability to ignore lines.] but by default does not mess with JBang directives like `//DEPS` or the `///usr/bin/env` lines.
+
+In it's simplest form you just do:
+
+`jbang-fmt .`
+
+And it will format all the Java files recursively in the current directory.
+
+If you want to format specific set of files and directories you can do:
+
+`jbang-fmt myscript.java src/main`
+
+That's it - you don't need to to read more, just install it and use it.
+
+## One more thing...
+
+Since I made this in like 30 minutes as I was being https://github.com/jbangdev/jbang/pull/2205/[nerd sniped]
+I couldn't resist adding some more bell and whistles.
+
+Before I show them - please know - that I really highly recommend you use *one* format in your project and in many ways I fully agree with https://github.com/google/google-java-format/wiki/FAQ#i-just-need-to-configure-it-a-bit-differently-how[google-java-format faq] on locking down the formatting rules.
+
+That said - the world is a messy place and we all have different needs - so I like to make formatting easy to do and enable easy experimentation - so I added all the ways I can think of a simple formatting tool could be useful.
+
+### `--check`
+
+This is a really simple flag that will check if the code is formatted without making any changes.
+
+`jbang-fmt --check .`
+
+If the code is not formatted it will exit with a non-zero code. Useful in CI pipelines to fail the build if the code is not formatted and as git pre-commit hooks. See https://github.com/jbangdev/jbang-fmt/blob/main/.github/workflows/ci.yml[ci.yml] for an example.
+
+### Maven and Gradle integration
+
+You can use it from Maven and Gradle using their jbang support - no additional plugins needed. See https://github.com/jbangdev/jbang-fmt?tab=readme-ov-file#maven-integration[Maven] and https://github.com/jbangdev/jbang-fmt?tab=readme-ov-file#gradle-integration[Gradle] in documentation for more details.
+
+### Short cuts for common "debates"
+
+- tabs vs spaces ? Use `--indent-with=tab` or `--indent-with=space`
+- big vs small monitor ? Use `--line-length=120` or `--line-length=40`
+- Java specfic versions ? Use `--java-version=4` nostalgically or `--java-version=25` for living on the edge.
+- Compact formatting for documentation ? Use `--ident-size=2`
+etc.
+
+...and if you want full control you can use `-Skey=val` to override any Eclipse formatter property.
+
+But again, remember I told you to just use one format - above is not meant to be used unless you are ready for war.
+
+In addition it also supports using @-files in case you ignored my advice and want to go to crazy on shared formatting.
+
+### Conclusion
+
+So - what are you waiting for? Install it and start formatting your code today!
+
+And if you have any feedback or suggestions, please open an issue on https://github.com/jbangdev/jbang-fmt/issues[GitHub]!
