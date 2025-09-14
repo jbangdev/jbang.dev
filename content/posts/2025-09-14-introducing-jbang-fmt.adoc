@@ -12,7 +12,7 @@ ifdef::env-github,env-browser,env-vscode[:imagesdir: ../images]
 
 I really did not want to do this, but after I and others tried to convince google-java-format https://github.com/google/google-java-format/issues/1218[one] https://github.com/google/google-java-format/issues/1218[too] https://github.com/google/google-java-format/issues/1215[many] times to not mess with JBang directives like `//DEPS` or the `///usr/bin/env` lines, I finally gave up and made my own.
 
-While I'm a ture fan of tools like Spotless, their command-line usage is still too cumbersome. This prompted me to create an improved solution called jbang-fmt, in the hope that its key features will be adopted by competing programs and ultimately render itself obsolete
+While I'm a fan of tools like Spotless, their command-line usage is still too cumbersome. This prompted me to create an improved solution called jbang-fmt, in the hope that its key features will be adopted by competing programs and ultimately render itself obsolete
 
 So here it is: https://github.com/jbangdev/jbang-fmt
 
