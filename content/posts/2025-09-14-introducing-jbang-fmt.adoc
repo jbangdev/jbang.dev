@@ -16,16 +16,19 @@ While I'm a fan of tools like Spotless, their command-line usage is still too cu
 
 So here it is: https://github.com/jbangdev/jbang-fmt
 
+I would have called it `java-fmt` as it is not tied to JBang -  you can use it as-is with any Java code; but I don't like visits from lawyers.
+
 image:https://raw.githubusercontent.com/jbangdev/jbang-fmt/main/images/jbang-fmt.png[width=50%]
 
 ## Why jbang-fmt?
 
 - **Simple**: One command to format any Java file or directory
-- **Fast**: Built for command-line usage
+- **Fast**: Built for command-line usage and using virtual threads
 - **Flexible**: All the options you need (but probably shouldn't use)
 - **JBang-aware**: Respects `//DEPS` and `///usr/bin/env` directives
 
 It is a simple tool that formats Java code using Eclipse Formatter!footnote:[I wanted to offer both Google Java Format and Eclipse but Google Java Format even on API level link:https://github.com/google/google-java-format/issues/1276[seems to have] no consistent ability to ignore lines.] but by default does not mess with JBang directives like `//DEPS` or the `///usr/bin/env` lines.
+
 
 In its simplest form you just do:
 
