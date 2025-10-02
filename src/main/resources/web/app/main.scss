@@ -38,3 +38,25 @@ a:hover {
 @import "minimal-mistakes"; // main partials
 
 @import "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css";
+
+.layout--splash {
+    input#search-input {
+        margin-left: 1rem;
+        margin-bottom: .1em;
+    }
+
+    .feature__wrapper {
+        margin: 0;
+        padding: 2em 0;
+
+        a.btn--cta {
+            margin-top: 1.25em
+        }
+
+        .twitter-tweet {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
