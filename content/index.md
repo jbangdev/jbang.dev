@@ -46,7 +46,7 @@ feature_row2:
 
 {#include partials/feature_row feature_row=page.data['feature_row'] /}
 
-<div class="feature__wrapper">
+<div class="feature__wrapper twitter-wrapper">
 {#twitter cdi:testimonials.list.random align="center" width=550 /}
 <center><a href="/testimonials" class="btn btn--cta btn--primary">All Testimonials</a></center>
 </div>

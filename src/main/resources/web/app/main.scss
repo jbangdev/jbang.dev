@@ -57,6 +57,32 @@ a:hover {
             margin-top: 0 !important;
             margin-bottom: 0 !important;
         }
+
+        &:not(.twitter-wrapper) {
+            @include breakpoint($small) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1em;
+
+                .feature__item {
+                    display: grid;
+                    grid-template-rows: subgrid;
+                    grid-row: span 2;
+
+                    width: 100%;
+
+                    .archive__item {
+                        display: grid;
+                        grid-template-rows: subgrid;
+                        grid-row: span 2;
+
+                        &-teaser {
+                            align-self: center;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
