@@ -57,5 +57,15 @@ feature_row2:
 
 Below is the latest talk about JBang: "jbang - Unleash the power of Java"
 
-<iframe width="1280" height="720" src="https://youtube.com/embed/cpKwBbz1sf0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
+<div class="fluid-width-video-wrapper" style="width: 100%; position: relative; padding-bottom: 56.25%; box-sizing: border-box;">
+    <iframe
+        style="position: absolute; top: 0; left: 0; height: 100%; width: 100%"
+        width="1280"
+        height="720"
+        src="https://youtube.com/embed/cpKwBbz1sf0"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+    >
+    </iframe>
+</div>
