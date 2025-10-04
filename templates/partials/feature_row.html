@@ -18,7 +18,7 @@
         <div class="archive__item-excerpt">{f.excerpt.raw} {! | markdownify !}</div>
         {/if}
         {#if f.containsKey('url')}
-        <p><a href="{f.url}" class="btn {f.btn_class}">{f.btn_label ?: "Learn More"}</a></p>
+        <a href="{f.url}" class="btn btn--cta {f.btn_class}">{f.btn_label ?: "Learn More"}</a>
         {/if}
       </div>
     </div>
