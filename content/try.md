@@ -3,23 +3,167 @@ title: Try JBang
 link: /try/
 layout: splash
 ---
-
+{|
 ## Try JBang
 
-Below is a [JDoodle](https://jdoodle.com) window which provides a simplistic Java development environment. Run `hello.java` by clicking the Execute button.
+Choose how you'd like to try JBang:
 
-  <div data-pym-src='https://www.jdoodle.com/plugin' data-language="jbang">
-///usr/bin/env jbang "$0" "$@" ; exit $?
-//DEPS com.github.lalyos:jfiglet:0.0.8
-
-import com.github.lalyos.jfiglet.FigletFont;
-
-class hello {
-
-    public static void main(String... args) throws Exception {
-        System.out.println(FigletFont.convertOneLine(
-               "Hello " + ((args.length>0)?args[0]:"jbang")));  ;;
-    }
-}
+<div class="try-options">
+  <div class="try-option jupyter">
+    <div class="try-option-header">
+      <h3>🚀 Jupyter Notebook</h3>
+      <p>Interactive development environment with rich output and data visualization</p>
+    </div>
+    <div class="try-option-content">
+      <p>Experience JBang in a full Jupyter notebook environment with:</p>
+      <ul>
+        <li>Interactive code execution</li>
+        <li>Rich output and visualizations</li>
+        <li>Markdown documentation</li>
+        <li>Data science libraries</li>
+      </ul>
+      <div class="try-option-actions">
+        <a href="https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?urlpath=git-pull%3Frepo%3Dhttps%3A%2F%2Fgithub.com%2Fjupyter-java%2Fjupyter-java-examples%26urlpath%3Dtree%2Fjupyter-java-examples%2F%26branch%3Djbang%26targetPath%3Dlabs%2Ftree%2Findex.ipynb" 
+           class="btn btn-primary" target="_blank">
+          Launch Jupyter Environment
+        </a>
+        <a href="/try/jupyter/" class="btn btn-secondary">
+          Create Custom Link
+        </a>
+      </div>
+    </div>
   </div>
-  <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
+
+  <div class="try-option jdoodle">
+    <div class="try-option-header">
+      <h3>⚡ Quick Try</h3>
+      <p>Simple, fast code execution in your browser</p>
+    </div>
+    <div class="try-option-content">
+      <p>Get started quickly with a lightweight development environment:</p>
+      <ul>
+        <li>Instant code execution</li>
+        <li>No setup required</li>
+        <li>Perfect for quick tests</li>
+        <li>Runs in your browser</li>
+      </ul>
+      <div class="try-option-actions">
+        <a href="/try/jdoodle/" class="btn btn-primary">
+          Try with JDoodle
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.try-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.try-option {
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.try-option:hover {
+  border-color: #007acc;
+  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.1);
+  transform: translateY(-2px);
+}
+
+.try-option.jupyter {
+  border-color: #f37626;
+}
+
+.try-option.jupyter:hover {
+  border-color: #f37626;
+  box-shadow: 0 4px 12px rgba(243, 118, 38, 0.1);
+}
+
+.try-option-header h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.try-option-header p {
+  margin: 0 0 1rem 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.try-option-content ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.try-option-content li {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.try-option-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #007acc;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #005a9e;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background: #f8f9fa;
+  color: #333;
+  border: 1px solid #dee2e6;
+}
+
+.btn-secondary:hover {
+  background: #e9ecef;
+  color: #333;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .try-options {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .try-option-actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+</style>
+|}
