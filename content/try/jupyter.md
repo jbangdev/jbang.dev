@@ -6,11 +6,11 @@ layout: splash
 {|
 ## Try JBang with Jupyter
 
-Create a custom Jupyter environment with your own GitHub repository or Gist.
+Create a custom Jupyter notebook environment with your own GitHub repository or Gist.
 
 ### Quick Start
 
-Launch the pre-configured JBang Jupyter environment with example notebooks:
+Launch the pre-configured JBang Jupyter environment with [example notebook](https://github.com/jupyter-java/jupyter-java-examples/tree/jbang):
 
 <a href="https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fjupyter-java%252Fjupyter-java-examples%26urlpath%3Dlab%252Ftree%252Fjbang%252F%26branch%3Djbang%26targetPath%3Djbang" 
    class="btn btn--primary btn--large" target="_blank">
@@ -21,6 +21,17 @@ Launch the pre-configured JBang Jupyter environment with example notebooks:
 
 Create a custom Jupyter environment with your own repository or Gist:
 
+### Quick Preset
+
+Try these:
+
+<div class="preset-buttons">
+  <a href="/try/jupyter/?repo=https://github.com/jupyter-java/jupyter-java-examples&branch=jbang&filepath=" class="btn btn--primary">
+    📚 JBang Examples
+  </a>
+</div>
+
+
 <div class="link-generator">
   <div class="generator-form">
     <div class="form-group">
@@ -28,21 +39,18 @@ Create a custom Jupyter environment with your own repository or Gist:
       <input type="url" id="repo-url" placeholder="https://github.com/username/repo or https://gist.github.com/username/gist-id" />
       <small class="form-help">Enter a GitHub repository or Gist URL</small>
     </div>
-    
     <div class="form-group">
       <label for="branch">Branch (optional):</label>
       <input type="text" id="branch" placeholder="main" />
       <small class="form-help">Leave empty for default branch</small>
     </div>
-    
     <div class="form-group">
       <label for="filepath">File/Path (optional):</label>
       <input type="text" id="filepath" placeholder="notebooks/example.ipynb" />
       <small class="form-help">Specific file or directory to open</small>
     </div>
-    
-    <button type="button" id="generate-link" class="btn btn--primary">
-      Generate Jupyter Link
+    <button type="button" id="generate-link" class="btn btn--primary btn--large" style="width: 100%; margin-top: 1rem;">
+      🔗 Generate Jupyter Link
     </button>
   </div>
   
@@ -66,6 +74,7 @@ Create a custom Jupyter environment with your own repository or Gist:
 2. **Branch**: The specific branch to use (defaults to main/master)
 3. **File Path**: Optional specific file or directory to open in Jupyter
 4. **Launch**: Opens your custom environment in MyBinder with JBang kernel
+
 
 ### Examples
 
@@ -91,6 +100,19 @@ Create a custom Jupyter environment with your own repository or Gist:
 
 <style>
 /* Use Minimal Mistakes button styles - no custom button CSS needed */
+
+.preset-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.preset-buttons .btn {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
 
 .link-generator {
   background: #f8f9fa;
@@ -219,6 +241,27 @@ document.addEventListener('DOMContentLoaded', function() {
   const copyBtn = document.getElementById('copy-link');
   const launchLink = document.getElementById('launch-link');
 
+  // Read URL parameters and pre-fill form
+  const urlParams = new URLSearchParams(window.location.search);
+  const repoParam = urlParams.get('repo');
+  const branchParam = urlParams.get('branch');
+  const filepathParam = urlParams.get('filepath');
+  
+  if (repoParam) {
+    repoUrlInput.value = repoParam;
+  }
+  if (branchParam) {
+    branchInput.value = branchParam;
+  }
+  if (filepathParam) {
+    filepathInput.value = filepathParam;
+  }
+  
+  // Auto-generate link if all required parameters are present
+  if (repoParam) {
+    generateBtn.click();
+  }
+
   generateBtn.addEventListener('click', function() {
     const repoUrl = repoUrlInput.value.trim();
     if (!repoUrl) {
@@ -250,22 +293,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     filepath = filepathInput.value.trim();
 
-    // Build MyBinder URL
-    let binderUrl = 'https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?';
+    // Build MyBinder URL following the Java implementation
+    const base = 'https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang';
+    const content = 'content';
     
-    const params = new URLSearchParams();
-    params.append('repo', githubUrl);
-    params.append('urlpath', 'tree');
+    // Build the path to open
+    const pathToOpen = 'lab/tree/' + content + '/' + filepath;
     
-    if (filepath) {
-      params.append('urlpath', `tree/${filepath}`);
-    }
+    // Build the nested urlpath value (before encoding)
+    const gitPullParams = new URLSearchParams();
+    gitPullParams.append('repo', githubUrl);
+    gitPullParams.append('urlpath', pathToOpen);
+    gitPullParams.append('branch', branch);
+    gitPullParams.append('targetPath', content);
     
-    if (branch && branch !== 'main') {
-      params.append('branch', branch);
-    }
-
-    const finalUrl = binderUrl + params.toString();
+    const gitPullUrlpath = 'git-pull?' + gitPullParams.toString();
+    
+    // Encode the nested urlpath value
+    const encodedNestedUrlpath = encodeURIComponent(gitPullUrlpath);
+    
+    // Compose the final URL
+    const finalUrl = base + '?urlpath=' + encodedNestedUrlpath;
 
     // Show generated link
     customLinkInput.value = finalUrl;
