@@ -317,14 +317,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
   copyBtn.addEventListener('click', function() {
     customLinkInput.select();
-    document.execCommand('copy');
-    
-    // Visual feedback
-    const originalText = copyBtn.textContent;
-    copyBtn.textContent = '✅ Copied!';
-    setTimeout(() => {
-      copyBtn.textContent = originalText;
-    }, 2000);
+    navigator.clipboard.writeText(customLinkInput.value)
+      .then(() => {
+        // Visual feedback
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = '✅ Copied!';
+        setTimeout(() => {
+          copyBtn.textContent = originalText;
+        }, 2000);
+      })
+      .catch(() => {
+        // Fallback or error feedback
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = '❌ Copy failed';
+        setTimeout(() => {
+          copyBtn.textContent = originalText;
+        }, 2000);
+      });
   });
 });
 </script>
