@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const content = 'content';
     
     // Build the path to open
-    const pathToOpen = 'lab/tree/' + content + '/' + filepath;
+    const pathToOpen = filepath ? ('lab/tree/' + content + '/' + filepath) : ('lab/tree/' + content + '/');
     
     // Build the nested urlpath value (before encoding)
     const gitPullParams = new URLSearchParams();
