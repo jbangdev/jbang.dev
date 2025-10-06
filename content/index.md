@@ -12,8 +12,8 @@ excerpt: Lets Students, Educators and Professional Developers create, edit and r
 feature_row:
   - image_path: /assets/images/carbon-deps.png
     title: "Embedded Dependencies"
-    excerpt: "Automatic fetching of any dependency using `//DEPS group:artifact:version`
-              or `@Grab` annotations directly from the source code."
+    excerpt: "Automatic fetching of any dependency using <code>//DEPS group:artifact:version</code>
+              or <code>@Grab</code> annotations directly from the source code."
   - image_path: /assets/images/carbon-install.png
     title: "Install & Run Anywhere"
     excerpt: "JBang installs and run on Windows, Linux, macOS, Docker and Github Actions as well as usable from Maven and Gradle plugins"
@@ -29,7 +29,7 @@ feature_row2:
     excerpt: "You can use any Java, from version 8 and up"
   - image_path: /assets/images/feature-appstore.png
     title: "JBang AppStore"
-    excerpt: "Use the JBang AppStore to find others application or publish your own from a git backed `jbang-catalog.json`"
+    excerpt: "Use the JBang AppStore to find others application or publish your own from a git backed <code>jbang-catalog.json</code>"
     url: "/appstore"
     btn_label: "AppStore"
     btn_class: "btn--primary"
@@ -46,9 +46,9 @@ feature_row2:
 
 {#include partials/feature_row feature_row=page.data['feature_row'] /}
 
-<div class="feature__wrapper">
+<div class="feature__wrapper twitter-wrapper">
 {#twitter cdi:testimonials.list.random align="center" width=550 /}
-<center><a href="/testimonials" class="btn btn--primary">All Testimonials</a></center>
+<center><a href="/testimonials" class="btn btn--cta btn--primary">All Testimonials</a></center>
 </div>
 
 {#include partials/feature_row feature_row=page.data['feature_row2'] /}
@@ -57,5 +57,15 @@ feature_row2:
 
 Below is the latest talk about JBang: "jbang - Unleash the power of Java"
 
-<iframe width="1280" height="720" src="https://youtube.com/embed/cpKwBbz1sf0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
+<div class="fluid-width-video-wrapper" style="width: 100%; position: relative; padding-bottom: 56.25%; box-sizing: border-box;">
+    <iframe
+        style="position: absolute; top: 0; left: 0; height: 100%; width: 100%"
+        width="1280"
+        height="720"
+        src="https://youtube.com/embed/cpKwBbz1sf0"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+    >
+    </iframe>
+</div>
