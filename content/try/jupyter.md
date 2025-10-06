@@ -10,9 +10,9 @@ Create a custom Jupyter notebook environment with your own GitHub repository or 
 
 ### Quick Start
 
-Launch the pre-configured JBang Jupyter environment with [example notebook](https://github.com/jupyter-java/jupyter-java-examples/tree/jbang):
+Launch the pre-configured JBang Jupyter environment with [example notebook](https://github.com/jbangdev/jbang-jupyter-examples):
 
-<a href="https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fjupyter-java%252Fjupyter-java-examples%26urlpath%3Dlab%252Ftree%252Fjbang%252F%26branch%3Djbang%26targetPath%3Djbang" 
+<a href="https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fjbangdev%252Fjbang-jupyter-examples%26urlpath%3Dlab%252Ftree%252Fcontent%252F%26branch%3Dmain%26targetPath%3Dcontent" 
    class="btn btn--primary btn--large" target="_blank">
   🚀 Launch JBang Jupyter Environment
 </a>
@@ -26,7 +26,7 @@ Create a custom Jupyter environment with your own repository or Gist:
 Try these:
 
 <div class="preset-buttons">
-  <a href="/try/jupyter/?repo=https://github.com/jupyter-java/jupyter-java-examples&branch=jbang&filepath=" class="btn btn--primary">
+  <a href="/try/jupyter/?repo=https://github.com/jbangdev/jbang-jupyter-examples" class="btn btn--primary">
     📚 JBang Examples
   </a>
 </div>
@@ -273,15 +273,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let githubUrl, branch, filepath;
     
     if (repoUrl.includes('gist.github.com')) {
-      // Handle Gist URLs
-      const gistMatch = repoUrl.match(/gist\.github\.com\/([^\/]+)\/([^\/]+)/);
-      if (gistMatch) {
-        githubUrl = `https://github.com/${gistMatch[1]}/${gistMatch[2]}`;
-        branch = branchInput.value.trim() || 'main';
-      } else {
-        alert('Invalid Gist URL format');
-        return;
-      }
+      // Handle Gist URLs - use the original Gist URL directly
+      githubUrl = repoUrl;
+      branch = branchInput.value.trim() || 'main';
     } else if (repoUrl.includes('github.com')) {
       // Handle regular GitHub URLs
       githubUrl = repoUrl.replace(/\.git$/, '');

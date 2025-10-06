@@ -20,7 +20,7 @@ Choose how you'd like to try JBang:
         <li>Instant code execution</li>
         <li>No setup required</li>
         <li>Perfect for quick tests</li>
-        <li>Runs in your browser</li>
+        <li>Single files</li>
       </ul>
       <div class="try-option-actions">
         <a href="/try/jdoodle/" class="btn btn--primary">
@@ -40,11 +40,11 @@ Choose how you'd like to try JBang:
       <ul>
         <li>Interactive code execution</li>
         <li>Rich output and visualizations</li>
-        <li>Markdown documentation</li>
-        <li>Data science libraries</li>
+        <li>Multiple files</li>
+        <li>Use your own github or gist</li>
       </ul>
       <div class="try-option-actions">
-        <a href="https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fjupyter-java%252Fjupyter-java-examples%26urlpath%3Dlab%252Ftree%252Fjbang%252F%26branch%3Djbang%26targetPath%3Djbang" 
+        <a href="https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fjbangdev%252Fjbang-jupyter-examples%26urlpath%3Dlab%252Ftree%252Fcontent%252F%26branch%3Dmain%26targetPath%3Dcontent" 
            class="btn btn--primary" target="_blank">
           Launch Jupyter Environment
         </a>
