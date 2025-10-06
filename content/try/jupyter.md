@@ -12,8 +12,8 @@ Create a custom Jupyter environment with your own GitHub repository or Gist.
 
 Launch the pre-configured JBang Jupyter environment with example notebooks:
 
-<a href="https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?urlpath=git-pull%3Frepo%3Dhttps%3A%2F%2Fgithub.com%2Fjupyter-java%2Fjupyter-java-examples%26urlpath%3Dtree%2Fjupyter-java-examples%2F%26branch%3Djbang%26targetPath%3Dlabs%2Ftree%2Findex.ipynb" 
-   class="btn btn-primary btn-large" target="_blank">
+<a href="https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fjupyter-java%252Fjupyter-java-examples%26urlpath%3Dlab%252Ftree%252Fjbang%252F%26branch%3Djbang%26targetPath%3Djbang" 
+   class="btn btn--primary btn--large" target="_blank">
   🚀 Launch JBang Jupyter Environment
 </a>
 
@@ -41,7 +41,7 @@ Create a custom Jupyter environment with your own repository or Gist:
       <small class="form-help">Specific file or directory to open</small>
     </div>
     
-    <button type="button" id="generate-link" class="btn btn-primary">
+    <button type="button" id="generate-link" class="btn btn--primary">
       Generate Jupyter Link
     </button>
   </div>
@@ -50,11 +50,11 @@ Create a custom Jupyter environment with your own repository or Gist:
     <h4>Your Custom Jupyter Link:</h4>
     <div class="link-container">
       <input type="text" id="custom-link" readonly />
-      <button type="button" id="copy-link" class="btn btn-secondary">
+      <button type="button" id="copy-link" class="btn btn--inverse">
         📋 Copy
       </button>
     </div>
-    <a href="#" id="launch-link" class="btn btn-success" target="_blank">
+    <a href="#" id="launch-link" class="btn btn--primary" target="_blank">
       🚀 Launch Jupyter
     </a>
   </div>
@@ -90,58 +90,7 @@ Create a custom Jupyter environment with your own repository or Gist:
 </div>
 
 <style>
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  text-align: center;
-  transition: all 0.2s ease;
-  border: none;
-  cursor: pointer;
-  margin: 0.5rem 0;
-}
-
-.btn-primary {
-  background: #f37626;
-  color: white;
-}
-
-.btn-primary:hover {
-  background: #d65a0a;
-  color: white;
-  text-decoration: none;
-}
-
-.btn-secondary {
-  background: #f8f9fa;
-  color: #333;
-  border: 1px solid #dee2e6;
-}
-
-.btn-secondary:hover {
-  background: #e9ecef;
-  color: #333;
-  text-decoration: none;
-}
-
-.btn-success {
-  background: #28a745;
-  color: white;
-}
-
-.btn-success:hover {
-  background: #218838;
-  color: white;
-  text-decoration: none;
-}
-
-.btn-large {
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  margin: 2rem 0;
-}
+/* Use Minimal Mistakes button styles - no custom button CSS needed */
 
 .link-generator {
   background: #f8f9fa;

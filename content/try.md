@@ -9,31 +9,6 @@ layout: splash
 Choose how you'd like to try JBang:
 
 <div class="try-options">
-  <div class="try-option jupyter">
-    <div class="try-option-header">
-      <h3>🚀 Jupyter Notebook</h3>
-      <p>Interactive development environment with rich output and data visualization</p>
-    </div>
-    <div class="try-option-content">
-      <p>Experience JBang in a full Jupyter notebook environment with:</p>
-      <ul>
-        <li>Interactive code execution</li>
-        <li>Rich output and visualizations</li>
-        <li>Markdown documentation</li>
-        <li>Data science libraries</li>
-      </ul>
-      <div class="try-option-actions">
-        <a href="https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?urlpath=git-pull%3Frepo%3Dhttps%3A%2F%2Fgithub.com%2Fjupyter-java%2Fjupyter-java-examples%26urlpath%3Dtree%2Fjupyter-java-examples%2F%26branch%3Djbang%26targetPath%3Dlabs%2Ftree%2Findex.ipynb" 
-           class="btn btn-primary" target="_blank">
-          Launch Jupyter Environment
-        </a>
-        <a href="/try/jupyter/" class="btn btn-secondary">
-          Create Custom Link
-        </a>
-      </div>
-    </div>
-  </div>
-
   <div class="try-option jdoodle">
     <div class="try-option-header">
       <h3>⚡ Quick Try</h3>
@@ -48,8 +23,33 @@ Choose how you'd like to try JBang:
         <li>Runs in your browser</li>
       </ul>
       <div class="try-option-actions">
-        <a href="/try/jdoodle/" class="btn btn-primary">
+        <a href="/try/jdoodle/" class="btn btn--primary">
           Try with JDoodle
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="try-option jupyter">
+    <div class="try-option-header">
+      <h3>🚀 Jupyter Notebook</h3>
+      <p>Interactive development environment with rich output and data visualization</p>
+    </div>
+    <div class="try-option-content">
+      <p>Experience JBang in a full Jupyter notebook environment with:</p>
+      <ul>
+        <li>Interactive code execution</li>
+        <li>Rich output and visualizations</li>
+        <li>Markdown documentation</li>
+        <li>Data science libraries</li>
+      </ul>
+      <div class="try-option-actions">
+        <a href="https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fjupyter-java%252Fjupyter-java-examples%26urlpath%3Dlab%252Ftree%252Fjbang%252F%26branch%3Djbang%26targetPath%3Djbang" 
+           class="btn btn--primary" target="_blank">
+          Launch Jupyter Environment
+        </a>
+        <a href="/try/jupyter/" class="btn btn--inverse">
+          Create Custom Link
         </a>
       </div>
     </div>
@@ -116,40 +116,7 @@ Choose how you'd like to try JBang:
   flex-wrap: wrap;
 }
 
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  text-align: center;
-  transition: all 0.2s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background: #007acc;
-  color: white;
-}
-
-.btn-primary:hover {
-  background: #005a9e;
-  color: white;
-  text-decoration: none;
-}
-
-.btn-secondary {
-  background: #f8f9fa;
-  color: #333;
-  border: 1px solid #dee2e6;
-}
-
-.btn-secondary:hover {
-  background: #e9ecef;
-  color: #333;
-  text-decoration: none;
-}
+/* Use Minimal Mistakes button styles - no custom button CSS needed */
 
 @media (max-width: 768px) {
   .try-options {
