@@ -1,6 +1,6 @@
 ## jbang.dev website
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Source code for https://jbang.dev
@@ -54,6 +54,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://jasondl.ee"><img src="https://avatars.githubusercontent.com/u/191616?v=4?s=100" width="100px;" alt="Jason Lee"/><br /><sub><b>Jason Lee</b></sub></a><br /><a href="https://github.com/jbangdev/jbang.dev/commits?author=jasondlee" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Tjs002"><img src="https://avatars.githubusercontent.com/u/42903889?v=4?s=100" width="100px;" alt="Tejas Gandhi"/><br /><sub><b>Tejas Gandhi</b></sub></a><br /><a href="https://github.com/jbangdev/jbang.dev/commits?author=Tjs002" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/koppor"><img src="https://avatars.githubusercontent.com/u/1366654?v=4?s=100" width="100px;" alt="Oliver Kopp"/><br /><sub><b>Oliver Kopp</b></sub></a><br /><a href="https://github.com/jbangdev/jbang.dev/issues?q=author%3Akoppor" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://piotrp.dev"><img src="https://avatars.githubusercontent.com/u/99439005?v=4?s=100" width="100px;" alt="Piotr Płaczek"/><br /><sub><b>Piotr Płaczek</b></sub></a><br /><a href="#design-piotrpdev" title="Design">🎨</a></td>
     </tr>
   </tbody>
 </table>
