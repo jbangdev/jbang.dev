@@ -1,0 +1,236 @@
+---
+header:
+  teaser: /assets/images/java-you-can-share.png
+title: Java in Places You Do Not Expect It
+tagline: Java you can share
+category: learn
+tags: [jbang]
+author: Max Rydahl Andersen
+bgcolor: ff5a71
+---
+ifdef::env-github,env-browser,env-vscode[:imagesdir:../../public/assets/images]
+
+Java is powerful. Java is everywhere.
+
+But *trying* Java? That has always been the problem.
+
+For decades, the Java experience started with instructions:
+
+> _“Download a JDK, configure JAVA_HOME, pick Maven or Gradle…”_
+
+Meanwhile, Javascript was taking over the frontend world and Python users opened a browser tab and accidentally trained a neural network before breakfast.
+
+It is not that Java could not do the same.
+It is that Java was never inviting itself to the same places.
+
+JBang takes a lot of the friction out of running Java - but we can do more.
+
+== Stopping the Fight — and Hitching a Ride
+
+image:/assets/images/java-you-can-share.png[width=50%]
+
+For years, our instinct in the Java world seem to be:
+build our own visuals, notebooks, our own clouds, our own hosted playgrounds.
+
+But Python already _built the roads_ — Jupyter, Binder, Thebe.
+
+And those platforms? They (for the most part) do not actually care what language you run.
+
+So I stopped trying to compete with Python's ecosystem.
+Instead, I asked a different question:
+
+> **What if Java could quietly travel the same roads?**
+
+No new infrastructure. No new service.
+Just Java, standing on the shoulders of Pythons ecosystem.
+
+== What I Built — All About Entrance, Not Empire
+
+Everything that follows is working and/or powered by **JBang**, aimed at a single goal:
+
+**Give Java a low-friction entrance.**
+
+The same mission JBang has always had.
+
+=== JBang-Powered Java Kernel (for Jupyter)
+
+There been and are a few various Java Jupter Kernel implementations out there - all documented at https://github.com/jupyter-java[jupyter-java].
+
+I've been encouraging various kernels to enable JBang style directives but as with many things in life - I had to do it myself to see it happen.
+
+That is what https://github.com/jbangdev/jbang-jupyter[JBang Jupyter Kernel] is all about. It is currently based on JJava a newer fork of IJava the original Java kernel for Jupyter.
+
+It enables use of the same `//<directives>` syntax as JBang.
+
+Meaning, this is not a sandboxed toy. Not "Java-like".
+Real Java. Real `//DEPS`. Real libraries.
+
+[source,java]
+----
+//DEPS com.squareup.okio:okio:3.4.0
+System.out.println("Yes, this is Java. With dependencies. In a notebook.");
+----
+
+If you can import libraries on the fly, you have not just added Java — you have brought the entire JVM ecosystem with you.
+
+=== Binder Environments — No Install, No Account
+
+MyBinder.org spins up a complete Java + JBang environment in your browser.
+
+No Docker setup. No login. No configuration.
+
+Click this https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fjbangdev%252Fjbang-jupyter-examples%26urlpath%3Dlab%252Ftree%252Fcontent%252F%26branch%3Dmain%26targetPath%3Dcontent[link] → See, edit and run Java.
+
+It feels like cheating, because for Java, it is.
+
+=== A "Run with JBang" Button (for Any File)
+
+Any `.java`, `.jsh`, or GitHub gist can now include a badge:
+
+➡ **Run with JBang**
+
+Click it, and it launches instantly in Binder with everything preloaded.
+No cloning. No IDE. No JDK install. Just run.
+
+=== Thebe Web Embeds — Runnable Blog Snippets
+
+Documentation and blog posts do not need to be static anymore.
+With Thebe, you can embed runnable Java code in a webpage —
+the same way Python has done for years.
+
+Java snippets that *actually execute*, not just highlight.
+
+== This Is Not Java for Data Science
+
+If someone uses it for charts — fantastic.
+But that is not why I built it.
+
+This is not about competing with pandas or NumPy.
+
+This *is*:
+* Java without ritual
+* A runnable alternative to "clone and pray"
+* The continuation of JBang's mission:  
+  _Run Java with nothing but curiosity._
+
+> Most people never disliked Java.  
+> They disliked the ceremony required to *meet* it.
+
+== What This Unlocks
+
+Not deployments. Not servers.
+**Curiosity.**
+
+=== Instant Workshops
+Teach Java without setup.
+A browser tab replaces a 45-minute install session.
+
+=== Runnable Blog Posts
+Stop making readers imagine the output.
+Let them press Run and *see* it.
+
+=== Sharable Bug Reproductions
+"Can you reproduce this?" becomes a link, not a setup guide.
+
+=== API Exploration
+Test an HTTP client or JSON mapper with `//DEPS`, not `pom.xml`.
+
+== Binder Is a Sandbox, Not a Server
+
+Binder sessions are temporary.
+Resources are small.
+Everything resets.
+
+And that is perfect — because this is not about deployment.
+
+> Think *notebook*, not *platform*.  
+> Think *prototype*, not *product*.
+> Think *evolving*, not *static*.
+
+If people fall in love with what they try here?
+They will install Java *by choice*.
+
+== The Bigger Picture — Java You Can Share
+
+Java has defended its place in production for decades.
+This work is about something different:
+
+**Making Java a language you can _share_ — instantly.**
+
+No installer. No IDE war. No barrier.
+Just code, curiosity, and a button.
+
+=== Want In?
+
+If you want to see Java show up in classrooms, blogs, notebooks, exploratory tools…
+you are exactly who I built this for.
+
+Come break things with me.
+Or just click **Run** and see what happens.
+
+[source]
+----
+//DEPS welcome
+----
+
+
+{|
+
+++++
+
+<!-- Configure and load Thebe - must be before the thbe js is loaded !-->
+<script type="text/x-thebe-config">
+  {
+        requestKernel: true,
+        persistKernel: false,
+        useJupyterLite: false,
+        useBinder: true,
+        binderOptions: {
+          repo: "jupyter-java/jupyter-java-binder",
+          ref: "jbang",
+          binderUrl: 'https://mybinder.org'
+        },
+        kernelOptions: {
+          kernelName: "jbang-jbang",
+        },
+        codeMirrorConfig: {
+         
+        }
+      }
+      
+</script>
+
+<link rel="stylesheet" href="https://unpkg.com/thebe@latest/lib/thebe.css">
+<script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+
+
+<script>
+thebe.on("status", function (evt, data) {
+    console.log("Status changed:", data.status, data.message);
+});
+</script>
+
+++++
+
+
+
+++++
+<div class="thebe-activate"></div>
+<div class="thebe-status"></div>
+++++
+
+
+++++
+<div class="listingblock">
+  <div class="content">
+    <pre class="highlight hljs-copy-wrapper">
+      <code class="language-java hljs" data-lang="java" data-executable="true">
+      System.out.println("Hello, World!");
+      </code>
+    </pre> 
+  </div>
+</div>
+++++
+
+|}
+
