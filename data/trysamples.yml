@@ -13,7 +13,6 @@ items:
         label: Composing
       - value: java21/Record_3
         label: Method Overriding
-
   - category: Unnamed Pattern
     items:
       - value: java22/Unamed_Pattern_1
@@ -24,7 +23,6 @@ items:
         label: BiFunction with Unnamed Pattern
       - value: java22/Unamed_Pattern_4
         label: Pattern Matching with Unnamed Pattern
-
   - category: Gatherers
     groups:
       - group: Simple
@@ -57,7 +55,6 @@ items:
             label: Combining
           - value: java24/Gatherers_D4
             label: Combining With Default Value
-
   - category: Switch and Sealed Types
     items:
       - value: java22/Switch_on_Sealled_Types_1
@@ -70,7 +67,6 @@ items:
         label: "… with Unnamed Patterns"
       - value: java22/Switch_on_Sealled_Types_5
         label: "… with Guarded Patterns"
-
   - category: Primitive Type Patterns
     badge:
       text: Java 25
@@ -93,7 +89,6 @@ items:
         label: Double Primitive Pattern
       - value: java25/PrimitiveTypePatterns_10
         label: JSON Analysis
-
   - category: Stable Values
     badge:
       text: Java 25
@@ -115,7 +110,6 @@ items:
         label: "… as Functions"
       - value: java25/StableValues_8
         label: "… as IntFunctions"
-
   - category: Miscellaneous
     items:
       - value: java22/StatementsBeforeSuper_1

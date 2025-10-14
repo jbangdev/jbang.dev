@@ -47,8 +47,8 @@ Below is an embedded notebook where you can write Java code using JBang directiv
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-top: 1rem;
-    padding: 0.75rem;
+    margin: 0;
+    padding: 0.5rem 0.75rem;
     background: #f8f9fa;
     border: 1px solid #dee2e6;
     border-radius: 4px;
@@ -82,6 +82,23 @@ Below is an embedded notebook where you can write Java code using JBang directiv
   .thebe-restartall-button,
   .thebe-runall-button {
     display: none !important;
+  }
+  
+  /* Reduce spacing around editor */
+  .listingblock {
+    margin: 0 0 1.5rem 0;
+  }
+  
+  .listingblock .content {
+    margin: 0;
+  }
+  
+  .listingblock pre {
+    margin: 0;
+  }
+  
+  .thebelab-cell {
+    margin: 0 !important;
   }
 
 .try-options {
@@ -175,6 +192,11 @@ thebe.on("status", function (evt, data) {
   <div class="editor-controls">
    <div class="thebe-status"></div>
   </div>
+  |}
+
+{#include partials/try-samples.html /}
+
+{|
   <div class="content">
     <pre class="highlight hljs-copy-wrapper">
       <code class="language-java hljs" data-lang="java" data-executable="true">
