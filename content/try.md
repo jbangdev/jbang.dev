@@ -6,57 +6,84 @@ layout: splash
 {|
 ## Try JBang
 
-Choose how you'd like to try JBang:
+Below is an embedded notebook where you can write Java code using JBang directives, click run and see it execute.
 
-<div class="try-options">
-  <div class="try-option jdoodle">
-    <div class="try-option-header">
-      <h3>⚡ Quick Try</h3>
-      <p>Simple, fast code execution in your browser</p>
-    </div>
-    <div class="try-option-content">
-      <p>Get started quickly with a lightweight development environment:</p>
-      <ul>
-        <li>Instant code execution</li>
-        <li>No setup required</li>
-        <li>Perfect for quick tests</li>
-        <li>Single files</li>
-      </ul>
-      <div class="try-option-actions">
-        <a href="/try/jdoodle/" class="btn btn--primary">
-          Try with JDoodle
-        </a>
-      </div>
-    </div>
-  </div>
+<!-- Configure and load Thebe - must be before the thbe js is loaded !-->
+<script type="text/x-thebe-config">
+  {
+        bootstrap: true,
+        requestKernel: true,
+        persistKernel: false,
+        useJupyterLite: false,
+        useBinder: true,
+        binderOptions: {
+          repo: "jupyter-java/jupyter-java-binder",
+          ref: "jbang",
+          binderUrl: 'https://mybinder.org'
+        },
+        kernelOptions: {
+          kernelName: "jbang-jbang",
+        },
+        codeMirrorConfig: {
+          theme: "default",
+          lineNumbers: true,
+          lineWrapping: true
+        }
+      }
+      
+</script>
 
-  <div class="try-option jupyter">
-    <div class="try-option-header">
-      <h3>🚀 Jupyter Notebook</h3>
-      <p>Interactive development environment with rich output and data visualization</p>
-    </div>
-    <div class="try-option-content">
-      <p>Experience JBang in a full Jupyter notebook environment with:</p>
-      <ul>
-        <li>Interactive code execution</li>
-        <li>Rich output and visualizations</li>
-        <li>Multiple files</li>
-        <li>Use your own github or gist</li>
-      </ul>
-      <div class="try-option-actions">
-        <a href="https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fjbangdev%252Fjbang-jupyter-examples%26urlpath%3Dlab%252Ftree%252Fcontent%252F%26branch%3Dmain%26targetPath%3Dcontent" 
-           class="btn btn--primary" target="_blank">
-          Launch Jupyter Environment
-        </a>
-        <a href="/try/jupyter/" class="btn btn--inverse">
-          Create Custom Link
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+<script src="https://unpkg.com/thebe@0.9.3/lib/index.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/thebe@0.9.3/lib/thebe.css">
 
-<style>
+ <style>
+   /* Set Jupyter/Thebe code font size for try page */
+   :root {
+     --jp-code-font-size: 20px;
+   }
+
+  /* Editor controls - buttons and status in one row */
+  .editor-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+  }
+
+  .editor-controls .thebe-status {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    border: none !important;
+    background: transparent !important;
+    font-size: 0.85rem;
+  }
+
+  /* Make all status elements inline */
+  .thebe-status-stub,
+  .thebe-status-field,
+  .thebe-status-message {
+    display: inline;
+    margin: 0 0.25rem;
+    font-size: 0.85rem;
+    font-style: normal;
+  }
+
+  .thebe-status-message {
+    color: #999;
+    font-size: 0.8rem;
+  }
+
+  /* Hide unwanted Thebe buttons */
+  .thebe-restartall-button,
+  .thebe-runall-button {
+    display: none !important;
+  }
+
 .try-options {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -131,6 +158,62 @@ Choose how you'd like to try JBang:
   .btn {
     width: 100%;
   }
+  
 }
 </style>
+
+<!-- 
+<script>
+thebe.on("status", function (evt, data) {
+    console.log("Status changed:", data.status, data.message);
+});
+</script> 
+-->
+<!--<div class="thebe-activate"></div>-->
+
+<div class="listingblock">
+  <div class="editor-controls">
+   <div class="thebe-status"></div>
+  </div>
+  <div class="content">
+    <pre class="highlight hljs-copy-wrapper">
+      <code class="language-java hljs" data-lang="java" data-executable="true">
+///usr/bin/env jbang "$0" "$@" ; exit $?
+//DEPS com.github.lalyos:jfiglet:0.0.8
+import com.github.lalyos.jfiglet.FigletFont;
+IO.println(FigletFont.convertOneLine("Hello JBang")); 
+      </code>
+    </pre> 
+  </div>
+</div>
+
+You can also open a full interactive development environment.
+
+  <div class="try-option jupyter">
+    <div class="try-option-header">
+      <h3>🚀 JBang powered Jupyter Notebook</h3>
+      <p>Interactive development environment with rich output and data visualization</p>
+    </div>
+    <div class="try-option-content">
+      <p>Experience JBang in a full Jupyter notebook environment with:</p>
+      <ul>
+        <li>Interactive code execution</li>
+        <li>Rich output and visualizations</li>
+        <li>Multiple files</li>
+        <li>Use your own github or gist</li>
+      </ul>
+      <div class="try-option-actions">
+        <a href="https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fjbangdev%252Fjbang-jupyter-examples%26urlpath%3Dlab%252Ftree%252Fcontent%252F%26branch%3Dmain%26targetPath%3Dcontent" 
+           class="btn btn--primary" target="_blank">
+          Launch Jupyter Environment
+        </a>
+        <a href="/try/jupyter/" class="btn btn--inverse">
+          Create Custom Link
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
 |}
