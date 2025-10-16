@@ -1,133 +1,68 @@
 items:
-  - value: java25/HelloWorld
+  - value: helloworld.jsh
     label: Hello World
     badge:
       text: Java 25
       variant: neutral
       pill: true
-  - category: Records
-    items:
-      - value: java21/Record_1
-        label: Simple Record
-      - value: java21/Record_2
-        label: Composing
-      - value: java21/Record_3
-        label: Method Overriding
-  - category: Unnamed Pattern
-    items:
-      - value: java22/Unamed_Pattern_1
-        label: Consumer with Unnamed Pattern
-      - value: java22/Unamed_Pattern_2
-        label: Function with Unnamed Pattern
-      - value: java22/Unamed_Pattern_3
-        label: BiFunction with Unnamed Pattern
-      - value: java22/Unamed_Pattern_4
-        label: Pattern Matching with Unnamed Pattern
-  - category: Gatherers
-    groups:
-      - group: Simple
-        items:
-          - value: java24/Gatherers_A1
-            label: Filtering
-          - value: java24/Gatherers_A2
-            label: Mapping
-          - value: java24/Gatherers_A3
-            label: Flatmapping
-      - group: Intermediate
-        items:
-          - value: java24/Gatherers_B1
-            label: Map Filter
-          - value: java24/Gatherers_B3
-            label: Limit
-          - value: java24/Gatherers_B5
-            label: Distinct
-          - value: java24/Gatherers_B7
-            label: Sort
-          - value: java24/Gatherers_B11
-            label: Distinct Ignore Case
-      - group: Combining
-        items:
-          - value: java24/Gatherers_D1
-            label: Zipping
-          - value: java24/Gatherers_D2
-            label: Zipping With Default Value
-          - value: java24/Gatherers_D3
-            label: Combining
-          - value: java24/Gatherers_D4
-            label: Combining With Default Value
-  # - category: Switch and Sealed Types
-  #   items:
-  #     - value: java22/Switch_on_Sealled_Types_1
-  #       label: Switch and Sealed Types
-  #     - value: java22/Switch_on_Sealled_Types_2
-  #       label: "… with Record Pattern"
-  #     - value: java22/Switch_on_Sealled_Types_3
-  #       label: "… with Nested Record Patterns"
-  #     - value: java22/Switch_on_Sealled_Types_4
-  #       label: "… with Unnamed Patterns"
-  #     - value: java22/Switch_on_Sealled_Types_5
-  #       label: "… with Guarded Patterns"
-  # - category: Primitive Type Patterns
-  #   badge:
-  #     text: Java 25
-  #     variant: neutral
-  #     pill: true
-  #   items:
-  #     - value: java25/PrimitiveTypePatterns_1
-  #       label: "… for InstanceOf"
-  #     #- value: java25/PrimitiveTypePatterns_2
-  #     #  label: "… for Switch"
-  #     - value: java25/PrimitiveTypePatterns_3
-  #       label: Narrowing Integer Number Primitive Pattern
-  #     - value: java25/PrimitiveTypePatterns_5
-  #       label: Integer Number to Floating Point Number Primitive Pattern
-  #     - value: java25/PrimitiveTypePatterns_7
-  #       label: Double Number to Integer Number Primitive Pattern
-  #     - value: java25/PrimitiveTypePatterns_8
-  #       label: Boolean Primitive Pattern
-  #     - value: java25/PrimitiveTypePatterns_9
-  #       label: Double Primitive Pattern
-  #     - value: java25/PrimitiveTypePatterns_10
-  #       label: JSON Analysis
-  - category: Stable Values
+  - value: hellojbang.jsh
+    label: Hello JBang (with ASCII art)
     badge:
       text: Java 25
+      variant: neutral
       pill: true
+  - category: Language Features
     items:
-      - value: java25/StableValues_1
-        label: Static Initializers
-      - value: java25/StableValues_2
-        label: Enum Initializers
-      - value: java25/StableValues_3
-        label: "… with Suppliers"
-      - value: java25/StableValues_4
-        label: "… with Factories"
-      - value: java25/StableValues_5
-        label: "… as Lists"
-      - value: java25/StableValues_6
-        label: "… as Maps"
-      - value: java25/StableValues_7
-        label: "… as Functions"
-      - value: java25/StableValues_8
-        label: "… as IntFunctions"
-  - category: Miscellaneous
-    items:
-      - value: java22/StatementsBeforeSuper_1
-        label: Statement before super
-      - value: java21/Stream_1
-        label: Stream Filtering
-      - value: java21/Stream_2
-        label: Stream to List
-      - value: java21/Stream_3
-        label: Text Block to Stream
-      - value: java25/ScopedValues_1
-        label: Setting Scoped Values
+      - value: recordbasics.jsh
+        label: Records
+        badge:
+          text: Java 21
+          variant: neutral
+          pill: true
+      - value: pattern_switch.jsh
+        label: Pattern Matching in Switch
         badge:
           text: Java 25
           variant: neutral
           pill: true
-      - value: java25/FlexibleConstructorBodies_2
-        label: Flexible Constructor Body
+      - value: sequenced_collections_demo.jsh
+        label: Sequenced Collections
+        badge:
+          text: Java 21
+          variant: neutral
+          pill: true
+      - value: textblock_wordcount.jsh
+        label: Text Blocks & Word Count
+        badge:
+          text: Java 15
+          variant: neutral
+          pill: true
+  - category: Concurrency
+    items:
+      - value: virtual_threads_quick.jsh
+        label: Virtual Threads (10,000 tasks)
+        badge:
+          text: Java 21
+          variant: neutral
+          pill: true
+  - category: Data Processing
+    items:
+      - value: csv_parse_no_deps.jsh
+        label: CSV Parsing (no deps)
+        badge:
+          text: Java 25
+          variant: neutral
+          pill: true
+      - value: httpclient_get_jackson.jsh
+        label: HTTP Client + Jackson
+        badge:
+          text: Java 21
+          variant: neutral
+          pill: true
+  - category: Shell Integration
+    items:
+      - value: jash.jsh
+        label: Jash - Shell Commands in Java
         badge:
           text: Java 25
           variant: neutral

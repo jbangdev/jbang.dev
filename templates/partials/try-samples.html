@@ -11,7 +11,7 @@
       {#if cdi:trysamples != null and cdi:trysamples.items != null}
         {#for item in cdi:trysamples.items}
           {#if item.value != null}
-            <div class="menu-item" data-url="https://raw.githubusercontent.com/java/playground-snippets/refs/heads/main/{item.value}">
+            <div class="menu-item" data-url="/samples/{item.value}">
               <span class="menu-label">{item.label}</span>{#if item.badge != null}<span class="menu-badge">{item.badge.text}</span>{/if}
             </div>
           {#else if item.category != null}
@@ -22,7 +22,7 @@
             <div class="category-content">
               {#if item.items != null}
                 {#for subitem in item.items}
-                  <div class="menu-item menu-subitem" data-url="https://raw.githubusercontent.com/java/playground-snippets/refs/heads/main/{subitem.value}">
+                  <div class="menu-item menu-subitem" data-url="/samples/{subitem.value}">
                     <span class="menu-label">{subitem.label}</span>{#if subitem.badge != null}<span class="menu-badge">{subitem.badge.text}</span>{/if}
                   </div>
                 {/for}
@@ -32,7 +32,7 @@
                   <div class="menu-group">
                     <div class="group-label">{group.group}</div>
                     {#for groupitem in group.items}
-                      <div class="menu-item menu-subitem" data-url="https://raw.githubusercontent.com/java/playground-snippets/refs/heads/main/{groupitem.value}">
+                      <div class="menu-item menu-subitem" data-url="/samples/{groupitem.value}">
                         <span class="menu-label">{groupitem.label}</span>
                       </div>
                     {/for}
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function selectItem(item) {
     if (!item || !item.dataset.url) return;
     
-    const url = item.dataset.url + ".snippet";
+    const url = item.dataset.url;
     const label = item.querySelector('.menu-label').textContent;
     
     // Update dropdown text
@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuItem = e.target.closest('.menu-item');
     if (!menuItem) return;
     
-    const url = menuItem.dataset.url + ".snippet";
+    const url = menuItem.dataset.url;
     const label = menuItem.querySelector('.menu-label').textContent;
     
     // Update dropdown text
