@@ -3,6 +3,6 @@
 
 import static dev.jbang.jash.Jash.*;
 
-$("jbang properties@jbangdev").stream().
+$("$HOME/.jbang/bin/jbang properties@jbangdev").stream().
     filter(l -> l.contains("java")).
     forEach(IO::println)
