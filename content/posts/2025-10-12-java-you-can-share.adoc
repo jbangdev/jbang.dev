@@ -11,11 +11,12 @@ draft: true
 ---
 ifdef::env-github,env-browser,env-vscode[:imagesdir:../../public/assets/images]
 
-I'm not sure how to best explain this, so I'll just show you.
+JBang is about making Java something you can edit, build, run, deploy and share with  minimum ceremony and optimally zero friction. This is a work in progress, and this week I feel we got a big step closer to the ultimate goal. I'm not sure how to best explain this, so I'll just show you.
 
 == Try Java in your browser
 
-Click this link → link:/try?urlpath=https://github.com/jbangdev/jbang-jupyter-examples&filepath=hibernate.ipynb&redirect=0[Run Java in your browser] - wait a moment and you have a running Java environment in your browser. No install, no account, no JDK.
+Click this link → link:/try/?repo=https%3A%2F%2Fgithub.com%2Fjbangdev%2Fjbang-jupyter-examples&filepath=hibernate.ipynb[Run Java in your browser] - wait a moment and you have a running Java environment,
+showing Hibernate example in your browser. No JDK or IDE to install, no account, just works.
 
 Or scroll down and click "Activate" below to run Java code right here in this blog post:
 
@@ -39,17 +40,11 @@ Or scroll down and click "Activate" below to run Java code right here in this bl
          
         }
       }
-      
 </script>
 
 <script src="https://unpkg.com/thebe@0.9.3/lib/index.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/thebe@0.9.3/lib/thebe.css">
 
-<script>
-thebe.on("status", function (evt, data) {
-    console.log("Status changed:", data.status, data.message);
-});
-</script>
 ++++
 
 ++++
@@ -62,29 +57,27 @@ thebe.on("status", function (evt, data) {
   <div class="content">
     <pre class="highlight hljs-copy-wrapper">
       <code class="language-java hljs" data-lang="java" data-executable="true">
-//DEPS org.knowm.xchart:xchart:3.8.8
-import org.knowm.xchart.*;
-import java.awt.Color;
+//DEPS io.jeamlit:jeamlit:0.46.0
+//DEPS ch.qos.logback:logback-classic:1.5.19
 
-PieChart chart = new PieChartBuilder().width(800).height(600).title("Pie!").build();
-chart.getStyler().setChartBackgroundColor(Color.WHITE);
-chart.getStyler().setPlotBackgroundColor(Color.WHITE);
-chart.getStyler().setAntiAlias(true);
- 
-// Customize Chart
-Color[] sliceColors = new Color[] {
-    new Color(0, 191, 255), // vibrant sky blue
-    new Color(255, 223, 0),   // bright yellow
-    new Color(255, 236, 139),  // shaded yellow
-};
-chart.getStyler().setSeriesColors(sliceColors);
- 
-// Series
-chart.addSeries("Sky", 80);
-chart.addSeries("Sunny side of Pyramid", 15);
-chart.addSeries("Shady side of Pyramid", 10);
+import org.icepear.echarts.Bar;
+import io.jeamlit.core.Nb;
+import io.jeamlit.core.Jt;
 
-BitmapEncoder.getBufferedImage(chart);
+// only need to run this once - jeamlit shared CSS and web components 
+display(Nb.getInitHtml(), "text/html");
+
+// some chart
+Bar bar = new Bar()
+        .setLegend()
+        .setTooltip("item")
+        .addXAxis(new String[] { "Matcha Latte", "Milk Tea", "Cheese Cocoa", "Walnut Brownie" })
+        .addYAxis()
+        .addSeries("2015", new Number[] { 43.3, 83.1, 86.4, 72.4 })
+        .addSeries("2016", new Number[] { 85.8, 73.4, 65.2, 53.9 })
+        .addSeries("2017", new Number[] { 93.7, 55.1, 82.5, 39.1 });
+
+display(Nb.render(Jt.echarts(bar).build()), "text/html");
       </code>
     </pre> 
   </div>
@@ -93,27 +86,46 @@ BitmapEncoder.getBufferedImage(chart);
 
 That is real Java. With real Maven dependencies. Output rendered in your browser with no additional install.
 
+For those curious - above is using https://github.com/jeamlit/jeamlit[Jeamlit] to render the chart in your browser.
+Jeamlit is a new library similar to Steamlit for Python but inspired by JBang to allows building interactive web apps in Java with zero friction - do try it out!
 
+== What was made
 
-== What This Actually Is
+I've been wanting to use `//DEPS` in Jupyter Notebooks for a long time, but it has been a pain to set up, so I 
+talked with maintainers of JJava and Raipaio kernels and explored options. 
 
-**JBang-powered Java, running in Jupyter notebooks and webpages** — using Python's existing infrastructure (Binder, Thebe).
+And in doing so I discovered that we could use Python's existing infrastructure (Jupyter Notebooks, MyBinder and Thebe) to make this all work.
 
-Here is what works right now:
+There is a shockingly small amount of code to make this all work - and its in its infancy still; but I'm sure you all will want to use and 
+possibly contribute to it.
 
-* *https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fjbangdev%252Fjbang-jupyter-examples%26urlpath%3Dlab%252Ftree%252Fcontent%252F%26branch%3Dmain%26targetPath%3Dcontent[Click to run Java in Binder]* — Full Java + JBang environment, zero setup
-* *"Run with JBang" badges* — Add to any `.java` file or gist for instant browser execution
-* *Runnable blog snippets* — Like the demo above, powered by Thebe
-* *Jupyter notebooks with JBang directives* — Real `//DEPS`, real libraries, real Java
+Here are what are currently done:
 
-[source,java]
-----
-//DEPS com.squareup.okhttp3:okhttp:4.12.0
-// Use OkHttp, Gson, Jackson, whatever - just like JBang on your machine
-----
+* Made a custom  https://github.com/jbangdev/jbang-jupyter-kernel[JBang kernel], for Jupyter Notebooks that allows you to use `//DEPS` directives to add dependencies to your notebook. 
+* On Jupyter Java, we made a  https://github.com/jbangdev/jbang-jupyter-kernel[Binder environment] that allows you to run any of the supported Java kernels in your browser with no additional install.
+* Created a custom Jupyter Extension, https://github.com/jbangdev/jbang-jupyter-runner[jbang-jupyter-runner], that lets you run any .java/.jsh file in Jupyter Lab. Not just via notebooks.
 
-No Docker. No account. No JDK install.
-Just Java you can *share* with a link.
+Put it all together and you have a way to run Java code in your browser with no additional install.
+
+p.s. this is not just for browser based noteboks - it also works in IntelliJ, VSCode, Cursor and other IDEs that support Jupyter Notebooks.
+
+## How to try it out
+
+The easiest is the new link:/try/[jbang.dev/try] page.
+
+link:/try/[jbang.dev/try] now uses this infrastructure to run Java code in your browser with no additional install.
+
+You can make the code it load custom http://localhost:8080/try/?code=IO.println%28%22From+Blog%21%22%29%3B[code] to try!
+
+You can even build link:/try/custom/[custom lyour own repositories to share with your friends and colleagues.
+
+If you want to try it out locally you can install the JBang kernel and use it in your favourite Jupyter notebook editor:
+
+```bash
+jbang install-kernel@jupyter-java --java 25 --enable-preview jbang
+```
+
+Then just configure your favourite Jupyter notebook editor to use the JBang kernel.
 
 == What This Unlocks
 
@@ -127,97 +139,11 @@ Just Java you can *share* with a link.
 
 This is not about data science or competing with Python.
 
-This is about making Java something you can share with zero friction — the same mission JBang has always had.
+This is about making Java something you can share with zero friction — all in line with JBang's mission.
 
----
+== Making Java Shareable
 
-_Want to know more? Keep reading for how this works and why it matters._
+This is still new but come and try it out and let us know what you think!
 
-== How We Got Here — Hitching a Ride on Python's Roads
 
-image:/assets/images/java-you-can-share.png[width=50%]
-
-For years, the Java instinct has been: build our own notebooks, our own clouds, our own hosted playgrounds.
-
-But Python already _built the roads_ — Jupyter, Binder, Thebe.
-
-And those platforms? They do not actually care what language you run.
-
-So I stopped trying to compete with Python's ecosystem.
-I asked a different question:
-
-> **What if Java could quietly travel the same roads?**
-
-No new infrastructure. No new service.
-Just Java, standing on the shoulders of Python's ecosystem.
-
-== The Technical Bits — For Those Who Want Details
-
-=== JBang-Powered Java Kernel
-
-Built on https://github.com/jbangdev/jbang-jupyter[JBang Jupyter Kernel] (based on JJava, a fork of IJava).
-
-It enables the same `//DEPS` syntax as JBang scripts:
-
-[source,java]
-----
-//DEPS com.squareup.okio:okio:3.4.0
-System.out.println("Full JVM ecosystem in a notebook cell");
-----
-
-This is not a sandboxed toy. Not "Java-like".
-Real Java. Real libraries. Full JVM access.
-
-If you can import libraries on the fly, you have not just added Java — you have brought the entire ecosystem with you.
-
-=== Binder — Free Temporary Environments
-
-MyBinder.org spins up containers with Java + JBang preconfigured.
-
-Sessions are temporary. Resources are small. Everything resets.
-
-And that is *perfect* — because this is not about deployment.
-
-> Think *notebook*, not *platform*.  
-> Think *prototype*, not *product*.  
-> Think *demo*, not *server*.
-
-If people fall in love with what they try here, they will install Java *by choice*.
-
-=== Thebe — JavaScript Glue for Runnable Content
-
-Thebe connects webpage code blocks to a Jupyter kernel (via Binder).
-
-Same tech that powers interactive Python docs. Now it works with Java.
-
-== Why This Matters — Java You Can Share
-
-Java has defended its place in production for decades.
-
-But *trying* Java? That has always been the problem.
-
-> _"Download a JDK, configure JAVA_HOME, pick Maven or Gradle…"_
-
-Meanwhile, Python users opened a browser tab and accidentally trained a neural network before breakfast.
-
-It is not that Java could not do the same.
-It is that Java was never *inviting* itself to the same places.
-
-This work is about changing that:
-
-**Making Java a language you can _share_ — instantly.**
-
-No installer. No IDE war. No barrier.
-Just code, curiosity, and a button.
-
-> Most people never disliked Java.  
-> They disliked the ceremony required to *meet* it.
-
-=== Want In?
-
-If you want to see Java show up in classrooms, blogs, notebooks, exploratory tools…
-you are exactly who I built this for.
-
-Come break things with me.
-Or scroll back up and click **Activate** to run the code.
 
