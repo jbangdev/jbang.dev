@@ -8,6 +8,12 @@ layout: splash
 
 Below is an embedded notebook where you can write Java code using JBang directives, click run and see it execute.
 
+<div class="notice--warning" style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 4px; padding: 1rem; margin-bottom: 1.5rem;">
+  <strong>Note:</strong>
+  This JBang try page is relying on a free public Binder service (<a href="https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html" target="_blank" rel="noopener">MyBinder</a>) and is subject to usage limits and temporary availability issues. For more details, see the <a href="https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html" target="_blank" rel="noopener">Binder user guidelines</a>.
+  Use a <a href="http://localhost:8080/ide/">dedicated IDE</a> if these constraints does not work for you.
+</div>
+
 <!-- Configure and load Thebe - must be before the thbe js is loaded !-->
 <script type="text/x-thebe-config">
   {
@@ -328,8 +334,8 @@ You can also open a full interactive development environment.
 
   <div class="try-option jupyter">
     <div class="try-option-header">
-      <h3>🚀 JBang powered Jupyter Notebook</h3>
-      <p>Interactive development environment with rich output and data visualization</p>
+      <h3>🚀 JBang powered Jupyter Environment</h3>
+      <p>Interactive development environment with rich output and data visualization. Uses MyBinder.</p>
     </div>
     <div class="try-option-content">
       <p>Experience JBang in a full Jupyter notebook environment with:</p>
@@ -353,50 +359,6 @@ You can also open a full interactive development environment.
   </div>
 </div>
 
-### Direct Link Format
-
-You can link directly to this page with pre-filled values and automatic redirects using URL parameters:
-
-```
-/try/?repo=REPO_URL&title=TITLE&branch=BRANCH&filepath=PATH&code=CODE&redirect=SECONDS
-```
-
-**Parameters:**
-- `code` (optional): URL-encoded Java code to pre-fill the editor
-- `repo` (optional): GitHub repository or Gist URL - updates the Jupyter launch link
-  - Example: `https://github.com/username/repo`
-  - Example: `https://gist.github.com/username/gist-id`
-- `title` (optional): Friendly name shown in the "Launch" button
-  - Example: `My Project` → button shows "🚀 Open My Project"
-  - If omitted, extracts name from repo URL (e.g., "user/repo")
-- `branch` (optional): Branch name (defaults to `main`)
-- `filepath` (optional): Path to specific file or directory for Jupyter
-- `redirect` (optional): Auto-redirect to Jupyter environment
-  - No value or `redirect=0`: Immediate redirect
-  - `redirect=3`: Wait 3 seconds before redirecting
-  - Omit parameter: No redirect (default)
-
-**Example Links:**
-
-Pre-fill code in editor:
-```
-/try/?code=%2F%2F%2Fusr%2Fbin%2Fenv%20jbang%0A%0AIO.println(%22Hello!%22);
-```
-
-Launch specific repository with 3-second countdown:
-```
-/try/?repo=https://github.com/jbangdev/jbang-jupyter-examples&redirect=3
-```
-
-Combine code and repository:
-```
-/try/?repo=https://gist.github.com/user/abc123&code=IO.println(%22Demo%22);
-```
-
-Immediate redirect to Jupyter:
-```
-/try/?repo=https://github.com/username/notebooks&redirect
-```
 
   
 |}

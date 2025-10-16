@@ -41,6 +41,9 @@ excerpt: "The following IDEs today have support for JBang via a plugin - no addi
       <v-tab id="jdoodle-tab">JDoodle
         <img src="https://www.jdoodle.com/favicon.ico" width="24" height="24" />
       </v-tab>
+      <v-tab id="jupyter-tab">Jupyter Notebook
+        <img src="https://jupyter.org/favicon.ico" width="24" height="24" />
+      </v-tab>
     
       <v-tab-item>
         <h3>VSCodium</h3>
@@ -111,6 +114,37 @@ excerpt: "The following IDEs today have support for JBang via a plugin - no addi
           </p>
           <p>
             Try JBang on <a href="https://www.jdoodle.com/try-jbang/">JDoodle</a>
+          </p>
+        </v-tab-item>
+        <v-tab-item>
+          <h3>Jupyter Notebook</h3>
+          <p>
+            Jupyter Notebook is an open-source web application that allows you to create and share documents containing live code, equations, visualizations, and narrative text.
+            With the JBang kernel, you can run Java code with JBang directly in Jupyter notebooks.
+          </p>
+          
+          <h4>Installation</h4>
+          <p>Install JupyterLab and the JBang kernel:</p>
+          <pre><code># Install JupyterLab (requires Python)
+pip install jupyterlab
+
+# Install JBang kernel
+jbang install-kernel@jupyter-java --java 25 --enable-preview jbang</code></pre>
+          
+          <h4>Usage</h4>
+          <p>Launch JupyterLab and create a new notebook with the JBang kernel:</p>
+          <pre><code>jupyter lab</code></pre>
+          
+          <p>In JupyterLab, create a new notebook and select "JBang" as the kernel. You can now write and execute Java code with JBang directives like <code>//DEPS</code> directly in your notebooks!</p>
+          
+          <h4>Try Online</h4>
+          <p>
+            Want to try it without installing? Use our <a href="/try/">online Jupyter environment</a> powered by MyBinder.
+          </p>
+          
+          <h4>Learn More</h4>
+          <p>
+            Visit the <a href="https://github.com/jbangdev/jbangdev-jupyter" target="_blank" rel="noopener">JBang Jupyter Kernel</a> repository for more details and examples.
           </p>
         </v-tab-item>
         
