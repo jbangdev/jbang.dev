@@ -22,7 +22,7 @@ Below is an embedded notebook where you can write Java code using JBang directiv
           binderUrl: 'https://mybinder.org'
         },
         kernelOptions: {
-          kernelName: "jbang-jbang",
+          kernelName: "jbang",
         },
         codeMirrorConfig: {
           theme: "default",
@@ -179,14 +179,129 @@ Below is an embedded notebook where you can write Java code using JBang directiv
 }
 </style>
 
-<!-- 
 <script>
-thebe.on("status", function (evt, data) {
-    console.log("Status changed:", data.status, data.message);
+// Handle URL parameters for pre-filling and redirects
+document.addEventListener('DOMContentLoaded', function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const repoParam = urlParams.get('repo');
+  const branchParam = urlParams.get('branch');
+  const filepathParam = urlParams.get('filepath');
+  const codeParam = urlParams.get('code');
+  const redirectParam = urlParams.get('redirect');
+  
+  // Update Jupyter link with parameters if provided
+  if (repoParam) {
+    const jupyterLinkBtn = document.querySelector('.try-option.jupyter .btn--primary');
+    if (jupyterLinkBtn) {
+      // Build MyBinder URL
+      const base = 'https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang';
+      const content = 'content';
+      const branch = branchParam || 'main';
+      const filepath = filepathParam || '';
+      const pathToOpen = filepath ? ('lab/tree/' + content + '/' + filepath) : ('lab/tree/' + content + '/');
+      
+      const gitPullParams = new URLSearchParams();
+      gitPullParams.append('repo', repoParam);
+      gitPullParams.append('urlpath', pathToOpen);
+      gitPullParams.append('branch', branch);
+      gitPullParams.append('targetPath', content);
+      
+      const gitPullUrlpath = 'git-pull?' + gitPullParams.toString();
+      const encodedNestedUrlpath = encodeURIComponent(gitPullUrlpath);
+      const jupyterUrl = base + '?urlpath=' + encodedNestedUrlpath;
+      
+      jupyterLinkBtn.href = jupyterUrl;
+      
+      // Update button text with title or repo URL
+      const titleParam = urlParams.get('title');
+      if (titleParam) {
+        jupyterLinkBtn.textContent = '🚀 Open ' + titleParam;
+      } else {
+        // Extract a friendly name from the repo URL
+        let repoName = repoParam;
+        try {
+          const urlObj = new URL(repoParam);
+          const pathParts = urlObj.pathname.split('/').filter(p => p);
+          if (pathParts.length >= 2) {
+            repoName = pathParts[pathParts.length - 2] + '/' + pathParts[pathParts.length - 1];
+          }
+        } catch (e) {
+          // Keep full URL if parsing fails
+        }
+        jupyterLinkBtn.textContent = '🚀 Open ' + repoName;
+      }
+    }
+  }
+  
+  // Insert code into editor if provided
+  if (codeParam) {
+    try {
+      const decodedCode = decodeURIComponent(codeParam);
+      
+      // Method 1: Try to set it immediately before Thebe loads
+      const codeBlock = document.querySelector('[data-executable="true"]');
+      if (codeBlock) {
+        codeBlock.textContent = decodedCode;
+      }
+      
+      // Method 2: Also try after Thebe loads by monitoring the CodeMirror instance
+      const checkEditor = setInterval(function() {
+        const codeBlock = document.querySelector('[data-executable="true"]');
+        const codeMirror = document.querySelector('.CodeMirror');
+        
+        if (codeMirror && codeMirror.CodeMirror) {
+          // CodeMirror is loaded, update it directly
+          codeMirror.CodeMirror.setValue(decodedCode);
+          clearInterval(checkEditor);
+        } else if (codeBlock && !codeMirror) {
+          // Thebe hasn't initialized yet, keep updating the original element
+          codeBlock.textContent = decodedCode;
+        }
+      }, 100);
+      
+      // Stop checking after 10 seconds
+      setTimeout(() => clearInterval(checkEditor), 10000);
+    } catch (e) {
+      console.error('Failed to decode code parameter:', e);
+    }
+  }
+  
+  // Handle redirect if specified
+  if (redirectParam !== null) {
+    const redirectDelay = redirectParam === '' ? 0 : parseInt(redirectParam, 10) || 0;
+    const jupyterLink = document.querySelector('.try-option.jupyter .btn--primary');
+    
+    if (jupyterLink) {
+      const targetUrl = jupyterLink.href;
+      
+      if (redirectDelay > 0) {
+        // Show countdown message
+        const messageDiv = document.createElement('div');
+        messageDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #f37626; color: white; padding: 1rem 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 9999; font-size: 1.1rem;';
+        messageDiv.innerHTML = `Redirecting to Jupyter in <strong id="countdown">${redirectDelay}</strong> seconds...`;
+        document.body.appendChild(messageDiv);
+        
+        let remaining = redirectDelay;
+        const countdownEl = document.getElementById('countdown');
+        
+        const countdownInterval = setInterval(() => {
+          remaining--;
+          if (countdownEl) {
+            countdownEl.textContent = remaining;
+          }
+          if (remaining <= 0) {
+            clearInterval(countdownInterval);
+            window.location.href = targetUrl;
+          }
+        }, 1000);
+      } else {
+        // Immediate redirect
+        window.location.href = targetUrl;
+      }
+    }
+  }
 });
-</script> 
--->
-<!--<div class="thebe-activate"></div>-->
+</script>
 
 <div class="listingblock">
   <div class="editor-controls">
@@ -219,6 +334,7 @@ You can also open a full interactive development environment.
     <div class="try-option-content">
       <p>Experience JBang in a full Jupyter notebook environment with:</p>
       <ul>
+        <li>Run .java, .jsh, and more using JBang</li>
         <li>Interactive code execution</li>
         <li>Rich output and visualizations</li>
         <li>Multiple files</li>
@@ -229,13 +345,58 @@ You can also open a full interactive development environment.
            class="btn btn--primary" target="_blank">
           Launch Jupyter Environment
         </a>
-        <a href="/try/jupyter/" class="btn btn--inverse">
+        <a href="/try/custom/" class="btn btn--inverse">
           Create Custom Link
         </a>
       </div>
     </div>
   </div>
 </div>
+
+### Direct Link Format
+
+You can link directly to this page with pre-filled values and automatic redirects using URL parameters:
+
+```
+/try/?repo=REPO_URL&title=TITLE&branch=BRANCH&filepath=PATH&code=CODE&redirect=SECONDS
+```
+
+**Parameters:**
+- `code` (optional): URL-encoded Java code to pre-fill the editor
+- `repo` (optional): GitHub repository or Gist URL - updates the Jupyter launch link
+  - Example: `https://github.com/username/repo`
+  - Example: `https://gist.github.com/username/gist-id`
+- `title` (optional): Friendly name shown in the "Launch" button
+  - Example: `My Project` → button shows "🚀 Open My Project"
+  - If omitted, extracts name from repo URL (e.g., "user/repo")
+- `branch` (optional): Branch name (defaults to `main`)
+- `filepath` (optional): Path to specific file or directory for Jupyter
+- `redirect` (optional): Auto-redirect to Jupyter environment
+  - No value or `redirect=0`: Immediate redirect
+  - `redirect=3`: Wait 3 seconds before redirecting
+  - Omit parameter: No redirect (default)
+
+**Example Links:**
+
+Pre-fill code in editor:
+```
+/try/?code=%2F%2F%2Fusr%2Fbin%2Fenv%20jbang%0A%0AIO.println(%22Hello!%22);
+```
+
+Launch specific repository with 3-second countdown:
+```
+/try/?repo=https://github.com/jbangdev/jbang-jupyter-examples&redirect=3
+```
+
+Combine code and repository:
+```
+/try/?repo=https://gist.github.com/user/abc123&code=IO.println(%22Demo%22);
+```
+
+Immediate redirect to Jupyter:
+```
+/try/?repo=https://github.com/username/notebooks&redirect
+```
 
   
 |}

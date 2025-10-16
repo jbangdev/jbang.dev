@@ -55,40 +55,40 @@ items:
             label: Combining
           - value: java24/Gatherers_D4
             label: Combining With Default Value
-  - category: Switch and Sealed Types
-    items:
-      - value: java22/Switch_on_Sealled_Types_1
-        label: Switch and Sealed Types
-      - value: java22/Switch_on_Sealled_Types_2
-        label: "… with Record Pattern"
-      - value: java22/Switch_on_Sealled_Types_3
-        label: "… with Nested Record Patterns"
-      - value: java22/Switch_on_Sealled_Types_4
-        label: "… with Unnamed Patterns"
-      - value: java22/Switch_on_Sealled_Types_5
-        label: "… with Guarded Patterns"
-  - category: Primitive Type Patterns
-    badge:
-      text: Java 25
-      variant: neutral
-      pill: true
-    items:
-      - value: java25/PrimitiveTypePatterns_1
-        label: "… for InstanceOf"
-      - value: java25/PrimitiveTypePatterns_2
-        label: "… for Switch"
-      - value: java25/PrimitiveTypePatterns_3
-        label: Narrowing Integer Number Primitive Pattern
-      - value: java25/PrimitiveTypePatterns_5
-        label: Integer Number to Floating Point Number Primitive Pattern
-      - value: java25/PrimitiveTypePatterns_7
-        label: Double Number to Integer Number Primitive Pattern
-      - value: java25/PrimitiveTypePatterns_8
-        label: Boolean Primitive Pattern
-      - value: java25/PrimitiveTypePatterns_9
-        label: Double Primitive Pattern
-      - value: java25/PrimitiveTypePatterns_10
-        label: JSON Analysis
+  # - category: Switch and Sealed Types
+  #   items:
+  #     - value: java22/Switch_on_Sealled_Types_1
+  #       label: Switch and Sealed Types
+  #     - value: java22/Switch_on_Sealled_Types_2
+  #       label: "… with Record Pattern"
+  #     - value: java22/Switch_on_Sealled_Types_3
+  #       label: "… with Nested Record Patterns"
+  #     - value: java22/Switch_on_Sealled_Types_4
+  #       label: "… with Unnamed Patterns"
+  #     - value: java22/Switch_on_Sealled_Types_5
+  #       label: "… with Guarded Patterns"
+  # - category: Primitive Type Patterns
+  #   badge:
+  #     text: Java 25
+  #     variant: neutral
+  #     pill: true
+  #   items:
+  #     - value: java25/PrimitiveTypePatterns_1
+  #       label: "… for InstanceOf"
+  #     #- value: java25/PrimitiveTypePatterns_2
+  #     #  label: "… for Switch"
+  #     - value: java25/PrimitiveTypePatterns_3
+  #       label: Narrowing Integer Number Primitive Pattern
+  #     - value: java25/PrimitiveTypePatterns_5
+  #       label: Integer Number to Floating Point Number Primitive Pattern
+  #     - value: java25/PrimitiveTypePatterns_7
+  #       label: Double Number to Integer Number Primitive Pattern
+  #     - value: java25/PrimitiveTypePatterns_8
+  #       label: Boolean Primitive Pattern
+  #     - value: java25/PrimitiveTypePatterns_9
+  #       label: Double Primitive Pattern
+  #     - value: java25/PrimitiveTypePatterns_10
+  #       label: JSON Analysis
   - category: Stable Values
     badge:
       text: Java 25
