@@ -11,7 +11,7 @@ Below is an embedded editor where you can write Java code using JBang directives
 <div class="notice--warning" style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 4px; padding: 1rem; margin-bottom: 1.5rem;">
   <strong>Note:</strong>
   This JBang try page is relying on a free public Binder service (<a href="https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html" target="_blank" rel="noopener">MyBinder</a>) and is subject to usage limits and temporary availability issues. For more details, see the <a href="https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html" target="_blank" rel="noopener">Binder user guidelines</a>.
-  Use a <a href="http://localhost:8080/ide/">dedicated IDE</a> if these constraints does not work for you.
+  Use a <a href="/ide/">dedicated IDE</a> if these constraints does not work for you.
 </div>
 
 <!-- Configure and load Thebe - must be before the thbe js is loaded !-->
