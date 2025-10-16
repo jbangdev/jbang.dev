@@ -40,11 +40,26 @@ feature_row2:
 
 {! #include partials/feature_row.html id="intro" type="center" !}
 
+<!---
 <center>
 {#include partials/slot-machine.html learn_more_url="/everywhere" /}
 </center>
+-->
+
+<center>
+{#for post in site.collections.posts.take(1)}
+    <div style="margin: 2.5rem auto; max-width: 600px; padding: 1.5rem; border-left: 4px solid #EB586F;">
+      <p style="margin: 0 0 0.5rem 0; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; opacity: 0.7; font-weight: 600;">Latest Blog Post</p>
+      <h2 class="archive__item-title" style="margin: 0 0 0.5rem 0;">
+        <a href="{post.url}" rel="permalink">{post.title}</a>
+      </h2>
+      <p style="margin: 0; font-size: 0.9rem; opacity: 0.8;">{post.date.format('MMMM d, yyyy')}</p>
+    </div>
+{/for}
+</center>
 
 {#include partials/feature_row feature_row=page.data['feature_row'] /}
+
 
 <div class="feature__wrapper twitter-wrapper">
 {#twitter cdi:testimonials.list.random align="center" width=550 /}

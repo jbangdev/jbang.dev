@@ -1,0 +1,574 @@
+<div class="try-samples-selector">
+  <div class="custom-dropdown">
+    <button class="dropdown-toggle" type="button">
+      <span class="dropdown-text">-- Select an example --</span>
+      <span class="dropdown-arrow">▼</span>
+    </button>
+    <div class="dropdown-menu">
+      <div class="menu-search">
+        <input type="text" class="search-input" placeholder="Search samples..." autocomplete="off">
+      </div>
+      {#if cdi:trysamples != null and cdi:trysamples.items != null}
+        {#for item in cdi:trysamples.items}
+          {#if item.value != null}
+            <div class="menu-item" data-url="https://raw.githubusercontent.com/java/playground-snippets/refs/heads/main/{item.value}">
+              <span class="menu-label">{item.label}</span>{#if item.badge != null}<span class="menu-badge">{item.badge.text}</span>{/if}
+            </div>
+          {#else if item.category != null}
+            <div class="menu-category" data-category>
+              <span class="category-label">{item.category}</span>
+              <span class="category-meta">{#if item.badge != null}<span class="category-badge">{item.badge.text}</span>{/if}<span class="category-arrow">▶</span></span>
+            </div>
+            <div class="category-content">
+              {#if item.items != null}
+                {#for subitem in item.items}
+                  <div class="menu-item menu-subitem" data-url="https://raw.githubusercontent.com/java/playground-snippets/refs/heads/main/{subitem.value}">
+                    <span class="menu-label">{subitem.label}</span>{#if subitem.badge != null}<span class="menu-badge">{subitem.badge.text}</span>{/if}
+                  </div>
+                {/for}
+              {/if}
+              {#if item.groups != null}
+                {#for group in item.groups}
+                  <div class="menu-group">
+                    <div class="group-label">{group.group}</div>
+                    {#for groupitem in group.items}
+                      <div class="menu-item menu-subitem" data-url="https://raw.githubusercontent.com/java/playground-snippets/refs/heads/main/{groupitem.value}">
+                        <span class="menu-label">{groupitem.label}</span>
+                      </div>
+                    {/for}
+                  </div>
+                {/for}
+              {/if}
+            </div>
+          {/if}
+        {/for}
+      {#else}
+        <div class="menu-item">No samples loaded</div>
+      {/if}
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdown = document.querySelector('.custom-dropdown');
+  const toggle = document.querySelector('.dropdown-toggle');
+  const menu = document.querySelector('.dropdown-menu');
+  const dropdownText = document.querySelector('.dropdown-text');
+  
+  function loadSampleCode(code) {
+    console.log('Loading code, length:', code.length);
+    
+    // Try to find CodeMirror instance
+    const cmElements = document.querySelectorAll('.CodeMirror');
+    console.log('Found CodeMirror elements:', cmElements.length);
+    
+    let loaded = false;
+    cmElements.forEach(cm => {
+      if (cm.CodeMirror) {
+        console.log('Setting value in CodeMirror instance');
+        cm.CodeMirror.setValue(code);
+        loaded = true;
+      }
+    });
+    
+    // Also update the original code element as fallback
+    const codeElement = document.querySelector('code[data-executable="true"]');
+    if (codeElement) {
+      console.log('Updating original code element');
+      codeElement.textContent = code;
+    }
+    
+    if (!loaded) {
+      console.warn('CodeMirror not found, code updated in underlying element only');
+    }
+  }
+  
+  const searchInput = document.querySelector('.search-input');
+  let highlightedIndex = -1;
+  
+  // Get all visible menu items (not categories)
+  function getVisibleMenuItems() {
+    return Array.from(menu.querySelectorAll('.menu-item'))
+      .filter(item => item.style.display !== 'none' && item.dataset.url);
+  }
+  
+  // Highlight a menu item
+  function highlightItem(index) {
+    const items = getVisibleMenuItems();
+    
+    // Remove previous highlight
+    items.forEach(item => item.classList.remove('highlighted'));
+    
+    // Add new highlight
+    if (index >= 0 && index < items.length) {
+      items[index].classList.add('highlighted');
+      // Scroll item into view if needed
+      items[index].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      highlightedIndex = index;
+    } else {
+      highlightedIndex = -1;
+    }
+  }
+  
+  // Select a menu item
+  function selectItem(item) {
+    if (!item || !item.dataset.url) return;
+    
+    const url = item.dataset.url + ".snippet";
+    const label = item.querySelector('.menu-label').textContent;
+    
+    // Update dropdown text
+    dropdownText.textContent = label;
+    
+    // Close dropdown
+    dropdown.classList.remove('open');
+    
+    // Clear search
+    searchInput.value = '';
+    highlightedIndex = -1;
+    
+    // Trigger search reset
+    searchInput.dispatchEvent(new Event('input'));
+    
+    console.log('Fetching:', url);
+    
+    // Fetch the sample code
+    fetch(url)
+      .then(response => {
+        console.log('Response status:', response.status);
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        return response.text();
+      })
+      .then(code => {
+        console.log('Code received, loading...');
+        loadSampleCode(code);
+      })
+      .catch(error => {
+        console.error('Error loading sample:', error);
+        alert('Failed to load sample from ' + url + ': ' + error.message);
+      });
+  }
+  
+  // Toggle dropdown
+  toggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    dropdown.classList.toggle('open');
+    
+    // Focus search input when opening
+    if (dropdown.classList.contains('open')) {
+      setTimeout(() => searchInput.focus(), 100);
+    } else {
+      highlightedIndex = -1;
+    }
+  });
+  
+  // Handle category clicks to expand/collapse
+  const categories = menu.querySelectorAll('.menu-category[data-category]');
+  categories.forEach(category => {
+    category.addEventListener('click', function(e) {
+      e.stopPropagation();
+      this.classList.toggle('expanded');
+    });
+  });
+  
+  // Search/filter functionality
+  searchInput.addEventListener('input', function(e) {
+    const searchTerm = this.value.toLowerCase().trim();
+    
+    // Reset highlight
+    highlightedIndex = -1;
+    
+    // Get all categories and their content containers
+    const allCategories = menu.querySelectorAll('.menu-category[data-category]');
+    const allCategoryContents = menu.querySelectorAll('.category-content');
+    const allMenuItems = menu.querySelectorAll('.menu-item');
+    
+    // Remove all highlights
+    allMenuItems.forEach(item => item.classList.remove('highlighted'));
+    
+    if (searchTerm === '') {
+      // Reset: hide all category contents, show all items
+      allCategoryContents.forEach(content => {
+        const category = content.previousElementSibling;
+        if (category && category.classList.contains('menu-category')) {
+          category.classList.remove('expanded');
+        }
+      });
+      allCategories.forEach(cat => cat.style.display = '');
+      allCategoryContents.forEach(content => content.style.display = '');
+      allMenuItems.forEach(item => item.style.display = '');
+      return;
+    }
+    
+    // Filter items based on search term
+    allMenuItems.forEach(item => {
+      const label = item.querySelector('.menu-label');
+      if (label) {
+        const text = label.textContent.toLowerCase();
+        if (text.includes(searchTerm)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      }
+    });
+    
+    // Handle categories: show/hide based on whether they have visible items
+    allCategories.forEach((category, index) => {
+      const categoryContent = category.nextElementSibling;
+      if (categoryContent && categoryContent.classList.contains('category-content')) {
+        const visibleItems = Array.from(categoryContent.querySelectorAll('.menu-item'))
+          .filter(item => item.style.display !== 'none');
+        
+        if (visibleItems.length > 0) {
+          // Expand category and show it
+          category.style.display = '';
+          category.classList.add('expanded');
+          categoryContent.style.display = '';
+        } else {
+          // Hide category if no matching items
+          category.style.display = 'none';
+          categoryContent.style.display = 'none';
+        }
+      }
+    });
+    
+    // Auto-highlight first item if only one match
+    const visibleItems = getVisibleMenuItems();
+    if (visibleItems.length === 1) {
+      highlightItem(0);
+    }
+  });
+  
+  // Prevent search input click from closing dropdown
+  searchInput.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+  
+  // Keyboard navigation
+  searchInput.addEventListener('keydown', function(e) {
+    const items = getVisibleMenuItems();
+    
+    switch(e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        if (highlightedIndex < items.length - 1) {
+          highlightItem(highlightedIndex + 1);
+        } else {
+          highlightItem(0); // Wrap to first
+        }
+        break;
+        
+      case 'ArrowUp':
+        e.preventDefault();
+        if (highlightedIndex > 0) {
+          highlightItem(highlightedIndex - 1);
+        } else {
+          highlightItem(items.length - 1); // Wrap to last
+        }
+        break;
+        
+      case 'Enter':
+        e.preventDefault();
+        
+        // If there's only one visible item, select it
+        if (items.length === 1) {
+          selectItem(items[0]);
+        }
+        // If an item is highlighted, select it
+        else if (highlightedIndex >= 0 && highlightedIndex < items.length) {
+          selectItem(items[highlightedIndex]);
+        }
+        // Otherwise select first item if any
+        else if (items.length > 0) {
+          selectItem(items[0]);
+        }
+        break;
+        
+      case 'Escape':
+        e.preventDefault();
+        dropdown.classList.remove('open');
+        searchInput.value = '';
+        highlightedIndex = -1;
+        searchInput.dispatchEvent(new Event('input'));
+        break;
+    }
+  });
+  
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function() {
+    dropdown.classList.remove('open');
+  });
+  
+  // Handle menu item clicks
+  menu.addEventListener('click', function(e) {
+    const menuItem = e.target.closest('.menu-item');
+    if (!menuItem) return;
+    
+    const url = menuItem.dataset.url + ".snippet";
+    const label = menuItem.querySelector('.menu-label').textContent;
+    
+    // Update dropdown text
+    dropdownText.textContent = label;
+    
+    // Close dropdown
+    dropdown.classList.remove('open');
+    
+    console.log('Fetching:', url);
+    
+    // Fetch the sample code
+    fetch(url)
+      .then(response => {
+        console.log('Response status:', response.status);
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        return response.text();
+      })
+      .then(code => {
+        console.log('Code received, loading...');
+        loadSampleCode(code);
+      })
+      .catch(error => {
+        console.error('Error loading sample:', error);
+        alert('Failed to load sample from ' + url + ': ' + error.message);
+      });
+  });
+});
+</script>
+
+<style>
+.try-samples-selector {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.try-samples-selector label {
+  font-weight: 600;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Custom dropdown */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 200px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.dropdown-toggle:hover {
+  border-color: #999;
+}
+
+.dropdown-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.custom-dropdown.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;
+  margin-top: 2px;
+}
+
+.custom-dropdown.open .dropdown-menu {
+  display: block;
+}
+
+/* Search input */
+.menu-search {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 10;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #999;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Menu categories */
+.menu-category {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #444;
+  background: #f0f0f0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.15s ease;
+}
+
+.menu-category:hover {
+  background-color: #e8e8e8;
+}
+
+.menu-category:first-child {
+  margin-top: 0;
+}
+
+.category-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.category-arrow {
+  font-size: 0.6rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.menu-category.expanded .category-arrow {
+  transform: rotate(90deg);
+}
+
+.category-badge {
+  background: #dee2e6;
+  color: #495057;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.category-content {
+  display: none;
+}
+
+.menu-category.expanded + .category-content {
+  display: block;
+}
+
+/* Menu groups */
+.menu-group {
+  background: #fafafa;
+}
+
+.group-label {
+  padding: 0.5rem 0.75rem 0.3rem 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #666;
+  background: #f5f5f5;
+  cursor: default;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Menu items */
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.15s ease;
+  border-bottom: 1px solid #f8f8f8;
+}
+
+.menu-item:hover {
+  background-color: #e8f4f8;
+}
+
+.menu-item.highlighted {
+  background-color: #d0e8f2;
+  border-left: 3px solid #007acc;
+  padding-left: calc(0.75rem - 3px);
+}
+
+.menu-subitem.highlighted {
+  padding-left: calc(2rem - 3px);
+}
+
+.menu-group .menu-subitem.highlighted {
+  padding-left: calc(2.5rem - 3px);
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-subitem {
+  padding-left: 2rem;
+  font-size: 0.82rem;
+}
+
+.menu-group .menu-subitem {
+  padding-left: 2.5rem;
+  font-size: 0.8rem;
+}
+
+.menu-badge {
+  background: #e9ecef;
+  color: #666;
+  padding: 0.1rem 0.4rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .try-samples-selector {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  
+  .dropdown-toggle {
+    width: 100%;
+    min-width: auto;
+  }
+}
+</style>
+
