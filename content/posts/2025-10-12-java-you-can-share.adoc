@@ -7,6 +7,7 @@ category: learn
 tags: [jbang]
 author: Max Rydahl Andersen
 bgcolor: ff5a71
+draft: true
 ---
 ifdef::env-github,env-browser,env-vscode[:imagesdir:../../public/assets/images]
 
@@ -91,12 +92,12 @@ For those curious - above is using https://github.com/jeamlit/jeamlit[Jeamlit] t
 
 image::/assets/images/jeamlit-barchart.png[Jeamlit]
 
-Jeamlit is a new library similar to Steamlit for Python but inspired by JBang to allows building interactive web apps in Java with zero friction - do try it out!
+Jeamlit is a new library similar to Streamlit for Python but inspired by JBang that allows building interactive web apps in Java with zero friction - do try it out!
 
 == What was made
 
 I've been wanting to use `//DEPS` in Jupyter Notebooks for a long time, but it has been a pain to set up, so I 
-talked with maintainers of JJava and Raipaio kernels and explored options. Each has their own way of dealing with dependencies - and I
+talked with maintainers of JJava and Rapaio kernels and explored options. Each has their own way of dealing with dependencies - and I
 prefer to minimize the friction thus I created a custom kernel that supports `//DEPS` directives in notebooks.
 
 And in doing so I discovered that we could use Python's existing infrastructure (Jupyter Notebooks, MyBinder and Thebe) to go some steps further.
@@ -104,7 +105,7 @@ And in doing so I discovered that we could use Python's existing infrastructure 
 There is a shockingly small amount of code to make this all work - and its in its infancy still; I'm sure you all will want to use and 
 possibly contribute to it.
 
-Here are what are currently done:
+Here's what we've built:
 
 * Created a custom https://github.com/jbangdev/jbang-jupyter-kernel[JBang Jupyter kernel] that supports `//DEPS` directives in notebooks, based on JJava kernel
 * Built a https://github.com/jupyter-java/jupyter-java-binder[Binder environment] for running Java kernels in your browser with no install
@@ -149,18 +150,17 @@ This is about making Java something you can share with zero friction — all in 
 
 == Try It Now
 
-There are some samples and notebooks on the link:/try/[jbang.dev/try] page.
-
-Give them a go and let us know what you think!
-
-This is still new and evolving - we'd love your feedback and contributions!
+Ready to experience zero-friction Java?
 
 **Get started:**
 
-* Try the link:/try/[interactive demo] right now
-* Create link:/try/custom/[custom shareable links] for your projects
+* Try the link:/try/[interactive demo] right now - multiple samples available
+* Click link:/try/?repo=https%3A%2F%2Fgithub.com%2Fjbangdev%2Fjbang-jupyter-examples&filepath=hibernate.ipynb&redirect=3[this Hibernate example] to see it in action
+* Create link:/try/custom/[custom shareable links] for your own projects
 * Install locally: `jbang install-kernel@jupyter-java --java 25 --enable-preview jbang`
+
+This is still new and evolving - we have more ideas and plans for this, so stay tuned!
 
 This is about making Java something you can share with zero friction — all in line with JBang's mission.
 
-Share your creations with #jbang on social media - we'd love to see what you build!
+Enjoy!

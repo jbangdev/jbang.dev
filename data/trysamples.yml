@@ -59,6 +59,12 @@ items:
           text: Java 21
           variant: neutral
           pill: true
+      - value: qute.jsh
+        label: Qute - Template Engine
+        badge:
+          text: Java 25
+          variant: neutral
+          pill: true
   - category: Shell Integration
     items:
       - value: jash.jsh

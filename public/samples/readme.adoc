@@ -1,0 +1,13 @@
+# Samples for jbang.dev/try
+
+This directory contains samples for the jbang.dev/try page.
+
+## How to add a sample
+
+1. Add the sample to the `samples` directory
+2. Add the sample to the `trysamples.yml` file
+3. Test the sample by running `mise preview` and navigating to http://localhost:8080/try/ and pick it from the list.
+
+Open for any kind of new sample or updates to existing samples - just keep them short and educational without 
+too massive dependency chains as it makes the execution slow/hard on MyBinder.org.
+
