@@ -6,7 +6,7 @@ layout: splash
 {|
 ## Try JBang
 
-Below is an embedded notebook where you can write Java code using JBang directives, click run and see it execute.
+Below is an embedded editor where you can write Java code using JBang directives, click run and see it execute.
 
 <div class="notice--warning" style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 4px; padding: 1rem; margin-bottom: 1.5rem;">
   <strong>Note:</strong>

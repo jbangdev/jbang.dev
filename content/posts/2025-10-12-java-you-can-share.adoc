@@ -7,10 +7,15 @@ category: learn
 tags: [jbang]
 author: Max Rydahl Andersen
 bgcolor: ff5a71
+draft: true
 ---
 ifdef::env-github,env-browser,env-vscode[:imagesdir:../../public/assets/images]
 
-Click a link → https://mybinder.org/v2/gh/jupyter-java/jupyter-java-binder/jbang?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fjbangdev%252Fjbang-jupyter-examples%26urlpath%3Dlab%252Ftree%252Fcontent%252F%26branch%3Dmain%26targetPath%3Dcontent[Run Java in your browser]. No install, no account, no JDK.
+I'm not sure how to best explain this, so I'll just show you.
+
+== Try Java in your browser
+
+Click this link → link:/try?urlpath=https://github.com/jbangdev/jbang-jupyter-examples&filepath=hibernate.ipynb&redirect=0[Run Java in your browser] - wait a moment and you have a running Java environment in your browser. No install, no account, no JDK.
 
 Or scroll down and click "Activate" below to run Java code right here in this blog post:
 
@@ -86,7 +91,9 @@ BitmapEncoder.getBufferedImage(chart);
 </div>
 ++++
 
-That is real Java. With real Maven dependencies. Running in your browser.
+That is real Java. With real Maven dependencies. Output rendered in your browser with no additional install.
+
+
 
 == What This Actually Is
 
