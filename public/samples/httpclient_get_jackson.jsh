@@ -14,7 +14,7 @@ var body = client.send(req, HttpResponse.BodyHandlers.ofString()).body();
 var todos = new ObjectMapper().readValue(body, Todo[].class);
 
 stream(todos).limit(10).forEach(todo -> {
-    println(
+    System.out.println(
         "Todo #%d: %s %s".formatted(
             todo.id(), 
             todo.title(), 
