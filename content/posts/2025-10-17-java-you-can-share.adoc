@@ -92,18 +92,17 @@ For those curious - above is using https://github.com/jeamlit/jeamlit[Jeamlit] t
 
 image::/assets/images/jeamlit-barchart.png[Jeamlit]
 
-Jeamlit is a new library similar to Streamlit for Python but inspired by JBang that allows building interactive web apps in Java with zero friction - do try it out!
+Jeamlit is a new library similar to Streamlit for Python, not done by us but inspired by JBang that allows building interactive web apps in Java with zero friction - do https://jeamlit.io/[check it out]!
 
 == What was made
 
 I've been wanting to use `//DEPS` in Jupyter Notebooks for a long time, but it has been a pain to set up, so I 
-talked with maintainers of JJava and Rapaio kernels and explored options. Each has their own way of dealing with dependencies - and I
-prefer to minimize the friction thus I created a custom kernel that supports `//DEPS` directives in notebooks.
+talked with maintainers of https://github.com/dflib/jjava[JJava] and https://github.com/padreati/rapaio-jupyter-kernel[Rapaio] kernels and explored options. Each has their own way of dealing with dependencies - and I prefer to minimize the friction thus I created a JJava derived kernel that supports `//DEPS` directives in notebooks.
 
 And in doing so I discovered that we could use Python's existing infrastructure (Jupyter Notebooks, MyBinder and Thebe) to go some steps further.
 
-There is a shockingly small amount of code to make this all work - and its in its infancy still; I'm sure you all will want to use and 
-possibly contribute to it.
+There is a shockingly small amount of code to make this all work - and its in its infancy still; there is a lot more one can do with this -
+and I'm hoping you all will help make it better to make Java something you can share and use with zero friction.
 
 Here's what we've built:
 
