@@ -105,7 +105,7 @@ and I'm hoping you all will help make it better to make Java something you can s
 
 Here's what we've built:
 
-* Created a custom https://github.com/jbangdev/jbang-jupyter-kernel[JBang Jupyter kernel] that supports `//DEPS` directives in notebooks, based on JJava kernel
+* Created a custom https://github.com/jbangdev/jbang-jupyter[JBang Jupyter kernel] that supports `//DEPS` directives in notebooks, based on JJava kernel
 * Built a https://github.com/jupyter-java/jupyter-java-binder[Binder environment] for running Java kernels in your browser with no install
 * Developed https://github.com/jbangdev/jbang-jupyter-runner[jbang-jupyter-runner] extension to run .java/.jsh files directly in Jupyter Lab
 
