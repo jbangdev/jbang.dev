@@ -16,7 +16,7 @@
         <link>{post.url.absolute}</link>
         <guid isPermaLink="false">{post.url.absolute}</guid>
         <pubDate>{post.date}</pubDate>
-        <content:encoded>{post.content}</content:encoded>
+        <content:encoded><![CDATA[{post.content.raw}]]></content:encoded>
       </item>
     {/for}
     {/if}
