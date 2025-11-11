@@ -1,0 +1,24 @@
+{@java.lang.String collectionName}
+{@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
+{@io.quarkiverse.roq.frontmatter.runtime.model.NormalPage page}
+{#let name=(collectionName ?: 'posts')}
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title><![CDATA[ {site.title} ]]></title>
+    <description><![CDATA[ {site.description} ]]></description>
+    <link>{site.url.absolute}</link>
+    <generator>Quarkus Roq</generator>
+    {#if site.collections.get(name)}
+    <lastBuildDate>{#if site.collections.get(name).size > 0}{site.collections.get(name).get(0).date}{/if}</lastBuildDate>
+    {#for post in site.collections.get(name)}
+      <item>
+        <title><![CDATA[{post.title}]]></title>
+        <link>{post.url.absolute}</link>
+        <guid isPermaLink="false">{post.url.absolute}</guid>
+        <pubDate>{post.date}</pubDate>
+        <content:encoded><![CDATA[{post.content.raw}]]></content:encoded>
+      </item>
+    {/for}
+    {/if}
+  </channel>
+</rss>
