@@ -37,4 +37,24 @@ public class JBangSiteTest {
                     "The page you requested has been relocated to"
                 ));
     }
+
+    /* 
+     * Tests added as it broke when migrating to Quarkus ROQ new versions.
+     */
+    @Test
+    public void testDocumentationStyles() {
+        RestAssured.when().get("/documentation/_/css/site.css")
+                .then()
+                .statusCode(200);
+
+        RestAssured.when().get("/documentation/_/js/site.js")
+                .then()
+                .statusCode(200);
+
+        RestAssured.when().get("/documentation/_/js/sitenotfound.js")
+                .then()
+                .statusCode(404);
+
+
+    }
 } 
