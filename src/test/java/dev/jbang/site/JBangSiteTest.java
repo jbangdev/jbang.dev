@@ -15,6 +15,7 @@ public class JBangSiteTest {
     public void testTree() {
         RestAssured.when().get("/tree")
                 .then()
+                .log().ifValidationFails()
                 .statusCode(200)
                 .body(containsString(
                     "Thanks to Milen Dyankov"
@@ -25,6 +26,7 @@ public class JBangSiteTest {
     public void testDocumentation() {
         RestAssured.when().get("/documentation")
                 .then()
+                .log().ifValidationFails()
                 .statusCode(200);
     }
 
@@ -32,6 +34,7 @@ public class JBangSiteTest {
     public void testFail() {
         RestAssured.when().get("/documentation")
                 .then()
+                .log().ifValidationFails()
                 .statusCode(200)
                 .body(containsString(
                     "The page you requested has been relocated to"
@@ -45,14 +48,17 @@ public class JBangSiteTest {
     public void testDocumentationStyles() {
         RestAssured.when().get("/documentation/_/css/site.css")
                 .then()
+                .log().ifValidationFails()
                 .statusCode(200);
 
         RestAssured.when().get("/documentation/_/js/site.js")
                 .then()
+                .log().ifValidationFails()
                 .statusCode(200);
 
         RestAssured.when().get("/documentation/_/js/sitenotfound.js")
                 .then()
+                .log().ifValidationFails()
                 .statusCode(404);
 
 
