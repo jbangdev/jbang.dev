@@ -21,7 +21,7 @@ excerpt: "The following IDEs today have support for JBang via a plugin - no addi
      icons-and-text
     >
       <v-tab id="vscodium-tab">VSCodium
-        <img src="https://api.faviconkit.com/vscodium.com" width="24" height="24" />
+        <img src="/assets/images/ide/vscodium.svg" width="24" height="24" />
       </v-tab>
       <v-tab id="vscode-tab">Visual Studio Code
         <img src="https://code.visualstudio.com/favicon.ico" width="24" height="24" />
@@ -31,6 +31,15 @@ excerpt: "The following IDEs today have support for JBang via a plugin - no addi
       </v-tab>
       <v-tab id="eclipse-tab">Eclipse
         <img src="https://simpleicons.org/icons/eclipseide.svg" width="24" height="24" />
+      </v-tab>
+      <v-tab id="zed-tab">Zed
+        <img src="https://logo.svgcdn.com/simple-icons/zedindustries-dark.png" width="24" height="24" />
+      </v-tab>
+      <v-tab id="vim-tab">Vim/neovim
+        <img src="https://simpleicons.org/icons/vim.svg" width="24" height="24" />
+      </v-tab>
+      <v-tab id="emacs-tab">Emacs
+        <img src="https://simpleicons.org/icons/gnuemacs.svg" width="24" height="24" />
       </v-tab>
       <v-tab id="replit-tab">repl.it
         <img src="https://api.faviconkit.com/replit.com" width="24" height="24" />
@@ -88,7 +97,33 @@ excerpt: "The following IDEs today have support for JBang via a plugin - no addi
             JBang is on <a href="https://marketplace.eclipse.org/content/jbang-eclipse-integration">Eclipse Marketplace</a>
           </p>
         </v-tab-item>
-
+        <v-tab-item>
+          <h3>Zed</h3>
+          <p>
+            <a href="https://zed.dev"></a>Zed</a> is a high-performance editor with support for Java using Eclipse JDT Language Server.
+          </p>
+          <p>
+           No native JBang support yet, thus simplest way is to use sandbox mode: <code>jbang edit --sandbox --open=zed yourapp.java</code>.
+          </p>
+        </v-tab-item>
+        <v-tab-item>
+          <h3>Vim/neovim</h3>
+          <p>
+            Vim and neovim are highly configurable text editors built to enable efficient text editing. Supports Java with Eclipse JDT Language Server.
+          </p>
+          <p>
+            No native JBang support yet, thus simplest way is to use sandbox mode: <code>jbang edit --sandbox --open=nvim yourapp.java</code>.
+          </p>
+        </v-tab-item>
+        <v-tab-item>
+          <h3>Emacs</h3>
+          <p>
+            Emacs is an extensible, customizable, free/libre text editor and computing environment. Supports Java with Eclipse JDT Language Server.
+          </p>
+          <p>
+            No native JBang support yet, thus simplest way is to use sandbox mode: <code>jbang edit --sandbox --open=emacs yourapp.java</code>.
+          </p>
+        </v-tab-item>
         <v-tab-item>
           <h3>repl.it</h3>
           <p>
