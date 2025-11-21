@@ -41,7 +41,7 @@ import picocli.CommandLine;
 @CommandLine.Command
 public class statsquery2 implements Runnable {
 
-     @CommandLine.Option(names={"--out"},defaultValue = "assets/data/jbang-versionchecks.csv")
+     @CommandLine.Option(names={"--out"},defaultValue = "public/assets/data/jbang-versionchecks.csv")
     java.nio.file.Path out;
 
     @CommandLine.Option(names={"--token"})
