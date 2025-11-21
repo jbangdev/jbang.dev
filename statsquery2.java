@@ -15,6 +15,7 @@
 //JAVAC_OPTIONS -parameters
 
 
+import java.nio.file.Files;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -25,7 +26,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.function.Function;
-
+import java.util.LinkedHashMap;
 import org.eclipse.microprofile.rest.client.annotation.ClientHeaderParam;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
@@ -52,6 +53,14 @@ public class statsquery2 implements Runnable {
 
     @RestClient
     private AnalyticsEngine analyticsEngine;
+
+    @CommandLine.Option(names={"--leaderboards"}, defaultValue = "data/leaderboards")
+    java.nio.file.Path leaderboards;
+
+    // just aggregating to leaderboard.yaml because qute does not support nested data (yet)
+    // see https://github.com/quarkiverse/quarkus-roq/issues/664
+    @CommandLine.Option(names={"--leaderboard"}, defaultValue = "data/leaderboard.yaml")
+    java.nio.file.Path leaderboard;
 
     // Helper method to transform version string
     String transformVersion(String version) {
@@ -99,14 +108,24 @@ public class statsquery2 implements Runnable {
            .sorted((a, b) -> Long.compare(b.count, a.count))
            .collect(java.util.stream.Collectors.toList());
        
+        Map<String, String> rawData = new LinkedHashMap<>();
+
+        result = getLeaderboard("blob3");
+       rawData.put("countries", saveLeaderboard(result, leaderboards.resolve("countries.yaml"), code -> {
+           try {
+               Locale locale = new Locale("", code);
+               String countryName = locale.getDisplayCountry(Locale.ENGLISH);
+               return countryName.equals(code) ? code : countryName;
+           } catch (Exception e) {
+               return code;
+           }
+       }));
+
        // Create a new AnalyticsResponse with the transformed data
        var result2 = new AnalyticsResponse<Leaderboard>(null,newData,0,0);
        
-       saveLeaderboard(result2, Paths.get("_data/leaderboard/java_versions.yaml"), Function.identity());
+       rawData.put("java_versions", saveLeaderboard(result2, leaderboards.resolve("java_versions.yaml"), Function.identity()));
       
-       result = getLeaderboard("blob13");
-       saveLeaderboard(result, Paths.get("_data/leaderboard/jbang_vendors.yaml"), Function.identity());
-       
        Map<String, Long> numbers = new HashMap<>();
 
        add(numbers,getCount("DISTINCT blob13", "vendors"));
@@ -118,58 +137,85 @@ public class statsquery2 implements Runnable {
 
        add(numbers,getCount("", "uniques"));
 
-       saveNumbers(numbers, Paths.get("_data/leaderboard/jbang_numbers.yaml"), null);
+       rawData.put("jbang_numbers", saveNumbers(numbers, leaderboards.resolve("jbang_numbers.yaml"), null));
+       
+       result = getLeaderboard("blob13");
+       rawData.put("jbang_vendors", saveLeaderboard(result, leaderboards.resolve("jbang_vendors.yaml"), Function.identity()));
+       
        result = getLeaderboard("blob8");
-       saveLeaderboard(result, Paths.get("_data/leaderboard/jbang_versions.yaml"), Function.identity());
+       rawData.put("jbang_versions", saveLeaderboard(result, leaderboards.resolve("jbang_versions.yaml"), Function.identity()));
        
-       result = getLeaderboard("blob3");
-       saveLeaderboard(result, Paths.get("_data/leaderboard/countries.yaml"), code -> {
-           try {
-               Locale locale = new Locale("", code);
-               String countryName = locale.getDisplayCountry(Locale.ENGLISH);
-               return countryName.equals(code) ? code : countryName;
-           } catch (Exception e) {
-               return code;
-           }
-       });
        
+       
+      // System.out.println(rawData);
+
+      StringBuffer sb = new StringBuffer();
+        for (var dp : rawData.entrySet()) {
+            sb.append(dp.getKey() + ":\n " + dp.getValue());
+        }
+        try {
+            // Indent the value 2 spaces for each key-value pair
+            StringBuilder formatted = new StringBuilder();
+            for (var dp : rawData.entrySet()) {
+                formatted.append(dp.getKey()).append(":\n  ")
+                         .append(dp.getValue().replace("\n", "\n  ").trim())
+                         .append("\n");
+            }
+            Files.writeString(leaderboard, formatted.toString());
+        } catch (IOException e) {
+            System.err.println("Error writing to " + leaderboard);
+            e.printStackTrace();
+        }
     }
 
     
-    private void saveLeaderboard(AnalyticsResponse<Leaderboard> result, java.nio.file.Path out, java.util.function.Function<String, String> nameMapper) {
+    private String saveLeaderboard(AnalyticsResponse<Leaderboard> result, java.nio.file.Path out, java.util.function.Function<String, String> nameMapper) {
     
         long totalCount = 0;
         for (var dp : result.data) {
             totalCount += dp.count;
         }
 
+        StringBuilder sb = new StringBuilder();
+        sb.append("# JBang versions usage data total count: ").append(totalCount).append("\n");
+        for (var dp : result.data) {
+            String mappedName = nameMapper != null ? nameMapper.apply(dp.name) : dp.name;
+            sb.append(String.format("- name: %s%n", mappedName));
+            sb.append(String.format(Locale.US, "  percentage: %.1f%n", (double) dp.count / totalCount * 100));
+        }
+        String content = sb.toString();
+
         System.out.println("Writing results to " + out);
-        try (PrintWriter pw = new PrintWriter(new FileWriter(out.toFile()))) {
-            pw.println("# JBang versions usage data total count: " + totalCount);
-            for (var dp : result.data) {
-                String mappedName = nameMapper != null ? nameMapper.apply(dp.name) : dp.name;
-                pw.printf("- name: %s%n", mappedName);
-                pw.printf(Locale.US, "  percentage: %.1f%n", (double) dp.count / totalCount * 100);
-            }
+
+        
+        try {
+            Files.writeString(out, content);
         } catch (IOException e) {
             System.err.println("Error writing to " + out);
             e.printStackTrace();
         }
+        
+        return content;
     }
 
-    private void saveNumbers(Map<String, Long> result, java.nio.file.Path out, java.util.function.Function<String, String> nameMapper) {
+    private String saveNumbers(Map<String, Long> result, java.nio.file.Path out, java.util.function.Function<String, String> nameMapper) {
     
+        StringBuilder sb = new StringBuilder();
+        sb.append("# JBang data\n");
+        for (var dp : result.entrySet()) {
+            sb.append(String.format("  %s: %s\n", dp.getKey(), dp.getValue()));
+        }
+        String content = sb.toString();
 
         System.out.println("Writing results to " + out);
-        try (PrintWriter pw = new PrintWriter(new FileWriter(out.toFile()))) {
-            pw.println("# JBang data");
-            for (var dp : result.entrySet()) {
-                pw.printf("  %s: %s\n", dp.getKey(), dp.getValue());
-            }
+        try {
+            Files.writeString(out, content);
         } catch (IOException e) {
             System.err.println("Error writing to " + out);
             e.printStackTrace();
         }
+        
+        return content;
     }
 
     /// https://github.com/jbangdev/cloudflare-worker-ga4/blob/main/src/analytics.ts#L57
