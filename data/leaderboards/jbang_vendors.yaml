@@ -1,6 +1,6 @@
-# JBang versions usage data total count: 6847
+# JBang versions usage data total count: 6835
 - name: Eclipse Adoptium
-  percentage: 25.6
+  percentage: 25.7
 - name: Oracle Corporation
   percentage: 22.6
 - name: Amazon.com Inc.
@@ -16,11 +16,11 @@
 - name: Red Hat, Inc.
   percentage: 4.1
 - name: GraalVM Community
-  percentage: 4.1
+  percentage: 4.0
 - name: Microsoft
-  percentage: 2.7
+  percentage: 2.6
 - name: Arch Linux
-  percentage: 1.5
+  percentage: 1.4
 - name: BellSoft
   percentage: 1.4
 - name: AdoptOpenJDK
@@ -49,6 +49,8 @@
   percentage: 0.1
 - name: ojdkbuild
   percentage: 0.1
+- name: Raspbian
+  percentage: 0.1
 - name: Termux
   percentage: 0.1
 - name: Alibaba
@@ -57,17 +59,15 @@
   percentage: 0.0
 - name: Tencent
   percentage: 0.0
-- name: Raspbian
-  percentage: 0.0
 - name: Gentoo
   percentage: 0.0
 - name: Snap Build
   percentage: 0.0
 - name: Artix Linux
   percentage: 0.0
-- name: Google Inc.
-  percentage: 0.0
 - name: IBM Corporation
+  percentage: 0.0
+- name: Google Inc.
   percentage: 0.0
 - name: IcedTea
   percentage: 0.0
