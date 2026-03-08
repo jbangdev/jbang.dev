@@ -13,10 +13,10 @@ jobs:
       - uses: jdx/mise-action@v3
       - run: jbang statsquery2.java --token ${{ secrets.CLOUDFLARE_TOKEN }} --account ${{ secrets.CLOUDFLARE_ACCOUNT }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.APPSTORE_GH_TOKEN != '' && secrets.APPSTORE_GH_TOKEN || secrets.GITHUB_TOKEN }}
       - run: jbang .github/appstore.java
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.APPSTORE_GH_TOKEN != '' && secrets.APPSTORE_GH_TOKEN || secrets.GITHUB_TOKEN }}
       - name: Commit updates
         run: |
           git config --global user.name 'Max Rydahl Andersen'
