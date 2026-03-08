@@ -15,6 +15,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -100,50 +101,47 @@ class appstore implements Callable<Integer> {
     var gson = new GsonBuilder().setPrettyPrinting().create();
     List<CatalogItem> aliasItems = new ArrayList<>();
     List<CatalogItem> templateItems = new ArrayList<>();
-    PagedSearchIterable<GHContent> ghContents = gitHub.searchContent().filename("jbang-catalog.json").extension(".json")
-        .list().withPageSize(5);
+    List<GHContent> contents = fetchCatalogsWithRetry();
 
-       var it = ghContents.iterator();
+    out.println("Found " + contents.size() + " catalogs");
 
-        List<GHContent> contents = new ArrayList<>();
+    int processed = 0;
+    int retries = 5;
+    int index = 0;
 
-       while(it.hasNext()) {
-        contents.add(it.next());
-       }
+    while (index < contents.size()) {
+      GHContent content = contents.get(index);
+      String location = content.getOwner().getFullName() + "/" + content.getPath();
+      try {
+        if (excludedCatalogs.contains(location)) {
+          out.println("Excluded - " + location);
+        } else {
+          out.println("Processing - " + location);
+          TimeUnit.MILLISECONDS.sleep(400);
+          var catalogContent = toJsonElement(gson, content);
+          if (catalogContent != null) {
+            catalogContent.aliases.entrySet().stream().map(entry -> toCatalogerItem(entry, content))
+                .forEach(aliasItems::add);
 
-       out.println("Found " + contents.size() + " catalogs");
-       
-       int retries = 5;
-
-        while (retries > 0) {
-          try {
-            for (GHContent content : contents) {
-              String location = content.getOwner().getFullName() + "/" + content.getPath();
-              if (excludedCatalogs.contains(location)) {
-                out.println("Excluded - " + location);
-              } else {
-                out.println("Processing - " + location);
-                TimeUnit.SECONDS.sleep(1);
-                var catalogContent = toJsonElement(gson, content);
-                if (catalogContent != null) {
-                  catalogContent.aliases.entrySet().stream().map(entry -> toCatalogerItem(entry, content))
-                      .forEach(aliasItems::add);
-
-                  catalogContent.templates.entrySet().stream().map(entry -> templateToItem(entry, content))
-                      .forEach(templateItems::add);
-                }
-              }
-              retries = 0;
-            }
-          } catch (GHException ghe) {
-            printExceptionCauseChain(ghe);
-            retries--;
-            if (retries > 0) {
-              out.println("Wait 3 minutes...retries:" + retries);
-              TimeUnit.MINUTES.sleep(3);
-            }
+            catalogContent.templates.entrySet().stream().map(entry -> templateToItem(entry, content))
+                .forEach(templateItems::add);
           }
         }
+        processed++;
+        index++;
+        retries = 5;
+      } catch (GHException ghe) {
+        printExceptionCauseChain(ghe);
+        retries--;
+        if (retries <= 0) {
+          throw ghe;
+        }
+        Duration wait = backoffDelay(ghe);
+        out.println("GitHub throttled while processing " + location + ". Sleeping " + wait.toMinutes()
+            + "m before retrying (" + retries + " retries left)");
+        TimeUnit.MILLISECONDS.sleep(wait.toMillis());
+      }
+    }
 
     List<CatalogItem> sortedAliases = aliasItems.stream()
         .sorted(Comparator.comparing(catalogerItem -> -catalogerItem.stars)).collect(Collectors.toList());
@@ -248,6 +246,52 @@ class appstore implements Callable<Integer> {
     var html = renderer.render(document);
     // System.out.println(item.description + "=>" + html);
     return html;
+  }
+
+
+  private List<GHContent> fetchCatalogsWithRetry() throws InterruptedException {
+    int retries = 5;
+    while (true) {
+      try {
+        PagedSearchIterable<GHContent> ghContents = gitHub.searchContent().filename("jbang-catalog.json")
+            .extension(".json").list().withPageSize(100);
+
+        List<GHContent> contents = new ArrayList<>();
+        var iterator = ghContents.iterator();
+        while (iterator.hasNext()) {
+          contents.add(iterator.next());
+        }
+        return contents;
+      } catch (GHException ghe) {
+        printExceptionCauseChain(ghe);
+        retries--;
+        if (retries <= 0) {
+          throw ghe;
+        }
+        Duration wait = backoffDelay(ghe);
+        out.println("GitHub throttled while listing catalogs. Sleeping " + wait.toMinutes() + "m (" + retries
+            + " retries left)");
+        TimeUnit.MILLISECONDS.sleep(wait.toMillis());
+      }
+    }
+  }
+
+  private Duration backoffDelay(Throwable throwable) {
+    if (isSecondaryRateLimit(throwable)) {
+      return Duration.ofMinutes(5);
+    }
+    return Duration.ofMinutes(1);
+  }
+
+  private boolean isSecondaryRateLimit(Throwable throwable) {
+    while (throwable != null) {
+      String message = throwable.getMessage();
+      if (message != null && (message.contains("429") || message.contains("secondary rate limit"))) {
+        return true;
+      }
+      throwable = throwable.getCause();
+    }
+    return false;
   }
 
   private Catalog toJsonElement(Gson gson, GHContent catalogContent) throws IOException {
