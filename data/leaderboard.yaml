@@ -1,11 +1,11 @@
 countries:
-  # JBang versions usage data total count: 3990
+  # JBang versions usage data total count: 3986
   - name: United States
     percentage: 16.8
   - name: Germany
     percentage: 11.8
   - name: France
-    percentage: 6.9
+    percentage: 6.8
   - name: Brazil
     percentage: 5.5
   - name: India
@@ -40,11 +40,11 @@ countries:
     percentage: 1.2
   - name: Russia
     percentage: 1.1
-  - name: Mexico
-    percentage: 1.0
   - name: Finland
     percentage: 1.0
   - name: China
+    percentage: 1.0
+  - name: Mexico
     percentage: 1.0
   - name: Norway
     percentage: 0.9
@@ -72,9 +72,9 @@ countries:
     percentage: 0.5
   - name: Philippines
     percentage: 0.5
-  - name: Vietnam
-    percentage: 0.5
   - name: Greece
+    percentage: 0.5
+  - name: Vietnam
     percentage: 0.5
   - name: Türkiye
     percentage: 0.5
@@ -84,9 +84,9 @@ countries:
     percentage: 0.4
   - name: Romania
     percentage: 0.4
-  - name: Hong Kong SAR China
-    percentage: 0.4
   - name: Hungary
+    percentage: 0.4
+  - name: Hong Kong SAR China
     percentage: 0.4
   - name: Chile
     percentage: 0.4
@@ -136,13 +136,13 @@ countries:
     percentage: 0.1
   - name: Uganda
     percentage: 0.1
+  - name: United Arab Emirates
+    percentage: 0.1
   - name: Saudi Arabia
     percentage: 0.1
   - name: Kenya
     percentage: 0.1
   - name: Belarus
-    percentage: 0.1
-  - name: United Arab Emirates
     percentage: 0.1
   - name: Albania
     percentage: 0.1
@@ -154,33 +154,33 @@ countries:
     percentage: 0.1
   - name: Iceland
     percentage: 0.1
-  - name: Paraguay
-    percentage: 0.1
   - name: Panama
     percentage: 0.1
   - name: Kazakhstan
     percentage: 0.1
   - name: Iran
     percentage: 0.1
-  - name: Nepal
-    percentage: 0.1
   - name: Uruguay
     percentage: 0.1
-  - name: Angola
+  - name: Nepal
     percentage: 0.1
-  - name: Bolivia
-    percentage: 0.1
-  - name: Ghana
+  - name: Paraguay
     percentage: 0.1
   - name: Latvia
     percentage: 0.1
   - name: Qatar
     percentage: 0.1
+  - name: Cyprus
+    percentage: 0.1
   - name: Cameroon
+    percentage: 0.1
+  - name: Angola
+    percentage: 0.1
+  - name: Malta
     percentage: 0.1
   - name: Palestinian Territories
     percentage: 0.1
-  - name: Malta
+  - name: Réunion
     percentage: 0.1
   - name: Mongolia
     percentage: 0.1
@@ -190,27 +190,27 @@ countries:
     percentage: 0.1
   - name: Ethiopia
     percentage: 0.1
-  - name: Réunion
-    percentage: 0.1
-  - name: Liechtenstein
+  - name: North Macedonia
     percentage: 0.1
   - name: Georgia
     percentage: 0.1
+  - name: Liechtenstein
+    percentage: 0.1
+  - name: Bolivia
+    percentage: 0.1
   - name: Mauritius
     percentage: 0.1
-  - name: North Macedonia
-    percentage: 0.1
-  - name: Cyprus
+  - name: Ghana
     percentage: 0.1
   - name: Honduras
     percentage: 0.0
   - name: 
     percentage: 0.0
-  - name: Uzbekistan
-    percentage: 0.0
   - name: Kosovo
     percentage: 0.0
-  - name: Cayman Islands
+  - name: Uzbekistan
+    percentage: 0.0
+  - name: Zambia
     percentage: 0.0
   - name: Equatorial Guinea
     percentage: 0.0
@@ -258,10 +258,10 @@ countries:
     percentage: 0.0
   - name: Mozambique
     percentage: 0.0
-  - name: Zambia
+  - name: Cayman Islands
     percentage: 0.0
 java_versions:
-  # JBang versions usage data total count: 10814
+  # JBang versions usage data total count: 10819
   - name: 21.0
     percentage: 38.3
   - name: 17.0
@@ -273,11 +273,11 @@ java_versions:
   - name: 1.8
     percentage: 4.0
   - name: 24.0
-    percentage: 3.4
+    percentage: 3.3
   - name: Unknown
     percentage: 2.9
   - name: 23.0
-    percentage: 2.7
+    percentage: 2.6
   - name: 22.0
     percentage: 1.6
   - name: 20.0
@@ -317,13 +317,13 @@ java_versions:
 jbang_numbers:
   # JBang data
     timezones: 184
-    cities: 3709
-    uniques: 415386
+    cities: 3707
+    uniques: 417022
     countries: 130
     vendors: 34
     continents: 7
 jbang_vendors:
-  # JBang versions usage data total count: 7325
+  # JBang versions usage data total count: 7324
   - name: Eclipse Adoptium
     percentage: 26.3
   - name: Oracle Corporation
@@ -335,7 +335,7 @@ jbang_vendors:
   - name: Homebrew
     percentage: 6.1
   - name: Azul Systems, Inc.
-    percentage: 5.7
+    percentage: 5.8
   - name: Red Hat, Inc.
     percentage: 4.4
   - name: 
@@ -393,7 +393,7 @@ jbang_vendors:
   - name: IcedTea
     percentage: 0.0
 jbang_versions:
-  # JBang versions usage data total count: 9828
+  # JBang versions usage data total count: 9819
   - name: 0.135.1
     percentage: 13.6
   - name: 0.132.1
@@ -401,11 +401,11 @@ jbang_versions:
   - name: 0.135.0
     percentage: 6.1
   - name: 0.137.0
-    percentage: 5.6
+    percentage: 5.7
   - name: 0.136.0
     percentage: 4.5
   - name: 0.129.0
-    percentage: 4.5
+    percentage: 4.4
   - name: 0.125.1
     percentage: 3.8
   - name: 0.126.3
@@ -414,9 +414,9 @@ jbang_versions:
     percentage: 3.2
   - name: 0.116.0
     percentage: 3.0
-  - name: 0.123.0
-    percentage: 2.7
   - name: 0.126.1
+    percentage: 2.8
+  - name: 0.123.0
     percentage: 2.7
   - name: 0.117.1
     percentage: 2.6
@@ -430,11 +430,11 @@ jbang_versions:
     percentage: 1.9
   - name: 0.132.0
     percentage: 1.9
+  - name: 0.114.0
+    percentage: 1.8
   - name: 0.122.0
     percentage: 1.8
   - name: 0.126.0
-    percentage: 1.8
-  - name: 0.114.0
     percentage: 1.8
   - name: 0.130.0
     percentage: 1.7
@@ -466,13 +466,13 @@ jbang_versions:
     percentage: 0.5
   - name: 0.107.0
     percentage: 0.4
-  - name: 0.108.0
-    percentage: 0.4
   - name: 0.110.0
     percentage: 0.4
-  - name: 0.113.0
-    percentage: 0.3
+  - name: 0.108.0
+    percentage: 0.4
   - name: 0.97.0
+    percentage: 0.3
+  - name: 0.113.0
     percentage: 0.3
   - name: 0.104.0
     percentage: 0.3
@@ -538,9 +538,9 @@ jbang_versions:
     percentage: 0.0
   - name: 0.92.1
     percentage: 0.0
-  - name: 0.84.2
-    percentage: 0.0
   - name: 0.128.1
+    percentage: 0.0
+  - name: 0.84.2
     percentage: 0.0
   - name: 0.91.0
     percentage: 0.0
