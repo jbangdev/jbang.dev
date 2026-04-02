@@ -1,6 +1,6 @@
-# JBang versions usage data total count: 7682
+# JBang versions usage data total count: 7677
 - name: Eclipse Adoptium
-  percentage: 26.8
+  percentage: 26.7
 - name: Oracle Corporation
   percentage: 20.5
 - name: Ubuntu
@@ -11,12 +11,12 @@
   percentage: 6.3
 - name: Azul Systems, Inc.
   percentage: 6.1
+- name: 
+  percentage: 4.4
 - name: Red Hat, Inc.
   percentage: 4.4
-- name: 
-  percentage: 4.3
 - name: GraalVM Community
-  percentage: 3.9
+  percentage: 3.8
 - name: Microsoft
   percentage: 3.3
 - name: Arch Linux
@@ -27,9 +27,9 @@
   percentage: 1.1
 - name: Debian
   percentage: 1.0
-- name: OpenLogic
-  percentage: 0.9
 - name: Eclipse OpenJ9
+  percentage: 0.9
+- name: OpenLogic
   percentage: 0.9
 - name: JetBrains s.r.o.
   percentage: 0.8
@@ -47,31 +47,33 @@
   percentage: 0.1
 - name: Alpine
   percentage: 0.1
-- name: ojdkbuild
-  percentage: 0.1
 - name: Termux
   percentage: 0.1
-- name: Flathub
+- name: ojdkbuild
+  percentage: 0.1
+- name: MacPorts
   percentage: 0.0
 - name: Raspbian
   percentage: 0.0
-- name: Axiom JSC
-  percentage: 0.0
-- name: MacPorts
+- name: Flathub
   percentage: 0.0
 - name: IBM Corporation
   percentage: 0.0
-- name: Void
-  percentage: 0.0
-- name: Gentoo
-  percentage: 0.0
-- name: Tencent
+- name: Axiom JSC
   percentage: 0.0
 - name: Aleksey Shipilev
   percentage: 0.0
 - name: Tribblix
   percentage: 0.0
+- name: Artix Linux
+  percentage: 0.0
+- name: Gentoo
+  percentage: 0.0
 - name: SAP AG
+  percentage: 0.0
+- name: Void
+  percentage: 0.0
+- name: Tencent
   percentage: 0.0
 - name: IcedTea
   percentage: 0.0
