@@ -15,8 +15,8 @@
         <skipITs>true</skipITs>
 
         <version.compiler-plugin>3.14.0</version.compiler-plugin>
-        <version.quarkus-roq>1.10.1</version.quarkus-roq>
-        <version.quarkus.platform>3.24.5</version.quarkus.platform>
+        <version.quarkus-roq>2.0.5</version.quarkus-roq>
+        <version.quarkus.platform>3.33.1</version.quarkus.platform>
         <version.surefire-plugin>3.5.3</version.surefire-plugin>
         <antora.output-dir>public/documentation</antora.output-dir>
     </properties>
@@ -80,7 +80,7 @@
 
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-junit5</artifactId>
+            <artifactId>quarkus-junit</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -155,6 +155,7 @@
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                         <maven.home>${maven.home}</maven.home>
                     </systemPropertyVariables>
+                    <argLine>@{argLine}</argLine>
                 </configuration>
             </plugin>
             <plugin>
@@ -174,6 +175,7 @@
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                         <maven.home>${maven.home}</maven.home>
                     </systemPropertyVariables>
+                    <argLine>@{argLine}</argLine>
                 </configuration>
             </plugin>
             <plugin>
