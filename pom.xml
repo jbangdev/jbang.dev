@@ -4,6 +4,7 @@
     <groupId>dev.jbang</groupId>
     <artifactId>jbang-dev-site</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <packaging>quarkus</packaging>
 
     <properties>
         <maven.compiler.release>21</maven.compiler.release>
@@ -118,16 +119,6 @@
                 <artifactId>quarkus-maven-plugin</artifactId>
                 <version>${version.quarkus.platform}</version>
                 <extensions>true</extensions>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>build</goal>
-                            <goal>generate-code</goal>
-                            <goal>generate-code-tests</goal>
-                            <goal>native-image-agent</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
