@@ -41,7 +41,7 @@ $Memo-Exists: function-exists(memo-get) and function-exists(memo-set);
 
 
     // Test to see if it's a comma-separated list
-    $or-list: if(list-separator($query) == 'comma', true, false);
+    $or-list: if(sass(list-separator($query) == 'comma'): true; else: false);
 
 
     @if ($or-list == false and breakpoint-get('legacy syntax') == false) {
@@ -69,7 +69,7 @@ $Memo-Exists: function-exists(memo-get) and function-exists(memo-set);
       @else {
         $query-string: '';
         @for $i from 1 through $length {
-          $query-string: $query-string + if($i == 1, '', ', ') + breakpoint-parse(nth($query, $i));
+          $query-string: $query-string + if(sass($i == 1): ''; else: ', ') + breakpoint-parse(nth($query, $i));
         }
       }
     }

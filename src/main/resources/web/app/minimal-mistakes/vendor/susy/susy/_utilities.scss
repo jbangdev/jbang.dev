@@ -64,7 +64,7 @@ $_susy-error-output-override: false !default;
   $first: nth($lengths, 1);
 
   @if (length($lengths) == 1) {
-    @return if(unitless($first), 'fluid', 'static');
+    @return if(sass(unitless($first)): 'fluid'; else: 'static');
   }
 
   @for $i from 2 through length($lengths) {
@@ -79,7 +79,7 @@ $_susy-error-output-override: false !default;
     }
   }
 
-  @return if(unitless($first), 'fluid', 'static');
+  @return if(sass(unitless($first)): 'fluid'; else: 'static');
 }
 
 
@@ -118,8 +118,8 @@ $_susy-error-output-override: false !default;
   @if ($has == 0) {
     @each $try, $could in $map {
       $match: comparable($try, $value);
-      $unit: if($match, $try, $unit);
-      $has: if($match, $could, $has);
+      $unit: if(sass($match): $try; else: $unit);
+      $has: if(sass($match): $could; else: $has);
     }
   }
 

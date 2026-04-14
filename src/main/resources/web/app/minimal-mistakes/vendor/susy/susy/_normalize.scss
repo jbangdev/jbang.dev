@@ -74,7 +74,7 @@
 
   @if not $columns {
     $map: type-of($context) == 'map';
-    $columns: if($map, map-get($context, 'columns'), null);
+    $columns: if(sass($map): map-get($context, 'columns'); else: null);
     $columns: $columns or susy-get('columns');
   }
 

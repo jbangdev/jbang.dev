@@ -106,7 +106,7 @@
   $context-only: false
 ) {
   // Get and normalize config
-  $config: if($config, susy-settings($config), susy-settings());
+  $config: if(sass($config): susy-settings($config); else: susy-settings());
   $normal-config: susy-normalize($config);
 
   // Parse and normalize shorthand
@@ -179,12 +179,12 @@
       'su-call');
   }
 
-  $call: if(function-exists('get-function'), get-function($name), $name);
+  $call: if(sass(function-exists('get-function')): get-function($name); else: $name);
   $output: ();
 
   @each $arg in $args {
     $value: map-get($config, $arg);
-    $output: if($value, map-merge($output, ($arg: $value)), $output);
+    $output: if(sass($value): map-merge($output, ($arg: $value)); else: $output);
   }
 
   @return call($call, $output...);
