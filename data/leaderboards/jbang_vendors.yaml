@@ -1,6 +1,6 @@
-# JBang versions usage data total count: 7680
+# JBang versions usage data total count: 7674
 - name: Eclipse Adoptium
-  percentage: 26.5
+  percentage: 26.4
 - name: Oracle Corporation
   percentage: 20.1
 - name: Ubuntu
@@ -20,7 +20,7 @@
 - name: Microsoft
   percentage: 3.4
 - name: Arch Linux
-  percentage: 1.7
+  percentage: 1.6
 - name: BellSoft
   percentage: 1.6
 - name: Debian
@@ -29,9 +29,9 @@
   percentage: 1.0
 - name: JetBrains s.r.o.
   percentage: 0.9
-- name: Eclipse OpenJ9
-  percentage: 0.8
 - name: OpenLogic
+  percentage: 0.8
+- name: Eclipse OpenJ9
   percentage: 0.8
 - name: Temurin
   percentage: 0.8
@@ -49,10 +49,10 @@
   percentage: 0.1
 - name: Termux
   percentage: 0.1
+- name: ojdkbuild
+  percentage: 0.1
 - name: IBM Corporation
   percentage: 0.1
-- name: ojdkbuild
-  percentage: 0.0
 - name: Artix Linux
   percentage: 0.0
 - name: MacPorts
