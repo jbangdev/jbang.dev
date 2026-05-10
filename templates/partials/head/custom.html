@@ -2,55 +2,76 @@
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
-
-
-<!-- vuetify -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.5.0/dist/vuetify.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
-<script src="https://unpkg.com/vue@2"></script>
-<script src="https://cdn.jsdelivr.net/npm/vuetify@2.5.0/dist/vuetify.min.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
 <!-- hilight -->
-<!-- using dark as it looks okey but most importantly does not look like crap with vuetify theme inside apps -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/dark.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
 
-<script>hljs.highlightAll(); hljs.addPlugin(new CopyButtonPlugin());</script>
+<script>hljs.highlightAll();</script>
 
+<!-- Global click-to-copy for pre/code blocks -->
+<style>
+pre {
+  cursor: pointer;
+  position: relative;
+}
+pre:hover {
+  opacity: 0.9;
+}
+pre::after {
+  content: "Click to copy";
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 12px;
+  color: #999;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+pre:hover::after {
+  opacity: 1;
+}
+.copy-toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  background: #2e7d32;
+  color: white;
+  font-size: 0.9rem;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: copy-toast-in 0.2s ease;
+  display: none;
+}
+@keyframes copy-toast-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
 <script>
-hljs.addPlugin(new CopyButtonPlugin());
-Vue.use(hljs.vuePlugin);
-//https://www.metachris.com/2017/02/vuejs-syntax-highlighting-with-highlightjs/
-Vue.directive('highlightjs', {
-  deep: true,
-  bind: function(el, binding) {
-    // on first bind, highlight all targets
-    let targets = el.querySelectorAll('code')
-    targets.forEach((target) => {
-      // if a value is directly assigned to the directive, use this
-      // instead of the element content.
-      if (binding.value) {
-        target.textContent = binding.value
-      }
-      hljs.highlightBlock(target)
-    })
-  },
-  componentUpdated: function(el, binding) {
-    // after an update, re-fill the content and then highlight
-    let targets = el.querySelectorAll('code')
-    targets.forEach((target) => {
-      if (binding.value) {
-        target.textContent = binding.value
-        hljs.highlightBlock(target)
-      }
-    })
+document.addEventListener('DOMContentLoaded', function() {
+  var toast = document.createElement('div');
+  toast.className = 'copy-toast';
+  document.body.appendChild(toast);
+  var toastTimer;
+  function showCopyToast(msg) {
+    toast.textContent = msg;
+    toast.style.display = 'block';
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function() { toast.style.display = 'none'; }, 2500);
   }
-})
+  window.showCopyToast = showCopyToast;
+  document.addEventListener('click', function(e) {
+    var pre = e.target.closest('pre');
+    if (!pre) return;
+    var text = pre.textContent;
+    navigator.clipboard.writeText(text).then(function() {
+      showCopyToast('Copied: ' + text.trim().substring(0, 80) + (text.trim().length > 80 ? '…' : ''));
+    });
+  });
+});
 </script>
-
 
 <!-- end custom head snippets -->

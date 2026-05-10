@@ -1,20 +1,183 @@
-.table-appstore > thead > tr > th {
-    text-align: left;
-    color: white;
+/* AppStore page styles */
+
+/* Force light mode for Oat CSS — prevents dark background when OS is in dark mode */
+:root {
+    color-scheme: light;
 }
 
-.table-appstore > tbody > tr > td {
-    text-align: left;
+.appstore-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-/* button styling */
-.copyButton {
-    border: none;
+.appstore-toolbar input[type="text"] {
+    flex: 1;
+    max-width: 400px;
+}
+
+.appstore-loading {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+/* Group (repo) sections */
+.appstore-group {
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--ot-border, #ddd);
+    border-radius: 6px;
+}
+
+.appstore-group summary {
+    padding: 0.75rem 1rem;
     cursor: pointer;
-    outline: none;
-    margin-left: 5px;
-    background-color: transparent;
+    user-select: none;
+    list-style: none;
+    justify-content: flex-start;
 }
-.copyButton:hover {
-    opacity: 0.8;
+
+.appstore-group summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Override Oat's summary chevron — use our own triangle */
+.appstore-group summary::after {
+    content: none !important;
+}
+
+.appstore-group summary::before {
+    content: "▶ ";
+    font-size: 0.7em;
+    margin-right: 0.5rem;
+    display: inline-block;
+    transition: transform 0.15s;
+}
+
+.appstore-group[open] summary::before {
+    transform: rotate(90deg);
+}
+
+/* Override Oat's details > *:not(summary) margin */
+.appstore-group > *:not(summary) {
+    margin: 0 !important;
+}
+
+.appstore-repo-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.appstore-repo-header img {
+    border-radius: 4px;
+}
+
+.appstore-repo-header a {
+    text-decoration: none;
+}
+
+.appstore-repo-header a:hover {
+    text-decoration: underline;
+}
+
+.appstore-stars {
+    font-size: 0.85rem;
+    font-weight: normal;
+    color: var(--ot-text-light, #666);
+}
+
+/* Alias table inside group */
+.appstore-group .table {
+    margin: 0;
+    border: none;
+    min-width: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.appstore-group table {
+    margin: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.appstore-group tbody tr {
+    border-bottom: none !important;
+}
+
+.appstore-group td {
+    padding: 0;
+    border: none !important;
+}
+
+.appstore-alias-cell {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 0.6rem 1rem;
+    border-top: 1px solid #e0e0e0;
+    cursor: pointer;
+    position: relative;
+}
+
+.appstore-alias-cell:hover {
+    background-color: #f9f9f9;
+}
+
+.appstore-alias-cell code {
+    font-weight: 600;
+}
+
+.appstore-desc {
+    width: 100%;
+    font-size: 0.9rem;
+    color: var(--ot-text-light, #666);
+    white-space: pre-wrap;
+}
+
+.appstore-desc p {
+    margin: 0.25rem 0;
+}
+
+/* Copy button */
+.appstore-copy {
+    flex-shrink: 0;
+    padding: 0.25rem 0.35rem !important;
+    line-height: 1;
+}
+
+
+/* Pagination */
+#appstore-pagination menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .appstore-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .appstore-toolbar input[type="text"] {
+        max-width: 100%;
+    }
+
+    .appstore-repo-header {
+        font-size: 0.95rem;
+    }
+
+    .appstore-repo-header img {
+        width: 24px;
+        height: 24px;
+    }
 }
