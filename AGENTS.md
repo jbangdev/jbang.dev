@@ -1,37 +1,64 @@
-# Repository Guidelines
+# AGENTS.md / CLAUDE.md
 
-## Project Structure & Module Organization
-- `content/`: Blog posts and pages (Markdown/AsciiDoc). Posts typically follow `content/posts/YYYY-MM-DD-title.adoc|.md`.
-- `public/`: Static assets served as-is (e.g., images). `CNAME` lives in `content/CNAME`.
-- `src/main/resources/`: Site configuration (e.g., `application.properties`).
-- `templates/`: Roq page layouts and partials used to render content.
-- `docs-site/`: Antora-based docs; builds to `docs-site/build/site` locally and to `public/documentation` via Maven.
-- `mise.toml`: Tool installs Developer commands for dev, build, and docs.
-- `pom.xml`: Quarkus + Roq build (Java 21, Maven). Output site under `target/roq/`.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Build, Test, and Development Commands
-- `mise preview`: Run Quarkus dev mode; live-reloads content at `http://localhost:8080`.
-- `mise serve`: Generate production site to `target/roq` and serve it on `http://localhost:8181`.
-- `mise build`: Run `mvn package` to build and generate docs to `public/documentation`.
-- `mvn test`: Run unit tests (JUnit 5, Quarkus testing).
-- Docs: `mise local-docs` (local Antora playbook), `mise docs` (full docs build), `mise open-docs`.
+## Project Overview
 
-## Coding Style & Naming Conventions
-- Java: Use Java 21, 4-space indentation, descriptive names; keep classes small and cohesive.
-- Content: Use kebab-case filenames; posts use date prefixes as shown above; prefer `.adoc` for long-form docs, `.md` for simple pages.
-- Templates: Keep layouts in `templates/`; reuse partials; avoid inline styles.
-- No enforced formatter in Maven—match existing code and run your IDE formatter consistently.
+This is the source for the [jbang.dev](https://jbang.dev) website — built with **Quarkus Roq** (a static site generator on Quarkus) and **Antora** for documentation. Java 21, Maven.
 
-## Testing Guidelines
-- Frameworks: JUnit 5 with `quarkus-junit5`.
-- Location: Place tests under `src/test/java`; name classes `*Test`.
-- Commands: Run `mvn test` for unit tests. No strict coverage threshold, but add/adjust tests when changing logic or templates.
+## Prerequisites
 
-## Commit & Pull Request Guidelines
-- Commits: Follow Conventional Commits (e.g., `feat:`, `fix:`, `chore:`). Keep messages imperative and scoped.
-- PRs: Provide a clear description, link related issues, and include before/after screenshots for visual or content changes (`content/`, `templates/`).
-- Size: Prefer small, focused PRs. Update docs alongside code when relevant (`docs-site/`).
+Install [mise](https://mise.jdx.dev/) — it manages all tool versions (Java 21, Maven, Node, Quarkus CLI, jbang, etc.) via `mise.toml`.
 
-## Security & Configuration Tips
-- Do not commit secrets or tokens. Site behavior is configured via `src/main/resources/application.properties`.
-- Verify generated output in `target/roq/` before merging.
+## Common Commands
+
+| Command | Purpose |
+|---------|---------|
+| `mise preview` | Dev mode with live-reload at http://localhost:8080 |
+| `mise serve` | Generate production site to `target/roq/` and serve at http://localhost:8181 |
+| `mise build` | `mvn package` — builds site + Antora docs to `public/documentation` |
+| `mvn test` | Run JUnit 5 tests |
+| `mvn test -Dtest=JBangSiteTest` | Run a single test class |
+| `mise local-docs` | Generate Antora docs using local playbook (requires sibling repos) |
+| `mise setup-docs` | Clone sibling repos (`../jbang`, `../jbang-vscode`, `../jbang-idea`) needed for local docs |
+
+## Architecture
+
+### Content & Templating (Roq)
+
+- **`content/`** — Site pages and blog posts. Posts live in `content/posts/` with date-prefixed filenames (e.g., `2024-01-15-title.adoc`). Pages are Markdown or AsciiDoc.
+- **`templates/layouts/`** — Qute page layouts (`single.html`, `post.html`, `splash.html`, etc.). Default layout is `single.html` (configured in `application.properties`).
+- **`templates/partials/`** — Reusable Qute template partials (head, footer, masthead, etc.).
+- **`src/main/resources/templates/`** — Additional Qute templates: custom tags (`tags/twitter.html`, `tags/youtube.html`) and format templates (`fm/rss.html`).
+- **`public/`** — Static assets served as-is (CSS, JS, images, fonts).
+
+### Data Files
+
+- **`data/`** — YAML data files consumed by templates: `navigation.yaml`, `testimonials.yaml`, `leaderboard.yaml`, `trysamples.yml`, `metadata.yaml`.
+
+### Java Backend
+
+- **`src/main/java/dev/jbang/site/`** — Quarkus beans that provide data/logic to templates:
+  - `Extensions.java`, `ListExtensions.java` — Qute template extensions
+  - `Leaderboard.java` — Leaderboard data handling
+  - `TrySamples.java` — Try/playground sample loading
+  - `TwitterClient.java` — Twitter integration
+  - `PageHeader.java` — Page header utilities
+- **`src/test/java/`** — Tests use `quarkus-junit5` and `quarkus-roq-testing`.
+
+### Documentation (Antora)
+
+- **`docs-site/`** — Antora playbook and config. Builds documentation from sibling repos (`jbang`, `jbang-vscode`, `jbang-idea`).
+- Antora runs as a Maven plugin during `process-resources` phase; output goes to `public/documentation/`.
+
+### Configuration
+
+- **`src/main/resources/application.properties`** — Roq site config (default layout, collections, logging).
+- **`pom.xml`** — Quarkus 3.x + Roq 1.x, Antora Maven plugin, Java 21.
+
+## Conventions
+
+- Follow Conventional Commits (`feat:`, `fix:`, `chore:`).
+- Content filenames use kebab-case; posts use date prefixes.
+- Prefer `.adoc` for long-form content, `.md` for simple pages.
+- Generated output lands in `target/roq/` — verify before merging.
