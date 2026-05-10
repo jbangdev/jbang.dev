@@ -66,10 +66,7 @@ data-field: aliases
     </div>
 </div>
 
-<!-- Toast for copy feedback -->
-<div id="copy-toast" class="toast" data-variant="success" style="display:none">
-    Copied to clipboard!
-</div>
+
 
 <script>
 (function() {
@@ -85,7 +82,7 @@ data-field: aliases
     const contentEl = document.getElementById('appstore-content');
     const groupsEl = document.getElementById('appstore-groups');
     const paginationEl = document.getElementById('appstore-pagination').querySelector('menu');
-    const toastEl = document.getElementById('copy-toast');
+
 
     // Read ?q= from URL
     const params = new URLSearchParams(window.location.search);
@@ -228,22 +225,19 @@ data-field: aliases
         groupsEl.scrollIntoView({behavior: 'smooth', block: 'start'});
     });
 
-    // Copy clicks (delegated)
+    // Copy clicks (delegated) — click button, code, or anywhere in the alias row
     groupsEl.addEventListener('click', function(e) {
-        const btn = e.target.closest('.appstore-copy');
+        const cell = e.target.closest('.appstore-alias-cell');
+        if (!cell) return;
+        // Don't copy when clicking links in descriptions
+        if (e.target.closest('a')) return;
+        const btn = cell.querySelector('.appstore-copy');
         if (!btn) return;
         const cmd = btn.dataset.cmd;
         navigator.clipboard.writeText(cmd).then(() => {
-            showToast('Copied: ' + cmd);
+            if (window.showCopyToast) window.showCopyToast('Copied: ' + cmd);
         });
     });
-
-    function showToast(msg) {
-        toastEl.textContent = msg;
-        toastEl.style.display = 'block';
-        clearTimeout(toastEl._timer);
-        toastEl._timer = setTimeout(() => { toastEl.style.display = 'none'; }, 2500);
-    }
 
     function pageRange(current, total) {
         if (total <= 7) return Array.from({length: total}, (_, i) => i + 1);

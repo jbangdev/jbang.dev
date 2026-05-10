@@ -5,8 +5,73 @@
 <!-- hilight -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/dark.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
 
-<script>hljs.highlightAll(); hljs.addPlugin(new CopyButtonPlugin());</script>
+<script>hljs.highlightAll();</script>
+
+<!-- Global click-to-copy for pre/code blocks -->
+<style>
+pre {
+  cursor: pointer;
+  position: relative;
+}
+pre:hover {
+  opacity: 0.9;
+}
+pre::after {
+  content: "Click to copy";
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 12px;
+  color: #999;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+pre:hover::after {
+  opacity: 1;
+}
+.copy-toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  background: #2e7d32;
+  color: white;
+  font-size: 0.9rem;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: copy-toast-in 0.2s ease;
+  display: none;
+}
+@keyframes copy-toast-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var toast = document.createElement('div');
+  toast.className = 'copy-toast';
+  document.body.appendChild(toast);
+  var toastTimer;
+  function showCopyToast(msg) {
+    toast.textContent = msg;
+    toast.style.display = 'block';
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function() { toast.style.display = 'none'; }, 2500);
+  }
+  window.showCopyToast = showCopyToast;
+  document.addEventListener('click', function(e) {
+    var pre = e.target.closest('pre');
+    if (!pre) return;
+    var text = pre.textContent;
+    navigator.clipboard.writeText(text).then(function() {
+      showCopyToast('Copied: ' + text.trim().substring(0, 80) + (text.trim().length > 80 ? '…' : ''));
+    });
+  });
+});
+</script>
 
 <!-- end custom head snippets -->

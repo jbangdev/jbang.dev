@@ -1,5 +1,10 @@
 /* AppStore page styles */
 
+/* Force light mode for Oat CSS — prevents dark background when OS is in dark mode */
+:root {
+    color-scheme: light;
+}
+
 .appstore-toolbar {
     display: flex;
     align-items: center;
@@ -29,10 +34,16 @@
     cursor: pointer;
     user-select: none;
     list-style: none;
+    justify-content: flex-start;
 }
 
 .appstore-group summary::-webkit-details-marker {
     display: none;
+}
+
+/* Override Oat's summary chevron — use our own triangle */
+.appstore-group summary::after {
+    content: none !important;
 }
 
 .appstore-group summary::before {
@@ -45,6 +56,11 @@
 
 .appstore-group[open] summary::before {
     transform: rotate(90deg);
+}
+
+/* Override Oat's details > *:not(summary) margin */
+.appstore-group > *:not(summary) {
+    margin: 0 !important;
 }
 
 .appstore-repo-header {
@@ -77,6 +93,9 @@
 .appstore-group .table {
     margin: 0;
     border: none;
+    min-width: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .appstore-group table {
@@ -85,9 +104,13 @@
     width: 100%;
 }
 
+.appstore-group tbody tr {
+    border-bottom: none !important;
+}
+
 .appstore-group td {
-    padding: 0.5rem 1rem;
-    border-top: 1px solid var(--ot-border, #eee);
+    padding: 0;
+    border: none !important;
 }
 
 .appstore-alias-cell {
@@ -95,6 +118,14 @@
     align-items: flex-start;
     gap: 0.5rem;
     flex-wrap: wrap;
+    padding: 0.6rem 1rem;
+    border-top: 1px solid #e0e0e0;
+    cursor: pointer;
+    position: relative;
+}
+
+.appstore-alias-cell:hover {
+    background-color: #f9f9f9;
 }
 
 .appstore-alias-cell code {
@@ -119,25 +150,6 @@
     line-height: 1;
 }
 
-/* Toast */
-.toast {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    padding: 0.75rem 1.25rem;
-    border-radius: 6px;
-    background: #2e7d32;
-    color: white;
-    font-size: 0.9rem;
-    z-index: 9999;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    animation: toast-in 0.2s ease;
-}
-
-@keyframes toast-in {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 
 /* Pagination */
 #appstore-pagination menu {
