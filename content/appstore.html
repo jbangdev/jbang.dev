@@ -94,7 +94,19 @@ data-field: aliases
     fetch('/assets/data/jbang-appstore.json')
         .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
         .then(data => {
-            allGroups = groupByRepo(data.aliases || []);
+            allGroups = (data.catalogs || []).map(function(cat) {
+                return {
+                    repo: cat.owner + '/' + cat.name,
+                    icon: cat.icon,
+                    owner: cat.owner,
+                    name: cat.name,
+                    stars: cat.stars || 0,
+                    link: cat.link || ('https://github.com/' + cat.owner + '/' + cat.name),
+                    aliases: (cat.aliases || []).map(function(a) {
+                        return { command: a.c, description: a.d || null };
+                    })
+                };
+            });
             loadingEl.style.display = 'none';
             contentEl.style.display = 'block';
             applyFilter();
@@ -103,27 +115,6 @@ data-field: aliases
             loadingEl.style.display = 'none';
             errorEl.style.display = 'block';
         });
-
-    // Group aliases by repo
-    function groupByRepo(aliases) {
-        const map = new Map();
-        for (const a of aliases) {
-            const key = a.repoOwner + '/' + a.repoName;
-            if (!map.has(key)) {
-                map.set(key, {
-                    repo: key,
-                    icon: a.icon_url,
-                    owner: a.repoOwner,
-                    name: a.repoName,
-                    stars: a.stars || 0,
-                    link: 'https://github.com/' + key,
-                    aliases: []
-                });
-            }
-            map.get(key).aliases.push(a);
-        }
-        return Array.from(map.values());
-    }
 
     // Search
     searchInput.addEventListener('input', function() {
@@ -144,7 +135,7 @@ data-field: aliases
             filteredGroups = [];
             for (const g of allGroups) {
                 const matchingAliases = g.aliases.filter(a =>
-                    a.command.toLowerCase().includes(q) ||
+                    (a.command && a.command.toLowerCase().includes(q)) ||
                     (a.description && a.description.toLowerCase().includes(q)) ||
                     g.repo.toLowerCase().includes(q)
                 );
@@ -184,7 +175,7 @@ data-field: aliases
                             ${g.aliases.map(a => `
                             <tr>
                                 <td class="appstore-alias-cell">
-                                    <button class="appstore-copy outline small" title="Copy jbang command" data-cmd="${esc(a.fullcommand)}">
+                                    <button class="appstore-copy outline small" title="Copy jbang command" data-cmd="jbang ${esc(a.command)}">
                                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
                                     </button>
                                     <code>${esc(a.command)}</code>
