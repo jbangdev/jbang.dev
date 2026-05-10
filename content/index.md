@@ -2,7 +2,7 @@
 layout: splash
 title: JBang
 header:
-  overlay_image: /assets/images/slider/bg-1.jpg
+  overlay_image: /assets/images/slider/bg-1.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
       url: "/download"
@@ -10,30 +10,30 @@ header:
       url: "/try"
 excerpt: Lets Students, Educators and Professional Developers create, edit and run self-contained source-only Java programs with unprecedented ease.
 feature_row:
-  - image_path: /assets/images/carbon-deps.png
+  - image_path: /assets/images/carbon-deps.webp
     title: "Embedded Dependencies"
     excerpt: "Automatic fetching of any dependency using <code>//DEPS group:artifact:version</code>
               or <code>@Grab</code> annotations directly from the source code."
-  - image_path: /assets/images/carbon-install.png
+  - image_path: /assets/images/carbon-install.webp
     title: "Install & Run Anywhere"
     excerpt: "JBang installs and run on Windows, Linux, macOS, Docker and Github Actions as well as usable from Maven and Gradle plugins"
     url: "/download"
     btn_label: "Download"
     btn_class: "btn--primary"
-  - image_path: /assets/images/carbon-java.png
+  - image_path: /assets/images/carbon-java.webp
     title: "No Java ? No Problem!"
     excerpt: "Java will automatically be downloaded when needed."
 feature_row2:
   - image_path: /assets/images/feature-version-juggle.svg
     title: "Java 8 and higher"
     excerpt: "You can use any Java, from version 8 and up"
-  - image_path: /assets/images/feature-appstore.png
+  - image_path: /assets/images/feature-appstore.webp
     title: "JBang AppStore"
     excerpt: "Use the JBang AppStore to find others application or publish your own from a git backed <code>jbang-catalog.json</code>"
     url: "/appstore"
     btn_label: "AppStore"
     btn_class: "btn--primary"
-  - image_path: /assets/images/feature-ide.png
+  - image_path: /assets/images/feature-ide.webp
     title: "Works in your IDE"
     excerpt: "Easy editing in Intellij, Eclipse, Visual Studio Code, Apache Netbeans, vim and emacs. All with proper content assist and debug"
 ---
@@ -81,6 +81,7 @@ Below is the latest talk about JBang: "jbang - Unleash the power of Java"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
+        loading="lazy"
     >
     </iframe>
 </div>

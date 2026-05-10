@@ -3,10 +3,9 @@
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
 <!-- hilight -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/dark.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-
-<script>hljs.highlightAll();</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/dark.min.css" media="print" onload="this.media='all'" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js" defer></script>
+<script defer>document.addEventListener('DOMContentLoaded', function() { hljs.highlightAll(); });</script>
 
 <!-- Global click-to-copy for pre/code blocks -->
 <style>
