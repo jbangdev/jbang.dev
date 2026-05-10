@@ -1,0 +1,679 @@
+---
+read_time: false
+comments: false
+share: false
+related: false
+---
+{@io.vertx.core.json.JsonObject page.data}
+
+<!doctype html>
+<html lang="en-US" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    {#seo page site /}
+    {#rss site /}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Dark mode - runs before render to prevent flash -->
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      }
+    </script>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              jbang: {
+                DEFAULT: '#EB586F',
+                50: '#fef2f3',
+                100: '#fde6e8',
+                200: '#fbd0d6',
+                300: '#f7aab5',
+                400: '#f27b8f',
+                500: '#EB586F',
+                600: '#d42a4a',
+                700: '#b21e3c',
+                800: '#951c38',
+                900: '#801b35',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+              mono: ['"JetBrains Mono"', '"Fira Code"', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome (for nav icons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
+
+    <style>
+      /* Terminal typing animation */
+      @keyframes blink { 50% { opacity: 0; } }
+      .cursor { animation: blink 1s step-end infinite; }
+      .typed-line { opacity: 0; animation: fadeIn 0.3s ease forwards; }
+      @keyframes fadeIn { to { opacity: 1; } }
+
+      /* Slot machine overrides for new design */
+      .slot-machine-container { margin: 0 auto !important; }
+      .slot-machine { border-radius: 1rem !important; }
+    </style>
+  </head>
+
+  <body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased">
+
+    <!-- ============================================================ -->
+    <!-- NAVIGATION -->
+    <!-- ============================================================ -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-lg border-b border-slate-200/50 dark:border-slate-800/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a href="{site.url}" class="flex items-center gap-2.5 group">
+            <img src="{cdi:metadata.logo}" alt="JBang" class="h-8 w-8 transition-transform group-hover:scale-110">
+            <span class="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white">JBang</span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <div class="hidden md:flex items-center gap-1">
+            {#for link in cdi:navigation.main}
+            <a href="{link.url}" class="px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-jbang dark:hover:text-jbang rounded-lg hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-all">
+              {link.title.raw}
+            </a>
+            {/for}
+
+            <div class="w-px h-6 bg-slate-200 dark:bg-slate-800 mx-2"></div>
+
+            <!-- Dark Mode Toggle -->
+            <button id="theme-toggle" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-jbang dark:hover:text-jbang transition-all" aria-label="Toggle dark mode">
+              <svg id="sun-icon" class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              <svg id="moon-icon" class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="flex items-center gap-2 md:hidden">
+            <button id="theme-toggle-mobile" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" aria-label="Toggle dark mode">
+              <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+            </button>
+            <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur-lg">
+        <div class="px-4 py-3 space-y-1">
+          {#for link in cdi:navigation.main}
+          <a href="{link.url}" class="block px-3 py-2.5 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-jbang rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition-all">
+            {link.title.raw}
+          </a>
+          {/for}
+        </div>
+      </div>
+    </nav>
+
+    <!-- ============================================================ -->
+    <!-- HERO -->
+    <!-- ============================================================ -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-16">
+      <!-- Background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-rose-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950"></div>
+      <!-- Glow -->
+      <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-jbang/15 dark:bg-jbang/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16 sm:py-20">
+        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.9]">
+          <span class="relative inline-block overflow-hidden" style="height: 1.1em; vertical-align: bottom;">
+            <span id="lang-rotator" class="bg-gradient-to-r from-jbang-700 via-jbang to-jbang-400 bg-clip-text text-transparent inline-block transition-all duration-500">Java.</span>
+          </span>
+          <br>
+          <span class="text-slate-900 dark:text-white">Unchained.</span>
+        </h1>
+
+        <p class="mt-8 text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed font-medium">
+          Your idea shouldn't wait for your build tool.<br class="hidden sm:block">
+          Write Java. Run it. That's it.
+        </p>
+
+        <!-- Install command -->
+        <div class="mt-10 inline-flex items-center bg-slate-900 dark:bg-slate-800/80 rounded-xl px-4 sm:px-6 py-3.5 font-mono text-sm text-slate-300 border border-slate-700/50 shadow-2xl shadow-slate-900/20 dark:shadow-black/40">
+          <span class="text-jbang font-bold mr-2 select-none">$</span>
+          <span id="install-cmd" class="text-slate-200 text-xs sm:text-sm">curl -Ls https://sh.jbang.dev | bash -s - app setup</span>
+          <button onclick="navigator.clipboard.writeText(document.getElementById('install-cmd').textContent.trim());let f=this.querySelector('.copy-ok');f.classList.remove('opacity-0');setTimeout(()=>f.classList.add('opacity-0'),1500)" class="ml-3 p-1.5 rounded-md hover:bg-slate-700 transition-colors text-slate-400 hover:text-white relative">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <span class="copy-ok opacity-0 absolute -top-9 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs px-2 py-1 rounded whitespace-nowrap transition-opacity duration-300">Copied!</span>
+          </button>
+        </div>
+
+        <!-- CTAs -->
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a href="/download" class="inline-flex items-center px-7 py-3 rounded-xl bg-jbang text-white font-semibold hover:bg-jbang-600 transition-all shadow-lg shadow-jbang/25 hover:shadow-jbang/40 hover:-translate-y-0.5 active:translate-y-0">
+            <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download
+          </a>
+          <a href="/try" class="inline-flex items-center px-7 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-semibold hover:bg-slate-200 dark:hover:bg-slate-700 transition-all hover:-translate-y-0.5 active:translate-y-0">
+            Try in Browser
+          </a>
+          <a href="/documentation" class="inline-flex items-center px-7 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-semibold hover:border-jbang hover:text-jbang dark:hover:border-jbang dark:hover:text-jbang transition-all hover:-translate-y-0.5 active:translate-y-0">
+            Docs
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- RUN EXISTING APPS -->
+    <!-- ============================================================ -->
+    <section class="relative py-20 sm:py-28 overflow-hidden">
+      <div class="absolute inset-0 bg-slate-50 dark:bg-slate-900/50"></div>
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Install once. Run anything.
+          </h2>
+          <p class="mt-4 text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
+            Thousands of Java apps are one command away. No downloads, no PATH wrangling, no version conflicts.
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+          <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700/50 shadow-lg overflow-hidden">
+            <div class="bg-slate-100 dark:bg-slate-800 px-4 py-2 flex items-center gap-2 border-b border-slate-200 dark:border-slate-700/50">
+              <div class="flex gap-1.5">
+                <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+              </div>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-mono ml-2">terminal</span>
+            </div>
+            <div class="bg-slate-900 dark:bg-slate-900 p-5 sm:p-6 font-mono text-sm leading-relaxed overflow-x-auto">
+              <div class="text-slate-400 mb-1"># Install an app from the JBang AppStore</div>
+              <div><span class="text-jbang font-bold">$</span> <span class="text-slate-200">jbang app install gavsearch@jbangdev</span></div>
+              <div class="text-slate-500 mb-4">[jbang] Command installed: gavsearch</div>
+
+              <div class="text-slate-400 mb-1"># Now use it like any other command</div>
+              <div><span class="text-jbang font-bold">$</span> <span class="text-slate-200">gavsearch gson</span></div>
+              <div class="text-emerald-400">com.google.code.gson:gson:2.11.0</div>
+              <div class="text-emerald-400">com.google.code.gson:gson-parent:2.11.0</div>
+              <div class="text-slate-500 mb-4">...</div>
+
+              <div class="text-slate-400 mb-1"># Or run directly &mdash; no install needed</div>
+              <div><span class="text-jbang font-bold">$</span> <span class="text-slate-200">jbang arthas@alibaba</span></div>
+              <div class="text-emerald-400">[arthas] Attaching to process 42...</div>
+            </div>
+          </div>
+
+          <div class="mt-6 flex flex-wrap justify-center gap-3 text-sm">
+            <span class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 text-slate-600 dark:text-slate-400 font-mono">gavsearch@jbangdev</span>
+            <span class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 text-slate-600 dark:text-slate-400 font-mono">pkl@apple</span>
+            <span class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 text-slate-600 dark:text-slate-400 font-mono">arthas@alibaba</span>
+            <span class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 text-slate-600 dark:text-slate-400 font-mono">playwright@microsoft</span>
+            <span class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 text-slate-600 dark:text-slate-400 font-mono">camel@apache</span>
+          </div>
+
+          <p class="text-center mt-6">
+            <a href="/appstore" class="inline-flex items-center text-jbang font-semibold hover:underline gap-1">
+              Browse the AppStore
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- BEFORE / AFTER - SCRIPTING -->
+    <!-- ============================================================ -->
+    <section class="py-20 sm:py-28 overflow-hidden">
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Remember this?
+          </h2>
+          <p class="mt-4 text-lg text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
+            All you wanted was to run some Java.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <!-- THE OLD WAY -->
+          <div class="relative">
+            <div class="absolute -top-3 left-4 px-3 py-1 bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300 text-xs font-bold rounded-full uppercase tracking-wider">The ceremony</div>
+            <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700/50 shadow-lg overflow-hidden">
+              <div class="bg-slate-100 dark:bg-slate-800 px-4 py-2 flex items-center gap-2 border-b border-slate-200 dark:border-slate-700/50">
+                <div class="flex gap-1.5">
+                  <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                </div>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-mono ml-2">project/</span>
+              </div>
+              <pre class="p-4 sm:p-5 text-xs sm:text-sm font-mono text-slate-600 dark:text-slate-400 overflow-x-auto leading-relaxed"><code><span class="text-slate-400 dark:text-slate-500">myapp/</span>
+<span class="text-slate-400 dark:text-slate-500">  |- pom.xml</span>              <span class="text-slate-400 dark:text-slate-600 italic">  &lt;!-- 50+ lines --&gt;</span>
+<span class="text-slate-400 dark:text-slate-500">  |- src/</span>
+<span class="text-slate-400 dark:text-slate-500">  |  |- main/</span>
+<span class="text-slate-400 dark:text-slate-500">  |  |  |- java/</span>
+<span class="text-slate-400 dark:text-slate-500">  |  |  |  |- com/</span>
+<span class="text-slate-400 dark:text-slate-500">  |  |  |  |  |- example/</span>
+<span class="text-slate-400 dark:text-slate-500">  |  |  |  |  |  |- <span class="text-slate-600 dark:text-slate-300">App.java</span></span>  <span class="text-slate-400 dark:text-slate-600 italic">&lt;!-- your code --&gt;</span>
+<span class="text-slate-400 dark:text-slate-500">  |  |- test/</span>
+<span class="text-slate-400 dark:text-slate-500">  |  |  |- java/ ...</span>
+<span class="text-slate-400 dark:text-slate-500">  |- .mvn/</span>
+<span class="text-slate-400 dark:text-slate-500">  |- mvnw</span>
+<span class="text-slate-400 dark:text-slate-500">  |- mvnw.cmd</span>
+<span class="text-slate-400 dark:text-slate-500">  |- .gitignore</span></code></pre>
+            </div>
+          </div>
+
+          <!-- THE JBANG WAY -->
+          <div class="relative">
+            <div class="absolute -top-3 left-4 px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-xs font-bold rounded-full uppercase tracking-wider">The jbang way</div>
+            <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700/50 shadow-lg overflow-hidden">
+              <div class="bg-slate-100 dark:bg-slate-800 px-4 py-2 flex items-center gap-2 border-b border-slate-200 dark:border-slate-700/50">
+                <div class="flex gap-1.5">
+                  <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                </div>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-mono ml-2">App.java</span>
+              </div>
+              <pre class="p-4 sm:p-5 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code><span class="text-slate-400 dark:text-slate-500">///usr/bin/env jbang "$0" "$@" ; exit $?</span>
+<span class="text-jbang font-semibold">//DEPS</span> <span class="text-emerald-600 dark:text-emerald-400">com.google.code.gson:gson:2.11.0</span>
+<span class="text-jbang font-semibold">//JAVA</span> <span class="text-emerald-600 dark:text-emerald-400">21+</span>
+
+<span class="text-blue-600 dark:text-blue-400">import</span> <span class="text-slate-700 dark:text-slate-300">com.google.gson.Gson</span>;
+
+<span class="text-blue-600 dark:text-blue-400">void</span> <span class="text-amber-600 dark:text-amber-400">main</span>() {
+    <span class="text-blue-600 dark:text-blue-400">var</span> <span class="text-slate-700 dark:text-slate-300">data</span> = Map.of(<span class="text-emerald-600 dark:text-emerald-400">"message"</span>, <span class="text-emerald-600 dark:text-emerald-400">"Hello!"</span>);
+    System.out.println(<span class="text-blue-600 dark:text-blue-400">new</span> Gson().toJson(data));
+}
+</code></pre>
+              <div class="border-t border-slate-200 dark:border-slate-700/50 bg-slate-900 dark:bg-slate-900 p-4 sm:p-5">
+                <pre class="text-xs sm:text-sm font-mono leading-relaxed"><code><span class="text-jbang font-bold">$</span> <span class="text-slate-200">jbang App.java</span>
+<span class="text-emerald-400">{"message":"Hello!"}</span></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center mt-8 text-slate-500 dark:text-slate-400 text-lg font-medium">
+          One file. Zero ceremony. Just Java.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SLOT MACHINE - "Run anything, from anywhere" -->
+    <!-- ============================================================ -->
+    <section class="relative py-20 sm:py-28 overflow-hidden">
+      <div class="absolute inset-0 bg-slate-50 dark:bg-slate-900/50"></div>
+      <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Run anything. From anywhere.
+          </h2>
+          <p class="mt-4 text-lg text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
+            Mix and match launchers with targets. Spin to discover.
+          </p>
+        </div>
+
+        {#include partials/slot-machine.html learn_more_url="/everywhere" /}
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- FEATURES -->
+    <!-- ============================================================ -->
+    <section class="py-20 sm:py-28 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Why developers love jbang
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+          <!-- Feature 1: AI-Ready -->
+          <div class="group bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700/50 p-7 shadow-sm hover:shadow-xl hover:border-jbang/30 dark:hover:border-jbang/30 transition-all duration-300 hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-violet-100 dark:bg-violet-900/40 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6 text-violet-600 dark:text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">AI-Ready Java</h3>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              AI agents think in code, not project scaffolding. jbang lets any agent write and run Java &mdash; dependencies, Java version and all. No Maven. No Gradle. No friction.
+            </p>
+          </div>
+
+          <!-- Feature 2: AppStore -->
+          <div class="group bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700/50 p-7 shadow-sm hover:shadow-xl hover:border-jbang/30 dark:hover:border-jbang/30 transition-all duration-300 hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-jbang/10 dark:bg-jbang/20 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6 text-jbang" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016A3.001 3.001 0 0021 9.349m-18 0a2.997 2.997 0 00.371-1.152L3.75 6.75l.75-4.5h15l.75 4.5.379 1.448A2.997 2.997 0 0021 9.349" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">JBang AppStore</h3>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+              Discover and share Java applications. Publish your own with a simple git-backed <code class="text-sm bg-slate-100 dark:bg-slate-700/50 px-1.5 py-0.5 rounded">jbang-catalog.json</code>.
+            </p>
+            <a href="/appstore" class="inline-flex items-center text-jbang font-semibold text-sm hover:underline group-hover:gap-2 transition-all gap-1">
+              Explore AppStore
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Feature 3: Way Beyond Scripts -->
+          <div class="group bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700/50 p-7 shadow-sm hover:shadow-xl hover:border-jbang/30 dark:hover:border-jbang/30 transition-all duration-300 hover:-translate-y-1 sm:col-span-2 lg:col-span-1">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Way Beyond Scripts</h3>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              CLI tools. Background services. MCP servers. Full applications. A quick script or a complete application &mdash; if Java can build it, jbang can run it.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bonus row: key capabilities -->
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div class="text-center p-4 rounded-xl bg-white dark:bg-slate-800/30 border border-slate-200/50 dark:border-slate-700/30">
+            <div class="text-2xl font-bold text-slate-900 dark:text-white">8 - 24+</div>
+            <div class="text-sm text-slate-500 dark:text-slate-400 mt-1">Java versions</div>
+          </div>
+          <div class="text-center p-4 rounded-xl bg-white dark:bg-slate-800/30 border border-slate-200/50 dark:border-slate-700/30">
+            <div class="text-2xl font-bold text-slate-900 dark:text-white">0</div>
+            <div class="text-sm text-slate-500 dark:text-slate-400 mt-1">Config files needed</div>
+          </div>
+          <div class="text-center p-4 rounded-xl bg-white dark:bg-slate-800/30 border border-slate-200/50 dark:border-slate-700/30">
+            <div class="text-2xl font-bold text-slate-900 dark:text-white">Any OS</div>
+            <div class="text-sm text-slate-500 dark:text-slate-400 mt-1">Win / Mac / Linux</div>
+          </div>
+          <div class="text-center p-4 rounded-xl bg-white dark:bg-slate-800/30 border border-slate-200/50 dark:border-slate-700/30">
+            <div class="text-2xl font-bold text-slate-900 dark:text-white">IDE</div>
+            <div class="text-sm text-slate-500 dark:text-slate-400 mt-1">IntelliJ / VS Code / more</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- TESTIMONIALS -->
+    <!-- ============================================================ -->
+    <section class="relative py-20 sm:py-28 overflow-hidden">
+      <div class="absolute inset-0 bg-slate-50 dark:bg-slate-900/50"></div>
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Don't take our word for it
+          </h2>
+          <p class="mt-4 text-lg text-slate-500 dark:text-slate-400">
+            Hear what the community is saying.
+          </p>
+        </div>
+
+        <div class="flex justify-center">
+          {#twitter cdi:testimonials.list.random align="center" width=550 /}
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="/testimonials" class="inline-flex items-center px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-semibold hover:border-jbang hover:text-jbang dark:hover:border-jbang dark:hover:text-jbang transition-all hover:-translate-y-0.5">
+            All Testimonials
+            <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- LATEST POST + VIDEO -->
+    <!-- ============================================================ -->
+    <section class="py-20 sm:py-28 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+
+          <!-- Latest Blog Post -->
+          <div>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-jbang mb-6">Latest from the blog</h3>
+            {#for post in site.collections.posts.take(1)}
+            <a href="{post.url}" class="group block bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700/50 p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-jbang/30 dark:hover:border-jbang/30 transition-all duration-300 hover:-translate-y-1">
+              <p class="text-sm text-slate-500 dark:text-slate-400 mb-3">{post.date.format('MMMM d, yyyy')}</p>
+              <h4 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-jbang transition-colors mb-3">{post.title}</h4>
+              <span class="inline-flex items-center text-jbang font-semibold text-sm">
+                Read more
+                <svg class="w-4 h-4 ml-1 group-hover:ml-2 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </span>
+            </a>
+            {/for}
+            <div class="mt-4">
+              <a href="/learn" class="text-sm font-semibold text-slate-500 dark:text-slate-400 hover:text-jbang transition-colors">
+                View all posts &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Video -->
+          <div>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-jbang mb-6">Watch</h3>
+            <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700/50 overflow-hidden shadow-sm">
+              <div class="relative w-full" style="padding-bottom: 56.25%;">
+                <iframe
+                  class="absolute inset-0 w-full h-full"
+                  src="https://youtube.com/embed/cpKwBbz1sf0"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <div class="p-4 sm:p-5">
+                <p class="text-sm text-slate-600 dark:text-slate-400 font-medium">jbang &mdash; Unleash the power of Java</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CTA BANNER -->
+    <!-- ============================================================ -->
+    <section class="relative py-20 sm:py-28 overflow-hidden">
+      <div class="absolute inset-0 bg-slate-50 dark:bg-slate-900/50"></div>
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+          Ready to unchained Java?
+        </h2>
+        <p class="mt-4 text-lg text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
+          Install jbang and start running Java in seconds. No project setup, no build files, no ceremony.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a href="/download" class="inline-flex items-center px-8 py-3.5 rounded-xl bg-jbang text-white font-semibold hover:bg-jbang-600 transition-all shadow-lg shadow-jbang/25 hover:shadow-jbang/40 hover:-translate-y-0.5 text-lg">
+            Get Started
+          </a>
+          <a href="https://github.com/jbangdev" class="inline-flex items-center px-8 py-3.5 rounded-xl bg-slate-900 dark:bg-slate-800 text-white font-semibold hover:bg-slate-800 dark:hover:bg-slate-700 transition-all hover:-translate-y-0.5 text-lg">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================================ -->
+    <footer class="bg-slate-900 dark:bg-black border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Brand -->
+          <div class="sm:col-span-2 lg:col-span-1">
+            <div class="flex items-center gap-2.5 mb-4">
+              <img src="{cdi:metadata.logo}" alt="JBang" class="h-8 w-8">
+              <span class="font-extrabold text-xl text-white">JBang</span>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              {cdi:metadata.subtitle}
+            </p>
+          </div>
+
+          <!-- Links -->
+          <div>
+            <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Product</h4>
+            <ul class="space-y-2.5">
+              <li><a href="/download" class="text-slate-400 hover:text-jbang transition-colors text-sm">Download</a></li>
+              <li><a href="/appstore" class="text-slate-400 hover:text-jbang transition-colors text-sm">AppStore</a></li>
+              <li><a href="/try" class="text-slate-400 hover:text-jbang transition-colors text-sm">Try Online</a></li>
+              <li><a href="/ide" class="text-slate-400 hover:text-jbang transition-colors text-sm">IDE Support</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Resources</h4>
+            <ul class="space-y-2.5">
+              <li><a href="/documentation" class="text-slate-400 hover:text-jbang transition-colors text-sm">Documentation</a></li>
+              <li><a href="/learn" class="text-slate-400 hover:text-jbang transition-colors text-sm">Blog</a></li>
+              <li><a href="/getting-started" class="text-slate-400 hover:text-jbang transition-colors text-sm">Getting Started</a></li>
+              <li><a href="/contribute" class="text-slate-400 hover:text-jbang transition-colors text-sm">Contribute</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Community</h4>
+            <ul class="space-y-2.5">
+              <li><a href="https://github.com/jbangdev" class="text-slate-400 hover:text-jbang transition-colors text-sm">GitHub</a></li>
+              {#for link in cdi:metadata.footer.links}
+                {#if link.containsKey('url') and link.containsKey('label')}
+                <li><a href="{link.url}" class="text-slate-400 hover:text-jbang transition-colors text-sm">{link.label}</a></li>
+                {/if}
+              {/for}
+              <li><a href="{site.page('feed.xml')}" class="text-slate-400 hover:text-jbang transition-colors text-sm">RSS Feed</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-slate-500 text-sm">&copy; 2025 {cdi:metadata.name}. Powered by <a href="https://iamroq.com" class="text-slate-400 hover:text-jbang transition-colors">Roq</a>.</p>
+          <div class="flex items-center gap-4">
+            {#for link in cdi:metadata.footer.links}
+              {#if link.containsKey('url')}
+              <a href="{link.url}" class="text-slate-500 hover:text-slate-300 transition-colors" rel="me" aria-label="{link.label}">
+                <i class="{link.icon ?: 'fas fa-link'}" aria-hidden="true"></i>
+              </a>
+              {/if}
+            {/for}
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- SCRIPTS -->
+    <!-- ============================================================ -->
+    {#ga4 tag=cdi:metadata.analytics.google.tracking_id /}
+
+    {|
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Dark mode toggle
+      function toggleTheme() {
+        if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          localStorage.theme = 'light';
+        } else {
+          document.documentElement.classList.add('dark');
+          localStorage.theme = 'dark';
+        }
+      }
+
+      document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
+      document.getElementById('theme-toggle-mobile')?.addEventListener('click', toggleTheme);
+
+      // Mobile menu
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      // Listen for system theme changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        if (!localStorage.theme) {
+          document.documentElement.classList.toggle('dark', e.matches);
+        }
+      });
+
+      // Language rotator
+      const langs = ['Java.', 'Kotlin.', 'Groovy.', 'Scala.'];
+      const rotator = document.getElementById('lang-rotator');
+      let langIndex = 0;
+      if (rotator) {
+        setInterval(function() {
+          // Slide up and fade out
+          rotator.style.transform = 'translateY(-110%)';
+          rotator.style.opacity = '0';
+
+          setTimeout(function() {
+            langIndex = (langIndex + 1) % langs.length;
+            rotator.textContent = langs[langIndex];
+            // Reset to below without transition
+            rotator.style.transition = 'none';
+            rotator.style.transform = 'translateY(110%)';
+            rotator.offsetHeight; // force reflow
+
+            // Slide up into view
+            rotator.style.transition = 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+            rotator.style.transform = 'translateY(0)';
+            rotator.style.opacity = '1';
+          }, 400);
+        }, 3000);
+      }
+    });
+    </script>
+    |}
+
+  </body>
+</html>
