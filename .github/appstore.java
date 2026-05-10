@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -27,6 +28,7 @@ import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.commonmark.Extension;
 import org.commonmark.ext.autolink.AutolinkExtension;
@@ -335,16 +337,59 @@ class Template {
 
 class Cataloger {
   public final int aliasCount;
-  public final List<CatalogItem> aliases;
-  private List<CatalogItem> templates;
-  private int templateCount;
+  public final int templateCount;
+  public final List<CatalogEntry> catalogs;
 
-  public Cataloger(List<CatalogItem> items, List<CatalogItem> sortedTemplates) {
-    this.aliases = items;
-    aliasCount = items.size();
+  public Cataloger(List<CatalogItem> aliasItems, List<CatalogItem> templateItems) {
+    // Group by repo
+    Map<String, CatalogEntry> entries = new LinkedHashMap<>();
 
-    this.templates = sortedTemplates;
-    this.templateCount = sortedTemplates.size();
+    for (CatalogItem item : aliasItems) {
+      entries.computeIfAbsent(item.repoOwner + "/" + item.repoName,
+          k -> new CatalogEntry(item.repoOwner, item.repoName, item.stars, item.icon_url, item.link))
+          .aliases.add(new CompactItem(item));
+    }
+    for (CatalogItem item : templateItems) {
+      entries.computeIfAbsent(item.repoOwner + "/" + item.repoName,
+          k -> new CatalogEntry(item.repoOwner, item.repoName, item.stars, item.icon_url, item.link))
+          .templates.add(new CompactItem(item));
+    }
+
+    this.catalogs = new ArrayList<>(entries.values());
+    this.aliasCount = aliasItems.size();
+    this.templateCount = templateItems.size();
+  }
+}
+
+class CatalogEntry {
+  public final String owner;
+  public final String name;
+  public final int stars;
+  public final String icon;
+  public final String link;
+  public final List<CompactItem> aliases = new ArrayList<>();
+  public final List<CompactItem> templates = new ArrayList<>();
+
+  public CatalogEntry(String owner, String name, int stars, String icon, String link) {
+    this.owner = owner;
+    this.name = name;
+    this.stars = stars;
+    this.icon = icon;
+    this.link = link;
+  }
+}
+
+class CompactItem {
+  public final String a; // alias
+  public final String d; // description (nullable)
+  public final String s; // scriptRef (nullable)
+  public final String c; // command
+
+  public CompactItem(CatalogItem item) {
+    this.a = item.alias;
+    this.d = item.description;
+    this.s = item.scriptRef;
+    this.c = item.command;
   }
 }
 
