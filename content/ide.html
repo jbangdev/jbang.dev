@@ -5,202 +5,168 @@ link: /ide/
 layout: splash
 excerpt: "The following IDEs today have support for JBang via a plugin - no additional setup needed!"
 ---
+
+<link rel="stylesheet" href="/assets/vendor/oat/oat.min.css"/>
+<script src="/assets/vendor/oat/oat.min.js" defer></script>
+<style>/* Force light mode for Oat CSS */ :root { color-scheme: light; }</style>
+
 <h2>JBang IDE Support</h2>
 <div class="container">
-  <!--<div class="row">
-    <div class="full-width">
-    <p>Note: Java is not required to be installed - JBang will automatically download a Java version<br/> 
-      if no Java 8 or higher Java Development Kit (JDK) version is found.</p>
-    </div>
-  </div>-->
 
-<div id="app">
-  <v-app id="inspire">
-    <v-tabs        
-     centered
-     icons-and-text
-    >
-      <v-tab id="vscodium-tab">VSCodium
-        <img src="/assets/images/ide/vscodium.svg" width="24" height="24" />
-      </v-tab>
-      <v-tab id="vscode-tab">Visual Studio Code
-        <img src="https://code.visualstudio.com/favicon.ico" width="24" height="24" />
-      </v-tab>
-      <v-tab id="intellij-tab">IntelliJ
-        <img src="https://simpleicons.org/icons/intellijidea.svg" width="24" height="24" />
-      </v-tab>
-      <v-tab id="eclipse-tab">Eclipse
-        <img src="https://simpleicons.org/icons/eclipseide.svg" width="24" height="24" />
-      </v-tab>
-      <v-tab id="zed-tab">Zed
-        <img src="https://logo.svgcdn.com/simple-icons/zedindustries-dark.png" width="24" height="24" />
-      </v-tab>
-      <v-tab id="vim-tab">Vim/neovim
-        <img src="https://simpleicons.org/icons/vim.svg" width="24" height="24" />
-      </v-tab>
-      <v-tab id="emacs-tab">Emacs
-        <img src="https://simpleicons.org/icons/gnuemacs.svg" width="24" height="24" />
-      </v-tab>
-      <v-tab id="replit-tab">repl.it
-        <img src="https://api.faviconkit.com/replit.com" width="24" height="24" />
-      </v-tab>
-      <v-tab id="gitpod-tab">GitPod
-        <img src="https://gitpod.io/favicon.ico" width="24" height="24" />
-      </v-tab>
-      <v-tab id="jdoodle-tab">JDoodle
-        <img src="https://www.jdoodle.com/favicon.ico" width="24" height="24" />
-      </v-tab>
-      <v-tab id="jupyter-tab">Jupyter Notebook
-        <img src="https://jupyter.org/favicon.ico" width="24" height="24" />
-      </v-tab>
-    
-      <v-tab-item>
-        <h3>VSCodium</h3>
-        <p>
-          VSCodium is a community-driven, freely-licensed binary distribution of Microsoft's editor Visual Studio Code.
-          Providing all the lightweight editor features you need to get started.
-        </p>
-        <p>
-          <code>jbang edit</code> will by defaut install VSCodium; a free distribution of Visual Studio Code. It provides
-           a good default set of extensions to have it configured to use with Java/JBang.
-        </p>
-        <p>
-          JBang is in <a href="https://open-vsx.org/extension/jbangdev/jbang-vscode">Open VSX Registry</a>
-        </p>
-      </v-tab-item>
-      <v-tab-item>
-        <h3>Visual Studio Code</h3>
-        <p>
-        Visual Studio code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux.
-        </p>    
-        <p>
-          JBang is on <a href="https://marketplace.visualstudio.com/items?itemName=jbangdev.jbang-vscode">Visual Studio Marketplace</a>
-        </p>
-      </v-tab-item>
-      <v-tab-item>
-        <h3>IntelliJ</h3>
-        <p>
-          IntelliJ IDEA is a very popular Java IDE. Has a lot of features; especially when it comes to refactoring and code assists.
-        </p>
-        <p>
-          JBang is on <a href="https://plugins.jetbrains.com/plugin/18257-jbang">Jetbrains Marketplace</a>
-        </p>
-        
-      </v-tab-item>
+{|
+<ot-tabs>
+  <div role="tablist">
+    <button role="tab"><img src="/assets/images/ide/vscodium.svg" width="20" height="20" alt=""/> VSCodium</button>
+    <button role="tab"><img src="https://code.visualstudio.com/favicon.ico" width="20" height="20" alt=""/> VS Code</button>
+    <button role="tab"><img src="https://simpleicons.org/icons/intellijidea.svg" width="20" height="20" alt=""/> IntelliJ</button>
+    <button role="tab"><img src="https://simpleicons.org/icons/eclipseide.svg" width="20" height="20" alt=""/> Eclipse</button>
+    <button role="tab"><img src="https://logo.svgcdn.com/simple-icons/zedindustries-dark.png" width="20" height="20" alt=""/> Zed</button>
+    <button role="tab"><img src="https://simpleicons.org/icons/vim.svg" width="20" height="20" alt=""/> Vim/neovim</button>
+    <button role="tab"><img src="https://simpleicons.org/icons/gnuemacs.svg" width="20" height="20" alt=""/> Emacs</button>
+    <button role="tab"><img src="https://api.faviconkit.com/replit.com" width="20" height="20" alt=""/> repl.it</button>
+    <button role="tab"><img src="https://gitpod.io/favicon.ico" width="20" height="20" alt=""/> GitPod</button>
+    <button role="tab"><img src="https://www.jdoodle.com/favicon.ico" width="20" height="20" alt=""/> JDoodle</button>
+    <button role="tab"><img src="https://jupyter.org/favicon.ico" width="20" height="20" alt=""/> Jupyter</button>
+  </div>
 
-      <v-tab-item>
-        <h3>Eclipse</h3>
-        <p>
-          Eclipse is a popular opensource Java IDE. Has a large ecosystem of plugins and is 100% free to use.
-        </p>
-          <p>
-            JBang is on <a href="https://marketplace.eclipse.org/content/jbang-eclipse-integration">Eclipse Marketplace</a>
-          </p>
-        </v-tab-item>
-        <v-tab-item>
-          <h3>Zed</h3>
-          <p>
-            <a href="https://zed.dev"></a>Zed</a> is a high-performance editor with support for Java using Eclipse JDT Language Server.
-          </p>
-          <p>
-           No native JBang support yet, thus simplest way is to use sandbox mode: <code>jbang edit --sandbox --open=zed yourapp.java</code>.
-          </p>
-        </v-tab-item>
-        <v-tab-item>
-          <h3>Vim/neovim</h3>
-          <p>
-            Vim and neovim are highly configurable text editors built to enable efficient text editing. Supports Java with Eclipse JDT Language Server.
-          </p>
-          <p>
-            No native JBang support yet, thus simplest way is to use sandbox mode: <code>jbang edit --sandbox --open=nvim yourapp.java</code>.
-          </p>
-        </v-tab-item>
-        <v-tab-item>
-          <h3>Emacs</h3>
-          <p>
-            Emacs is an extensible, customizable, free/libre text editor and computing environment. Supports Java with Eclipse JDT Language Server.
-          </p>
-          <p>
-            No native JBang support yet, thus simplest way is to use sandbox mode: <code>jbang edit --sandbox --open=emacs yourapp.java</code>.
-          </p>
-        </v-tab-item>
-        <v-tab-item>
-          <h3>repl.it</h3>
-          <p>
-            repl.it is a free, online code editor that makes it easy to code, compile, run, and share in 50+ programming languages.
-          </p>
-          <p>
-            JBang template for <a href="https://replit.com/@maxandersen/jbang-replit-demo#.replit">Repl.it</a>
-          </p>
-        </v-tab-item>
-        <v-tab-item>
-          <h3>GitPod</h3>
-          <p>
-            GitPod is a free online IDE that allows you to create a dev environment for any GitHub repository.
-          </p>
-          <p>
-            JBang container template for <a href="https://gitpod.io/#https://github.com/jbangdev/jbang-devcontainer-template">GitPod</a>
-          </p>
-          </v-tab-item>
-        <v-tab-item>
-          <h3>JDoodle</h3>
-          <p>
-            JDoodle is a free online compiler, IDE and execution environment for Java, C, C++, PHP, Perl, Python, Ruby and many more.
-          </p>
-          <p>
-            Try JBang on <a href="https://www.jdoodle.com/try-jbang/">JDoodle</a>
-          </p>
-        </v-tab-item>
-        <v-tab-item>
-          <h3>Jupyter Notebook</h3>
-          <p>
-            Jupyter Notebook is an open-source web application that allows you to create and share documents containing live code, equations, visualizations, and narrative text.
-            With the JBang kernel, you can run Java code with JBang directly in Jupyter notebooks.
-          </p>
-          
-          <h4>Installation</h4>
-          <p>Install JupyterLab and the JBang kernel:</p>
-          <pre><code># Install JupyterLab (requires Python)
+  <div role="tabpanel">
+    <h3>VSCodium</h3>
+    <p>
+      VSCodium is a community-driven, freely-licensed binary distribution of Microsoft's editor Visual Studio Code.
+      Providing all the lightweight editor features you need to get started.
+    </p>
+    <p>
+      <code>jbang edit</code> will by default install VSCodium; a free distribution of Visual Studio Code. It provides
+       a good default set of extensions to have it configured to use with Java/JBang.
+    </p>
+    <p>
+      JBang is in <a href="https://open-vsx.org/extension/jbangdev/jbang-vscode">Open VSX Registry</a>
+    </p>
+  </div>
+
+  <div role="tabpanel">
+    <h3>Visual Studio Code</h3>
+    <p>
+      Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux.
+    </p>
+    <p>
+      JBang is on <a href="https://marketplace.visualstudio.com/items?itemName=jbangdev.jbang-vscode">Visual Studio Marketplace</a>
+    </p>
+  </div>
+
+  <div role="tabpanel">
+    <h3>IntelliJ</h3>
+    <p>
+      IntelliJ IDEA is a very popular Java IDE. Has a lot of features; especially when it comes to refactoring and code assists.
+    </p>
+    <p>
+      JBang is on <a href="https://plugins.jetbrains.com/plugin/18257-jbang">Jetbrains Marketplace</a>
+    </p>
+  </div>
+
+  <div role="tabpanel">
+    <h3>Eclipse</h3>
+    <p>
+      Eclipse is a popular opensource Java IDE. Has a large ecosystem of plugins and is 100% free to use.
+    </p>
+    <p>
+      JBang is on <a href="https://marketplace.eclipse.org/content/jbang-eclipse-integration">Eclipse Marketplace</a>
+    </p>
+  </div>
+
+  <div role="tabpanel">
+    <h3>Zed</h3>
+    <p>
+      <a href="https://zed.dev">Zed</a> is a high-performance editor with support for Java using Eclipse JDT Language Server.
+    </p>
+    <p>
+      No native JBang support yet, thus simplest way is to use sandbox mode: <code>jbang edit --sandbox --open=zed yourapp.java</code>.
+    </p>
+  </div>
+
+  <div role="tabpanel">
+    <h3>Vim/neovim</h3>
+    <p>
+      Vim and neovim are highly configurable text editors built to enable efficient text editing. Supports Java with Eclipse JDT Language Server.
+    </p>
+    <p>
+      No native JBang support yet, thus simplest way is to use sandbox mode: <code>jbang edit --sandbox --open=nvim yourapp.java</code>.
+    </p>
+  </div>
+
+  <div role="tabpanel">
+    <h3>Emacs</h3>
+    <p>
+      Emacs is an extensible, customizable, free/libre text editor and computing environment. Supports Java with Eclipse JDT Language Server.
+    </p>
+    <p>
+      No native JBang support yet, thus simplest way is to use sandbox mode: <code>jbang edit --sandbox --open=emacs yourapp.java</code>.
+    </p>
+  </div>
+
+  <div role="tabpanel">
+    <h3>repl.it</h3>
+    <p>
+      repl.it is a free, online code editor that makes it easy to code, compile, run, and share in 50+ programming languages.
+    </p>
+    <p>
+      JBang template for <a href="https://replit.com/@maxandersen/jbang-replit-demo#.replit">Repl.it</a>
+    </p>
+  </div>
+
+  <div role="tabpanel">
+    <h3>GitPod</h3>
+    <p>
+      GitPod is a free online IDE that allows you to create a dev environment for any GitHub repository.
+    </p>
+    <p>
+      JBang container template for <a href="https://gitpod.io/#https://github.com/jbangdev/jbang-devcontainer-template">GitPod</a>
+    </p>
+  </div>
+
+  <div role="tabpanel">
+    <h3>JDoodle</h3>
+    <p>
+      JDoodle is a free online compiler, IDE and execution environment for Java, C, C++, PHP, Perl, Python, Ruby and many more.
+    </p>
+    <p>
+      Try JBang on <a href="https://www.jdoodle.com/try-jbang/">JDoodle</a>
+    </p>
+  </div>
+
+  <div role="tabpanel">
+    <h3>Jupyter Notebook</h3>
+    <p>
+      Jupyter Notebook is an open-source web application that allows you to create and share documents containing live code, equations, visualizations, and narrative text.
+      With the JBang kernel, you can run Java code with JBang directly in Jupyter notebooks.
+    </p>
+
+    <h4>Installation</h4>
+    <p>Install JupyterLab and the JBang kernel:</p>
+    <pre><code># Install JupyterLab (requires Python)
 pip install jupyterlab
 
 # Install JBang kernel
 jbang install-kernel@jupyter-java --java 25 --enable-preview jbang</code></pre>
-          
-          <h4>Usage</h4>
-          <p>Launch JupyterLab and create a new notebook with the JBang kernel:</p>
-          <pre><code>jupyter lab</code></pre>
-          
-          <p>In JupyterLab, create a new notebook and select "JBang" as the kernel. You can now write and execute Java code with JBang directives like <code>//DEPS</code> directly in your notebooks!</p>
-          
-          <h4>Try Online</h4>
-          <p>
-            Want to try it without installing? Use our <a href="/try/">online Jupyter environment</a> powered by MyBinder.
-          </p>
-          
-          <h4>Learn More</h4>
-          <p>
-            Visit the <a href="https://github.com/jbangdev/jbang-jupyter" target="_blank" rel="noopener">JBang Jupyter Kernel</a> repository for more details and examples.
-          </p>
-        </v-tab-item>
-        
 
-    </v-tabs>
-  </v-app>
+    <h4>Usage</h4>
+    <p>Launch JupyterLab and create a new notebook with the JBang kernel:</p>
+    <pre><code>jupyter lab</code></pre>
+
+    <p>In JupyterLab, create a new notebook and select "JBang" as the kernel. You can now write and execute Java code with JBang directives like <code>//DEPS</code> directly in your notebooks!</p>
+
+    <h4>Try Online</h4>
+    <p>
+      Want to try it without installing? Use our <a href="/try/">online Jupyter environment</a> powered by MyBinder.
+    </p>
+
+    <h4>Learn More</h4>
+    <p>
+      Visit the <a href="https://github.com/jbangdev/jbang-jupyter" target="_blank" rel="noopener">JBang Jupyter Kernel</a> repository for more details and examples.
+    </p>
+  </div>
+</ot-tabs>
+|}
+
 </div>
-<script>
-new Vue({
-  el: '#app',
-  vuetify: new Vuetify(),
-  data () {
-    return {
-      tab: null,
-      items: [
-        'Appetizers', 'Entrees', 'Deserts', 'Cocktails',
-      ],
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    }
-  },
-})
-</script>
 <script src="{{base.url}}/assets/js/os-check.js"></script>
-  <!-- Content End -->

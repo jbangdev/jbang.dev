@@ -4,7 +4,7 @@
     <div class="archive__item">
       {#if f.containsKey('image_path') }
       <div class="archive__item-teaser">
-        <img src="{f.image_path}" alt="{f.alt ?: "" }">
+        <img src="{f.image_path}" alt="{f.alt ?: "" }" loading="lazy">
         {#if f.containsKey('image_caption')}
           <span class="archive__item-caption">{f.image_caption.raw}</span> {! | markdownify | remove: "<p>" | remove: "</p>" } !}
         {/if}
