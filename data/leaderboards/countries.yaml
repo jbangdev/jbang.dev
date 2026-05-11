@@ -1,18 +1,18 @@
-# JBang versions usage data total count: 3982
+# JBang versions usage data total count: 3990
 - name: United States
   percentage: 16.6
 - name: Germany
   percentage: 11.9
 - name: France
-  percentage: 7.1
+  percentage: 7.0
 - name: Brazil
-  percentage: 5.3
+  percentage: 5.2
 - name: India
   percentage: 4.3
 - name: Spain
   percentage: 4.0
 - name: Italy
-  percentage: 3.9
+  percentage: 4.0
 - name: Netherlands
   percentage: 3.1
 - name: United Kingdom
@@ -24,13 +24,13 @@
 - name: Sweden
   percentage: 1.7
 - name: Austria
-  percentage: 1.6
+  percentage: 1.7
 - name: Belgium
-  percentage: 1.5
-- name: Czechia
   percentage: 1.5
 - name: Poland
   percentage: 1.5
+- name: Czechia
+  percentage: 1.4
 - name: Japan
   percentage: 1.4
 - name: Portugal
@@ -50,22 +50,22 @@
 - name: Greece
   percentage: 0.8
 - name: Denmark
-  percentage: 0.7
+  percentage: 0.8
 - name: Slovakia
-  percentage: 0.7
-- name: Colombia
   percentage: 0.7
 - name: Israel
   percentage: 0.7
-- name: Malaysia
-  percentage: 0.7
 - name: Indonesia
+  percentage: 0.7
+- name: Colombia
+  percentage: 0.7
+- name: Malaysia
   percentage: 0.6
 - name: Thailand
   percentage: 0.6
-- name: Singapore
-  percentage: 0.6
 - name: Ukraine
+  percentage: 0.6
+- name: Singapore
   percentage: 0.6
 - name: Hungary
   percentage: 0.6
@@ -117,6 +117,8 @@
   percentage: 0.2
 - name: Bangladesh
   percentage: 0.2
+- name: Kuwait
+  percentage: 0.2
 - name: Saudi Arabia
   percentage: 0.2
 - name: Uruguay
@@ -124,8 +126,6 @@
 - name: Egypt
   percentage: 0.2
 - name: Luxembourg
-  percentage: 0.2
-- name: Kuwait
   percentage: 0.2
 - name: New Zealand
   percentage: 0.2
@@ -135,9 +135,9 @@
   percentage: 0.1
 - name: Guatemala
   percentage: 0.1
-- name: Bosnia & Herzegovina
-  percentage: 0.1
 - name: Belarus
+  percentage: 0.1
+- name: Bosnia & Herzegovina
   percentage: 0.1
 - name: Albania
   percentage: 0.1
@@ -147,15 +147,17 @@
   percentage: 0.1
 - name: Uganda
   percentage: 0.1
-- name: Tanzania
-  percentage: 0.1
-- name: Bolivia
+- name: Dominican Republic
   percentage: 0.1
 - name: Kazakhstan
   percentage: 0.1
+- name: Senegal
+  percentage: 0.1
 - name: Iceland
   percentage: 0.1
-- name: Senegal
+- name: Bolivia
+  percentage: 0.1
+- name: Jordan
   percentage: 0.1
 - name: Madagascar
   percentage: 0.1
@@ -163,33 +165,31 @@
   percentage: 0.1
 - name: Cyprus
   percentage: 0.1
-- name: Dominican Republic
-  percentage: 0.1
 - name: Malta
   percentage: 0.1
 - name: United Arab Emirates
   percentage: 0.1
-- name: Georgia
+- name: Tanzania
   percentage: 0.1
-- name: Réunion
+- name: Georgia
   percentage: 0.1
 - name: Qatar
   percentage: 0.1
 - name: Andorra
   percentage: 0.1
-- name: Nigeria
+- name: Réunion
   percentage: 0.1
 - name: Ghana
   percentage: 0.1
 - name: Mali
   percentage: 0.1
-- name: Angola
+- name: Nigeria
   percentage: 0.1
-- name: El Salvador
+- name: Angola
   percentage: 0.1
 - name: Mongolia
   percentage: 0.1
-- name: Jordan
+- name: El Salvador
   percentage: 0.1
 - name: Moldova
   percentage: 0.1
@@ -207,11 +207,11 @@
   percentage: 0.1
 - name: Iraq
   percentage: 0.1
-- name: Cape Verde
+- name: Mozambique
   percentage: 0.0
 - name: Kyrgyzstan
   percentage: 0.0
-- name: Mozambique
+- name: Cape Verde
   percentage: 0.0
 - name: Barbados
   percentage: 0.0
@@ -223,11 +223,11 @@
   percentage: 0.0
 - name: Guinea-Bissau
   percentage: 0.0
+- name: Honduras
+  percentage: 0.0
 - name: North Macedonia
   percentage: 0.0
 - name: New Caledonia
-  percentage: 0.0
-- name: Kosovo
   percentage: 0.0
 - name: Bahamas
   percentage: 0.0
@@ -235,13 +235,13 @@
   percentage: 0.0
 - name: Estonia
   percentage: 0.0
-- name: Honduras
+- name: Zambia
   percentage: 0.0
 - name: Côte d’Ivoire
   percentage: 0.0
 - name: Nepal
   percentage: 0.0
-- name: Zambia
+- name: Kosovo
   percentage: 0.0
 - name: Ethiopia
   percentage: 0.0
@@ -255,9 +255,9 @@
   percentage: 0.0
 - name: Jamaica
   percentage: 0.0
-- name: Armenia
-  percentage: 0.0
 - name: Samoa
+  percentage: 0.0
+- name: Armenia
   percentage: 0.0
 - name: Cuba
   percentage: 0.0
