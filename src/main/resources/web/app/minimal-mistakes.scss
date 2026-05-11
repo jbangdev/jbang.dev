@@ -8,7 +8,7 @@
 @import "minimal-mistakes/vendor/breakpoint/breakpoint";
 @include breakpoint-set("to ems", true);
 @import "minimal-mistakes/vendor/magnific-popup/magnific-popup"; // Magnific Popup
-@import "minimal-mistakes/vendor/susy/susy";
+@import "minimal-mistakes/span";
 @import "minimal-mistakes/mixins";
 
 /* Core CSS */

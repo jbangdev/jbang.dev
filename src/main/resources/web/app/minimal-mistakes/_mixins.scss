@@ -1,6 +1,10 @@
+@use "sass:color";
+
 /* ==========================================================================
    MIXINS
    ========================================================================== */
+
+@use "sass:math";
 
 %tab-focus {
   /* Default*/
@@ -15,7 +19,7 @@
    ========================================================================== */
 
 @function em($target, $context: $doc-font-size) {
-  @return ($target / $context) * 1em;
+  @return math.div($target, $context) * 1em;
 }
 
 
@@ -61,15 +65,15 @@
   $color,
   $threshold: $yiq-contrasted-threshold
 ) {
-  $red: red($color);
-  $green: green($color);
-  $blue: blue($color);
+  $red: color.channel($color, 'red', $space: rgb);
+  $green: color.channel($color, 'green', $space: rgb);
+  $blue: color.channel($color, 'blue', $space: rgb);
 
-  $yiq: (($red*299)+($green*587)+($blue*114))/1000;
+  $yiq: (($red*299)+($green*587)+($blue*114))*0.001;
 
   @if $yiq-debug { @debug $yiq, $threshold; }
 
-  @return if($yiq >= $threshold, true, false);
+  @return if(sass($yiq >= $threshold): true; else: false);
 }
 
 @function yiq-contrast-color(
@@ -78,7 +82,7 @@
   $light: $yiq-contrasted-light-default,
   $threshold: $yiq-contrasted-threshold
 ) {
-  @return if(yiq-is-light($color, $threshold), $yiq-contrasted-dark-default, $yiq-contrasted-light-default);
+  @return if(sass(yiq-is-light($color, $threshold)): $yiq-contrasted-dark-default; else: $yiq-contrasted-light-default);
 }
 
 @mixin yiq-contrasted(

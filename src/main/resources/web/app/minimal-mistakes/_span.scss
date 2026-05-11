@@ -1,0 +1,9 @@
+// Lightweight replacement for the Susy span() function.
+// Usage: span($n of $total) returns a percentage width.
+@use "sass:math";
+
+@function span($span) {
+  $n: nth($span, 1);
+  $total: nth($span, 3);
+  @return math.percentage(math.div($n, $total));
+}
