@@ -12,10 +12,6 @@
   max-width: 100%;
   padding-inline: 1em;
   font-family: $sans-serif;
-  -webkit-animation: $intro-transition;
-  animation: $intro-transition;
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
 
   @include breakpoint($x-large) {
     max-width: $x-large;
