@@ -44,33 +44,23 @@ document.addEventListener('DOMContentLoaded', function() {
     var toggleWidth = 44;
 
     // Find how many items fit
+    // Sum all item widths
     var totalWidth = 0;
-    var cutoff = allItems.length;
-
-    // First pass: assume we need toggle, find cutoff
     for (var i = 0; i < allItems.length; i++) {
       totalWidth += itemWidths[i];
-      if (totalWidth > available - toggleWidth) {
-        cutoff = i;
-        break;
-      }
     }
 
-    // If all items fit with toggle reserve, check if they fit without it
-    if (cutoff === allItems.length) {
+    var cutoff = allItems.length;
+
+    // If everything fits, no toggle needed
+    if (totalWidth > available) {
+      // Need toggle — find how many items fit with toggle reserve
       totalWidth = 0;
       for (var j = 0; j < allItems.length; j++) {
         totalWidth += itemWidths[j];
-      }
-      if (totalWidth > available) {
-        // Need toggle, recalculate
-        totalWidth = 0;
-        for (var k = 0; k < allItems.length; k++) {
-          totalWidth += itemWidths[k];
-          if (totalWidth > available - toggleWidth) {
-            cutoff = k;
-            break;
-          }
+        if (totalWidth > available - toggleWidth) {
+          cutoff = j;
+          break;
         }
       }
     }
