@@ -12,7 +12,7 @@ jobs:
         id: deploy
         run: npx surge teardown https://jbangdev-preview-pr-${{ github.event.number }}.surge.sh --token ${{ secrets.SURGE_TOKEN }} || echo "NOT_TORNDOWN=true" >> "$GITHUB_ENV"
       - name: Update PR status comment
-        uses: quarkusio/action-helpers@main
+        uses: quarkusio/action-helpers@b53791b65e22e8d7e5d7f84b8f546be8fb3e8f6d # main
         if: env.NOT_TORNDOWN != 'true'
         with:
           action: maintain-one-comment
