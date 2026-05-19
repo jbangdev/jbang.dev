@@ -9,8 +9,8 @@ jobs:
   appstore-update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: jdx/mise-action@v3
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - uses: jdx/mise-action@5228313ee0372e111a38da051671ca30fc5a96db # v3
       - run: jbang statsquery2.java --token ${{ secrets.CLOUDFLARE_TOKEN }} --account ${{ secrets.CLOUDFLARE_ACCOUNT }}
         env:
           GITHUB_TOKEN: ${{ secrets.APPSTORE_GH_TOKEN != '' && secrets.APPSTORE_GH_TOKEN || secrets.GITHUB_TOKEN }}
@@ -25,7 +25,7 @@ jobs:
           git push
       - name: Update website
         if: ${{ github.ref == 'refs/heads/main' }}
-        uses: benc-uk/workflow-dispatch@v1
+        uses: benc-uk/workflow-dispatch@31e2b3319479a63f0ab15bf800eff9e913504e26 # v1
         with:
           workflow: github-pages
           token: ${{ secrets.JEKYLL_PAT }}

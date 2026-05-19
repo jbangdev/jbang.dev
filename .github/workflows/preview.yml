@@ -21,7 +21,7 @@ jobs:
     if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success'
     steps:
     - name: Download PR Artifact
-      uses: actions/download-artifact@v6
+      uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6
       with:
         run-id: ${{ github.event.workflow_run.id }}
         name: site
@@ -48,7 +48,7 @@ jobs:
         PR_ID: ${{  steps.pr.outputs.id }}
 
     - name: Update PR status comment on success
-      uses: quarkusio/action-helpers@main
+      uses: quarkusio/action-helpers@b53791b65e22e8d7e5d7f84b8f546be8fb3e8f6d # main
       with:
         action: maintain-one-comment
         github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -58,7 +58,7 @@ jobs:
 
         body-marker: <!-- Preview status comment marker -->
     - name: Update PR status comment on failure
-      uses: quarkusio/action-helpers@main
+      uses: quarkusio/action-helpers@b53791b65e22e8d7e5d7f84b8f546be8fb3e8f6d # main
       if: ${{ failure() }}
       with:
         action: maintain-one-comment
