@@ -30,9 +30,9 @@
     {
       "owner": "oshi",
       "name": "oshi",
-      "stars": 5213,
+      "stars": 5212,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/989e40ee9d5bfbd4332de44a2ce833f3b4f487f8/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/2e28cdadedacf8c90ad4f9abede54795d985b5aa/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -110,9 +110,9 @@
     {
       "owner": "jbangdev",
       "name": "jbang",
-      "stars": 1803,
+      "stars": 1805,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang/blob/1a6383bc99daab2308b3385300209bfbd65e5efe/docs/modules/ROOT/examples/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang/blob/00f94907421df4d8076c373a89fa5451e6aa7571/docs/modules/ROOT/examples/jbang-catalog.json",
       "aliases": [
         {
           "a": "jbang-fmt",
@@ -189,7 +189,7 @@
       "name": "graalpython",
       "stars": 1597,
       "icon": "https://avatars.githubusercontent.com/u/4430336?v\u003d4",
-      "link": "https://github.com/oracle/graalpython/blob/efad9b29553be0814572e7dc8f9dcaea57c98be6/jbang-catalog.json",
+      "link": "https://github.com/oracle/graalpython/blob/892f3108e4987d32d0b97d291155a84d5027c798/jbang-catalog.json",
       "aliases": [
         {
           "a": "hello",
@@ -230,7 +230,7 @@
     {
       "owner": "citrusframework",
       "name": "citrus",
-      "stars": 483,
+      "stars": 484,
       "icon": "https://avatars.githubusercontent.com/u/27848811?v\u003d4",
       "link": "https://github.com/citrusframework/citrus/blob/baa163257e5d62ae8417ed8c1e3234ce0099b690/jbang-catalog.json",
       "aliases": [
@@ -294,7 +294,7 @@
     {
       "owner": "tamboui",
       "name": "tamboui",
-      "stars": 449,
+      "stars": 451,
       "icon": "https://avatars.githubusercontent.com/u/251016663?v\u003d4",
       "link": "https://github.com/tamboui/tamboui/blob/15416ce7fb221aa8de2d5624007b93f9d9630233/jbang-catalog.json",
       "aliases": [
@@ -731,7 +731,7 @@
     {
       "owner": "wanaku-ai",
       "name": "wanaku",
-      "stars": 112,
+      "stars": 113,
       "icon": "https://avatars.githubusercontent.com/u/200620763?v\u003d4",
       "link": "https://github.com/wanaku-ai/wanaku/blob/2cac7c929c86560a189bc2ee8098b0a3593d933e/jbang-catalog.json",
       "aliases": [
@@ -749,12 +749,12 @@
       "name": "quarkus-roq",
       "stars": 107,
       "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "link": "https://github.com/quarkiverse/quarkus-roq/blob/b378d45125e4bec9b57ae93e1b713f30425eada7/jbang-catalog.json",
+      "link": "https://github.com/quarkiverse/quarkus-roq/blob/31d843fc231e5c051036d863b3059b589b971f1c/jbang-catalog.json",
       "aliases": [
         {
           "a": "roq",
           "d": "\u003cp\u003eRoq CLI - static site generator\u003c/p\u003e\n",
-          "s": "https://repo1.maven.org/maven2/io/quarkiverse/roq/quarkus-roq-cli/2.1.2/quarkus-roq-cli-2.1.2-runner.jar",
+          "s": "https://repo1.maven.org/maven2/io/quarkiverse/roq/quarkus-roq-cli/2.1.3/quarkus-roq-cli-2.1.3-runner.jar",
           "c": "roq@quarkiverse/quarkus-roq"
         }
       ],
@@ -1637,7 +1637,7 @@
     {
       "owner": "BrokkAi",
       "name": "brokk",
-      "stars": 13,
+      "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/204942796?v\u003d4",
       "link": "https://github.com/BrokkAi/brokk/blob/b94ffc7d3a9aa3ac7de5697e6fc4e0e75779ea9f/jbang-catalog.json",
       "aliases": [
@@ -1679,7 +1679,7 @@
       "name": "jbang.dev",
       "stars": 13,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/865b45ad114d9ce1951bddb7c57369ad670dc59d/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/b124679dd8d6d6703e23a61da61058e42f212a76/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -2331,7 +2331,7 @@
       "name": "ghprcomment",
       "stars": 6,
       "icon": "https://avatars.githubusercontent.com/u/1366654?v\u003d4",
-      "link": "https://github.com/koppor/ghprcomment/blob/d5377916c38eb4aabb06ad40033a5f3cded13955/jbang-catalog.json",
+      "link": "https://github.com/koppor/ghprcomment/blob/df3c4e37c48eb1445263908ae6605fa5a2253ec8/jbang-catalog.json",
       "aliases": [
         {
           "a": "ghprcomment",
@@ -3813,31 +3813,6 @@
           "a": "tabula",
           "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
           "c": "tabula@neolegal-fr/tabula-java"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "Tirklee",
-      "name": "javatutorials",
-      "stars": 1,
-      "icon": "https://avatars.githubusercontent.com/u/16029644?v\u003d4",
-      "link": "https://github.com/Tirklee/javatutorials/blob/7edf38a5d5f6b30cd09d09a8a032bcc86136be58/jbang/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "hello",
-          "s": "hello.java",
-          "c": "hello@Tirklee/javatutorials~jbang"
-        },
-        {
-          "a": "hellocli",
-          "s": "hellocli.java",
-          "c": "hellocli@Tirklee/javatutorials~jbang"
-        },
-        {
-          "a": "jbangquarkus",
-          "s": "jbangquarkus.java",
-          "c": "jbangquarkus@Tirklee/javatutorials~jbang"
         }
       ],
       "templates": []
@@ -5982,26 +5957,51 @@
       "templates": []
     },
     {
-      "owner": "iotaplatforms",
-      "name": "tutorials",
+      "owner": "zubairmujeeb",
+      "name": "spring-boot-sample-projects",
       "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/86529324?v\u003d4",
-      "link": "https://github.com/iotaplatforms/tutorials/blob/22d1c0311478298b5afd631a56b332420e768362/jbang/jbang-catalog.json",
+      "icon": "https://avatars.githubusercontent.com/u/31179784?v\u003d4",
+      "link": "https://github.com/zubairmujeeb/spring-boot-sample-projects/blob/8d0fd0c195c714adde5d22b7b247abbe3b968786/tutorials-master/jbang/jbang-catalog.json",
       "aliases": [
         {
           "a": "hello",
           "s": "hello.java",
-          "c": "hello@iotaplatforms/tutorials~jbang"
+          "c": "hello@zubairmujeeb/spring-boot-sample-projects~tutorials-master/jbang"
         },
         {
           "a": "hellocli",
           "s": "hellocli.java",
-          "c": "hellocli@iotaplatforms/tutorials~jbang"
+          "c": "hellocli@zubairmujeeb/spring-boot-sample-projects~tutorials-master/jbang"
         },
         {
           "a": "jbangquarkus",
           "s": "jbangquarkus.java",
-          "c": "jbangquarkus@iotaplatforms/tutorials~jbang"
+          "c": "jbangquarkus@zubairmujeeb/spring-boot-sample-projects~tutorials-master/jbang"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "ramesh1972",
+      "name": "samples-biz",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/62056258?v\u003d4",
+      "link": "https://github.com/ramesh1972/samples-biz/blob/3817b7767886f4d1874814f3c65e24930eacfecb/samples-tech-stack/java_samples/langchain4j/eugenp/tutorials/jbang/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "hello",
+          "s": "hello.java",
+          "c": "hello@ramesh1972/samples-biz~samples-tech-stack/java_samples/langchain4j/eugenp/tutorials/jbang"
+        },
+        {
+          "a": "hellocli",
+          "s": "hellocli.java",
+          "c": "hellocli@ramesh1972/samples-biz~samples-tech-stack/java_samples/langchain4j/eugenp/tutorials/jbang"
+        },
+        {
+          "a": "jbangquarkus",
+          "s": "jbangquarkus.java",
+          "c": "jbangquarkus@ramesh1972/samples-biz~samples-tech-stack/java_samples/langchain4j/eugenp/tutorials/jbang"
         }
       ],
       "templates": []
