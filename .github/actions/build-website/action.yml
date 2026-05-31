@@ -24,13 +24,13 @@ runs:
   using: 'composite'
   steps:
     - name: Setup Java
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@c1e323688fd81a25caa38c78aa6df2d33d3e20d9 # v4
       with:
         cache: 'maven'
         distribution: 'temurin'
         java-version: ${{ inputs.java-version }}
 
-    - uses: jdx/mise-action@v3
+    - uses: jdx/mise-action@5228313ee0372e111a38da051671ca30fc5a96db # v3
 
     - run: |
         mise use -g jbang
@@ -38,7 +38,7 @@ runs:
       shell: bash
 
     - name: Build Website
-      uses: quarkiverse/quarkus-roq@v1
+      uses: quarkiverse/quarkus-roq@6ee673e6b6a4e36902901ad66fbaafbb4f683f61 # v1
       with:
         github-token: ${{ inputs.github-token }}
         maven-build-args: ${{ inputs.maven-build-args }}
