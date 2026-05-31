@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "jbang",
+      "type": "skill-md",
+      "description": "JBang as a universal Java launcher and tool manager — run JARs, Maven artifacts, and remote scripts without writing any code. Covers app install, JDK management, catalogs, and CI/CD integration.",
+      "url": "https://raw.githubusercontent.com/jbangdev/agent-skills/main/jbang/SKILL.md",
+      "digest": "sha256:34f7e2332bc0940cb962cc65b0e9161d757400c717464456a9696b37e29a9646"
+    },
+    {
+      "name": "jbang-scripting",
+      "type": "skill-md",
+      "description": "How to write Java scripts with JBang — single-file programs with inline dependencies, directives, templates, and IDE support. No project setup required.",
+      "url": "https://raw.githubusercontent.com/jbangdev/agent-skills/main/jbang-scripting/SKILL.md",
+      "digest": "sha256:285e43f1df9f2e04b212c57937e71b495a1689c061a612ab394a5658973ea646"
+    }
+  ]
+}

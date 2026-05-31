@@ -32,6 +32,31 @@
 - PRs: Provide a clear description, link related issues, and include before/after screenshots for visual or content changes (`content/`, `templates/`).
 - Size: Prefer small, focused PRs. Update docs alongside code when relevant (`docs-site/`).
 
+## Agent Discovery & Skills
+
+This site publishes agent discovery metadata. The skill content itself lives in a separate repo:
+- **Skills repo:** [github.com/jbangdev/agent-skills](https://github.com/jbangdev/agent-skills)
+- **Discovery index:** `public/.well-known/agent-skills/index.json` (points to the skills repo)
+
+### Keeping the index in sync
+
+When skills are added, renamed, or updated in `jbangdev/agent-skills`, the index here must be updated to match:
+1. Check skill names and URLs in `public/.well-known/agent-skills/index.json` match the repo structure.
+2. Recompute digests: `curl -sL <skill-url> | shasum -a 256` and update the `digest` field.
+3. Keep descriptions in the index consistent with the `description` field in each SKILL.md frontmatter.
+
+### Other agent discovery files
+
+| File | Purpose | Notes |
+|------|---------|-------|
+| `public/robots.txt` | Content Signals (`ai-train`, `search`, `ai-input`) | All set to `yes` — JBang is open source and wants AI visibility |
+| `public/.well-known/api-catalog` | API catalog (RFC 9727) | Points to documentation; no machine-readable API spec exists |
+| `templates/partials/head/custom.html` | HTML `<link>` elements for agent discovery | `api-catalog` and `service-doc` relations |
+
+### Link response headers
+
+GitHub Pages does not support custom HTTP headers. The HTML `<link>` elements in `head/custom.html` serve as the fallback. For proper `Link:` HTTP headers, configure a Cloudflare Transform Rule (Modify Response Header) on the homepage.
+
 ## Security & Configuration Tips
 - Do not commit secrets or tokens. Site behavior is configured via `src/main/resources/application.properties`.
 - Verify generated output in `target/roq/` before merging.
