@@ -5,7 +5,10 @@
 >
   {#if header.has_overlay}
   <div class="wrapper">
-    <h1 id="page-title" class="page__title">{page.title.markdown}</h1>
+    {#if page.data.containsKey('hero_kicker')}
+    <p class="page__kicker">{page.data.hero_kicker}</p>
+    {/if}
+    <h1 id="page-title" class="page__title">{#if page.data.containsKey('hero_title')}{page.data.hero_title}{#else}{page.title.markdown}{/if}</h1>
     {#if page.data.containsKey('tagline')}
     <p class="page__lead">{page.data.tagline.markdown}</p>
     {#else if page.data.containsKey('excerpt')}
