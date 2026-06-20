@@ -1,0 +1,166 @@
+---
+title: "From Picocli to Æsh: How Porting JBang's CLI Made Everything Better"
+tagline: The adventure of replacing JBang's CLI framework, and how it supercharged an entire ecosystem
+category: learn
+tags: [jbang, aesh, cli]
+author: Max Rydahl Andersen
+bgcolor: ff5a71
+---
+
+JBang 0.139.2 is out and it ships the biggest internal change in JBang's history: we replaced https://picocli.info/[picocli] with https://aeshell.github.io/[Æsh] for all CLI parsing. 5.5× faster native startup, smart tab-completion, a new TUI for dependency search, and (the part I didn't expect) it made Æsh itself way better in the process.
+
+What started as a framework swap turned into an open-source feedback loop that improved everything it touched. Let me tell you how.
+
+== Picocli set the bar
+
+First, credit where it's due. https://picocli.info/[Picocli] by Remko Popma is the best Java CLI framework out there. We've used it since JBang's first commit in 2020 and it served us well: annotation-driven commands, rich help output, nested subcommands, shell completions, you name it. With 5,400+ GitHub stars and a decade of active development, picocli is what made JBang's CLI experience good in the first place.
+
+So why change?
+
+== The speed problem
+
+The short answer: reflection.
+
+Picocli discovers commands and options at runtime using reflection, and that has a cost, especially under GraalVM native image. We measured JBang's startup at 33ms in native and 228ms on JDK 25 with picocli. That's fine for most tools. But JBang is something people run as casually as `python myscript.py`, and at that level the difference between "fine" and "instant" matters.
+
+We've had native-image builds of JBang for a while, but could never seriously offer them as the default. 33ms sounds fast until you're doing tab-completion, where the CLI runs on every keypress. At that speed, you _feel_ the lag.
+
+We needed a framework that could do what picocli does, without the runtime reflection. And that's where Ståle Pedersen enters the picture.
+
+== Enter Ståle and Æsh
+
+https://github.com/stalep[Ståle Pedersen] is the creator of https://aeshell.github.io/[Æsh] (Another Extendable SHell), a Java CLI library that's been around since 2012, roughly as long as picocli itself. Ståle leads the IBM Runtimes Performance Team from Arendal, Norway, and he knows a thing or two about making Java fast.
+
+Æsh's trick: it uses a compile-time annotation processor to generate all the command metadata. The generated code is a switch statement that maps options to fields. No reflection at startup, no classpath scanning.
+
+On April 28th, Ståle opened https://github.com/jbangdev/jbang/pull/2453[PR #2453]: "feat: replace picocli with aesh for CLI parsing." 8,700 lines added, 12,400 removed, across 100 files. A full rewrite of JBang's CLI layer.
+
+The numbers:
+
+[cols="1,1,1,1"]
+|===
+|Mode |Picocli |Æsh |Speedup
+
+|Native image
+|33ms
+|6ms
+|5.5×
+
+|JDK 25
+|228ms
+|109ms
+|2.1×
+
+|JDK 11
+|269ms
+|149ms
+|1.8×
+|===
+
+That's the difference between "ok, I guess that's Java" and "wait, is this really Java?"
+
+== 278 commits in 8 weeks
+
+Porting JBang wasn't just swapping annotations. JBang uses a _lot_ of picocli features: mutually exclusive options, negatable flags like `--[no-]verbose`, custom type converters, dynamic completions, help sections, the works.
+
+Ståle didn't say "sorry, Æsh doesn't support that." He went and _built_ it. In real time. While the PR was open.
+
+Between April 20th and June 18th, Ståle made 278 commits to Æsh and pushed 16 releases (3.6 through 3.15.1). Nine more releases of aesh-readline. Features he built because JBang needed them:
+
+- `fallbackValue` for three-state option semantics (picocli parity)
+- `DefaultValueProvider` with `${env:...}` and `${sys:...}` resolution
+- `exclusiveWith` for mutually exclusive options
+- `HelpSectionProvider` for custom help sections
+- Negatable options rendering as `--[no-]name`
+- ANSI-colored help output
+- Synopsis wrapping at terminal width
+- Shell completion generators for bash, zsh, fish, and PowerShell
+- Documentation generators for AsciiDoc and Markdown
+- GraalVM native-image configuration generation
+- A BOM module for version management
+
+Every time JBang found something missing, Ståle had it fixed, often the same day. This wasn't a port anymore, it was a co-evolution.
+
+As Ståle put it on Zulip: _"I'm glad we get to 'harden' aesh so quickly :)"_
+
+I can't overstate how impressive this was. Open source is often about finding a project that already does 90% of what you need, and then working around the missing 10%. Ståle didn't just fill in the gaps, he built the whole bridge while we were crossing it.
+
+== The bug too fast to see
+
+My favorite moment from the migration. After merging the Æsh PR, JBang started hanging after certain commands. We tracked it down to a non-daemon thread doing a version check. It had _always_ been there, but picocli was slow enough that it never materialized. Æsh was so fast the main thread finished before the version check could complete, and the JVM hung waiting for the non-daemon thread to exit.
+
+We went from 33ms startup to discovering bugs because 6ms wasn't giving other threads enough time to start. I'll take that trade.
+
+== "Lets see how many things break"
+
+On June 3rd, we merged the PR. I posted on Zulip: _"is now merged, lets see how many things break :)"_
+
+Turns out, not much. And ironically that's thanks to picocli. Over the years we'd built a solid integration test suite around picocli's behavior. That same test suite is what gave us confidence the Æsh port was correct. The tests didn't care which framework generated the CLI, they just verified the behavior. 
+
+We did have some issues. https://github.com/jbangdev/jbang/issues/2504[Tako found] that primitive boolean fields behaved differently, especially with jbang config overrides. Ståle had aesh fixes released within a day, even hours. The feedback loop was _tight_.
+
+== The ecosystem gets supercharged
+
+The benefits of this migration didn't just stay in JBang. Ståle's work on Æsh made it a much more compelling framework for everyone else. 
+
+I know we will see more adoption of Æsh in the Java ecosystem, and that will in turn make it even better. It's a virtuous cycle of improvement.
+
+We have more things to come building on top of what Æsh enables, and I'm excited to see where it goes.
+
+== What you get in 0.139.2
+
+=== Native binaries (early access)
+
+We now publish GraalVM native-image builds for Linux, macOS, and Windows. Near-instant startup, no JVM required:
+
+[source,bash]
+----
+export JBANG_USE_NATIVE=true
+curl -Ls https://sh.jbang.dev | bash -s - myapp.java
+----
+
+The JVM fallback is always there if native doesn't work on your platform.
+
+=== Smart tab-completion
+
+With Æsh fast enough to run on every keypress, we can finally do useful things with completions:
+
+- Local files filtered to JBang-supported extensions (.java, .jsh, .kt, .groovy, .md)
+- Alias names from catalogs (type `@<TAB>` to browse)
+- Maven GAV completion from your local `~/.m2/repository`
+- GitHub URL navigation, completing files and directories in GitHub repos via API
+
+This works in bash, zsh, and fish today. PowerShell is coming.
+
+=== TamboUI dependency search
+
+The `jbang deps search` TUI got a full rewrite from JLine to https://github.com/tamboui/tamboui[TamboUI] (also by Ståle). Fuzzy match highlighting, async search with debounce, a version picker side pane, and a party trick: paste a Java import statement or compiler error and it auto-searches Maven Central for the right dependency.
+
+== Thank you
+
+This migration wouldn't have happened without a lot of people.
+
+Ståle Pedersen created Æsh, opened the PR, and then made a tons of commits making it ready for real-world use. That kind of responsiveness is what open source makes fun. Tako Schotanus, JBang co-maintainer, found the subtle regressions and Werner Fouche and Juan Antonio Breña Moral helped with additional testing. M. helped Remko Popma built picocli, and our test suite built on picocli is what made this migration safe.
+
+== Try it
+
+[source,bash]
+----
+# Install or update JBang
+curl -Ls https://sh.jbang.dev | bash -s - app setup
+
+# Try native mode
+export JBANG_USE_NATIVE=true
+
+# Install completions
+jbang completion install
+
+# Try the new dependency search TUI
+jbang deps search
+----
+
+If something broke or feels different from before, please https://github.com/jbangdev/jbang/issues[open an issue]. We have a solid test suite but real-world usage always finds things tests don't.
+
+The full changelog is in the https://github.com/jbangdev/jbang/releases/tag/v0.139.2[0.139.2 release notes].
+
+Have fun!
