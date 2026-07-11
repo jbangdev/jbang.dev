@@ -213,7 +213,7 @@ layout: splash
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<!-- date adapter not needed: using category axis with tag labels for visible bars -->
 <script>
 (function () {
   "use strict";
@@ -341,41 +341,23 @@ layout: splash
     }
   }
 
-  function baseScales(logEl) {
-    return {
-      x: {
-        type: "time",
-        time: { unit: "year", tooltipFormat: "PP" },
-        grid: { color: COLOR.grid },
-        border: { color: COLOR.axis },
-        ticks: { color: COLOR.muted }
-      },
-      y: {
-        type: logEl.checked ? "logarithmic" : "linear",
-        beginAtZero: !logEl.checked,
-        grid: { color: COLOR.grid },
-        border: { color: COLOR.axis },
-        ticks: { color: COLOR.muted, callback: function (v) { return Number(v).toLocaleString(); } }
-      }
-    };
-  }
-
   function makeBarChart(canvasId, rows, valueKey, label, color) {
     var logEl = document.getElementById("opt-log");
-    var data = rows.map(function (r) {
-      return { x: new Date(r.published).getTime(), y: r[valueKey], tag: r.tag };
-    });
+    // Use category labels but show dates; time axis makes bars sub-pixel with 240+ releases
+    var labels = rows.map(function (r) { return r.tag; });
+    var data = rows.map(function (r) { return r[valueKey]; });
+    var dates = rows.map(function (r) { return r.published; });
     return new Chart(document.getElementById(canvasId), {
       type: "bar",
       data: {
+        labels: labels,
         datasets: [{
           label: label,
           data: data,
           backgroundColor: color,
           borderColor: color,
-          borderRadius: 3,
+          borderRadius: 2,
           borderSkipped: false,
-          maxBarThickness: 22,
           minBarLength: 2
         }]
       },
@@ -383,18 +365,39 @@ layout: splash
         responsive: true,
         maintainAspectRatio: false,
         animation: false,
-        parsing: false,
-        scales: baseScales(logEl),
+        scales: {
+          x: {
+            grid: { color: COLOR.grid },
+            border: { color: COLOR.axis },
+            ticks: {
+              color: COLOR.muted,
+              maxRotation: 45,
+              autoSkip: true,
+              maxTicksLimit: 20,
+              callback: function (val, idx) {
+                // show tag name for readability
+                return labels[idx];
+              }
+            }
+          },
+          y: {
+            type: logEl.checked ? "logarithmic" : "linear",
+            beginAtZero: !logEl.checked,
+            grid: { color: COLOR.grid },
+            border: { color: COLOR.axis },
+            ticks: { color: COLOR.muted, callback: function (v) { return Number(v).toLocaleString(); } }
+          }
+        },
         plugins: {
           legend: { display: false },
           tooltip: {
             callbacks: {
               title: function (items) {
-                var d = items[0].raw;
-                return d.tag + " · " + new Date(d.x).toLocaleDateString();
+                var idx = items[0].dataIndex;
+                return labels[idx] + " · " + new Date(dates[idx]).toLocaleDateString();
               },
               label: function (item) {
-                return label + ": " + Number(item.raw.y).toLocaleString();
+                return label + ": " + Number(item.raw).toLocaleString();
               }
             }
           }
