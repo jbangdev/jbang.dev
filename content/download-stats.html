@@ -347,7 +347,9 @@ layout: splash
     var useDates = document.getElementById("opt-dates").checked;
     var tags = rows.map(function (r) { return r.tag; });
     var dateLabels = rows.map(function (r) {
-      return new Date(r.published).toLocaleDateString(undefined, { year: "2-digit", month: "short" });
+      var d = new Date(r.published);
+      var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      return months[d.getMonth()] + " " + String(d.getFullYear()).slice(-2);
     });
     var labels = useDates ? dateLabels : tags;
     var data = rows.map(function (r) { return r[valueKey]; });
