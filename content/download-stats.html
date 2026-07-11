@@ -1,0 +1,483 @@
+---
+title: JBang Download Stats
+tagline: GitHub release download statistics for jbangdev/jbang
+link: /usage/downloads/
+layout: splash
+---
+
+{|
+<div class="dlstats-root">
+  <h1>JBang Download Stats</h1>
+
+  <p>
+    Live download statistics for
+    <a href="https://github.com/jbangdev/jbang/releases">jbangdev/jbang</a>
+    GitHub releases, fetched straight from the
+    <a href="https://docs.github.com/en/rest/releases">GitHub Releases API</a>
+    in your browser (inspired by <a href="https://github.com/HanaDigital/grev">grev</a>).
+  </p>
+
+  <p class="dlstats-note">
+    Two things are done differently here:
+    <strong><code>version.txt</code> is separated out</strong> &mdash; it is the tiny file
+    JBang downloads on every
+    <a href="https://www.jbang.dev/documentation/guide/latest/installation.html#version-check">update check</a>,
+    so its count dwarfs real installs and would otherwise skew the picture &mdash; and the
+    <strong>x-axis follows real time</strong> (each release sits at its actual publish date),
+    not evenly spaced release tags, so bursts and quiet periods show honestly.
+  </p>
+
+  <div id="dlstats-status" class="dlstats-status">Loading release data from GitHub&hellip;</div>
+
+  <div id="dlstats-body" hidden>
+
+    <!-- KPI tiles -->
+    <div class="dlstats-tiles">
+      <div class="tile">
+        <span class="tile-value" id="kpi-installs">&ndash;</span>
+        <span class="tile-label">Installer downloads</span>
+        <span class="tile-sub">.zip / .tar binaries</span>
+      </div>
+      <div class="tile">
+        <span class="tile-value" id="kpi-checks">&ndash;</span>
+        <span class="tile-label">version.txt checks</span>
+        <span class="tile-sub">update-check pings</span>
+      </div>
+      <div class="tile">
+        <span class="tile-value" id="kpi-releases">&ndash;</span>
+        <span class="tile-label">Releases</span>
+        <span class="tile-sub" id="kpi-span">&nbsp;</span>
+      </div>
+      <div class="tile">
+        <span class="tile-value" id="kpi-latest">&ndash;</span>
+        <span class="tile-label">Latest release</span>
+        <span class="tile-sub" id="kpi-latest-date">&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- controls -->
+    <div class="dlstats-controls">
+      <label><input type="checkbox" id="opt-prereleases"> Include pre-releases</label>
+      <label><input type="checkbox" id="opt-log"> Logarithmic y-axis</label>
+      <button id="opt-refresh" type="button">Refresh from GitHub</button>
+      <span id="dlstats-cache" class="dlstats-cache"></span>
+    </div>
+
+    <!-- installer downloads over time -->
+    <section class="dlstats-chart">
+      <h2>Installer downloads per release <small>(real installs)</small></h2>
+      <p class="chart-caption">
+        Total downloads each release's binary artifacts have accumulated to date, placed at the
+        moment the release was published. Signatures (<code>.asc</code>), checksums and
+        <code>version.txt</code> are excluded.
+      </p>
+      <div class="chart-holder"><canvas id="chart-installs"></canvas></div>
+    </section>
+
+    <!-- version.txt over time (the separated-out series) -->
+    <section class="dlstats-chart">
+      <h2>version.txt update-checks per release <small>(separated out)</small></h2>
+      <p class="chart-caption">
+        Downloads of the <code>version.txt</code> asset &mdash; overwhelmingly automated update
+        checks, not installs. Shown on its own axis so it never distorts the installer chart above.
+      </p>
+      <div class="chart-holder"><canvas id="chart-checks"></canvas></div>
+    </section>
+
+    <!-- table view (accessibility / detail) -->
+    <section class="dlstats-chart">
+      <h2>Per-release detail</h2>
+      <div class="table-scroll">
+        <table id="dlstats-table">
+          <thead>
+            <tr>
+              <th>Release</th>
+              <th>Published</th>
+              <th class="num">Installers</th>
+              <th class="num">version.txt</th>
+              <th class="num">Checksums / sigs</th>
+              <th class="num">Total</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="dlstats-note">
+      Note: GitHub reports each asset's <em>cumulative</em> download count to date, so a bar shows
+      a release's lifetime downloads positioned at its publish date &mdash; not activity within that
+      period. Data is cached in your browser for a few hours to stay within the GitHub API rate limit.
+    </p>
+  </div>
+</div>
+
+<style>
+.dlstats-root {
+  /* dataviz reference palette (validated) */
+  --surface-1:      #fcfcfb;
+  --page-plane:     #f9f9f7;
+  --text-primary:   #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted:     #898781;
+  --grid:           #e1e0d9;
+  --axis:           #c3c2b7;
+  --series-install: #2a78d6; /* blue  */
+  --series-check:   #eb6834; /* orange */
+  --border:         rgba(11,11,11,0.10);
+  max-width: 980px;
+  margin: 0 auto;
+}
+@media (prefers-color-scheme: dark) {
+  .dlstats-root {
+    --surface-1:      #1a1a19;
+    --page-plane:     #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --grid:           #2c2c2a;
+    --axis:           #383835;
+    --series-install: #3987e5;
+    --series-check:   #d95926;
+    --border:         rgba(255,255,255,0.10);
+  }
+}
+.dlstats-root p { color: var(--text-secondary); line-height: 1.55; }
+.dlstats-note { font-size: 0.9em; }
+.dlstats-status { padding: 24px; text-align: center; color: var(--text-secondary); }
+.dlstats-status.error { color: #d03b3b; }
+
+.dlstats-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.tile {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.tile-value {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.tile-label { font-size: 0.95em; color: var(--text-primary); font-weight: 600; }
+.tile-sub   { font-size: 0.8em; color: var(--text-muted); }
+
+.dlstats-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin: 8px 0 28px;
+  font-size: 0.92em;
+  color: var(--text-secondary);
+}
+.dlstats-controls label { cursor: pointer; user-select: none; }
+.dlstats-controls button {
+  border: 1px solid var(--border);
+  background: var(--surface-1);
+  color: var(--text-primary);
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.dlstats-controls button:hover { background: var(--page-plane); }
+.dlstats-cache { color: var(--text-muted); font-size: 0.85em; }
+
+.dlstats-chart { margin: 32px 0; }
+.dlstats-chart h2 { margin-bottom: 4px; color: var(--text-primary); }
+.dlstats-chart h2 small { font-weight: 400; color: var(--text-muted); font-size: 0.6em; }
+.chart-caption { font-size: 0.88em; margin-top: 0; }
+.chart-holder { position: relative; height: 340px; }
+
+.table-scroll { overflow-x: auto; }
+#dlstats-table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+#dlstats-table th, #dlstats-table td {
+  border-bottom: 1px solid var(--grid);
+  padding: 7px 10px;
+  text-align: left;
+  color: var(--text-secondary);
+}
+#dlstats-table th { color: var(--text-primary); }
+#dlstats-table td.num, #dlstats-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+#dlstats-table tbody tr:hover { background: var(--page-plane); }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var OWNER = "jbangdev", REPO = "jbang";
+  var CACHE_KEY = "jbang-dlstats:" + OWNER + "/" + REPO;
+  var CACHE_TTL_MS = 6 * 60 * 60 * 1000; // 6 hours
+
+  var css = getComputedStyle(document.querySelector(".dlstats-root"));
+  var COLOR = {
+    install: css.getPropertyValue("--series-install").trim() || "#2a78d6",
+    check:   css.getPropertyValue("--series-check").trim()   || "#eb6834",
+    grid:    css.getPropertyValue("--grid").trim()           || "#e1e0d9",
+    axis:    css.getPropertyValue("--axis").trim()           || "#c3c2b7",
+    text:    css.getPropertyValue("--text-secondary").trim() || "#52514e",
+    muted:   css.getPropertyValue("--text-muted").trim()     || "#898781"
+  };
+
+  var statusEl = document.getElementById("dlstats-status");
+  var bodyEl   = document.getElementById("dlstats-body");
+  var cacheEl  = document.getElementById("dlstats-cache");
+
+  // --- asset classification ------------------------------------------------
+  function classify(name) {
+    if (name === "version.txt") return "check";
+    if (/\.(asc|sha256|sig)$/i.test(name)) return "sig";
+    if (/^checksums/i.test(name)) return "sig";
+    if (/version\.txt\.(asc|sha256)$/i.test(name)) return "sig";
+    return "install";
+  }
+
+  function summarize(release) {
+    var installs = 0, checks = 0, sigs = 0;
+    (release.assets || []).forEach(function (a) {
+      var kind = classify(a.name);
+      if (kind === "install") installs += a.download_count;
+      else if (kind === "check") checks += a.download_count;
+      else sigs += a.download_count;
+    });
+    return {
+      tag: release.tag_name,
+      name: release.name || release.tag_name,
+      prerelease: !!release.prerelease,
+      published: release.published_at || release.created_at,
+      url: release.html_url,
+      installs: installs,
+      checks: checks,
+      sigs: sigs
+    };
+  }
+
+  // --- data fetching (paginated + cached) ----------------------------------
+  function readCache() {
+    try {
+      var raw = localStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      var obj = JSON.parse(raw);
+      if (!obj || !obj.at || !Array.isArray(obj.releases)) return null;
+      return obj;
+    } catch (e) { return null; }
+  }
+  function writeCache(releases) {
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), releases: releases }));
+    } catch (e) { /* ignore quota */ }
+  }
+
+  function fetchAllReleases() {
+    var out = [];
+    function page(p) {
+      var url = "https://api.github.com/repos/" + OWNER + "/" + REPO +
+                "/releases?per_page=100&page=" + p;
+      return fetch(url, { headers: { "Accept": "application/vnd.github+json" } })
+        .then(function (res) {
+          if (res.status === 403 || res.status === 429) {
+            var err = new Error("rate-limited"); err.rate = true; throw err;
+          }
+          if (!res.ok) throw new Error("GitHub API error " + res.status);
+          return res.json();
+        })
+        .then(function (batch) {
+          out = out.concat(batch.map(summarize));
+          if (batch.length === 100 && p < 20) return page(p + 1);
+          return out;
+        });
+    }
+    return page(1);
+  }
+
+  function ageText(at) {
+    var mins = Math.round((Date.now() - at) / 60000);
+    if (mins < 1) return "just now";
+    if (mins < 60) return mins + " min ago";
+    var hrs = Math.round(mins / 60);
+    return hrs + " h ago";
+  }
+
+  // --- state / rendering ---------------------------------------------------
+  var ALL = [];           // all releases (summarized), newest first from API
+  var installChart, checkChart;
+
+  function activeReleases() {
+    var includePre = document.getElementById("opt-prereleases").checked;
+    return ALL
+      .filter(function (r) { return r.published && (includePre || !r.prerelease); })
+      .slice()
+      .sort(function (a, b) { return new Date(a.published) - new Date(b.published); });
+  }
+
+  var fmt = function (n) { return n.toLocaleString(); };
+
+  function renderKPIs(rows) {
+    var installs = 0, checks = 0;
+    rows.forEach(function (r) { installs += r.installs; checks += r.checks; });
+    document.getElementById("kpi-installs").textContent = fmt(installs);
+    document.getElementById("kpi-checks").textContent = fmt(checks);
+    document.getElementById("kpi-releases").textContent = fmt(rows.length);
+    if (rows.length) {
+      var first = rows[0], last = rows[rows.length - 1];
+      document.getElementById("kpi-span").textContent =
+        new Date(first.published).getFullYear() + "–" + new Date(last.published).getFullYear();
+      document.getElementById("kpi-latest").textContent = last.tag;
+      document.getElementById("kpi-latest-date").textContent =
+        new Date(last.published).toLocaleDateString();
+    }
+  }
+
+  function baseScales(logEl) {
+    return {
+      x: {
+        type: "time",
+        time: { unit: "year", tooltipFormat: "PP" },
+        grid: { color: COLOR.grid },
+        border: { color: COLOR.axis },
+        ticks: { color: COLOR.muted }
+      },
+      y: {
+        type: logEl.checked ? "logarithmic" : "linear",
+        beginAtZero: !logEl.checked,
+        grid: { color: COLOR.grid },
+        border: { color: COLOR.axis },
+        ticks: { color: COLOR.muted, callback: function (v) { return Number(v).toLocaleString(); } }
+      }
+    };
+  }
+
+  function makeBarChart(canvasId, rows, valueKey, label, color) {
+    var logEl = document.getElementById("opt-log");
+    var data = rows.map(function (r) {
+      return { x: new Date(r.published).getTime(), y: r[valueKey], tag: r.tag };
+    });
+    return new Chart(document.getElementById(canvasId), {
+      type: "bar",
+      data: {
+        datasets: [{
+          label: label,
+          data: data,
+          backgroundColor: color,
+          borderColor: color,
+          borderRadius: 3,
+          borderSkipped: false,
+          maxBarThickness: 22,
+          minBarLength: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: false,
+        parsing: false,
+        scales: baseScales(logEl),
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              title: function (items) {
+                var d = items[0].raw;
+                return d.tag + " · " + new Date(d.x).toLocaleDateString();
+              },
+              label: function (item) {
+                return label + ": " + Number(item.raw.y).toLocaleString();
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
+  function renderTable(rows) {
+    var tbody = document.querySelector("#dlstats-table tbody");
+    tbody.innerHTML = "";
+    // newest first for the table
+    rows.slice().reverse().forEach(function (r) {
+      var tr = document.createElement("tr");
+      var total = r.installs + r.checks + r.sigs;
+      tr.innerHTML =
+        '<td><a href="' + r.url + '">' + r.tag + '</a>' + (r.prerelease ? ' <em>(pre)</em>' : '') + '</td>' +
+        '<td>' + new Date(r.published).toLocaleDateString() + '</td>' +
+        '<td class="num">' + fmt(r.installs) + '</td>' +
+        '<td class="num">' + fmt(r.checks) + '</td>' +
+        '<td class="num">' + fmt(r.sigs) + '</td>' +
+        '<td class="num">' + fmt(total) + '</td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  function renderAll() {
+    var rows = activeReleases();
+    renderKPIs(rows);
+    renderTable(rows);
+    if (installChart) installChart.destroy();
+    if (checkChart) checkChart.destroy();
+    installChart = makeBarChart("chart-installs", rows, "installs", "Installer downloads", COLOR.install);
+    checkChart   = makeBarChart("chart-checks", rows, "checks", "version.txt checks", COLOR.check);
+  }
+
+  function showData(releases, cachedAt) {
+    ALL = releases;
+    statusEl.hidden = true;
+    bodyEl.hidden = false;
+    cacheEl.textContent = cachedAt ? ("cached " + ageText(cachedAt)) : "";
+    renderAll();
+  }
+
+  function loadFromGitHub() {
+    statusEl.hidden = false;
+    statusEl.classList.remove("error");
+    statusEl.textContent = "Loading release data from GitHub…";
+    bodyEl.hidden = true;
+    fetchAllReleases()
+      .then(function (releases) {
+        writeCache(releases);
+        showData(releases, Date.now());
+      })
+      .catch(function (err) {
+        var cached = readCache();
+        if (cached) {
+          showData(cached.releases, cached.at);
+          cacheEl.textContent = "GitHub unavailable – showing cached data (" + ageText(cached.at) + ")";
+        } else {
+          statusEl.classList.add("error");
+          statusEl.textContent = err && err.rate
+            ? "GitHub API rate limit reached (60 requests/hour for anonymous users). Please try again later."
+            : "Could not load release data: " + (err ? err.message : "unknown error");
+        }
+      });
+  }
+
+  // wire controls
+  document.getElementById("opt-prereleases").addEventListener("change", renderAll);
+  document.getElementById("opt-log").addEventListener("change", renderAll);
+  document.getElementById("opt-refresh").addEventListener("click", function () {
+    try { localStorage.removeItem(CACHE_KEY); } catch (e) {}
+    loadFromGitHub();
+  });
+
+  // boot: use fresh cache if available, else fetch
+  var cached = readCache();
+  if (cached && (Date.now() - cached.at) < CACHE_TTL_MS) {
+    showData(cached.releases, cached.at);
+  } else {
+    loadFromGitHub();
+  }
+})();
+</script>
+|}
