@@ -149,28 +149,34 @@ layout: splash
 .dlstats-status.error { color: #d03b3b; }
 
 .dlstats-tiles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
+  display: flex;
+  gap: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 24px 0;
+  flex-wrap: wrap;
+}
+@media (prefers-color-scheme: dark) {
+  .dlstats-tiles {
+    background-color: var(--surface-1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
 }
 .tile {
-  background: var(--surface-1);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 18px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
 }
 .tile-value {
-  font-size: 2em;
-  font-weight: 700;
-  color: var(--text-primary);
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #4a90e2;
   line-height: 1.1;
   font-variant-numeric: tabular-nums;
 }
-.tile-label { font-size: 0.95em; color: var(--text-primary); font-weight: 600; }
+.tile-label { display: block; margin-top: 8px; font-size: 1em; color: #666; text-transform: uppercase; }
 .tile-sub   { font-size: 0.8em; color: var(--text-muted); }
 
 .dlstats-controls {
@@ -326,12 +332,27 @@ layout: splash
 
   var fmt = function (n) { return n.toLocaleString(); };
 
+  function animateCount(el, target) {
+    var current = 0;
+    var increment = target / 200;
+    function step() {
+      current += increment;
+      if (current < target) {
+        el.textContent = Math.ceil(current).toLocaleString();
+        setTimeout(step, 20);
+      } else {
+        el.textContent = target.toLocaleString();
+      }
+    }
+    step();
+  }
+
   function renderKPIs(rows) {
     var installs = 0, checks = 0;
     rows.forEach(function (r) { installs += r.installs; checks += r.checks; });
-    document.getElementById("kpi-installs").textContent = fmt(installs);
-    document.getElementById("kpi-checks").textContent = fmt(checks);
-    document.getElementById("kpi-releases").textContent = fmt(rows.length);
+    animateCount(document.getElementById("kpi-installs"), installs);
+    animateCount(document.getElementById("kpi-checks"), checks);
+    animateCount(document.getElementById("kpi-releases"), rows.length);
     if (rows.length) {
       var first = rows[0], last = rows[rows.length - 1];
       document.getElementById("kpi-span").textContent =
