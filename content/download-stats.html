@@ -49,9 +49,9 @@ layout: splash
         <span class="tile-sub" id="kpi-span">&nbsp;</span>
       </div>
       <div class="tile">
-        <span class="tile-value" id="kpi-latest">&ndash;</span>
+        <span class="tile-value" id="kpi-latest-dl">&ndash;</span>
         <span class="tile-label">Latest release</span>
-        <span class="tile-sub" id="kpi-latest-date">&nbsp;</span>
+        <span class="tile-sub" id="kpi-latest-info">&nbsp;</span>
       </div>
     </div>
 
@@ -365,9 +365,9 @@ layout: splash
       var first = rows[0], last = rows[rows.length - 1];
       document.getElementById("kpi-span").textContent =
         new Date(first.published).getFullYear() + "–" + new Date(last.published).getFullYear();
-      document.getElementById("kpi-latest").textContent = last.tag;
-      document.getElementById("kpi-latest-date").textContent =
-        new Date(last.published).toLocaleDateString();
+      animateCount(document.getElementById("kpi-latest-dl"), last.installs);
+      document.getElementById("kpi-latest-info").textContent =
+        last.tag + " \u00b7 " + new Date(last.published).toLocaleDateString();
     }
   }
 
