@@ -59,6 +59,7 @@ layout: splash
     <div class="dlstats-controls">
       <label><input type="checkbox" id="opt-prereleases"> Include pre-releases</label>
       <label><input type="checkbox" id="opt-log"> Logarithmic y-axis</label>
+      <label><input type="checkbox" id="opt-dates"> Dates on x-axis</label>
       <button id="opt-refresh" type="button">Refresh from GitHub</button>
       <span id="dlstats-cache" class="dlstats-cache"></span>
     </div>
@@ -343,8 +344,12 @@ layout: splash
 
   function makeBarChart(canvasId, rows, valueKey, label, color) {
     var logEl = document.getElementById("opt-log");
-    // Use category labels but show dates; time axis makes bars sub-pixel with 240+ releases
-    var labels = rows.map(function (r) { return r.tag; });
+    var useDates = document.getElementById("opt-dates").checked;
+    var tags = rows.map(function (r) { return r.tag; });
+    var dateLabels = rows.map(function (r) {
+      return new Date(r.published).toLocaleDateString(undefined, { year: "2-digit", month: "short" });
+    });
+    var labels = useDates ? dateLabels : tags;
     var data = rows.map(function (r) { return r[valueKey]; });
     var dates = rows.map(function (r) { return r.published; });
     return new Chart(document.getElementById(canvasId), {
@@ -375,7 +380,6 @@ layout: splash
               autoSkip: true,
               maxTicksLimit: 20,
               callback: function (val, idx) {
-                // show tag name for readability
                 return labels[idx];
               }
             }
@@ -394,7 +398,7 @@ layout: splash
             callbacks: {
               title: function (items) {
                 var idx = items[0].dataIndex;
-                return labels[idx] + " · " + new Date(dates[idx]).toLocaleDateString();
+                return tags[idx] + " · " + new Date(dates[idx]).toLocaleDateString();
               },
               label: function (item) {
                 return label + ": " + Number(item.raw).toLocaleString();
@@ -469,6 +473,7 @@ layout: splash
   // wire controls
   document.getElementById("opt-prereleases").addEventListener("change", renderAll);
   document.getElementById("opt-log").addEventListener("change", renderAll);
+  document.getElementById("opt-dates").addEventListener("change", renderAll);
   document.getElementById("opt-refresh").addEventListener("click", function () {
     try { localStorage.removeItem(CACHE_KEY); } catch (e) {}
     loadFromGitHub();
