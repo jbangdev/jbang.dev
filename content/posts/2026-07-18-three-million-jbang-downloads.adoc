@@ -1,0 +1,201 @@
+---
+header:
+  teaser: /assets/images/posts/3-million-jbang-downloads/3-million-hero.png
+title: Somehow, JBang Just Passed 3 Million Downloads
+tagline: From a Java scripting experiment to a lightweight distribution layer for Java tools
+category : learn
+tags : [jbang, community, milestone]
+author : Max Rydahl Andersen
+bgcolor: ff5a71
+keywords: jbang, java, developer tools, open source, java scripting
+excerpt: JBang just passed 3 million binary downloads. The milestone is fun, but the numbers behind it tell a more interesting story about what JBang has quietly become.
+---
+
+JBang just passed *3 million binary downloads*. 🎉
+
+I honestly never expected that number when I started tinkering with making Java easier to run back in 2019.
+
+But the fun part isn't the milestone itself. It's what the numbers behind it reveal. Because somewhere along the way, JBang seems to have grown into something quite different from what I originally set out to build.
+
+image::/assets/images/posts/3-million-jbang-downloads/3-million-hero.png[JBang download statistics showing more than three million installer downloads]
+
+== First: thank you
+
+Before I dive into numbers, thank you. To everyone who has used JBang, reported a bug, contributed code, created a catalog, built a tool on top of it, mentioned it to a colleague, or just typed `jbang` into a terminal one day.
+
+A special thank you to https://github.com/quintesse[Tako Schotanus]. JBang would not be what it is today without his contributions.
+
+Open source projects become useful because people find uses for them their creators never anticipated.
+
+Three million downloads is your milestone too.
+
+== What does "3 million" actually mean?
+
+The number comes from the GitHub Releases API. It counts downloads of JBang's actual distributable binary artifacts.
+
+Our https://www.jbang.dev/usage/downloads/[download statistics page] deliberately separates out `version.txt` (which JBang uses for update checks) and excludes checksums and signatures. So this isn't a counter inflated by millions of automatic pings.
+
+When we crossed the milestone, the counter showed:
+
+[quote]
+____
+*3,000,000+ JBang binary downloads*
+____
+
+Now, that is _not_ the same as three million unique users. People reinstall. CI systems pull binaries. Machines get replaced. But it does represent real downloads of JBang distributions, not background telemetry.
+
+== And people are still downloading it
+
+JBang started in 2019. Seven years later, it's still seeing roughly *1,000 binary downloads every day* based on the recent period around the milestone.
+
+That works out to approximately:
+
+* *30,000 downloads per month*
+* *380,000 downloads per year* if the recent pace holds
+
+The interesting part isn't just that JBang eventually accumulated three million downloads. It's that people keep discovering and installing it, every day, seven years in.
+
+image::/assets/images/posts/3-million-jbang-downloads/download-momentum.png[Recent JBang download milestones and approximate current download pace]
+
+I'd love to tell you exactly when we crossed one million and two million, and draw a nice growth curve. But GitHub only exposes the _current cumulative download count_ per release asset. No historical snapshots.
+
+I'm not going to pretend we have data we don't have.
+
+We're starting to record proper snapshots now, so the next milestone can tell that story.
+
+== Downloads are only part of the story
+
+JBang also does an asynchronous version check, at most once a day per installation, unless it's disabled or finishes too fast for the check to fire.
+
+The anonymous, aggregated data from those checks is published at https://www.jbang.dev/usage/[jbang.dev/usage].
+
+Over the rolling 90-day window: *hundreds of thousands of version checks* from *more than 130 countries*.
+
+That's not a user count either. Some installations check in often, some JBang usage is never observed at all. Proxies, short-lived executions, offline environments and disabled checks all create blind spots.
+
+But it paints a picture: there's a large, globally distributed population of JBang installations that keeps showing up.
+
+image::/assets/images/posts/3-million-jbang-downloads/global-usage.png[JBang usage around the world based on anonymous aggregated version-check data]
+
+The geographical spread genuinely surprised me. The United States is the largest single country in the leaderboard, but it's only around one sixth of what we see. The large majority of observed usage is everywhere else.
+
+JBang is very much a global tool.
+
+== JBang installations apparently live for a long time
+
+One of the most interesting things in the https://www.jbang.dev/usage/leaderboard/[usage leaderboard] is how many old JBang versions still show up in today's telemetry.
+
+It's not just people upgrading to last week's release. Versions from years ago are still checking in.
+
+That tells me JBang has found its way into developer machines, scripts, CI pipelines, internal tooling, workshops, automation... and then just stayed there, doing its job.
+
+That looks less like something people try once.
+
+It looks more like *infrastructure*.
+
+image::/assets/images/posts/3-million-jbang-downloads/version-long-tail.png[Distribution of currently observed JBang versions showing both recent releases and a long tail of older installations]
+
+== It spans almost the entire modern Java world
+
+The same data shows JBang running on everything from Java 8 to current releases to early-access builds. And across dozens of JDK vendors: Eclipse Adoptium, Oracle, Ubuntu, Amazon, Homebrew, Azul, Red Hat, GraalVM, Microsoft, and plenty more.
+
+That might be the part I'm most proud of.
+
+JBang was never meant to create another isolated Java ecosystem. The goal was the opposite: work with *your Java*, on *your machine*, regardless of where either came from.
+
+The numbers say that's actually happening.
+
+image::/assets/images/posts/3-million-jbang-downloads/java-everywhere.png[Observed JBang usage across Java versions and JDK vendors]
+
+== JBang started as "Java scripting"
+
+The original idea was pretty simple:
+
+[quote]
+____
+Why should running a small Java program require creating an entire project?
+____
+
+I wanted this to feel completely normal:
+
+[source,bash]
+----
+jbang hello.java
+----
+
+From there came dependency declarations, JDK provisioning, catalogs, app installation, Maven coordinates, aliases, and a lot of other things.
+
+And somewhere along the way, what JBang actually _does_ shifted.
+
+Today a command like:
+
+[source,bash]
+----
+jbang some-tool@some-catalog
+----
+
+can mean:
+
+. Find the tool.
+. Find the right Java.
+. Download the required dependencies.
+. Resolve the application.
+. Cache what can be cached.
+. Run it.
+. Make the same idea work across macOS, Linux and Windows.
+
+The person running the command often does not care about any of that.
+
+They just wanted the tool.
+
+== Maybe JBang is really a Java distribution layer
+
+I still like the "Java scripting" idea. That's still an important part of JBang.
+
+But looking at how people actually use it today, I think another description has become just as accurate:
+
+[quote]
+____
+*JBang is a zero-friction way to run and distribute Java tools.*
+____
+
+A growing number of projects use JBang not because their users want to become _JBang users_. They use it because their users want to run *their tool*, and JBang gets the rest out of the way.
+
+No project scaffolding. Possibly no Java installation beforehand. No manual dependency setup. One command, then get on with whatever you actually wanted to do.
+
+I didn't fully anticipate that role back in 2019. But I think it may now be one of the most important things JBang does.
+
+== Three million, and still counting
+
+So yes:
+
+[quote]
+____
+🎉 *JBang has passed three million binary downloads.*
+____
+
+That's worth celebrating.
+
+But the more exciting part is what's behind that number:
+
+* thousands of new downloads every week
+* active installations appearing around the world
+* usage across almost every corner of the Java ecosystem
+* old installations that keep quietly doing their jobs
+* tools using JBang as their own execution and distribution mechanism
+
+A weird little experiment to make Java easier to run has somehow become a piece of Java infrastructure.
+
+That's pretty cool.
+
+Thank you to everyone who helped make it happen. Onwards to the next three million. 🚀
+
+== Explore the numbers
+
+The data used in this post is public and continues to change:
+
+* https://www.jbang.dev/usage/downloads/[JBang download statistics]
+* https://www.jbang.dev/usage/[Recent JBang usage]
+* https://www.jbang.dev/usage/leaderboard/[JBang usage leaderboard]
+
+Download counts come from GitHub Release asset counters. Usage data is anonymous, aggregated version-check telemetry. Treat it as an interesting signal, not a precise count of users.

@@ -1,15 +1,79 @@
-- https://x.com/abstratt/status/1401667039471845376
-- https://x.com/aalmiray/status/1400599205870243857
-- https://x.com/lasombra_br/status/1349028957945880576
-- https://x.com/julianvjupiter/status/1309977110748962816
-#- https://x.com/jamescoleuk/status/1294162344701042688
-- https://x.com/OliverLibutzki/status/1295098085627109382
-- https://x.com/_royg_/status/1302623471869009925
-#- https://x.com/shadowmanos/status/1296426696846049280
-- https://x.com/HackerMonkey3/status/1431624595698823177
-- https://x.com/dannemano/status/1446523331998539776
-- https://x.com/gh_geek/status/1454963266371870722
-- https://x.com/lzhm/status/1491678531515912195
-- https://x.com/patbaumgartner/status/1486628021364834304
-- https://x.com/preslavrachev/status/1565402621334228994
-- https://x.com/maciejwalkowiak/status/1587725985423704064
+list:
+  - author: "Rafael Chaves"
+    handle: "modelprogrammer"
+    date: "June 6, 2021"
+    url: "https://x.com/modelprogrammer/status/1401667039471845376"
+    text: "So much fun, thanks for this. You may just have saved me from using python to teach my 12 year old to program."
+
+  - author: "Andres Almiray"
+    handle: "aalmiray"
+    date: "June 3, 2021"
+    url: "https://x.com/aalmiray/status/1400599205870243857"
+    text: "Yeah, calling it now: #jbang is the killer Java CLI you were waiting for."
+
+  - author: "Ingo"
+    handle: "lasombra_br"
+    date: "January 12, 2021"
+    url: "https://x.com/lasombra_br/status/1349028957945880576"
+    text: "It seems @jbangdev will be the one true source for all things Java soon enough! Well done :)"
+
+  - author: "Julian Jupiter"
+    handle: "julianvjupiter"
+    date: "September 26, 2020"
+    url: "https://x.com/julianvjupiter/status/1309977110748962816"
+    text: "I could not imagine this is now possible in Java. Thanks, jbang for this wonderful project. You're simply amazing! 😊"
+
+  - author: "Oliver Libutzki"
+    handle: "OliverLibutzki"
+    date: "August 16, 2020"
+    url: "https://x.com/OliverLibutzki/status/1295098085627109382"
+    text: "The combination of @picocli and @jbangdev seems to be a perfect match. Java scripting raised to a new level."
+
+  - author: "Roy Golan"
+    handle: "_royg_"
+    date: "September 6, 2020"
+    url: "https://x.com/_royg_/status/1302623471869009925"
+    text: "With @jbangdev you invoke a script (even url) written in #java (it solves the compiling and dependencies for you). It's now easy to consider Java for cli tools, daily tasks/scripts and share them."
+
+  - author: "Joe"
+    handle: "HackerMonkey3"
+    date: "August 28, 2021"
+    url: "https://x.com/HackerMonkey3/status/1431624595698823177"
+    text: "Just tried out @jbangdev for a PoC at work, a complete game changer, opens up a whole range of possibilities for scripting with Java."
+
+  - author: "Daniel"
+    handle: "dannemano"
+    date: "October 8, 2021"
+    url: "https://x.com/dannemano/status/1446523331998539776"
+    text: "Jbang is the best thing since sliced bread!"
+
+  - author: "Seeraj Muneer"
+    handle: "gh_geek"
+    date: "November 1, 2021"
+    url: "https://x.com/gh_geek/status/1454963266371870722"
+    text: "Yup. Imma be writing all my shell scripts in Java thanks to @jbangdev and @picocli. Can't even begin to imagine what I can do with the might of the entire Java ecosystem."
+
+  - author: "Gimi Liang"
+    handle: "lzhm"
+    date: "February 10, 2022"
+    url: "https://x.com/lzhm/status/1491678531515912195"
+    text: "@jbangdev just blew my mind. It definitely brings Java to another level. I would argue that Java could be a better choice than Go for writing scripts/CLIs with @jbangdev"
+
+  - author: "Patrick Baumgartner"
+    handle: "patbaumgartner"
+    date: "January 27, 2022"
+    url: "https://x.com/patbaumgartner/status/1486628021364834304"
+    text: "When I look at @maxandersen wordle solver with @jbangdev I want immediately unlearn Python 😎"
+
+  - author: "Preslav Rachev"
+    handle: "preslavrachev"
+    date: "September 1, 2022"
+    url: "https://x.com/preslavrachev/status/1565402621334228994"
+    text: "JBang (@jbangdev) is seriously bringing back the joy of creating CLIs and tooling in Java! I've spent the last few years writing those exclusively in Go, but JBang makes this an almost analogous experience on the JVM front. Great work, @maxandersen!"
+
+  - author: "Maciej Walkowiak"
+    handle: "maciejwalkowiak"
+    date: "November 2, 2022"
+    url: "https://x.com/maciejwalkowiak/status/1587725985423704064"
+    text: "Single file Java applications with @jbangdev. JBang is mindblowing. I use it when I need to quickly try out a library and don't want to waste any time. Strong recommendation!"
+
