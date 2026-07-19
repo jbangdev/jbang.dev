@@ -33,27 +33,29 @@ Three million downloads is your milestone too.
 
 The number comes from the GitHub Releases API. It counts downloads of JBang's actual distributable binary artifacts.
 
-Our https://www.jbang.dev/usage/downloads/[download statistics page] deliberately separates out `version.txt` (which JBang uses for update checks) and excludes checksums and signatures. So this isn't a counter inflated by millions of automatic pings.
+Our https://www.jbang.dev/usage/downloads/[download statistics page] deliberately separates out `version.txt` (which JBang uses for update checks) and also excludes checksums and signatures. 
+
+This is not a counter inflated by millions of automatic pings.
 
 When we crossed the milestone, the counter showed:
 
 [quote]
 ____
-*3,000,000+ JBang binary downloads*
+*3,000,330 JBang binary downloads*
 ____
 
 Now, that is _not_ the same as three million unique users. People reinstall. CI systems pull binaries. Machines get replaced. But it does represent real downloads of JBang distributions, not background telemetry.
 
-== And people are still downloading it
+== And people keeps downloading it
 
-JBang started in 2019. Seven years later, it's still seeing roughly *1,000 binary downloads every day* based on the recent period around the milestone.
+JBang started in 2019. Seven years later, it is seeing roughly *1,000 binary downloads every day* based on the recent period around the milestone.
 
 That works out to approximately:
 
 * *30,000 downloads per month*
 * *380,000 downloads per year* if the recent pace holds
 
-The interesting part isn't just that JBang eventually accumulated three million downloads. It's that people keep discovering and installing it, every day, seven years in.
+The interesting part isn't just that JBang eventually reached three million downloads. It is that people keep discovering and installing it, every day, seven years in.
 
 image::/assets/images/posts/3-million-jbang-downloads/download-momentum.png[Recent JBang download milestones and approximate current download pace]
 
@@ -65,19 +67,19 @@ We're starting to record proper snapshots now, so the next milestone can tell th
 
 == Downloads are only part of the story
 
-JBang also does an asynchronous version check, at most once a day per installation, unless it's disabled or finishes too fast for the check to fire.
+JBang also does an async version check, at most once a day per installation, unless it is disabled or finishes too fast for the check to fire.
 
 The anonymous, aggregated data from those checks is published at https://www.jbang.dev/usage/[jbang.dev/usage].
 
 Over the rolling 90-day window: *hundreds of thousands of version checks* from *more than 130 countries*.
 
-That's not a user count either. Some installations check in often, some JBang usage is never observed at all. Proxies, short-lived executions, offline environments and disabled checks all create blind spots.
+That is still not a user count. Some installations check in often, some JBang usage is never observed at all. Proxies, short-lived executions, offline environments and disabled checks all create blind spots.
 
-But it paints a picture: there's a large, globally distributed population of JBang installations that keeps showing up.
+But it paints a picture: there is a large, globally distributed population of JBang installations that keeps showing up.
 
 image::/assets/images/posts/3-million-jbang-downloads/global-usage.png[JBang usage around the world based on anonymous aggregated version-check data]
 
-The geographical spread genuinely surprised me. The United States is the largest single country in the leaderboard, but it's only around one sixth of what we see. The large majority of observed usage is everywhere else.
+The geographical spread genuinely inspires me. The United States is the largest single country in the leaderboard, but it's only around 16% of what we see. The large majority of observed usage is everywhere else.
 
 JBang is very much a global tool.
 
@@ -101,7 +103,7 @@ The same data shows JBang running on everything from Java 8 to current releases 
 
 That might be the part I'm most proud of.
 
-JBang was never meant to create another isolated Java ecosystem. The goal was the opposite: work with *your Java*, on *your machine*, regardless of where either came from.
+JBang was never meant to create or cement another isolated Java ecosystem. The goal was the opposite: work with *your Java*, on *your machine*, regardless of where either came from.
 
 The numbers say that's actually happening.
 
@@ -146,7 +148,7 @@ can mean:
 
 The person running the command often does not care about any of that.
 
-They just wanted the tool.
+They just want to run the app; and JBang made that easy.
 
 == Maybe JBang is really a Java distribution layer
 
@@ -163,7 +165,7 @@ A growing number of projects use JBang not because their users want to become _J
 
 No project scaffolding. Possibly no Java installation beforehand. No manual dependency setup. One command, then get on with whatever you actually wanted to do.
 
-I didn't fully anticipate that role back in 2019. But I think it may now be one of the most important things JBang does.
+I didn't fully anticipate that role back in 2019. But I think it may now be one of the most important things JBang brings.
 
 == Three million, and still counting
 
@@ -174,7 +176,7 @@ ____
 🎉 *JBang has passed three million binary downloads.*
 ____
 
-That's worth celebrating.
+That *is* worth celebrating.
 
 But the more exciting part is what's behind that number:
 
@@ -186,7 +188,7 @@ But the more exciting part is what's behind that number:
 
 A weird little experiment to make Java easier to run has somehow become a piece of Java infrastructure.
 
-That's pretty cool.
+That *is* pretty cool.
 
 Thank you to everyone who helped make it happen. Onwards to the next three million. 🚀
 
