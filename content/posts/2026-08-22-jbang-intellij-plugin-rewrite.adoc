@@ -1,0 +1,115 @@
+---
+tags: [plugin, intellij]
+title: JBang IntelliJ Plugin — Rewritten from Scratch
+---
+:page-tags: [plugin, intellij]
+:page-author: maxandersen
+
+The https://plugins.jetbrains.com/plugin/18257[JBang IntelliJ plugin] has been completely rewritten.
+Version 0.100.0 is not an incremental update — it is a ground-up rewrite that makes JBang scripts proper first-class citizens inside IntelliJ IDEA.
+
+== What changed and why
+
+The old plugin (≤ 0.26) worked by mutating IntelliJ modules to try and get intellij to fit to JBang.
+That approach was fragile — it used old API that Jetbrains marketplace kept blocking the release for. It also conflicted with Gradle and Maven projects, and could not handle multiple scripts with different classpaths in the same directory.
+
+The new plugin takes a fundamentally different approach: it uses `jbang info tools` as its single source of truth like how the VSCode plugin does but goes a step further and **overlays** dependencies as synthetic libraries.
+
+Hence making IntelliJ aware of JBang scripts without ever mutating the project model. This means that you can have a Gradle or Maven project and still use JBang scripts in the same folder without any conflicts.
+
+Total freedom!
+
+== Per-script classpath isolation
+
+Each JBang root script now keeps its **own isolated classpath**, declared sources, and requested Java version.
+
+If you have three scripts in the same directory with different `//DEPS`, each one resolves independently.
+
+You can even have multiple roots that reuses the same source files. When multiple roots you can switch between which is used for classpath resolving.
+
+image::/assets/images/posts/jbang-idea-rewrite/multi-root.png[Choosing the active JBang root]
+
+Total freedom!
+
+Dependencies show up under External Libraries as clearly labeled JBang entries — you can navigate from a library JAR back to the root script that owns it (press kbd:Enter)
+
+image::/assets/images/posts/jbang-idea-rewrite/external-libraries.png[JBang JDK and dependency overlay under External Libraries]
+
+Other big enhancements include that Run and Debug are now fully supported, with JDWP auto-attach for debugging. Run JBang also now use IntelliJ's terminal so you can write and debug TUI applications without leaving the IDE. Finally!
+
+== What got fixed
+
+This rewrite addressed a long list of issues and feature requests that had accumulated over the years:
+
+- https://github.com/jbangdev/jbang-idea/issues/153[#153] — Poor experience with multiple scripts in one directory → multi-root isolation
+- https://github.com/jbangdev/jbang-idea/issues/112[#112] — Sync dependencies between JBang and IDEA `.iml` file → overlay-based, no `.iml` mutation
+- https://github.com/jbangdev/jbang-idea/issues/111[#111] — Debug button disabled → full Run + Debug support with JDWP auto-attach
+- https://github.com/jbangdev/jbang-idea/issues/136[#136] — Cannot add environment variables to run config → expanded run configuration
+- https://github.com/jbangdev/jbang-idea/issues/128[#128] — Support Kotlin → Kotlin, Groovy, JShell, and `.jbang` all supported
+- https://github.com/jbangdev/jbang-idea/issues/139[#139] — JDK version overwritten when `//JAVA` is omitted → standalone SDK handling fixed
+- https://github.com/jbangdev/jbang-idea/issues/135[#135] — Code completion proposes wrong version numbers → rewritten Maven coordinate completion with local/remote/snapshot distinction
+- https://github.com/jbangdev/jbang-idea/issues/147[#147] — Failed to resolve DEPS with global JVM options → CLI invocation rewritten
+- https://github.com/jbangdev/jbang-idea/issues/143[#143], https://github.com/jbangdev/jbang-idea/issues/134[#134], https://github.com/jbangdev/jbang-idea/issues/96[#96] — Various IntelliJ compatibility exceptions → clean platform API usage
+- https://github.com/jbangdev/jbang-idea/issues/151[#151] — Blurry icon → all icons replaced with SVGs
+- https://github.com/jbangdev/jbang-idea/issues/124[#124] — WSL support → now supported
+- https://github.com/jbangdev/jbang-idea/issues/102[#102] — Improve the JBang experience in IntelliJ → well, that was the whole point
+- https://github.com/jbangdev/jbang-idea/issues/160[#160] — Run config breaks on file rename/move → fixed
+- https://github.com/jbangdev/jbang-idea/issues/161[#161] — Non-JBang files checked for JBang errors → fixed, directives only matched at column 0
+
+== New capabilities
+
+Beyond fixing what was broken, the rewrite adds things that were never possible before:
+
+- **`//SOURCES` and `//FILES` navigation** — Ctrl/Cmd-click jumps to declared sources and resources, with path completion as you type.
+- **Catalog support** — JSON Schema for `jbang-catalog.json`, plus `script-ref` completion and navigation.
+- **Exact diagnostics** — unknown directives, malformed coordinates, duplicate `//DEPS`, unresolved dependencies, and missing resources highlighted on the exact failing token.
+
+image::/assets/images/posts/jbang-idea-rewrite/dependency-completion.png[Maven coordinate completion for a DEPS directive]
+
+image::/assets/images/posts/jbang-idea-rewrite/resource-diagnostics.png[Diagnostics for unresolved JBang resources]
+
+- **Terminal execution** — run scripts in IntelliJ's terminal with Windows PTY fallback.
+- **CLI-backed templates** — New → JBang Script loads templates directly from `jbang template list`.
+- **Contextual feature tips** — the plugin walks you through its capabilities as you use them.
+
+image::/assets/images/posts/jbang-idea-rewrite/run-debug-selector.png[Run popup with Run and Debug actions]
+
+image::/assets/images/posts/jbang-idea-rewrite/run-configuration.png[JBang run configuration options]
+
+== What got removed
+
+The rewrite also deleted code that was never working well or pulling its weight:
+
+- Module builder/wizard — just open a folder.
+- Gradle dependency mirroring — the config file was empty, it never actually worked.
+- `DependencyModifier` — always returned `false`.
+- Custom tool window with dependency list — replaced by status bar widget and External Libraries.
+- Live templates — replaced by CLI-backed templates that stay in sync with JBang itself.
+
+== Try it
+
+The plugin has been submitted to the JetBrains Marketplace but approval can take a few days.
+You don't have to wait — there are two ways to get it now:
+
+=== Option 1: Add the EAP update channel (recommended)
+
+This gives you automatic updates for every new build, including pre-release fixes:
+
+1. In IntelliJ: **Settings → Plugins → ⚙ → Manage Plugin Repositories…**
+2. Add: `https://plugins.jetbrains.com/plugins/eap/18257`
+3. Click **OK**, then search for "JBang" in the Marketplace tab and install or update.
+
+The EAP channel receives every successful build from `main`, so you always get the latest.
+
+=== Option 2: Install from disk
+
+1. Download https://github.com/jbangdev/jbang-idea/releases/download/v0.100.0/jbang-idea-plugin-0.100.0.zip[jbang-idea-plugin-0.100.0.zip] from the https://github.com/jbangdev/jbang-idea/releases/tag/v0.100.0[GitHub release].
+2. In IntelliJ: **Settings → Plugins → ⚙ → Install Plugin from Disk…** → select the zip.
+3. Restart.
+
+Once JetBrains approves the update it will show up in the stable Marketplace channel as usual.
+
+image::/assets/images/posts/jbang-idea-rewrite/sync-status.png[Active JBang root and synchronization status]
+
+Please try it and experiment with proper IDE integration for your JBang scripts — and let us know how it works!
+Feedback, bug reports, and feature requests are welcome at https://github.com/jbangdev/jbang-idea/issues[github.com/jbangdev/jbang-idea/issues].
