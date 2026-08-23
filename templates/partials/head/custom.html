@@ -14,11 +14,11 @@
 
 <!-- Global click-to-copy for pre/code blocks -->
 <style>
-pre {
+pre, :not(pre) > code {
   cursor: pointer;
   position: relative;
 }
-pre:hover {
+pre:hover, :not(pre) > code:hover {
   opacity: 0.9;
 }
 pre::after {
@@ -69,8 +69,10 @@ document.addEventListener('DOMContentLoaded', function() {
   window.showCopyToast = showCopyToast;
   document.addEventListener('click', function(e) {
     var pre = e.target.closest('pre');
-    if (!pre) return;
-    var text = pre.textContent;
+    var code = !pre ? e.target.closest('code') : null;
+    var target = pre || code;
+    if (!target) return;
+    var text = target.textContent;
     navigator.clipboard.writeText(text).then(function() {
       showCopyToast('Copied: ' + text.trim().substring(0, 80) + (text.trim().length > 80 ? '…' : ''));
     });

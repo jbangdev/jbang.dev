@@ -16,92 +16,150 @@ excerpt: "The following IDEs today have support for JBang via a plugin - no addi
 {|
 <ot-tabs>
   <div role="tablist">
-    <button role="tab"><img src="/assets/images/ide/vscodium.svg" width="20" height="20" alt=""/> VSCodium</button>
-    <button role="tab"><img src="https://code.visualstudio.com/favicon.ico" width="20" height="20" alt=""/> VS Code</button>
-    <button role="tab"><img src="https://simpleicons.org/icons/intellijidea.svg" width="20" height="20" alt=""/> IntelliJ</button>
+    <button role="tab"><img src="https://code.visualstudio.com/favicon.ico" width="20" height="20" alt=""/> VS Code / VSCodium</button>
+    <button role="tab"><img src="https://simpleicons.org/icons/intellijidea.svg" width="20" height="20" alt=""/> IntelliJ IDEA</button>
     <button role="tab"><img src="https://simpleicons.org/icons/eclipseide.svg" width="20" height="20" alt=""/> Eclipse</button>
-    <button role="tab"><img src="https://logo.svgcdn.com/simple-icons/zedindustries-dark.png" width="20" height="20" alt=""/> Zed</button>
+    <button role="tab"><img src="https://simpleicons.org/icons/zedindustries.svg" width="20" height="20" alt=""/> Zed</button>
     <button role="tab"><img src="https://simpleicons.org/icons/vim.svg" width="20" height="20" alt=""/> Vim/neovim</button>
     <button role="tab"><img src="https://simpleicons.org/icons/gnuemacs.svg" width="20" height="20" alt=""/> Emacs</button>
-    <button role="tab"><img src="https://api.faviconkit.com/replit.com" width="20" height="20" alt=""/> repl.it</button>
+    <button role="tab"><img src="https://simpleicons.org/icons/replit.svg" width="20" height="20" alt=""/> repl.it</button>
     <button role="tab"><img src="https://gitpod.io/favicon.ico" width="20" height="20" alt=""/> GitPod</button>
     <button role="tab"><img src="https://www.jdoodle.com/favicon.ico" width="20" height="20" alt=""/> JDoodle</button>
     <button role="tab"><img src="https://jupyter.org/favicon.ico" width="20" height="20" alt=""/> Jupyter</button>
   </div>
 
   <div role="tabpanel">
-    <h3>VSCodium</h3>
+    <h3>VS Code / VSCodium</h3>
     <p>
-      VSCodium is a community-driven, freely-licensed binary distribution of Microsoft's editor Visual Studio Code.
-      Providing all the lightweight editor features you need to get started.
+      The JBang extension works in both <a href="https://code.visualstudio.com/">Visual Studio Code</a> and
+      <a href="https://vscodium.com/">VSCodium</a> (a free, open-source VS Code distribution).
+      Running <code>jbang edit</code> installs VSCodium by default with Java and JBang extensions pre-configured — ready to code immediately.
     </p>
+
+    <h4>Install</h4>
+    <p><strong>Quickest:</strong> just run <code>jbang edit hello.java</code> — JBang installs VSCodium and the required extensions automatically.</p>
+    <p><strong>Manual install in VS Code:</strong> install <a href="https://marketplace.visualstudio.com/items?itemName=jbangdev.jbang-vscode">JBang</a> from the VS Marketplace.</p>
+    <p><strong>Manual install in VSCodium:</strong> install <a href="https://open-vsx.org/extension/jbangdev/jbang-vscode">JBang</a> from Open VSX.</p>
+
+    <h4>Features</h4>
+    <ul>
+      <li>Automatic classpath synchronization from JBang directives</li>
+      <li>Completion for <code>//DEPS</code>, <code>//SOURCES</code>, <code>//FILES</code>, and options</li>
+      <li>Run and Debug via CodeLens</li>
+      <li>Create scripts from templates, export native binaries, install as apps</li>
+      <li>Per-script projects with <code>java.import.jbang.projectPerScript</code></li>
+      <li>Automatic annotation processor configuration</li>
+      <li><code>build.jbang</code> and <code>jbang-catalog.json</code> support</li>
+    </ul>
+
+    <h4>Documentation</h4>
     <p>
-      <code>jbang edit</code> will by default install VSCodium; a free distribution of Visual Studio Code. It provides
-       a good default set of extensions to have it configured to use with Java/JBang.
-    </p>
-    <p>
-      JBang is in <a href="https://open-vsx.org/extension/jbangdev/jbang-vscode">Open VSX Registry</a>
+      <a href="/documentation/jbang-vscode/">Full documentation</a> ·
+      <a href="https://github.com/jbangdev/jbang-vscode">Source on GitHub</a>
     </p>
   </div>
 
   <div role="tabpanel">
-    <h3>Visual Studio Code</h3>
+    <h3>IntelliJ IDEA</h3>
     <p>
-      Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux.
+      The JBang plugin makes Java, Kotlin, Groovy, JShell, and <code>.jbang</code> scripts first-class citizens in IntelliJ IDEA.
+      It uses <code>jbang info tools</code> as the single source of truth — no module mutation, no Gradle/Maven modification.
     </p>
-    <p>
-      JBang is on <a href="https://marketplace.visualstudio.com/items?itemName=jbangdev.jbang-vscode">Visual Studio Marketplace</a>
-    </p>
-  </div>
 
-  <div role="tabpanel">
-    <h3>IntelliJ</h3>
+    <h4>Install</h4>
+    <p><strong>From Marketplace:</strong></p>
+    <ol>
+      <li><kbd>Settings</kbd> → <kbd>Plugins</kbd> → <kbd>Marketplace</kbd> → search <strong>"JBang"</strong> → <kbd>Install</kbd></li>
+      <li>Restart IntelliJ IDEA</li>
+      <li>Open a folder with JBang scripts — the plugin auto-detects and syncs</li>
+    </ol>
+
+    <p><strong>Early Access (EAP channel):</strong></p>
+    <ol>
+      <li><kbd>Settings</kbd> → <kbd>Plugins</kbd> → <kbd>⚙</kbd> → <kbd>Manage Plugin Repositories…</kbd></li>
+      <li>Add: <code>https://plugins.jetbrains.com/plugins/eap/18257</code></li>
+      <li>Search <strong>"JBang"</strong> in Marketplace and install</li>
+    </ol>
+    <p><em>The EAP channel receives every release, giving you the latest features before they hit stable.</em></p>
+
+    <h4>Requirements</h4>
+    <ul>
+      <li>IntelliJ IDEA 2026.2 or newer</li>
+      <li>JBang CLI installed — or let the plugin install it from <kbd>Settings</kbd> → <kbd>Tools</kbd> → <kbd>JBang</kbd></li>
+    </ul>
+
+    <h4>Features</h4>
+    <ul>
+      <li>Multiple JBang roots with isolated classpaths and JDKs</li>
+      <li>Completion for directives, Maven coordinates, <code>//SOURCES</code>, <code>//FILES</code>, and catalog refs</li>
+      <li>Run and Debug with gutter icons and run configurations</li>
+      <li>Per-root <code>//JAVA</code> JDK registration</li>
+      <li>Diagnostics for invalid directives, unresolved dependencies, and missing resources</li>
+      <li>Create scripts from templates via <kbd>New</kbd> → <kbd>JBang Script</kbd></li>
+    </ul>
+
+    <h4>Documentation</h4>
     <p>
-      IntelliJ IDEA is a very popular Java IDE. Has a lot of features; especially when it comes to refactoring and code assists.
-    </p>
-    <p>
-      JBang is on <a href="https://plugins.jetbrains.com/plugin/18257-jbang">Jetbrains Marketplace</a>
+      <a href="/documentation/jbang-idea/">Full documentation</a> ·
+      <a href="https://plugins.jetbrains.com/plugin/18257-jbang">JetBrains Marketplace</a> ·
+      <a href="https://github.com/jbangdev/jbang-idea">Source on GitHub</a>
     </p>
   </div>
 
   <div role="tabpanel">
     <h3>Eclipse</h3>
     <p>
-      Eclipse is a popular opensource Java IDE. Has a large ecosystem of plugins and is 100% free to use.
+      The JBang plugin for Eclipse lets you import and synchronize JBang scripts as projects, with automatic dependency resolution and JDK configuration.
     </p>
+
+    <h4>Install</h4>
+    <p><strong>From Eclipse Marketplace:</strong></p>
+    <ol>
+      <li>Drag the <a href="https://marketplace.eclipse.org/content/jbang-eclipse-integration">Install button</a> to your running Eclipse, or:</li>
+      <li><kbd>Help</kbd> → <kbd>Eclipse Marketplace…</kbd> → search <strong>"JBang"</strong> → <kbd>Install</kbd></li>
+    </ol>
+
+    <h4>Features</h4>
+    <ul>
+      <li>Import JBang scripts as projects (<kbd>Import Project…</kbd> → <kbd>JBang</kbd> → <kbd>JBang script</kbd>)</li>
+      <li>Synchronize JBang dependencies to existing projects via right-click</li>
+      <li>Automatic JDK configuration from <code>//JAVA</code></li>
+      <li>Annotation processor detection</li>
+      <li>Support for <code>//DEPS</code>, <code>//SOURCES</code>, and <code>@Grab</code></li>
+    </ul>
+
+    <h4>Documentation</h4>
     <p>
-      JBang is on <a href="https://marketplace.eclipse.org/content/jbang-eclipse-integration">Eclipse Marketplace</a>
+      <a href="https://marketplace.eclipse.org/content/jbang-eclipse-integration">Eclipse Marketplace</a> ·
+      <a href="https://github.com/jbangdev/jbang-eclipse">Source on GitHub</a>
     </p>
   </div>
 
   <div role="tabpanel">
     <h3>Zed</h3>
     <p>
-      <a href="https://zed.dev">Zed</a> is a high-performance editor with support for Java using Eclipse JDT Language Server.
+      <a href="https://zed.dev">Zed</a> is a high-performance editor with Java support via Eclipse JDT Language Server.
+      No native JBang plugin yet — use sandbox mode which sets up a temporary project with full classpath:
     </p>
-    <p>
-      No native JBang support yet, thus simplest way is to use sandbox mode: <code>jbang edit --sandbox --open=zed yourapp.java</code>.
-    </p>
+    <pre><code>jbang edit --sandbox --open=zed yourapp.java</code></pre>
   </div>
 
   <div role="tabpanel">
     <h3>Vim/neovim</h3>
     <p>
-      Vim and neovim are highly configurable text editors built to enable efficient text editing. Supports Java with Eclipse JDT Language Server.
+      Vim and neovim support Java via Eclipse JDT Language Server.
+      No native JBang plugin yet — use sandbox mode:
     </p>
-    <p>
-      No native JBang support yet, thus simplest way is to use sandbox mode: <code>jbang edit --sandbox --open=nvim yourapp.java</code>.
-    </p>
+    <pre><code>jbang edit --sandbox --open=nvim yourapp.java</code></pre>
   </div>
 
   <div role="tabpanel">
     <h3>Emacs</h3>
     <p>
-      Emacs is an extensible, customizable, free/libre text editor and computing environment. Supports Java with Eclipse JDT Language Server.
+      Emacs supports Java via Eclipse JDT Language Server.
+      No native JBang plugin yet — use sandbox mode:
     </p>
-    <p>
-      No native JBang support yet, thus simplest way is to use sandbox mode: <code>jbang edit --sandbox --open=emacs yourapp.java</code>.
-    </p>
+    <pre><code>jbang edit --sandbox --open=emacs yourapp.java</code></pre>
   </div>
 
   <div role="tabpanel">
