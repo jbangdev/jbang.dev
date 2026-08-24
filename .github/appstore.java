@@ -43,6 +43,7 @@ import org.kohsuke.github.GHException;
 import org.kohsuke.github.GitHub;
 import org.kohsuke.github.GitHubBuilder;
 import org.kohsuke.github.PagedSearchIterable;
+import org.kohsuke.github.HttpException;
 import org.kohsuke.github.RateLimitHandler;
 
 import com.google.gson.Gson;
@@ -129,6 +130,29 @@ class appstore implements Callable<Integer> {
                 .forEach(templateItems::add);
           }
         }
+        processed++;
+        index++;
+        retries = 5;
+      } catch (HttpException he) {
+        int code = he.getResponseCode();
+        if (code == 400 || code == 404 || code == 422 || code == 451 || (code == 403 && !isRateLimit(he))) {
+            out.println("Skipping " + location + " due to HTTP " + code + " error.");
+            processed++;
+            index++;
+            retries = 5;
+        } else {
+            printExceptionCauseChain(he);
+            retries--;
+            if (retries <= 0) {
+                throw he;
+            }
+            Duration wait = backoffDelay(he);
+            out.println("GitHub returned HTTP " + code + " while processing " + location + ". Sleeping " + wait.toMinutes()
+                + "m before retrying (" + retries + " retries left)");
+            TimeUnit.MILLISECONDS.sleep(wait.toMillis());
+        }
+      } catch (IOException ioe) {
+        out.println("Skipping " + location + " due to IOException: " + ioe.getMessage());
         processed++;
         index++;
         retries = 5;
@@ -289,6 +313,16 @@ class appstore implements Callable<Integer> {
     while (throwable != null) {
       String message = throwable.getMessage();
       if (message != null && (message.contains("429") || message.contains("secondary rate limit"))) {
+        return true;
+      }
+      throwable = throwable.getCause();
+    }
+    return false;
+  }
+  private boolean isRateLimit(Throwable throwable) {
+    while (throwable != null) {
+      String message = throwable.getMessage();
+      if (message != null && (message.contains("429") || message.toLowerCase().contains("rate limit"))) {
         return true;
       }
       throwable = throwable.getCause();
