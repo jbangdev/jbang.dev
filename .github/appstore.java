@@ -1,12 +1,12 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
-//DEPS info.picocli:picocli:4.5.0
-//DEPS org.kohsuke:github-api:1.128
-//DEPS com.google.code.gson:gson:2.8.6
-//DEPS org.commonmark:commonmark:0.17.1
-//DEPS org.commonmark:commonmark-ext-gfm-tables:0.17.1
-//DEPS org.commonmark:commonmark-ext-autolink:0.17.1
-//DEPS org.commonmark:commonmark-ext-gfm-strikethrough:0.17.1
-//DEPS org.commonmark:commonmark-ext-task-list-items:0.17.1
+//DEPS info.picocli:picocli:4.7.7
+//DEPS org.kohsuke:github-api:1.330
+//DEPS com.google.code.gson:gson:2.14.0
+//DEPS org.commonmark:commonmark:0.30.0
+//DEPS org.commonmark:commonmark-ext-gfm-tables:0.30.0
+//DEPS org.commonmark:commonmark-ext-autolink:0.30.0
+//DEPS org.commonmark:commonmark-ext-gfm-strikethrough:0.30.0
+//DEPS org.commonmark:commonmark-ext-task-list-items:0.30.0
 
 import static java.lang.System.out;
 
@@ -37,14 +37,14 @@ import org.commonmark.ext.gfm.tables.TablesExtension;
 import org.commonmark.ext.task.list.items.TaskListItemsExtension;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.HtmlRenderer;
-import org.kohsuke.github.AbuseLimitHandler;
+import org.kohsuke.github.GitHubAbuseLimitHandler;
 import org.kohsuke.github.GHContent;
 import org.kohsuke.github.GHException;
 import org.kohsuke.github.GitHub;
 import org.kohsuke.github.GitHubBuilder;
 import org.kohsuke.github.PagedSearchIterable;
 import org.kohsuke.github.HttpException;
-import org.kohsuke.github.RateLimitHandler;
+import org.kohsuke.github.GitHubRateLimitHandler;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -97,8 +97,8 @@ class appstore implements Callable<Integer> {
   @Override
   public Integer call() throws Exception {
     gitHub = GitHubBuilder.fromEnvironment().withOAuthToken(ghToken)
-            .withAbuseLimitHandler(AbuseLimitHandler.WAIT)
-            .withRateLimitHandler(RateLimitHandler.WAIT).build();
+            .withAbuseLimitHandler(GitHubAbuseLimitHandler.WAIT)
+            .withRateLimitHandler(GitHubRateLimitHandler.WAIT).build();
 
     out.println(gitHub.getRateLimit().toString());
     var gson = new GsonBuilder().setPrettyPrinting().create();
