@@ -22,14 +22,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedHashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.commonmark.Extension;
 import org.commonmark.ext.autolink.AutolinkExtension;
@@ -38,415 +39,428 @@ import org.commonmark.ext.gfm.tables.TablesExtension;
 import org.commonmark.ext.task.list.items.TaskListItemsExtension;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.HtmlRenderer;
+import org.kohsuke.github.GitHubAbuseLimitHandler;
 import org.kohsuke.github.GHContent;
 import org.kohsuke.github.GHException;
 import org.kohsuke.github.GitHub;
-import org.kohsuke.github.GitHubAbuseLimitHandler;
 import org.kohsuke.github.GitHubBuilder;
-import org.kohsuke.github.GitHubRateLimitHandler;
-import org.kohsuke.github.HttpException;
 import org.kohsuke.github.PagedSearchIterable;
+import org.kohsuke.github.HttpException;
+import org.kohsuke.github.GitHubRateLimitHandler;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonParseException;
 import com.google.gson.annotations.SerializedName;
 
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
+/**
+ * To run this script, set two environment variables GH_USER and GH_TOKEN. These
+ * are used to avoid github rate limiting.
+ */
 @Command(name = "appstore", mixinStandardHelpOptions = true, version = "appstore for JBang 0.1", description = "appstore made with jbang")
 class appstore implements Callable<Integer> {
 
-    final static Set<String> excludedCatalogs = new HashSet<>();
+  final static Set<String> excludedCatalogs = new HashSet<>();
 
-    static {
-        excludedCatalogs.add("jbangdev/jbang/itests/jbang-catalog.json");
+  static {
+    excludedCatalogs.add("jbangdev/jbang/itests/jbang-catalog.json");
+    // excludedCatalogs.add("jbangdev/jbang/src/main/resources/jbang-catalog.json");
+    // // todo: treat special to just have it be jbang -t xxx ?
+  }
+
+  @Option(names = { "-d",
+      "--destDir" }, defaultValue = "./public/assets/data/", description = "Destination dir to generate cataloger")
+  private Path destinationDir;
+
+  @Option(names = {
+      "--token" }, description = "Github user token", defaultValue = "${env:GITHUB_TOKEN}", required = true)
+  private String ghToken;
+
+  private GitHub gitHub;
+
+  Map<String, Integer> starCache = new HashMap<>();
+
+  public static void main(String... args) {
+    var exitCode = new CommandLine(new appstore()).execute(args);
+    System.exit(exitCode);
+  }
+
+  public static void printExceptionCauseChain(Throwable ex) {
+    while (ex != null) {
+        System.out.println(ex.getClass().getName() + ": " + ex.getMessage());
+        ex = ex.getCause();
     }
+}
 
-    @Option(names = {"-d", "--destDir"}, defaultValue = "./public/assets/data/", description = "Destination dir to generate cataloger")
-    private Path destinationDir;
+  @Override
+  public Integer call() throws Exception {
+    gitHub = GitHubBuilder.fromEnvironment().withOAuthToken(ghToken)
+            .withAbuseLimitHandler(GitHubAbuseLimitHandler.WAIT)
+            .withRateLimitHandler(GitHubRateLimitHandler.WAIT).build();
 
-    @Option(names = {"--token"}, description = "Github user token", defaultValue = "${env:GITHUB_TOKEN}", required = true)
-    private String ghToken;
+    out.println(gitHub.getRateLimit().toString());
+    var gson = new GsonBuilder().setPrettyPrinting().create();
+    List<CatalogItem> aliasItems = new ArrayList<>();
+    List<CatalogItem> templateItems = new ArrayList<>();
+    List<GHContent> contents = fetchCatalogsWithRetry();
 
-    private GitHub gitHub;
+    out.println("Found " + contents.size() + " catalogs");
 
-    Map<String, Integer> starCache = new HashMap<>();
+    int processed = 0;
+    int retries = 5;
+    int index = 0;
 
-    public static void main(String... args) {
-        var exitCode = new CommandLine(new appstore()).execute(args);
-        System.exit(exitCode);
-    }
-
-    public static void printExceptionCauseChain(Throwable ex) {
-        while (ex != null) {
-            System.out.println(ex.getClass().getName() + ": " + ex.getMessage());
-            ex = ex.getCause();
-        }
-    }
-
-    @Override
-    public Integer call() throws Exception {
-        gitHub = new GitHubBuilder().withOAuthToken(ghToken)
-                .withAbuseLimitHandler(GitHubAbuseLimitHandler.WAIT)
-                .withRateLimitHandler(GitHubRateLimitHandler.WAIT).build();
-
-        out.println(gitHub.getRateLimit().toString());
-        var gson = new GsonBuilder().setPrettyPrinting().create();
-        List<CatalogItem> aliasItems = new ArrayList<>();
-        List<CatalogItem> templateItems = new ArrayList<>();
-        List<GHContent> contents = fetchCatalogsWithRetry();
-
-        out.println("Found " + contents.size() + " catalogs");
-
-        int processed = 0;
-        int retries = 5;
-        int index = 0;
-
-        while (index < contents.size()) {
-            GHContent content = contents.get(index);
-            String location = content.getOwner().getFullName() + "/" + content.getPath();
-            try {
-                if (excludedCatalogs.contains(location)) {
-                    out.println("Excluded - " + location);
-                } else {
-                    out.println("Processing - " + location);
-                    TimeUnit.MILLISECONDS.sleep(400);
-                    var catalogContent = toJsonElement(gson, content);
-                    if (catalogContent != null) {
-                        if (catalogContent.aliases != null) {
-                            catalogContent.aliases.entrySet().stream()
-                                    .filter(entry -> entry.getValue() != null)
-                                    .map(entry -> toCatalogerItem(entry, content))
-                                    .forEach(aliasItems::add);
-                        }
-
-                        if (catalogContent.templates != null) {
-                            catalogContent.templates.entrySet().stream()
-                                    .filter(entry -> entry.getValue() != null)
-                                    .map(entry -> templateToItem(entry, content))
-                                    .forEach(templateItems::add);
-                        }
-                    }
-                }
-                processed++;
-                index++;
-                retries = 5;
-            } catch (HttpException he) {
-                int code = he.getResponseCode();
-                if (code == -1 || code == 400 || code == 404 || code == 422 || code == 451 || (code == 403 && !isRateLimit(he))) {
-                    out.println("Skipping " + location + " due to HTTP " + code + " error.");
-                    processed++;
-                    index++;
-                    retries = 5;
-                } else {
-                    printExceptionCauseChain(he);
-                    retries--;
-                    if (retries <= 0) {
-                        throw he;
-                    }
-                    Duration wait = backoffDelay(he);
-                    out.println("GitHub returned HTTP " + code + " while processing " + location + ". Sleeping " + wait.toMinutes()
-                            + "m before retrying (" + retries + " retries left)");
-                    TimeUnit.MILLISECONDS.sleep(wait.toMillis());
-                }
-            } catch (IllegalArgumentException | IOException ioe) {
-                out.println("Skipping " + location + " due to error: " + ioe.getMessage());
-                processed++;
-                index++;
-                retries = 5;
-            } catch (GHException ghe) {
-                printExceptionCauseChain(ghe);
-                retries--;
-                if (retries <= 0) {
-                    throw ghe;
-                }
-                Duration wait = backoffDelay(ghe);
-                out.println("GitHub throttled while processing " + location + ". Sleeping " + wait.toMinutes()
-                        + "m before retrying (" + retries + " retries left)");
-                TimeUnit.MILLISECONDS.sleep(wait.toMillis());
+    while (index < contents.size()) {
+      GHContent content = contents.get(index);
+      String location = content.getOwner().getFullName() + "/" + content.getPath();
+      try {
+        if (excludedCatalogs.contains(location)) {
+          out.println("Excluded - " + location);
+        } else {
+          out.println("Processing - " + location);
+          TimeUnit.MILLISECONDS.sleep(400);
+          var catalogContent = toJsonElement(gson, content);
+          if (catalogContent != null) {
+            if (catalogContent.aliases != null) {
+              catalogContent.aliases.entrySet().stream()
+                  .filter(entry -> entry.getValue() != null)
+                  .map(entry -> toCatalogerItem(entry, content))
+                  .forEach(aliasItems::add);
             }
-        }
 
-        List<CatalogItem> sortedAliases = aliasItems.stream()
-                .sorted(Comparator.comparing(catalogerItem -> -catalogerItem.stars)).collect(Collectors.toList());
+            if (catalogContent.templates != null) {
+              catalogContent.templates.entrySet().stream()
+                  .filter(entry -> entry.getValue() != null)
+                  .map(entry -> templateToItem(entry, content))
+                  .forEach(templateItems::add);
+            }
+          }
+        }
+        processed++;
+        index++;
+        retries = 5;
+      } catch (HttpException he) {
+        int code = he.getResponseCode();
+        if (code == -1 || code == 400 || code == 404 || code == 422 || code == 451 || (code == 403 && !isRateLimit(he))) {
+            out.println("Skipping " + location + " due to HTTP " + code + " error.");
+            processed++;
+            index++;
+            retries = 5;
+        } else {
+            printExceptionCauseChain(he);
+            retries--;
+            if (retries <= 0) {
+                throw he;
+            }
+            Duration wait = backoffDelay(he);
+            out.println("GitHub returned HTTP " + code + " while processing " + location + ". Sleeping " + wait.toMinutes()
+                + "m before retrying (" + retries + " retries left)");
+            TimeUnit.MILLISECONDS.sleep(wait.toMillis());
+        }
+      } catch (IllegalArgumentException | IOException ioe) {
+        out.println("Skipping " + location + " due to error: " + ioe.getMessage());
+        processed++;
+        index++;
+        retries = 5;
+      } catch (GHException ghe) {
+        printExceptionCauseChain(ghe);
+        retries--;
+        if (retries <= 0) {
+          throw ghe;
+        }
+        Duration wait = backoffDelay(ghe);
+        out.println("GitHub throttled while processing " + location + ". Sleeping " + wait.toMinutes()
+            + "m before retrying (" + retries + " retries left)");
+        TimeUnit.MILLISECONDS.sleep(wait.toMillis());
+      }
+    }
+
+    List<CatalogItem> sortedAliases = aliasItems.stream()
+        .sorted(Comparator.comparing(catalogerItem -> -catalogerItem.stars)).collect(Collectors.toList());
 
         List<CatalogItem> sortedTemplates = templateItems.stream()
-                .sorted(Comparator.comparing(catalogerItem -> -catalogerItem.stars)).collect(Collectors.toList());
+        .sorted(Comparator.comparing(catalogerItem -> -catalogerItem.stars)).collect(Collectors.toList());
+  
+    var cataloger = new Cataloger(sortedAliases,sortedTemplates);
+    String catalogerContent = gson.toJson(cataloger);
+    destinationDir.toFile().mkdirs();
+    var path = destinationDir.resolve("jbang-appstore.json");
+    Files.writeString(path, catalogerContent);
+    out.println("Generated file - " + path);
+    return 0;
+  }
 
-        var cataloger = new Cataloger(sortedAliases, sortedTemplates);
-        String catalogerContent = gson.toJson(cataloger);
-        destinationDir.toFile().mkdirs();
-        var path = destinationDir.resolve("jbang-appstore.json");
-        Files.writeString(path, catalogerContent);
-        out.println("Generated file - " + path);
-        return 0;
+  private CatalogItem templateToItem(Map.Entry<String, Template> entry, GHContent ghContent) {
+    var item = new CatalogItem();
+    item.alias = entry.getKey();
+    item.scriptRef = null;
+    item.description = entry.getValue().description;
+
+    if (item.description != null) {
+      item.description = md2html(item.description);
     }
 
-    private CatalogItem templateToItem(Map.Entry<String, Template> entry, GHContent ghContent) {
-        var item = new CatalogItem();
-        item.alias = entry.getKey();
-        item.scriptRef = null;
-        item.description = entry.getValue().description;
+    setupGeneralInfo(ghContent, item);
 
-        if (item.description != null) {
-            item.description = md2html(item.description);
-        }
+    StringBuffer cmd = aliasToCommand(ghContent, item.alias, item.repoName, item.repoOwner);
 
-        setupGeneralInfo(ghContent, item);
+    item.command = cmd.toString();
+    item.fullcommand = "jbang init -t " + item.command;
 
-        StringBuffer cmd = aliasToCommand(ghContent, item.alias, item.repoName, item.repoOwner);
+    return item;
+  }
 
-        item.command = cmd.toString();
-        item.fullcommand = "jbang init -t " + item.command;
+  private void setupGeneralInfo(GHContent ghContent, CatalogItem item) {
 
-        return item;
+    item.repoOwner = ghContent.getOwner().getOwnerName();
+    item.repoName = ghContent.getOwner().getName();
+
+    item.link = ghContent.getHtmlUrl().toString();
+    try {
+      item.icon_url = ghContent.getOwner().getOwner().getAvatarUrl();
+    } catch (IOException e) {
+      e.printStackTrace();
     }
 
-    private void setupGeneralInfo(GHContent ghContent, CatalogItem item) {
-        item.repoOwner = ghContent.getOwner().getOwnerName();
-        item.repoName = ghContent.getOwner().getName();
-        item.link = ghContent.getHtmlUrl().toString();
+    // work around https://github.com/hub4j/github-api/issues/1140
+    try {
+      Integer stars = starCache.get(ghContent.getOwner().getFullName());
+      if (stars == null) {
+        stars = gitHub.getRepository(ghContent.getOwner().getFullName()).getStargazersCount();
+        starCache.put(ghContent.getOwner().getFullName(), stars);
+      }
+      item.stars = stars;
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
 
-        try {
-            var owner = ghContent.getOwner().getOwner();
-            if (owner != null) {
-                item.icon_url = owner.getAvatarUrl();
-            }
-        } catch (Exception e) {
-            // Ignored - avatar optional
-        }
+  private CatalogItem toCatalogerItem(Map.Entry<String, Alias> entry, GHContent ghContent) {
+    var item = new CatalogItem();
+    item.alias = entry.getKey();
+    item.scriptRef = entry.getValue().scriptRef;
+    item.description = entry.getValue().description;
 
-        try {
-            Integer stars = starCache.get(ghContent.getOwner().getFullName());
-            if (stars == null) {
-                stars = gitHub.getRepository(ghContent.getOwner().getFullName()).getStargazersCount();
-                starCache.put(ghContent.getOwner().getFullName(), stars);
-            }
-            item.stars = stars;
-        } catch (Exception e) {
-            item.stars = 0;
-        }
+    if (item.description != null) {
+      item.description = md2html(item.description);
     }
 
-    private CatalogItem toCatalogerItem(Map.Entry<String, Alias> entry, GHContent ghContent) {
-        var item = new CatalogItem();
-        item.alias = entry.getKey();
-        item.scriptRef = entry.getValue().scriptRef;
-        item.description = entry.getValue().description;
+    setupGeneralInfo(ghContent, item);
 
-        if (item.description != null) {
-            item.description = md2html(item.description);
-        }
+    StringBuffer cmd = aliasToCommand(ghContent, item.alias, item.repoName, item.repoOwner);
 
-        setupGeneralInfo(ghContent, item);
+    item.command = cmd.toString();
+    item.fullcommand = "jbang " + item.command;
 
-        StringBuffer cmd = aliasToCommand(ghContent, item.alias, item.repoName, item.repoOwner);
+    return item;
+  }
 
-        item.command = cmd.toString();
-        item.fullcommand = "jbang " + item.command;
-
-        return item;
+  private StringBuffer aliasToCommand(GHContent ghContent, String alias, String repoName, String repoOwner) {
+    StringBuffer cmd = new StringBuffer(alias);
+    if (repoName.equalsIgnoreCase("jbang-catalog")) {
+      cmd.append("@" + repoOwner);
+    } else {
+      cmd.append("@" + repoOwner + "/" + repoName);
     }
 
-    private StringBuffer aliasToCommand(GHContent ghContent, String alias, String repoName, String repoOwner) {
-        StringBuffer cmd = new StringBuffer(alias);
-        if (repoName.equalsIgnoreCase("jbang-catalog")) {
-            cmd.append("@").append(repoOwner);
-        } else {
-            cmd.append("@").append(repoOwner).append("/").append(repoName);
-        }
-
-        if (!ghContent.getPath().equals("jbang-catalog.json") && ghContent.getPath().endsWith("/jbang-catalog.json")) {
-            cmd.append("~").append(ghContent.getPath().substring(0, ghContent.getPath().length() - "/jbang-catalog.json".length()));
-        }
-        return cmd;
+    if (!ghContent.getPath().equals("jbang-catalog.json")) {
+      cmd.append("~" + ghContent.getPath().substring(0, ghContent.getPath().length() - "/jbang-catalog.json".length()));
     }
+    return cmd;
+  }
 
-    private String md2html(String markdown) {
-        List<Extension> extensions = Arrays.asList(TablesExtension.create(), AutolinkExtension.create(),
-                StrikethroughExtension.create(), TaskListItemsExtension.create());
-        Parser parser = Parser.builder().extensions(extensions).build();
-        var document = parser.parse(markdown);
-        HtmlRenderer renderer = HtmlRenderer.builder().extensions(extensions).sanitizeUrls(true).escapeHtml(true).build();
-        return renderer.render(document);
+  private String md2html(String markdown) {
+    List<Extension> extensions = Arrays.asList(TablesExtension.create(), AutolinkExtension.create(),
+        StrikethroughExtension.create(), TaskListItemsExtension.create());
+    Parser parser = Parser.builder().extensions(extensions).build();
+    var document = parser.parse(markdown);
+    HtmlRenderer renderer = HtmlRenderer.builder().extensions(extensions).sanitizeUrls(true).escapeHtml(true).build();
+    var html = renderer.render(document);
+    // System.out.println(item.description + "=>" + html);
+    return html;
+  }
+
+
+  private List<GHContent> fetchCatalogsWithRetry() throws InterruptedException {
+    int retries = 5;
+    while (true) {
+      try {
+        PagedSearchIterable<GHContent> ghContents = gitHub.searchContent().filename("jbang-catalog.json")
+            .extension(".json").list().withPageSize(100);
+
+        List<GHContent> contents = new ArrayList<>();
+        var iterator = ghContents.iterator();
+        while (iterator.hasNext()) {
+          contents.add(iterator.next());
+        }
+        return contents;
+      } catch (GHException ghe) {
+        printExceptionCauseChain(ghe);
+        retries--;
+        if (retries <= 0) {
+          throw ghe;
+        }
+        Duration wait = backoffDelay(ghe);
+        out.println("GitHub throttled while listing catalogs. Sleeping " + wait.toMinutes() + "m (" + retries
+            + " retries left)");
+        TimeUnit.MILLISECONDS.sleep(wait.toMillis());
+      }
     }
+  }
 
-    private List<GHContent> fetchCatalogsWithRetry() throws InterruptedException {
-        int retries = 5;
-        while (true) {
-            try {
-                PagedSearchIterable<GHContent> ghContents = gitHub.searchContent()
-                        .filename("jbang-catalog.json")
-                        .extension("json")
-                        .list()
-                        .withPageSize(100);
-
-                List<GHContent> contents = new ArrayList<>();
-                var iterator = ghContents.iterator();
-                while (iterator.hasNext()) {
-                    contents.add(iterator.next());
-                }
-                return contents;
-            } catch (Exception ex) {
-                printExceptionCauseChain(ex);
-                retries--;
-                if (retries <= 0) {
-                    if (ex instanceof RuntimeException) throw (RuntimeException) ex;
-                    throw new RuntimeException(ex);
-                }
-                Duration wait = backoffDelay(ex);
-                out.println("GitHub throttled while listing catalogs. Sleeping " + wait.toMinutes() + "m (" + retries
-                        + " retries left)");
-                TimeUnit.MILLISECONDS.sleep(wait.toMillis());
-            }
-        }
+  private Duration backoffDelay(Throwable throwable) {
+    if (isSecondaryRateLimit(throwable)) {
+      return Duration.ofMinutes(5);
     }
+    return Duration.ofMinutes(1);
+  }
 
-    private Duration backoffDelay(Throwable throwable) {
-        if (isSecondaryRateLimit(throwable)) {
-            return Duration.ofMinutes(5);
-        }
-        return Duration.ofMinutes(1);
+  private boolean isSecondaryRateLimit(Throwable throwable) {
+    while (throwable != null) {
+      String message = throwable.getMessage();
+      if (message != null && (message.contains("429") || message.contains("secondary rate limit"))) {
+        return true;
+      }
+      throwable = throwable.getCause();
     }
-
-    private boolean isSecondaryRateLimit(Throwable throwable) {
-        while (throwable != null) {
-            String message = throwable.getMessage();
-            if (message != null && (message.contains("429") || message.contains("secondary rate limit"))) {
-                return true;
-            }
-            throwable = throwable.getCause();
-        }
-        return false;
+    return false;
+  }
+  private boolean isRateLimit(Throwable throwable) {
+    while (throwable != null) {
+      String message = throwable.getMessage();
+      if (message != null && (message.contains("429") || message.toLowerCase().contains("rate limit"))) {
+        return true;
+      }
+      throwable = throwable.getCause();
     }
+    return false;
+  }
 
-    private boolean isRateLimit(Throwable throwable) {
-        while (throwable != null) {
-            String message = throwable.getMessage();
-            if (message != null && (message.contains("429") || message.toLowerCase().contains("rate limit"))) {
-                return true;
-            }
-            throwable = throwable.getCause();
+  private Catalog toJsonElement(Gson gson, GHContent catalogContent) throws IOException {
+    if (catalogContent == null)
+      return null;
+    String htmlUrl = catalogContent.getHtmlUrl();
+    if (htmlUrl != null) {
+      try {
+        String rawUrl = htmlUrl.replace("https://github.com/", "https://raw.githubusercontent.com/")
+            .replace("/blob/", "/")
+            .replace(" ", "%20");
+        try (InputStream stream = URI.create(rawUrl).toURL().openStream();
+            InputStreamReader streamR = new InputStreamReader(stream, StandardCharsets.UTF_8)) {
+          return gson.fromJson(streamR, Catalog.class);
         }
-        return false;
+      } catch (Exception e) {
+        // Fall back to GitHub API read
+      }
     }
+    Catalog json = null;
+    try (InputStream stream = catalogContent.read(); InputStreamReader streamR = new InputStreamReader(stream, StandardCharsets.UTF_8)) {
+      try {
+        json = gson.fromJson(streamR, Catalog.class);
 
-    private Catalog toJsonElement(Gson gson, GHContent catalogContent) throws IOException {
-        if (catalogContent == null) {
-            return null;
-        }
-
-        String htmlUrl = catalogContent.getHtmlUrl();
-        if (htmlUrl != null) {
-            try {
-                String rawUrl = htmlUrl.replace("https://github.com/", "https://raw.githubusercontent.com/")
-                        .replace("/blob/", "/")
-                        .replace(" ", "%20");
-                try (InputStream stream = URI.create(rawUrl).toURL().openStream();
-                     InputStreamReader streamR = new InputStreamReader(stream, StandardCharsets.UTF_8)) {
-                    return gson.fromJson(streamR, Catalog.class);
-                }
-            } catch (Exception e) {
-                // Direct raw download failed, fall back to GitHub API read
-            }
-        }
-
-        try (InputStream stream = catalogContent.read();
-             InputStreamReader streamR = new InputStreamReader(stream, StandardCharsets.UTF_8)) {
-            return gson.fromJson(streamR, Catalog.class);
-        }
+      } catch (JsonParseException e) {
+        e.printStackTrace();
+        json = null;
+      }
     }
+    return json;
+  }
 }
 
 class Catalog {
-    public Map<String, Alias> aliases = new HashMap<>();
-    public Map<String, Template> templates = new HashMap<>();
+  public Map<String, Alias> aliases = new HashMap<>();
+  public Map<String, Template> templates = new HashMap<>();
 
-    @Override
-    public String toString() {
-        return aliases.toString() + " - " + templates.toString();
-    }
+  @Override
+  public String toString() {
+
+    return aliases.toString() + " - " + templates.toString();
+
+  }
 }
 
 class Alias {
-    @SerializedName("script-ref")
-    public String scriptRef;
-    public String description;
+  @SerializedName("script-ref")
+  public String scriptRef;
+  public String description;
 }
 
 class Template {
-    public String description;
+  public String description;
 }
 
 class Cataloger {
-    public final int aliasCount;
-    public final int templateCount;
-    public final List<CatalogEntry> catalogs;
+  public final int aliasCount;
+  public final int templateCount;
+  public final List<CatalogEntry> catalogs;
 
-    public Cataloger(List<CatalogItem> aliasItems, List<CatalogItem> templateItems) {
-        Map<String, CatalogEntry> entries = new LinkedHashMap<>();
+  public Cataloger(List<CatalogItem> aliasItems, List<CatalogItem> templateItems) {
+    // Group by repo
+    Map<String, CatalogEntry> entries = new LinkedHashMap<>();
 
-        for (CatalogItem item : aliasItems) {
-            entries.computeIfAbsent(item.repoOwner + "/" + item.repoName,
-                            k -> new CatalogEntry(item.repoOwner, item.repoName, item.stars, item.icon_url, item.link))
-                    .aliases.add(new CompactItem(item));
-        }
-        for (CatalogItem item : templateItems) {
-            entries.computeIfAbsent(item.repoOwner + "/" + item.repoName,
-                            k -> new CatalogEntry(item.repoOwner, item.repoName, item.stars, item.icon_url, item.link))
-                    .templates.add(new CompactItem(item));
-        }
-
-        this.catalogs = new ArrayList<>(entries.values());
-        this.aliasCount = aliasItems.size();
-        this.templateCount = templateItems.size();
+    for (CatalogItem item : aliasItems) {
+      entries.computeIfAbsent(item.repoOwner + "/" + item.repoName,
+          k -> new CatalogEntry(item.repoOwner, item.repoName, item.stars, item.icon_url, item.link))
+          .aliases.add(new CompactItem(item));
     }
+    for (CatalogItem item : templateItems) {
+      entries.computeIfAbsent(item.repoOwner + "/" + item.repoName,
+          k -> new CatalogEntry(item.repoOwner, item.repoName, item.stars, item.icon_url, item.link))
+          .templates.add(new CompactItem(item));
+    }
+
+    this.catalogs = new ArrayList<>(entries.values());
+    this.aliasCount = aliasItems.size();
+    this.templateCount = templateItems.size();
+  }
 }
 
 class CatalogEntry {
-    public final String owner;
-    public final String name;
-    public final int stars;
-    public final String icon;
-    public final String link;
-    public final List<CompactItem> aliases = new ArrayList<>();
-    public final List<CompactItem> templates = new ArrayList<>();
+  public final String owner;
+  public final String name;
+  public final int stars;
+  public final String icon;
+  public final String link;
+  public final List<CompactItem> aliases = new ArrayList<>();
+  public final List<CompactItem> templates = new ArrayList<>();
 
-    public CatalogEntry(String owner, String name, int stars, String icon, String link) {
-        this.owner = owner;
-        this.name = name;
-        this.stars = stars;
-        this.icon = icon;
-        this.link = link;
-    }
+  public CatalogEntry(String owner, String name, int stars, String icon, String link) {
+    this.owner = owner;
+    this.name = name;
+    this.stars = stars;
+    this.icon = icon;
+    this.link = link;
+  }
 }
 
 class CompactItem {
-    public final String a;
-    public final String d;
-    public final String s;
-    public final String c;
+  public final String a; // alias
+  public final String d; // description (nullable)
+  public final String s; // scriptRef (nullable)
+  public final String c; // command
 
-    public CompactItem(CatalogItem item) {
-        this.a = item.alias;
-        this.d = item.description;
-        this.s = item.scriptRef;
-        this.c = item.command;
-    }
+  public CompactItem(CatalogItem item) {
+    this.a = item.alias;
+    this.d = item.description;
+    this.s = item.scriptRef;
+    this.c = item.command;
+  }
 }
 
 class CatalogItem {
-    public String url;
-    public int stars;
-    public String icon_url;
-    public String repoOwner;
-    public String repoName;
-    public String alias;
-    public String description;
-    public String scriptRef;
-    public String command;
-    public String fullcommand;
-    public String link;
+  public String url;
+  public int stars;
+  public String icon_url;
+  public String repoOwner;
+  public String repoName;
+  public String alias;
+  public String description;
+  public String scriptRef;
+  public String command;
+  public String fullcommand;
+  public String link;
 }
