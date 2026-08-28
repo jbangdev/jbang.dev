@@ -135,7 +135,7 @@ class appstore implements Callable<Integer> {
                 retries = 5;
             } catch (HttpException he) {
                 int code = he.getResponseCode();
-                if (code == 400 || code == 404 || code == 422 || code == 451 || (code == 403 && !isRateLimit(he))) {
+                if (code == -1 || code == 400 || code == 404 || code == 422 || code == 451 || (code == 403 && !isRateLimit(he))) {
                     out.println("Skipping " + location + " due to HTTP " + code + " error.");
                     processed++;
                     index++;
@@ -333,30 +333,29 @@ class appstore implements Callable<Integer> {
         return false;
     }
 
-    private Catalog toJsonElement(Gson gson, GHContent catalogContent) {
+    private Catalog toJsonElement(Gson gson, GHContent catalogContent) throws IOException {
         if (catalogContent == null) {
             return null;
         }
 
-        String downloadUrl = catalogContent.getDownloadUrl();
-        if (downloadUrl != null) {
+        String htmlUrl = catalogContent.getHtmlUrl();
+        if (htmlUrl != null) {
             try {
-                String safeUrl = downloadUrl.replace(" ", "%20");
-                try (InputStream stream = URI.create(safeUrl).toURL().openStream();
+                String rawUrl = htmlUrl.replace("https://github.com/", "https://raw.githubusercontent.com/")
+                        .replace("/blob/", "/")
+                        .replace(" ", "%20");
+                try (InputStream stream = URI.create(rawUrl).toURL().openStream();
                      InputStreamReader streamR = new InputStreamReader(stream, StandardCharsets.UTF_8)) {
                     return gson.fromJson(streamR, Catalog.class);
                 }
             } catch (Exception e) {
-                // Fall back to GitHub API read if direct download stream fails
+                // Direct raw download failed, fall back to GitHub API read
             }
         }
 
-        try (InputStream stream = catalogContent.getOwner().getFileContent(catalogContent.getPath()).read();
+        try (InputStream stream = catalogContent.read();
              InputStreamReader streamR = new InputStreamReader(stream, StandardCharsets.UTF_8)) {
             return gson.fromJson(streamR, Catalog.class);
-        } catch (Exception e) {
-            out.println("Skipping unreadable catalog at " + catalogContent.getPath() + ": " + e.getMessage());
-            return null;
         }
     }
 }
