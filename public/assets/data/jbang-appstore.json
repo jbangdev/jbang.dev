@@ -1,125 +1,150 @@
 {
-  "aliasCount": 8,
-  "templateCount": 0,
+  "aliasCount": 17,
+  "templateCount": 1,
   "catalogs": [
     {
-      "owner": "quarkusio",
-      "name": "quarkus-ghsa-6mff-r94g-3275",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
-      "link": "https://github.com/quarkusio/quarkus-ghsa-6mff-r94g-3275/blob/b7159fc5558a87035d3f50a7c332e253b2ab1326/.jbang/jbang-catalog.json",
+      "owner": "ZenWave360",
+      "name": "zenwave-sdk",
+      "stars": 57,
+      "icon": "https://avatars.githubusercontent.com/u/93670347?v\u003d4",
+      "link": "https://github.com/ZenWave360/zenwave-sdk/blob/78bb4ed4173a9685b5c2765935e1b1e368fc4263/jbang-catalog.json",
       "aliases": [
         {
-          "a": "revapi-update",
-          "s": "RevapiUpdate.java",
-          "c": "revapi-update@quarkusio/quarkus-ghsa-6mff-r94g-3275~.jbang"
+          "a": "release",
+          "s": "io.zenwave360.sdk:zenwave-sdk-cli:RELEASE",
+          "c": "release@ZenWave360/zenwave-sdk"
+        },
+        {
+          "a": "snapshots",
+          "s": "io.zenwave360.sdk:zenwave-sdk-cli:2.8.0-SNAPSHOT",
+          "c": "snapshots@ZenWave360/zenwave-sdk"
+        },
+        {
+          "a": "v1_7_1",
+          "s": "io.github.zenwave360.zenwave-sdk:zenwave-sdk-cli:1.7.1",
+          "c": "v1_7_1@ZenWave360/zenwave-sdk"
         }
       ],
       "templates": []
     },
     {
-      "owner": "jboss-fuse",
-      "name": "camel-downstream-updater",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/4243506?v\u003d4",
-      "link": "https://github.com/jboss-fuse/camel-downstream-updater/blob/28f76880136a338d66973bbfc429ba50edba7570/jbang-catalog.json",
+      "owner": "roastedroot",
+      "name": "lumis4j",
+      "stars": 20,
+      "icon": "https://avatars.githubusercontent.com/u/197638293?v\u003d4",
+      "link": "https://github.com/roastedroot/lumis4j/blob/23e9e8581eaf16c5fc3d46293426c422afcbf3b2/jbang-catalog.json",
       "aliases": [
         {
-          "a": "camel",
-          "d": "\u003cp\u003eRun Apache Camel routes easily\u003c/p\u003e\n",
-          "s": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
-          "c": "camel@jboss-fuse/camel-downstream-updater"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "maxandersen",
-      "name": "valp",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "link": "https://github.com/maxandersen/valp/blob/b97dfda04639c1feff27212257b4b6519b619f00/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "valp",
-          "d": "\u003cp\u003eA terminal eager to learn new tricks\u003c/p\u003e\n",
-          "s": "main.java",
-          "c": "valp@maxandersen/valp"
+          "a": "lumis4j",
+          "s": "lumis4j.java",
+          "c": "lumis4j@roastedroot/lumis4j"
         }
       ],
       "templates": []
     },
     {
       "owner": "quarkusio",
-      "name": "quarkus-ghsa-vv4c-mhvm-c6gv",
-      "stars": 0,
+      "name": "jbang-catalog",
+      "stars": 8,
       "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
-      "link": "https://github.com/quarkusio/quarkus-ghsa-vv4c-mhvm-c6gv/blob/96312055ae0c2fd95468cfbd95294ca6e88d412f/.jbang/jbang-catalog.json",
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/a8bbb0bb15365f18f18472477c65d61d7387e8e8/jbang-catalog.json",
       "aliases": [
         {
-          "a": "revapi-update",
-          "s": "RevapiUpdate.java",
-          "c": "revapi-update@quarkusio/quarkus-ghsa-vv4c-mhvm-c6gv~.jbang"
+          "a": "buginfo",
+          "d": "\u003cp\u003eScript that collects environment info for Quarkus issue reports\u003c/p\u003e\n",
+          "s": "quarkusissue.java",
+          "c": "buginfo@quarkusio"
+        },
+        {
+          "a": "catalog_check_updates",
+          "d": "\u003cp\u003eScript that checks for updates in an extension catalog\u003c/p\u003e\n",
+          "s": "catalog_check_updates.java",
+          "c": "catalog_check_updates@quarkusio"
+        },
+        {
+          "a": "catalog_publish",
+          "d": "\u003cp\u003eScript that publishes an extension catalog to a registry\u003c/p\u003e\n",
+          "s": "catalog_publish.java",
+          "c": "catalog_publish@quarkusio"
+        },
+        {
+          "a": "cli",
+          "s": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.39.1/quarkus-cli-3.39.1-runner.jar",
+          "c": "cli@quarkusio"
+        },
+        {
+          "a": "qs",
+          "s": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.39.1/quarkus-cli-3.39.1-runner.jar",
+          "c": "qs@quarkusio"
+        },
+        {
+          "a": "quarkus",
+          "s": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.39.1/quarkus-cli-3.39.1-runner.jar",
+          "c": "quarkus@quarkusio"
+        },
+        {
+          "a": "quarkus-kill",
+          "s": "kill.java",
+          "c": "quarkus-kill@quarkusio"
+        },
+        {
+          "a": "kill",
+          "s": "kill.java",
+          "c": "kill@quarkusio"
+        },
+        {
+          "a": "quarkus-agent-mcp",
+          "d": "\u003cp\u003eMCP server for AI coding agents to create, manage, and interact with Quarkus applications\u003c/p\u003e\n",
+          "s": "io.quarkus:quarkus-agent-mcp:RELEASE:runner",
+          "c": "quarkus-agent-mcp@quarkusio"
+        },
+        {
+          "a": "quarkus-fmt",
+          "s": "fmt.java",
+          "c": "quarkus-fmt@quarkusio"
+        },
+        {
+          "a": "fmt",
+          "s": "fmt.java",
+          "c": "fmt@quarkusio"
+        }
+      ],
+      "templates": [
+        {
+          "a": "githubbot",
+          "d": "\u003cp\u003eExample of making a github app\u003c/p\u003e\n",
+          "c": "githubbot@quarkusio"
+        }
+      ]
+    },
+    {
+      "owner": "maven-flow",
+      "name": "changelog-merge-driver",
+      "stars": 1,
+      "icon": "https://avatars.githubusercontent.com/u/166258741?v\u003d4",
+      "link": "https://github.com/maven-flow/changelog-merge-driver/blob/4f9446a29a9e6b935b0fd710aa047f9ff03641ad/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "changelog-merge-driver",
+          "d": "\u003cp\u003eA Git merge driver for changelogs\u003c/p\u003e\n",
+          "s": "ChangelogMergeDriver.java",
+          "c": "changelog-merge-driver@maven-flow/changelog-merge-driver"
         }
       ],
       "templates": []
     },
     {
-      "owner": "quarkusio",
-      "name": "quarkus-ghsa-pv6m-j4fg-qx7h",
+      "owner": "smallrye",
+      "name": "smallrye-acp-client",
       "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
-      "link": "https://github.com/quarkusio/quarkus-ghsa-pv6m-j4fg-qx7h/blob/2c25d2f4754e7f87774bb8400bc452394a052767/.jbang/jbang-catalog.json",
+      "icon": "https://avatars.githubusercontent.com/u/38892730?v\u003d4",
+      "link": "https://github.com/smallrye/smallrye-acp-client/blob/d0df593406a32caec6aa63676ce0c096ee4e9ddf/jbang-catalog.json",
       "aliases": [
         {
-          "a": "revapi-update",
-          "s": "RevapiUpdate.java",
-          "c": "revapi-update@quarkusio/quarkus-ghsa-pv6m-j4fg-qx7h~.jbang"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "quarkusio",
-      "name": "quarkus-ghsa-v3h5-jw6m-6m42",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
-      "link": "https://github.com/quarkusio/quarkus-ghsa-v3h5-jw6m-6m42/blob/996730b8e924f8c96b6f46c97d0fab1c0bf9b9a4/.jbang/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "revapi-update",
-          "s": "RevapiUpdate.java",
-          "c": "revapi-update@quarkusio/quarkus-ghsa-v3h5-jw6m-6m42~.jbang"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "quarkusio",
-      "name": "quarkus-ghsa-wq93-gh3h-3242",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
-      "link": "https://github.com/quarkusio/quarkus-ghsa-wq93-gh3h-3242/blob/d61c8cefc4393fe8971cc4176c43d958bc4efc23/.jbang/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "revapi-update",
-          "s": "RevapiUpdate.java",
-          "c": "revapi-update@quarkusio/quarkus-ghsa-wq93-gh3h-3242~.jbang"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "brunobat",
-      "name": "private_quarkus",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/2318030?v\u003d4",
-      "link": "https://github.com/brunobat/private_quarkus/blob/5ad2f1c6681b85b97eb1ce8f0d67163634fe7ced/.jbang/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "revapi-update",
-          "s": "RevapiUpdate.java",
-          "c": "revapi-update@brunobat/private_quarkus~.jbang"
+          "a": "acp",
+          "d": "\u003cp\u003eACP Java Client for any ACP-compatible agent\u003c/p\u003e\n",
+          "s": "client/target/acp-java-client-0.1.0-SNAPSHOT-runner.jar",
+          "c": "acp@smallrye/smallrye-acp-client"
         }
       ],
       "templates": []
