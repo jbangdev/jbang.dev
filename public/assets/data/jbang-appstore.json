@@ -1,5 +1,5 @@
 {
-  "aliasCount": 17,
+  "aliasCount": 19,
   "templateCount": 1,
   "catalogs": [
     {
@@ -145,6 +145,26 @@
           "d": "\u003cp\u003eACP Java Client for any ACP-compatible agent\u003c/p\u003e\n",
           "s": "client/target/acp-java-client-0.1.0-SNAPSHOT-runner.jar",
           "c": "acp@smallrye/smallrye-acp-client"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "tulipltt",
+      "name": "jbang-catalog",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/266314079?v\u003d4",
+      "link": "https://github.com/tulipltt/jbang-catalog/blob/58f45bbbede0a885c7cb70a52f5ffd422ed1a40c/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "kwrk",
+          "s": "kwrk.kt",
+          "c": "kwrk@tulipltt"
+        },
+        {
+          "a": "tulip-cli",
+          "s": "TulipCli.java",
+          "c": "tulip-cli@tulipltt"
         }
       ],
       "templates": []
