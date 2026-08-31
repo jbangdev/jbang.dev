@@ -1,7 +1,23 @@
 {
-  "aliasCount": 19,
+  "aliasCount": 29,
   "templateCount": 1,
   "catalogs": [
+    {
+      "owner": "quarkiverse",
+      "name": "quarkus-roq",
+      "stars": 134,
+      "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
+      "link": "https://github.com/quarkiverse/quarkus-roq/blob/2a4d7a8b6270de1409c5b4ee34b6bc81a4a35e05/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "roq",
+          "d": "\u003cp\u003eRoq CLI - static site generator\u003c/p\u003e\n",
+          "s": "io.quarkiverse.roq:quarkus-roq-cli:2.1.7:runner@fatjar",
+          "c": "roq@quarkiverse/quarkus-roq"
+        }
+      ],
+      "templates": []
+    },
     {
       "owner": "ZenWave360",
       "name": "zenwave-sdk",
@@ -129,6 +145,70 @@
           "d": "\u003cp\u003eA Git merge driver for changelogs\u003c/p\u003e\n",
           "s": "ChangelogMergeDriver.java",
           "c": "changelog-merge-driver@maven-flow/changelog-merge-driver"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "alaurie",
+      "name": "jbang-catalog",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/1402140?v\u003d4",
+      "link": "https://github.com/alaurie/jbang-catalog/blob/558f48956bf4e9551a5d1dfd6ba8b8de67a1adbb/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "serve",
+          "d": "\u003cp\u003eServes the given directory on the specified port.\u003c/p\u003e\n",
+          "s": "apps/serve/Serve.java",
+          "c": "serve@alaurie"
+        },
+        {
+          "a": "nudge",
+          "d": "\u003cp\u003eSimulates user activity (mouse movement, key press, scrolling) to keep your presence status active.\u003c/p\u003e\n",
+          "s": "apps/nudge/Nudge.java",
+          "c": "nudge@alaurie"
+        },
+        {
+          "a": "typeit",
+          "d": "\u003cp\u003eSimulates typing clipboard text (or custom string) into active window after countdown.\u003c/p\u003e\n",
+          "s": "apps/typeit/Typeit.java",
+          "c": "typeit@alaurie"
+        },
+        {
+          "a": "jwt",
+          "d": "\u003cp\u003eInspect and decode JSON Web Tokens (JWT) safely off-line.\u003c/p\u003e\n",
+          "s": "apps/jwt/Jwt.java",
+          "c": "jwt@alaurie"
+        },
+        {
+          "a": "killport",
+          "d": "\u003cp\u003eFind and terminate processes listening on specified network ports.\u003c/p\u003e\n",
+          "s": "apps/killport/Killport.java",
+          "c": "killport@alaurie"
+        },
+        {
+          "a": "hash",
+          "d": "\u003cp\u003eCompute and verify cryptographic checksums for files or text input.\u003c/p\u003e\n",
+          "s": "apps/hash/Hash.java",
+          "c": "hash@alaurie"
+        },
+        {
+          "a": "fetch",
+          "d": "\u003cp\u003eMultithreaded download utility with automatic checksum capability.\u003c/p\u003e\n",
+          "s": "apps/fetch/Fetch.java",
+          "c": "fetch@alaurie"
+        },
+        {
+          "a": "reach",
+          "d": "\u003cp\u003eNetwork diagnostic CLI utility to test TCP reachability and inspect TLS certs.\u003c/p\u003e\n",
+          "s": "apps/reach/Reach.java",
+          "c": "reach@alaurie"
+        },
+        {
+          "a": "slowfetch",
+          "d": "\u003cp\u003eTerminal system information fetcher powered by OSHI.\u003c/p\u003e\n",
+          "s": "apps/slowfetch/Slowfetch.java",
+          "c": "slowfetch@alaurie"
         }
       ],
       "templates": []
