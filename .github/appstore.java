@@ -13,6 +13,8 @@ import static java.lang.System.out;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.URI;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Duration;
@@ -123,11 +125,19 @@ class appstore implements Callable<Integer> {
           TimeUnit.MILLISECONDS.sleep(400);
           var catalogContent = toJsonElement(gson, content);
           if (catalogContent != null) {
-            catalogContent.aliases.entrySet().stream().map(entry -> toCatalogerItem(entry, content))
-                .forEach(aliasItems::add);
+            if (catalogContent.aliases != null) {
+              catalogContent.aliases.entrySet().stream()
+                  .filter(entry -> entry.getValue() != null)
+                  .map(entry -> toCatalogerItem(entry, content))
+                  .forEach(aliasItems::add);
+            }
 
-            catalogContent.templates.entrySet().stream().map(entry -> templateToItem(entry, content))
-                .forEach(templateItems::add);
+            if (catalogContent.templates != null) {
+              catalogContent.templates.entrySet().stream()
+                  .filter(entry -> entry.getValue() != null)
+                  .map(entry -> templateToItem(entry, content))
+                  .forEach(templateItems::add);
+            }
           }
         }
         processed++;
@@ -135,7 +145,7 @@ class appstore implements Callable<Integer> {
         retries = 5;
       } catch (HttpException he) {
         int code = he.getResponseCode();
-        if (code == 400 || code == 404 || code == 422 || code == 451 || (code == 403 && !isRateLimit(he))) {
+        if (code == -1 || code == 400 || code == 404 || code == 422 || code == 451 || (code == 403 && !isRateLimit(he))) {
             out.println("Skipping " + location + " due to HTTP " + code + " error.");
             processed++;
             index++;
@@ -151,8 +161,8 @@ class appstore implements Callable<Integer> {
                 + "m before retrying (" + retries + " retries left)");
             TimeUnit.MILLISECONDS.sleep(wait.toMillis());
         }
-      } catch (IOException ioe) {
-        out.println("Skipping " + location + " due to IOException: " + ioe.getMessage());
+      } catch (IllegalArgumentException | IOException ioe) {
+        out.println("Skipping " + location + " due to error: " + ioe.getMessage());
         processed++;
         index++;
         retries = 5;
@@ -333,8 +343,22 @@ class appstore implements Callable<Integer> {
   private Catalog toJsonElement(Gson gson, GHContent catalogContent) throws IOException {
     if (catalogContent == null)
       return null;
+    String htmlUrl = catalogContent.getHtmlUrl();
+    if (htmlUrl != null) {
+      try {
+        String rawUrl = htmlUrl.replace("https://github.com/", "https://raw.githubusercontent.com/")
+            .replace("/blob/", "/")
+            .replace(" ", "%20");
+        try (InputStream stream = URI.create(rawUrl).toURL().openStream();
+            InputStreamReader streamR = new InputStreamReader(stream, StandardCharsets.UTF_8)) {
+          return gson.fromJson(streamR, Catalog.class);
+        }
+      } catch (Exception e) {
+        // Fall back to GitHub API read
+      }
+    }
     Catalog json = null;
-    try (InputStream stream = catalogContent.read(); InputStreamReader streamR = new InputStreamReader(stream)) {
+    try (InputStream stream = catalogContent.read(); InputStreamReader streamR = new InputStreamReader(stream, StandardCharsets.UTF_8)) {
       try {
         json = gson.fromJson(streamR, Catalog.class);
 
