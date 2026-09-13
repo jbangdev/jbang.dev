@@ -135,7 +135,8 @@ class appstore implements Callable<Integer> {
         retries = 5;
       } catch (HttpException he) {
         int code = he.getResponseCode();
-        if (code == 400 || code == 404 || code == 422 || code == 451 || (code == 403 && !isRateLimit(he))) {
+        // code < 0: client could not even build the URL (e.g. space in path) — permanent, skip
+        if (code < 0 || code == 400 || code == 404 || code == 422 || code == 451 || (code == 403 && !isRateLimit(he))) {
             out.println("Skipping " + location + " due to HTTP " + code + " error.");
             processed++;
             index++;
