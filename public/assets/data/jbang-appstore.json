@@ -5,7 +5,7 @@
     {
       "owner": "apple",
       "name": "pkl",
-      "stars": 11519,
+      "stars": 11522,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "link": "https://github.com/apple/pkl/blob/d0de24b85b16af3b07d79fcc2dd1f0ba20bd590f/jbang-catalog.json",
       "aliases": [
@@ -189,7 +189,7 @@
       "name": "hawtio",
       "stars": 1463,
       "icon": "https://avatars.githubusercontent.com/u/2943947?v\u003d4",
-      "link": "https://github.com/hawtio/hawtio/blob/1bc179643a550c24b05344120be94017bad05809/jbang-catalog.json",
+      "link": "https://github.com/hawtio/hawtio/blob/634abe6e52399848ac01848847ff83ca67c640a1/jbang-catalog.json",
       "aliases": [
         {
           "a": "hawtio",
@@ -205,7 +205,7 @@
       "name": "tamboui",
       "stars": 649,
       "icon": "https://avatars.githubusercontent.com/u/251016663?v\u003d4",
-      "link": "https://github.com/tamboui/tamboui/blob/3d80cd8d638207d251d223adf119c078601d9b9a/jbang-catalog.json",
+      "link": "https://github.com/tamboui/tamboui/blob/93d4b0729a9c3446eec8216df9e6841f626cb259/jbang-catalog.json",
       "aliases": [
         {
           "a": "run-demo",
@@ -610,7 +610,7 @@
       "name": "boot-ui",
       "stars": 294,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
-      "link": "https://github.com/jdubois/boot-ui/blob/b244cdacfb96186f449268220a43483231ac2406/jbang-catalog.json",
+      "link": "https://github.com/jdubois/boot-ui/blob/a6e083c45c5d937d2564605e30a5fefbfb4621a7/jbang-catalog.json",
       "aliases": [
         {
           "a": "bootui",
@@ -707,7 +707,7 @@
       "name": "quarkus-roq",
       "stars": 138,
       "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "link": "https://github.com/quarkiverse/quarkus-roq/blob/a09300fe069753997f1767342fd59c7259139228/jbang-catalog.json",
+      "link": "https://github.com/quarkiverse/quarkus-roq/blob/1ef45ea84409211702e2d15e74a4ad3fc5976400/jbang-catalog.json",
       "aliases": [
         {
           "a": "roq",
@@ -1009,7 +1009,7 @@
       "name": "quarkus-agent-mcp",
       "stars": 53,
       "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
-      "link": "https://github.com/quarkusio/quarkus-agent-mcp/blob/78d7a24b9439ce5577d9bf1fd7d0153f2dda39df/jbang-catalog.json",
+      "link": "https://github.com/quarkusio/quarkus-agent-mcp/blob/46fdeebb77269040134230a0b981b4eef4d52999/jbang-catalog.json",
       "aliases": [
         {
           "a": "quarkus-agent-mcp",
@@ -1700,7 +1700,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/28e30f160a4a501bb93fc4eb1ee193c388d672a0/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/63391c29579c3b4b0f972b88f62d724703ae0336/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -2026,7 +2026,7 @@
       "name": "jskills",
       "stars": 8,
       "icon": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "link": "https://github.com/maxandersen/jskills/blob/2ddce4f2bf51bfab6c8bb73fb917a42d8ef3d6fc/jbang-catalog.json",
+      "link": "https://github.com/maxandersen/jskills/blob/7a03755876ba0d275f1ccf6a3f90977435aa0d5a/jbang-catalog.json",
       "aliases": [
         {
           "a": "skills",
@@ -3888,6 +3888,82 @@
       "templates": []
     },
     {
+      "owner": "alaurie",
+      "name": "jbang-catalog",
+      "stars": 1,
+      "icon": "https://avatars.githubusercontent.com/u/1402140?v\u003d4",
+      "link": "https://github.com/alaurie/jbang-catalog/blob/97fe9816810d26f5dc4ef23c14da74bc95788830/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "serve",
+          "d": "\u003cp\u003eServes the given directory on the specified port.\u003c/p\u003e\n",
+          "s": "apps/serve/Serve.java",
+          "c": "serve@alaurie"
+        },
+        {
+          "a": "nudge",
+          "d": "\u003cp\u003eSimulates user activity (mouse movement, key press, scrolling) to keep your presence status active.\u003c/p\u003e\n",
+          "s": "apps/nudge/Nudge.java",
+          "c": "nudge@alaurie"
+        },
+        {
+          "a": "typeit",
+          "d": "\u003cp\u003eSimulates typing clipboard text (or custom string) into active window after countdown.\u003c/p\u003e\n",
+          "s": "apps/typeit/Typeit.java",
+          "c": "typeit@alaurie"
+        },
+        {
+          "a": "jwt",
+          "d": "\u003cp\u003eInspect and decode JSON Web Tokens (JWT) safely off-line.\u003c/p\u003e\n",
+          "s": "apps/jwt/Jwt.java",
+          "c": "jwt@alaurie"
+        },
+        {
+          "a": "killport",
+          "d": "\u003cp\u003eFind and terminate processes listening on specified network ports.\u003c/p\u003e\n",
+          "s": "apps/killport/Killport.java",
+          "c": "killport@alaurie"
+        },
+        {
+          "a": "digest",
+          "d": "\u003cp\u003eCompute and verify cryptographic checksums for files or text input.\u003c/p\u003e\n",
+          "s": "apps/digest/Digest.java",
+          "c": "digest@alaurie"
+        },
+        {
+          "a": "fetch",
+          "d": "\u003cp\u003eMultithreaded download utility with automatic checksum capability.\u003c/p\u003e\n",
+          "s": "apps/fetch/Fetch.java",
+          "c": "fetch@alaurie"
+        },
+        {
+          "a": "reach",
+          "d": "\u003cp\u003eNetwork diagnostic CLI utility to test TCP reachability and inspect TLS certs.\u003c/p\u003e\n",
+          "s": "apps/reach/Reach.java",
+          "c": "reach@alaurie"
+        },
+        {
+          "a": "install-native",
+          "d": "\u003cp\u003eCompile and export catalog tools as standalone zero-overhead native executables.\u003c/p\u003e\n",
+          "s": "apps/install-native/InstallNative.java",
+          "c": "install-native@alaurie"
+        },
+        {
+          "a": "native-install",
+          "d": "\u003cp\u003eCompile and export catalog tools as standalone zero-overhead native executables.\u003c/p\u003e\n",
+          "s": "apps/install-native/InstallNative.java",
+          "c": "native-install@alaurie"
+        },
+        {
+          "a": "jellyfin-backup",
+          "d": "\u003cp\u003eComplete disaster recovery backup, restore, and inspection utility for Jellyfin media server.\u003c/p\u003e\n",
+          "s": "apps/jellyfin-backup/JellyfinBackup.java",
+          "c": "jellyfin-backup@alaurie"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "gomezrondon",
       "name": "spring-jbang",
       "stars": 1,
@@ -4565,82 +4641,6 @@
           "d": "\u003cp\u003ePackage manager for AI agent skills - Helm-style manifests and lockfiles over git and OCI registry sources.\u003c/p\u003e\n",
           "s": "https://github.com/sunix/diderot/releases/latest/download/diderot.jar",
           "c": "diderot@sunix/diderot"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "alaurie",
-      "name": "jbang-catalog",
-      "stars": 1,
-      "icon": "https://avatars.githubusercontent.com/u/1402140?v\u003d4",
-      "link": "https://github.com/alaurie/jbang-catalog/blob/a9adcacdc73ca755f38400e4c75cb821ae236159/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "serve",
-          "d": "\u003cp\u003eServes the given directory on the specified port.\u003c/p\u003e\n",
-          "s": "apps/serve/Serve.java",
-          "c": "serve@alaurie"
-        },
-        {
-          "a": "nudge",
-          "d": "\u003cp\u003eSimulates user activity (mouse movement, key press, scrolling) to keep your presence status active.\u003c/p\u003e\n",
-          "s": "apps/nudge/Nudge.java",
-          "c": "nudge@alaurie"
-        },
-        {
-          "a": "typeit",
-          "d": "\u003cp\u003eSimulates typing clipboard text (or custom string) into active window after countdown.\u003c/p\u003e\n",
-          "s": "apps/typeit/Typeit.java",
-          "c": "typeit@alaurie"
-        },
-        {
-          "a": "jwt",
-          "d": "\u003cp\u003eInspect and decode JSON Web Tokens (JWT) safely off-line.\u003c/p\u003e\n",
-          "s": "apps/jwt/Jwt.java",
-          "c": "jwt@alaurie"
-        },
-        {
-          "a": "killport",
-          "d": "\u003cp\u003eFind and terminate processes listening on specified network ports.\u003c/p\u003e\n",
-          "s": "apps/killport/Killport.java",
-          "c": "killport@alaurie"
-        },
-        {
-          "a": "digest",
-          "d": "\u003cp\u003eCompute and verify cryptographic checksums for files or text input.\u003c/p\u003e\n",
-          "s": "apps/digest/Digest.java",
-          "c": "digest@alaurie"
-        },
-        {
-          "a": "fetch",
-          "d": "\u003cp\u003eMultithreaded download utility with automatic checksum capability.\u003c/p\u003e\n",
-          "s": "apps/fetch/Fetch.java",
-          "c": "fetch@alaurie"
-        },
-        {
-          "a": "reach",
-          "d": "\u003cp\u003eNetwork diagnostic CLI utility to test TCP reachability and inspect TLS certs.\u003c/p\u003e\n",
-          "s": "apps/reach/Reach.java",
-          "c": "reach@alaurie"
-        },
-        {
-          "a": "slowfetch",
-          "d": "\u003cp\u003eTerminal system information fetcher powered by OSHI.\u003c/p\u003e\n",
-          "s": "apps/slowfetch/Slowfetch.java",
-          "c": "slowfetch@alaurie"
-        },
-        {
-          "a": "install-native",
-          "d": "\u003cp\u003eCompile and export catalog tools as standalone zero-overhead native executables.\u003c/p\u003e\n",
-          "s": "apps/install-native/InstallNative.java",
-          "c": "install-native@alaurie"
-        },
-        {
-          "a": "jellyfin-backup",
-          "d": "\u003cp\u003eComplete disaster recovery backup, restore, and inspection utility for Jellyfin media server.\u003c/p\u003e\n",
-          "s": "apps/jellyfin-backup/JellyfinBackup.java",
-          "c": "jellyfin-backup@alaurie"
         }
       ],
       "templates": []
@@ -5698,21 +5698,6 @@
           "d": "\u003cp\u003eRun YAKS tests locally\u003c/p\u003e\n",
           "s": "java/tools/yaks-jbang/dist/YaksJBang.java",
           "c": "yaks@R6Y8bihv/MlJCFdY"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "gaurabhok",
-      "name": "karate-automation",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/98075537?v\u003d4",
-      "link": "https://github.com/gaurabhok/karate-automation/blob/dae22a4de2a39e0a6a8c3be5ddef28ed3bdd7c39/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "karate",
-          "s": "com.intuit.karate:karate-core:1.3.1:all",
-          "c": "karate@gaurabhok/karate-automation"
         }
       ],
       "templates": []
@@ -6906,6 +6891,21 @@
           "d": "\u003cp\u003eLaunch the JUnit Platform from the console\u003c/p\u003e\n",
           "s": "org.junit.platform:junit-platform-console-standalone:6.1.3",
           "c": "cli@junit-team"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "gaurabhok",
+      "name": "karate-automation",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/98075537?v\u003d4",
+      "link": "https://github.com/gaurabhok/karate-automation/blob/dae22a4de2a39e0a6a8c3be5ddef28ed3bdd7c39/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "karate",
+          "s": "com.intuit.karate:karate-core:1.3.1:all",
+          "c": "karate@gaurabhok/karate-automation"
         }
       ],
       "templates": []
