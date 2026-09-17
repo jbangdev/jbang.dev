@@ -1,11 +1,11 @@
 {
-  "aliasCount": 944,
+  "aliasCount": 946,
   "templateCount": 82,
   "catalogs": [
     {
       "owner": "apple",
       "name": "pkl",
-      "stars": 11522,
+      "stars": 11523,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "link": "https://github.com/apple/pkl/blob/c71b107e328aa99819c09aca8c0799d0d8099f5d/jbang-catalog.json",
       "aliases": [
@@ -65,7 +65,7 @@
     {
       "owner": "tabulapdf",
       "name": "tabula-java",
-      "stars": 2038,
+      "stars": 2039,
       "icon": "https://avatars.githubusercontent.com/u/8267906?v\u003d4",
       "link": "https://github.com/tabulapdf/tabula-java/blob/2cdf3b4fd3f7e921dca8cc6814cdd9316be40f0f/jbang-catalog.json",
       "aliases": [
@@ -97,7 +97,7 @@
       "name": "validator",
       "stars": 1980,
       "icon": "https://avatars.githubusercontent.com/u/498971?v\u003d4",
-      "link": "https://github.com/validator/validator/blob/e63d468e3e04a0d4eab305d385a34b9da1075653/jbang-catalog.json",
+      "link": "https://github.com/validator/validator/blob/29f085e80ce755d892894c7e126e731f6c5fbd6c/jbang-catalog.json",
       "aliases": [
         {
           "a": "vnu",
@@ -610,7 +610,7 @@
       "name": "boot-ui",
       "stars": 294,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
-      "link": "https://github.com/jdubois/boot-ui/blob/572964c4d1123e28ce9e133bc65de44fc81b8913/jbang-catalog.json",
+      "link": "https://github.com/jdubois/boot-ui/blob/20bdf88cef5f57828c7e135f9c4533e1eb5244e0/jbang-catalog.json",
       "aliases": [
         {
           "a": "bootui",
@@ -707,7 +707,7 @@
       "name": "quarkus-roq",
       "stars": 139,
       "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "link": "https://github.com/quarkiverse/quarkus-roq/blob/6dd2f854500664577ab61d01ad7e4246a661dfc8/jbang-catalog.json",
+      "link": "https://github.com/quarkiverse/quarkus-roq/blob/22ffe9ec5d82bb2b1734f9ccac636d5500dc3c7c/jbang-catalog.json",
       "aliases": [
         {
           "a": "roq",
@@ -1118,7 +1118,7 @@
       "name": "pilot",
       "stars": 42,
       "icon": "https://avatars.githubusercontent.com/u/118349365?v\u003d4",
-      "link": "https://github.com/maveniverse/pilot/blob/848999018d566d149bed4b9607bf7e258492da85/jbang-catalog.json",
+      "link": "https://github.com/maveniverse/pilot/blob/b119fcaad33faf06f5486f803a125cffd01ba739/jbang-catalog.json",
       "aliases": [
         {
           "a": "pilot",
@@ -1162,7 +1162,7 @@
       "name": "incus-spawn",
       "stars": 38,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/f9ff30a9215c59e370d40e6d9a97f9d2e1521fed/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/96ea2075600e2c615a5c6a8716bac9ae4655f49c/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -1700,7 +1700,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/4a89156f0d509940d9f1394279b5108112658def/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/09e44777063ba5e658ce77cd46450c91283d6a18/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -2734,7 +2734,7 @@
       "name": "jbang-catalog",
       "stars": 3,
       "icon": "https://avatars.githubusercontent.com/u/778793?v\u003d4",
-      "link": "https://github.com/quintesse/jbang-catalog/blob/50d4af759c2157889a52940b4e6c72a70f045b32/jbang-catalog.json",
+      "link": "https://github.com/quintesse/jbang-catalog/blob/e7dc77b17ad0e2e1aca83d716d4ac2f4bd184646/jbang-catalog.json",
       "aliases": [
         {
           "a": "cat",
@@ -2818,6 +2818,12 @@
           "d": "\u003cp\u003eRuns Netbeans Jackpot tool for refactoring Java code\u003c/p\u003e\n",
           "s": "org.apache.netbeans.modules.jackpot30:tool:28.0",
           "c": "refactor@quintesse"
+        },
+        {
+          "a": "ijq",
+          "d": "\u003cp\u003eAn interactive JSON query tool\u003c/p\u003e\n",
+          "s": "ijq.java",
+          "c": "ijq@quintesse"
         },
         {
           "a": "imap",
@@ -3892,7 +3898,7 @@
       "name": "jbang-catalog",
       "stars": 1,
       "icon": "https://avatars.githubusercontent.com/u/1402140?v\u003d4",
-      "link": "https://github.com/alaurie/jbang-catalog/blob/907e9f941b856a455db3d108718e0d8e7d019461/jbang-catalog.json",
+      "link": "https://github.com/alaurie/jbang-catalog/blob/03e0bc3c882a6bc9db2d137045d948447ef30c07/jbang-catalog.json",
       "aliases": [
         {
           "a": "serve",
@@ -5707,7 +5713,7 @@
       "name": "fluxtionauditlog-analyser",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/196444918?v\u003d4",
-      "link": "https://github.com/telaminai/fluxtionauditlog-analyser/blob/c5a47c053b0c588fc72c3f506a1b30957c68a902/jbang-catalog.json",
+      "link": "https://github.com/telaminai/fluxtionauditlog-analyser/blob/96a11acba18d5cbdb5ec6e812058abcc649987b8/jbang-catalog.json",
       "aliases": [
         {
           "a": "analyser",
@@ -6911,6 +6917,21 @@
       "templates": []
     },
     {
+      "owner": "kmos",
+      "name": "jbang-catalog",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/8403734?v\u003d4",
+      "link": "https://github.com/kmos/jbang-catalog/blob/fdd87837478cc973c18396e0c42818d98c045c76/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "rag",
+          "s": "debezium-jbang-rag/dist/RagCLI.java",
+          "c": "rag@kmos"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "base2Services",
       "name": "jbang-catalog",
       "stars": 0,
@@ -7011,7 +7032,7 @@
       "name": "smallrye-acp-client",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/38892730?v\u003d4",
-      "link": "https://github.com/smallrye/smallrye-acp-client/blob/1062c4c4b98f09ce2e2bc7653cb782f7dc096690/jbang-catalog.json",
+      "link": "https://github.com/smallrye/smallrye-acp-client/blob/311b9789b9753dcb2dff3e692244c36f079371fc/jbang-catalog.json",
       "aliases": [
         {
           "a": "acp",
