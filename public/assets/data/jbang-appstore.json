@@ -1,11 +1,11 @@
 {
-  "aliasCount": 948,
+  "aliasCount": 949,
   "templateCount": 82,
   "catalogs": [
     {
       "owner": "apple",
       "name": "pkl",
-      "stars": 11529,
+      "stars": 11531,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "link": "https://github.com/apple/pkl/blob/d5a7dc021e1ea0c71afd52509238926c1d614851/jbang-catalog.json",
       "aliases": [
@@ -32,7 +32,7 @@
       "name": "oshi",
       "stars": 5265,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/36510dc131926923ee3f9dbcad21d32d219b75c8/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/a8b00a51532b9d4606e7270a8e944a9237eb055c/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -203,7 +203,7 @@
     {
       "owner": "tamboui",
       "name": "tamboui",
-      "stars": 654,
+      "stars": 657,
       "icon": "https://avatars.githubusercontent.com/u/251016663?v\u003d4",
       "link": "https://github.com/tamboui/tamboui/blob/80791dc9199ae27deaf9a7baa88a39e673395fcd/jbang-catalog.json",
       "aliases": [
@@ -546,7 +546,7 @@
       "name": "citrus",
       "stars": 485,
       "icon": "https://avatars.githubusercontent.com/u/27848811?v\u003d4",
-      "link": "https://github.com/citrusframework/citrus/blob/d8198ecd87447d904daf7617c2f31754ad8dbe4e/jbang-catalog.json",
+      "link": "https://github.com/citrusframework/citrus/blob/d1904636d3f4fb90fca743967ea59cc615ff840d/jbang-catalog.json",
       "aliases": [
         {
           "a": "citrus",
@@ -608,9 +608,9 @@
     {
       "owner": "jdubois",
       "name": "boot-ui",
-      "stars": 295,
+      "stars": 296,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
-      "link": "https://github.com/jdubois/boot-ui/blob/273a518e2703812182dbbd2f62fc28680613dac2/jbang-catalog.json",
+      "link": "https://github.com/jdubois/boot-ui/blob/6cf7dc418fce5909bf86d6831ca2ec1648a34aee/jbang-catalog.json",
       "aliases": [
         {
           "a": "bootui",
@@ -705,7 +705,7 @@
     {
       "owner": "quarkiverse",
       "name": "quarkus-roq",
-      "stars": 143,
+      "stars": 146,
       "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
       "link": "https://github.com/quarkiverse/quarkus-roq/blob/7df69baab836baeffbba6ed75cf7c8cdb3e0e6fc/jbang-catalog.json",
       "aliases": [
@@ -1288,7 +1288,7 @@
       "name": "jylos",
       "stars": 26,
       "icon": "https://avatars.githubusercontent.com/u/43444131?v\u003d4",
-      "link": "https://github.com/RGiskard7/jylos/blob/7b2b518b6ceb433abaf0dde93e47dcaf2d631612/jbang-catalog.json",
+      "link": "https://github.com/RGiskard7/jylos/blob/e773237671d17b11da86b7961508fb0943d6a7b6/jbang-catalog.json",
       "aliases": [
         {
           "a": "jylos",
@@ -1661,7 +1661,7 @@
       "name": "github-contributors-list",
       "stars": 17,
       "icon": "https://avatars.githubusercontent.com/u/1366654?v\u003d4",
-      "link": "https://github.com/koppor/github-contributors-list/blob/56e3e6a409195ca71ab18424c4f9508d6d97e351/jbang-catalog.json",
+      "link": "https://github.com/koppor/github-contributors-list/blob/8d6475f0a73d84c8ad1febfcef44ab22060f81cd/jbang-catalog.json",
       "aliases": [
         {
           "a": "gcl",
@@ -1706,7 +1706,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/1160addd5101644775c1821059bf0f202dcf5a65/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/c143302694f03085fffd2bb7248af063bc02ecc3/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -1942,7 +1942,7 @@
       "name": "jbang-catalog",
       "stars": 8,
       "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/8223dc6ae9675e233e559f639888e50468d79559/jbang-catalog.json",
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/4df07e873b954ff819b7213f86702c974467d448/jbang-catalog.json",
       "aliases": [
         {
           "a": "buginfo",
@@ -1964,17 +1964,17 @@
         },
         {
           "a": "cli",
-          "s": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.39.4/quarkus-cli-3.39.4-runner.jar",
+          "s": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.39.5/quarkus-cli-3.39.5-runner.jar",
           "c": "cli@quarkusio"
         },
         {
           "a": "qs",
-          "s": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.39.4/quarkus-cli-3.39.4-runner.jar",
+          "s": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.39.5/quarkus-cli-3.39.5-runner.jar",
           "c": "qs@quarkusio"
         },
         {
           "a": "quarkus",
-          "s": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.39.4/quarkus-cli-3.39.4-runner.jar",
+          "s": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.39.5/quarkus-cli-3.39.5-runner.jar",
           "c": "quarkus@quarkusio"
         },
         {
@@ -2116,7 +2116,7 @@
       "name": "magic-merge-commit",
       "stars": 7,
       "icon": "https://avatars.githubusercontent.com/u/1366654?v\u003d4",
-      "link": "https://github.com/koppor/magic-merge-commit/blob/b49209c9bc2a44515f8af9c4b785f04d0a5f7ced/jbang-catalog.json",
+      "link": "https://github.com/koppor/magic-merge-commit/blob/d93e730eb249c0a9da2dbf056d1363715931014c/jbang-catalog.json",
       "aliases": [
         {
           "a": "do",
@@ -2228,7 +2228,7 @@
       "name": "ghprcomment",
       "stars": 6,
       "icon": "https://avatars.githubusercontent.com/u/1366654?v\u003d4",
-      "link": "https://github.com/koppor/ghprcomment/blob/1bd7e237c6ce1a721f94032bc0594fbc468690fe/jbang-catalog.json",
+      "link": "https://github.com/koppor/ghprcomment/blob/15e4e8664424356ca518512fa236508f0d2b3a0c/jbang-catalog.json",
       "aliases": [
         {
           "a": "ghprcomment",
@@ -3377,7 +3377,7 @@
       "name": "wanaku-barn",
       "stars": 2,
       "icon": "https://avatars.githubusercontent.com/u/200620763?v\u003d4",
-      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/b37a0890c91f886a5d80353ca9a2dad247187bf5/jbang-catalog.json",
+      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/d94692d97487a9a54e6621c68f8847245c4ca896/jbang-catalog.json",
       "aliases": [
         {
           "a": "wanaku",
@@ -3491,22 +3491,6 @@
           "a": "pkl-codegen",
           "s": "org.pkl-lang:pkl-tools:0.25.2",
           "c": "pkl-codegen@linux-china"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "FroMage",
-      "name": "jbang-catalog",
-      "stars": 2,
-      "icon": "https://avatars.githubusercontent.com/u/179265?v\u003d4",
-      "link": "https://github.com/FroMage/jbang-catalog/blob/7aae6527207f06395ae3b30c36bc0d81b734180b/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "static-init-finder",
-          "d": "\u003cp\u003eFind static init calls to classes\u003c/p\u003e\n",
-          "s": "ListStaticInit.java",
-          "c": "static-init-finder@FroMage"
         }
       ],
       "templates": []
@@ -3682,6 +3666,22 @@
           "a": "jbangquarkus",
           "s": "jbangquarkus.java",
           "c": "jbangquarkus@aizedevops/spring-boot-projects~jbang"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "FroMage",
+      "name": "jbang-catalog",
+      "stars": 2,
+      "icon": "https://avatars.githubusercontent.com/u/179265?v\u003d4",
+      "link": "https://github.com/FroMage/jbang-catalog/blob/7aae6527207f06395ae3b30c36bc0d81b734180b/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "static-init-finder",
+          "d": "\u003cp\u003eFind static init calls to classes\u003c/p\u003e\n",
+          "s": "ListStaticInit.java",
+          "c": "static-init-finder@FroMage"
         }
       ],
       "templates": []
@@ -5719,7 +5719,7 @@
       "name": "fluxtionauditlog-analyser",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/196444918?v\u003d4",
-      "link": "https://github.com/telaminai/fluxtionauditlog-analyser/blob/f91919ebbcde2d83714c550a9f9c57417c0af794/jbang-catalog.json",
+      "link": "https://github.com/telaminai/fluxtionauditlog-analyser/blob/296b54381d3577aec3af11c7561a09000eacec3f/jbang-catalog.json",
       "aliases": [
         {
           "a": "analyser",
@@ -5809,6 +5809,22 @@
       "templates": []
     },
     {
+      "owner": "FroMage",
+      "name": "qraven",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/179265?v\u003d4",
+      "link": "https://github.com/FroMage/qraven/blob/0874ea5369be9888d215fe2832c861038702ee7c/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "qraven",
+          "d": "\u003cp\u003eFast build tool that generates self-contained build.jar from Maven pom.xml files\u003c/p\u003e\n",
+          "s": "hardcoded/src/main/java/io/quarkiverse/qraven/hardcoded/QravenCli.java",
+          "c": "qraven@FroMage/qraven"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "ep-infosec",
       "name": "33_apache_sling-whiteboard",
       "stars": 0,
@@ -5879,7 +5895,7 @@
       "name": "limn-toolkit",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/313112530?v\u003d4",
-      "link": "https://github.com/limn-toolkit/limn-toolkit/blob/89630e7f054a68578153db5d32d0ed2ea7d8857a/jbang-catalog.json",
+      "link": "https://github.com/limn-toolkit/limn-toolkit/blob/ad63cf7ac14fad1d122438ae7f9e4cafcc8fd733/jbang-catalog.json",
       "aliases": [
         {
           "a": "demo",
@@ -7070,7 +7086,7 @@
       "name": "FGU_MCP_Server",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/8014692?v\u003d4",
-      "link": "https://github.com/rmcdouga/FGU_MCP_Server/blob/87249094e3276ea3201f927a75bd66fed18a0775/jbang-catalog.json",
+      "link": "https://github.com/rmcdouga/FGU_MCP_Server/blob/b2ce1b7fefcb8621f9a13903fc8937a6fb9ebacd/jbang-catalog.json",
       "aliases": [
         {
           "a": "fgu_mcp_server",
