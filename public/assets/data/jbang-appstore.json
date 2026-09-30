@@ -1,13 +1,13 @@
 {
-  "aliasCount": 950,
+  "aliasCount": 951,
   "templateCount": 82,
   "catalogs": [
     {
       "owner": "apple",
       "name": "pkl",
-      "stars": 11534,
+      "stars": 11537,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
-      "link": "https://github.com/apple/pkl/blob/e83d8fa14b82dfe1925536dd304a9c21cbb3238d/jbang-catalog.json",
+      "link": "https://github.com/apple/pkl/blob/8331570aafe66d35a0416c5033d1e50e1ab2568a/jbang-catalog.json",
       "aliases": [
         {
           "a": "pkl",
@@ -32,7 +32,7 @@
       "name": "oshi",
       "stars": 5266,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/f9b03d0cbef901d971fea7783e383e49469e11dd/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/402adedabdeb1ded13f6148be7f290eca3fce170/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -110,7 +110,7 @@
     {
       "owner": "jbangdev",
       "name": "jbang",
-      "stars": 1867,
+      "stars": 1868,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "link": "https://github.com/jbangdev/jbang/blob/cae3ad75179bbfcf3e4a0e3dbb8b3d2489149f52/docs/modules/ROOT/examples/jbang-catalog.json",
       "aliases": [
@@ -203,7 +203,7 @@
     {
       "owner": "tamboui",
       "name": "tamboui",
-      "stars": 665,
+      "stars": 668,
       "icon": "https://avatars.githubusercontent.com/u/251016663?v\u003d4",
       "link": "https://github.com/tamboui/tamboui/blob/80791dc9199ae27deaf9a7baa88a39e673395fcd/jbang-catalog.json",
       "aliases": [
@@ -610,7 +610,7 @@
       "name": "boot-ui",
       "stars": 297,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
-      "link": "https://github.com/jdubois/boot-ui/blob/e91face9799ffe8674c3edb62ffc2921c7aa4aae/jbang-catalog.json",
+      "link": "https://github.com/jdubois/boot-ui/blob/357d3491cbd4d6e048e324677009d1e8aa8316b8/jbang-catalog.json",
       "aliases": [
         {
           "a": "bootui",
@@ -707,7 +707,7 @@
       "name": "quarkus-roq",
       "stars": 148,
       "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "link": "https://github.com/quarkiverse/quarkus-roq/blob/e32720c5ac982570235bf1f12c504cd167a9066c/jbang-catalog.json",
+      "link": "https://github.com/quarkiverse/quarkus-roq/blob/7ed619a06c5d81b25eb93acc77b7bd3eb5886d3e/jbang-catalog.json",
       "aliases": [
         {
           "a": "roq",
@@ -800,7 +800,7 @@
       "name": "cli",
       "stars": 68,
       "icon": "https://avatars.githubusercontent.com/u/207676178?v\u003d4",
-      "link": "https://github.com/archgate/cli/blob/583efbac14e1069d8d2b4b0b0986f123b7d65547/shims/maven/jbang-catalog.json",
+      "link": "https://github.com/archgate/cli/blob/3c6b2c4793d075bfc07015426b75d6ef2fb42e28/shims/maven/jbang-catalog.json",
       "aliases": [
         {
           "a": "archgate",
@@ -1134,7 +1134,7 @@
       "name": "incus-spawn",
       "stars": 41,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/d31a4b2edaec795f8a01b4701b81597ddc2a84da/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/75cd2c5179a2f7890ca7a6e166691eaf852ff782/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -1706,7 +1706,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/f11e32535470d596d4887484591510b829049bc3/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/1de05f65d9dbefb9494572c0b59dae19ea692b3a/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -2267,6 +2267,22 @@
       "templates": []
     },
     {
+      "owner": "adr",
+      "name": "madrlint",
+      "stars": 6,
+      "icon": "https://avatars.githubusercontent.com/u/30127167?v\u003d4",
+      "link": "https://github.com/adr/madrlint/blob/fcc61cda039a56f630821cd09243d0b80dc9e4e6/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "madrlint",
+          "d": "\u003cp\u003eLint Markdown Architectural Decision Record (MADR) files.\u003c/p\u003e\n",
+          "s": "https://github.com/adr/madrlint/releases/latest/download/madrlint.jar",
+          "c": "madrlint@adr/madrlint"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "maxandersen",
       "name": "jbang-catalog",
       "stars": 6,
@@ -2543,22 +2559,6 @@
       "templates": []
     },
     {
-      "owner": "adr",
-      "name": "madrlint",
-      "stars": 5,
-      "icon": "https://avatars.githubusercontent.com/u/30127167?v\u003d4",
-      "link": "https://github.com/adr/madrlint/blob/fcc61cda039a56f630821cd09243d0b80dc9e4e6/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "madrlint",
-          "d": "\u003cp\u003eLint Markdown Architectural Decision Record (MADR) files.\u003c/p\u003e\n",
-          "s": "https://github.com/adr/madrlint/releases/latest/download/madrlint.jar",
-          "c": "madrlint@adr/madrlint"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "maxandersen",
       "name": "lazyslide",
       "stars": 5,
@@ -2570,6 +2570,22 @@
           "d": "\u003cp\u003elazyslide: render, serve, watch, and initialize AsciiDoc reveal.js decks\u003c/p\u003e\n",
           "s": "lazyslide.java",
           "c": "lazyslide@maxandersen/lazyslide"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "souther-lang",
+      "name": "souther-native-compiler",
+      "stars": 5,
+      "icon": "https://avatars.githubusercontent.com/u/308765933?v\u003d4",
+      "link": "https://github.com/souther-lang/souther-native-compiler/blob/1ad4e7e2a40c060f1c99a2312ef118ee94ca3a73/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "souther-native",
+          "d": "\u003cp\u003eCompiles a checked Souther program to a host-native object, and writes a library and the bindings of it. Fetches the driver and the generators it needs the first time it needs them.\u003c/p\u003e\n",
+          "s": "org.souther-lang:souther-native-compiler:RELEASE",
+          "c": "souther-native@souther-lang/souther-native-compiler"
         }
       ],
       "templates": []
@@ -2610,7 +2626,7 @@
       "name": "jbang-catalog",
       "stars": 4,
       "icon": "https://avatars.githubusercontent.com/u/11964329?v\u003d4",
-      "link": "https://github.com/debezium/jbang-catalog/blob/bffd79f7d20211b817d15d376de2eb5721b92e96/jbang-catalog.json",
+      "link": "https://github.com/debezium/jbang-catalog/blob/ed4eae4d5f43684b1e7e5abda224099ed0d1fb89/jbang-catalog.json",
       "aliases": [
         {
           "a": "debezium",
@@ -3111,6 +3127,22 @@
       "templates": []
     },
     {
+      "owner": "alxkm",
+      "name": "java-concurrency-interview",
+      "stars": 3,
+      "icon": "https://avatars.githubusercontent.com/u/19151554?v\u003d4",
+      "link": "https://github.com/alxkm/java-concurrency-interview/blob/a6397183b40402bcabb4f06d858d40bd07ce4e88/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "quiz",
+          "d": "\u003cp\u003eJava concurrency interview quiz: mock interviews, flashcards and a review of your misses\u003c/p\u003e\n",
+          "s": "https://github.com/alxkm/java-concurrency-interview/releases/latest/download/java-concurrency-interview.jar",
+          "c": "quiz@alxkm/java-concurrency-interview"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "glaforge",
       "name": "arxiv-mcp-server",
       "stars": 3,
@@ -3169,28 +3201,6 @@
           "d": "\u003cp\u003eHelloVass Figma MCP server\u003c/p\u003e\n",
           "s": "https://github.com/HelloVass/hellovass-figma-mcp/releases/download/v0.1.3/hellovass-figma-mcp-0.1.3-all-r8.jar",
           "c": "hellovass-figma@HelloVass/hellovass-figma-mcp"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "jreleaser",
-      "name": "jbang-catalog",
-      "stars": 2,
-      "icon": "https://avatars.githubusercontent.com/u/81020166?v\u003d4",
-      "link": "https://github.com/jreleaser/jbang-catalog/blob/e3d470b5f7236c4a98401f5f5a00ed5bf1c35372/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "jreleaser",
-          "d": "\u003cp\u003eRelease projects quickly and easily with JReleaser\u003c/p\u003e\n",
-          "s": "jreleaser.java",
-          "c": "jreleaser@jreleaser"
-        },
-        {
-          "a": "jreleaser-snapshot",
-          "d": "\u003cp\u003eRelease projects quickly and easily with JReleaser\u003c/p\u003e\n",
-          "s": "jreleaser_snapshot.java",
-          "c": "jreleaser-snapshot@jreleaser"
         }
       ],
       "templates": []
@@ -3377,7 +3387,7 @@
       "name": "wanaku-barn",
       "stars": 2,
       "icon": "https://avatars.githubusercontent.com/u/200620763?v\u003d4",
-      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/a7d9e930d8da4dadb16e273c465501631b69117b/jbang-catalog.json",
+      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/1e5cf371eb8be0f9c9bad75049db3ca747989688/jbang-catalog.json",
       "aliases": [
         {
           "a": "wanaku",
@@ -3646,6 +3656,28 @@
       "templates": []
     },
     {
+      "owner": "jreleaser",
+      "name": "jbang-catalog",
+      "stars": 2,
+      "icon": "https://avatars.githubusercontent.com/u/81020166?v\u003d4",
+      "link": "https://github.com/jreleaser/jbang-catalog/blob/e3d470b5f7236c4a98401f5f5a00ed5bf1c35372/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "jreleaser",
+          "d": "\u003cp\u003eRelease projects quickly and easily with JReleaser\u003c/p\u003e\n",
+          "s": "jreleaser.java",
+          "c": "jreleaser@jreleaser"
+        },
+        {
+          "a": "jreleaser-snapshot",
+          "d": "\u003cp\u003eRelease projects quickly and easily with JReleaser\u003c/p\u003e\n",
+          "s": "jreleaser_snapshot.java",
+          "c": "jreleaser-snapshot@jreleaser"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "aizedevops",
       "name": "spring-boot-projects",
       "stars": 2,
@@ -3754,22 +3786,6 @@
       "templates": []
     },
     {
-      "owner": "maven-flow",
-      "name": "changelog-merge-driver",
-      "stars": 1,
-      "icon": "https://avatars.githubusercontent.com/u/166258741?v\u003d4",
-      "link": "https://github.com/maven-flow/changelog-merge-driver/blob/4f9446a29a9e6b935b0fd710aa047f9ff03641ad/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "changelog-merge-driver",
-          "d": "\u003cp\u003eA Git merge driver for changelogs\u003c/p\u003e\n",
-          "s": "ChangelogMergeDriver.java",
-          "c": "changelog-merge-driver@maven-flow/changelog-merge-driver"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "neolegal-fr",
       "name": "tabula-java",
       "stars": 1,
@@ -3796,121 +3812,6 @@
           "d": "\u003cp\u003eA Java load generator built on virtual threads\u003c/p\u003e\n",
           "s": "roadrunner.java",
           "c": "roadrunner@symentispl/roadrunner"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "jOOQ",
-      "name": "jbang-catalog",
-      "stars": 1,
-      "icon": "https://avatars.githubusercontent.com/u/1666512?v\u003d4",
-      "link": "https://github.com/jOOQ/jbang-catalog/blob/d1496626cca251fa97947f2b1a1ca7a24f6fbc47/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "codegen",
-          "s": "codegen.java",
-          "c": "codegen@jOOQ"
-        },
-        {
-          "a": "codegen-pro",
-          "s": "codegenpro.java",
-          "c": "codegen-pro@jOOQ"
-        },
-        {
-          "a": "codegen-pro-java-8",
-          "s": "codegenprojava8.java",
-          "c": "codegen-pro-java-8@jOOQ"
-        },
-        {
-          "a": "codegen-pro-java-11",
-          "s": "codegenprojava11.java",
-          "c": "codegen-pro-java-11@jOOQ"
-        },
-        {
-          "a": "codegen-trial",
-          "s": "codegentrial.java",
-          "c": "codegen-trial@jOOQ"
-        },
-        {
-          "a": "codegen-trial-java-8",
-          "s": "codegentrialjava8.java",
-          "c": "codegen-trial-java-8@jOOQ"
-        },
-        {
-          "a": "codegen-trial-java-11",
-          "s": "codegentrialjava11.java",
-          "c": "codegen-trial-java-11@jOOQ"
-        },
-        {
-          "a": "parser",
-          "s": "parser.java",
-          "c": "parser@jOOQ"
-        },
-        {
-          "a": "parser-pro",
-          "s": "parserpro.java",
-          "c": "parser-pro@jOOQ"
-        },
-        {
-          "a": "parser-pro-java-8",
-          "s": "parserprojava8.java",
-          "c": "parser-pro-java-8@jOOQ"
-        },
-        {
-          "a": "parser-pro-java-11",
-          "s": "parserprojava11.java",
-          "c": "parser-pro-java-11@jOOQ"
-        },
-        {
-          "a": "parser-trial",
-          "s": "parsertrial.java",
-          "c": "parser-trial@jOOQ"
-        },
-        {
-          "a": "parser-trial-java-8",
-          "s": "parsertrialjava8.java",
-          "c": "parser-trial-java-8@jOOQ"
-        },
-        {
-          "a": "parser-trial-java-11",
-          "s": "parsertrialjava11.java",
-          "c": "parser-trial-java-11@jOOQ"
-        },
-        {
-          "a": "diff",
-          "s": "diff.java",
-          "c": "diff@jOOQ"
-        },
-        {
-          "a": "diff-pro",
-          "s": "diffpro.java",
-          "c": "diff-pro@jOOQ"
-        },
-        {
-          "a": "diff-pro-java-8",
-          "s": "diffprojava8.java",
-          "c": "diff-pro-java-8@jOOQ"
-        },
-        {
-          "a": "diff-pro-java-11",
-          "s": "diffprojava11.java",
-          "c": "diff-pro-java-11@jOOQ"
-        },
-        {
-          "a": "diff-trial",
-          "s": "difftrial.java",
-          "c": "diff-trial@jOOQ"
-        },
-        {
-          "a": "diff-trial-java-8",
-          "s": "difftrialjava8.java",
-          "c": "diff-trial-java-8@jOOQ"
-        },
-        {
-          "a": "diff-trial-java-11",
-          "s": "difftrialjava11.java",
-          "c": "diff-trial-java-11@jOOQ"
         }
       ],
       "templates": []
@@ -4637,6 +4538,137 @@
           "a": "jbangquarkus",
           "s": "jbangquarkus.java",
           "c": "jbangquarkus@ramesh1972/samples-biz~samples-tech-stack/java_samples/langchain4j/eugenp/tutorials/jbang"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "maven-flow",
+      "name": "changelog-merge-driver",
+      "stars": 1,
+      "icon": "https://avatars.githubusercontent.com/u/166258741?v\u003d4",
+      "link": "https://github.com/maven-flow/changelog-merge-driver/blob/4f9446a29a9e6b935b0fd710aa047f9ff03641ad/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "changelog-merge-driver",
+          "d": "\u003cp\u003eA Git merge driver for changelogs\u003c/p\u003e\n",
+          "s": "ChangelogMergeDriver.java",
+          "c": "changelog-merge-driver@maven-flow/changelog-merge-driver"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "jOOQ",
+      "name": "jbang-catalog",
+      "stars": 1,
+      "icon": "https://avatars.githubusercontent.com/u/1666512?v\u003d4",
+      "link": "https://github.com/jOOQ/jbang-catalog/blob/d1496626cca251fa97947f2b1a1ca7a24f6fbc47/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "codegen",
+          "s": "codegen.java",
+          "c": "codegen@jOOQ"
+        },
+        {
+          "a": "codegen-pro",
+          "s": "codegenpro.java",
+          "c": "codegen-pro@jOOQ"
+        },
+        {
+          "a": "codegen-pro-java-8",
+          "s": "codegenprojava8.java",
+          "c": "codegen-pro-java-8@jOOQ"
+        },
+        {
+          "a": "codegen-pro-java-11",
+          "s": "codegenprojava11.java",
+          "c": "codegen-pro-java-11@jOOQ"
+        },
+        {
+          "a": "codegen-trial",
+          "s": "codegentrial.java",
+          "c": "codegen-trial@jOOQ"
+        },
+        {
+          "a": "codegen-trial-java-8",
+          "s": "codegentrialjava8.java",
+          "c": "codegen-trial-java-8@jOOQ"
+        },
+        {
+          "a": "codegen-trial-java-11",
+          "s": "codegentrialjava11.java",
+          "c": "codegen-trial-java-11@jOOQ"
+        },
+        {
+          "a": "parser",
+          "s": "parser.java",
+          "c": "parser@jOOQ"
+        },
+        {
+          "a": "parser-pro",
+          "s": "parserpro.java",
+          "c": "parser-pro@jOOQ"
+        },
+        {
+          "a": "parser-pro-java-8",
+          "s": "parserprojava8.java",
+          "c": "parser-pro-java-8@jOOQ"
+        },
+        {
+          "a": "parser-pro-java-11",
+          "s": "parserprojava11.java",
+          "c": "parser-pro-java-11@jOOQ"
+        },
+        {
+          "a": "parser-trial",
+          "s": "parsertrial.java",
+          "c": "parser-trial@jOOQ"
+        },
+        {
+          "a": "parser-trial-java-8",
+          "s": "parsertrialjava8.java",
+          "c": "parser-trial-java-8@jOOQ"
+        },
+        {
+          "a": "parser-trial-java-11",
+          "s": "parsertrialjava11.java",
+          "c": "parser-trial-java-11@jOOQ"
+        },
+        {
+          "a": "diff",
+          "s": "diff.java",
+          "c": "diff@jOOQ"
+        },
+        {
+          "a": "diff-pro",
+          "s": "diffpro.java",
+          "c": "diff-pro@jOOQ"
+        },
+        {
+          "a": "diff-pro-java-8",
+          "s": "diffprojava8.java",
+          "c": "diff-pro-java-8@jOOQ"
+        },
+        {
+          "a": "diff-pro-java-11",
+          "s": "diffprojava11.java",
+          "c": "diff-pro-java-11@jOOQ"
+        },
+        {
+          "a": "diff-trial",
+          "s": "difftrial.java",
+          "c": "diff-trial@jOOQ"
+        },
+        {
+          "a": "diff-trial-java-8",
+          "s": "difftrialjava8.java",
+          "c": "diff-trial-java-8@jOOQ"
+        },
+        {
+          "a": "diff-trial-java-11",
+          "s": "difftrialjava11.java",
+          "c": "diff-trial-java-11@jOOQ"
         }
       ],
       "templates": []
@@ -5735,7 +5767,7 @@
       "name": "fluxtionauditlog-analyser",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/196444918?v\u003d4",
-      "link": "https://github.com/telaminai/fluxtionauditlog-analyser/blob/ba8b601b2fd223b8fc7636dfc50cc06bcec8432a/jbang-catalog.json",
+      "link": "https://github.com/telaminai/fluxtionauditlog-analyser/blob/dd4115a6f166327b20d399e2ad9cde9a8a765893/jbang-catalog.json",
       "aliases": [
         {
           "a": "analyser",
@@ -5829,7 +5861,7 @@
       "name": "qraven",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/179265?v\u003d4",
-      "link": "https://github.com/FroMage/qraven/blob/aa992b3a0e8fd652dc6c6db74aa713515c7dfcc0/jbang-catalog.json",
+      "link": "https://github.com/FroMage/qraven/blob/e317dc0882e245aa454692eb19dd0374b4d9fb7f/jbang-catalog.json",
       "aliases": [
         {
           "a": "qraven",
@@ -6355,6 +6387,64 @@
           "d": "\u003cp\u003eRun AsciidoctorJ 3.0\u003c/p\u003e\n",
           "s": "asciidoctorj.java",
           "c": "asciidoctorj@asciidoctor"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "btraceio",
+      "name": "jbang-catalog",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/16762720?v\u003d4",
+      "link": "https://github.com/btraceio/jbang-catalog/blob/683ea2a654f1c08b90fbf20628cdf8f6b0b0fe51/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "jafar-shell",
+          "d": "\u003cp\u003eInteractive CLI for exploring and analyzing Java Flight Recorder files with JfrPath query language\u003c/p\u003e\n",
+          "s": "io.btrace:jafar-shell:0.27.0",
+          "c": "jafar-shell@btraceio"
+        },
+        {
+          "a": "jafar-shell-latest",
+          "d": "\u003cp\u003eJFR Shell latest development version\u003c/p\u003e\n",
+          "s": "jafar-shell-latest.java",
+          "c": "jafar-shell-latest@btraceio"
+        },
+        {
+          "a": "jfr-shell",
+          "d": "\u003cp\u003eLegacy alias for jafar-shell (use jafar-shell instead)\u003c/p\u003e\n",
+          "s": "jafar-shell.java",
+          "c": "jfr-shell@btraceio"
+        },
+        {
+          "a": "jfr-mcp",
+          "d": "\u003cp\u003eJFR MCP Server; latest release\u003c/p\u003e\n",
+          "s": "io.btrace:jfr-mcp:0.27.0",
+          "c": "jfr-mcp@btraceio"
+        },
+        {
+          "a": "jfr-mcp-latest",
+          "d": "\u003cp\u003eJFR MCP Server latest development version\u003c/p\u003e\n",
+          "s": "jfr-mcp-latest.java",
+          "c": "jfr-mcp-latest@btraceio"
+        },
+        {
+          "a": "jafar-tools-latest",
+          "d": "\u003cp\u003ejafar-tools launcher (jfr2pprof, scrub, ...), latest development version\u003c/p\u003e\n",
+          "s": "jafar-tools-latest.java",
+          "c": "jafar-tools-latest@btraceio"
+        },
+        {
+          "a": "btrace",
+          "d": "\u003cp\u003eBTrace client launcher\u003c/p\u003e\n",
+          "s": "btrace.java",
+          "c": "btrace@btraceio"
+        },
+        {
+          "a": "btrace-latest",
+          "d": "\u003cp\u003eBTrace client launcher (latest snapshot)\u003c/p\u003e\n",
+          "s": "btrace-latest.java",
+          "c": "btrace-latest@btraceio"
         }
       ],
       "templates": []
@@ -6903,11 +6993,6 @@
           "a": "tabula",
           "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
           "c": "tabula@minhnq182012/chattest~Repos/tabulapdf_tabula-java"
-        },
-        {
-          "a": "tabula",
-          "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
-          "c": "tabula@minhnq182012/chattest~CoverageCal/repos/tabulapdf_tabula-java"
         },
         {
           "a": "tabula",
@@ -7505,64 +7590,6 @@
       ]
     },
     {
-      "owner": "btraceio",
-      "name": "jbang-catalog",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/16762720?v\u003d4",
-      "link": "https://github.com/btraceio/jbang-catalog/blob/59a63c60107d286499bd10e696fe9b95e02ab549/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "jafar-shell",
-          "d": "\u003cp\u003eInteractive CLI for exploring and analyzing Java Flight Recorder files with JfrPath query language\u003c/p\u003e\n",
-          "s": "io.btrace:jafar-shell:0.26.2",
-          "c": "jafar-shell@btraceio"
-        },
-        {
-          "a": "jafar-shell-latest",
-          "d": "\u003cp\u003eJFR Shell latest development version\u003c/p\u003e\n",
-          "s": "jafar-shell-latest.java",
-          "c": "jafar-shell-latest@btraceio"
-        },
-        {
-          "a": "jfr-shell",
-          "d": "\u003cp\u003eLegacy alias for jafar-shell (use jafar-shell instead)\u003c/p\u003e\n",
-          "s": "jafar-shell.java",
-          "c": "jfr-shell@btraceio"
-        },
-        {
-          "a": "jfr-mcp",
-          "d": "\u003cp\u003eJFR MCP Server; snapshot version\u003c/p\u003e\n",
-          "s": "io.btrace:jfr-mcp:0.26.2",
-          "c": "jfr-mcp@btraceio"
-        },
-        {
-          "a": "jfr-mcp-latest",
-          "d": "\u003cp\u003eJFR MCP Server latest development version\u003c/p\u003e\n",
-          "s": "jfr-mcp-latest.java",
-          "c": "jfr-mcp-latest@btraceio"
-        },
-        {
-          "a": "jafar-tools-latest",
-          "d": "\u003cp\u003ejafar-tools launcher (jfr2pprof, scrub, ...), latest development version\u003c/p\u003e\n",
-          "s": "jafar-tools-latest.java",
-          "c": "jafar-tools-latest@btraceio"
-        },
-        {
-          "a": "btrace",
-          "d": "\u003cp\u003eBTrace client launcher\u003c/p\u003e\n",
-          "s": "btrace.java",
-          "c": "btrace@btraceio"
-        },
-        {
-          "a": "btrace-latest",
-          "d": "\u003cp\u003eBTrace client launcher (latest snapshot)\u003c/p\u003e\n",
-          "s": "btrace-latest.java",
-          "c": "btrace-latest@btraceio"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "robin-a-meade",
       "name": "jbang-catalog",
       "stars": 0,
@@ -7725,7 +7752,7 @@
       "name": "drydock",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/16762720?v\u003d4",
-      "link": "https://github.com/btraceio/drydock/blob/807045d0a46fe51f3f239579578807aef94fe4df/jbang-catalog.json",
+      "link": "https://github.com/btraceio/drydock/blob/517f6e6b132037306a10ecc9bce4cfe091c0ad71/jbang-catalog.json",
       "aliases": [
         {
           "a": "drydock",
