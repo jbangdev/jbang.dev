@@ -1,5 +1,5 @@
 {
-  "aliasCount": 951,
+  "aliasCount": 952,
   "templateCount": 82,
   "catalogs": [
     {
@@ -7,7 +7,7 @@
       "name": "pkl",
       "stars": 11539,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
-      "link": "https://github.com/apple/pkl/blob/5747506f3a50da83b4b4cbf9a78eda3fae515c11/jbang-catalog.json",
+      "link": "https://github.com/apple/pkl/blob/6423b2add58fd770a6486d25f833815c0c4d3db9/jbang-catalog.json",
       "aliases": [
         {
           "a": "pkl",
@@ -97,7 +97,7 @@
       "name": "validator",
       "stars": 1988,
       "icon": "https://avatars.githubusercontent.com/u/498971?v\u003d4",
-      "link": "https://github.com/validator/validator/blob/996312a1c6236d2e25058dd232d97d6a35458423/jbang-catalog.json",
+      "link": "https://github.com/validator/validator/blob/87aadef6ed977693db0a7119567b01a430ec7c77/jbang-catalog.json",
       "aliases": [
         {
           "a": "vnu",
@@ -203,7 +203,7 @@
     {
       "owner": "tamboui",
       "name": "tamboui",
-      "stars": 669,
+      "stars": 671,
       "icon": "https://avatars.githubusercontent.com/u/251016663?v\u003d4",
       "link": "https://github.com/tamboui/tamboui/blob/80791dc9199ae27deaf9a7baa88a39e673395fcd/jbang-catalog.json",
       "aliases": [
@@ -544,9 +544,9 @@
     {
       "owner": "citrusframework",
       "name": "citrus",
-      "stars": 485,
+      "stars": 486,
       "icon": "https://avatars.githubusercontent.com/u/27848811?v\u003d4",
-      "link": "https://github.com/citrusframework/citrus/blob/9a367e7251c8c98a9cd3db549bb7fa5826379ecb/jbang-catalog.json",
+      "link": "https://github.com/citrusframework/citrus/blob/8324e5e3d4053879bd6fb45b200f63bea98f54a1/jbang-catalog.json",
       "aliases": [
         {
           "a": "citrus",
@@ -562,7 +562,7 @@
       "name": "hibernate-reactive",
       "stars": 469,
       "icon": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
-      "link": "https://github.com/hibernate/hibernate-reactive/blob/7c67849a2d3f69d7940712b4af8b74e7f3e4ec6b/jbang-catalog.json",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/dc0a083475b688b1205a2e96ddfc3dff91077526/jbang-catalog.json",
       "aliases": [
         {
           "a": "example",
@@ -608,9 +608,9 @@
     {
       "owner": "jdubois",
       "name": "boot-ui",
-      "stars": 299,
+      "stars": 300,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
-      "link": "https://github.com/jdubois/boot-ui/blob/bc52540fb079fb631a251c01235b0b13b7e5785b/jbang-catalog.json",
+      "link": "https://github.com/jdubois/boot-ui/blob/479db439125f584d30173a37613258078bcf7138/jbang-catalog.json",
       "aliases": [
         {
           "a": "bootui",
@@ -707,7 +707,7 @@
       "name": "quarkus-roq",
       "stars": 149,
       "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "link": "https://github.com/quarkiverse/quarkus-roq/blob/7ed619a06c5d81b25eb93acc77b7bd3eb5886d3e/jbang-catalog.json",
+      "link": "https://github.com/quarkiverse/quarkus-roq/blob/7e6af28a671c74276bf7bdab479b1f2c7dd3f20c/jbang-catalog.json",
       "aliases": [
         {
           "a": "roq",
@@ -1134,7 +1134,7 @@
       "name": "incus-spawn",
       "stars": 41,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/a35afc5727d4880bf6d30f0d002d6fb622e2f8f4/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/623600de6c18ac955165a9778a0d1c9fae9dd204/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -1706,7 +1706,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/d5986c936db80c3fc5d6c70b4c1eff94f08d00ca/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/a090a10d9b80a171654b98d68bb5f97163fa7bac/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -1772,7 +1772,7 @@
       "name": "leyden-analyzer",
       "stars": 13,
       "icon": "https://avatars.githubusercontent.com/u/726590?v\u003d4",
-      "link": "https://github.com/Delawen/leyden-analyzer/blob/956f49fd8991777ef67271abaccf0786005fa498/jbang-catalog.json",
+      "link": "https://github.com/Delawen/leyden-analyzer/blob/defdfe04b074a25acb8df3b9a46eb9ab520662b7/jbang-catalog.json",
       "aliases": [
         {
           "a": "analyzer",
@@ -2622,11 +2622,26 @@
       "templates": []
     },
     {
+      "owner": "parttimenerd",
+      "name": "jfr-redact",
+      "stars": 4,
+      "icon": "https://avatars.githubusercontent.com/u/490655?v\u003d4",
+      "link": "https://github.com/parttimenerd/jfr-redact/blob/bb17e73c36e4ec20f3ba6e75cfad87fa0929815a/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "jfr-redact",
+          "s": "https://github.com/parttimenerd/jfr-redact/releases/download/v0.3.0/jfr-redact.jar",
+          "c": "jfr-redact@parttimenerd/jfr-redact"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "debezium",
       "name": "jbang-catalog",
       "stars": 4,
       "icon": "https://avatars.githubusercontent.com/u/11964329?v\u003d4",
-      "link": "https://github.com/debezium/jbang-catalog/blob/ed4eae4d5f43684b1e7e5abda224099ed0d1fb89/jbang-catalog.json",
+      "link": "https://github.com/debezium/jbang-catalog/blob/bb37552b261e083cc509c2ba822cd563efe08275/jbang-catalog.json",
       "aliases": [
         {
           "a": "debezium",
@@ -2661,21 +2676,6 @@
           "c": "capturing:sqlserver@debezium"
         }
       ]
-    },
-    {
-      "owner": "parttimenerd",
-      "name": "jfr-redact",
-      "stars": 4,
-      "icon": "https://avatars.githubusercontent.com/u/490655?v\u003d4",
-      "link": "https://github.com/parttimenerd/jfr-redact/blob/bb17e73c36e4ec20f3ba6e75cfad87fa0929815a/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "jfr-redact",
-          "s": "https://github.com/parttimenerd/jfr-redact/releases/download/v0.3.0/jfr-redact.jar",
-          "c": "jfr-redact@parttimenerd/jfr-redact"
-        }
-      ],
-      "templates": []
     },
     {
       "owner": "t1",
@@ -2756,7 +2756,7 @@
       "name": "jbang-catalog",
       "stars": 3,
       "icon": "https://avatars.githubusercontent.com/u/778793?v\u003d4",
-      "link": "https://github.com/quintesse/jbang-catalog/blob/dcb850c887dfd880261aec1da39c93526201bc59/jbang-catalog.json",
+      "link": "https://github.com/quintesse/jbang-catalog/blob/6c5ea1b1fd83ac0a9a844681101da116f4355482/jbang-catalog.json",
       "aliases": [
         {
           "a": "cat",
@@ -3206,6 +3206,22 @@
       "templates": []
     },
     {
+      "owner": "redhat-camel",
+      "name": "jbang-catalog",
+      "stars": 2,
+      "icon": "https://avatars.githubusercontent.com/u/202962512?v\u003d4",
+      "link": "https://github.com/redhat-camel/jbang-catalog/blob/45b37f00d37a328d244b37c49cef46cef5657767/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "camel",
+          "d": "\u003cp\u003eCreate and run Red Hat Build of Apache Camel routes easily\u003c/p\u003e\n",
+          "s": "CamelJBang.java",
+          "c": "camel@redhat-camel"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "tors42",
       "name": "jbang-chariot",
       "stars": 2,
@@ -3261,22 +3277,6 @@
           "a": "updateArena",
           "s": "scripts/updateArena.java",
           "c": "updateArena@tors42/jbang-chariot"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "redhat-camel",
-      "name": "jbang-catalog",
-      "stars": 2,
-      "icon": "https://avatars.githubusercontent.com/u/202962512?v\u003d4",
-      "link": "https://github.com/redhat-camel/jbang-catalog/blob/3b13b3ca6ec7cdc9894efc8ddd0181240428613d/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "camel",
-          "d": "\u003cp\u003eCreate and run Red Hat Build of Apache Camel routes easily\u003c/p\u003e\n",
-          "s": "CamelJBang.java",
-          "c": "camel@redhat-camel"
         }
       ],
       "templates": []
@@ -3387,7 +3387,7 @@
       "name": "wanaku-barn",
       "stars": 2,
       "icon": "https://avatars.githubusercontent.com/u/200620763?v\u003d4",
-      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/2308c3727e364adce011041c69fc976b93a491b2/jbang-catalog.json",
+      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/a82b0f621893de30206ebb1b1fedf523e1fe3c66/jbang-catalog.json",
       "aliases": [
         {
           "a": "wanaku",
@@ -3903,6 +3903,22 @@
           "a": "springjbang",
           "s": "com/gomezrondon/springjbang/Application.java",
           "c": "springjbang@gomezrondon/spring-jbang"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "FroMage",
+      "name": "qraven",
+      "stars": 1,
+      "icon": "https://avatars.githubusercontent.com/u/179265?v\u003d4",
+      "link": "https://github.com/FroMage/qraven/blob/382991d473c42f6490726ad751168e6199e8f5ba/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "qraven",
+          "d": "\u003cp\u003eFast build tool that generates self-contained build.jar from Maven pom.xml files\u003c/p\u003e\n",
+          "s": "hardcoded/src/main/java/io/quarkiverse/qraven/hardcoded/QravenCli.java",
+          "c": "qraven@FroMage/qraven"
         }
       ],
       "templates": []
@@ -5767,7 +5783,7 @@
       "name": "fluxtionauditlog-analyser",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/196444918?v\u003d4",
-      "link": "https://github.com/telaminai/fluxtionauditlog-analyser/blob/258da371d957044625da4b88f5a433922f987b00/jbang-catalog.json",
+      "link": "https://github.com/telaminai/fluxtionauditlog-analyser/blob/c66f744d5fd7039be70032d79747f9a67df1514a/jbang-catalog.json",
       "aliases": [
         {
           "a": "analyser",
@@ -5845,29 +5861,13 @@
       "name": "electrostatic",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/837787?v\u003d4",
-      "link": "https://github.com/teggr/electrostatic/blob/831ba8c5d7aaa774b591ab17b2dc2174ccae1cf6/jbang-catalog.json",
+      "link": "https://github.com/teggr/electrostatic/blob/e3f1a1e9bf11b12e5dd9daf0ae7e93c3f82a99ac/jbang-catalog.json",
       "aliases": [
         {
           "a": "electrostatic",
           "d": "\u003cp\u003eElectrostatic static site generator CLI - build and serve static sites\u003c/p\u003e\n",
           "s": "site.electrostatic:electrostatic-cli:0.0.1-SNAPSHOT",
           "c": "electrostatic@teggr/electrostatic"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "FroMage",
-      "name": "qraven",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/179265?v\u003d4",
-      "link": "https://github.com/FroMage/qraven/blob/e317dc0882e245aa454692eb19dd0374b4d9fb7f/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "qraven",
-          "d": "\u003cp\u003eFast build tool that generates self-contained build.jar from Maven pom.xml files\u003c/p\u003e\n",
-          "s": "hardcoded/src/main/java/io/quarkiverse/qraven/hardcoded/QravenCli.java",
-          "c": "qraven@FroMage/qraven"
         }
       ],
       "templates": []
@@ -6998,6 +6998,11 @@
           "a": "tabula",
           "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
           "c": "tabula@minhnq182012/chattest~CoverageCal/ProjectResult/ChatTester/tabulapdf_tabula-java"
+        },
+        {
+          "a": "tabula",
+          "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
+          "c": "tabula@minhnq182012/chattest~CoverageCal/repos/tabulapdf_tabula-java"
         }
       ],
       "templates": []
@@ -7752,7 +7757,7 @@
       "name": "drydock",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/16762720?v\u003d4",
-      "link": "https://github.com/btraceio/drydock/blob/cec7663f65eef4732f3cf3826563238482dbc553/jbang-catalog.json",
+      "link": "https://github.com/btraceio/drydock/blob/bf78829d409a17ccf6365ba5df4fcfa1feafea51/jbang-catalog.json",
       "aliases": [
         {
           "a": "drydock",
