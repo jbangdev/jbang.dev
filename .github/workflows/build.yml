@@ -32,3 +32,5 @@ jobs:
           name: site
           path: ./target/roq
           retention-days: 3
+          # Keep /.well-known/ (dotfiles excluded by default)
+          include-hidden-files: true
