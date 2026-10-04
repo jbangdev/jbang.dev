@@ -5,7 +5,7 @@
     {
       "owner": "apple",
       "name": "pkl",
-      "stars": 11540,
+      "stars": 11539,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "link": "https://github.com/apple/pkl/blob/adaafc40459407539d5bf93bf4d4583632ded89e/jbang-catalog.json",
       "aliases": [
@@ -30,9 +30,9 @@
     {
       "owner": "oshi",
       "name": "oshi",
-      "stars": 5265,
+      "stars": 5266,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/56af85d0c3bc8f695a8c5199bc9d3b0fd13da7f9/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/138eec036ab30e8d632875168fbab84c45c87b45/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -110,9 +110,9 @@
     {
       "owner": "jbangdev",
       "name": "jbang",
-      "stars": 1869,
+      "stars": 1870,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang/blob/00e862177d9abb53bb12075a50165346fe749a0d/docs/modules/ROOT/examples/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang/blob/867523c6c77836c7aed91694630327c4ebc40648/docs/modules/ROOT/examples/jbang-catalog.json",
       "aliases": [
         {
           "a": "jbang-fmt",
@@ -203,7 +203,7 @@
     {
       "owner": "tamboui",
       "name": "tamboui",
-      "stars": 672,
+      "stars": 673,
       "icon": "https://avatars.githubusercontent.com/u/251016663?v\u003d4",
       "link": "https://github.com/tamboui/tamboui/blob/80791dc9199ae27deaf9a7baa88a39e673395fcd/jbang-catalog.json",
       "aliases": [
@@ -610,7 +610,7 @@
       "name": "boot-ui",
       "stars": 301,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
-      "link": "https://github.com/jdubois/boot-ui/blob/027f126cc80e424b42e7d416cdb13124d10498eb/jbang-catalog.json",
+      "link": "https://github.com/jdubois/boot-ui/blob/3683e10e1f8d4419effcc5702898368ca0d940c0/jbang-catalog.json",
       "aliases": [
         {
           "a": "bootui",
@@ -705,7 +705,7 @@
     {
       "owner": "quarkiverse",
       "name": "quarkus-roq",
-      "stars": 150,
+      "stars": 151,
       "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
       "link": "https://github.com/quarkiverse/quarkus-roq/blob/7e6af28a671c74276bf7bdab479b1f2c7dd3f20c/jbang-catalog.json",
       "aliases": [
@@ -798,9 +798,9 @@
     {
       "owner": "archgate",
       "name": "cli",
-      "stars": 68,
+      "stars": 69,
       "icon": "https://avatars.githubusercontent.com/u/207676178?v\u003d4",
-      "link": "https://github.com/archgate/cli/blob/637f9b231e5ab22a57efbce773cc0c7b85195f07/shims/maven/jbang-catalog.json",
+      "link": "https://github.com/archgate/cli/blob/c78a8e633dc3cc0ff8b212a1638c275c70e590ae/shims/maven/jbang-catalog.json",
       "aliases": [
         {
           "a": "archgate",
@@ -1134,7 +1134,7 @@
       "name": "incus-spawn",
       "stars": 41,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/936c3d175cf4432682a1bea857d06dc672d9b8f1/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/ba83a7ac60191ac4aa0794defca1ad48604c661b/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -1255,7 +1255,7 @@
     {
       "owner": "jbangdev",
       "name": "jbang-idea",
-      "stars": 28,
+      "stars": 29,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "link": "https://github.com/jbangdev/jbang-idea/blob/5268727aa44f25e29ffd2be7eb57de4fddebeb2d/src/test/resources/projects/catalog/jbang-catalog.json",
       "aliases": [
@@ -1711,7 +1711,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/b91560fc7f9b8b6d29299be762e62a5bde5efc9c/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/b4ab756ab19d29f546d5779177bac457fe04ca65/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -1943,6 +1943,21 @@
       "templates": []
     },
     {
+      "owner": "parttimenerd",
+      "name": "femtojar",
+      "stars": 9,
+      "icon": "https://avatars.githubusercontent.com/u/490655?v\u003d4",
+      "link": "https://github.com/parttimenerd/femtojar/blob/dbd270acd0a20b9c01aa88f9cf164133df7c3379/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "femtojar",
+          "s": "https://github.com/parttimenerd/femtojar/releases/download/v0.1.6/femtojar-0.1.6.jar",
+          "c": "femtojar@parttimenerd/femtojar"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "quarkusio",
       "name": "jbang-catalog",
       "stars": 8,
@@ -2016,21 +2031,6 @@
           "c": "githubbot@quarkusio"
         }
       ]
-    },
-    {
-      "owner": "parttimenerd",
-      "name": "femtojar",
-      "stars": 8,
-      "icon": "https://avatars.githubusercontent.com/u/490655?v\u003d4",
-      "link": "https://github.com/parttimenerd/femtojar/blob/dbd270acd0a20b9c01aa88f9cf164133df7c3379/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "femtojar",
-          "s": "https://github.com/parttimenerd/femtojar/releases/download/v0.1.6/femtojar-0.1.6.jar",
-          "c": "femtojar@parttimenerd/femtojar"
-        }
-      ],
-      "templates": []
     },
     {
       "owner": "maxandersen",
@@ -5146,17 +5146,17 @@
       "name": "xam.dk",
       "stars": 1,
       "icon": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "link": "https://github.com/maxandersen/xam.dk/blob/1a7796699252369e09cf967514a6c0523fdcec3c/jbang-catalog.json",
+      "link": "https://github.com/maxandersen/xam.dk/blob/a5e66abf23fd45d67863000d01de71a58527d9db/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "tree",
           "s": "tree/main.java",
-          "c": "tree@maxandersen/xam.dk"
+          "c": "tree@maxandersen/xam.dk~public"
         },
         {
           "a": "qrcode",
           "s": "qrcode/main.java",
-          "c": "qrcode@maxandersen/xam.dk"
+          "c": "qrcode@maxandersen/xam.dk~public"
         }
       ],
       "templates": []
@@ -7546,12 +7546,12 @@
       "name": "jbang-catalog",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/16762720?v\u003d4",
-      "link": "https://github.com/btraceio/jbang-catalog/blob/e7ecd84239fc26b6687e75afd5a72ce8c8d7be0c/jbang-catalog.json",
+      "link": "https://github.com/btraceio/jbang-catalog/blob/b67df6db44aaf09836e2872c6f21438a0cb0be49/jbang-catalog.json",
       "aliases": [
         {
           "a": "jafar-shell",
           "d": "\u003cp\u003eInteractive CLI for exploring and analyzing Java Flight Recorder files with JfrPath query language\u003c/p\u003e\n",
-          "s": "io.btrace:jafar-shell:0.28.0",
+          "s": "io.btrace:jafar-shell:0.29.0",
           "c": "jafar-shell@btraceio"
         },
         {
@@ -7569,7 +7569,7 @@
         {
           "a": "jfr-mcp",
           "d": "\u003cp\u003eJFR MCP Server; latest release\u003c/p\u003e\n",
-          "s": "io.btrace:jfr-mcp:0.28.0",
+          "s": "io.btrace:jfr-mcp:0.29.0",
           "c": "jfr-mcp@btraceio"
         },
         {
