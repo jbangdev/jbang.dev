@@ -1,14 +1,14 @@
 countries:
-  # JBang versions usage data total count: 4680
+  # JBang versions usage data total count: 4675
   - name: United States
     percentage: 16.0
   - name: Germany
-    percentage: 9.9
+    percentage: 9.8
   - name: France
     percentage: 7.2
-  - name: Brazil
-    percentage: 4.6
   - name: India
+    percentage: 4.6
+  - name: Brazil
     percentage: 4.6
   - name: Italy
     percentage: 4.2
@@ -22,9 +22,9 @@ countries:
     percentage: 2.2
   - name: Poland
     percentage: 2.1
-  - name: Canada
-    percentage: 1.8
   - name: Austria
+    percentage: 1.8
+  - name: Canada
     percentage: 1.8
   - name: Belgium
     percentage: 1.5
@@ -47,7 +47,7 @@ countries:
   - name: China
     percentage: 1.0
   - name: Slovakia
-    percentage: 1.0
+    percentage: 0.9
   - name: Norway
     percentage: 0.9
   - name: Denmark
@@ -59,32 +59,32 @@ countries:
   - name: Indonesia
     percentage: 0.8
   - name: Vietnam
-    percentage: 0.8
+    percentage: 0.7
   - name: Finland
     percentage: 0.7
   - name: Ireland
     percentage: 0.7
-  - name: Israel
-    percentage: 0.6
   - name: Hungary
+    percentage: 0.7
+  - name: Israel
     percentage: 0.6
   - name: Colombia
     percentage: 0.6
-  - name: Thailand
-    percentage: 0.5
   - name: Romania
     percentage: 0.5
-  - name: Serbia
-    percentage: 0.5
-  - name: Malaysia
+  - name: Thailand
     percentage: 0.5
   - name: South Korea
     percentage: 0.5
+  - name: Malaysia
+    percentage: 0.5
+  - name: Serbia
+    percentage: 0.5
   - name: Philippines
     percentage: 0.5
-  - name: Türkiye
-    percentage: 0.5
   - name: Egypt
+    percentage: 0.5
+  - name: Türkiye
     percentage: 0.5
   - name: Singapore
     percentage: 0.4
@@ -120,8 +120,6 @@ countries:
     percentage: 0.2
   - name: Saudi Arabia
     percentage: 0.2
-  - name: Kazakhstan
-    percentage: 0.1
   - name: South Africa
     percentage: 0.1
   - name: Kuwait
@@ -133,6 +131,8 @@ countries:
   - name: Panama
     percentage: 0.1
   - name: Luxembourg
+    percentage: 0.1
+  - name: Kazakhstan
     percentage: 0.1
   - name: Uruguay
     percentage: 0.1
@@ -146,9 +146,9 @@ countries:
     percentage: 0.1
   - name: Guatemala
     percentage: 0.1
-  - name: Paraguay
-    percentage: 0.1
   - name: Montenegro
+    percentage: 0.1
+  - name: Paraguay
     percentage: 0.1
   - name: Venezuela
     percentage: 0.1
@@ -157,8 +157,6 @@ countries:
   - name: Palestinian Territories
     percentage: 0.1
   - name: Lithuania
-    percentage: 0.1
-  - name: Uganda
     percentage: 0.1
   - name: Albania
     percentage: 0.1
@@ -179,6 +177,8 @@ countries:
   - name: Côte d’Ivoire
     percentage: 0.1
   - name: Angola
+    percentage: 0.1
+  - name: Uganda
     percentage: 0.1
   - name: Nigeria
     percentage: 0.1
@@ -208,21 +208,21 @@ countries:
     percentage: 0.0
   - name: Equatorial Guinea
     percentage: 0.0
-  - name: Kosovo
-    percentage: 0.0
   - name: Laos
-    percentage: 0.0
-  - name: Malawi
     percentage: 0.0
   - name: Mongolia
     percentage: 0.0
+  - name: Malawi
+    percentage: 0.0
   - name: Puerto Rico
     percentage: 0.0
-  - name: Nicaragua
+  - name: Kosovo
     percentage: 0.0
   - name: Libya
     percentage: 0.0
   - name: Guinea
+    percentage: 0.0
+  - name: St. Martin
     percentage: 0.0
   - name: Curaçao
     percentage: 0.0
@@ -230,19 +230,19 @@ countries:
     percentage: 0.0
   - name: Togo
     percentage: 0.0
-  - name: St. Martin
+  - name: Nicaragua
     percentage: 0.0
-  - name: Zambia
-    percentage: 0.0
-  - name: Rwanda
-    percentage: 0.0
-  - name: Honduras
+  - name: Sierra Leone
     percentage: 0.0
   - name: Azerbaijan
     percentage: 0.0
+  - name: Honduras
+    percentage: 0.0
+  - name: Rwanda
+    percentage: 0.0
   - name: Nepal
     percentage: 0.0
-  - name: Sierra Leone
+  - name: Zambia
     percentage: 0.0
   - name: Trinidad & Tobago
     percentage: 0.0
@@ -275,21 +275,21 @@ countries:
   - name: Senegal
     percentage: 0.0
 java_versions:
-  # JBang versions usage data total count: 13761
+  # JBang versions usage data total count: 13781
   - name: 21.0
-    percentage: 33.9
+    percentage: 33.8
   - name: 25.0
     percentage: 23.8
   - name: 17.0
     percentage: 21.6
   - name: 26.0
-    percentage: 5.6
+    percentage: 5.5
   - name: 1.8
-    percentage: 4.0
+    percentage: 4.1
   - name: 11.0
     percentage: 3.3
   - name: Unknown
-    percentage: 1.8
+    percentage: 1.7
   - name: 24.0
     percentage: 1.6
   - name: 23.0
@@ -306,9 +306,9 @@ java_versions:
     percentage: 0.2
   - name: 27-ea.0
     percentage: 0.1
-  - name: 25-loom.0
-    percentage: 0.1
   - name: 28-internal.0
+    percentage: 0.0
+  - name: 25-loom.0
     percentage: 0.0
   - name: 28-ea.0
     percentage: 0.0
@@ -333,15 +333,15 @@ java_versions:
 jbang_numbers:
   # JBang data
     timezones: 197
-    cities: 4339
-    uniques: 1049838
+    cities: 4334
+    uniques: 1062252
     countries: 137
     vendors: 45
     continents: 6
 jbang_vendors:
-  # JBang versions usage data total count: 8655
+  # JBang versions usage data total count: 8654
   - name: Eclipse Adoptium
-    percentage: 27.7
+    percentage: 27.8
   - name: Oracle Corporation
     percentage: 20.2
   - name: Homebrew
@@ -351,9 +351,9 @@ jbang_vendors:
   - name: Ubuntu
     percentage: 6.7
   - name: Azul Systems, Inc.
-    percentage: 6.5
+    percentage: 6.6
   - name: Red Hat, Inc.
-    percentage: 3.8
+    percentage: 3.7
   - name: Microsoft
     percentage: 3.7
   - name: GraalVM Community
@@ -369,13 +369,13 @@ jbang_vendors:
   - name: Debian
     percentage: 1.0
   - name: Eclipse OpenJ9
-    percentage: 1.0
+    percentage: 0.9
   - name: Temurin
-    percentage: 0.8
+    percentage: 0.9
   - name: OpenLogic
     percentage: 0.5
   - name: AdoptOpenJDK
-    percentage: 0.4
+    percentage: 0.5
   - name: SAP SE
     percentage: 0.4
   - name: Private Build
@@ -431,25 +431,25 @@ jbang_vendors:
   - name: Google Inc.
     percentage: 0.0
 jbang_versions:
-  # JBang versions usage data total count: 10821
+  # JBang versions usage data total count: 10812
   - name: 0.141.0
-    percentage: 17.7
+    percentage: 17.8
   - name: 0.138.0
-    percentage: 13.0
+    percentage: 12.8
   - name: 0.137.0
     percentage: 8.4
   - name: 0.139.3
-    percentage: 8.3
+    percentage: 8.1
   - name: 0.135.1
     percentage: 4.9
   - name: 0.132.1
     percentage: 4.7
   - name: 0.142.0
-    percentage: 3.8
+    percentage: 4.1
   - name: 0.125.1
-    percentage: 2.5
+    percentage: 2.6
   - name: 
-    percentage: 2.3
+    percentage: 2.2
   - name: 0.129.0
     percentage: 2.2
   - name: 0.136.0
@@ -474,9 +474,9 @@ jbang_versions:
     percentage: 1.3
   - name: 0.127.18
     percentage: 1.2
-  - name: 0.124.0
-    percentage: 1.1
   - name: 0.131.0
+    percentage: 1.1
+  - name: 0.124.0
     percentage: 1.0
   - name: 0.114.0
     percentage: 1.0
@@ -491,12 +491,12 @@ jbang_versions:
   - name: 0.132.0
     percentage: 0.8
   - name: 0.111.0
-    percentage: 0.5
+    percentage: 0.6
   - name: 0.128.5
     percentage: 0.5
-  - name: 0.115.0
-    percentage: 0.5
   - name: 0.128.7
+    percentage: 0.5
+  - name: 0.115.0
     percentage: 0.5
   - name: 0.118.0
     percentage: 0.5
@@ -514,9 +514,9 @@ jbang_versions:
     percentage: 0.3
   - name: 0.108.0
     percentage: 0.3
-  - name: 0.139.2
-    percentage: 0.2
   - name: 0.113.0
+    percentage: 0.2
+  - name: 0.139.2
     percentage: 0.2
   - name: 0.101.0
     percentage: 0.2
@@ -532,13 +532,13 @@ jbang_versions:
     percentage: 0.1
   - name: 0.125.0
     percentage: 0.1
-  - name: 0.112.4
-    percentage: 0.1
   - name: 0.70.0
     percentage: 0.1
   - name: 0.105.2
     percentage: 0.1
   - name: 0.102.0
+    percentage: 0.1
+  - name: 0.112.4
     percentage: 0.1
   - name: 0.92.2
     percentage: 0.1
@@ -546,9 +546,9 @@ jbang_versions:
     percentage: 0.1
   - name: 0.94.0
     percentage: 0.1
-  - name: 0.96.0
-    percentage: 0.1
   - name: 0.128.0
+    percentage: 0.1
+  - name: 0.96.0
     percentage: 0.1
   - name: 0.103.1
     percentage: 0.0
@@ -564,13 +564,11 @@ jbang_versions:
     percentage: 0.0
   - name: 0.103.2
     percentage: 0.0
-  - name: 0.86.0
-    percentage: 0.0
   - name: 0.100.0
     percentage: 0.0
   - name: 0.91.0
     percentage: 0.0
-  - name: 0.87.0
+  - name: 0.86.0
     percentage: 0.0
   - name: 0.93.0
     percentage: 0.0
@@ -586,13 +584,15 @@ jbang_versions:
     percentage: 0.0
   - name: 0.71.1
     percentage: 0.0
+  - name: 0.69.1
+    percentage: 0.0
+  - name: 0.72.0
+    percentage: 0.0
   - name: 2.33.0
     percentage: 0.0
-  - name: 0.69.1
+  - name: 0.87.0
     percentage: 0.0
   - name: 0.105.1
     percentage: 0.0
   - name: 0.103.0
-    percentage: 0.0
-  - name: 0.72.0
     percentage: 0.0
