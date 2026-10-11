@@ -5,7 +5,7 @@
     {
       "owner": "apple",
       "name": "pkl",
-      "stars": 11540,
+      "stars": 11542,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "link": "https://github.com/apple/pkl/blob/88a50d167e61b37ebff909c41dd04ef082a9e5fa/jbang-catalog.json",
       "aliases": [
@@ -30,9 +30,9 @@
     {
       "owner": "oshi",
       "name": "oshi",
-      "stars": 5266,
+      "stars": 5267,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/1ce97a0d2e810d28b10a81602abf2c22cba875be/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/3341d4f6748738cdeb48c763808044171d20ce36/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -80,7 +80,7 @@
     {
       "owner": "NanowarOfSteel",
       "name": "HelloWorld",
-      "stars": 2014,
+      "stars": 2016,
       "icon": "https://avatars.githubusercontent.com/u/185941913?v\u003d4",
       "link": "https://github.com/NanowarOfSteel/HelloWorld/blob/eb1b4d63eeb4a6d4fdd8167cda67876344c5bfcb/jbang-catalog.json",
       "aliases": [
@@ -95,9 +95,9 @@
     {
       "owner": "validator",
       "name": "validator",
-      "stars": 1989,
+      "stars": 1990,
       "icon": "https://avatars.githubusercontent.com/u/498971?v\u003d4",
-      "link": "https://github.com/validator/validator/blob/3d97faae4052b8b2c6a439cce67e2395274e08ae/jbang-catalog.json",
+      "link": "https://github.com/validator/validator/blob/af56e123dab8d6563138935e4a020e70f47f4b23/jbang-catalog.json",
       "aliases": [
         {
           "a": "vnu",
@@ -205,7 +205,7 @@
       "name": "tamboui",
       "stars": 677,
       "icon": "https://avatars.githubusercontent.com/u/251016663?v\u003d4",
-      "link": "https://github.com/tamboui/tamboui/blob/82246a0ca5286bf9b4d4cf5169252dffe0aa0560/jbang-catalog.json",
+      "link": "https://github.com/tamboui/tamboui/blob/9478aff301752d10dfaa7f6cad14409213be08af/jbang-catalog.json",
       "aliases": [
         {
           "a": "run-demo",
@@ -608,9 +608,9 @@
     {
       "owner": "jdubois",
       "name": "boot-ui",
-      "stars": 314,
+      "stars": 315,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
-      "link": "https://github.com/jdubois/boot-ui/blob/bd46bf819e9e75282b849184e058090d9c769219/jbang-catalog.json",
+      "link": "https://github.com/jdubois/boot-ui/blob/d290c7cb0e021801467b862ff58898d1e4234020/jbang-catalog.json",
       "aliases": [
         {
           "a": "bootui",
@@ -798,7 +798,7 @@
     {
       "owner": "archgate",
       "name": "cli",
-      "stars": 69,
+      "stars": 71,
       "icon": "https://avatars.githubusercontent.com/u/207676178?v\u003d4",
       "link": "https://github.com/archgate/cli/blob/c78a8e633dc3cc0ff8b212a1638c275c70e590ae/shims/maven/jbang-catalog.json",
       "aliases": [
@@ -1114,27 +1114,11 @@
       "templates": []
     },
     {
-      "owner": "maveniverse",
-      "name": "pilot",
-      "stars": 42,
-      "icon": "https://avatars.githubusercontent.com/u/118349365?v\u003d4",
-      "link": "https://github.com/maveniverse/pilot/blob/e234879a9a313cb7470e53631c41f5c1712eadcb/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "pilot",
-          "d": "\u003cp\u003eInteractive TUI for Maven -- search, browse, and manage dependencies\u003c/p\u003e\n",
-          "s": "GAV:eu.maveniverse.maven.plugins:pilot-cli:RELEASE",
-          "c": "pilot@maveniverse/pilot"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "Sanne",
       "name": "incus-spawn",
-      "stars": 41,
+      "stars": 42,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/7a5378f772bce650a6f5d45142d1708d9222fd21/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/1036bb21f11ac0c60d15b374ee293652eb1b7532/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -1147,6 +1131,22 @@
           "d": "\u003cp\u003eMITM authentication proxy for incus-spawn (install alongside isx)\u003c/p\u003e\n",
           "s": "https://github.com/Sanne/incus-spawn/releases/latest/download/isx-proxy-runner.jar",
           "c": "isx-proxy@Sanne/incus-spawn"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "maveniverse",
+      "name": "pilot",
+      "stars": 42,
+      "icon": "https://avatars.githubusercontent.com/u/118349365?v\u003d4",
+      "link": "https://github.com/maveniverse/pilot/blob/e234879a9a313cb7470e53631c41f5c1712eadcb/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "pilot",
+          "d": "\u003cp\u003eInteractive TUI for Maven -- search, browse, and manage dependencies\u003c/p\u003e\n",
+          "s": "GAV:eu.maveniverse.maven.plugins:pilot-cli:RELEASE",
+          "c": "pilot@maveniverse/pilot"
         }
       ],
       "templates": []
@@ -1253,6 +1253,22 @@
       ]
     },
     {
+      "owner": "RGiskard7",
+      "name": "jylos",
+      "stars": 30,
+      "icon": "https://avatars.githubusercontent.com/u/43444131?v\u003d4",
+      "link": "https://github.com/RGiskard7/jylos/blob/1309a63d2942fe42534245921318d58c7b6838dc/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "jylos",
+          "d": "\u003cp\u003eJylos - Local-first desktop knowledge base: Markdown notes, wiki-links, backlinks, knowledge graph, Kanban, canvas editor, per-note encryption and plugins (SQLite or Markdown vault)\u003c/p\u003e\n",
+          "s": "https://github.com/RGiskard7/jylos/releases/latest/download/jylos-uber.jar",
+          "c": "jylos@RGiskard7/jylos"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "jbangdev",
       "name": "jbang-idea",
       "stars": 29,
@@ -1264,22 +1280,6 @@
           "d": "\u003cp\u003eLocal script-ref navigation sample\u003c/p\u003e\n",
           "s": "scripts/hello.java",
           "c": "hello@jbangdev/jbang-idea~src/test/resources/projects/catalog"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "RGiskard7",
-      "name": "jylos",
-      "stars": 28,
-      "icon": "https://avatars.githubusercontent.com/u/43444131?v\u003d4",
-      "link": "https://github.com/RGiskard7/jylos/blob/1309a63d2942fe42534245921318d58c7b6838dc/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "jylos",
-          "d": "\u003cp\u003eJylos - Local-first desktop knowledge base: Markdown notes, wiki-links, backlinks, knowledge graph, Kanban, canvas editor, per-note encryption and plugins (SQLite or Markdown vault)\u003c/p\u003e\n",
-          "s": "https://github.com/RGiskard7/jylos/releases/latest/download/jylos-uber.jar",
-          "c": "jylos@RGiskard7/jylos"
         }
       ],
       "templates": []
@@ -1711,7 +1711,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/1ecfa281c9a8db6dbf9e0bba0f3975af83199b16/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/6685546708c2e6e5cec931b040b773830c9eb08a/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -5544,7 +5544,7 @@
       "name": "camel",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/131972263?v\u003d4",
-      "link": "https://github.com/codacy-open-source-projects-scans/camel/blob/882c1fd76e4aef39dd75cf8cf30394483fc431ca/jbang-catalog.json",
+      "link": "https://github.com/codacy-open-source-projects-scans/camel/blob/585f504150b9f32b0ebc7a986783f678ece69a23/jbang-catalog.json",
       "aliases": [
         {
           "a": "camel",
@@ -5870,7 +5870,7 @@
       "name": "cafeai",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/156885222?v\u003d4",
-      "link": "https://github.com/akilisha/cafeai/blob/ffbacf853bcbd5d67aae7c12e24b54f0477fb8d4/jbang-catalog.json",
+      "link": "https://github.com/akilisha/cafeai/blob/f31fdf3a7504e38f2983436157f233b52e95af73/jbang-catalog.json",
       "aliases": [
         {
           "a": "hello",
