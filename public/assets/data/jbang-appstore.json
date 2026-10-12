@@ -1,5 +1,5 @@
 {
-  "aliasCount": 954,
+  "aliasCount": 957,
   "templateCount": 83,
   "catalogs": [
     {
@@ -32,7 +32,7 @@
       "name": "oshi",
       "stars": 5267,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/3341d4f6748738cdeb48c763808044171d20ce36/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/e999bd3b12506e4ad8412448b9b9b046d7a315e6/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -205,7 +205,7 @@
       "name": "tamboui",
       "stars": 677,
       "icon": "https://avatars.githubusercontent.com/u/251016663?v\u003d4",
-      "link": "https://github.com/tamboui/tamboui/blob/9478aff301752d10dfaa7f6cad14409213be08af/jbang-catalog.json",
+      "link": "https://github.com/tamboui/tamboui/blob/e74b64958426d2a882a3d4f2741ec3805b1d2e72/jbang-catalog.json",
       "aliases": [
         {
           "a": "run-demo",
@@ -359,6 +359,11 @@
           "c": "action-handler-demo@tamboui/tamboui"
         },
         {
+          "a": "compact-source-file-demo",
+          "s": "tamboui-toolkit/demos/compact-source-file-demo/src/main/java/CompactDemo.java",
+          "c": "compact-source-file-demo@tamboui/tamboui"
+        },
+        {
           "a": "custom-component-demo",
           "s": "tamboui-toolkit/demos/custom-component-demo/src/main/java/dev/tamboui/demo/CustomComponentDemo.java",
           "c": "custom-component-demo@tamboui/tamboui"
@@ -367,6 +372,11 @@
           "a": "emoji-demo",
           "s": "tamboui-toolkit/demos/emoji-demo/src/main/java/dev/tamboui/demo/EmojiDemo.java",
           "c": "emoji-demo@tamboui/tamboui"
+        },
+        {
+          "a": "emoji-list-demo",
+          "s": "tamboui-toolkit/demos/emoji-list-demo/src/main/java/EmojiListDemo.java",
+          "c": "emoji-list-demo@tamboui/tamboui"
         },
         {
           "a": "inline-toolkit-demo",
@@ -546,7 +556,7 @@
       "name": "citrus",
       "stars": 486,
       "icon": "https://avatars.githubusercontent.com/u/27848811?v\u003d4",
-      "link": "https://github.com/citrusframework/citrus/blob/ebcff01ae392b6aa600c6d2e82271b9ce2f148b0/jbang-catalog.json",
+      "link": "https://github.com/citrusframework/citrus/blob/a0809f1c75e6e4855e143ded7689effae53b5c97/jbang-catalog.json",
       "aliases": [
         {
           "a": "citrus",
@@ -610,7 +620,7 @@
       "name": "boot-ui",
       "stars": 315,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
-      "link": "https://github.com/jdubois/boot-ui/blob/d290c7cb0e021801467b862ff58898d1e4234020/jbang-catalog.json",
+      "link": "https://github.com/jdubois/boot-ui/blob/e1f79bbfd674479beeafad3f8e0cc5d819bc20b6/jbang-catalog.json",
       "aliases": [
         {
           "a": "bootui",
@@ -707,7 +717,7 @@
       "name": "quarkus-roq",
       "stars": 157,
       "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "link": "https://github.com/quarkiverse/quarkus-roq/blob/76d8ecfb38c1b2c24b0692aa14ac4748fc376d25/jbang-catalog.json",
+      "link": "https://github.com/quarkiverse/quarkus-roq/blob/53901422adc6543e807aa329cdc64699c4ea06ad/jbang-catalog.json",
       "aliases": [
         {
           "a": "roq",
@@ -800,7 +810,7 @@
       "name": "cli",
       "stars": 71,
       "icon": "https://avatars.githubusercontent.com/u/207676178?v\u003d4",
-      "link": "https://github.com/archgate/cli/blob/c78a8e633dc3cc0ff8b212a1638c275c70e590ae/shims/maven/jbang-catalog.json",
+      "link": "https://github.com/archgate/cli/blob/6075eafb55fc2425537a52690d2d2486e452811d/shims/maven/jbang-catalog.json",
       "aliases": [
         {
           "a": "archgate",
@@ -1009,7 +1019,7 @@
       "name": "quarkus-agent-mcp",
       "stars": 53,
       "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
-      "link": "https://github.com/quarkusio/quarkus-agent-mcp/blob/0bebec2c070e96a2bbb5ed5e36b63ef89b471cce/jbang-catalog.json",
+      "link": "https://github.com/quarkusio/quarkus-agent-mcp/blob/73cef3b2564d8debf787c3c05bee28b8539ae657/jbang-catalog.json",
       "aliases": [
         {
           "a": "quarkus-agent-mcp",
@@ -1118,7 +1128,7 @@
       "name": "incus-spawn",
       "stars": 42,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/1036bb21f11ac0c60d15b374ee293652eb1b7532/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/70dc644bbca17bea12c8598ba8f9b4193f0c8d3f/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -1273,7 +1283,7 @@
       "name": "jbang-idea",
       "stars": 29,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang-idea/blob/5268727aa44f25e29ffd2be7eb57de4fddebeb2d/src/test/resources/projects/catalog/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang-idea/blob/57b9ae40b967544a7dfbc33a2497d10e1e2b5988/src/test/resources/projects/catalog/jbang-catalog.json",
       "aliases": [
         {
           "a": "hello",
@@ -1666,7 +1676,7 @@
       "name": "github-contributors-list",
       "stars": 17,
       "icon": "https://avatars.githubusercontent.com/u/1366654?v\u003d4",
-      "link": "https://github.com/koppor/github-contributors-list/blob/614c8dccd447aa33696ad110a3b739a8f0f555e9/jbang-catalog.json",
+      "link": "https://github.com/koppor/github-contributors-list/blob/f7a9f0973d87383df6e8088f5774238fb527f0d6/jbang-catalog.json",
       "aliases": [
         {
           "a": "gcl",
@@ -1711,7 +1721,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/6685546708c2e6e5cec931b040b773830c9eb08a/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/443fe90c1b63b9ece7bbae1ed2a508004eebc314/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -1943,21 +1953,6 @@
       "templates": []
     },
     {
-      "owner": "parttimenerd",
-      "name": "femtojar",
-      "stars": 9,
-      "icon": "https://avatars.githubusercontent.com/u/490655?v\u003d4",
-      "link": "https://github.com/parttimenerd/femtojar/blob/dbd270acd0a20b9c01aa88f9cf164133df7c3379/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "femtojar",
-          "s": "https://github.com/parttimenerd/femtojar/releases/download/v0.1.6/femtojar-0.1.6.jar",
-          "c": "femtojar@parttimenerd/femtojar"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "quarkusio",
       "name": "jbang-catalog",
       "stars": 8,
@@ -2037,7 +2032,7 @@
       "name": "jskills",
       "stars": 8,
       "icon": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "link": "https://github.com/maxandersen/jskills/blob/e178578dde5ea2166b76afc81d16c10966d2c84c/jbang-catalog.json",
+      "link": "https://github.com/maxandersen/jskills/blob/9a10d7f4a0e2646db96f4ea55f68ba3542513ac3/jbang-catalog.json",
       "aliases": [
         {
           "a": "skills",
@@ -2233,7 +2228,7 @@
       "name": "ghprcomment",
       "stars": 6,
       "icon": "https://avatars.githubusercontent.com/u/1366654?v\u003d4",
-      "link": "https://github.com/koppor/ghprcomment/blob/80ff3dcbe08f98f7d0f8d22df03adb59d2fd5b53/jbang-catalog.json",
+      "link": "https://github.com/koppor/ghprcomment/blob/addda25e541558336656187ceb81b63d58087743/jbang-catalog.json",
       "aliases": [
         {
           "a": "ghprcomment",
@@ -3164,6 +3159,28 @@
       "templates": []
     },
     {
+      "owner": "ayagmar",
+      "name": "quarkus-forge",
+      "stars": 3,
+      "icon": "https://avatars.githubusercontent.com/u/62888618?v\u003d4",
+      "link": "https://github.com/ayagmar/quarkus-forge/blob/7a464d6355077bbe34b19bc16f65c2f39bf34f86/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "quarkus-forge",
+          "d": "\u003cp\u003eKeyboard-first Quarkus project generator TUI\u003c/p\u003e\n",
+          "s": "https://github.com/ayagmar/quarkus-forge/releases/latest/download/quarkus-forge-jvm.jar",
+          "c": "quarkus-forge@ayagmar/quarkus-forge"
+        },
+        {
+          "a": "quarkus-forge-headless",
+          "d": "\u003cp\u003eQuarkus project generator headless CLI (no TUI dependencies)\u003c/p\u003e\n",
+          "s": "https://github.com/ayagmar/quarkus-forge/releases/latest/download/quarkus-forge-headless.jar",
+          "c": "quarkus-forge-headless@ayagmar/quarkus-forge"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "maxandersen",
       "name": "jfrdoc",
       "stars": 3,
@@ -3315,28 +3332,6 @@
       "templates": []
     },
     {
-      "owner": "ayagmar",
-      "name": "quarkus-forge",
-      "stars": 2,
-      "icon": "https://avatars.githubusercontent.com/u/62888618?v\u003d4",
-      "link": "https://github.com/ayagmar/quarkus-forge/blob/7a464d6355077bbe34b19bc16f65c2f39bf34f86/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "quarkus-forge",
-          "d": "\u003cp\u003eKeyboard-first Quarkus project generator TUI\u003c/p\u003e\n",
-          "s": "https://github.com/ayagmar/quarkus-forge/releases/latest/download/quarkus-forge-jvm.jar",
-          "c": "quarkus-forge@ayagmar/quarkus-forge"
-        },
-        {
-          "a": "quarkus-forge-headless",
-          "d": "\u003cp\u003eQuarkus project generator headless CLI (no TUI dependencies)\u003c/p\u003e\n",
-          "s": "https://github.com/ayagmar/quarkus-forge/releases/latest/download/quarkus-forge-headless.jar",
-          "c": "quarkus-forge-headless@ayagmar/quarkus-forge"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "parttimenerd",
       "name": "jhserr",
       "stars": 2,
@@ -3392,7 +3387,7 @@
       "name": "wanaku-barn",
       "stars": 2,
       "icon": "https://avatars.githubusercontent.com/u/200620763?v\u003d4",
-      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/044b236bb3a094764ca2bfdb727996c84a143e23/jbang-catalog.json",
+      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/91ea47179a667d77892ac50d035d13e8c3154398/jbang-catalog.json",
       "aliases": [
         {
           "a": "wanaku",
@@ -3786,22 +3781,6 @@
           "d": "\u003cp\u003eA simple TUI that demonstrates a bouncing Twinkle.\u003c/p\u003e\n",
           "s": "examples/src/main/java/org/codejive/twinkle/demos/BouncingTwinkleDemo.java",
           "c": "bounce@codejive/twinkle"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "maven-flow",
-      "name": "changelog-merge-driver",
-      "stars": 1,
-      "icon": "https://avatars.githubusercontent.com/u/166258741?v\u003d4",
-      "link": "https://github.com/maven-flow/changelog-merge-driver/blob/4f9446a29a9e6b935b0fd710aa047f9ff03641ad/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "changelog-merge-driver",
-          "d": "\u003cp\u003eA Git merge driver for changelogs\u003c/p\u003e\n",
-          "s": "ChangelogMergeDriver.java",
-          "c": "changelog-merge-driver@maven-flow/changelog-merge-driver"
         }
       ],
       "templates": []
@@ -4504,6 +4483,22 @@
       "templates": []
     },
     {
+      "owner": "maven-flow",
+      "name": "changelog-merge-driver",
+      "stars": 1,
+      "icon": "https://avatars.githubusercontent.com/u/166258741?v\u003d4",
+      "link": "https://github.com/maven-flow/changelog-merge-driver/blob/4f9446a29a9e6b935b0fd710aa047f9ff03641ad/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "changelog-merge-driver",
+          "d": "\u003cp\u003eA Git merge driver for changelogs\u003c/p\u003e\n",
+          "s": "ChangelogMergeDriver.java",
+          "c": "changelog-merge-driver@maven-flow/changelog-merge-driver"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "jOOQ",
       "name": "jbang-catalog",
       "stars": 1,
@@ -5193,6 +5188,21 @@
       ]
     },
     {
+      "owner": "parttimenerd",
+      "name": "femtojar",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/490655?v\u003d4",
+      "link": "https://github.com/parttimenerd/femtojar/blob/dbd270acd0a20b9c01aa88f9cf164133df7c3379/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "femtojar",
+          "s": "https://github.com/parttimenerd/femtojar/releases/download/v0.1.6/femtojar-0.1.6.jar",
+          "c": "femtojar@parttimenerd/femtojar"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "maveniverse",
       "name": "jbang-catalog",
       "stars": 0,
@@ -5870,7 +5880,7 @@
       "name": "cafeai",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/156885222?v\u003d4",
-      "link": "https://github.com/akilisha/cafeai/blob/f31fdf3a7504e38f2983436157f233b52e95af73/jbang-catalog.json",
+      "link": "https://github.com/akilisha/cafeai/blob/29a7503cde6e1da86197fa2320f3dcc1131a536d/jbang-catalog.json",
       "aliases": [
         {
           "a": "hello",
@@ -5892,6 +5902,21 @@
           "c": "cafeai@akilisha/cafeai"
         }
       ]
+    },
+    {
+      "owner": "emvnuel",
+      "name": "jabuti-mcp",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/25643113?v\u003d4",
+      "link": "https://github.com/emvnuel/jabuti-mcp/blob/7baba1a1a78ceded9ca0ca7c08051e006695951b/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "jabuti",
+          "s": "https://github.com/emvnuel/jabuti-mcp/releases/latest/download/jabuti-mcp.jar",
+          "c": "jabuti@emvnuel/jabuti-mcp"
+        }
+      ],
+      "templates": []
     },
     {
       "owner": "limn-toolkit",
@@ -7228,31 +7253,6 @@
       "templates": []
     },
     {
-      "owner": "iotaplatforms",
-      "name": "tutorials",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/86529324?v\u003d4",
-      "link": "https://github.com/iotaplatforms/tutorials/blob/22d1c0311478298b5afd631a56b332420e768362/jbang/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "hello",
-          "s": "hello.java",
-          "c": "hello@iotaplatforms/tutorials~jbang"
-        },
-        {
-          "a": "hellocli",
-          "s": "hellocli.java",
-          "c": "hellocli@iotaplatforms/tutorials~jbang"
-        },
-        {
-          "a": "jbangquarkus",
-          "s": "jbangquarkus.java",
-          "c": "jbangquarkus@iotaplatforms/tutorials~jbang"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "aswiniqaconsultants",
       "name": "jbangdev",
       "stars": 0,
@@ -8248,6 +8248,31 @@
           "a": "datahub-protobuf",
           "s": "io.acryl:datahub-protobuf:0.8.44-2rc1",
           "c": "datahub-protobuf@aucampia/issues~20220908-datahub-protobuf"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "iotaplatforms",
+      "name": "tutorials",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/86529324?v\u003d4",
+      "link": "https://github.com/iotaplatforms/tutorials/blob/22d1c0311478298b5afd631a56b332420e768362/jbang/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "hello",
+          "s": "hello.java",
+          "c": "hello@iotaplatforms/tutorials~jbang"
+        },
+        {
+          "a": "hellocli",
+          "s": "hellocli.java",
+          "c": "hellocli@iotaplatforms/tutorials~jbang"
+        },
+        {
+          "a": "jbangquarkus",
+          "s": "jbangquarkus.java",
+          "c": "jbangquarkus@iotaplatforms/tutorials~jbang"
         }
       ],
       "templates": []
