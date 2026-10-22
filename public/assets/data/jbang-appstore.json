@@ -1,27 +1,27 @@
 {
-  "aliasCount": 960,
+  "aliasCount": 962,
   "templateCount": 83,
   "catalogs": [
     {
       "owner": "apple",
       "name": "pkl",
-      "stars": 11547,
+      "stars": 11548,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
-      "link": "https://github.com/apple/pkl/blob/a06684b2c0017ed924e6f416cdd1772c31fb632f/jbang-catalog.json",
+      "link": "https://github.com/apple/pkl/blob/3f5797de6f17b8cd0f6e9970f2b91d5235026cc6/jbang-catalog.json",
       "aliases": [
         {
           "a": "pkl",
-          "s": "org.pkl-lang:pkl-cli-java:0.32.1",
+          "s": "org.pkl-lang:pkl-cli-java:0.32.2",
           "c": "pkl@apple/pkl"
         },
         {
           "a": "pkl-codegen-java",
-          "s": "org.pkl-lang:pkl-codegen-java:0.32.1",
+          "s": "org.pkl-lang:pkl-codegen-java:0.32.2",
           "c": "pkl-codegen-java@apple/pkl"
         },
         {
           "a": "pkl-codegen-kotlin",
-          "s": "org.pkl-lang:pkl-codegen-kotlin:0.32.1",
+          "s": "org.pkl-lang:pkl-codegen-kotlin:0.32.2",
           "c": "pkl-codegen-kotlin@apple/pkl"
         }
       ],
@@ -32,7 +32,7 @@
       "name": "oshi",
       "stars": 5271,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/6794a06ee1c9edd8145176b329dfb36e092b11cd/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/ba38793e56d773b1da395db2f0565a91120b3aea/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -556,7 +556,7 @@
       "name": "citrus",
       "stars": 485,
       "icon": "https://avatars.githubusercontent.com/u/27848811?v\u003d4",
-      "link": "https://github.com/citrusframework/citrus/blob/ac81585457097c4296305ac965f2e480c3a44eef/jbang-catalog.json",
+      "link": "https://github.com/citrusframework/citrus/blob/915a9fc67057cfea1815839bfd052542f868d4f1/jbang-catalog.json",
       "aliases": [
         {
           "a": "citrus",
@@ -572,7 +572,7 @@
       "name": "hibernate-reactive",
       "stars": 468,
       "icon": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
-      "link": "https://github.com/hibernate/hibernate-reactive/blob/3856a23356262f4da798d8914a634b9105c72570/jbang-catalog.json",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/b169a9d4515ce4d345684b3126f33417c8c40397/jbang-catalog.json",
       "aliases": [
         {
           "a": "example",
@@ -618,9 +618,9 @@
     {
       "owner": "jdubois",
       "name": "boot-ui",
-      "stars": 320,
+      "stars": 321,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
-      "link": "https://github.com/jdubois/boot-ui/blob/4e4ae4e5bf8cb333ed8424c604ff8076849fe209/jbang-catalog.json",
+      "link": "https://github.com/jdubois/boot-ui/blob/8795ca5508cbc4ea03e99c6e72c88e2474e280bc/jbang-catalog.json",
       "aliases": [
         {
           "a": "bootui",
@@ -715,7 +715,7 @@
     {
       "owner": "quarkiverse",
       "name": "quarkus-roq",
-      "stars": 158,
+      "stars": 157,
       "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
       "link": "https://github.com/quarkiverse/quarkus-roq/blob/80bac13c2c661c0aa6e79d973d879f50483e2103/jbang-catalog.json",
       "aliases": [
@@ -810,7 +810,7 @@
       "name": "cli",
       "stars": 73,
       "icon": "https://avatars.githubusercontent.com/u/207676178?v\u003d4",
-      "link": "https://github.com/archgate/cli/blob/6075eafb55fc2425537a52690d2d2486e452811d/shims/maven/jbang-catalog.json",
+      "link": "https://github.com/archgate/cli/blob/71499a989656bd846333b7af828a900e1f86af0d/shims/maven/jbang-catalog.json",
       "aliases": [
         {
           "a": "archgate",
@@ -1019,7 +1019,7 @@
       "name": "quarkus-agent-mcp",
       "stars": 54,
       "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
-      "link": "https://github.com/quarkusio/quarkus-agent-mcp/blob/b82795a8ab1fc9101a056b5d942282c872145224/jbang-catalog.json",
+      "link": "https://github.com/quarkusio/quarkus-agent-mcp/blob/2f585a433ad898120739c114631799d7a10fe1bf/jbang-catalog.json",
       "aliases": [
         {
           "a": "quarkus-agent-mcp",
@@ -1128,7 +1128,7 @@
       "name": "incus-spawn",
       "stars": 44,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/b93db70058efbec5570b9972468d4b105f78ed0b/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/f98ab84dcaa362a320b314e193533fce71abd205/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -1224,7 +1224,7 @@
       "name": "camel-kit",
       "stars": 31,
       "icon": "https://avatars.githubusercontent.com/u/5583341?v\u003d4",
-      "link": "https://github.com/luigidemasi/camel-kit/blob/eb4f0338c24c772458eeafe32c0151451c43404f/jbang-catalog.json",
+      "link": "https://github.com/luigidemasi/camel-kit/blob/6fc50b29905fd730367fe18ab8b8d3ef4ff9e2b2/jbang-catalog.json",
       "aliases": [
         {
           "a": "camel-kit",
@@ -1721,7 +1721,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/12acd889cbcd1fe2eb07e0febe91d9b84bf8a497/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/f5d0f857e2162729f5bbe024486ab35f5128dc3d/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -2709,6 +2709,28 @@
       "templates": []
     },
     {
+      "owner": "franz1981",
+      "name": "campfire-quarkus-bench",
+      "stars": 4,
+      "icon": "https://avatars.githubusercontent.com/u/13125299?v\u003d4",
+      "link": "https://github.com/franz1981/campfire-quarkus-bench/blob/b59e6a484b24620fe68c11961077f250cb410a0e/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "hyperfoil",
+          "d": "\u003cp\u003eHyperfoil 0.29.3: runs a benchmark YAML in this JVM (bench.sh, all load)\u003c/p\u003e\n",
+          "s": "io.hyperfoil:hyperfoil-cli:0.29.3",
+          "c": "hyperfoil@franz1981/campfire-quarkus-bench"
+        },
+        {
+          "a": "ap-loader",
+          "d": "\u003cp\u003easync-profiler 4.5 through ap-loader (bench.sh profile)\u003c/p\u003e\n",
+          "s": "me.bechberger:ap-loader-all:4.5-13",
+          "c": "ap-loader@franz1981/campfire-quarkus-bench"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "neo4j",
       "name": "jbang-catalog",
       "stars": 3,
@@ -2771,7 +2793,7 @@
       "name": "jbang-catalog",
       "stars": 3,
       "icon": "https://avatars.githubusercontent.com/u/778793?v\u003d4",
-      "link": "https://github.com/quintesse/jbang-catalog/blob/27214f448cb33d48453efd0771f52de990174a52/jbang-catalog.json",
+      "link": "https://github.com/quintesse/jbang-catalog/blob/1c72e11befe5494e1ab9d5b13e3a58727f7e4bdd/jbang-catalog.json",
       "aliases": [
         {
           "a": "cat",
@@ -3228,28 +3250,6 @@
       "templates": []
     },
     {
-      "owner": "franz1981",
-      "name": "campfire-quarkus-bench",
-      "stars": 3,
-      "icon": "https://avatars.githubusercontent.com/u/13125299?v\u003d4",
-      "link": "https://github.com/franz1981/campfire-quarkus-bench/blob/b59e6a484b24620fe68c11961077f250cb410a0e/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "hyperfoil",
-          "d": "\u003cp\u003eHyperfoil 0.29.3: runs a benchmark YAML in this JVM (bench.sh, all load)\u003c/p\u003e\n",
-          "s": "io.hyperfoil:hyperfoil-cli:0.29.3",
-          "c": "hyperfoil@franz1981/campfire-quarkus-bench"
-        },
-        {
-          "a": "ap-loader",
-          "d": "\u003cp\u003easync-profiler 4.5 through ap-loader (bench.sh profile)\u003c/p\u003e\n",
-          "s": "me.bechberger:ap-loader-all:4.5-13",
-          "c": "ap-loader@franz1981/campfire-quarkus-bench"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "ZenWave360",
       "name": "zenwave-playground",
       "stars": 3,
@@ -3292,66 +3292,6 @@
           "d": "\u003cp\u003eCreate and run Red Hat Build of Apache Camel routes easily\u003c/p\u003e\n",
           "s": "CamelJBang.java",
           "c": "camel@redhat-camel"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "tors42",
-      "name": "jbang-chariot",
-      "stars": 2,
-      "icon": "https://avatars.githubusercontent.com/u/4084220?v\u003d4",
-      "link": "https://github.com/tors42/jbang-chariot/blob/76584e82ac009159ff1cf6b0a061f43d283e4136/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "liga",
-          "s": "scripts/liga.java",
-          "c": "liga@tors42/jbang-chariot"
-        },
-        {
-          "a": "nonthematic",
-          "s": "scripts/nonthematic.java",
-          "c": "nonthematic@tors42/jbang-chariot"
-        },
-        {
-          "a": "membercount",
-          "s": "scripts/membercount.java",
-          "c": "membercount@tors42/jbang-chariot"
-        },
-        {
-          "a": "opponents",
-          "s": "scripts/opponents.java",
-          "c": "opponents@tors42/jbang-chariot"
-        },
-        {
-          "a": "flatten",
-          "s": "scripts/flatten.java",
-          "c": "flatten@tors42/jbang-chariot"
-        },
-        {
-          "a": "evalsummary",
-          "s": "scripts/evalsummary.java",
-          "c": "evalsummary@tors42/jbang-chariot"
-        },
-        {
-          "a": "autoscore",
-          "s": "scripts/autoscore.java",
-          "c": "autoscore@tors42/jbang-chariot"
-        },
-        {
-          "a": "uci2san",
-          "s": "scripts/uci2san.jsh",
-          "c": "uci2san@tors42/jbang-chariot"
-        },
-        {
-          "a": "oauth2pkce",
-          "s": "scripts/oauth2pkce.java",
-          "c": "oauth2pkce@tors42/jbang-chariot"
-        },
-        {
-          "a": "updateArena",
-          "s": "scripts/updateArena.java",
-          "c": "updateArena@tors42/jbang-chariot"
         }
       ],
       "templates": []
@@ -3559,22 +3499,6 @@
       "templates": []
     },
     {
-      "owner": "FroMage",
-      "name": "jbang-catalog",
-      "stars": 2,
-      "icon": "https://avatars.githubusercontent.com/u/179265?v\u003d4",
-      "link": "https://github.com/FroMage/jbang-catalog/blob/7aae6527207f06395ae3b30c36bc0d81b734180b/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "static-init-finder",
-          "d": "\u003cp\u003eFind static init calls to classes\u003c/p\u003e\n",
-          "s": "ListStaticInit.java",
-          "c": "static-init-finder@FroMage"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "BrokkAi",
       "name": "brokk-releases",
       "stars": 2,
@@ -3729,7 +3653,7 @@
       "name": "jbang-catalog",
       "stars": 2,
       "icon": "https://avatars.githubusercontent.com/u/81020166?v\u003d4",
-      "link": "https://github.com/jreleaser/jbang-catalog/blob/c796f4e744b0770f33b88b30c897736ad60b661f/jbang-catalog.json",
+      "link": "https://github.com/jreleaser/jbang-catalog/blob/d5918d9fb0b575cc79ec1d3e1c0ce3f6feae08ba/jbang-catalog.json",
       "aliases": [
         {
           "a": "jreleaser",
@@ -3742,6 +3666,66 @@
           "d": "\u003cp\u003eRelease projects quickly and easily with JReleaser\u003c/p\u003e\n",
           "s": "jreleaser_snapshot.java",
           "c": "jreleaser-snapshot@jreleaser"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "tors42",
+      "name": "jbang-chariot",
+      "stars": 2,
+      "icon": "https://avatars.githubusercontent.com/u/4084220?v\u003d4",
+      "link": "https://github.com/tors42/jbang-chariot/blob/76584e82ac009159ff1cf6b0a061f43d283e4136/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "liga",
+          "s": "scripts/liga.java",
+          "c": "liga@tors42/jbang-chariot"
+        },
+        {
+          "a": "nonthematic",
+          "s": "scripts/nonthematic.java",
+          "c": "nonthematic@tors42/jbang-chariot"
+        },
+        {
+          "a": "membercount",
+          "s": "scripts/membercount.java",
+          "c": "membercount@tors42/jbang-chariot"
+        },
+        {
+          "a": "opponents",
+          "s": "scripts/opponents.java",
+          "c": "opponents@tors42/jbang-chariot"
+        },
+        {
+          "a": "flatten",
+          "s": "scripts/flatten.java",
+          "c": "flatten@tors42/jbang-chariot"
+        },
+        {
+          "a": "evalsummary",
+          "s": "scripts/evalsummary.java",
+          "c": "evalsummary@tors42/jbang-chariot"
+        },
+        {
+          "a": "autoscore",
+          "s": "scripts/autoscore.java",
+          "c": "autoscore@tors42/jbang-chariot"
+        },
+        {
+          "a": "uci2san",
+          "s": "scripts/uci2san.jsh",
+          "c": "uci2san@tors42/jbang-chariot"
+        },
+        {
+          "a": "oauth2pkce",
+          "s": "scripts/oauth2pkce.java",
+          "c": "oauth2pkce@tors42/jbang-chariot"
+        },
+        {
+          "a": "updateArena",
+          "s": "scripts/updateArena.java",
+          "c": "updateArena@tors42/jbang-chariot"
         }
       ],
       "templates": []
@@ -3767,6 +3751,38 @@
           "a": "jbangquarkus",
           "s": "jbangquarkus.java",
           "c": "jbangquarkus@aizedevops/spring-boot-projects~jbang"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "FroMage",
+      "name": "jbang-catalog",
+      "stars": 2,
+      "icon": "https://avatars.githubusercontent.com/u/179265?v\u003d4",
+      "link": "https://github.com/FroMage/jbang-catalog/blob/7aae6527207f06395ae3b30c36bc0d81b734180b/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "static-init-finder",
+          "d": "\u003cp\u003eFind static init calls to classes\u003c/p\u003e\n",
+          "s": "ListStaticInit.java",
+          "c": "static-init-finder@FroMage"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "Yacn9",
+      "name": "springboot-blueprint",
+      "stars": 2,
+      "icon": "https://avatars.githubusercontent.com/u/40551841?v\u003d4",
+      "link": "https://github.com/Yacn9/springboot-blueprint/blob/1c7b68a292bc7a99999336a5881303df96170f4c/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "blueprint",
+          "d": "\u003cp\u003eCreate a project from the modular-monolith Spring Boot blueprint\u003c/p\u003e\n",
+          "s": "https://github.com/Yacn9/springboot-blueprint/releases/latest/download/blueprint-cli.jar",
+          "c": "blueprint@Yacn9/springboot-blueprint"
         }
       ],
       "templates": []
@@ -4027,6 +4043,28 @@
           "d": "\u003cp\u003eFast build tool that generates self-contained build.jar from Maven pom.xml files\u003c/p\u003e\n",
           "s": "hardcoded/src/main/java/io/quarkiverse/qraven/hardcoded/QravenCli.java",
           "c": "qraven@FroMage/qraven"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "smallrye",
+      "name": "smallrye-acp-client",
+      "stars": 1,
+      "icon": "https://avatars.githubusercontent.com/u/38892730?v\u003d4",
+      "link": "https://github.com/smallrye/smallrye-acp-client/blob/7f54911f105c18a7a230f3d19e6fea39881987b0/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "acp",
+          "d": "\u003cp\u003eACP Java Client for any ACP-compatible agent\u003c/p\u003e\n",
+          "s": "client/target/acp-java-client-0.2.2-SNAPSHOT-runner.jar",
+          "c": "acp@smallrye/smallrye-acp-client"
+        },
+        {
+          "a": "acp-tests",
+          "d": "\u003cp\u003eRun ACP integration tests against a registry-installed agent\u003c/p\u003e\n",
+          "s": "integration-test/RunTests.java",
+          "c": "acp-tests@smallrye/smallrye-acp-client"
         }
       ],
       "templates": []
@@ -4671,7 +4709,7 @@
       "name": "jbang-catalog",
       "stars": 1,
       "icon": "https://avatars.githubusercontent.com/u/1402140?v\u003d4",
-      "link": "https://github.com/alaurie/jbang-catalog/blob/f4a90effdb8b6d66c842a1a41df2e8683be18e0c/jbang-catalog.json",
+      "link": "https://github.com/alaurie/jbang-catalog/blob/ff593ede0e7b3f0d47afd42a53be8df67908b27d/jbang-catalog.json",
       "aliases": [
         {
           "a": "serve",
@@ -4726,22 +4764,6 @@
           "d": "\u003cp\u003eComplete disaster recovery backup, restore, and inspection utility for Jellyfin media server.\u003c/p\u003e\n",
           "s": "apps/jellyfin-backup/JellyfinBackup.java",
           "c": "jellyfin-backup@alaurie"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "smallrye",
-      "name": "smallrye-acp-client",
-      "stars": 1,
-      "icon": "https://avatars.githubusercontent.com/u/38892730?v\u003d4",
-      "link": "https://github.com/smallrye/smallrye-acp-client/blob/ee15c8c53e7259aecb02f7df3e66299e05063791/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "acp",
-          "d": "\u003cp\u003eACP Java Client for any ACP-compatible agent\u003c/p\u003e\n",
-          "s": "client/target/acp-java-client-0.2.1-SNAPSHOT-runner.jar",
-          "c": "acp@smallrye/smallrye-acp-client"
         }
       ],
       "templates": []
@@ -5012,22 +5034,6 @@
           "d": "\u003cp\u003eInteractive Java REPL (aesh + JShell) with syntax highlighting, tab completion, jshell-style commands and /deps.\u003c/p\u003e\n",
           "s": "src/dev/jbang/repl/repl.java",
           "c": "repl@jbangdev/jbang-repl"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "Yacn9",
-      "name": "springboot-blueprint",
-      "stars": 1,
-      "icon": "https://avatars.githubusercontent.com/u/40551841?v\u003d4",
-      "link": "https://github.com/Yacn9/springboot-blueprint/blob/1c7b68a292bc7a99999336a5881303df96170f4c/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "blueprint",
-          "d": "\u003cp\u003eCreate a project from the modular-monolith Spring Boot blueprint\u003c/p\u003e\n",
-          "s": "https://github.com/Yacn9/springboot-blueprint/releases/latest/download/blueprint-cli.jar",
-          "c": "blueprint@Yacn9/springboot-blueprint"
         }
       ],
       "templates": []
@@ -6079,6 +6085,22 @@
       ]
     },
     {
+      "owner": "apache",
+      "name": "camel-kit",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
+      "link": "https://github.com/apache/camel-kit/blob/70796c029363919bed195871ee563393c9904d22/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "camel-kit",
+          "d": "\u003cp\u003eCamel Kit lightweight — no embedded MCP servers, requires external setup\u003c/p\u003e\n",
+          "s": "camel-kit-main/src/main/jbang/main/CamelKit.java",
+          "c": "camel-kit@apache/camel-kit"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "Prakhar007Pathak",
       "name": "DataMinesPDF",
       "stars": 0,
@@ -6476,7 +6498,7 @@
       "name": "weekly-status",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/282497597?v\u003d4",
-      "link": "https://github.com/House-elves/weekly-status/blob/f215748a3e1fae10a44c8ea2c2815b09db58d876/jbang-catalog.json",
+      "link": "https://github.com/House-elves/weekly-status/blob/f65f6f0969a8586ac9f27daaa47f12bf5dd74765/jbang-catalog.json",
       "aliases": [
         {
           "a": "weekly-status",
@@ -7241,31 +7263,6 @@
       "templates": []
     },
     {
-      "owner": "TheShubham-K",
-      "name": "getting-started-with-springboot",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/52125841?v\u003d4",
-      "link": "https://github.com/TheShubham-K/getting-started-with-springboot/blob/7c1d7f60541f1d6fead15de987107c135a1914ee/jbang/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "hello",
-          "s": "hello.java",
-          "c": "hello@TheShubham-K/getting-started-with-springboot~jbang"
-        },
-        {
-          "a": "hellocli",
-          "s": "hellocli.java",
-          "c": "hellocli@TheShubham-K/getting-started-with-springboot~jbang"
-        },
-        {
-          "a": "jbangquarkus",
-          "s": "jbangquarkus.java",
-          "c": "jbangquarkus@TheShubham-K/getting-started-with-springboot~jbang"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "aswiniqaconsultants",
       "name": "jbangdev",
       "stars": 0,
@@ -7796,7 +7793,7 @@
       "name": "drydock",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/16762720?v\u003d4",
-      "link": "https://github.com/btraceio/drydock/blob/aba28ede0e2701c5b912733fb4a9299ea850713a/jbang-catalog.json",
+      "link": "https://github.com/btraceio/drydock/blob/f1b98b8a7f569ef6b929f16865b9d2a8275282aa/jbang-catalog.json",
       "aliases": [
         {
           "a": "drydock",
@@ -8261,6 +8258,31 @@
           "a": "datahub-protobuf",
           "s": "io.acryl:datahub-protobuf:0.8.44-2rc1",
           "c": "datahub-protobuf@aucampia/issues~20220908-datahub-protobuf"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "TheShubham-K",
+      "name": "getting-started-with-springboot",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/52125841?v\u003d4",
+      "link": "https://github.com/TheShubham-K/getting-started-with-springboot/blob/7c1d7f60541f1d6fead15de987107c135a1914ee/jbang/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "hello",
+          "s": "hello.java",
+          "c": "hello@TheShubham-K/getting-started-with-springboot~jbang"
+        },
+        {
+          "a": "hellocli",
+          "s": "hellocli.java",
+          "c": "hellocli@TheShubham-K/getting-started-with-springboot~jbang"
+        },
+        {
+          "a": "jbangquarkus",
+          "s": "jbangquarkus.java",
+          "c": "jbangquarkus@TheShubham-K/getting-started-with-springboot~jbang"
         }
       ],
       "templates": []

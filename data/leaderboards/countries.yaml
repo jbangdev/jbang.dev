@@ -1,10 +1,10 @@
-# JBang versions usage data total count: 4624
+# JBang versions usage data total count: 4625
 - name: United States
   percentage: 16.1
 - name: Germany
   percentage: 9.5
 - name: France
-  percentage: 7.7
+  percentage: 7.8
 - name: Brazil
   percentage: 4.3
 - name: Italy
@@ -12,9 +12,9 @@
 - name: India
   percentage: 4.2
 - name: Spain
-  percentage: 3.8
+  percentage: 4.0
 - name: United Kingdom
-  percentage: 3.5
+  percentage: 3.4
 - name: Netherlands
   percentage: 2.8
 - name: Switzerland
@@ -24,12 +24,10 @@
 - name: Austria
   percentage: 1.8
 - name: Canada
-  percentage: 1.8
+  percentage: 1.7
 - name: Czechia
   percentage: 1.5
 - name: Belgium
-  percentage: 1.4
-- name: Japan
   percentage: 1.4
 - name: Tunisia
   percentage: 1.4
@@ -38,6 +36,8 @@
 - name: Russia
   percentage: 1.4
 - name: Portugal
+  percentage: 1.4
+- name: Japan
   percentage: 1.3
 - name: Mexico
   percentage: 1.3
@@ -66,22 +66,22 @@
 - name: Colombia
   percentage: 0.7
 - name: Israel
-  percentage: 0.7
+  percentage: 0.6
 - name: Hungary
   percentage: 0.6
 - name: Romania
-  percentage: 0.6
+  percentage: 0.5
 - name: South Korea
   percentage: 0.5
 - name: Malaysia
   percentage: 0.5
 - name: Serbia
   percentage: 0.5
-- name: Philippines
+- name: Singapore
   percentage: 0.5
 - name: Thailand
   percentage: 0.5
-- name: Singapore
+- name: Philippines
   percentage: 0.5
 - name: Türkiye
   percentage: 0.5
@@ -93,59 +93,59 @@
   percentage: 0.3
 - name: Chile
   percentage: 0.3
-- name: Costa Rica
-  percentage: 0.3
 - name: Bulgaria
   percentage: 0.3
 - name: Algeria
   percentage: 0.3
+- name: Costa Rica
+  percentage: 0.3
 - name: Ecuador
+  percentage: 0.3
+- name: Peru
   percentage: 0.3
 - name: Hong Kong SAR China
   percentage: 0.2
 - name: Bangladesh
   percentage: 0.2
-- name: Peru
-  percentage: 0.2
 - name: Morocco
   percentage: 0.2
-- name: Pakistan
+- name: Saudi Arabia
   percentage: 0.2
 - name: New Zealand
+  percentage: 0.2
+- name: Pakistan
   percentage: 0.2
 - name: Luxembourg
   percentage: 0.2
 - name: Slovenia
   percentage: 0.2
-- name: Saudi Arabia
-  percentage: 0.2
 - name: Taiwan
+  percentage: 0.2
+- name: Panama
   percentage: 0.2
 - name: Kuwait
   percentage: 0.2
 - name: Dominican Republic
   percentage: 0.2
-- name: Panama
-  percentage: 0.2
-- name: Guatemala
+- name: Kazakhstan
   percentage: 0.1
 - name: Bosnia & Herzegovina
   percentage: 0.1
-- name: El Salvador
+- name: Guatemala
   percentage: 0.1
 - name: Belarus
   percentage: 0.1
+- name: El Salvador
+  percentage: 0.1
 - name: South Africa
-  percentage: 0.1
-- name: Kazakhstan
-  percentage: 0.1
-- name: Paraguay
-  percentage: 0.1
-- name: Georgia
   percentage: 0.1
 - name: Uruguay
   percentage: 0.1
+- name: Georgia
+  percentage: 0.1
 - name: Montenegro
+  percentage: 0.1
+- name: Paraguay
   percentage: 0.1
 - name: Nigeria
   percentage: 0.1
@@ -153,41 +153,43 @@
   percentage: 0.1
 - name: Cyprus
   percentage: 0.1
-- name: Jamaica
-  percentage: 0.1
-- name: Albania
-  percentage: 0.1
-- name: Lithuania
-  percentage: 0.1
-- name: Venezuela
-  percentage: 0.1
-- name: Estonia
+- name: Kenya
   percentage: 0.1
 - name: United Arab Emirates
   percentage: 0.1
-- name: Kenya
+- name: Venezuela
+  percentage: 0.1
+- name: Lithuania
+  percentage: 0.1
+- name: Jamaica
+  percentage: 0.1
+- name: Estonia
   percentage: 0.1
 - name: North Macedonia
   percentage: 0.1
-- name: Malta
-  percentage: 0.1
-- name: Oman
-  percentage: 0.1
-- name: Sri Lanka
-  percentage: 0.1
-- name: Palestinian Territories
-  percentage: 0.1
-- name: Lebanon
-  percentage: 0.1
-- name: Latvia
-  percentage: 0.1
-- name: Qatar
+- name: Albania
   percentage: 0.1
 - name: Angola
   percentage: 0.1
+- name: Malta
+  percentage: 0.1
+- name: Sri Lanka
+  percentage: 0.1
+- name: Lebanon
+  percentage: 0.1
+- name: Palestinian Territories
+  percentage: 0.1
+- name: Latvia
+  percentage: 0.1
+- name: Oman
+  percentage: 0.1
+- name: Qatar
+  percentage: 0.1
+- name: Malawi
+  percentage: 0.0
 - name: Trinidad & Tobago
   percentage: 0.0
-- name: Cayman Islands
+- name: Bolivia
   percentage: 0.0
 - name: Armenia
   percentage: 0.0
@@ -197,73 +199,71 @@
   percentage: 0.0
 - name: Laos
   percentage: 0.0
-- name: Puerto Rico
-  percentage: 0.0
-- name: Bolivia
-  percentage: 0.0
-- name: Mongolia
+- name: Cape Verde
   percentage: 0.0
 - name: Cameroon
   percentage: 0.0
-- name: Malawi
+- name: Mongolia
   percentage: 0.0
-- name: Cape Verde
+- name: Puerto Rico
   percentage: 0.0
-- name: Jordan
+- name: Liechtenstein
   percentage: 0.0
-- name: Papua New Guinea
-  percentage: 0.0
-- name: Libya
-  percentage: 0.0
-- name: Martinique
-  percentage: 0.0
-- name: Moldova
-  percentage: 0.0
-- name: Zimbabwe
-  percentage: 0.0
-- name: Mozambique
+- name: Cayman Islands
   percentage: 0.0
 - name: Ghana
   percentage: 0.0
-- name: Barbados
+- name: Papua New Guinea
   percentage: 0.0
-- name: Nepal
+- name: Yemen
+  percentage: 0.0
+- name: Jordan
+  percentage: 0.0
+- name: Zimbabwe
+  percentage: 0.0
+- name: Ethiopia
+  percentage: 0.0
+- name: Honduras
+  percentage: 0.0
+- name: Nicaragua
+  percentage: 0.0
+- name: Senegal
+  percentage: 0.0
+- name: St. Martin
   percentage: 0.0
 - name: Mali
   percentage: 0.0
 - name: Rwanda
   percentage: 0.0
-- name: Curaçao
-  percentage: 0.0
 - name: Madagascar
   percentage: 0.0
-- name: St. Martin
-  percentage: 0.0
-- name: Iceland
-  percentage: 0.0
-- name: Senegal
-  percentage: 0.0
-- name: Honduras
-  percentage: 0.0
-- name: Côte d’Ivoire
-  percentage: 0.0
-- name: Bahrain
-  percentage: 0.0
-- name: Zambia
+- name: Barbados
   percentage: 0.0
 - name: Guinea
   percentage: 0.0
-- name: Ethiopia
+- name: Zambia
   percentage: 0.0
-- name: Bahamas
+- name: Mozambique
+  percentage: 0.0
+- name: Côte d’Ivoire
+  percentage: 0.0
+- name: Martinique
+  percentage: 0.0
+- name: Bahrain
+  percentage: 0.0
+- name: Iceland
+  percentage: 0.0
+- name: Libya
+  percentage: 0.0
+- name: Moldova
   percentage: 0.0
 - name: Cambodia
   percentage: 0.0
-- name: Liechtenstein
+- name: Iraq
   percentage: 0.0
-- name: Nicaragua
+- name: Nepal
   percentage: 0.0
-- name: Azerbaijan
+- name: Curaçao
   percentage: 0.0
 - name: Åland Islands
   percentage: 0.0
@@ -271,11 +271,11 @@
   percentage: 0.0
 - name: St. Vincent & Grenadines
   percentage: 0.0
-- name: Togo
+- name: Bahamas
   percentage: 0.0
 - name: Mauritius
   percentage: 0.0
-- name: Yemen
+- name: Azerbaijan
   percentage: 0.0
-- name: Iraq
+- name: Togo
   percentage: 0.0
