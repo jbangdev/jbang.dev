@@ -1,5 +1,5 @@
 {
-  "aliasCount": 963,
+  "aliasCount": 965,
   "templateCount": 83,
   "catalogs": [
     {
@@ -7,7 +7,7 @@
       "name": "pkl",
       "stars": 11550,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
-      "link": "https://github.com/apple/pkl/blob/0cb9843af7d8c163690dd9c4e018ae8cd675a777/jbang-catalog.json",
+      "link": "https://github.com/apple/pkl/blob/939e844c032ab9b2acb972ff770978cc611674f2/jbang-catalog.json",
       "aliases": [
         {
           "a": "pkl",
@@ -32,7 +32,7 @@
       "name": "oshi",
       "stars": 5271,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/cac716bc231d17e8461f8df387a52390cc93a2d3/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/5839019dad05d41cb0eb7fe270f120c2b8855dae/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -110,7 +110,7 @@
     {
       "owner": "jbangdev",
       "name": "jbang",
-      "stars": 1878,
+      "stars": 1879,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "link": "https://github.com/jbangdev/jbang/blob/352052182d6673fedc8954fe77629c3e84ad8f9b/docs/modules/ROOT/examples/jbang-catalog.json",
       "aliases": [
@@ -203,7 +203,7 @@
     {
       "owner": "tamboui",
       "name": "tamboui",
-      "stars": 686,
+      "stars": 687,
       "icon": "https://avatars.githubusercontent.com/u/251016663?v\u003d4",
       "link": "https://github.com/tamboui/tamboui/blob/37762e4436acdc61a91f310ea985598be9b35ff8/jbang-catalog.json",
       "aliases": [
@@ -556,7 +556,7 @@
       "name": "citrus",
       "stars": 485,
       "icon": "https://avatars.githubusercontent.com/u/27848811?v\u003d4",
-      "link": "https://github.com/citrusframework/citrus/blob/4d31cea2b20704e72d4d5037e1546553b219ffcf/jbang-catalog.json",
+      "link": "https://github.com/citrusframework/citrus/blob/096747ce419b923a6461894fcfb7330c8b0c6f90/jbang-catalog.json",
       "aliases": [
         {
           "a": "citrus",
@@ -572,7 +572,7 @@
       "name": "hibernate-reactive",
       "stars": 468,
       "icon": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
-      "link": "https://github.com/hibernate/hibernate-reactive/blob/d51e393e6acfc6a8a6ca075764fccafe7819ec31/jbang-catalog.json",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/6343dfbfb2d91919d05ca10aaf61d693b96fa18f/jbang-catalog.json",
       "aliases": [
         {
           "a": "example",
@@ -618,14 +618,14 @@
     {
       "owner": "jdubois",
       "name": "boot-ui",
-      "stars": 322,
+      "stars": 323,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
-      "link": "https://github.com/jdubois/boot-ui/blob/362332258a7f63c71e28128621f382dfef10ac64/jbang-catalog.json",
+      "link": "https://github.com/jdubois/boot-ui/blob/ddfcb243615fae417cea2c46e11797bffbc43231/jbang-catalog.json",
       "aliases": [
         {
           "a": "bootui",
           "d": "\u003cp\u003eAsk a running Spring Boot or Quarkus application a question. One command per BootUI MCP tool.\u003c/p\u003e\n",
-          "s": "com.julien-dubois.bootui:bootui-cli:2.1.0:all",
+          "s": "com.julien-dubois.bootui:bootui-cli:2.2.0:all",
           "c": "bootui@jdubois/boot-ui"
         }
       ],
@@ -810,7 +810,7 @@
       "name": "cli",
       "stars": 73,
       "icon": "https://avatars.githubusercontent.com/u/207676178?v\u003d4",
-      "link": "https://github.com/archgate/cli/blob/01a102d30b8a3257d616f5808e4a5f323d690cc5/shims/maven/jbang-catalog.json",
+      "link": "https://github.com/archgate/cli/blob/fd92933ccad95468772b1aec18cda0f959394450/shims/maven/jbang-catalog.json",
       "aliases": [
         {
           "a": "archgate",
@@ -1128,7 +1128,7 @@
       "name": "incus-spawn",
       "stars": 44,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/1c836d05d16233feb34192bcbc94af55ccceef4b/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/fdb911f192d114669b6b3dbad9d671ce5dfd280f/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -1236,25 +1236,9 @@
       "templates": []
     },
     {
-      "owner": "luigidemasi",
-      "name": "camel-kit",
-      "stars": 31,
-      "icon": "https://avatars.githubusercontent.com/u/5583341?v\u003d4",
-      "link": "https://github.com/luigidemasi/camel-kit/blob/6fc50b29905fd730367fe18ab8b8d3ef4ff9e2b2/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "camel-kit",
-          "d": "\u003cp\u003eCamel Kit lightweight — no embedded MCP servers, requires external setup\u003c/p\u003e\n",
-          "s": "camel-kit-main/src/main/jbang/main/CamelKit.java",
-          "c": "camel-kit@luigidemasi/camel-kit"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "worldline",
       "name": "learning-kotlin",
-      "stars": 30,
+      "stars": 31,
       "icon": "https://avatars.githubusercontent.com/u/5173767?v\u003d4",
       "link": "https://github.com/worldline/learning-kotlin/blob/bffc395ae1426a7a0b822e7e9902ae00130b23c3/jbang-catalog.json",
       "aliases": [
@@ -1277,6 +1261,22 @@
           "c": "jfxkt@worldline/learning-kotlin"
         }
       ]
+    },
+    {
+      "owner": "luigidemasi",
+      "name": "camel-kit",
+      "stars": 31,
+      "icon": "https://avatars.githubusercontent.com/u/5583341?v\u003d4",
+      "link": "https://github.com/luigidemasi/camel-kit/blob/6fc50b29905fd730367fe18ab8b8d3ef4ff9e2b2/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "camel-kit",
+          "d": "\u003cp\u003eCamel Kit lightweight — no embedded MCP servers, requires external setup\u003c/p\u003e\n",
+          "s": "camel-kit-main/src/main/jbang/main/CamelKit.java",
+          "c": "camel-kit@luigidemasi/camel-kit"
+        }
+      ],
+      "templates": []
     },
     {
       "owner": "jbangdev",
@@ -1721,7 +1721,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/02d8a7c12e5828634ae903ea8846576eb4f32b3d/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/5f28256889f1f8bde19ef7ed139756dfe4d2b7f6/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -3184,7 +3184,7 @@
       "name": "java-concurrency-interview",
       "stars": 3,
       "icon": "https://avatars.githubusercontent.com/u/19151554?v\u003d4",
-      "link": "https://github.com/alxkm/java-concurrency-interview/blob/bc7acc873f04dc0c90f2f9a31ae6f3389e89ac86/jbang-catalog.json",
+      "link": "https://github.com/alxkm/java-concurrency-interview/blob/5cf43a794fdcca4359660e4519df4ba74055b645/jbang-catalog.json",
       "aliases": [
         {
           "a": "quiz",
@@ -3559,6 +3559,22 @@
       "templates": []
     },
     {
+      "owner": "FroMage",
+      "name": "jbang-catalog",
+      "stars": 2,
+      "icon": "https://avatars.githubusercontent.com/u/179265?v\u003d4",
+      "link": "https://github.com/FroMage/jbang-catalog/blob/7aae6527207f06395ae3b30c36bc0d81b734180b/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "static-init-finder",
+          "d": "\u003cp\u003eFind static init calls to classes\u003c/p\u003e\n",
+          "s": "ListStaticInit.java",
+          "c": "static-init-finder@FroMage"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "BrokkAi",
       "name": "brokk-releases",
       "stars": 2,
@@ -3751,22 +3767,6 @@
           "a": "jbangquarkus",
           "s": "jbangquarkus.java",
           "c": "jbangquarkus@aizedevops/spring-boot-projects~jbang"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "FroMage",
-      "name": "jbang-catalog",
-      "stars": 2,
-      "icon": "https://avatars.githubusercontent.com/u/179265?v\u003d4",
-      "link": "https://github.com/FroMage/jbang-catalog/blob/7aae6527207f06395ae3b30c36bc0d81b734180b/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "static-init-finder",
-          "d": "\u003cp\u003eFind static init calls to classes\u003c/p\u003e\n",
-          "s": "ListStaticInit.java",
-          "c": "static-init-finder@FroMage"
         }
       ],
       "templates": []
@@ -5801,6 +5801,21 @@
       "templates": []
     },
     {
+      "owner": "gaurabhok",
+      "name": "karate-automation",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/98075537?v\u003d4",
+      "link": "https://github.com/gaurabhok/karate-automation/blob/dae22a4de2a39e0a6a8c3be5ddef28ed3bdd7c39/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "karate",
+          "s": "com.intuit.karate:karate-core:1.3.1:all",
+          "c": "karate@gaurabhok/karate-automation"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "telaminai",
       "name": "fluxtionauditlog-analyser",
       "stars": 0,
@@ -5910,34 +5925,6 @@
       "templates": []
     },
     {
-      "owner": "akilisha",
-      "name": "cafeai",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/156885222?v\u003d4",
-      "link": "https://github.com/akilisha/cafeai/blob/d85786b9b529384b67ce7f57a0be5569f0ba9627/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "hello",
-          "d": "\u003cp\u003eA CafeAI web server in one file: routes, JSON, no API key\u003c/p\u003e\n",
-          "s": "jbang/hello.java",
-          "c": "hello@akilisha/cafeai"
-        },
-        {
-          "a": "ask",
-          "d": "\u003cp\u003eAn LLM behind POST /ask in one file (Anthropic, OpenAI, or local Ollama)\u003c/p\u003e\n",
-          "s": "jbang/ask.java",
-          "c": "ask@akilisha/cafeai"
-        }
-      ],
-      "templates": [
-        {
-          "a": "cafeai",
-          "d": "\u003cp\u003eA minimal CafeAI app to start from\u003c/p\u003e\n",
-          "c": "cafeai@akilisha/cafeai"
-        }
-      ]
-    },
-    {
       "owner": "emvnuel",
       "name": "jabuti-mcp",
       "stars": 0,
@@ -5948,28 +5935,6 @@
           "a": "jabuti",
           "s": "https://github.com/emvnuel/jabuti-mcp/releases/latest/download/jabuti-mcp.jar",
           "c": "jabuti@emvnuel/jabuti-mcp"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "limn-toolkit",
-      "name": "limn-toolkit",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/313112530?v\u003d4",
-      "link": "https://github.com/limn-toolkit/limn-toolkit/blob/b2655b6a280e21f90742bc80a103eb65fbf02479/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "demo",
-          "d": "\u003cp\u003eThe kitchen sink: every widget, the charts, the media player and the 3D viewport in one window. macOS: jbang --java-options\u003d-XstartOnFirstThread demo@limn-toolkit/limn-toolkit\u003c/p\u003e\n",
-          "s": "io.github.limn-toolkit:limn-demo:RELEASE",
-          "c": "demo@limn-toolkit/limn-toolkit"
-        },
-        {
-          "a": "theme-editor",
-          "d": "\u003cp\u003eThe screen that authors a Theme, with every fallback face and the fonts of this machine in its picker. macOS: jbang --java-options\u003d-XstartOnFirstThread theme-editor@limn-toolkit/limn-toolkit\u003c/p\u003e\n",
-          "s": "io.github.limn-toolkit:limn-theme-editor:RELEASE",
-          "c": "theme-editor@limn-toolkit/limn-toolkit"
         }
       ],
       "templates": []
@@ -6095,7 +6060,7 @@
       "name": "camel-kit",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
-      "link": "https://github.com/apache/camel-kit/blob/2d8f51ef24dc14e6f5c5955d6640b4f66b2cb3d1/jbang-catalog.json",
+      "link": "https://github.com/apache/camel-kit/blob/d12a3c5c0c86aceff7e391712bdc098dba5253ea/jbang-catalog.json",
       "aliases": [
         {
           "a": "camel-kit",
@@ -6504,7 +6469,7 @@
       "name": "weekly-status",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/282497597?v\u003d4",
-      "link": "https://github.com/House-elves/weekly-status/blob/f65f6f0969a8586ac9f27daaa47f12bf5dd74765/jbang-catalog.json",
+      "link": "https://github.com/House-elves/weekly-status/blob/fb6ed54e4c94b41d92f945405f42f5c712403540/jbang-catalog.json",
       "aliases": [
         {
           "a": "weekly-status",
@@ -7009,21 +6974,6 @@
       "templates": []
     },
     {
-      "owner": "gaurabhok",
-      "name": "karate-automation",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/98075537?v\u003d4",
-      "link": "https://github.com/gaurabhok/karate-automation/blob/dae22a4de2a39e0a6a8c3be5ddef28ed3bdd7c39/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "karate",
-          "s": "com.intuit.karate:karate-core:1.3.1:all",
-          "c": "karate@gaurabhok/karate-automation"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "kmos",
       "name": "jbang-catalog",
       "stars": 0,
@@ -7221,6 +7171,46 @@
       "templates": []
     },
     {
+      "owner": "akilisha",
+      "name": "cafeai",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/156885222?v\u003d4",
+      "link": "https://github.com/akilisha/cafeai/blob/90332263f9c7bec1adfc0b4d6c5e5a568ebe4dbe/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "hello",
+          "d": "\u003cp\u003eA CafeAI web server in one file: routes, JSON, no API key\u003c/p\u003e\n",
+          "s": "jbang/hello.java",
+          "c": "hello@akilisha/cafeai"
+        },
+        {
+          "a": "ask",
+          "d": "\u003cp\u003eAn LLM behind POST /ask in one file (Anthropic, OpenAI, or local Ollama)\u003c/p\u003e\n",
+          "s": "jbang/ask.java",
+          "c": "ask@akilisha/cafeai"
+        },
+        {
+          "a": "cafeai",
+          "d": "\u003cp\u003eSign in to a model once: cafeai login \u0026lt;vendor\u0026gt;, cafeai status, cafeai logout\u003c/p\u003e\n",
+          "s": "com.akilisha.oss:cafeai-cli:0.6.0",
+          "c": "cafeai@akilisha/cafeai"
+        },
+        {
+          "a": "dev",
+          "d": "\u003cp\u003eRun a CafeAI app and reload it when you save: dev app.java\u003c/p\u003e\n",
+          "s": "com.akilisha.oss:cafeai-dev:0.6.0",
+          "c": "dev@akilisha/cafeai"
+        }
+      ],
+      "templates": [
+        {
+          "a": "cafeai",
+          "d": "\u003cp\u003eA minimal CafeAI app to start from\u003c/p\u003e\n",
+          "c": "cafeai@akilisha/cafeai"
+        }
+      ]
+    },
+    {
       "owner": "rodnansol",
       "name": "jbang-catalog",
       "stars": 0,
@@ -7241,7 +7231,7 @@
       "name": "electrostatic",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/837787?v\u003d4",
-      "link": "https://github.com/teggr/electrostatic/blob/6fe2e909b2c74b1214379c2dab024d2e5a14a2a5/jbang-catalog.json",
+      "link": "https://github.com/teggr/electrostatic/blob/060f9672674f49fa484822f0b4cc7d27f79dcf89/jbang-catalog.json",
       "aliases": [
         {
           "a": "electrostatic",
@@ -7253,11 +7243,33 @@
       "templates": []
     },
     {
+      "owner": "limn-toolkit",
+      "name": "limn-toolkit",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/313112530?v\u003d4",
+      "link": "https://github.com/limn-toolkit/limn-toolkit/blob/5b03e1ad2d54a42ac8a9121ef130b3e276db7ddc/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "demo",
+          "d": "\u003cp\u003eThe showcase: every widget, the charts, the media player and the 3D viewport in one window. macOS: jbang --java-options\u003d-XstartOnFirstThread demo@limn-toolkit/limn-toolkit\u003c/p\u003e\n",
+          "s": "io.github.limn-toolkit:limn-demo:RELEASE",
+          "c": "demo@limn-toolkit/limn-toolkit"
+        },
+        {
+          "a": "theme-editor",
+          "d": "\u003cp\u003eThe screen that authors a Theme, with every fallback face and the fonts of this machine in its picker. macOS: jbang --java-options\u003d-XstartOnFirstThread theme-editor@limn-toolkit/limn-toolkit\u003c/p\u003e\n",
+          "s": "io.github.limn-toolkit:limn-theme-editor:RELEASE",
+          "c": "theme-editor@limn-toolkit/limn-toolkit"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "teggr",
       "name": "j2html-toolkit",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/837787?v\u003d4",
-      "link": "https://github.com/teggr/j2html-toolkit/blob/dd429a8e17283617aca204f24cfa508267922792/jbang/jbang-catalog.json",
+      "link": "https://github.com/teggr/j2html-toolkit/blob/a1eab82e2effe2739883360431e17b5383fa1bed/jbang/jbang-catalog.json",
       "aliases": [
         {
           "a": "j2htmlInit",
@@ -7799,7 +7811,7 @@
       "name": "drydock",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/16762720?v\u003d4",
-      "link": "https://github.com/btraceio/drydock/blob/7b6547c3886793f7932beb8e17e02b8df3cef585/jbang-catalog.json",
+      "link": "https://github.com/btraceio/drydock/blob/2054d64e8e7b906db82c3f64b820010ffa12327f/jbang-catalog.json",
       "aliases": [
         {
           "a": "drydock",
