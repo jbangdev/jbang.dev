@@ -5,7 +5,7 @@
     {
       "owner": "apple",
       "name": "pkl",
-      "stars": 11550,
+      "stars": 11552,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "link": "https://github.com/apple/pkl/blob/939e844c032ab9b2acb972ff770978cc611674f2/jbang-catalog.json",
       "aliases": [
@@ -30,7 +30,7 @@
     {
       "owner": "oshi",
       "name": "oshi",
-      "stars": 5271,
+      "stars": 5272,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
       "link": "https://github.com/oshi/oshi/blob/5839019dad05d41cb0eb7fe270f120c2b8855dae/jbang-catalog.json",
       "aliases": [
@@ -187,7 +187,7 @@
     {
       "owner": "hawtio",
       "name": "hawtio",
-      "stars": 1464,
+      "stars": 1465,
       "icon": "https://avatars.githubusercontent.com/u/2943947?v\u003d4",
       "link": "https://github.com/hawtio/hawtio/blob/485e92e4ed500c534c4c80d0dc1fbf0bc01b97e9/jbang-catalog.json",
       "aliases": [
@@ -572,7 +572,7 @@
       "name": "hibernate-reactive",
       "stars": 468,
       "icon": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
-      "link": "https://github.com/hibernate/hibernate-reactive/blob/6343dfbfb2d91919d05ca10aaf61d693b96fa18f/jbang-catalog.json",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/28ac03c46d9a7605b030af71530348c66e741791/jbang-catalog.json",
       "aliases": [
         {
           "a": "example",
@@ -777,7 +777,7 @@
     {
       "owner": "citrusframework",
       "name": "yaks",
-      "stars": 90,
+      "stars": 89,
       "icon": "https://avatars.githubusercontent.com/u/27848811?v\u003d4",
       "link": "https://github.com/citrusframework/yaks/blob/0ab1d0691d448ce95f0265a91fafddd85809a534/jbang-catalog.json",
       "aliases": [
@@ -810,7 +810,7 @@
       "name": "cli",
       "stars": 73,
       "icon": "https://avatars.githubusercontent.com/u/207676178?v\u003d4",
-      "link": "https://github.com/archgate/cli/blob/fd92933ccad95468772b1aec18cda0f959394450/shims/maven/jbang-catalog.json",
+      "link": "https://github.com/archgate/cli/blob/b6413d00474bf36c48453eff00ead16cb00064f8/shims/maven/jbang-catalog.json",
       "aliases": [
         {
           "a": "archgate",
@@ -1128,7 +1128,7 @@
       "name": "incus-spawn",
       "stars": 44,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/fdb911f192d114669b6b3dbad9d671ce5dfd280f/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/1883d6d49b84b2aba856de4ccffda1a9bbb15012/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -1721,7 +1721,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/5f28256889f1f8bde19ef7ed139756dfe4d2b7f6/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/9952e5d8d6c5dc06f23091b0ef9d4aa4427ba3e6/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -2793,7 +2793,7 @@
       "name": "wanaku-barn",
       "stars": 3,
       "icon": "https://avatars.githubusercontent.com/u/200620763?v\u003d4",
-      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/bf82e215782406740839d104f016dacb47e16136/jbang-catalog.json",
+      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/0f7f5dd3e2fb4e89ce833fbb56bc69c107a94b0e/jbang-catalog.json",
       "aliases": [
         {
           "a": "wanaku",
@@ -3184,7 +3184,7 @@
       "name": "java-concurrency-interview",
       "stars": 3,
       "icon": "https://avatars.githubusercontent.com/u/19151554?v\u003d4",
-      "link": "https://github.com/alxkm/java-concurrency-interview/blob/5cf43a794fdcca4359660e4519df4ba74055b645/jbang-catalog.json",
+      "link": "https://github.com/alxkm/java-concurrency-interview/blob/903d9f19597dc512c17348ba9e81d4134f37a762/jbang-catalog.json",
       "aliases": [
         {
           "a": "quiz",
@@ -3276,6 +3276,22 @@
           "d": "\u003cp\u003eHelloVass Figma MCP server\u003c/p\u003e\n",
           "s": "https://github.com/HelloVass/hellovass-figma-mcp/releases/download/v0.1.3/hellovass-figma-mcp-0.1.3-all-r8.jar",
           "c": "hellovass-figma@HelloVass/hellovass-figma-mcp"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "Yacn9",
+      "name": "springboot-blueprint",
+      "stars": 3,
+      "icon": "https://avatars.githubusercontent.com/u/40551841?v\u003d4",
+      "link": "https://github.com/Yacn9/springboot-blueprint/blob/1c7b68a292bc7a99999336a5881303df96170f4c/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "blueprint",
+          "d": "\u003cp\u003eCreate a project from the modular-monolith Spring Boot blueprint\u003c/p\u003e\n",
+          "s": "https://github.com/Yacn9/springboot-blueprint/releases/latest/download/blueprint-cli.jar",
+          "c": "blueprint@Yacn9/springboot-blueprint"
         }
       ],
       "templates": []
@@ -3440,7 +3456,7 @@
       "name": "diderot",
       "stars": 2,
       "icon": "https://avatars.githubusercontent.com/u/650571?v\u003d4",
-      "link": "https://github.com/sunix/diderot/blob/da445b8d8563362d8792be33014bd476a98cccd3/jbang-catalog.json",
+      "link": "https://github.com/sunix/diderot/blob/de3d49368c6bf17ddc40aee92d01d885dbf174a7/jbang-catalog.json",
       "aliases": [
         {
           "a": "diderot",
@@ -3772,22 +3788,6 @@
       "templates": []
     },
     {
-      "owner": "Yacn9",
-      "name": "springboot-blueprint",
-      "stars": 2,
-      "icon": "https://avatars.githubusercontent.com/u/40551841?v\u003d4",
-      "link": "https://github.com/Yacn9/springboot-blueprint/blob/1c7b68a292bc7a99999336a5881303df96170f4c/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "blueprint",
-          "d": "\u003cp\u003eCreate a project from the modular-monolith Spring Boot blueprint\u003c/p\u003e\n",
-          "s": "https://github.com/Yacn9/springboot-blueprint/releases/latest/download/blueprint-cli.jar",
-          "c": "blueprint@Yacn9/springboot-blueprint"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "Hyperfoil",
       "name": "jbang-catalog",
       "stars": 1,
@@ -3874,7 +3874,7 @@
       "name": "roadrunner",
       "stars": 1,
       "icon": "https://avatars.githubusercontent.com/u/36197812?v\u003d4",
-      "link": "https://github.com/symentispl/roadrunner/blob/fd82b3b16ccdb7047f874f1af6ceafa6908508e4/jbang-catalog.json",
+      "link": "https://github.com/symentispl/roadrunner/blob/9238183e4cb540c14a59e809375f88bf5c153c03/jbang-catalog.json",
       "aliases": [
         {
           "a": "roadrunner",
@@ -6060,7 +6060,7 @@
       "name": "camel-kit",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
-      "link": "https://github.com/apache/camel-kit/blob/d12a3c5c0c86aceff7e391712bdc098dba5253ea/jbang-catalog.json",
+      "link": "https://github.com/apache/camel-kit/blob/886dac2acd1b644f17f7f8cebd0206853c412c51/jbang-catalog.json",
       "aliases": [
         {
           "a": "camel-kit",
@@ -7231,7 +7231,7 @@
       "name": "electrostatic",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/837787?v\u003d4",
-      "link": "https://github.com/teggr/electrostatic/blob/060f9672674f49fa484822f0b4cc7d27f79dcf89/jbang-catalog.json",
+      "link": "https://github.com/teggr/electrostatic/blob/d41a8630f4e5ba14ee6fbcf71b8542d7bd3d8df7/jbang-catalog.json",
       "aliases": [
         {
           "a": "electrostatic",
@@ -7247,7 +7247,7 @@
       "name": "limn-toolkit",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/313112530?v\u003d4",
-      "link": "https://github.com/limn-toolkit/limn-toolkit/blob/5b03e1ad2d54a42ac8a9121ef130b3e276db7ddc/jbang-catalog.json",
+      "link": "https://github.com/limn-toolkit/limn-toolkit/blob/206f165f03ee089d7544e27740d3261ea1c7228a/jbang-catalog.json",
       "aliases": [
         {
           "a": "demo",
@@ -7269,7 +7269,7 @@
       "name": "j2html-toolkit",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/837787?v\u003d4",
-      "link": "https://github.com/teggr/j2html-toolkit/blob/a1eab82e2effe2739883360431e17b5383fa1bed/jbang/jbang-catalog.json",
+      "link": "https://github.com/teggr/j2html-toolkit/blob/8e84f1f0309ece4788a6cab812b9e99b5c834542/jbang/jbang-catalog.json",
       "aliases": [
         {
           "a": "j2htmlInit",
@@ -7811,7 +7811,7 @@
       "name": "drydock",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/16762720?v\u003d4",
-      "link": "https://github.com/btraceio/drydock/blob/2054d64e8e7b906db82c3f64b820010ffa12327f/jbang-catalog.json",
+      "link": "https://github.com/btraceio/drydock/blob/d8ca626f7d222daf1824628869f122fadb947ef1/jbang-catalog.json",
       "aliases": [
         {
           "a": "drydock",
