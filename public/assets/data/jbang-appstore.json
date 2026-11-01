@@ -1,11 +1,11 @@
 {
-  "aliasCount": 967,
+  "aliasCount": 972,
   "templateCount": 83,
   "catalogs": [
     {
       "owner": "apple",
       "name": "pkl",
-      "stars": 11554,
+      "stars": 11555,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "link": "https://github.com/apple/pkl/blob/89cb6c98a134db1954603e3da11934c34422eab4/jbang-catalog.json",
       "aliases": [
@@ -32,7 +32,7 @@
       "name": "oshi",
       "stars": 5274,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/ec0ae1ddd00a77548c69b64b1f6638fba20ace9b/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/6da9f0318bc49a7359629d7210dc1ef0f9a16401/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -65,7 +65,7 @@
     {
       "owner": "tabulapdf",
       "name": "tabula-java",
-      "stars": 2047,
+      "stars": 2046,
       "icon": "https://avatars.githubusercontent.com/u/8267906?v\u003d4",
       "link": "https://github.com/tabulapdf/tabula-java/blob/2cdf3b4fd3f7e921dca8cc6814cdd9316be40f0f/jbang-catalog.json",
       "aliases": [
@@ -97,7 +97,7 @@
       "name": "validator",
       "stars": 1995,
       "icon": "https://avatars.githubusercontent.com/u/498971?v\u003d4",
-      "link": "https://github.com/validator/validator/blob/0a70d65d84fd9e4e94e6947c21dc4770afc9745a/jbang-catalog.json",
+      "link": "https://github.com/validator/validator/blob/13b167f4eb69d43c92d674c6275025acaf786701/jbang-catalog.json",
       "aliases": [
         {
           "a": "vnu",
@@ -205,7 +205,7 @@
       "name": "tamboui",
       "stars": 692,
       "icon": "https://avatars.githubusercontent.com/u/251016663?v\u003d4",
-      "link": "https://github.com/tamboui/tamboui/blob/5d50418b5f6e261a38a64c4180354437e564980e/jbang-catalog.json",
+      "link": "https://github.com/tamboui/tamboui/blob/83e8ba30227ca7a747b98b35758135ab82d433ed/jbang-catalog.json",
       "aliases": [
         {
           "a": "run-demo",
@@ -618,7 +618,7 @@
     {
       "owner": "jdubois",
       "name": "boot-ui",
-      "stars": 325,
+      "stars": 326,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
       "link": "https://github.com/jdubois/boot-ui/blob/ddfcb243615fae417cea2c46e11797bffbc43231/jbang-catalog.json",
       "aliases": [
@@ -731,7 +731,7 @@
     {
       "owner": "gufranthakur",
       "name": "FlowForge",
-      "stars": 137,
+      "stars": 138,
       "icon": "https://avatars.githubusercontent.com/u/151453120?v\u003d4",
       "link": "https://github.com/gufranthakur/FlowForge/blob/6985af4fe8870e5f1b393730f27a707ca0d7c183/jbang-catalog.json",
       "aliases": [
@@ -1074,27 +1074,11 @@
       "templates": []
     },
     {
-      "owner": "manikmagar",
-      "name": "mulefd",
-      "stars": 46,
-      "icon": "https://avatars.githubusercontent.com/u/877286?v\u003d4",
-      "link": "https://github.com/manikmagar/mulefd/blob/5a4e43a1638576110e3e17e44cb6df48a511e91c/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "mulefd",
-          "d": "\u003cp\u003eRuns Mule Flow Diagrams\u003c/p\u003e\n",
-          "s": "jbang/mulefd.java",
-          "c": "mulefd@manikmagar/mulefd"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "Sanne",
       "name": "incus-spawn",
-      "stars": 46,
+      "stars": 47,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/4fb2acdd52dd64ab4c0cb8a4838b264fba9e8970/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/513408b33498d46eac7df4f477d0a9bc8fa8e1f5/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -1107,6 +1091,22 @@
           "d": "\u003cp\u003eMITM authentication proxy for incus-spawn (install alongside isx)\u003c/p\u003e\n",
           "s": "https://github.com/Sanne/incus-spawn/releases/latest/download/isx-proxy-runner.jar",
           "c": "isx-proxy@Sanne/incus-spawn"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "manikmagar",
+      "name": "mulefd",
+      "stars": 46,
+      "icon": "https://avatars.githubusercontent.com/u/877286?v\u003d4",
+      "link": "https://github.com/manikmagar/mulefd/blob/5a4e43a1638576110e3e17e44cb6df48a511e91c/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "mulefd",
+          "d": "\u003cp\u003eRuns Mule Flow Diagrams\u003c/p\u003e\n",
+          "s": "jbang/mulefd.java",
+          "c": "mulefd@manikmagar/mulefd"
         }
       ],
       "templates": []
@@ -1150,7 +1150,7 @@
       "name": "pilot",
       "stars": 42,
       "icon": "https://avatars.githubusercontent.com/u/118349365?v\u003d4",
-      "link": "https://github.com/maveniverse/pilot/blob/d1a03ff9f84c17a3f9046f339960093628b5402a/jbang-catalog.json",
+      "link": "https://github.com/maveniverse/pilot/blob/1eede06bbb5848c1908689d653ac3dd2b40ae99e/jbang-catalog.json",
       "aliases": [
         {
           "a": "pilot",
@@ -1721,7 +1721,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/997abdf7d18b6998a95fd49de93289fc62e6577c/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/e417ef35549de35a729a909d855f22187e33d433/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -1814,6 +1814,28 @@
       "templates": []
     },
     {
+      "owner": "limn-toolkit",
+      "name": "limn-toolkit",
+      "stars": 13,
+      "icon": "https://avatars.githubusercontent.com/u/313112530?v\u003d4",
+      "link": "https://github.com/limn-toolkit/limn-toolkit/blob/1ad01bfa3bde358fd95bbfa232709b9b816397f2/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "demo",
+          "d": "\u003cp\u003eThe showcase: every widget, the charts, the media player and the 3D viewport in one window. macOS: jbang --fresh --java-options\u003d-XstartOnFirstThread demo@limn-toolkit/limn-toolkit\u003c/p\u003e\n",
+          "s": "io.github.limn-toolkit:limn-demo:RELEASE",
+          "c": "demo@limn-toolkit/limn-toolkit"
+        },
+        {
+          "a": "theme-editor",
+          "d": "\u003cp\u003eThe screen that authors a Theme, with every fallback face and the fonts of this machine in its picker. macOS: jbang --fresh --java-options\u003d-XstartOnFirstThread theme-editor@limn-toolkit/limn-toolkit\u003c/p\u003e\n",
+          "s": "io.github.limn-toolkit:limn-theme-editor:RELEASE",
+          "c": "theme-editor@limn-toolkit/limn-toolkit"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "microsoft",
       "name": "jbang-catalog",
       "stars": 12,
@@ -1842,28 +1864,6 @@
       "templates": []
     },
     {
-      "owner": "limn-toolkit",
-      "name": "limn-toolkit",
-      "stars": 12,
-      "icon": "https://avatars.githubusercontent.com/u/313112530?v\u003d4",
-      "link": "https://github.com/limn-toolkit/limn-toolkit/blob/1ad01bfa3bde358fd95bbfa232709b9b816397f2/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "demo",
-          "d": "\u003cp\u003eThe showcase: every widget, the charts, the media player and the 3D viewport in one window. macOS: jbang --fresh --java-options\u003d-XstartOnFirstThread demo@limn-toolkit/limn-toolkit\u003c/p\u003e\n",
-          "s": "io.github.limn-toolkit:limn-demo:RELEASE",
-          "c": "demo@limn-toolkit/limn-toolkit"
-        },
-        {
-          "a": "theme-editor",
-          "d": "\u003cp\u003eThe screen that authors a Theme, with every fallback face and the fonts of this machine in its picker. macOS: jbang --fresh --java-options\u003d-XstartOnFirstThread theme-editor@limn-toolkit/limn-toolkit\u003c/p\u003e\n",
-          "s": "io.github.limn-toolkit:limn-theme-editor:RELEASE",
-          "c": "theme-editor@limn-toolkit/limn-toolkit"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "maxandersen",
       "name": "jdysk",
       "stars": 12,
@@ -1877,6 +1877,34 @@
         }
       ],
       "templates": []
+    },
+    {
+      "owner": "oracle",
+      "name": "graalpy-extensions",
+      "stars": 11,
+      "icon": "https://avatars.githubusercontent.com/u/4430336?v\u003d4",
+      "link": "https://github.com/oracle/graalpy-extensions/blob/ecadfce155f9702227b93ab5e254110bd9dfa9b1/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "hello",
+          "d": "\u003cp\u003eScript that says hello from Python started from Java or execute Python expression as parameter.\u003c/p\u003e\n",
+          "s": "./org.graalvm.python.jbang/catalog/examples/hello.java",
+          "c": "hello@oracle/graalpy-extensions"
+        },
+        {
+          "a": "graalpy",
+          "d": "\u003cp\u003eLaunches GraalPy through the published Maven launcher artifacts.\u003c/p\u003e\n",
+          "s": "./org.graalvm.python.jbang/catalog/examples/graalpy.java",
+          "c": "graalpy@oracle/graalpy-extensions"
+        }
+      ],
+      "templates": [
+        {
+          "a": "graalpy",
+          "d": "\u003cp\u003eBasic template for Graal Python java file.\u003c/p\u003e\n",
+          "c": "graalpy@oracle/graalpy-extensions"
+        }
+      ]
     },
     {
       "owner": "maxandersen",
@@ -1908,34 +1936,6 @@
         }
       ],
       "templates": []
-    },
-    {
-      "owner": "oracle",
-      "name": "graalpy-extensions",
-      "stars": 9,
-      "icon": "https://avatars.githubusercontent.com/u/4430336?v\u003d4",
-      "link": "https://github.com/oracle/graalpy-extensions/blob/ecadfce155f9702227b93ab5e254110bd9dfa9b1/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "hello",
-          "d": "\u003cp\u003eScript that says hello from Python started from Java or execute Python expression as parameter.\u003c/p\u003e\n",
-          "s": "./org.graalvm.python.jbang/catalog/examples/hello.java",
-          "c": "hello@oracle/graalpy-extensions"
-        },
-        {
-          "a": "graalpy",
-          "d": "\u003cp\u003eLaunches GraalPy through the published Maven launcher artifacts.\u003c/p\u003e\n",
-          "s": "./org.graalvm.python.jbang/catalog/examples/graalpy.java",
-          "c": "graalpy@oracle/graalpy-extensions"
-        }
-      ],
-      "templates": [
-        {
-          "a": "graalpy",
-          "d": "\u003cp\u003eBasic template for Graal Python java file.\u003c/p\u003e\n",
-          "c": "graalpy@oracle/graalpy-extensions"
-        }
-      ]
     },
     {
       "owner": "alibaba",
@@ -2296,7 +2296,7 @@
       "name": "llm4j",
       "stars": 6,
       "icon": "https://avatars.githubusercontent.com/u/68538997?v\u003d4",
-      "link": "https://github.com/srijithunni7182/llm4j/blob/d22cec6376abcd996fbb40e1aed2e2a60ede649e/jbang-catalog.json",
+      "link": "https://github.com/srijithunni7182/llm4j/blob/d3b2b87ab3aea7ffc6f1e06c3a815a99eb7d301c/jbang-catalog.json",
       "aliases": [
         {
           "a": "weave",
@@ -2831,7 +2831,7 @@
       "name": "wanaku-barn",
       "stars": 3,
       "icon": "https://avatars.githubusercontent.com/u/200620763?v\u003d4",
-      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/e11ded41ae1068275094fa1980f9beb3c27df472/jbang-catalog.json",
+      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/ae225b62fd0f7ca1599afedb637c49ff20a1727f/jbang-catalog.json",
       "aliases": [
         {
           "a": "wanaku",
@@ -3382,7 +3382,7 @@
       "name": "atunko",
       "stars": 2,
       "icon": "https://avatars.githubusercontent.com/u/264616968?v\u003d4",
-      "link": "https://github.com/atunko-dev/atunko/blob/378ef15171373a64603d7086b1a32ff570bf15fe/jbang-catalog.json",
+      "link": "https://github.com/atunko-dev/atunko/blob/0665e771e6f9436c025850afaf815f74a50650dc/jbang-catalog.json",
       "aliases": [
         {
           "a": "atunko",
@@ -3537,22 +3537,6 @@
       "templates": []
     },
     {
-      "owner": "FroMage",
-      "name": "jbang-catalog",
-      "stars": 2,
-      "icon": "https://avatars.githubusercontent.com/u/179265?v\u003d4",
-      "link": "https://github.com/FroMage/jbang-catalog/blob/7aae6527207f06395ae3b30c36bc0d81b734180b/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "static-init-finder",
-          "d": "\u003cp\u003eFind static init calls to classes\u003c/p\u003e\n",
-          "s": "ListStaticInit.java",
-          "c": "static-init-finder@FroMage"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "BrokkAi",
       "name": "brokk-releases",
       "stars": 2,
@@ -3672,7 +3656,7 @@
       "name": "jbang-catalog",
       "stars": 2,
       "icon": "https://avatars.githubusercontent.com/u/81020166?v\u003d4",
-      "link": "https://github.com/jreleaser/jbang-catalog/blob/43551cba0cdd82c2aeaceb989f60453417af85dc/jbang-catalog.json",
+      "link": "https://github.com/jreleaser/jbang-catalog/blob/4c6ccf5d04f3153d135f39fc6519033a612ae8b2/jbang-catalog.json",
       "aliases": [
         {
           "a": "jreleaser",
@@ -3750,6 +3734,22 @@
       "templates": []
     },
     {
+      "owner": "rajakolluru",
+      "name": "chenile-gen",
+      "stars": 2,
+      "icon": "https://avatars.githubusercontent.com/u/2173527?v\u003d4",
+      "link": "https://github.com/rajakolluru/chenile-gen/blob/b7c8195f9dc913f05fc603ea602a6766b3893201/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "jgen",
+          "d": "\u003cp\u003eJGen: blueprint-driven code generator for Chenile and beyond (\u003ca rel\u003d\"nofollow\" href\u003d\"https://jgen.chenile.org\"\u003ehttps://jgen.chenile.org\u003c/a\u003e)\u003c/p\u003e\n",
+          "s": "https://github.com/rajakolluru/chenile-gen/releases/latest/download/jgen-cli.jar",
+          "c": "jgen@rajakolluru/chenile-gen"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "aizedevops",
       "name": "spring-boot-projects",
       "stars": 2,
@@ -3770,6 +3770,22 @@
           "a": "jbangquarkus",
           "s": "jbangquarkus.java",
           "c": "jbangquarkus@aizedevops/spring-boot-projects~jbang"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "FroMage",
+      "name": "jbang-catalog",
+      "stars": 2,
+      "icon": "https://avatars.githubusercontent.com/u/179265?v\u003d4",
+      "link": "https://github.com/FroMage/jbang-catalog/blob/7aae6527207f06395ae3b30c36bc0d81b734180b/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "static-init-finder",
+          "d": "\u003cp\u003eFind static init calls to classes\u003c/p\u003e\n",
+          "s": "ListStaticInit.java",
+          "c": "static-init-finder@FroMage"
         }
       ],
       "templates": []
@@ -3849,7 +3865,7 @@
       "name": "fotorenamer",
       "stars": 1,
       "icon": "https://avatars.githubusercontent.com/u/1323134?v\u003d4",
-      "link": "https://github.com/ottlinger/fotorenamer/blob/96a49900b73ac4c7799514a2f1880e9539c377a1/jbang-catalog.json",
+      "link": "https://github.com/ottlinger/fotorenamer/blob/c86b791848b3eba80c88f2384fe9f8850564ebb3/jbang-catalog.json",
       "aliases": [
         {
           "a": "fotorenamer",
@@ -3919,137 +3935,6 @@
           "d": "\u003cp\u003eA Java load generator built on virtual threads\u003c/p\u003e\n",
           "s": "roadrunner.java",
           "c": "roadrunner@symentispl/roadrunner"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "snowdrop",
-      "name": "migration-tool",
-      "stars": 1,
-      "icon": "https://avatars.githubusercontent.com/u/558276?v\u003d4",
-      "link": "https://github.com/snowdrop/migration-tool/blob/6b5c0f5dfcae81ca782b28d2d4eff96d637891e8/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "mtool",
-          "d": "\u003cp\u003eMigration tool client to migrate Java applications\u003c/p\u003e\n",
-          "s": "https://github.com/snowdrop/migration-tool/releases/download/early-access/migration-cli-2.0.0-SNAPSHOT-runner.jar",
-          "c": "mtool@snowdrop/migration-tool"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "jOOQ",
-      "name": "jbang-catalog",
-      "stars": 1,
-      "icon": "https://avatars.githubusercontent.com/u/1666512?v\u003d4",
-      "link": "https://github.com/jOOQ/jbang-catalog/blob/d1496626cca251fa97947f2b1a1ca7a24f6fbc47/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "codegen",
-          "s": "codegen.java",
-          "c": "codegen@jOOQ"
-        },
-        {
-          "a": "codegen-pro",
-          "s": "codegenpro.java",
-          "c": "codegen-pro@jOOQ"
-        },
-        {
-          "a": "codegen-pro-java-8",
-          "s": "codegenprojava8.java",
-          "c": "codegen-pro-java-8@jOOQ"
-        },
-        {
-          "a": "codegen-pro-java-11",
-          "s": "codegenprojava11.java",
-          "c": "codegen-pro-java-11@jOOQ"
-        },
-        {
-          "a": "codegen-trial",
-          "s": "codegentrial.java",
-          "c": "codegen-trial@jOOQ"
-        },
-        {
-          "a": "codegen-trial-java-8",
-          "s": "codegentrialjava8.java",
-          "c": "codegen-trial-java-8@jOOQ"
-        },
-        {
-          "a": "codegen-trial-java-11",
-          "s": "codegentrialjava11.java",
-          "c": "codegen-trial-java-11@jOOQ"
-        },
-        {
-          "a": "parser",
-          "s": "parser.java",
-          "c": "parser@jOOQ"
-        },
-        {
-          "a": "parser-pro",
-          "s": "parserpro.java",
-          "c": "parser-pro@jOOQ"
-        },
-        {
-          "a": "parser-pro-java-8",
-          "s": "parserprojava8.java",
-          "c": "parser-pro-java-8@jOOQ"
-        },
-        {
-          "a": "parser-pro-java-11",
-          "s": "parserprojava11.java",
-          "c": "parser-pro-java-11@jOOQ"
-        },
-        {
-          "a": "parser-trial",
-          "s": "parsertrial.java",
-          "c": "parser-trial@jOOQ"
-        },
-        {
-          "a": "parser-trial-java-8",
-          "s": "parsertrialjava8.java",
-          "c": "parser-trial-java-8@jOOQ"
-        },
-        {
-          "a": "parser-trial-java-11",
-          "s": "parsertrialjava11.java",
-          "c": "parser-trial-java-11@jOOQ"
-        },
-        {
-          "a": "diff",
-          "s": "diff.java",
-          "c": "diff@jOOQ"
-        },
-        {
-          "a": "diff-pro",
-          "s": "diffpro.java",
-          "c": "diff-pro@jOOQ"
-        },
-        {
-          "a": "diff-pro-java-8",
-          "s": "diffprojava8.java",
-          "c": "diff-pro-java-8@jOOQ"
-        },
-        {
-          "a": "diff-pro-java-11",
-          "s": "diffprojava11.java",
-          "c": "diff-pro-java-11@jOOQ"
-        },
-        {
-          "a": "diff-trial",
-          "s": "difftrial.java",
-          "c": "diff-trial@jOOQ"
-        },
-        {
-          "a": "diff-trial-java-8",
-          "s": "difftrialjava8.java",
-          "c": "diff-trial-java-8@jOOQ"
-        },
-        {
-          "a": "diff-trial-java-11",
-          "s": "difftrialjava11.java",
-          "c": "diff-trial-java-11@jOOQ"
         }
       ],
       "templates": []
@@ -4716,6 +4601,31 @@
       "templates": []
     },
     {
+      "owner": "zubairmujeeb",
+      "name": "spring-boot-sample-projects",
+      "stars": 1,
+      "icon": "https://avatars.githubusercontent.com/u/31179784?v\u003d4",
+      "link": "https://github.com/zubairmujeeb/spring-boot-sample-projects/blob/8d0fd0c195c714adde5d22b7b247abbe3b968786/tutorials-master/jbang/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "hello",
+          "s": "hello.java",
+          "c": "hello@zubairmujeeb/spring-boot-sample-projects~tutorials-master/jbang"
+        },
+        {
+          "a": "hellocli",
+          "s": "hellocli.java",
+          "c": "hellocli@zubairmujeeb/spring-boot-sample-projects~tutorials-master/jbang"
+        },
+        {
+          "a": "jbangquarkus",
+          "s": "jbangquarkus.java",
+          "c": "jbangquarkus@zubairmujeeb/spring-boot-sample-projects~tutorials-master/jbang"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "ramesh1972",
       "name": "samples-biz",
       "stars": 1,
@@ -4736,6 +4646,137 @@
           "a": "jbangquarkus",
           "s": "jbangquarkus.java",
           "c": "jbangquarkus@ramesh1972/samples-biz~samples-tech-stack/java_samples/langchain4j/eugenp/tutorials/jbang"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "snowdrop",
+      "name": "migration-tool",
+      "stars": 1,
+      "icon": "https://avatars.githubusercontent.com/u/558276?v\u003d4",
+      "link": "https://github.com/snowdrop/migration-tool/blob/6b5c0f5dfcae81ca782b28d2d4eff96d637891e8/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "mtool",
+          "d": "\u003cp\u003eMigration tool client to migrate Java applications\u003c/p\u003e\n",
+          "s": "https://github.com/snowdrop/migration-tool/releases/download/early-access/migration-cli-2.0.0-SNAPSHOT-runner.jar",
+          "c": "mtool@snowdrop/migration-tool"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "jOOQ",
+      "name": "jbang-catalog",
+      "stars": 1,
+      "icon": "https://avatars.githubusercontent.com/u/1666512?v\u003d4",
+      "link": "https://github.com/jOOQ/jbang-catalog/blob/d1496626cca251fa97947f2b1a1ca7a24f6fbc47/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "codegen",
+          "s": "codegen.java",
+          "c": "codegen@jOOQ"
+        },
+        {
+          "a": "codegen-pro",
+          "s": "codegenpro.java",
+          "c": "codegen-pro@jOOQ"
+        },
+        {
+          "a": "codegen-pro-java-8",
+          "s": "codegenprojava8.java",
+          "c": "codegen-pro-java-8@jOOQ"
+        },
+        {
+          "a": "codegen-pro-java-11",
+          "s": "codegenprojava11.java",
+          "c": "codegen-pro-java-11@jOOQ"
+        },
+        {
+          "a": "codegen-trial",
+          "s": "codegentrial.java",
+          "c": "codegen-trial@jOOQ"
+        },
+        {
+          "a": "codegen-trial-java-8",
+          "s": "codegentrialjava8.java",
+          "c": "codegen-trial-java-8@jOOQ"
+        },
+        {
+          "a": "codegen-trial-java-11",
+          "s": "codegentrialjava11.java",
+          "c": "codegen-trial-java-11@jOOQ"
+        },
+        {
+          "a": "parser",
+          "s": "parser.java",
+          "c": "parser@jOOQ"
+        },
+        {
+          "a": "parser-pro",
+          "s": "parserpro.java",
+          "c": "parser-pro@jOOQ"
+        },
+        {
+          "a": "parser-pro-java-8",
+          "s": "parserprojava8.java",
+          "c": "parser-pro-java-8@jOOQ"
+        },
+        {
+          "a": "parser-pro-java-11",
+          "s": "parserprojava11.java",
+          "c": "parser-pro-java-11@jOOQ"
+        },
+        {
+          "a": "parser-trial",
+          "s": "parsertrial.java",
+          "c": "parser-trial@jOOQ"
+        },
+        {
+          "a": "parser-trial-java-8",
+          "s": "parsertrialjava8.java",
+          "c": "parser-trial-java-8@jOOQ"
+        },
+        {
+          "a": "parser-trial-java-11",
+          "s": "parsertrialjava11.java",
+          "c": "parser-trial-java-11@jOOQ"
+        },
+        {
+          "a": "diff",
+          "s": "diff.java",
+          "c": "diff@jOOQ"
+        },
+        {
+          "a": "diff-pro",
+          "s": "diffpro.java",
+          "c": "diff-pro@jOOQ"
+        },
+        {
+          "a": "diff-pro-java-8",
+          "s": "diffprojava8.java",
+          "c": "diff-pro-java-8@jOOQ"
+        },
+        {
+          "a": "diff-pro-java-11",
+          "s": "diffprojava11.java",
+          "c": "diff-pro-java-11@jOOQ"
+        },
+        {
+          "a": "diff-trial",
+          "s": "difftrial.java",
+          "c": "diff-trial@jOOQ"
+        },
+        {
+          "a": "diff-trial-java-8",
+          "s": "difftrialjava8.java",
+          "c": "diff-trial-java-8@jOOQ"
+        },
+        {
+          "a": "diff-trial-java-11",
+          "s": "difftrialjava11.java",
+          "c": "diff-trial-java-11@jOOQ"
         }
       ],
       "templates": []
@@ -5428,7 +5469,7 @@
       "name": "spamschutz",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/1323134?v\u003d4",
-      "link": "https://github.com/ottlinger/spamschutz/blob/0f43502a770c54d098a2e031c32acdbc2e77d1d1/jbang-catalog.json",
+      "link": "https://github.com/ottlinger/spamschutz/blob/fec65c3acb1319ce823f997b83ccf8dca72c6211/jbang-catalog.json",
       "aliases": [
         {
           "a": "spamschutz",
@@ -5889,7 +5930,7 @@
       "name": "camel-kit",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
-      "link": "https://github.com/apache/camel-kit/blob/f232949076d6d0bd2d23ef547d84bc1296f09831/jbang-catalog.json",
+      "link": "https://github.com/apache/camel-kit/blob/f27b47028153a45fa098178bf230fe6bcaf586fa/jbang-catalog.json",
       "aliases": [
         {
           "a": "camel-kit",
@@ -6004,6 +6045,22 @@
           "a": "jabuti",
           "s": "https://github.com/emvnuel/jabuti-mcp/releases/latest/download/jabuti-mcp.jar",
           "c": "jabuti@emvnuel/jabuti-mcp"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "h9lxyz",
+      "name": "fxloop",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/512071?v\u003d4",
+      "link": "https://github.com/h9lxyz/fxloop/blob/5c1ff3717970c103eca57aba5729b1af2b82f237/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "fxloop",
+          "d": "\u003cp\u003eFXLoop MCP server: eyes, ears and hands for coding agents on JavaFX apps\u003c/p\u003e\n",
+          "s": "dev.fxloop:fxloop-server:1.0.0-SNAPSHOT:all",
+          "c": "fxloop@h9lxyz/fxloop"
         }
       ],
       "templates": []
@@ -6581,6 +6638,28 @@
       ]
     },
     {
+      "owner": "maxandersen",
+      "name": "terrascope-tamboui",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
+      "link": "https://github.com/maxandersen/terrascope-tamboui/blob/74f0a790d3f53422731c2c546650481c748bff58/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "map",
+          "d": "\u003cp\u003eTerrascope on TamboUI — a braille terminal world map with live weather radar, flights, earthquakes, day/night and airports.\u003c/p\u003e\n",
+          "s": "app/Terrascope.java",
+          "c": "map@maxandersen/terrascope-tamboui"
+        },
+        {
+          "a": "terrascope",
+          "d": "\u003cp\u003eTerrascope on TamboUI — a braille terminal world map with live weather radar, flights, earthquakes, day/night and airports.\u003c/p\u003e\n",
+          "s": "app/Terrascope.java",
+          "c": "terrascope@maxandersen/terrascope-tamboui"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "bmvermeer",
       "name": "javaconfmcp-evil",
       "stars": 0,
@@ -6613,110 +6692,12 @@
       "templates": []
     },
     {
-      "owner": "jduchateau",
-      "name": "jbang-catalog",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/34192845?v\u003d4",
-      "link": "https://github.com/jduchateau/jbang-catalog/blob/b671a1cf9cd71b0e5fab838c2df887da9fd32ff9/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "burp",
-          "d": "\u003cp\u003eA Basic and Unassuming RML Processor (BURP) with RML Execution Report (RER) error handling\u003c/p\u003e\n",
-          "s": "burp.java",
-          "c": "burp@jduchateau"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "arihantjain124",
-      "name": "PDF_Parser",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/14129747?v\u003d4",
-      "link": "https://github.com/arihantjain124/PDF_Parser/blob/ad3004be5c3e0329ad727f2ef960225afc1fd734/tabula-java-1.0.5/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "tabula",
-          "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
-          "c": "tabula@arihantjain124/PDF_Parser~tabula-java-1.0.5"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "karatelabs",
-      "name": "jbang-catalog",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/91312095?v\u003d4",
-      "link": "https://github.com/karatelabs/jbang-catalog/blob/63a7884565eb689f6022407185d5d68d052d8e5e/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "karate",
-          "s": "io.karatelabs:karate-core:1.5.2:all",
-          "c": "karate@karatelabs"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "rnett",
-      "name": "jbang-catalog",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/32281897?v\u003d4",
-      "link": "https://github.com/rnett/jbang-catalog/blob/659471b82bd7e81337a8fa687e4153b51b14aab7/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "gradle-mcp",
-          "d": "\u003cp\u003eA MCP server for Gradle.\u003c/p\u003e\n",
-          "s": "dev.rnett.gradle-mcp:gradle-mcp:+",
-          "c": "gradle-mcp@rnett"
-        },
-        {
-          "a": "gradle-mcp-snapshot",
-          "d": "\u003cp\u003eA MCP server for Gradle (Snapshot).\u003c/p\u003e\n",
-          "s": "dev.rnett.gradle-mcp:gradle-mcp:+",
-          "c": "gradle-mcp-snapshot@rnett"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "zubairmujeeb",
-      "name": "spring-boot-sample-projects",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/31179784?v\u003d4",
-      "link": "https://github.com/zubairmujeeb/spring-boot-sample-projects/blob/8d0fd0c195c714adde5d22b7b247abbe3b968786/tutorials-master/jbang/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "hello",
-          "s": "hello.java",
-          "c": "hello@zubairmujeeb/spring-boot-sample-projects~tutorials-master/jbang"
-        },
-        {
-          "a": "hellocli",
-          "s": "hellocli.java",
-          "c": "hellocli@zubairmujeeb/spring-boot-sample-projects~tutorials-master/jbang"
-        },
-        {
-          "a": "jbangquarkus",
-          "s": "jbangquarkus.java",
-          "c": "jbangquarkus@zubairmujeeb/spring-boot-sample-projects~tutorials-master/jbang"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "wfouche",
       "name": "jbang-catalog",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/13682850?v\u003d4",
-      "link": "https://github.com/wfouche/jbang-catalog/blob/661e2aad2e9f39abecaf371075ecbf8a5be11b27/apps/hello/1.0.1/jbang-catalog.json",
+      "link": "https://github.com/wfouche/jbang-catalog/blob/aa5ac4dd97f8550b71c6d239415926e496ef173e/jbang-catalog.json",
       "aliases": [
-        {
-          "a": "hello",
-          "s": "src/hello.java",
-          "c": "hello@wfouche~apps/hello/1.0.1"
-        },
         {
           "a": "asciidoc",
           "s": "src/asciidoc.java",
@@ -6881,6 +6862,11 @@
           "c": "camel-dev@wfouche"
         },
         {
+          "a": "hello",
+          "s": "src/hello.java",
+          "c": "hello@wfouche~apps/hello/1.0.1"
+        },
+        {
           "a": "testapp2",
           "s": "io/tulip/App.java",
           "c": "testapp2@wfouche~testapp2"
@@ -6909,6 +6895,74 @@
       "templates": []
     },
     {
+      "owner": "jduchateau",
+      "name": "jbang-catalog",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/34192845?v\u003d4",
+      "link": "https://github.com/jduchateau/jbang-catalog/blob/b671a1cf9cd71b0e5fab838c2df887da9fd32ff9/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "burp",
+          "d": "\u003cp\u003eA Basic and Unassuming RML Processor (BURP) with RML Execution Report (RER) error handling\u003c/p\u003e\n",
+          "s": "burp.java",
+          "c": "burp@jduchateau"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "arihantjain124",
+      "name": "PDF_Parser",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/14129747?v\u003d4",
+      "link": "https://github.com/arihantjain124/PDF_Parser/blob/ad3004be5c3e0329ad727f2ef960225afc1fd734/tabula-java-1.0.5/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "tabula",
+          "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
+          "c": "tabula@arihantjain124/PDF_Parser~tabula-java-1.0.5"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "karatelabs",
+      "name": "jbang-catalog",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/91312095?v\u003d4",
+      "link": "https://github.com/karatelabs/jbang-catalog/blob/63a7884565eb689f6022407185d5d68d052d8e5e/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "karate",
+          "s": "io.karatelabs:karate-core:1.5.2:all",
+          "c": "karate@karatelabs"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "rnett",
+      "name": "jbang-catalog",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/32281897?v\u003d4",
+      "link": "https://github.com/rnett/jbang-catalog/blob/659471b82bd7e81337a8fa687e4153b51b14aab7/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "gradle-mcp",
+          "d": "\u003cp\u003eA MCP server for Gradle.\u003c/p\u003e\n",
+          "s": "dev.rnett.gradle-mcp:gradle-mcp:+",
+          "c": "gradle-mcp@rnett"
+        },
+        {
+          "a": "gradle-mcp-snapshot",
+          "d": "\u003cp\u003eA MCP server for Gradle (Snapshot).\u003c/p\u003e\n",
+          "s": "dev.rnett.gradle-mcp:gradle-mcp:+",
+          "c": "gradle-mcp-snapshot@rnett"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "yaodahua",
       "name": "fuxian_ChatTester",
       "stars": 0,
@@ -6923,17 +6977,17 @@
         {
           "a": "tabula",
           "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
+          "c": "tabula@yaodahua/fuxian_ChatTester~CoverageCal/ProjectResult/ChatTester/tabulapdf_tabula-java"
+        },
+        {
+          "a": "tabula",
+          "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
           "c": "tabula@yaodahua/fuxian_ChatTester~Repos/tabulapdf_tabula-java"
         },
         {
           "a": "tabula",
           "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
           "c": "tabula@yaodahua/fuxian_ChatTester~CoverageCal/repos/tabulapdf_tabula-java"
-        },
-        {
-          "a": "tabula",
-          "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
-          "c": "tabula@yaodahua/fuxian_ChatTester~CoverageCal/ProjectResult/ChatTester/tabulapdf_tabula-java"
         }
       ],
       "templates": []
@@ -7917,6 +7971,22 @@
           "d": "\u003cp\u003eLauncher for the OneCX SVC generator JAR\u003c/p\u003e\n",
           "s": "launcher/onecx_svc_generator.java",
           "c": "onecx-svc-generator@maciejkryger/onecx-svc-generator"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "isa-group",
+      "name": "jbang-catalog",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/2708867?v\u003d4",
+      "link": "https://github.com/isa-group/jbang-catalog/blob/7128d9fc38fb4c26e0f2611f69fd90acd6e5a69a/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "restest",
+          "d": "\u003cp\u003eBlack-box tests for REST APIs, from their OpenAPI document\u003c/p\u003e\n",
+          "s": "es.us.isa.restest:restest-cli:2.4.0",
+          "c": "restest@isa-group"
         }
       ],
       "templates": []
