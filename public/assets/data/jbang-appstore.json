@@ -1,11 +1,11 @@
 {
-  "aliasCount": 975,
+  "aliasCount": 976,
   "templateCount": 83,
   "catalogs": [
     {
       "owner": "apple",
       "name": "pkl",
-      "stars": 11560,
+      "stars": 11564,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "link": "https://github.com/apple/pkl/blob/5b538164637ae8dc0f6e43fafcfc6fea6a288ae1/jbang-catalog.json",
       "aliases": [
@@ -30,9 +30,9 @@
     {
       "owner": "oshi",
       "name": "oshi",
-      "stars": 5277,
+      "stars": 5274,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/ceb6de53eef4a3b3e93511eda11cbd6b50882d2a/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/2a0d560faa15ea6eaa697f152dc60e6dbd824334/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -95,7 +95,7 @@
     {
       "owner": "validator",
       "name": "validator",
-      "stars": 1997,
+      "stars": 1998,
       "icon": "https://avatars.githubusercontent.com/u/498971?v\u003d4",
       "link": "https://github.com/validator/validator/blob/26b30abaf6fa9435e6f43bd38911add246b8c4e1/jbang-catalog.json",
       "aliases": [
@@ -110,9 +110,9 @@
     {
       "owner": "jbangdev",
       "name": "jbang",
-      "stars": 1882,
+      "stars": 1883,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang/blob/cce144b4769dd66b3aa5171fc6de8b023583e04c/docs/modules/ROOT/examples/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang/blob/49f0d26348bfc938fd6895609231ca0574ca7cee/docs/modules/ROOT/examples/jbang-catalog.json",
       "aliases": [
         {
           "a": "jbang-fmt",
@@ -205,7 +205,7 @@
       "name": "tamboui",
       "stars": 696,
       "icon": "https://avatars.githubusercontent.com/u/251016663?v\u003d4",
-      "link": "https://github.com/tamboui/tamboui/blob/ba9a5ddf1b9ea3ef362fca2bdb64461c8a2ecaac/jbang-catalog.json",
+      "link": "https://github.com/tamboui/tamboui/blob/726b220a598be4857f59ce12162c20748e9eb09c/jbang-catalog.json",
       "aliases": [
         {
           "a": "run-demo",
@@ -556,7 +556,7 @@
       "name": "citrus",
       "stars": 486,
       "icon": "https://avatars.githubusercontent.com/u/27848811?v\u003d4",
-      "link": "https://github.com/citrusframework/citrus/blob/3a0fb48b8856baf168f823bae1802a6622b27272/jbang-catalog.json",
+      "link": "https://github.com/citrusframework/citrus/blob/6ad5a40f3adee19476575f1e01449ead47ceacff/jbang-catalog.json",
       "aliases": [
         {
           "a": "citrus",
@@ -618,9 +618,9 @@
     {
       "owner": "jdubois",
       "name": "boot-ui",
-      "stars": 331,
+      "stars": 332,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
-      "link": "https://github.com/jdubois/boot-ui/blob/45fbedc2d07782adeb1018f1524e996519dfbcee/jbang-catalog.json",
+      "link": "https://github.com/jdubois/boot-ui/blob/ff1aac76209481384ecbd6c1f95f35a186d26462/jbang-catalog.json",
       "aliases": [
         {
           "a": "bootui",
@@ -633,51 +633,51 @@
     },
     {
       "owner": "quarkiverse",
-      "name": "quarkus-mcp-servers",
+      "name": "quarkus-mcp-server-examples",
       "stars": 196,
       "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "link": "https://github.com/quarkiverse/quarkus-mcp-servers/blob/96be32eba2b94ae597c6121bfb6b1619488182dc/jbang-catalog.json",
+      "link": "https://github.com/quarkiverse/quarkus-mcp-server-examples/blob/ee068084791669265efa8ececbd3be14bd60be47/jbang-catalog.json",
       "aliases": [
         {
           "a": "filesystem",
           "s": "io.quarkiverse.mcp.servers:mcp-server-filesystem:RELEASE@fatjar",
-          "c": "filesystem@quarkiverse/quarkus-mcp-servers"
+          "c": "filesystem@quarkiverse/quarkus-mcp-server-examples"
         },
         {
           "a": "jdbc",
           "s": "jdbc/.scripts/mcpjdbc.java",
-          "c": "jdbc@quarkiverse/quarkus-mcp-servers"
+          "c": "jdbc@quarkiverse/quarkus-mcp-server-examples"
         },
         {
           "a": "jfx-script",
           "s": "jfx/src/main/java/io/quarkiverse/mcp/servers/jfx/MCPServerJFX.java",
-          "c": "jfx-script@quarkiverse/quarkus-mcp-servers"
+          "c": "jfx-script@quarkiverse/quarkus-mcp-server-examples"
         },
         {
           "a": "jfx",
           "s": "io.quarkiverse.mcp.servers:mcp-server-jfx:RELEASE@fatjar",
-          "c": "jfx@quarkiverse/quarkus-mcp-servers"
+          "c": "jfx@quarkiverse/quarkus-mcp-server-examples"
         },
         {
           "a": "kubernetes",
           "s": "io.quarkiverse.mcp.servers:mcp-server-kubernetes:RELEASE@fatjar",
-          "c": "kubernetes@quarkiverse/quarkus-mcp-servers"
+          "c": "kubernetes@quarkiverse/quarkus-mcp-server-examples"
         },
         {
           "a": "containers",
           "s": "io.quarkiverse.mcp.servers:mcp-server-containers:RELEASE@fatjar",
-          "c": "containers@quarkiverse/quarkus-mcp-servers"
+          "c": "containers@quarkiverse/quarkus-mcp-server-examples"
         },
         {
           "a": "jvminsight",
           "s": "io.quarkiverse.mcp.servers:mcp-server-jvminsight:RELEASE@fatjar",
-          "c": "jvminsight@quarkiverse/quarkus-mcp-servers"
+          "c": "jvminsight@quarkiverse/quarkus-mcp-server-examples"
         }
       ],
       "templates": [
         {
           "a": "mcp",
-          "c": "mcp@quarkiverse/quarkus-mcp-servers"
+          "c": "mcp@quarkiverse/quarkus-mcp-server-examples"
         }
       ]
     },
@@ -1078,7 +1078,7 @@
       "name": "incus-spawn",
       "stars": 48,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/064332f0df2cc2816937fcfd29a9192314c6baf4/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/3c3a6324d133c8c3dddd9981ff32203e23752b8a/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -1148,7 +1148,7 @@
     {
       "owner": "maveniverse",
       "name": "pilot",
-      "stars": 42,
+      "stars": 43,
       "icon": "https://avatars.githubusercontent.com/u/118349365?v\u003d4",
       "link": "https://github.com/maveniverse/pilot/blob/1eede06bbb5848c1908689d653ac3dd2b40ae99e/jbang-catalog.json",
       "aliases": [
@@ -1743,7 +1743,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/b5199547dab79a0fff68fc88ce74679b74ca578f/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/dcb225deb413b0c937636fd9e085e4d0b30eb715/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -2091,7 +2091,7 @@
       "name": "llm4j",
       "stars": 8,
       "icon": "https://avatars.githubusercontent.com/u/68538997?v\u003d4",
-      "link": "https://github.com/srijithunni7182/llm4j/blob/9feb579aa15d0ddeee25da1c45dadceaae90fe8b/jbang-catalog.json",
+      "link": "https://github.com/srijithunni7182/llm4j/blob/1f76affbd97bb8f2f62b285f9a5293dc3c7faf4e/jbang-catalog.json",
       "aliases": [
         {
           "a": "weave",
@@ -2735,7 +2735,7 @@
       "name": "openapi-ui-next",
       "stars": 4,
       "icon": "https://avatars.githubusercontent.com/u/185260?v\u003d4",
-      "link": "https://github.com/t1/openapi-ui-next/blob/3d559cc44dc8f6a56cea2065c079858e9f0983e4/jbang-catalog.json",
+      "link": "https://github.com/t1/openapi-ui-next/blob/825405dc11f417301b5b7140fc375dba78782635/jbang-catalog.json",
       "aliases": [
         {
           "a": "openapi-ui",
@@ -3398,7 +3398,7 @@
       "name": "atunko",
       "stars": 2,
       "icon": "https://avatars.githubusercontent.com/u/264616968?v\u003d4",
-      "link": "https://github.com/atunko-dev/atunko/blob/42b9baf374c8ff7c361232dfa0abda1494ad5305/jbang-catalog.json",
+      "link": "https://github.com/atunko-dev/atunko/blob/91d7864add8b25f3d7102bffb3fae0bb5bc5caa1/jbang-catalog.json",
       "aliases": [
         {
           "a": "atunko",
@@ -3672,7 +3672,7 @@
       "name": "jbang-catalog",
       "stars": 2,
       "icon": "https://avatars.githubusercontent.com/u/81020166?v\u003d4",
-      "link": "https://github.com/jreleaser/jbang-catalog/blob/93df5660a8064e6aaa3fe9ee5602db6ff90dc92a/jbang-catalog.json",
+      "link": "https://github.com/jreleaser/jbang-catalog/blob/6ea6332ba1aa54a243bea35290c870c2492d5d62/jbang-catalog.json",
       "aliases": [
         {
           "a": "jreleaser",
@@ -3909,22 +3909,6 @@
       "templates": []
     },
     {
-      "owner": "maven-flow",
-      "name": "changelog-merge-driver",
-      "stars": 1,
-      "icon": "https://avatars.githubusercontent.com/u/166258741?v\u003d4",
-      "link": "https://github.com/maven-flow/changelog-merge-driver/blob/4f9446a29a9e6b935b0fd710aa047f9ff03641ad/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "changelog-merge-driver",
-          "d": "\u003cp\u003eA Git merge driver for changelogs\u003c/p\u003e\n",
-          "s": "ChangelogMergeDriver.java",
-          "c": "changelog-merge-driver@maven-flow/changelog-merge-driver"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "neolegal-fr",
       "name": "tabula-java",
       "stars": 1,
@@ -3951,6 +3935,28 @@
           "d": "\u003cp\u003eA Java load generator built on virtual threads\u003c/p\u003e\n",
           "s": "roadrunner.java",
           "c": "roadrunner@symentispl/roadrunner"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "snowdrop",
+      "name": "migration-tool",
+      "stars": 1,
+      "icon": "https://avatars.githubusercontent.com/u/558276?v\u003d4",
+      "link": "https://github.com/snowdrop/migration-tool/blob/627180530eb67f7535ade3f2dac4a2f8764fc990/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "mtool",
+          "d": "\u003cp\u003eMigration tool client to migrate Java applications\u003c/p\u003e\n",
+          "s": "https://github.com/snowdrop/migration-tool/releases/download/early-access/migration-cli-2.0.3-SNAPSHOT-runner.jar",
+          "c": "mtool@snowdrop/migration-tool"
+        },
+        {
+          "a": "mcp",
+          "d": "\u003cp\u003eQuarkus MCP server of the migration tool\u003c/p\u003e\n",
+          "s": "dev.snowdrop.mtool:mcp:RELEASE:runner",
+          "c": "mcp@snowdrop/migration-tool"
         }
       ],
       "templates": []
@@ -4689,17 +4695,17 @@
       "templates": []
     },
     {
-      "owner": "snowdrop",
-      "name": "migration-tool",
+      "owner": "maven-flow",
+      "name": "changelog-merge-driver",
       "stars": 1,
-      "icon": "https://avatars.githubusercontent.com/u/558276?v\u003d4",
-      "link": "https://github.com/snowdrop/migration-tool/blob/6b5c0f5dfcae81ca782b28d2d4eff96d637891e8/jbang-catalog.json",
+      "icon": "https://avatars.githubusercontent.com/u/166258741?v\u003d4",
+      "link": "https://github.com/maven-flow/changelog-merge-driver/blob/4f9446a29a9e6b935b0fd710aa047f9ff03641ad/jbang-catalog.json",
       "aliases": [
         {
-          "a": "mtool",
-          "d": "\u003cp\u003eMigration tool client to migrate Java applications\u003c/p\u003e\n",
-          "s": "https://github.com/snowdrop/migration-tool/releases/download/early-access/migration-cli-2.0.0-SNAPSHOT-runner.jar",
-          "c": "mtool@snowdrop/migration-tool"
+          "a": "changelog-merge-driver",
+          "d": "\u003cp\u003eA Git merge driver for changelogs\u003c/p\u003e\n",
+          "s": "ChangelogMergeDriver.java",
+          "c": "changelog-merge-driver@maven-flow/changelog-merge-driver"
         }
       ],
       "templates": []
@@ -6114,7 +6120,7 @@
       "name": "fxloop",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/512071?v\u003d4",
-      "link": "https://github.com/h9lxyz/fxloop/blob/27d3c8d9414b1c1256834e6b250a43456fafea0a/jbang-catalog.json",
+      "link": "https://github.com/h9lxyz/fxloop/blob/e779859b8406b480840e87e344188cf4bb36c411/jbang-catalog.json",
       "aliases": [
         {
           "a": "fxloop",
@@ -6655,7 +6661,7 @@
       "name": "valp",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "link": "https://github.com/maxandersen/valp/blob/fab2124aca3ec6cb6ce28857ec16b4af940f46c4/jbang-catalog.json",
+      "link": "https://github.com/maxandersen/valp/blob/6518ac70362a85366a40449472e79e3e3f3d86a8/jbang-catalog.json",
       "aliases": [
         {
           "a": "valp",
