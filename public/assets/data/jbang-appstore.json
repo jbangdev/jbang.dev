@@ -1,11 +1,11 @@
 {
-  "aliasCount": 976,
+  "aliasCount": 977,
   "templateCount": 83,
   "catalogs": [
     {
       "owner": "apple",
       "name": "pkl",
-      "stars": 11564,
+      "stars": 11568,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "link": "https://github.com/apple/pkl/blob/5b538164637ae8dc0f6e43fafcfc6fea6a288ae1/jbang-catalog.json",
       "aliases": [
@@ -32,7 +32,7 @@
       "name": "oshi",
       "stars": 5274,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/2a0d560faa15ea6eaa697f152dc60e6dbd824334/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/a4fb669e844525bb429ba7e512f99e6fe952b9c3/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -95,7 +95,7 @@
     {
       "owner": "validator",
       "name": "validator",
-      "stars": 1998,
+      "stars": 2001,
       "icon": "https://avatars.githubusercontent.com/u/498971?v\u003d4",
       "link": "https://github.com/validator/validator/blob/26b30abaf6fa9435e6f43bd38911add246b8c4e1/jbang-catalog.json",
       "aliases": [
@@ -110,7 +110,7 @@
     {
       "owner": "jbangdev",
       "name": "jbang",
-      "stars": 1883,
+      "stars": 1885,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "link": "https://github.com/jbangdev/jbang/blob/49f0d26348bfc938fd6895609231ca0574ca7cee/docs/modules/ROOT/examples/jbang-catalog.json",
       "aliases": [
@@ -205,7 +205,7 @@
       "name": "tamboui",
       "stars": 696,
       "icon": "https://avatars.githubusercontent.com/u/251016663?v\u003d4",
-      "link": "https://github.com/tamboui/tamboui/blob/726b220a598be4857f59ce12162c20748e9eb09c/jbang-catalog.json",
+      "link": "https://github.com/tamboui/tamboui/blob/f316a612252f82c6be482e88171f989cc7d5d01e/jbang-catalog.json",
       "aliases": [
         {
           "a": "run-demo",
@@ -257,6 +257,11 @@
           "a": "modular-demo",
           "s": "demos/modular-demo/src/main/java/dev/tamboui/demo/modular/ModularDemo.java",
           "c": "modular-demo@tamboui/tamboui"
+        },
+        {
+          "a": "mouse-demo",
+          "s": "demos/mouse-demo/src/main/java/dev/tamboui/demo/MouseDemo.java",
+          "c": "mouse-demo@tamboui/tamboui"
         },
         {
           "a": "rflex-demo",
@@ -572,7 +577,7 @@
       "name": "hibernate-reactive",
       "stars": 469,
       "icon": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
-      "link": "https://github.com/hibernate/hibernate-reactive/blob/5dbbc9952bf9ef813bd616ac0568bec09e9c0e67/jbang-catalog.json",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/2291a1485e2f594cf437b2f2a61db9dac35cd486/jbang-catalog.json",
       "aliases": [
         {
           "a": "example",
@@ -620,7 +625,7 @@
       "name": "boot-ui",
       "stars": 332,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
-      "link": "https://github.com/jdubois/boot-ui/blob/ff1aac76209481384ecbd6c1f95f35a186d26462/jbang-catalog.json",
+      "link": "https://github.com/jdubois/boot-ui/blob/c2eeb4407184a553ba48ce50e3ad16aec3e5d980/jbang-catalog.json",
       "aliases": [
         {
           "a": "bootui",
@@ -634,7 +639,7 @@
     {
       "owner": "quarkiverse",
       "name": "quarkus-mcp-server-examples",
-      "stars": 196,
+      "stars": 197,
       "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
       "link": "https://github.com/quarkiverse/quarkus-mcp-server-examples/blob/ee068084791669265efa8ececbd3be14bd60be47/jbang-catalog.json",
       "aliases": [
@@ -731,7 +736,7 @@
     {
       "owner": "gufranthakur",
       "name": "FlowForge",
-      "stars": 137,
+      "stars": 136,
       "icon": "https://avatars.githubusercontent.com/u/151453120?v\u003d4",
       "link": "https://github.com/gufranthakur/FlowForge/blob/6985af4fe8870e5f1b393730f27a707ca0d7c183/jbang-catalog.json",
       "aliases": [
@@ -1046,6 +1051,28 @@
       "templates": []
     },
     {
+      "owner": "Sanne",
+      "name": "incus-spawn",
+      "stars": 49,
+      "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
+      "link": "https://github.com/Sanne/incus-spawn/blob/f3a98765f92825813090957df605fd9ef0ae0e2a/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "isx",
+          "d": "\u003cp\u003eManage isolated Incus development environments\u003c/p\u003e\n",
+          "s": "https://github.com/Sanne/incus-spawn/releases/latest/download/incus-spawn-runner.jar",
+          "c": "isx@Sanne/incus-spawn"
+        },
+        {
+          "a": "isx-proxy",
+          "d": "\u003cp\u003eMITM authentication proxy for incus-spawn (install alongside isx)\u003c/p\u003e\n",
+          "s": "https://github.com/Sanne/incus-spawn/releases/latest/download/isx-proxy-runner.jar",
+          "c": "isx-proxy@Sanne/incus-spawn"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "apache",
       "name": "sling-whiteboard",
       "stars": 48,
@@ -1069,28 +1096,6 @@
           "d": "\u003cp\u003eRun with a specific JVM version\u003c/p\u003e\n",
           "s": "jbang/jvmVersion.java",
           "c": "jvmVersion@apache/sling-whiteboard"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "Sanne",
-      "name": "incus-spawn",
-      "stars": 48,
-      "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/3c3a6324d133c8c3dddd9981ff32203e23752b8a/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "isx",
-          "d": "\u003cp\u003eManage isolated Incus development environments\u003c/p\u003e\n",
-          "s": "https://github.com/Sanne/incus-spawn/releases/latest/download/incus-spawn-runner.jar",
-          "c": "isx@Sanne/incus-spawn"
-        },
-        {
-          "a": "isx-proxy",
-          "d": "\u003cp\u003eMITM authentication proxy for incus-spawn (install alongside isx)\u003c/p\u003e\n",
-          "s": "https://github.com/Sanne/incus-spawn/releases/latest/download/isx-proxy-runner.jar",
-          "c": "isx-proxy@Sanne/incus-spawn"
         }
       ],
       "templates": []
@@ -1743,7 +1748,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/dcb225deb413b0c937636fd9e085e4d0b30eb715/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/1f57a73388a3429695d30b70acbdb755bace93da/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -5980,7 +5985,7 @@
       "name": "fluxtionauditlog-analyser",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/196444918?v\u003d4",
-      "link": "https://github.com/telaminai/fluxtionauditlog-analyser/blob/b8198dc13666ee0af1809fe928b633656038d45b/jbang-catalog.json",
+      "link": "https://github.com/telaminai/fluxtionauditlog-analyser/blob/dbf4457cb8cda038a2bd82d7e5d5640bfdd06032/jbang-catalog.json",
       "aliases": [
         {
           "a": "analyser",
@@ -6558,7 +6563,7 @@
       "name": "jbang-catalog",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/3137042?v\u003d4",
-      "link": "https://github.com/asciidoctor/jbang-catalog/blob/58239dbc8c4ae29667ce1950e228f1f9530a6d8d/jbang-catalog.json",
+      "link": "https://github.com/asciidoctor/jbang-catalog/blob/dbdb267afeb817cfd2138db91bc1ee766957c4cb/jbang-catalog.json",
       "aliases": [
         {
           "a": "asciidoctorj",
@@ -6661,7 +6666,7 @@
       "name": "valp",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "link": "https://github.com/maxandersen/valp/blob/6518ac70362a85366a40449472e79e3e3f3d86a8/jbang-catalog.json",
+      "link": "https://github.com/maxandersen/valp/blob/54e671ef744dbd9e50c01bf59ca197139ad000c1/jbang-catalog.json",
       "aliases": [
         {
           "a": "valp",
