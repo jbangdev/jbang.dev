@@ -5,7 +5,7 @@
     {
       "owner": "apple",
       "name": "pkl",
-      "stars": 11568,
+      "stars": 11570,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "link": "https://github.com/apple/pkl/blob/5b538164637ae8dc0f6e43fafcfc6fea6a288ae1/jbang-catalog.json",
       "aliases": [
@@ -30,9 +30,9 @@
     {
       "owner": "oshi",
       "name": "oshi",
-      "stars": 5273,
+      "stars": 5274,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/0758681e226680fb4a2e9f0e81535c4a28440c7f/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/32c88f4bb879cce287d8a5260015cd95ab0a3782/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -110,7 +110,7 @@
     {
       "owner": "jbangdev",
       "name": "jbang",
-      "stars": 1886,
+      "stars": 1887,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
       "link": "https://github.com/jbangdev/jbang/blob/49f0d26348bfc938fd6895609231ca0574ca7cee/docs/modules/ROOT/examples/jbang-catalog.json",
       "aliases": [
@@ -203,9 +203,9 @@
     {
       "owner": "tamboui",
       "name": "tamboui",
-      "stars": 696,
+      "stars": 697,
       "icon": "https://avatars.githubusercontent.com/u/251016663?v\u003d4",
-      "link": "https://github.com/tamboui/tamboui/blob/949e78c8c1850c990525b6e98b3ef87b44d0166c/jbang-catalog.json",
+      "link": "https://github.com/tamboui/tamboui/blob/d6adadcbc9dcff3a71b0e2821e564f279f248490/jbang-catalog.json",
       "aliases": [
         {
           "a": "run-demo",
@@ -561,7 +561,7 @@
       "name": "citrus",
       "stars": 487,
       "icon": "https://avatars.githubusercontent.com/u/27848811?v\u003d4",
-      "link": "https://github.com/citrusframework/citrus/blob/b272ed6b843c69c0003e2df032de5c3c53edc3ca/jbang-catalog.json",
+      "link": "https://github.com/citrusframework/citrus/blob/54a6c59a03280472881b83af6a5a54b8e189d9d7/jbang-catalog.json",
       "aliases": [
         {
           "a": "citrus",
@@ -577,7 +577,7 @@
       "name": "hibernate-reactive",
       "stars": 469,
       "icon": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
-      "link": "https://github.com/hibernate/hibernate-reactive/blob/2291a1485e2f594cf437b2f2a61db9dac35cd486/jbang-catalog.json",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/4c79231f43fb540cfa8a7414d65e4f6fca2c6f44/jbang-catalog.json",
       "aliases": [
         {
           "a": "example",
@@ -623,9 +623,9 @@
     {
       "owner": "jdubois",
       "name": "boot-ui",
-      "stars": 332,
+      "stars": 333,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
-      "link": "https://github.com/jdubois/boot-ui/blob/97b9b8456381235660badde394d0e41a526916d9/jbang-catalog.json",
+      "link": "https://github.com/jdubois/boot-ui/blob/47ac79a9ec7ab330516c9d8672034239c21c7441/jbang-catalog.json",
       "aliases": [
         {
           "a": "bootui",
@@ -722,7 +722,7 @@
       "name": "quarkus-roq",
       "stars": 157,
       "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "link": "https://github.com/quarkiverse/quarkus-roq/blob/4b129ac65419c3d79977c597c9ca3a32b3330444/jbang-catalog.json",
+      "link": "https://github.com/quarkiverse/quarkus-roq/blob/b8c67ae1ca67f62e4a05907e292464142ddba43f/jbang-catalog.json",
       "aliases": [
         {
           "a": "roq",
@@ -815,7 +815,7 @@
       "name": "cli",
       "stars": 74,
       "icon": "https://avatars.githubusercontent.com/u/207676178?v\u003d4",
-      "link": "https://github.com/archgate/cli/blob/f65d99f56d02757cca94d53f6d717333770e0170/shims/maven/jbang-catalog.json",
+      "link": "https://github.com/archgate/cli/blob/a8a51f571777b432c873c75f89255937916428c6/shims/maven/jbang-catalog.json",
       "aliases": [
         {
           "a": "archgate",
@@ -1004,6 +1004,22 @@
       "templates": []
     },
     {
+      "owner": "quarkusio",
+      "name": "quarkus-agent-mcp",
+      "stars": 57,
+      "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
+      "link": "https://github.com/quarkusio/quarkus-agent-mcp/blob/02516aac1b64ffe1fc879f5ca84a484f957bf95c/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "quarkus-agent-mcp",
+          "d": "\u003cp\u003eStandalone MCP server for AI coding agents to manage Quarkus applications\u003c/p\u003e\n",
+          "s": "io.quarkus:quarkus-agent-mcp:RELEASE:runner",
+          "c": "quarkus-agent-mcp@quarkusio/quarkus-agent-mcp"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "nikolassv",
       "name": "md-serve",
       "stars": 57,
@@ -1015,22 +1031,6 @@
           "d": "\u003cp\u003eServe a directory of Markdown files as rendered HTML\u003c/p\u003e\n",
           "s": "https://github.com/nikolassv/md-serve/releases/latest/download/md-serve.jar",
           "c": "md-serve@nikolassv/md-serve"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "quarkusio",
-      "name": "quarkus-agent-mcp",
-      "stars": 57,
-      "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
-      "link": "https://github.com/quarkusio/quarkus-agent-mcp/blob/8021ba8408d22856121402fcfe8eb87c07610a7e/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "quarkus-agent-mcp",
-          "d": "\u003cp\u003eStandalone MCP server for AI coding agents to manage Quarkus applications\u003c/p\u003e\n",
-          "s": "io.quarkus:quarkus-agent-mcp:RELEASE:runner",
-          "c": "quarkus-agent-mcp@quarkusio/quarkus-agent-mcp"
         }
       ],
       "templates": []
@@ -1055,7 +1055,7 @@
       "name": "incus-spawn",
       "stars": 49,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/731722ade45082e528e7a2287053aaef49653b0e/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/707c317227e97bf9f53a407256931be7ba047473/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -1117,6 +1117,34 @@
       "templates": []
     },
     {
+      "owner": "brunoborges",
+      "name": "jairosvg",
+      "stars": 46,
+      "icon": "https://avatars.githubusercontent.com/u/129743?v\u003d4",
+      "link": "https://github.com/brunoborges/jairosvg/blob/bc9b47152162c3623922479f1f448bfc403c2fe0/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "jairosvg",
+          "d": "\u003cp\u003eSVG to PNG/PDF/PS converter powered by Java2D\u003c/p\u003e\n",
+          "s": "io.brunoborges:jairosvg:1.0.16",
+          "c": "jairosvg@brunoborges/jairosvg"
+        },
+        {
+          "a": "benchmark",
+          "d": "\u003cp\u003eSVG → PNG benchmark: JairoSVG vs EchoSVG vs JSVG vs CairoSVG\u003c/p\u003e\n",
+          "s": "comparison/benchmark/benchmark.java",
+          "c": "benchmark@brunoborges/jairosvg"
+        },
+        {
+          "a": "update-readme",
+          "d": "\u003cp\u003eRegenerate benchmark README tables from benchmark-results.jsonl\u003c/p\u003e\n",
+          "s": "comparison/benchmark/update_readme.java",
+          "c": "update-readme@brunoborges/jairosvg"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "linux-china",
       "name": "task-keeper",
       "stars": 44,
@@ -1162,34 +1190,6 @@
           "d": "\u003cp\u003eInteractive TUI for Maven -- search, browse, and manage dependencies\u003c/p\u003e\n",
           "s": "GAV:eu.maveniverse.maven.plugins:pilot-cli:RELEASE",
           "c": "pilot@maveniverse/pilot"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "brunoborges",
-      "name": "jairosvg",
-      "stars": 42,
-      "icon": "https://avatars.githubusercontent.com/u/129743?v\u003d4",
-      "link": "https://github.com/brunoborges/jairosvg/blob/861d5b0d67f1cfcd1f675b801a72814dfa11945f/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "jairosvg",
-          "d": "\u003cp\u003eSVG to PNG/PDF/PS converter powered by Java2D\u003c/p\u003e\n",
-          "s": "io.brunoborges:jairosvg:1.0.15",
-          "c": "jairosvg@brunoborges/jairosvg"
-        },
-        {
-          "a": "benchmark",
-          "d": "\u003cp\u003eSVG → PNG benchmark: JairoSVG vs EchoSVG vs JSVG vs CairoSVG\u003c/p\u003e\n",
-          "s": "comparison/benchmark/benchmark.java",
-          "c": "benchmark@brunoborges/jairosvg"
-        },
-        {
-          "a": "update-readme",
-          "d": "\u003cp\u003eRegenerate benchmark README tables from benchmark-results.jsonl\u003c/p\u003e\n",
-          "s": "comparison/benchmark/update_readme.java",
-          "c": "update-readme@brunoborges/jairosvg"
         }
       ],
       "templates": []
@@ -1288,7 +1288,7 @@
       "name": "jbang-idea",
       "stars": 29,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang-idea/blob/b2182ce07a3f9f2d822d330db5568c115485f98c/src/test/resources/projects/catalog/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang-idea/blob/1fc8cb2eadc9e9b13aaad1949fa81bc5d6fd4af9/src/test/resources/projects/catalog/jbang-catalog.json",
       "aliases": [
         {
           "a": "hello",
@@ -1748,7 +1748,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/5663480ee04591b3c2c4a4a8b49bfe8df730f6e9/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/7dba2a45121cade1f57caf3f37eb8ab600e67821/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -1830,7 +1830,7 @@
       "name": "leyden-analyzer",
       "stars": 13,
       "icon": "https://avatars.githubusercontent.com/u/726590?v\u003d4",
-      "link": "https://github.com/Delawen/leyden-analyzer/blob/075979b8c09ec2a7301b25402bf2c507773ed257/jbang-catalog.json",
+      "link": "https://github.com/Delawen/leyden-analyzer/blob/b327903a41002ce345d0abc45fe02633c9bf36af/jbang-catalog.json",
       "aliases": [
         {
           "a": "analyzer",
@@ -1943,6 +1943,22 @@
       "templates": []
     },
     {
+      "owner": "srijithunni7182",
+      "name": "llm4j",
+      "stars": 10,
+      "icon": "https://avatars.githubusercontent.com/u/68538997?v\u003d4",
+      "link": "https://github.com/srijithunni7182/llm4j/blob/c4d7d3ae687e0e13e1211ecaf0c4c365b420ac8b/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "weave",
+          "d": "\u003cp\u003eweave: write, test, review and run Loom workflows (try it with: jbang weave@srijithunni7182/llm4j try)\u003c/p\u003e\n",
+          "s": "io.github.srijithunni7182:ai-agent4j-loom:6.2.0:cli",
+          "c": "weave@srijithunni7182/llm4j"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "alibaba",
       "name": "jbang-catalog",
       "stars": 9,
@@ -2021,7 +2037,7 @@
       "name": "jbang-catalog",
       "stars": 8,
       "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/c85cae26271aade0e31f86e15e63e3cb0e99d29a/jbang-catalog.json",
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/0e25de5f2331c112705d98b7c9d0d1643aaa3199/jbang-catalog.json",
       "aliases": [
         {
           "a": "buginfo",
@@ -2043,17 +2059,17 @@
         },
         {
           "a": "cli",
-          "s": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.40.1.1/quarkus-cli-3.40.1.1-runner.jar",
+          "s": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.40.1.2/quarkus-cli-3.40.1.2-runner.jar",
           "c": "cli@quarkusio"
         },
         {
           "a": "qs",
-          "s": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.40.1.1/quarkus-cli-3.40.1.1-runner.jar",
+          "s": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.40.1.2/quarkus-cli-3.40.1.2-runner.jar",
           "c": "qs@quarkusio"
         },
         {
           "a": "quarkus",
-          "s": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.40.1.1/quarkus-cli-3.40.1.1-runner.jar",
+          "s": "https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/3.40.1.2/quarkus-cli-3.40.1.2-runner.jar",
           "c": "quarkus@quarkusio"
         },
         {
@@ -2090,22 +2106,6 @@
           "c": "githubbot@quarkusio"
         }
       ]
-    },
-    {
-      "owner": "srijithunni7182",
-      "name": "llm4j",
-      "stars": 8,
-      "icon": "https://avatars.githubusercontent.com/u/68538997?v\u003d4",
-      "link": "https://github.com/srijithunni7182/llm4j/blob/c4d7d3ae687e0e13e1211ecaf0c4c365b420ac8b/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "weave",
-          "d": "\u003cp\u003eweave: write, test, review and run Loom workflows (try it with: jbang weave@srijithunni7182/llm4j try)\u003c/p\u003e\n",
-          "s": "io.github.srijithunni7182:ai-agent4j-loom:6.2.0:cli",
-          "c": "weave@srijithunni7182/llm4j"
-        }
-      ],
-      "templates": []
     },
     {
       "owner": "parttimenerd",
@@ -2836,7 +2836,7 @@
       "name": "wanaku-barn",
       "stars": 3,
       "icon": "https://avatars.githubusercontent.com/u/200620763?v\u003d4",
-      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/5e4cd4a273b10ac7d646d458ee14645c8e1a0d82/jbang-catalog.json",
+      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/2bedf1b39b7996aedfa9e8ecab5a81e744ef9566/jbang-catalog.json",
       "aliases": [
         {
           "a": "wanaku",
@@ -3207,6 +3207,22 @@
       "templates": []
     },
     {
+      "owner": "apache",
+      "name": "camel-kit",
+      "stars": 3,
+      "icon": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
+      "link": "https://github.com/apache/camel-kit/blob/71088a98ed3a6888c125c4e5f28e4de57554b112/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "camel-kit",
+          "d": "\u003cp\u003eCamel Kit lightweight — no embedded MCP servers, requires external setup\u003c/p\u003e\n",
+          "s": "kit/camel-kit-main/src/main/jbang/main/CamelKit.java",
+          "c": "camel-kit@apache/camel-kit"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "koppor",
       "name": "reference-shortener",
       "stars": 3,
@@ -3249,7 +3265,7 @@
       "name": "java-concurrency-interview",
       "stars": 3,
       "icon": "https://avatars.githubusercontent.com/u/19151554?v\u003d4",
-      "link": "https://github.com/alxkm/java-concurrency-interview/blob/fd47fdc6e52d8008d005d4d16b193ebb643a1c94/jbang-catalog.json",
+      "link": "https://github.com/alxkm/java-concurrency-interview/blob/4bef8083be700736ada50255de57110e2bffe249/jbang-catalog.json",
       "aliases": [
         {
           "a": "quiz",
@@ -3272,22 +3288,6 @@
           "d": "\u003cp\u003eArXiv MCP Server\u003c/p\u003e\n",
           "s": "https://github.com/glaforge/arxiv-mcp-server/releases/latest/download/arxiv-mcp-server-runner.jar",
           "c": "arxiv-mcp@glaforge/arxiv-mcp-server"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "apache",
-      "name": "camel-kit",
-      "stars": 3,
-      "icon": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
-      "link": "https://github.com/apache/camel-kit/blob/4edcf09fe1caa2565453b40b354bee679bcb35ab/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "camel-kit",
-          "d": "\u003cp\u003eCamel Kit lightweight — no embedded MCP servers, requires external setup\u003c/p\u003e\n",
-          "s": "kit/camel-kit-main/src/main/jbang/main/CamelKit.java",
-          "c": "camel-kit@apache/camel-kit"
         }
       ],
       "templates": []
@@ -3403,7 +3403,7 @@
       "name": "atunko",
       "stars": 2,
       "icon": "https://avatars.githubusercontent.com/u/264616968?v\u003d4",
-      "link": "https://github.com/atunko-dev/atunko/blob/91d7864add8b25f3d7102bffb3fae0bb5bc5caa1/jbang-catalog.json",
+      "link": "https://github.com/atunko-dev/atunko/blob/0d14d68de750e61887c6ee42496d777ef711cc8a/jbang-catalog.json",
       "aliases": [
         {
           "a": "atunko",
@@ -3886,7 +3886,7 @@
       "name": "fotorenamer",
       "stars": 1,
       "icon": "https://avatars.githubusercontent.com/u/1323134?v\u003d4",
-      "link": "https://github.com/ottlinger/fotorenamer/blob/511b368ee85756f6b3458a98db8db2be1edecfbc/jbang-catalog.json",
+      "link": "https://github.com/ottlinger/fotorenamer/blob/920df64d03311ddd3c5aa1b2491acf5ef924fce5/jbang-catalog.json",
       "aliases": [
         {
           "a": "fotorenamer",
@@ -3933,7 +3933,7 @@
       "name": "roadrunner",
       "stars": 1,
       "icon": "https://avatars.githubusercontent.com/u/36197812?v\u003d4",
-      "link": "https://github.com/symentispl/roadrunner/blob/57b6d91b117aa5d5574c1e5ea4f4c2ddd377c7f4/jbang-catalog.json",
+      "link": "https://github.com/symentispl/roadrunner/blob/e277b3171ba76dd99e9f4d2004d375e8ee7cf5f5/jbang-catalog.json",
       "aliases": [
         {
           "a": "roadrunner",
@@ -5963,7 +5963,7 @@
       "name": "fluxtionauditlog-analyser",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/196444918?v\u003d4",
-      "link": "https://github.com/telaminai/fluxtionauditlog-analyser/blob/7bf61d7a8907e268d7b1b8b9568dca9f64d92a9b/jbang-catalog.json",
+      "link": "https://github.com/telaminai/fluxtionauditlog-analyser/blob/594de3ce7766679f3e65dae76e0582792ace5613/jbang-catalog.json",
       "aliases": [
         {
           "a": "analyser",
@@ -7946,7 +7946,7 @@
       "name": "drydock",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/16762720?v\u003d4",
-      "link": "https://github.com/btraceio/drydock/blob/b936af40b383330f5736103e0e06739a2079b54d/jbang-catalog.json",
+      "link": "https://github.com/btraceio/drydock/blob/1d34cf8a14a201e8e0a74cd8605915b44f077811/jbang-catalog.json",
       "aliases": [
         {
           "a": "drydock",
