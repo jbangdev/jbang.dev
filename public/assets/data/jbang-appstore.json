@@ -5,7 +5,7 @@
     {
       "owner": "apple",
       "name": "pkl",
-      "stars": 11574,
+      "stars": 11576,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "link": "https://github.com/apple/pkl/blob/ad7dedeecd0a564aabea85419b45dd870e2179bf/jbang-catalog.json",
       "aliases": [
@@ -32,7 +32,7 @@
       "name": "oshi",
       "stars": 5277,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/3f4397feb8e7f9c28e67ef76e2aa7bf2f798178f/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/ee64e88dc45a821809ced2625e2ded0bb886f4e6/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -97,7 +97,7 @@
       "name": "validator",
       "stars": 2003,
       "icon": "https://avatars.githubusercontent.com/u/498971?v\u003d4",
-      "link": "https://github.com/validator/validator/blob/0f0f1f9eb6949e9044cfbfa4c45e55a6cd1a15d3/jbang-catalog.json",
+      "link": "https://github.com/validator/validator/blob/c1619cc379312770dc018376ca032771d1e39ad1/jbang-catalog.json",
       "aliases": [
         {
           "a": "vnu",
@@ -203,7 +203,7 @@
     {
       "owner": "tamboui",
       "name": "tamboui",
-      "stars": 699,
+      "stars": 698,
       "icon": "https://avatars.githubusercontent.com/u/251016663?v\u003d4",
       "link": "https://github.com/tamboui/tamboui/blob/d6adadcbc9dcff3a71b0e2821e564f279f248490/jbang-catalog.json",
       "aliases": [
@@ -561,7 +561,7 @@
       "name": "citrus",
       "stars": 487,
       "icon": "https://avatars.githubusercontent.com/u/27848811?v\u003d4",
-      "link": "https://github.com/citrusframework/citrus/blob/fad2cfcedefa6a9c7b798982c1e4e2f9eee21b09/jbang-catalog.json",
+      "link": "https://github.com/citrusframework/citrus/blob/de8f0e2a65bf82f9bbdf368e61d80b63abdd74e2/jbang-catalog.json",
       "aliases": [
         {
           "a": "citrus",
@@ -625,7 +625,7 @@
       "name": "boot-ui",
       "stars": 335,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
-      "link": "https://github.com/jdubois/boot-ui/blob/c917685c298bf96638de609316feaa5224a128ee/jbang-catalog.json",
+      "link": "https://github.com/jdubois/boot-ui/blob/e8524c7c66cdde3a6dfac8ae3ed80dbe3d8a9d9f/jbang-catalog.json",
       "aliases": [
         {
           "a": "bootui",
@@ -720,9 +720,9 @@
     {
       "owner": "quarkiverse",
       "name": "quarkus-roq",
-      "stars": 158,
+      "stars": 159,
       "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "link": "https://github.com/quarkiverse/quarkus-roq/blob/a6b80359badc5f206646c0b563a24024b45cd27d/jbang-catalog.json",
+      "link": "https://github.com/quarkiverse/quarkus-roq/blob/389acb636cae15ed9fd51eb2f3c63e3ad46c6361/jbang-catalog.json",
       "aliases": [
         {
           "a": "roq",
@@ -736,7 +736,7 @@
     {
       "owner": "gufranthakur",
       "name": "FlowForge",
-      "stars": 136,
+      "stars": 137,
       "icon": "https://avatars.githubusercontent.com/u/151453120?v\u003d4",
       "link": "https://github.com/gufranthakur/FlowForge/blob/6985af4fe8870e5f1b393730f27a707ca0d7c183/jbang-catalog.json",
       "aliases": [
@@ -1040,7 +1040,7 @@
       "name": "incus-spawn",
       "stars": 54,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/77bdc4af60f74141b8da0428226bcc8c50d17e1f/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/ef8df343badd1d698440e728979249ee68157934/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -1140,6 +1140,22 @@
           "d": "\u003cp\u003eRuns Mule Flow Diagrams\u003c/p\u003e\n",
           "s": "jbang/mulefd.java",
           "c": "mulefd@manikmagar/mulefd"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "wanaku-ai",
+      "name": "wanaku-barn",
+      "stars": 45,
+      "icon": "https://avatars.githubusercontent.com/u/200620763?v\u003d4",
+      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/124e4dafa560f9f33996265cd65d1589ff2c3123/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "wanaku",
+          "d": "\u003cp\u003eRun Wanaku easily with JBang\u003c/p\u003e\n",
+          "s": "apps/wanaku-jbang/src/main/java/ai/wanaku/jbang/WanakuJBang.java",
+          "c": "wanaku@wanaku-ai/wanaku-barn"
         }
       ],
       "templates": []
@@ -1310,22 +1326,6 @@
           "a": "doit",
           "s": "summarize.java",
           "c": "doit@mariofusco/site-summarizer"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "wanaku-ai",
-      "name": "wanaku-barn",
-      "stars": 27,
-      "icon": "https://avatars.githubusercontent.com/u/200620763?v\u003d4",
-      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/124e4dafa560f9f33996265cd65d1589ff2c3123/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "wanaku",
-          "d": "\u003cp\u003eRun Wanaku easily with JBang\u003c/p\u003e\n",
-          "s": "apps/wanaku-jbang/src/main/java/ai/wanaku/jbang/WanakuJBang.java",
-          "c": "wanaku@wanaku-ai/wanaku-barn"
         }
       ],
       "templates": []
@@ -1764,7 +1764,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/a0cb24f5ebf8ac8169753a03901f5e30628e3d89/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/df4ae28d8252ea13c1dbd8e46b2c193a98d30a93/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -1963,7 +1963,7 @@
       "name": "llm4j",
       "stars": 10,
       "icon": "https://avatars.githubusercontent.com/u/68538997?v\u003d4",
-      "link": "https://github.com/srijithunni7182/llm4j/blob/ec2d32dc8f2b5b3ac7657830409bdf1739b4fa3b/jbang-catalog.json",
+      "link": "https://github.com/srijithunni7182/llm4j/blob/dfbd62f8ca7d3b5be4fb9c24aa3aa52f0eec3c70/jbang-catalog.json",
       "aliases": [
         {
           "a": "weave",
@@ -2756,7 +2756,7 @@
       "name": "openapi-ui-next",
       "stars": 4,
       "icon": "https://avatars.githubusercontent.com/u/185260?v\u003d4",
-      "link": "https://github.com/t1/openapi-ui-next/blob/825405dc11f417301b5b7140fc375dba78782635/jbang-catalog.json",
+      "link": "https://github.com/t1/openapi-ui-next/blob/cc5c38227032694657a373ac056390748f7247e4/jbang-catalog.json",
       "aliases": [
         {
           "a": "openapi-ui",
@@ -3949,7 +3949,7 @@
       "name": "roadrunner",
       "stars": 1,
       "icon": "https://avatars.githubusercontent.com/u/36197812?v\u003d4",
-      "link": "https://github.com/symentispl/roadrunner/blob/e277b3171ba76dd99e9f4d2004d375e8ee7cf5f5/jbang-catalog.json",
+      "link": "https://github.com/symentispl/roadrunner/blob/ab133e16c5d89edda3012200f6b3916788b25926/jbang-catalog.json",
       "aliases": [
         {
           "a": "roadrunner",
@@ -6628,7 +6628,7 @@
       "name": "valp",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "link": "https://github.com/maxandersen/valp/blob/7c15e567135c79c52a9cf28ed5d2775e99cb0448/jbang-catalog.json",
+      "link": "https://github.com/maxandersen/valp/blob/28333a66a08f78f9e1d891cea4dc495ff756e6b3/jbang-catalog.json",
       "aliases": [
         {
           "a": "valp",
@@ -7946,7 +7946,7 @@
       "name": "drydock",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/16762720?v\u003d4",
-      "link": "https://github.com/btraceio/drydock/blob/d4b30ef1bc1240e981906de2d1b925462d6fd7f6/jbang-catalog.json",
+      "link": "https://github.com/btraceio/drydock/blob/be443080c3d812026b797ad26d0fa9c40d67f365/jbang-catalog.json",
       "aliases": [
         {
           "a": "drydock",
