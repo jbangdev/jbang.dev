@@ -1,5 +1,5 @@
 {
-  "aliasCount": 976,
+  "aliasCount": 978,
   "templateCount": 83,
   "catalogs": [
     {
@@ -7,7 +7,7 @@
       "name": "pkl",
       "stars": 11576,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
-      "link": "https://github.com/apple/pkl/blob/ad7dedeecd0a564aabea85419b45dd870e2179bf/jbang-catalog.json",
+      "link": "https://github.com/apple/pkl/blob/1a808818743f86d32c3dfdbebc27fd04c48f6b40/jbang-catalog.json",
       "aliases": [
         {
           "a": "pkl",
@@ -32,7 +32,7 @@
       "name": "oshi",
       "stars": 5277,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/ee64e88dc45a821809ced2625e2ded0bb886f4e6/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/1c5c1ae66d95550b06095d9666c02d3310b15b42/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -112,7 +112,7 @@
       "name": "jbang",
       "stars": 1887,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang/blob/e5af0ea8c96d703609e6eaf3675f634f9423af8a/docs/modules/ROOT/examples/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang/blob/f94d500504c64894c5bb9c429ce81af8a37cd907/docs/modules/ROOT/examples/jbang-catalog.json",
       "aliases": [
         {
           "a": "jbang-fmt",
@@ -189,7 +189,7 @@
       "name": "hawtio",
       "stars": 1466,
       "icon": "https://avatars.githubusercontent.com/u/2943947?v\u003d4",
-      "link": "https://github.com/hawtio/hawtio/blob/8ebb82ebff2d9ab3288311c31710f76f17cc2c93/jbang-catalog.json",
+      "link": "https://github.com/hawtio/hawtio/blob/a1a40398e73f492a83b8b5846ed4d1cb88f82ae4/jbang-catalog.json",
       "aliases": [
         {
           "a": "hawtio",
@@ -203,7 +203,7 @@
     {
       "owner": "tamboui",
       "name": "tamboui",
-      "stars": 698,
+      "stars": 700,
       "icon": "https://avatars.githubusercontent.com/u/251016663?v\u003d4",
       "link": "https://github.com/tamboui/tamboui/blob/d6adadcbc9dcff3a71b0e2821e564f279f248490/jbang-catalog.json",
       "aliases": [
@@ -561,7 +561,7 @@
       "name": "citrus",
       "stars": 487,
       "icon": "https://avatars.githubusercontent.com/u/27848811?v\u003d4",
-      "link": "https://github.com/citrusframework/citrus/blob/de8f0e2a65bf82f9bbdf368e61d80b63abdd74e2/jbang-catalog.json",
+      "link": "https://github.com/citrusframework/citrus/blob/168fd82e4288a6c1da6377f399e660e5493a5734/jbang-catalog.json",
       "aliases": [
         {
           "a": "citrus",
@@ -577,7 +577,7 @@
       "name": "hibernate-reactive",
       "stars": 469,
       "icon": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
-      "link": "https://github.com/hibernate/hibernate-reactive/blob/be8d15858972ca68ad71ad37327c5059d25380a3/jbang-catalog.json",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/e706b436a11edc3a9f1169de68ee267f38c19099/jbang-catalog.json",
       "aliases": [
         {
           "a": "example",
@@ -632,6 +632,22 @@
           "d": "\u003cp\u003eAsk a running Spring Boot or Quarkus application a question. One command per BootUI MCP tool.\u003c/p\u003e\n",
           "s": "com.julien-dubois.bootui:bootui-cli:2.4.0:all",
           "c": "bootui@jdubois/boot-ui"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "itsallcode",
+      "name": "openfasttrace",
+      "stars": 210,
+      "icon": "https://avatars.githubusercontent.com/u/12786252?v\u003d4",
+      "link": "https://github.com/itsallcode/openfasttrace/blob/b4d11edb34765c07efbb38895239dbd9d5213f75/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "oft",
+          "d": "\u003cp\u003eOpenFastTrace requirement tracing\u003c/p\u003e\n",
+          "s": "org.itsallcode.openfasttrace:openfasttrace:RELEASE",
+          "c": "oft@itsallcode/openfasttrace"
         }
       ],
       "templates": []
@@ -722,7 +738,7 @@
       "name": "quarkus-roq",
       "stars": 159,
       "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
-      "link": "https://github.com/quarkiverse/quarkus-roq/blob/389acb636cae15ed9fd51eb2f3c63e3ad46c6361/jbang-catalog.json",
+      "link": "https://github.com/quarkiverse/quarkus-roq/blob/3dacac4eb736ff60e3af29ae90ca9bab66dc7499/jbang-catalog.json",
       "aliases": [
         {
           "a": "roq",
@@ -815,7 +831,7 @@
       "name": "cli",
       "stars": 74,
       "icon": "https://avatars.githubusercontent.com/u/207676178?v\u003d4",
-      "link": "https://github.com/archgate/cli/blob/9f076f344838922a2e046288aeab834f7038d108/shims/maven/jbang-catalog.json",
+      "link": "https://github.com/archgate/cli/blob/d49f8c6c1b2d4f3f0d90dc40f32e85ab88246628/shims/maven/jbang-catalog.json",
       "aliases": [
         {
           "a": "archgate",
@@ -1008,7 +1024,7 @@
       "name": "quarkus-agent-mcp",
       "stars": 57,
       "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
-      "link": "https://github.com/quarkusio/quarkus-agent-mcp/blob/bfc24c2a6b25868fd0abbdd54bdfa965d30f441d/jbang-catalog.json",
+      "link": "https://github.com/quarkusio/quarkus-agent-mcp/blob/4ad5f5b6bac1b68f41e73cfa0f3ac836f01daaf3/jbang-catalog.json",
       "aliases": [
         {
           "a": "quarkus-agent-mcp",
@@ -1040,7 +1056,7 @@
       "name": "incus-spawn",
       "stars": 54,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/ef8df343badd1d698440e728979249ee68157934/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/477542cdb797aa42ac68c46c8e7143e06e096f27/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -1147,7 +1163,7 @@
     {
       "owner": "wanaku-ai",
       "name": "wanaku-barn",
-      "stars": 45,
+      "stars": 46,
       "icon": "https://avatars.githubusercontent.com/u/200620763?v\u003d4",
       "link": "https://github.com/wanaku-ai/wanaku-barn/blob/124e4dafa560f9f33996265cd65d1589ff2c3123/jbang-catalog.json",
       "aliases": [
@@ -1165,7 +1181,7 @@
       "name": "task-keeper",
       "stars": 44,
       "icon": "https://avatars.githubusercontent.com/u/46711?v\u003d4",
-      "link": "https://github.com/linux-china/task-keeper/blob/70bdedd98d909708a489812f17483dd3c844dc31/jbang-catalog.json",
+      "link": "https://github.com/linux-china/task-keeper/blob/c4494df74fc64659d1c4fed4c006f832dde56534/jbang-catalog.json",
       "aliases": [
         {
           "a": "Hello",
@@ -1764,7 +1780,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/df4ae28d8252ea13c1dbd8e46b2c193a98d30a93/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/32739cc4d78b33d4a4950191b74acd01e0455489/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -2031,7 +2047,7 @@
       "name": "jskills",
       "stars": 9,
       "icon": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "link": "https://github.com/maxandersen/jskills/blob/0f19fae05c59d0525847a8f36e489d3b2403cb73/jbang-catalog.json",
+      "link": "https://github.com/maxandersen/jskills/blob/0946795556a431868329969559f519c34e1c4160/jbang-catalog.json",
       "aliases": [
         {
           "a": "skills",
@@ -3914,22 +3930,6 @@
       "templates": []
     },
     {
-      "owner": "maven-flow",
-      "name": "changelog-merge-driver",
-      "stars": 1,
-      "icon": "https://avatars.githubusercontent.com/u/166258741?v\u003d4",
-      "link": "https://github.com/maven-flow/changelog-merge-driver/blob/4f9446a29a9e6b935b0fd710aa047f9ff03641ad/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "changelog-merge-driver",
-          "d": "\u003cp\u003eA Git merge driver for changelogs\u003c/p\u003e\n",
-          "s": "ChangelogMergeDriver.java",
-          "c": "changelog-merge-driver@maven-flow/changelog-merge-driver"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "neolegal-fr",
       "name": "tabula-java",
       "stars": 1,
@@ -4716,6 +4716,22 @@
       "templates": []
     },
     {
+      "owner": "maven-flow",
+      "name": "changelog-merge-driver",
+      "stars": 1,
+      "icon": "https://avatars.githubusercontent.com/u/166258741?v\u003d4",
+      "link": "https://github.com/maven-flow/changelog-merge-driver/blob/4f9446a29a9e6b935b0fd710aa047f9ff03641ad/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "changelog-merge-driver",
+          "d": "\u003cp\u003eA Git merge driver for changelogs\u003c/p\u003e\n",
+          "s": "ChangelogMergeDriver.java",
+          "c": "changelog-merge-driver@maven-flow/changelog-merge-driver"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "jOOQ",
       "name": "jbang-catalog",
       "stars": 1,
@@ -4906,6 +4922,22 @@
           "d": "\u003cp\u003eRun Apache Camel routes easily\u003c/p\u003e\n",
           "s": "dsl/camel-jbang/camel-jbang-main/dist/CamelJBang.java",
           "c": "camel@javatechno/camel-4.6.2"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "koppor",
+      "name": "koppter",
+      "stars": 1,
+      "icon": "https://avatars.githubusercontent.com/u/1366654?v\u003d4",
+      "link": "https://github.com/koppor/koppter/blob/e1f3a7b84264d04ac2a72df88c275bd0003ac731/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "lint",
+          "d": "\u003cp\u003eChecks a todo.txt file and the files next to it for what koppter does not understand\u003c/p\u003e\n",
+          "s": ".jbang/KoppterLint.kt",
+          "c": "lint@koppor/koppter"
         }
       ],
       "templates": []
@@ -6628,7 +6660,7 @@
       "name": "valp",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "link": "https://github.com/maxandersen/valp/blob/28333a66a08f78f9e1d891cea4dc495ff756e6b3/jbang-catalog.json",
+      "link": "https://github.com/maxandersen/valp/blob/4606594d719bbc11e59ab6b7bea7f94313b945f8/jbang-catalog.json",
       "aliases": [
         {
           "a": "valp",
@@ -7946,7 +7978,7 @@
       "name": "drydock",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/16762720?v\u003d4",
-      "link": "https://github.com/btraceio/drydock/blob/be443080c3d812026b797ad26d0fa9c40d67f365/jbang-catalog.json",
+      "link": "https://github.com/btraceio/drydock/blob/a79fc51433a993a798f3f7bd644967b56a04e489/jbang-catalog.json",
       "aliases": [
         {
           "a": "drydock",
@@ -8374,48 +8406,6 @@
       "templates": []
     },
     {
-      "owner": "ayagmar",
-      "name": "jbang-catalog",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/62888618?v\u003d4",
-      "link": "https://github.com/ayagmar/jbang-catalog/blob/266844b5f558b6a8e550b8c255d5825941c90570/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "quarkus-forge",
-          "d": "\u003cp\u003eKeyboard-first Quarkus project generator TUI\u003c/p\u003e\n",
-          "s": "https://github.com/ayagmar/quarkus-forge/releases/download/v0.6.5/quarkus-forge-jvm.jar",
-          "c": "quarkus-forge@ayagmar"
-        },
-        {
-          "a": "quarkus-forge-headless",
-          "d": "\u003cp\u003eQuarkus project generator headless CLI (no TUI dependencies)\u003c/p\u003e\n",
-          "s": "https://github.com/ayagmar/quarkus-forge/releases/download/v0.6.5/quarkus-forge-headless.jar",
-          "c": "quarkus-forge-headless@ayagmar"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "aucampia",
-      "name": "issues",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/4481387?v\u003d4",
-      "link": "https://github.com/aucampia/issues/blob/1fe5785fea45c6641b7d2daa221bef0bc11833bb/20220908-datahub-protobuf/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "datahub-protobuf-old",
-          "s": "https://raw.githubusercontent.com/datahub-project/datahub/b9068ffd2ef527a2b24b5d3828a9cc6c0f23b4fb/metadata-integration/java/datahub-protobuf-example/libs/datahub-protobuf.jar",
-          "c": "datahub-protobuf-old@aucampia/issues~20220908-datahub-protobuf"
-        },
-        {
-          "a": "datahub-protobuf",
-          "s": "io.acryl:datahub-protobuf:0.8.44-2rc1",
-          "c": "datahub-protobuf@aucampia/issues~20220908-datahub-protobuf"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "TheShubham-K",
       "name": "getting-started-with-springboot",
       "stars": 0,
@@ -8486,6 +8476,48 @@
           "a": "jbangquarkus",
           "s": "jbangquarkus.java",
           "c": "jbangquarkus@iotaplatforms/tutorials~jbang"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "ayagmar",
+      "name": "jbang-catalog",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/62888618?v\u003d4",
+      "link": "https://github.com/ayagmar/jbang-catalog/blob/266844b5f558b6a8e550b8c255d5825941c90570/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "quarkus-forge",
+          "d": "\u003cp\u003eKeyboard-first Quarkus project generator TUI\u003c/p\u003e\n",
+          "s": "https://github.com/ayagmar/quarkus-forge/releases/download/v0.6.5/quarkus-forge-jvm.jar",
+          "c": "quarkus-forge@ayagmar"
+        },
+        {
+          "a": "quarkus-forge-headless",
+          "d": "\u003cp\u003eQuarkus project generator headless CLI (no TUI dependencies)\u003c/p\u003e\n",
+          "s": "https://github.com/ayagmar/quarkus-forge/releases/download/v0.6.5/quarkus-forge-headless.jar",
+          "c": "quarkus-forge-headless@ayagmar"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "aucampia",
+      "name": "issues",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/4481387?v\u003d4",
+      "link": "https://github.com/aucampia/issues/blob/1fe5785fea45c6641b7d2daa221bef0bc11833bb/20220908-datahub-protobuf/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "datahub-protobuf-old",
+          "s": "https://raw.githubusercontent.com/datahub-project/datahub/b9068ffd2ef527a2b24b5d3828a9cc6c0f23b4fb/metadata-integration/java/datahub-protobuf-example/libs/datahub-protobuf.jar",
+          "c": "datahub-protobuf-old@aucampia/issues~20220908-datahub-protobuf"
+        },
+        {
+          "a": "datahub-protobuf",
+          "s": "io.acryl:datahub-protobuf:0.8.44-2rc1",
+          "c": "datahub-protobuf@aucampia/issues~20220908-datahub-protobuf"
         }
       ],
       "templates": []
