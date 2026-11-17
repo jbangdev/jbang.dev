@@ -3,7 +3,7 @@ title: IDE
 tagline: JBang IDE Support
 link: /ide/
 layout: splash
-excerpt: "The following IDEs today have support for JBang via a plugin - no additional setup needed!"
+excerpt: "JBang plugins for VS Code, VSCodium, IntelliJ IDEA, Eclipse and Diode, plus sandbox mode for any other editor."
 ---
 
 <link rel="stylesheet" href="/assets/vendor/oat/oat.min.css"/>
@@ -19,13 +19,10 @@ excerpt: "The following IDEs today have support for JBang via a plugin - no addi
     <button role="tab"><img src="https://code.visualstudio.com/favicon.ico" width="20" height="20" alt=""/> VS Code / VSCodium</button>
     <button role="tab"><img src="https://simpleicons.org/icons/intellijidea.svg" width="20" height="20" alt=""/> IntelliJ IDEA</button>
     <button role="tab"><img src="https://simpleicons.org/icons/eclipseide.svg" width="20" height="20" alt=""/> Eclipse</button>
-    <button role="tab"><img src="https://simpleicons.org/icons/zedindustries.svg" width="20" height="20" alt=""/> Zed</button>
-    <button role="tab"><img src="https://simpleicons.org/icons/vim.svg" width="20" height="20" alt=""/> Vim/neovim</button>
-    <button role="tab"><img src="https://simpleicons.org/icons/gnuemacs.svg" width="20" height="20" alt=""/> Emacs</button>
-    <button role="tab"><img src="https://simpleicons.org/icons/replit.svg" width="20" height="20" alt=""/> repl.it</button>
-    <button role="tab"><img src="https://gitpod.io/favicon.ico" width="20" height="20" alt=""/> GitPod</button>
-    <button role="tab"><img src="https://www.jdoodle.com/favicon.ico" width="20" height="20" alt=""/> JDoodle</button>
+    <button role="tab"><img src="/assets/images/ide/diode.svg" width="20" height="20" alt=""/> Diode</button>
+    <button role="tab"><img src="https://simpleicons.org/icons/neovim.svg" width="20" height="20" alt=""/> Other editors</button>
     <button role="tab"><img src="https://jupyter.org/favicon.ico" width="20" height="20" alt=""/> Jupyter</button>
+    <button role="tab"><img src="https://simpleicons.org/icons/googlechrome.svg" width="20" height="20" alt=""/> Online</button>
   </div>
 
   <div role="tabpanel">
@@ -136,60 +133,53 @@ excerpt: "The following IDEs today have support for JBang via a plugin - no addi
   </div>
 
   <div role="tabpanel">
-    <h3>Zed</h3>
+    <h3>Diode</h3>
     <p>
-      <a href="https://zed.dev">Zed</a> is a high-performance editor with Java support via Eclipse JDT Language Server.
-      No native JBang plugin yet — use sandbox mode which sets up a temporary project with full classpath:
+      <a href="https://diode-editor.github.io">Diode</a> is a terminal text editor with the VS Code keyboard layout that runs
+      VS Code extensions unchanged — over ssh, in containers, or anywhere a desktop IDE won't go.
+      It uses the same JBang extension as VS Code, verified to work in Diode.
     </p>
+
+    <h4>Install</h4>
+    <pre><code>diode --install-extension jbangdev.jbang-vscode</code></pre>
+    <p>Or press <kbd>Ctrl+Shift+X</kbd> in Diode and search for <strong>"JBang"</strong>. Then open a script with <code>diode hello.java</code>.</p>
+
+    <h4>Features</h4>
+    <ul>
+      <li><code>//DEPS</code> and <code>//JAVA</code> synchronized with the Java language server</li>
+      <li>Synchronize JBang and Run JBang via CodeLens</li>
+      <li>Completion of <code>//DEPS</code> coordinates from Maven Central</li>
+    </ul>
+
+    <h4>Limitations</h4>
+    <ul>
+      <li>No debugging, as Diode has no Java debugger</li>
+      <li>Requires <code>jbang</code> and a JDK on your <code>PATH</code></li>
+    </ul>
+
+    <h4>Documentation</h4>
+    <p>
+      <a href="https://diode-editor.github.io/marketplace/#/ext/jbangdev.jbang-vscode">Diode Marketplace</a> ·
+      <a href="/documentation/jbang-vscode/">JBang extension documentation</a>
+    </p>
+  </div>
+
+  <div role="tabpanel">
+    <h3>Other editors</h3>
+    <p>
+      No JBang plugin for your editor? Sandbox mode creates a temporary project with all dependencies resolved and your
+      script linked in, so any editor with Java support — typically via the Eclipse JDT Language Server — gets full
+      completion and navigation. Edits go straight to your original script.
+    </p>
+
+    <h4>Graphical editors</h4>
+    <p>Let JBang open the editor, e.g. <a href="https://zed.dev">Zed</a>:</p>
     <pre><code>jbang edit --sandbox --open=zed yourapp.java</code></pre>
-  </div>
 
-  <div role="tabpanel">
-    <h3>Vim/neovim</h3>
-    <p>
-      Vim and neovim support Java via Eclipse JDT Language Server.
-      No native JBang plugin yet — use sandbox mode:
-    </p>
-    <pre><code>jbang edit --sandbox --open=nvim yourapp.java</code></pre>
-  </div>
-
-  <div role="tabpanel">
-    <h3>Emacs</h3>
-    <p>
-      Emacs supports Java via Eclipse JDT Language Server.
-      No native JBang plugin yet — use sandbox mode:
-    </p>
-    <pre><code>jbang edit --sandbox --open=emacs yourapp.java</code></pre>
-  </div>
-
-  <div role="tabpanel">
-    <h3>repl.it</h3>
-    <p>
-      repl.it is a free, online code editor that makes it easy to code, compile, run, and share in 50+ programming languages.
-    </p>
-    <p>
-      JBang template for <a href="https://replit.com/@maxandersen/jbang-replit-demo#.replit">Repl.it</a>
-    </p>
-  </div>
-
-  <div role="tabpanel">
-    <h3>GitPod</h3>
-    <p>
-      GitPod is a free online IDE that allows you to create a dev environment for any GitHub repository.
-    </p>
-    <p>
-      JBang container template for <a href="https://gitpod.io/#https://github.com/jbangdev/jbang-devcontainer-template">GitPod</a>
-    </p>
-  </div>
-
-  <div role="tabpanel">
-    <h3>JDoodle</h3>
-    <p>
-      JDoodle is a free online compiler, IDE and execution environment for Java, C, C++, PHP, Perl, Python, Ruby and many more.
-    </p>
-    <p>
-      Try JBang on <a href="https://www.jdoodle.com/try-jbang/">JDoodle</a>
-    </p>
+    <h4>Terminal editors</h4>
+    <p>Have JBang print the project path and open it yourself, e.g. Vim/neovim or Emacs:</p>
+    <pre><code>nvim $(jbang edit --sandbox --no-open yourapp.java)
+emacs -nw $(jbang edit --sandbox --no-open yourapp.java)</code></pre>
   </div>
 
   <div role="tabpanel">
@@ -222,6 +212,17 @@ jbang install-kernel@jupyter-java --java 25 --enable-preview jbang</code></pre>
     <p>
       Visit the <a href="https://github.com/jbangdev/jbang-jupyter" target="_blank" rel="noopener">JBang Jupyter Kernel</a> repository for more details and examples.
     </p>
+  </div>
+
+  <div role="tabpanel">
+    <h3>Online</h3>
+    <p>No local install needed:</p>
+    <ul>
+      <li><a href="/try/">Try JBang</a> — Jupyter notebooks with the JBang kernel, powered by MyBinder</li>
+      <li><a href="https://www.jdoodle.com/try-jbang/">JDoodle</a> — online compiler and IDE with JBang support</li>
+      <li><a href="https://github.com/jbangdev/jbang-devcontainer-template">Dev container template</a> — Java and JBang preinstalled;
+        <a href="https://gitpod.io/#https://github.com/jbangdev/jbang-devcontainer-template">open in GitPod</a></li>
+    </ul>
   </div>
 </ot-tabs>
 |}
