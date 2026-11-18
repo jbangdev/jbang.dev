@@ -106,6 +106,9 @@ pre:hover {
     <button class="tab-button" data-tab="gradle">
       <i class="mdi mdi-hammer"></i> Gradle
     </button>
+    <button class="tab-button" data-tab="bld">
+      <i class="mdi mdi-wrench"></i> bld
+    </button>
     <button class="tab-button" data-tab="javascript">
       <i class="mdi mdi-language-javascript"></i> JavaScript
     </button>
@@ -223,6 +226,21 @@ uses: jbangdev/setup-jbang@main
     <p>Plugin to run jbang as part of a Gradle build available from <a href="https://github.com/jbangdev/jbang-gradle-plugin/">jbang-gradle-plugin</a></p>
     <pre>plugins {
   id 'dev.jbang' version '0.2.0'
+}</pre>
+  </div>
+
+  <div id="bld" class="tab-content">
+    <p>Extension to run JBang as part of a bld build available from <a href="https://github.com/rife2/bld-jbang">bld-jbang</a></p>
+    <p>Add the following to <code>lib/bld/bld-wrapper.properties</code>:</p>
+    <pre>bld.extension-jbang=com.uwyn.rife2:bld-jbang</pre>
+    <p>Then run a script from your build:</p>
+    <pre>@BuildCommand(summary = "Runs JBang script")
+public void jbang() throws Exception {
+  new JBangOperation()
+        .fromProject(this)
+        .script("path/to/script.java")
+        .args("foo", "bar")
+        .execute();
 }</pre>
   </div>
 
