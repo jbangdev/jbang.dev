@@ -1,0 +1,11 @@
+{! Shared <head> links: agent discovery + favicons. Included by head/custom.html and layouts/home.html. !}
+<!-- Agent discovery link relations (RFC 8288, RFC 9727) -->
+<link rel="api-catalog" href="/.well-known/api-catalog" type="application/linkset+json">
+<link rel="service-doc" href="/documentation/guide/latest/index.html" title="JBang Documentation">
+
+
+<link rel="icon" href="{page.rel('/favicon.ico')}" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="{page.rel('/favicon-32x32.png')}">
+<link rel="icon" type="image/png" sizes="16x16" href="{page.rel('/favicon-16x16.png')}">
+<link rel="apple-touch-icon" href="{page.rel('/apple-touch-icon.png')}">
+<link rel="manifest" href="{page.rel('/site.webmanifest')}">
