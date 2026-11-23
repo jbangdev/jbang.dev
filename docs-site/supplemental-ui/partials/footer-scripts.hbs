@@ -1,0 +1,23 @@
+<script id="site-script" src="{{{uiRootPath}}}/js/site.js" data-ui-root-path="{{{uiRootPath}}}"></script>
+<script async src="{{{uiRootPath}}}/js/vendor/highlight.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var nav = document.querySelector('.navbar');
+  if (nav && !document.getElementById('jb-docs-theme-toggle')) {
+    var btn = document.createElement('button');
+    btn.id = 'jb-docs-theme-toggle';
+    btn.type = 'button';
+    btn.className = 'jb-docs-theme-toggle';
+    btn.setAttribute('aria-label', 'Toggle dark mode');
+    btn.title = 'Toggle dark mode';
+    btn.innerHTML = '<span class="jb-icon-moon">&#9790;</span><span class="jb-icon-sun">&#9728;</span>';
+    btn.addEventListener('click', function() {
+      var current = document.documentElement.getAttribute('data-theme') || 'light';
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('jb-theme', next);
+    });
+    nav.appendChild(btn);
+  }
+});
+</script>
