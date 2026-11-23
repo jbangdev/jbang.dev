@@ -55,4 +55,5 @@ ui:
     url: https://github.com/jbangdev/jbang-antora-ui/releases/latest/download/ui-bundle.zip
     # Required when using cache or fetch will not update ui.
     snapshot: true
+  supplemental_files: ./supplemental-ui
 

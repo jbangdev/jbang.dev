@@ -4,11 +4,23 @@
 <link rel="api-catalog" href="/.well-known/api-catalog" type="application/linkset+json">
 <link rel="service-doc" href="/documentation/guide/latest/index.html" title="JBang Documentation">
 
+<!-- Modern Typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<!-- Theme initialization (runs early to prevent flash of wrong theme) -->
+<script>
+(function() {
+  var saved = localStorage.getItem('jb-theme');
+  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var theme = saved || (prefersDark ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
 
 <!-- hilight -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/dark.min.css" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" media="print" onload="this.media='all'" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" defer></script>
 <script defer>document.addEventListener('DOMContentLoaded', function() { hljs.highlightAll(); });</script>
 
@@ -19,15 +31,16 @@ pre, :not(pre) > code {
   position: relative;
 }
 pre:hover, :not(pre) > code:hover {
-  opacity: 0.9;
+  opacity: 0.92;
 }
 pre::after {
   content: "Click to copy";
   position: absolute;
   right: 10px;
-  top: 5px;
-  font-size: 12px;
-  color: #999;
+  top: 6px;
+  font-size: 11px;
+  font-family: var(--jb-font-sans, sans-serif);
+  color: #94a3b8;
   opacity: 0;
   transition: opacity 0.2s;
   pointer-events: none;
@@ -40,12 +53,13 @@ pre:hover::after {
   bottom: 2rem;
   right: 2rem;
   padding: 0.75rem 1.25rem;
-  border-radius: 6px;
-  background: #2e7d32;
+  border-radius: 8px;
+  background: #10b981;
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 500;
   z-index: 9999;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
   animation: copy-toast-in 0.2s ease;
   display: none;
 }
@@ -71,12 +85,22 @@ document.addEventListener('DOMContentLoaded', function() {
     var pre = e.target.closest('pre');
     var code = !pre ? e.target.closest('code') : null;
     var target = pre || code;
-    if (!target) return;
+    if (!target || target.closest('.no-copy')) return;
     var text = target.textContent;
     navigator.clipboard.writeText(text).then(function() {
       showCopyToast('Copied: ' + text.trim().substring(0, 80) + (text.trim().length > 80 ? '…' : ''));
     });
   });
+
+  var toggle = document.getElementById('theme-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', function() {
+      var current = document.documentElement.getAttribute('data-theme') || 'light';
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('jb-theme', next);
+    });
+  }
 });
 </script>
 

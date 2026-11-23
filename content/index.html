@@ -1,0 +1,212 @@
+---
+layout: splash
+classes: jb-home
+title: JBang
+excerpt: Lets Students, Educators and Professional Developers create, edit and run self-contained source-only Java programs with unprecedented ease.
+---
+
+<section class="jb-hero">
+  <div class="jb-container">
+    <div class="jb-hero__grid">
+      <div class="jb-hero__intro">
+        {#for post in site.collections.posts.take(1)}
+        <a href="{post.url}" class="jb-pill">
+          <span class="jb-pill__badge">New</span>
+          <span>{post.title}</span>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        {/for}
+
+        <h1 class="jb-hero__title">Java scripting, <span>zero ceremony.</span></h1>
+        <p class="jb-hero__subtitle">
+          Create, edit, and run self-contained source-only Java programs with automatic dependency resolution, auto-downloaded JDKs, and instant sharing.
+        </p>
+
+        <div class="jb-hero__actions">
+          <a href="/download" class="jb-btn jb-btn--primary">
+            <i class="fas fa-download" aria-hidden="true"></i> Download JBang
+          </a>
+          <a href="/try" class="jb-btn jb-btn--secondary">
+            <i class="fas fa-terminal" aria-hidden="true"></i> Try Online
+          </a>
+          <a href="/documentation" class="jb-btn jb-btn--secondary">
+            <i class="fas fa-book" aria-hidden="true"></i> Docs
+          </a>
+        </div>
+
+        <div class="jb-install-bar">
+          <div class="jb-install-tabs" role="tablist" aria-label="Install platform">
+            <button type="button" class="jb-install-tab is-active" data-cmd="curl -Ls https://sh.jbang.dev | bash -s - app setup" data-os="unix">macOS / Linux</button>
+            <button type="button" class="jb-install-tab" data-cmd='iex "&amp; { $(iwr https://ps.jbang.dev) } app setup"' data-os="windows">Windows (PowerShell)</button>
+            <button type="button" class="jb-install-tab" data-cmd="sdk install jbang" data-os="sdkman">SDKMAN!</button>
+            <button type="button" class="jb-install-tab" data-cmd="brew install jbangdev/tap/jbang" data-os="brew">Homebrew</button>
+          </div>
+          <div class="jb-install-cmd" title="Click to copy">
+            <code><span class="jb-install-cmd__prompt">$</span><span id="jb-install-text">curl -Ls https://sh.jbang.dev | bash -s - app setup</span></code>
+            <i class="far fa-copy jb-install-cmd__copy" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="jb-code-window">
+        <div class="jb-code-window__header">
+          <div class="jb-code-window__dots"><span></span><span></span><span></span></div>
+          <span class="jb-code-window__filename">hello.java</span>
+          <span class="jb-code-window__spacer"></span>
+        </div>
+        <pre><code class="language-java">///usr/bin/env jbang "$0" "$@" ; exit $?
+//DEPS com.github.lalyos:jfiglet:0.0.9
+
+import com.github.lalyos.jfiglet.FigletFont;
+
+class hello {
+  public static void main(String... args) throws Exception {
+    var msg = args.length &gt; 0 ? args[0] : "Hello JBang!";
+    System.out.println(FigletFont.convertOneLine(msg));
+  }
+}</code></pre>
+        <div class="jb-code-window__terminal no-copy">
+          <div class="jb-term-cmd">$ jbang hello.java</div>
+          <div class="jb-term-ok">[jbang] Resolving dependencies... Done!</div>
+          <div class="jb-code-window__ascii"> _   _      _ _          _ ____
+| | | | ___| | | ___    | | __ )  __ _ _ __   __ _
+| |_| |/ _ \ | |/ _ \ _ | |  _ \ / _` | '_ \ / _` |
+|  _  |  __/ | | (_) | || | |_) | (_| | | | | (_| |
+|_| |_|\___|_|_|\___/ \__/|____/ \__,_|_| |_|\__, |</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="jb-section jb-section--alt">
+  <div class="jb-container">
+    <div class="jb-section__header">
+      <div class="jb-section__eyebrow">Why JBang</div>
+      <h2 class="jb-section__title">Everything you need to script in Java</h2>
+      <p class="jb-section__desc">No <code>pom.xml</code>, no <code>build.gradle</code>, no manual JDK setup—just write a single file and run it anywhere.</p>
+    </div>
+
+    <div class="jb-bento">
+      <div class="jb-card">
+        <div class="jb-card__icon"><i class="fas fa-cubes" aria-hidden="true"></i></div>
+        <h3 class="jb-card__title">Embedded Dependencies</h3>
+        <p class="jb-card__desc">Declare Maven dependencies directly in your source file with <code>//DEPS</code> or <code>@Grab</code>. JBang resolves and caches them automatically.</p>
+        <pre class="jb-card__code"><code class="language-java">//DEPS info.picocli:picocli:4.7.6
+//DEPS org.slf4j:slf4j-simple:2.0.12</code></pre>
+      </div>
+
+      <div class="jb-card">
+        <div class="jb-card__icon"><i class="fas fa-terminal" aria-hidden="true"></i></div>
+        <h3 class="jb-card__title">Install &amp; Run Anywhere</h3>
+        <p class="jb-card__desc">Runs on Windows, Linux, macOS, Docker, GitHub Actions, Maven, and Gradle—even directly from a URL or GitHub Gist.</p>
+        <pre class="jb-card__code"><code class="language-bash">jbang https://jbang.dev/examples/hello.java</code></pre>
+        <a href="/download" class="jb-card__link">Get JBang <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="jb-card">
+        <div class="jb-card__icon"><i class="fas fa-bolt" aria-hidden="true"></i></div>
+        <h3 class="jb-card__title">No Java? No Problem!</h3>
+        <p class="jb-card__desc">If no JDK is installed on the machine, JBang automatically downloads and configures the right Java version for you.</p>
+        <pre class="jb-card__code"><code class="language-java">//JAVA 21+
+//JAVAC_OPTIONS --enable-preview</code></pre>
+      </div>
+
+      <div class="jb-card">
+        <div class="jb-card__icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
+        <h3 class="jb-card__title">Java 8 and Higher</h3>
+        <p class="jb-card__desc">Use any Java version from 8 to the latest release—switch per script with a single <code>//JAVA</code> directive.</p>
+        <pre class="jb-card__code"><code class="language-bash">jbang --java 21 myscript.java</code></pre>
+      </div>
+
+      <div class="jb-card">
+        <div class="jb-card__icon"><i class="fas fa-store" aria-hidden="true"></i></div>
+        <h3 class="jb-card__title">JBang AppStore</h3>
+        <p class="jb-card__desc">Discover community CLI tools or publish your own directly from any Git repository using <code>jbang-catalog.json</code>.</p>
+        <pre class="jb-card__code"><code class="language-bash">jbang app install mcp@jbangdev</code></pre>
+        <a href="/appstore" class="jb-card__link">Browse AppStore <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="jb-card">
+        <div class="jb-card__icon"><i class="fas fa-code" aria-hidden="true"></i></div>
+        <h3 class="jb-card__title">Works in Your IDE</h3>
+        <p class="jb-card__desc">Full content assist, refactoring, and debugging in IntelliJ IDEA, VS Code, Eclipse, Apache NetBeans, Vim, and Emacs.</p>
+        <pre class="jb-card__code"><code class="language-bash">jbang edit --open=code hello.java</code></pre>
+        <a href="/ide" class="jb-card__link">IDE Integrations <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="jb-section">
+  <div class="jb-container">
+    <div class="jb-section__header">
+      <div class="jb-section__eyebrow">Community</div>
+      <h2 class="jb-section__title">Loved by Java developers</h2>
+      <p class="jb-section__desc">See how developers, educators, and toolmakers use JBang every day.</p>
+    </div>
+
+    <div class="jb-testimonials">
+      {#for t in cdi:testimonials.list.take(3)}
+      <div class="jb-quote-card">
+        <p class="jb-quote-card__text">“{t.text}”</p>
+        <div class="jb-quote-card__author">
+          <span><strong>{t.author}</strong></span>
+          <a href="{t.url}" target="_blank" rel="noopener">@{t.handle}</a>
+        </div>
+      </div>
+      {/for}
+    </div>
+
+    <div class="jb-section__actions">
+      <a href="/testimonials" class="jb-btn jb-btn--secondary">View All Testimonials <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="jb-section jb-section--alt">
+  <div class="jb-container">
+    <div class="jb-section__header">
+      <div class="jb-section__eyebrow">Watch</div>
+      <h2 class="jb-section__title">JBang — Unleash the power of Java</h2>
+      <p class="jb-section__desc">Catch the talk to see JBang in action, from quick one-liners to shareable CLI applications.</p>
+    </div>
+
+    <div class="jb-video-frame">
+      <div class="fluid-width-video-wrapper jb-video-embed">
+        <iframe
+          width="1280"
+          height="720"
+          src="https://youtube.com/embed/cpKwBbz1sf0"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var tabs = document.querySelectorAll('.jb-install-tab');
+  var cmdEl = document.getElementById('jb-install-text');
+  if (!tabs.length || !cmdEl) return;
+
+  function selectTab(tab) {
+    tabs.forEach(function(t) { t.classList.remove('is-active'); });
+    tab.classList.add('is-active');
+    cmdEl.textContent = tab.getAttribute('data-cmd');
+  }
+
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function() { selectTab(tab); });
+  });
+
+  if (navigator.userAgent.indexOf('Win') !== -1) {
+    var winTab = document.querySelector('.jb-install-tab[data-os="windows"]');
+    if (winTab) selectTab(winTab);
+  }
+});
+</script>
