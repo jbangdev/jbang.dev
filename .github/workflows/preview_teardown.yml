@@ -7,17 +7,26 @@ on:
 jobs:
   preview-teardown:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Teardown surge preview
         id: deploy
         run: npx surge teardown https://jbangdev-preview-pr-${{ github.event.number }}.surge.sh --token ${{ secrets.SURGE_TOKEN }} || echo "NOT_TORNDOWN=true" >> "$GITHUB_ENV"
       - name: Update PR status comment
-        uses: quarkusio/action-helpers@b53791b65e22e8d7e5d7f84b8f546be8fb3e8f6d # main
         if: env.NOT_TORNDOWN != 'true'
-        with:
-          action: maintain-one-comment
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          pr-number: ${{ github.event.number }}
-          body: |
+        run: |
+          marker='<!-- Preview status comment marker -->'
+          body="${BODY}"$'\n\n'"${marker}"
+          id=$(gh api --paginate "repos/${GITHUB_REPOSITORY}/issues/${PR_ID}/comments" \
+            --jq ".[] | select(.body | contains(\"${marker}\")) | .id" | tail -n1)
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/${GITHUB_REPOSITORY}/issues/comments/${id}" -f body="$body" >/dev/null
+          else
+            gh api -X POST "repos/${GITHUB_REPOSITORY}/issues/${PR_ID}/comments" -f body="$body" >/dev/null
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_ID: ${{ github.event.number }}
+          BODY: |
             🙈 The PR is closed and the preview is expired.
-          body-marker: <!-- Preview status comment marker -->
