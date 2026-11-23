@@ -13,7 +13,11 @@
 </script>
 
 <!-- bundle -->
-{#bundle /}
+{! same as {#bundle /} but with page-relative URLs so the site works under any base path !}
+{#let js=inject:bundle.script('app') css=inject:bundle.style('app')}
+{#if js}<script type="module" src="{page.rel(js)}"></script>{/if}
+{#if css}<link rel="stylesheet" href="{page.rel(css)}" />{/if}
+{/let}
 <!-- bundle -->
 
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"

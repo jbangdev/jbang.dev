@@ -4,11 +4,11 @@
   <article class="archive__item" >
     {#if type == "grid" and teaser}
       <div class="archive__item-teaser">
-        <img src="{teaser}" alt="">
+        <img src="{page.rel(teaser)}" alt="">
       </div>
     {/if}
     <h2 class="archive__item-title no_toc">
-        <a href="{post.url}" rel="permalink">{post.data.title}</a>
+        <a href="{page.rel(post.url)}" rel="permalink">{post.data.title}</a>
     </h2>
     {#include partials/page__meta.html type=type /}
     {#if post.data.containsKey('excerpt')}

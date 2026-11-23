@@ -4,7 +4,7 @@
     <div class="archive__item">
       {#if f.containsKey('image_path') }
       <div class="archive__item-teaser">
-        <img src="{f.image_path}" alt="{f.alt ?: "" }" loading="lazy">
+        <img src="{page.rel(f.image_path)}" alt="{f.alt ?: "" }" loading="lazy">
         {#if f.containsKey('image_caption')}
           <span class="archive__item-caption">{f.image_caption.raw}</span> {! | markdownify | remove: "<p>" | remove: "</p>" } !}
         {/if}
@@ -18,7 +18,7 @@
         <div class="archive__item-excerpt">{f.excerpt.raw} {! | markdownify !}</div>
         {/if}
         {#if f.containsKey('url')}
-        <a href="{f.url}" class="btn btn--cta {f.btn_class}">{f.btn_label ?: "Learn More"}</a>
+        <a href="{page.rel(f.url)}" class="btn btn--cta {f.btn_class}">{f.btn_label ?: "Learn More"}</a>
         {/if}
       </div>
     </div>

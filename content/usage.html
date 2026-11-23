@@ -21,8 +21,8 @@ layout: splash
         version checks
     </a> done by JBang users the last 90 days.</p>
 
-<p>You can find some other fun stats in the <a href="/usage/leaderboard/">Leaderboards</a>
-    and <a href="/usage/downloads/">GitHub download stats</a>.</p>
+<p>You can find some other fun stats in the <a href="{page.rel('/usage/leaderboard/')}">Leaderboards</a>
+    and <a href="{page.rel('/usage/downloads/')}">GitHub download stats</a>.</p>
 
 <div class="counters">
     <div class="counter">
@@ -135,7 +135,7 @@ layout: splash
         .hexLabel(() => `<b>BLAH!</b>`)
         .enablePointerInteraction(true); // performance improvement
 
-    fetch('/assets/data/jbang-versionchecks.csv').then(res => res.text())
+    fetch('|}{page.rel('/assets/data/jbang-versionchecks.csv')}{|').then(res => res.text())
         .then(csv => d3.csvParse(csv, ({lat, lng, count}) => ({lat: +lat, lng: +lng, count: +count})))
         .then(data => world.hexBinPointsData(data));
 
