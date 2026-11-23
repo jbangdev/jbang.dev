@@ -206,6 +206,55 @@ a:hover {
   align-items: center;
   gap: 0.5rem;
   margin-left: 0.75rem;
+  min-width: 0;
+  flex: 0 1 auto;
+}
+
+/* Narrow screens: keep the logo, shrink the search box instead.
+   The search box is the input, or DocSearch's wrapper span once it loads. */
+.greedy-nav .site-logo {
+  flex: none;
+}
+
+.greedy-nav .site-logo img {
+  height: 2rem;
+  max-height: none;
+  width: auto;
+}
+
+.masthead__actions > :first-child {
+  flex: 0 1 auto;
+  min-width: 4.5em;
+}
+
+.masthead__actions #search-input {
+  max-width: 100%;
+}
+
+/* Some pages style plain <button>s; keep the hamburger the same size everywhere */
+.greedy-nav__toggle {
+  padding: 1px 6px;
+}
+
+@media (max-width: 479.98px) {
+  .masthead__actions {
+    margin-left: 0.5rem;
+  }
+
+  .masthead__actions > :first-child,
+  .layout--splash .masthead__actions input#search-input {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 379.98px) {
+  .greedy-nav .site-logo img {
+    height: 1.5rem;
+  }
+
+  .greedy-nav a.site-title {
+    margin-right: 0.5rem;
+  }
 }
 
 #search-input {
