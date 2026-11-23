@@ -1,3 +1,4 @@
+@use "sass:color";
 /* ==========================================================================
    NAVIGATION
    ========================================================================== */
@@ -75,7 +76,7 @@
       text-align: center;
       text-decoration: none;
       color: $muted-text-color;
-      border: 1px solid mix(#000, $border-color, 25%);
+      border: 1px solid color.mix(#000, $border-color, 25%);
       border-radius: 0;
 
       &:hover {
@@ -124,7 +125,7 @@
     text-align: center;
     text-decoration: none;
     color: $muted-text-color;
-    border: 1px solid mix(#000, $border-color, 25%);
+    border: 1px solid color.mix(#000, $border-color, 25%);
     border-radius: $border-radius;
 
     &:hover {
@@ -379,7 +380,7 @@
       &:hover {
         color: #fff;
         border-color: $gray;
-        background-color: mix(white, #000, 20%);
+        background-color: color.mix(white, #000, 20%);
 
         &:before,
         &:after {
@@ -391,7 +392,7 @@
     /* selected*/
     input:checked + label {
       color: white;
-      background-color: mix(white, #000, 20%);
+      background-color: color.mix(white, #000, 20%);
 
       &:before,
       &:after {

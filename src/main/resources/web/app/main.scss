@@ -1,3 +1,4 @@
+@use "sass:color";
 @charset "utf-8";
 
 $serif      : Georgia, Times, serif;
@@ -90,7 +91,7 @@ div[class*="thebelab"] button {
     color: white;
     
     &:hover {
-        background-color: mix(#000, $primary-color, 20%);
+        background-color: color.mix(#000, $primary-color, 20%);
     }
 }
 
@@ -107,7 +108,7 @@ div[class*="thebelab"] button {
     
     pre {
         position: relative;
-        background-color: mix(#fff, $background-color, 50%);
+        background-color: color.mix(#fff, $background-color, 50%);
         border: 1px solid $border-color;
         border-radius: $border-radius;
         padding: 1em;
