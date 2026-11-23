@@ -47,6 +47,9 @@ runs:
         GITHUB_TOKEN: ${{ inputs.github-token }}
       run: |
         url=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.html_url' 2>/dev/null || echo '')
+        # Pages reports http:// when "Enforce HTTPS" is off (TLS is terminated by Cloudflare
+        # for www.jbang.dev), but the site is only served over https; http just 301s.
+        url="${url/#http:\/\//https://}"
         if [[ $url == http* ]]; then
           echo "GitHub Pages is enabled for this repository: $url"
           echo "SITE_FULL_URL=$url" >> $GITHUB_ENV
