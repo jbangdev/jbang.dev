@@ -29,7 +29,7 @@
     <button id="spin-button" class="btn btn--primary">Spin!</button>
     <button id="copy-button" class="btn btn--success">Copy</button>
     {#if learn_more_url.or("empty") != "empty"}
-    <a href="{learn_more_url}" class="btn btn--info">Learn More</a>
+    <a href="{page.rel(learn_more_url)}" class="btn btn--info">Learn More</a>
     {/if}
     <span id="copy-feedback" class="copy-feedback">Copied!</span>
   </div>

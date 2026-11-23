@@ -17,7 +17,7 @@ layout: default
         <header>
           {#if page.data.containsKey('title')}
           <h1 id="page-title" class="page__title">
-            <a href="{page.url}">{page.title.markdown}</a>
+            <a href="{page.rel(page.url)}">{page.title.markdown}</a>
           </h1>
           {/if}
           {#include partials/page__meta.html /}

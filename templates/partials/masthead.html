@@ -2,15 +2,15 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-logo" href="{site.url}"><img src="{cdi:metadata.logo}" alt="{cdi:metadata.masthead_title}"></a>
-        <a class="site-title" href="{site.url}">
+        <a class="site-logo" href="{page.rel('/')}"><img src="{page.rel(cdi:metadata.logo)}" alt="{cdi:metadata.masthead_title}"></a>
+        <a class="site-title" href="{page.rel('/')}">
           {cdi:metadata.masthead_title}
           <span class="site-subtitle">{cdi:metadata.subtitle}</span>
         </a>
         <ul class="visible-links">
           {#for link in cdi:navigation.main}
             <li class="masthead__menu-item">
-              <a href="{link.url}">{link.title.raw}</a>
+              <a href="{page.rel(link.url)}">{link.title.raw}</a>
             </li>
           {/for}
         </ul>

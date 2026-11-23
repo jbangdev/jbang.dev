@@ -183,14 +183,14 @@ JBang works seamlessly with:
 
 ### 📚 Next Steps
 
-1. **Explore the AppStore**: Visit [jbang.dev/appstore](/appstore/) to discover applications
+1. **Explore the AppStore**: Visit [jbang.dev/appstore]({page.rel('/appstore/')}) to discover applications
 2. **Join the Community**: Follow us on [GitHub](https://github.com/jbangdev) and [Twitter](https://twitter.com/jbangdev)
-3. **Read the Documentation**: Check out our [comprehensive docs](/documentation)
+3. **Read the Documentation**: Check out our [comprehensive docs]({page.rel('/documentation')})
 4. **Share Your Code**: Create catalogs and share your JBang applications
 
 ### 🆘 Need Help?
 
-- **Documentation**: [jbang.dev/documentation](/documentation)
+- **Documentation**: [jbang.dev/documentation]({page.rel('/documentation')})
 - **GitHub Issues**: [github.com/jbangdev/jbang/issues](https://github.com/jbangdev/jbang/issues)
 - **Community**: [GitHub Discussions](https://github.com/jbangdev/jbang/discussions)
 

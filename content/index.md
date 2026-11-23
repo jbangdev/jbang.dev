@@ -51,7 +51,7 @@ feature_row2:
     <div style="margin: 2.5rem auto; max-width: 600px; padding: 1.5rem; border-left: 4px solid #EB586F;">
       <p style="margin: 0 0 0.5rem 0; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; opacity: 0.7; font-weight: 600;">Latest Blog Post</p>
       <h2 class="archive__item-title" style="margin: 0 0 0.5rem 0;">
-        <a href="{post.url}" rel="permalink">{post.title}</a>
+        <a href="{page.rel(post.url)}" rel="permalink">{post.title}</a>
       </h2>
       <p style="margin: 0; font-size: 0.9rem; opacity: 0.8;">{post.date.format('MMMM d, yyyy')}</p>
     </div>
@@ -70,7 +70,7 @@ feature_row2:
   <div style="font-size: 0.9rem; color: #555;"><strong>{t.author}</strong> <a href="{t.url}" style="color: #eb586f; text-decoration: none;">@{t.handle}</a> <span style="color: #999;">· {t.date}</span></div>
 </div>
 {/let}
-<center><a href="/testimonials" class="btn btn--cta btn--primary">All Testimonials</a></center>
+<center><a href="{page.rel('/testimonials')}" class="btn btn--cta btn--primary">All Testimonials</a></center>
 </div>
 
 {#include partials/feature_row feature_row=page.data['feature_row2'] /}

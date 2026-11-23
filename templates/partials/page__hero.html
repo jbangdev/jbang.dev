@@ -1,7 +1,7 @@
 {#let header=page.header()}
 
 <div class="page__hero{#if header.has_overlay}--overlay{/if}"
-  style="{#if header.overlay_color}background-color: {header.overlay_color};{/if} {#if header.overlay_image}background-image: {#if header.overlay_filter}{header.overlay_filter}, {/if}url('{header.overlay_image}');{/if}"
+  style="{#if header.overlay_color}background-color: {header.overlay_color};{/if} {#if header.overlay_image}background-image: {#if header.overlay_filter}{header.overlay_filter}, {/if}url('{page.rel(header.overlay_image)}');{/if}"
 >
   {#if header.has_overlay}
   <div class="wrapper">
@@ -15,7 +15,7 @@
     {#if header.actions.size > 0 }
     <p>
         {#for action in header.actions}
-        <a href="{action.url}" class="btn btn--light-outline btn--large">
+        <a href="{page.rel(action.url)}" class="btn btn--light-outline btn--large">
             {action.label.raw ?: "Learn More"}
         </a>
         {/for}
