@@ -185,7 +185,7 @@
                     <packages>
                         <package>@antora/site-generator</package>
                         <package>@antora/collector-extension@1.0</package>
-                        <package>antora-shiki-extension@1.0.0</package>
+                        <!-- jbangdev fork (Shiki 4, light/dark themes); installed from a GitHub release tarball, allowed by .npmrc --><package>https://github.com/jbangdev/antora-shiki-extension/releases/download/v1.1.0/antora-shiki-extension-1.1.0.tgz</package>
                     </packages>
                     <playbookFile>docs-site/playbook.yml</playbookFile>
                     <options>

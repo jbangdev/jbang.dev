@@ -35,7 +35,8 @@ antora:
   extensions:
     - require: '@antora/collector-extension'
     - require: 'antora-shiki-extension'
-      theme: "light-plus"
+      light_theme: "light-plus"
+      dark_theme: "dark-plus"
       languages:
         - java
         - xml
