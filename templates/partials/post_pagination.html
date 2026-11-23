@@ -5,12 +5,12 @@ keep the navigation the same, we'll have to use next/previous with the opposite 
 !}
 <nav class="pagination">
   {#if page.next}
-    <a href="{page.next.url}" class="pagination--pager" title="{page.next.title.markdown.stripHtml}">Previous</a>
+    <a href="{page.rel(page.next.url)}" class="pagination--pager" title="{page.next.title.markdown.stripHtml}">Previous</a>
   {#else}
     <a href="#" class="pagination--pager disabled">Previous</a>
   {/if}
   {#if page.previous}
-    <a href="{page.previous.url}" class="pagination--pager" title="{page.previous.title.markdown.stripHtml}">Next</a>
+    <a href="{page.rel(page.previous.url)}" class="pagination--pager" title="{page.previous.title.markdown.stripHtml}">Next</a>
   {#else}
     <a href="#" class="pagination--pager disabled">Next</a>
   {/if}

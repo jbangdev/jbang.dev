@@ -6,8 +6,8 @@ layout: splash
 excerpt: "JBang plugins for VS Code, VSCodium, IntelliJ IDEA, Eclipse and Diode, plus sandbox mode for any other editor."
 ---
 
-<link rel="stylesheet" href="/assets/vendor/oat/oat.min.css"/>
-<script src="/assets/vendor/oat/oat.min.js" defer></script>
+<link rel="stylesheet" href="{page.rel('/assets/vendor/oat/oat.min.css')}"/>
+<script src="{page.rel('/assets/vendor/oat/oat.min.js')}" defer></script>
 <style>/* Force light mode for Oat CSS */ :root { color-scheme: light; }</style>
 
 <h2>JBang IDE Support</h2>
@@ -16,10 +16,10 @@ excerpt: "JBang plugins for VS Code, VSCodium, IntelliJ IDEA, Eclipse and Diode,
 {|
 <ot-tabs>
   <div role="tablist">
-    <button role="tab"><img src="/assets/images/ide/vscode.png" width="20" height="20" alt=""/> VS Code / VSCodium</button>
+    <button role="tab"><img src="|}{page.rel('/assets/images/ide/vscode.png')}{|" width="20" height="20" alt=""/> VS Code / VSCodium</button>
     <button role="tab"><img src="https://cdn.simpleicons.org/intellijidea" width="20" height="20" alt=""/> IntelliJ IDEA</button>
     <button role="tab"><img src="https://cdn.simpleicons.org/eclipseide" width="20" height="20" alt=""/> Eclipse</button>
-    <button role="tab"><img src="/assets/images/ide/diode.svg" width="20" height="20" alt=""/> Diode</button>
+    <button role="tab"><img src="|}{page.rel('/assets/images/ide/diode.svg')}{|" width="20" height="20" alt=""/> Diode</button>
     <button role="tab"><img src="https://cdn.simpleicons.org/neovim" width="20" height="20" alt=""/> Other editors</button>
     <button role="tab"><img src="https://cdn.simpleicons.org/jupyter" width="20" height="20" alt=""/> Jupyter</button>
     <button role="tab"><img src="https://cdn.simpleicons.org/googlechrome" width="20" height="20" alt=""/> Online</button>
@@ -51,7 +51,7 @@ excerpt: "JBang plugins for VS Code, VSCodium, IntelliJ IDEA, Eclipse and Diode,
 
     <h4>Documentation</h4>
     <p>
-      <a href="/documentation/jbang-vscode/">Full documentation</a> ·
+      <a href="|}{page.rel('/documentation/jbang-vscode/')}{|">Full documentation</a> ·
       <a href="https://github.com/jbangdev/jbang-vscode">Source on GitHub</a>
     </p>
   </div>
@@ -97,7 +97,7 @@ excerpt: "JBang plugins for VS Code, VSCodium, IntelliJ IDEA, Eclipse and Diode,
 
     <h4>Documentation</h4>
     <p>
-      <a href="/documentation/jbang-idea/">Full documentation</a> ·
+      <a href="|}{page.rel('/documentation/jbang-idea/')}{|">Full documentation</a> ·
       <a href="https://plugins.jetbrains.com/plugin/18257-jbang">JetBrains Marketplace</a> ·
       <a href="https://github.com/jbangdev/jbang-idea">Source on GitHub</a>
     </p>
@@ -160,7 +160,7 @@ excerpt: "JBang plugins for VS Code, VSCodium, IntelliJ IDEA, Eclipse and Diode,
     <h4>Documentation</h4>
     <p>
       <a href="https://diode-editor.github.io/marketplace/#/ext/jbangdev.jbang-vscode">Diode Marketplace</a> ·
-      <a href="/documentation/jbang-vscode/">JBang extension documentation</a>
+      <a href="|}{page.rel('/documentation/jbang-vscode/')}{|">JBang extension documentation</a>
     </p>
   </div>
 
@@ -205,7 +205,7 @@ jbang install-kernel@jupyter-java --java 25 --enable-preview jbang</code></pre>
 
     <h4>Try Online</h4>
     <p>
-      Want to try it without installing? Use our <a href="/try/">online Jupyter environment</a> powered by MyBinder.
+      Want to try it without installing? Use our <a href="|}{page.rel('/try/')}{|">online Jupyter environment</a> powered by MyBinder.
     </p>
 
     <h4>Learn More</h4>
@@ -218,7 +218,7 @@ jbang install-kernel@jupyter-java --java 25 --enable-preview jbang</code></pre>
     <h3>Online</h3>
     <p>No local install needed:</p>
     <ul>
-      <li><a href="/try/">Try JBang</a> — Jupyter notebooks with the JBang kernel, powered by MyBinder</li>
+      <li><a href="|}{page.rel('/try/')}{|">Try JBang</a> — Jupyter notebooks with the JBang kernel, powered by MyBinder</li>
       <li><a href="https://www.jdoodle.com/try-jbang/">JDoodle</a> — online compiler and IDE with JBang support</li>
       <li><a href="https://github.com/jbangdev/jbang-devcontainer-template">Dev container template</a> — Java and JBang preinstalled;
         <a href="https://gitpod.io/#https://github.com/jbangdev/jbang-devcontainer-template">open in GitPod</a></li>
@@ -228,4 +228,4 @@ jbang install-kernel@jupyter-java --java 25 --enable-preview jbang</code></pre>
 |}
 
 </div>
-<script src="{{base.url}}/assets/js/os-check.js"></script>
+<script src="{page.rel('/assets/js/os-check.js')}"></script>

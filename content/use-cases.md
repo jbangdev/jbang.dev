@@ -354,10 +354,10 @@ public class ReadinessCheck implements HealthCheck {
 
 ### 🎯 Choose Your Path
 
-- **New to Java?** Start with the [Getting Started](/getting-started/) guide
-- **Want to try it?** Visit our [Try page](/try/) for interactive examples
-- **Ready to install?** Check our [Download](/download/) page
-- **Looking for inspiration?** Browse the [AppStore](/appstore/)
+- **New to Java?** Start with the [Getting Started]({page.rel('/getting-started/')}) guide
+- **Want to try it?** Visit our [Try page]({page.rel('/try/')}) for interactive examples
+- **Ready to install?** Check our [Download]({page.rel('/download/')}) page
+- **Looking for inspiration?** Browse the [AppStore]({page.rel('/appstore/')})
 
 JBang adapts to your needs - whether you're learning, prototyping, or building production applications.
 
