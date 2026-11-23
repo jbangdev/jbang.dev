@@ -63,11 +63,11 @@ feature_row2:
 
 <div class="feature__wrapper twitter-wrapper">
 {#let t=cdi:testimonials.list.random}
-<div style="max-width: 550px; margin: 1.5rem auto; padding: 1.5rem; border: 1px solid #e1e4e8; border-radius: 12px; background: #fff; text-align: left;">
-  <blockquote style="margin: 0 0 1rem 0; padding: 0; border: none; font-size: 1.05rem; line-height: 1.6; color: #1a1a1a;">
+<div style="max-width: 550px; margin: 1.5rem auto; padding: 1.5rem; border: 1px solid var(--jb-border, #e1e4e8); border-radius: 12px; background: var(--jb-surface-elevated, #fff); text-align: left;">
+  <blockquote style="margin: 0 0 1rem 0; padding: 0; border: none; font-size: 1.05rem; line-height: 1.6; color: var(--jb-text, #1a1a1a);">
     <div style="margin: 0; white-space: pre-line;">{t.text}</div>
   </blockquote>
-  <div style="font-size: 0.9rem; color: #555;"><strong>{t.author}</strong> <a href="{t.url}" style="color: #eb586f; text-decoration: none;">@{t.handle}</a> <span style="color: #999;">· {t.date}</span></div>
+  <div style="font-size: 0.9rem; color: var(--jb-text-muted, #555);"><strong>{t.author}</strong> <a href="{t.url}" style="color: var(--jb-accent, #eb586f); text-decoration: none;">@{t.handle}</a> <span style="color: var(--jb-text-subtle, #999);">· {t.date}</span></div>
 </div>
 {/let}
 <center><a href="{page.rel('/testimonials')}" class="btn btn--cta btn--primary">All Testimonials</a></center>

@@ -25,17 +25,19 @@ layout: splash
 
 .tab-button {
   padding: 10px 14px;
-  background: #f5f5f5;
-  border: none;
-  border-radius: 5px;
+  background: var(--jb-surface, #f5f5f5);
+  color: var(--jb-text, #1a1a1a);
+  border: 1px solid var(--jb-border, #e2e8f0);
+  border-radius: 8px;
   cursor: pointer;
   font-size: 0.85rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  min-width: 80px;
+  min-width: 84px;
   text-align: center;
+  transition: all 0.15s ease;
 }
 
 .tab-button i {
@@ -44,33 +46,40 @@ layout: splash
 }
 
 .tab-button:hover {
-  background: #e5e5e5;
+  background: var(--jb-surface-elevated, #e5e5e5);
+  border-color: var(--jb-border-strong, #cbd5e1);
 }
 
 .tab-button.active {
-  background: #0066cc;
-  color: white;
+  background: var(--jb-accent, #eb586f);
+  border-color: var(--jb-accent, #eb586f);
+  color: #ffffff;
 }
 
 .tab-content {
   display: none;
   padding: 20px;
-  border-radius: 5px;
-  background: #f9f9f9;
+  border-radius: 10px;
+  background: var(--jb-surface, #f9f9f9);
+  border: 1px solid var(--jb-border, #e2e8f0);
+  color: var(--jb-text, #1a1a1a);
 }
 
 .tab-content.active {
   display: block;
 }
 
-pre {
-  background: #fff;
+.tab-content pre {
+  background: var(--jb-surface-code, #0f172a);
+  color: #e2e8f0;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-pre:hover {
-  background: #f5f5f5;
+.tab-content pre:hover {
+  background: var(--jb-surface-code, #0f172a);
+  opacity: 0.95;
 }
 </style>
 

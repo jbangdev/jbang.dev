@@ -30,11 +30,11 @@ What people have said about JBang!
   margin: 2rem auto;
 }
 .testimonial-card {
-  border: 1px solid #e1e4e8;
+  border: 1px solid var(--jb-border, #e1e4e8);
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  background: #fff;
+  background: var(--jb-surface-elevated, #fff);
 }
 .testimonial-text {
   margin: 0 0 1rem 0;
@@ -42,7 +42,7 @@ What people have said about JBang!
   border: none;
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #1a1a1a;
+  color: var(--jb-text, #1a1a1a);
 }
 .testimonial-text p {
   margin: 0;
@@ -54,17 +54,17 @@ What people have said about JBang!
   align-items: baseline;
   gap: 0.5rem;
   font-size: 0.9rem;
-  color: #555;
+  color: var(--jb-text-muted, #555);
 }
 .testimonial-handle a {
-  color: #eb586f;
+  color: var(--jb-accent, #eb586f);
   text-decoration: none;
 }
 .testimonial-handle a:hover {
   text-decoration: underline;
 }
 .testimonial-date {
-  color: #999;
+  color: var(--jb-text-subtle, #999);
 }
 .testimonial-date::before {
   content: "·";

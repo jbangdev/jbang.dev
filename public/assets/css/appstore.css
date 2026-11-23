@@ -1,10 +1,5 @@
 /* AppStore page styles */
 
-/* Force light mode for Oat CSS — prevents dark background when OS is in dark mode */
-:root {
-    color-scheme: light;
-}
-
 .appstore-toolbar {
     display: flex;
     align-items: center;
@@ -15,6 +10,11 @@
 .appstore-toolbar input[type="text"] {
     flex: 1;
     max-width: 400px;
+    background: var(--jb-surface, #fff);
+    color: var(--jb-text, #1a1a1a);
+    border: 1px solid var(--jb-border, #ddd);
+    border-radius: 8px;
+    padding: 0.5rem 0.85rem;
 }
 
 .appstore-loading {
@@ -25,8 +25,9 @@
 /* Group (repo) sections */
 .appstore-group {
     margin-bottom: 0.75rem;
-    border: 1px solid var(--ot-border, #ddd);
-    border-radius: 6px;
+    border: 1px solid var(--jb-border, #ddd);
+    border-radius: 10px;
+    background: var(--jb-surface-elevated, #fff);
 }
 
 .appstore-group summary {

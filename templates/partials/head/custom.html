@@ -4,6 +4,10 @@
 <link rel="api-catalog" href="/.well-known/api-catalog" type="application/linkset+json">
 <link rel="service-doc" href="/documentation/guide/latest/index.html" title="JBang Documentation">
 
+<!-- Modern Typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="icon" href="{page.rel('/favicon.ico')}" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="{page.rel('/favicon-32x32.png')}">
@@ -11,8 +15,22 @@
 <link rel="apple-touch-icon" href="{page.rel('/apple-touch-icon.png')}">
 <link rel="manifest" href="{page.rel('/site.webmanifest')}">
 
+<!-- Theme initialization (runs early to prevent flash of wrong theme).
+     Mode is 'auto' (follow OS, nothing stored), 'light' or 'dark' (stored in localStorage 'jb-theme'). -->
+<script>
+(function() {
+  var mode = 'auto';
+  try { mode = localStorage.getItem('jb-theme') || 'auto'; } catch (e) {}
+  if (mode !== 'light' && mode !== 'dark') mode = 'auto';
+  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var root = document.documentElement;
+  root.setAttribute('data-theme-mode', mode);
+  root.setAttribute('data-theme', mode === 'auto' ? (prefersDark ? 'dark' : 'light') : mode);
+})();
+</script>
+
 <!-- hilight -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/dark.min.css" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" media="print" onload="this.media='all'" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" defer></script>
 <script defer>document.addEventListener('DOMContentLoaded', function() { hljs.highlightAll(); });</script>
 
@@ -23,15 +41,16 @@ pre, :not(pre) > code {
   position: relative;
 }
 pre:hover, :not(pre) > code:hover {
-  opacity: 0.9;
+  opacity: 0.92;
 }
 pre::after {
   content: "Click to copy";
   position: absolute;
   right: 10px;
-  top: 5px;
-  font-size: 12px;
-  color: #999;
+  top: 6px;
+  font-size: 11px;
+  font-family: var(--jb-font-sans, sans-serif);
+  color: #94a3b8;
   opacity: 0;
   transition: opacity 0.2s;
   pointer-events: none;
@@ -44,12 +63,13 @@ pre:hover::after {
   bottom: 2rem;
   right: 2rem;
   padding: 0.75rem 1.25rem;
-  border-radius: 6px;
-  background: #2e7d32;
+  border-radius: 8px;
+  background: #10b981;
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 500;
   z-index: 9999;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
   animation: copy-toast-in 0.2s ease;
   display: none;
 }
@@ -75,12 +95,44 @@ document.addEventListener('DOMContentLoaded', function() {
     var pre = e.target.closest('pre');
     var code = !pre ? e.target.closest('code') : null;
     var target = pre || code;
-    if (!target) return;
+    if (!target || target.closest('.no-copy')) return;
     var text = target.textContent;
     navigator.clipboard.writeText(text).then(function() {
       showCopyToast('Copied: ' + text.trim().substring(0, 80) + (text.trim().length > 80 ? '…' : ''));
     });
   });
+
+  // Theme toggle: Auto -> Light -> Dark -> Auto
+  var toggle = document.getElementById('theme-toggle');
+  var root = document.documentElement;
+  var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  var labels = { auto: 'Auto (follows system)', light: 'Light', dark: 'Dark' };
+  var nextMode = { auto: 'light', light: 'dark', dark: 'auto' };
+  function applyTheme(mode) {
+    root.setAttribute('data-theme-mode', mode);
+    root.setAttribute('data-theme', mode === 'auto' ? (mq && mq.matches ? 'dark' : 'light') : mode);
+    if (toggle) {
+      var label = 'Theme: ' + labels[mode] + '. Switch to ' + labels[nextMode[mode]];
+      toggle.setAttribute('aria-label', label);
+      toggle.setAttribute('title', label);
+    }
+  }
+  if (mq) {
+    var onSystemChange = function() {
+      if ((root.getAttribute('data-theme-mode') || 'auto') === 'auto') applyTheme('auto');
+    };
+    if (mq.addEventListener) mq.addEventListener('change', onSystemChange); else if (mq.addListener) mq.addListener(onSystemChange);
+  }
+  if (toggle) {
+    applyTheme(root.getAttribute('data-theme-mode') || 'auto');
+    toggle.addEventListener('click', function() {
+      var mode = nextMode[root.getAttribute('data-theme-mode') || 'auto'];
+      try {
+        if (mode === 'auto') localStorage.removeItem('jb-theme'); else localStorage.setItem('jb-theme', mode);
+      } catch (e) {}
+      applyTheme(mode);
+    });
+  }
 });
 </script>
 
