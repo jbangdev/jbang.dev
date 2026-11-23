@@ -15,6 +15,10 @@
   --jb-accent: #eb586f;
   --jb-accent-hover: #d63d56;
   --jb-accent-soft: rgba(235, 88, 111, 0.1);
+  --jb-warning-bg: #fffbeb;
+  --jb-warning-border: #fde68a;
+  --jb-warning-accent: #f59e0b;
+  --jb-warning-strong: #92400e;
   --jb-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
   --jb-shadow-md: 0 8px 24px -4px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
   --jb-shadow-lg: 0 20px 40px -12px rgba(15, 23, 42, 0.14);
@@ -38,6 +42,10 @@
   --jb-accent: #f06a7f;
   --jb-accent-hover: #ff7c91;
   --jb-accent-soft: rgba(240, 106, 127, 0.14);
+  --jb-warning-bg: rgba(245, 158, 11, 0.1);
+  --jb-warning-border: rgba(245, 158, 11, 0.35);
+  --jb-warning-accent: #f59e0b;
+  --jb-warning-strong: #fbbf24;
   --jb-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --jb-shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.45);
   --jb-shadow-lg: 0 20px 40px -12px rgba(0, 0, 0, 0.6);
@@ -840,15 +848,15 @@ a:hover {
 
 /* Try page overrides (remove neon yellow Thebe status & style Jupyter card) */
 .notice--warning {
-  background: var(--jb-surface) !important;
-  border: 1px solid var(--jb-border) !important;
-  border-left: 3px solid var(--jb-accent) !important;
-  color: var(--jb-text-muted) !important;
+  background: var(--jb-warning-bg) !important;
+  border: 1px solid var(--jb-warning-border) !important;
+  border-left: 4px solid var(--jb-warning-accent) !important;
+  color: var(--jb-text) !important;
   border-radius: var(--jb-radius-sm) !important;
 }
 
 .notice--warning strong {
-  color: var(--jb-text) !important;
+  color: var(--jb-warning-strong) !important;
 }
 
 .thebe-status-field {
