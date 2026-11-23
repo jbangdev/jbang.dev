@@ -37,22 +37,24 @@ antora:
       dark_theme: "dark-plus"
       languages:
         - bat
-        - java
-        - xml
         - docker
-        - ini
-        - javascript
-        - kotlin
+        - fish
         - groovy
+        - ini
+        - java
+        - javascript
+        - json
+        - kotlin
         - markdown
         - powershell
+        - properties
         - python
         - shellscript
-        - json
+        - xml
         - yaml
 
 ui:
   bundle:
-    url: https://github.com/jbangdev/jbang-antora-ui/releases/latest/download/ui-bundle.zip
-    # Required when using cache or fetch will not update ui.
-    snapshot: true
+    # Pinned release: Antora caches bundles by URL, so bumping the version is what
+    # makes local builds pick up a new UI (a "latest" URL stays cached forever).
+    url: https://github.com/jbangdev/jbang-antora-ui/releases/download/v0.0.9/ui-bundle.zip

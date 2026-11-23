@@ -1,14 +1,16 @@
+@use "sass:list";
+@use "sass:meta";
 //////////////////////////////
 // Converts the input value to Base EMs
 //////////////////////////////
 @use "sass:math";
 
 @function breakpoint-to-base-em($value) {
-  $value-unit: unit($value);
+  $value-unit: math.unit($value);
 
   // Will convert relative EMs into root EMs.
-  @if breakpoint-get('base font size') and type-of(breakpoint-get('base font size')) == 'number' and $value-unit == 'em' {
-    $base-unit: unit(breakpoint-get('base font size'));
+  @if breakpoint-get('base font size') and meta.type-of(breakpoint-get('base font size')) == 'number' and $value-unit == 'em' {
+    $base-unit: math.unit(breakpoint-get('base font size'));
 
     @if $base-unit == 'px' or $base-unit == '%' or $base-unit == 'em' or $base-unit == 'pt' {
       @return math.div(base-conversion($value), base-conversion(breakpoint-get('base font size'))) * 1em;
@@ -24,7 +26,7 @@
 }
 
 @function base-conversion($value) {
-  $unit: unit($value);
+  $unit: math.unit($value);
 
   @if $unit == 'px' {
     @return math.div($value, 16px) * 1em;
@@ -140,11 +142,11 @@ $breakpoint-single-string-features: 'color',
   $resolutions: 'device-pixel-ratio', 'dpr';
 
   @if breakpoint-get('transform resolutions') {
-    $resolutions: append($resolutions, 'resolution');
+    $resolutions: list.append($resolutions, 'resolution');
   }
 
   @each $reso in $resolutions {
-    @if index($feature, $reso) or index($feature, 'min-#{$reso}') or index($feature, 'max-#{$reso}') {
+    @if list.index($feature, $reso) or list.index($feature, 'min-#{$reso}') or list.index($feature, 'max-#{$reso}') {
       @return true;
     }
   }

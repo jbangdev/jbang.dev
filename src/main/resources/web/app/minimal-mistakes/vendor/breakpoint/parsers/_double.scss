@@ -1,3 +1,5 @@
+@use "sass:list";
+@use "sass:meta";
 //////////////////////////////
 // Import Pieces
 //////////////////////////////
@@ -13,15 +15,15 @@
     $leader: 'and ';
   }
 
-  $first: nth($feature, 1);
-  $second: nth($feature, 2);
+  $first: list.nth($feature, 1);
+  $second: list.nth($feature, 2);
 
   // If we've got two numbers, we know we need to use the default pair because there are no media queries that has a media feature that is a number
-  @if type-of($first) == 'number' and type-of($second) == 'number' {
+  @if meta.type-of($first) == 'number' and meta.type-of($second) == 'number' {
     $parsed: breakpoint-parse-default-pair($first, $second);
   }
   // If they are both strings, we send it through the string parser
-  @else if type-of($first) == 'string' and type-of($second) == 'string' {
+  @else if meta.type-of($first) == 'string' and meta.type-of($second) == 'string' {
     $parsed: breakpoint-parse-double-string($first, $second);
   }
   // If it's a string/number pair, we parse it as a normal double
