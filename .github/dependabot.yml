@@ -1,0 +1,12 @@
+# Renovate (via Forking Renovate) handles regular version updates.
+# This config only shapes Dependabot security updates so their titles
+# pass the Semantic PR check.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /docs-site
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 0
+    commit-message:
+      prefix: "chore(deps)"
