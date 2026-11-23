@@ -36,11 +36,9 @@ jobs:
         fi
         echo "id=${pr}" >> $GITHUB_OUTPUT
         rm -f pr-id.txt
-        # github.sha is not (properly)set for pull_request events
-        if [ "$GITHUB_EVENT_NAME" == "pull_request" ]; then
-          SHA=$(cat $GITHUB_EVENT_PATH | jq -r .pull_request.head.sha)
-        fi
-        echo "sha=${GITHUB_SHA}" >> $GITHUB_OUTPUT
+        echo "sha=${HEAD_SHA}" >> $GITHUB_OUTPUT
+      env:
+        HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
     - name: Publishing to surge for preview
       id: deploy
       run: npx surge@0.23.1 ./ --domain https://jbangdev-preview-pr-${PR_ID}.surge.sh --token ${{ secrets.SURGE_TOKEN }}
@@ -48,23 +46,36 @@ jobs:
         PR_ID: ${{  steps.pr.outputs.id }}
 
     - name: Update PR status comment on success
-      uses: quarkusio/action-helpers@b53791b65e22e8d7e5d7f84b8f546be8fb3e8f6d # main
-      with:
-        action: maintain-one-comment
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        pr-number: ${{ steps.pr.outputs.id }}
-        body: |
+      run: |
+        marker='<!-- Preview status comment marker -->'
+        body="${BODY}"$'\n\n'"${marker}"
+        id=$(gh api --paginate "repos/${GITHUB_REPOSITORY}/issues/${PR_ID}/comments" \
+          --jq ".[] | select(.body | contains(\"${marker}\")) | .id" | tail -n1)
+        if [ -n "$id" ]; then
+          gh api -X PATCH "repos/${GITHUB_REPOSITORY}/issues/comments/${id}" -f body="$body" >/dev/null
+        else
+          gh api -X POST "repos/${GITHUB_REPOSITORY}/issues/${PR_ID}/comments" -f body="$body" >/dev/null
+        fi
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PR_ID: ${{ steps.pr.outputs.id }}
+        BODY: |
           🎊 PR Preview ${{ steps.pr.outputs.sha }} has been successfully built and deployed to https://jbangdev-preview-pr-${{ steps.pr.outputs.id }}.surge.sh
-
-        body-marker: <!-- Preview status comment marker -->
     - name: Update PR status comment on failure
-      uses: quarkusio/action-helpers@b53791b65e22e8d7e5d7f84b8f546be8fb3e8f6d # main
-      if: ${{ failure() }}
-      with:
-        action: maintain-one-comment
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        pr-number: ${{ steps.pr.outputs.id }}
-        body: |
+      if: ${{ failure() && steps.pr.outputs.id != '' }}
+      run: |
+        marker='<!-- Preview status comment marker -->'
+        body="${BODY}"$'\n\n'"${marker}"
+        id=$(gh api --paginate "repos/${GITHUB_REPOSITORY}/issues/${PR_ID}/comments" \
+          --jq ".[] | select(.body | contains(\"${marker}\")) | .id" | tail -n1)
+        if [ -n "$id" ]; then
+          gh api -X PATCH "repos/${GITHUB_REPOSITORY}/issues/comments/${id}" -f body="$body" >/dev/null
+        else
+          gh api -X POST "repos/${GITHUB_REPOSITORY}/issues/${PR_ID}/comments" -f body="$body" >/dev/null
+        fi
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PR_ID: ${{ steps.pr.outputs.id }}
+        BODY: |
           😭 Deploy PR Preview failed.
           <img width="300" src="https://user-images.githubusercontent.com/507615/90250824-4e066700-de6f-11ea-8230-600ecc3d6a6b.png">
-        body-marker: <!-- Preview status comment marker -->
