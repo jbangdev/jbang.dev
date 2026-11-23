@@ -93,27 +93,27 @@ code, pre, kbd, samp {
 
 /* Oat CSS theme support (IDE / AppStore tabs) */
 ot-tabs [role="tablist"] {
-  background: var(--jb-surface) !important;
-  border: 1px solid var(--jb-border) !important;
+  background: var(--jb-surface);
+  border: 1px solid var(--jb-border);
 }
 
 ot-tabs [role="tab"] {
-  color: var(--jb-text-muted) !important;
-  background: transparent !important;
+  color: var(--jb-text-muted);
+  background: transparent;
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
 }
 
 ot-tabs [role="tab"][aria-selected="true"] {
-  color: var(--jb-text) !important;
-  background: var(--jb-surface-elevated) !important;
-  border-color: var(--jb-accent) !important;
+  color: var(--jb-text);
+  background: var(--jb-surface-elevated);
+  border-color: var(--jb-accent);
   box-shadow: var(--jb-shadow-sm);
 }
 
 ot-tabs [role="tabpanel"] {
-  color: var(--jb-text) !important;
+  color: var(--jb-text);
 }
 
 [data-theme="dark"] ot-tabs [role="tab"] img {
@@ -331,7 +331,7 @@ a:hover {
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--jb-text-muted);
-  text-decoration: none !important;
+  text-decoration: none;
   margin-bottom: 1.5rem;
   transition: border-color 0.15s ease, transform 0.15s ease;
 }
@@ -393,7 +393,7 @@ a:hover {
   border-radius: var(--jb-radius-sm);
   font-size: 0.95rem;
   font-weight: 600;
-  text-decoration: none !important;
+  text-decoration: none;
   cursor: pointer;
   border: 1px solid transparent;
   transition: all 0.15s ease;
@@ -401,7 +401,7 @@ a:hover {
 
 .jb-btn--primary {
   background: var(--jb-accent);
-  color: #ffffff !important;
+  color: #ffffff;
   box-shadow: 0 4px 14px rgba(235, 88, 111, 0.3);
 }
 
@@ -413,7 +413,7 @@ a:hover {
 
 .jb-btn--secondary {
   background: var(--jb-surface-elevated);
-  color: var(--jb-text) !important;
+  color: var(--jb-text);
   border-color: var(--jb-border);
   box-shadow: var(--jb-shadow-sm);
 }
@@ -485,10 +485,10 @@ a:hover {
 }
 
 .jb-install-cmd code {
-  background: transparent !important;
-  color: #e2e8f0 !important;
-  padding: 0 !important;
-  border: none !important;
+  background: transparent;
+  color: #e2e8f0;
+  padding: 0;
+  border: none;
   white-space: nowrap;
   overflow-x: auto;
   scrollbar-width: none;
@@ -568,12 +568,12 @@ a:hover {
 }
 
 .jb-code-window pre {
-  margin: 0 !important;
-  padding: 1.25rem 1.5rem !important;
-  background: transparent !important;
-  border: none !important;
-  font-size: 0.85rem !important;
-  line-height: 1.6 !important;
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  border: none;
+  font-size: 0.85rem;
+  line-height: 1.6;
   color: #e2e8f0;
   overflow-x: auto;
 }
@@ -626,8 +626,8 @@ a:hover {
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 800;
   margin: 0 0 0.75rem;
-  border-bottom: none !important;
-  padding-bottom: 0 !important;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .jb-section__desc {
@@ -694,13 +694,13 @@ a:hover {
 }
 
 .jb-card__code {
-  margin: 0 !important;
-  background: var(--jb-surface-code) !important;
+  margin: 0;
+  background: var(--jb-surface-code);
   border-radius: var(--jb-radius-sm);
-  padding: 0.85rem 1rem !important;
+  padding: 0.85rem 1rem;
   font-family: var(--jb-font-mono);
-  font-size: 0.8rem !important;
-  line-height: 1.55 !important;
+  font-size: 0.8rem;
+  line-height: 1.55;
   color: #e2e8f0;
   overflow-x: auto;
   white-space: pre-wrap;
@@ -711,11 +711,11 @@ a:hover {
 .jb-card__code code,
 .jb-card__code code.hljs,
 .jb-code-window pre code.hljs {
-  padding: 0 !important;
-  margin: 0 !important;
-  background: transparent !important;
-  font-size: inherit !important;
-  line-height: inherit !important;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .jb-card__link {
@@ -726,7 +726,7 @@ a:hover {
   padding-top: 1rem;
   font-size: 0.88rem;
   font-weight: 600;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 /* Testimonials Grid */
@@ -806,14 +806,21 @@ a:hover {
    ========================================================================== */
 
 .page__footer {
-  background: var(--jb-surface) !important;
+  background: var(--jb-surface);
   border-top: 1px solid var(--jb-border);
-  color: var(--jb-text-muted) !important;
-  margin-top: 0 !important;
+  color: var(--jb-text-muted);
+  margin-top: 0;
 }
 
 .page__footer footer {
   padding: 2.5rem 1.5rem;
+}
+
+/* Footer social icons use the footer text color (previously set by the
+   Minimal Mistakes "contrast" skin, instead of the default brand colors) */
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
 }
 
 .page__footer a {
@@ -856,42 +863,43 @@ a:hover {
 
 /* Try page overrides (remove neon yellow Thebe status & style Jupyter card) */
 .notice--warning {
-  background: var(--jb-warning-bg) !important;
-  border: 1px solid var(--jb-warning-border) !important;
-  border-left: 4px solid var(--jb-warning-accent) !important;
-  color: var(--jb-text) !important;
-  border-radius: var(--jb-radius-sm) !important;
+  background: var(--jb-warning-bg);
+  border: 1px solid var(--jb-warning-border);
+  border-left: 4px solid var(--jb-warning-accent);
+  color: var(--jb-text);
+  border-radius: var(--jb-radius-sm);
 }
 
 .notice--warning strong {
-  color: var(--jb-warning-strong) !important;
+  color: var(--jb-warning-strong);
 }
 
 .thebe-status-field {
-  background: var(--jb-accent-soft) !important;
-  color: var(--jb-accent) !important;
-  border: 1px solid var(--jb-accent) !important;
-  border-radius: 999px !important;
-  padding: 0.15rem 0.65rem !important;
-  font-size: 0.78rem !important;
-  font-weight: 600 !important;
+  background: var(--jb-accent-soft);
+  color: var(--jb-accent);
+  border: 1px solid var(--jb-accent);
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
+/* !important: content/try.md has a page-local <style> for this that loads after the bundle */
 .try-option.jupyter {
-  background: var(--jb-surface-elevated) !important;
+  background: var(--jb-surface-elevated);
   border-color: var(--jb-border) !important;
-  color: var(--jb-text) !important;
+  color: var(--jb-text);
 }
 
 .try-option.jupyter h3 {
-  color: var(--jb-text) !important;
+  color: var(--jb-text);
 }
 
 .try-option.jupyter p,
 .try-option.jupyter li {
-  color: var(--jb-text-muted) !important;
+  color: var(--jb-text-muted);
 }
 
 /* ==========================================================================
@@ -899,68 +907,69 @@ a:hover {
    ========================================================================== */
 
 .archive {
-  width: 100% !important;
-  float: none !important;
-  padding-right: 0 !important;
+  width: 100%;
+  float: none;
+  padding-right: 0;
 }
 
 .archive .page__title,
+/* !important: Minimal Mistakes sets this border in a more specific .archive rule */
 .archive__subtitle {
-  color: var(--jb-text) !important;
+  color: var(--jb-text);
   border-bottom-color: var(--jb-border) !important;
 }
 
 .taxonomy__index {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  grid-template-columns: none !important;
-  gap: 0.5rem !important;
-  margin: 1.25rem 0 2rem !important;
-  padding: 0 !important;
-  list-style: none !important;
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: none;
+  gap: 0.5rem;
+  margin: 1.25rem 0 2rem;
+  padding: 0;
+  list-style: none;
 }
 
 .taxonomy__index li {
-  margin: 0 !important;
+  margin: 0;
 }
 
 .taxonomy__index a {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 0.5rem !important;
-  padding: 0.4rem 0.85rem !important;
-  background: var(--jb-surface) !important;
-  border: 1px solid var(--jb-border) !important;
-  border-radius: 999px !important;
-  color: var(--jb-text) !important;
-  font-size: 0.85rem !important;
-  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  background: var(--jb-surface);
+  border: 1px solid var(--jb-border);
+  border-radius: 999px;
+  color: var(--jb-text);
+  font-size: 0.85rem;
+  text-decoration: none;
   transition: all 0.15s ease;
 }
 
 .taxonomy__index a:hover {
-  border-color: var(--jb-accent) !important;
-  color: var(--jb-accent) !important;
+  border-color: var(--jb-accent);
+  color: var(--jb-accent);
 }
 
 .taxonomy__count {
-  color: var(--jb-text-subtle) !important;
-  font-weight: 600 !important;
-  font-size: 0.78rem !important;
+  color: var(--jb-text-subtle);
+  font-weight: 600;
+  font-size: 0.78rem;
 }
 
 .entries-grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
-  gap: 1.5rem !important;
-  margin-top: 1.25rem !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.25rem;
 }
 
 .entries-grid .grid__item {
-  width: 100% !important;
-  float: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  width: 100%;
+  float: none;
+  margin: 0;
+  padding: 0;
   display: flex;
 }
 
@@ -983,8 +992,8 @@ a:hover {
 }
 
 .entries-grid .archive__item-teaser {
-  margin: 0 0 1rem !important;
-  border-radius: var(--jb-radius-sm) !important;
+  margin: 0 0 1rem;
+  border-radius: var(--jb-radius-sm);
   overflow: hidden;
   background: var(--jb-surface);
   aspect-ratio: 16 / 9;
@@ -998,52 +1007,53 @@ a:hover {
 }
 
 .entries-grid .archive__item-title {
-  margin: 0 0 0.5rem !important;
-  font-size: 1.08rem !important;
-  line-height: 1.35 !important;
+  margin: 0 0 0.5rem;
+  font-size: 1.08rem;
+  line-height: 1.35;
 }
 
 .entries-grid .archive__item-title a {
-  color: var(--jb-accent) !important;
-  text-decoration: none !important;
+  color: var(--jb-accent);
+  text-decoration: none;
 }
 
 .entries-grid .archive__item-title a:hover {
-  color: var(--jb-accent-hover) !important;
-  text-decoration: underline !important;
+  color: var(--jb-accent-hover);
+  text-decoration: underline;
 }
 
 .entries-grid .archive__item-excerpt {
-  font-size: 0.88rem !important;
-  line-height: 1.55 !important;
-  color: var(--jb-text-muted) !important;
-  margin: 0.5rem 0 0 !important;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--jb-text-muted);
+  margin: 0.5rem 0 0;
 }
 
 .back-to-top {
-  color: var(--jb-text-muted) !important;
-  font-size: 0.82rem !important;
-  margin-top: 1.25rem !important;
-  display: inline-block !important;
+  color: var(--jb-text-muted);
+  font-size: 0.82rem;
+  margin-top: 1.25rem;
+  display: inline-block;
 }
 
 .back-to-top:hover {
-  color: var(--jb-accent) !important;
+  color: var(--jb-accent);
 }
 
 /* Single post & inner page polish */
 .page__meta,
 .page__related-title,
 .pagination--pager {
-  color: var(--jb-text-muted) !important;
-  border-color: var(--jb-border) !important;
+  color: var(--jb-text-muted);
+  border-color: var(--jb-border);
 }
 
 .pagination--pager:hover {
-  background: var(--jb-surface) !important;
-  color: var(--jb-accent) !important;
+  background: var(--jb-surface);
+  color: var(--jb-accent);
 }
 
+/* !important: beats Minimal Mistakes' more specific blockquote rules in _page.scss */
 .page__content blockquote {
   border-left-color: var(--jb-accent) !important;
   color: var(--jb-text-muted) !important;
@@ -1051,7 +1061,7 @@ a:hover {
 
 .page__content h2,
 .page__content h3 {
-  border-bottom-color: var(--jb-border) !important;
+  border-bottom-color: var(--jb-border);
 }
 
 /* ==========================================================================
@@ -1074,7 +1084,7 @@ a:hover {
 [data-theme="dark"] .CodeMirror-selected,
 [data-theme="dark"] .CodeMirror-focused .CodeMirror-selected { background: rgba(148, 163, 184, 0.25); }
 [data-theme="dark"] .CodeMirror-activeline-background { background: rgba(148, 163, 184, 0.08); }
-[data-theme="dark"] .CodeMirror-matchingbracket { color: #fbbf24 !important; }
+[data-theme="dark"] .CodeMirror-matchingbracket { color: #fbbf24; }
 
 [data-theme="dark"] .cm-s-default .cm-keyword { color: #f472b6; }
 [data-theme="dark"] .cm-s-default .cm-def,
@@ -1107,7 +1117,7 @@ a:hover {
 [data-theme="dark"] .thebelab-output,
 [data-theme="dark"] .jp-OutputArea-output,
 [data-theme="dark"] .jp-OutputArea-output pre {
-  background: var(--jb-surface) !important;
-  color: var(--jb-text) !important;
-  border-color: var(--jb-border) !important;
+  background: var(--jb-surface);
+  color: var(--jb-text);
+  border-color: var(--jb-border);
 }
