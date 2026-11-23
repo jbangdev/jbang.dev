@@ -1049,3 +1049,61 @@ a:hover {
 .page__content h3 {
   border-bottom-color: var(--jb-border) !important;
 }
+
+/* ==========================================================================
+   Try page editor (thebe / CodeMirror 5) in dark mode
+   ========================================================================== */
+
+[data-theme="dark"] .CodeMirror {
+  background: var(--jb-surface-code);
+  color: #e2e8f0;
+  border-color: var(--jb-border);
+}
+
+[data-theme="dark"] .CodeMirror-gutters {
+  background: var(--jb-surface-code);
+  border-right-color: var(--jb-border);
+}
+
+[data-theme="dark"] .CodeMirror-linenumber { color: var(--jb-text-subtle); }
+[data-theme="dark"] .CodeMirror-cursor { border-left-color: #e2e8f0; }
+[data-theme="dark"] .CodeMirror-selected,
+[data-theme="dark"] .CodeMirror-focused .CodeMirror-selected { background: rgba(148, 163, 184, 0.25); }
+[data-theme="dark"] .CodeMirror-activeline-background { background: rgba(148, 163, 184, 0.08); }
+[data-theme="dark"] .CodeMirror-matchingbracket { color: #fbbf24 !important; }
+
+[data-theme="dark"] .cm-s-default .cm-keyword { color: #f472b6; }
+[data-theme="dark"] .cm-s-default .cm-def,
+[data-theme="dark"] .cm-s-default .cm-variable-2,
+[data-theme="dark"] .cm-s-default .cm-variable-3,
+[data-theme="dark"] .cm-s-default .cm-type { color: #7dd3fc; }
+[data-theme="dark"] .cm-s-default .cm-variable,
+[data-theme="dark"] .cm-s-default .cm-property { color: #e2e8f0; }
+[data-theme="dark"] .cm-s-default .cm-string,
+[data-theme="dark"] .cm-s-default .cm-string-2 { color: #86efac; }
+[data-theme="dark"] .cm-s-default .cm-number,
+[data-theme="dark"] .cm-s-default .cm-atom { color: #fdba74; }
+[data-theme="dark"] .cm-s-default .cm-comment { color: #94a3b8; font-style: italic; }
+[data-theme="dark"] .cm-s-default .cm-meta { color: #c4b5fd; }
+[data-theme="dark"] .cm-s-default .cm-builtin,
+[data-theme="dark"] .cm-s-default .cm-qualifier,
+[data-theme="dark"] .cm-s-default .cm-attribute,
+[data-theme="dark"] .cm-s-default .cm-tag { color: #93c5fd; }
+[data-theme="dark"] .cm-s-default .cm-link,
+[data-theme="dark"] .cm-s-default .cm-header { color: var(--jb-accent); }
+[data-theme="dark"] .cm-s-default .cm-operator,
+[data-theme="dark"] .cm-s-default .cm-bracket { color: #cbd5e1; }
+
+[data-theme="dark"] .thebelab-cell,
+[data-theme="dark"] .thebelab-input {
+  background: var(--jb-surface-code);
+  border-color: var(--jb-border);
+}
+
+[data-theme="dark"] .thebelab-output,
+[data-theme="dark"] .jp-OutputArea-output,
+[data-theme="dark"] .jp-OutputArea-output pre {
+  background: var(--jb-surface) !important;
+  color: var(--jb-text) !important;
+  border-color: var(--jb-border) !important;
+}
