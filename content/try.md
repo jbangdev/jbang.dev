@@ -8,7 +8,7 @@ layout: splash
 
 Below is an embedded editor where you can write Java code using JBang directives, click run and see it execute.
 
-<div class="notice--warning" style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 4px; padding: 1rem; margin-bottom: 1.5rem;">
+<div class="notice--warning" style="border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem;">
   <strong>Note:</strong>
   This JBang try page is relying on a free public Binder service (<a href="https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html" target="_blank" rel="noopener">MyBinder</a>) and is subject to usage limits and temporary availability issues. For more details, see the <a href="https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html" target="_blank" rel="noopener">Binder user guidelines</a>.
   Use a <a href="|}{page.rel('/ide/')}{|">dedicated IDE</a> if these constraints does not work for you.
@@ -55,9 +55,10 @@ Below is an embedded editor where you can write Java code using JBang directives
     gap: 1rem;
     margin: 0;
     padding: 0.5rem 0.75rem;
-    background: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 4px;
+    background: var(--jb-surface, #f8f9fa);
+    color: var(--jb-text, #1a1a1a);
+    border: 1px solid var(--jb-border, #dee2e6);
+    border-radius: 6px;
   }
 
   .editor-controls .thebe-status {
