@@ -1,9 +1,32 @@
 @charset "utf-8";
 
 $serif      : Georgia, Times, serif;
-$sans-serif : "Montserrat",sans-serif;
 
-$link-color:#EB586F;
+// Minimal Mistakes base variables, set to the light-mode design tokens from
+// modern.scss (--jb-*). These must be plain colors because Minimal Mistakes
+// does color math on them (mix/darken); dark mode is handled by the --jb-*
+// custom properties in modern.scss.
+// NOTE: Montserrat is never loaded, so this falls back to the system sans-serif.
+// Switching to "Plus Jakarta Sans" (--jb-font-sans) needs masthead spacing work
+// first: the wider font makes the greedy nav overflow at ~1280px.
+$sans-serif              : "Montserrat", sans-serif;
+$background-color        : #ffffff;   // --jb-bg
+$text-color              : #0f172a;   // --jb-text
+$muted-text-color        : #475569;   // --jb-text-muted
+$border-color            : #e2e8f0;   // --jb-border
+$primary-color           : #b60000;   // buttons/navicon; darker than --jb-accent so white button text passes WCAG AA
+$link-color              : #eb586f;   // --jb-accent
+$link-color-hover        : #d63d56;   // --jb-accent-hover
+$link-color-visited      : #eb586f;
+$footer-background-color : #f8fafc;   // --jb-surface
+$masthead-link-color     : #0f172a;
+$masthead-link-color-hover: #0f172a;
+
+// Syntax palette previously provided by the "contrast" skin (used by .highlight)
+$base00: #000000; $base01: #242422; $base02: #484844; $base03: #6c6c66;
+$base04: #918f88; $base05: #b5b3aa; $base06: #d9d7cc; $base07: #fdfbee;
+$base08: #ff6c60; $base09: #e9c062; $base0a: #ffffb6; $base0b: #a8ff60;
+$base0c: #c6c5fe; $base0d: #96cbfe; $base0e: #ff73fd; $base0f: #b18a3d;
 
 a {
     text-decoration: none;
@@ -34,7 +57,6 @@ a:hover {
 
 @import "highlightjs-copy";
 
-@import "minimal-mistakes/skins/contrast"; // skin
 @import "minimal-mistakes"; // main partials
 @import "modern"; // modern design system overrides
 
