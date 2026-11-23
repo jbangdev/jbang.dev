@@ -83,25 +83,36 @@ code, pre, kbd, samp {
   box-shadow: inset 0 -1px 0 var(--jb-border-strong);
 }
 
-/* Oat CSS dark mode support (IDE / AppStore tabs) */
-[data-theme="dark"] ot-tabs [role="tablist"] {
+/* Oat CSS theme support (IDE / AppStore tabs) */
+ot-tabs [role="tablist"] {
   background: var(--jb-surface) !important;
-  border-color: var(--jb-border) !important;
+  border: 1px solid var(--jb-border) !important;
 }
 
-[data-theme="dark"] ot-tabs [role="tab"] {
+ot-tabs [role="tab"] {
   color: var(--jb-text-muted) !important;
   background: transparent !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
 }
 
-[data-theme="dark"] ot-tabs [role="tab"][aria-selected="true"] {
+ot-tabs [role="tab"][aria-selected="true"] {
   color: var(--jb-text) !important;
   background: var(--jb-surface-elevated) !important;
   border-color: var(--jb-accent) !important;
+  box-shadow: var(--jb-shadow-sm);
 }
 
-[data-theme="dark"] ot-tabs [role="tabpanel"] {
+ot-tabs [role="tabpanel"] {
   color: var(--jb-text) !important;
+}
+
+[data-theme="dark"] ot-tabs [role="tab"] img {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 4px;
+  padding: 2px;
+  box-sizing: content-box;
 }
 
 a {
