@@ -15,13 +15,17 @@
 <link rel="apple-touch-icon" href="{page.rel('/apple-touch-icon.png')}">
 <link rel="manifest" href="{page.rel('/site.webmanifest')}">
 
-<!-- Theme initialization (runs early to prevent flash of wrong theme) -->
+<!-- Theme initialization (runs early to prevent flash of wrong theme).
+     Mode is 'auto' (follow OS, nothing stored), 'light' or 'dark' (stored in localStorage 'jb-theme'). -->
 <script>
 (function() {
-  var saved = localStorage.getItem('jb-theme');
+  var mode = 'auto';
+  try { mode = localStorage.getItem('jb-theme') || 'auto'; } catch (e) {}
+  if (mode !== 'light' && mode !== 'dark') mode = 'auto';
   var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  var theme = saved || (prefersDark ? 'dark' : 'light');
-  document.documentElement.setAttribute('data-theme', theme);
+  var root = document.documentElement;
+  root.setAttribute('data-theme-mode', mode);
+  root.setAttribute('data-theme', mode === 'auto' ? (prefersDark ? 'dark' : 'light') : mode);
 })();
 </script>
 
@@ -98,13 +102,35 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Theme toggle: Auto -> Light -> Dark -> Auto
   var toggle = document.getElementById('theme-toggle');
+  var root = document.documentElement;
+  var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  var labels = { auto: 'Auto (follows system)', light: 'Light', dark: 'Dark' };
+  var nextMode = { auto: 'light', light: 'dark', dark: 'auto' };
+  function applyTheme(mode) {
+    root.setAttribute('data-theme-mode', mode);
+    root.setAttribute('data-theme', mode === 'auto' ? (mq && mq.matches ? 'dark' : 'light') : mode);
+    if (toggle) {
+      var label = 'Theme: ' + labels[mode] + '. Switch to ' + labels[nextMode[mode]];
+      toggle.setAttribute('aria-label', label);
+      toggle.setAttribute('title', label);
+    }
+  }
+  if (mq) {
+    var onSystemChange = function() {
+      if ((root.getAttribute('data-theme-mode') || 'auto') === 'auto') applyTheme('auto');
+    };
+    if (mq.addEventListener) mq.addEventListener('change', onSystemChange); else if (mq.addListener) mq.addListener(onSystemChange);
+  }
   if (toggle) {
+    applyTheme(root.getAttribute('data-theme-mode') || 'auto');
     toggle.addEventListener('click', function() {
-      var current = document.documentElement.getAttribute('data-theme') || 'light';
-      var next = current === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('jb-theme', next);
+      var mode = nextMode[root.getAttribute('data-theme-mode') || 'auto'];
+      try {
+        if (mode === 'auto') localStorage.removeItem('jb-theme'); else localStorage.setItem('jb-theme', mode);
+      } catch (e) {}
+      applyTheme(mode);
     });
   }
 });

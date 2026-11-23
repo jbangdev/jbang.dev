@@ -246,11 +246,15 @@ a:hover {
   background: var(--jb-surface-elevated);
 }
 
-.jb-theme-toggle .jb-icon-sun { display: none; }
-.jb-theme-toggle .jb-icon-moon { display: inline-block; }
+/* Show the icon for the current mode: auto (half circle), light (sun), dark (moon) */
+.jb-theme-toggle .jb-icon-sun,
+.jb-theme-toggle .jb-icon-moon { display: none; }
+.jb-theme-toggle .jb-icon-auto { display: inline-block; }
 
-[data-theme="dark"] .jb-theme-toggle .jb-icon-sun { display: inline-block; }
-[data-theme="dark"] .jb-theme-toggle .jb-icon-moon { display: none; }
+[data-theme-mode="light"] .jb-theme-toggle .jb-icon-sun,
+[data-theme-mode="dark"] .jb-theme-toggle .jb-icon-moon { display: inline-block; }
+[data-theme-mode="light"] .jb-theme-toggle .jb-icon-auto,
+[data-theme-mode="dark"] .jb-theme-toggle .jb-icon-auto { display: none; }
 
 /* ==========================================================================
    Modern Homepage Sections (.jb-*)
