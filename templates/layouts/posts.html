@@ -29,8 +29,8 @@ paginate:
 {#for year in postsInYear}
   <section id="{year.key}" class="taxonomy__section">
     <h2 class="archive__subtitle">{year.key}</h2>
-    <div class="entries-{{ entries_layout }}">
-      {#for post in year.value %}
+    <div class="entries-{entries_layout}">
+      {#for post in year.value}
         {#include partials/archive-single.html type=entries_layout /}
       {/for}
     </div>
