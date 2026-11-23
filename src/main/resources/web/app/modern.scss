@@ -822,9 +822,13 @@ a:hover {
 
 /* Dark mode adjustments for inner pages using Minimal Mistakes classes */
 [data-theme="dark"] .page__content,
-[data-theme="dark"] .archive__item-title a,
 [data-theme="dark"] .page__title a {
   color: var(--jb-text);
+}
+
+/* Post titles are links: keep them in the accent color in both themes */
+.archive__item-title a {
+  color: var(--jb-accent);
 }
 
 [data-theme="dark"] .page__content p,
@@ -996,12 +1000,13 @@ a:hover {
 }
 
 .entries-grid .archive__item-title a {
-  color: var(--jb-text) !important;
+  color: var(--jb-accent) !important;
   text-decoration: none !important;
 }
 
 .entries-grid .archive__item-title a:hover {
-  color: var(--jb-accent) !important;
+  color: var(--jb-accent-hover) !important;
+  text-decoration: underline !important;
 }
 
 .entries-grid .archive__item-excerpt {
