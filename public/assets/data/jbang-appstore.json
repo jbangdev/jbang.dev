@@ -1,11 +1,11 @@
 {
-  "aliasCount": 987,
+  "aliasCount": 991,
   "templateCount": 85,
   "catalogs": [
     {
       "owner": "apple",
       "name": "pkl",
-      "stars": 11589,
+      "stars": 11590,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "link": "https://github.com/apple/pkl/blob/c254bfbabeaed4d013009a7a3609a7f09d3eafb8/jbang-catalog.json",
       "aliases": [
@@ -30,9 +30,9 @@
     {
       "owner": "oshi",
       "name": "oshi",
-      "stars": 5278,
+      "stars": 5279,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/ad39e227cc091561881b9b9ef3ff894d7a224451/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/8f5dab89c1db51e669e217bf737a2f8516c4042b/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -97,7 +97,7 @@
       "name": "validator",
       "stars": 2007,
       "icon": "https://avatars.githubusercontent.com/u/498971?v\u003d4",
-      "link": "https://github.com/validator/validator/blob/c2805af60deafd0a7759afe17815d16edf6f4801/jbang-catalog.json",
+      "link": "https://github.com/validator/validator/blob/faec138cba6ef986e154786ea641f5ae41905f77/jbang-catalog.json",
       "aliases": [
         {
           "a": "vnu",
@@ -110,9 +110,9 @@
     {
       "owner": "jbangdev",
       "name": "jbang",
-      "stars": 1886,
+      "stars": 1887,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang/blob/3a517afd07f454ebd2f3e829dfbe6a60e52c30ef/docs/modules/ROOT/examples/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang/blob/e8ed5191444a71453a427f33087fcd6ab62fb9e8/docs/modules/ROOT/examples/jbang-catalog.json",
       "aliases": [
         {
           "a": "jbang-fmt",
@@ -189,7 +189,7 @@
       "name": "hawtio",
       "stars": 1465,
       "icon": "https://avatars.githubusercontent.com/u/2943947?v\u003d4",
-      "link": "https://github.com/hawtio/hawtio/blob/34be4d12c237db48e7238f62277f4d186cc65c25/jbang-catalog.json",
+      "link": "https://github.com/hawtio/hawtio/blob/7581d11fbde91eb3cf0970287458a0db508e6841/jbang-catalog.json",
       "aliases": [
         {
           "a": "hawtio",
@@ -561,7 +561,7 @@
       "name": "citrus",
       "stars": 487,
       "icon": "https://avatars.githubusercontent.com/u/27848811?v\u003d4",
-      "link": "https://github.com/citrusframework/citrus/blob/4e445945166c34d9183350964a874dea0cd8ff3f/jbang-catalog.json",
+      "link": "https://github.com/citrusframework/citrus/blob/67aae64fc222d03509680bed992be587351705e0/jbang-catalog.json",
       "aliases": [
         {
           "a": "citrus",
@@ -575,9 +575,9 @@
     {
       "owner": "hibernate",
       "name": "hibernate-reactive",
-      "stars": 471,
+      "stars": 472,
       "icon": "https://avatars.githubusercontent.com/u/348262?v\u003d4",
-      "link": "https://github.com/hibernate/hibernate-reactive/blob/dca4428102859b6adf923f8f25c2a4fda7695ff1/jbang-catalog.json",
+      "link": "https://github.com/hibernate/hibernate-reactive/blob/052d0bfa79465013e187cba715fbabb756fbce83/jbang-catalog.json",
       "aliases": [
         {
           "a": "example",
@@ -649,7 +649,7 @@
     {
       "owner": "itsallcode",
       "name": "openfasttrace",
-      "stars": 218,
+      "stars": 219,
       "icon": "https://avatars.githubusercontent.com/u/12786252?v\u003d4",
       "link": "https://github.com/itsallcode/openfasttrace/blob/a6b7e40e88b6776b81b53c9a72eb79bd3006b67c/jbang-catalog.json",
       "aliases": [
@@ -806,6 +806,34 @@
       "templates": []
     },
     {
+      "owner": "jenesis",
+      "name": "jenesis",
+      "stars": 103,
+      "icon": "https://avatars.githubusercontent.com/u/319352130?v\u003d4",
+      "link": "https://github.com/jenesis/jenesis/blob/2a39fd5aec9d53be3e40708a85eb60fcaaf7902a/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "jenesis-make",
+          "d": "\u003cp\u003eBuilds the project in the current folder with the released Jenesis engine.\u003c/p\u003e\n",
+          "s": "build.jenesis:build.jenesis:0.18.2",
+          "c": "jenesis-make@jenesis/jenesis"
+        },
+        {
+          "a": "jenesis-exec",
+          "d": "\u003cp\u003eBuilds the project in the current folder with the released Jenesis engine and runs its main class.\u003c/p\u003e\n",
+          "s": "build.jenesis:build.jenesis:0.18.2",
+          "c": "jenesis-exec@jenesis/jenesis"
+        },
+        {
+          "a": "jpx",
+          "d": "\u003cp\u003eRuns a published Java module or Maven artifact, as npx does for npm packages.\u003c/p\u003e\n",
+          "s": "build.jenesis:build.jenesis:0.18.2",
+          "c": "jpx@jenesis/jenesis"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "citrusframework",
       "name": "yaks",
       "stars": 89,
@@ -824,7 +852,7 @@
     {
       "owner": "commonhaus",
       "name": "foundation",
-      "stars": 77,
+      "stars": 78,
       "icon": "https://avatars.githubusercontent.com/u/144493209?v\u003d4",
       "link": "https://github.com/commonhaus/foundation/blob/c2899c86a0e3fc30cd88cfc97fc2d6f5e3591d1f/jbang-catalog.json",
       "aliases": [
@@ -857,7 +885,7 @@
       "name": "incus-spawn",
       "stars": 66,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/29398604cb4d741aeda4cc152f60f7cb0acec8a8/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/5d9a69b894b0fe7c1a505ac41fc12ec0125fe260/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -1024,7 +1052,7 @@
     {
       "owner": "quarkusio",
       "name": "quarkus-agent-mcp",
-      "stars": 58,
+      "stars": 59,
       "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
       "link": "https://github.com/quarkusio/quarkus-agent-mcp/blob/24be5636e4a302219c07735b9b305b45c01cac58/jbang-catalog.json",
       "aliases": [
@@ -1271,7 +1299,7 @@
       "name": "jylos",
       "stars": 34,
       "icon": "https://avatars.githubusercontent.com/u/43444131?v\u003d4",
-      "link": "https://github.com/RGiskard7/jylos/blob/dd68171fa6caeb420b25ed8e2a5bd01972e27240/jbang-catalog.json",
+      "link": "https://github.com/RGiskard7/jylos/blob/e722cb0d8c60effc7668b85b1eb1c0a40d9a4304/jbang-catalog.json",
       "aliases": [
         {
           "a": "jylos",
@@ -1285,7 +1313,7 @@
     {
       "owner": "worldline",
       "name": "learning-kotlin",
-      "stars": 31,
+      "stars": 32,
       "icon": "https://avatars.githubusercontent.com/u/5173767?v\u003d4",
       "link": "https://github.com/worldline/learning-kotlin/blob/bffc395ae1426a7a0b822e7e9902ae00130b23c3/jbang-catalog.json",
       "aliases": [
@@ -1806,7 +1834,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/0cd8fbc1801521b0674048de50b70fd008fe0c47/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/b7f282a99d48c2aba1cd7c9b591fef1aeb565389/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -2079,7 +2107,7 @@
       "name": "jbang-catalog",
       "stars": 8,
       "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
-      "link": "https://github.com/quarkusio/jbang-catalog/blob/a04a180ff38b407ca98d5a5a3b9aac8fcbea5833/jbang-catalog.json",
+      "link": "https://github.com/quarkusio/jbang-catalog/blob/c29ac4cc1aa4be3c28fb9625fdc0438d0a843f8b/jbang-catalog.json",
       "aliases": [
         {
           "a": "buginfo",
@@ -3441,6 +3469,22 @@
       "templates": []
     },
     {
+      "owner": "atunko-dev",
+      "name": "atunko",
+      "stars": 2,
+      "icon": "https://avatars.githubusercontent.com/u/264616968?v\u003d4",
+      "link": "https://github.com/atunko-dev/atunko/blob/e5c004a7f19b4ac86b96c604c78efe5f571b7a45/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "atunko",
+          "d": "\u003cp\u003eatunko — TUI + CLI for OpenRewrite: browse, search, configure and run recipes\u003c/p\u003e\n",
+          "s": "https://github.com/atunko-dev/atunko/releases/download/snapshot/atunko.jar",
+          "c": "atunko@atunko-dev/atunko"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "BrokkAi",
       "name": "brokk-releases",
       "stars": 2,
@@ -3649,22 +3693,6 @@
           "d": "\u003cp\u003eJGen: blueprint-driven code generator for Chenile and beyond (\u003ca rel\u003d\"nofollow\" href\u003d\"https://jgen.chenile.org\"\u003ehttps://jgen.chenile.org\u003c/a\u003e)\u003c/p\u003e\n",
           "s": "https://github.com/rajakolluru/chenile-gen/releases/latest/download/jgen-cli.jar",
           "c": "jgen@rajakolluru/chenile-gen"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "atunko-dev",
-      "name": "atunko",
-      "stars": 2,
-      "icon": "https://avatars.githubusercontent.com/u/264616968?v\u003d4",
-      "link": "https://github.com/atunko-dev/atunko/blob/cd5f67aec95015d72d54880bda93b01ee172fbe9/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "atunko",
-          "d": "\u003cp\u003eatunko — TUI + CLI for OpenRewrite: browse, search, configure and run recipes\u003c/p\u003e\n",
-          "s": "https://github.com/atunko-dev/atunko/releases/download/snapshot/atunko.jar",
-          "c": "atunko@atunko-dev/atunko"
         }
       ],
       "templates": []
@@ -4947,7 +4975,7 @@
       "name": "koppter",
       "stars": 1,
       "icon": "https://avatars.githubusercontent.com/u/14792043?v\u003d4",
-      "link": "https://github.com/contextswitcher/koppter/blob/930ca02f65200730110f1fa8539037a6e3c45d67/jbang-catalog.json",
+      "link": "https://github.com/contextswitcher/koppter/blob/b6bdb521e6b0212973a7bcbc0765eb7b9ebb62da/jbang-catalog.json",
       "aliases": [
         {
           "a": "lint",
@@ -5571,21 +5599,6 @@
       "templates": []
     },
     {
-      "owner": "quarkusio",
-      "name": "quarkus-ghsa-v3h5-jw6m-6m42",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
-      "link": "https://github.com/quarkusio/quarkus-ghsa-v3h5-jw6m-6m42/blob/996730b8e924f8c96b6f46c97d0fab1c0bf9b9a4/.jbang/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "revapi-update",
-          "s": "RevapiUpdate.java",
-          "c": "revapi-update@quarkusio/quarkus-ghsa-v3h5-jw6m-6m42~.jbang"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "Ingvord",
       "name": "RxJTango",
       "stars": 0,
@@ -6156,6 +6169,22 @@
       "templates": []
     },
     {
+      "owner": "holly-cummins",
+      "name": "ladder-tamboui-java",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/11509290?v\u003d4",
+      "link": "https://github.com/holly-cummins/ladder-tamboui-java/blob/514a450bf283e02a46ae4a75cfacbd4ab337b674/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "ladder",
+          "d": "\u003cp\u003eLadder: a terminal platform game made with TamboUI\u003c/p\u003e\n",
+          "s": "ladder.java",
+          "c": "ladder@holly-cummins/ladder-tamboui-java"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "59977sOnNy",
       "name": "XrKnQfjqfY",
       "stars": 0,
@@ -6415,51 +6444,6 @@
       ]
     },
     {
-      "owner": "gsmet",
-      "name": "quarkus-renovate",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/1279749?v\u003d4",
-      "link": "https://github.com/gsmet/quarkus-renovate/blob/8b5aa6bf9175688d52c240c092ef82dd78c21626/.jbang/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "revapi-update",
-          "s": "RevapiUpdate.java",
-          "c": "revapi-update@gsmet/quarkus-renovate~.jbang"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "brunobat",
-      "name": "private_quarkus",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/2318030?v\u003d4",
-      "link": "https://github.com/brunobat/private_quarkus/blob/5ad2f1c6681b85b97eb1ce8f0d67163634fe7ced/.jbang/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "revapi-update",
-          "s": "RevapiUpdate.java",
-          "c": "revapi-update@brunobat/private_quarkus~.jbang"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "TarekBenSalama",
-      "name": "quarkus",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/38693920?v\u003d4",
-      "link": "https://github.com/TarekBenSalama/quarkus/blob/3f5257be5a82e7376c97b28e7dd43fc9abc03ae9/.jbang/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "revapi-update",
-          "s": "RevapiUpdate.java",
-          "c": "revapi-update@TarekBenSalama/quarkus~.jbang"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "maxandersen",
       "name": "jmeet",
       "stars": 0,
@@ -6703,7 +6687,7 @@
       "name": "valp",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "link": "https://github.com/maxandersen/valp/blob/809c4be3fbfad6efdc6eaec27b2b743f33eadf89/jbang-catalog.json",
+      "link": "https://github.com/maxandersen/valp/blob/2eda3e5233783c3ad76bd07db6578b7253edbb79/jbang-catalog.json",
       "aliases": [
         {
           "a": "valp",
@@ -7199,6 +7183,21 @@
       "templates": []
     },
     {
+      "owner": "quarkusio",
+      "name": "quarkus-ghsa-v3h5-jw6m-6m42",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
+      "link": "https://github.com/quarkusio/quarkus-ghsa-v3h5-jw6m-6m42/blob/996730b8e924f8c96b6f46c97d0fab1c0bf9b9a4/.jbang/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "revapi-update",
+          "s": "RevapiUpdate.java",
+          "c": "revapi-update@quarkusio/quarkus-ghsa-v3h5-jw6m-6m42~.jbang"
+        }
+      ],
+      "templates": []
+    },
+    {
       "owner": "ottlinger",
       "name": "spamschutz",
       "stars": 0,
@@ -7565,6 +7564,51 @@
           "d": "\u003cp\u003eInitialize a Maven pom.xml with j2html-toolkit dependencies\u003c/p\u003e\n",
           "s": "j2htmlInit.java",
           "c": "j2htmlInit@teggr/j2html-toolkit~jbang"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "gsmet",
+      "name": "quarkus-renovate",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/1279749?v\u003d4",
+      "link": "https://github.com/gsmet/quarkus-renovate/blob/8b5aa6bf9175688d52c240c092ef82dd78c21626/.jbang/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "revapi-update",
+          "s": "RevapiUpdate.java",
+          "c": "revapi-update@gsmet/quarkus-renovate~.jbang"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "brunobat",
+      "name": "private_quarkus",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/2318030?v\u003d4",
+      "link": "https://github.com/brunobat/private_quarkus/blob/5ad2f1c6681b85b97eb1ce8f0d67163634fe7ced/.jbang/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "revapi-update",
+          "s": "RevapiUpdate.java",
+          "c": "revapi-update@brunobat/private_quarkus~.jbang"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "TarekBenSalama",
+      "name": "quarkus",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/38693920?v\u003d4",
+      "link": "https://github.com/TarekBenSalama/quarkus/blob/3f5257be5a82e7376c97b28e7dd43fc9abc03ae9/.jbang/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "revapi-update",
+          "s": "RevapiUpdate.java",
+          "c": "revapi-update@TarekBenSalama/quarkus~.jbang"
         }
       ],
       "templates": []
@@ -8280,37 +8324,6 @@
       "templates": []
     },
     {
-      "owner": "sebastienblanc",
-      "name": "limit-request",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/335133?v\u003d4",
-      "link": "https://github.com/sebastienblanc/limit-request/blob/010bc8d7617ddfec40ca609cc0e29234735600b0/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "kubectl-limit",
-          "s": "src/kubectl-limit",
-          "c": "kubectl-limit@sebastienblanc/limit-request"
-        }
-      ],
-      "templates": []
-    },
-    {
-      "owner": "oscerd",
-      "name": "sec-edgar-jbang-cli",
-      "stars": 0,
-      "icon": "https://avatars.githubusercontent.com/u/5106647?v\u003d4",
-      "link": "https://github.com/oscerd/sec-edgar-jbang-cli/blob/fe7cd6e9a0dae64d2fb688ac5a180fd5f26c14c4/jbang-catalog.json",
-      "aliases": [
-        {
-          "a": "edgar",
-          "d": "\u003cp\u003eSEC EDGAR CLI - Download Form 4, Form 13F, Form 8-K, and Form 10-K/10-Q filings\u003c/p\u003e\n",
-          "s": "edgar.java",
-          "c": "edgar@oscerd/sec-edgar-jbang-cli"
-        }
-      ],
-      "templates": []
-    },
-    {
       "owner": "ParapluOU",
       "name": "formhandle-sdk",
       "stars": 0,
@@ -8551,6 +8564,37 @@
           "a": "jbangquarkus",
           "s": "jbangquarkus.java",
           "c": "jbangquarkus@iotaplatforms/tutorials~jbang"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "sebastienblanc",
+      "name": "limit-request",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/335133?v\u003d4",
+      "link": "https://github.com/sebastienblanc/limit-request/blob/010bc8d7617ddfec40ca609cc0e29234735600b0/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "kubectl-limit",
+          "s": "src/kubectl-limit",
+          "c": "kubectl-limit@sebastienblanc/limit-request"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "oscerd",
+      "name": "sec-edgar-jbang-cli",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/5106647?v\u003d4",
+      "link": "https://github.com/oscerd/sec-edgar-jbang-cli/blob/fe7cd6e9a0dae64d2fb688ac5a180fd5f26c14c4/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "edgar",
+          "d": "\u003cp\u003eSEC EDGAR CLI - Download Form 4, Form 13F, Form 8-K, and Form 10-K/10-Q filings\u003c/p\u003e\n",
+          "s": "edgar.java",
+          "c": "edgar@oscerd/sec-edgar-jbang-cli"
         }
       ],
       "templates": []
