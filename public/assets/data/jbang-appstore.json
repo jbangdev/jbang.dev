@@ -1,11 +1,11 @@
 {
-  "aliasCount": 999,
+  "aliasCount": 1001,
   "templateCount": 85,
   "catalogs": [
     {
       "owner": "apple",
       "name": "pkl",
-      "stars": 11591,
+      "stars": 11592,
       "icon": "https://avatars.githubusercontent.com/u/10639145?v\u003d4",
       "link": "https://github.com/apple/pkl/blob/c254bfbabeaed4d013009a7a3609a7f09d3eafb8/jbang-catalog.json",
       "aliases": [
@@ -32,7 +32,7 @@
       "name": "oshi",
       "stars": 5280,
       "icon": "https://avatars.githubusercontent.com/u/21304425?v\u003d4",
-      "link": "https://github.com/oshi/oshi/blob/35577fb3f752b0f4afe5302d2a17fd807035e243/jbang-catalog.json",
+      "link": "https://github.com/oshi/oshi/blob/ffbe6a0aa339848f0e23e4233bb7a6802243f796/jbang-catalog.json",
       "aliases": [
         {
           "a": "json",
@@ -80,7 +80,7 @@
     {
       "owner": "NanowarOfSteel",
       "name": "HelloWorld",
-      "stars": 2019,
+      "stars": 2020,
       "icon": "https://avatars.githubusercontent.com/u/185941913?v\u003d4",
       "link": "https://github.com/NanowarOfSteel/HelloWorld/blob/eb1b4d63eeb4a6d4fdd8167cda67876344c5bfcb/jbang-catalog.json",
       "aliases": [
@@ -97,7 +97,7 @@
       "name": "validator",
       "stars": 2008,
       "icon": "https://avatars.githubusercontent.com/u/498971?v\u003d4",
-      "link": "https://github.com/validator/validator/blob/21f300308ed813256a6814a3e23ceadebf5ad062/jbang-catalog.json",
+      "link": "https://github.com/validator/validator/blob/a0cdb41cb57feb11d0de4c090d3999f1419bbeee/jbang-catalog.json",
       "aliases": [
         {
           "a": "vnu",
@@ -110,9 +110,9 @@
     {
       "owner": "jbangdev",
       "name": "jbang",
-      "stars": 1887,
+      "stars": 1889,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang/blob/e8ed5191444a71453a427f33087fcd6ab62fb9e8/docs/modules/ROOT/examples/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang/blob/e986ba63d9759704d6a6ba3dc01f6c8f7a07a978/docs/modules/ROOT/examples/jbang-catalog.json",
       "aliases": [
         {
           "a": "jbang-fmt",
@@ -561,7 +561,7 @@
       "name": "citrus",
       "stars": 487,
       "icon": "https://avatars.githubusercontent.com/u/27848811?v\u003d4",
-      "link": "https://github.com/citrusframework/citrus/blob/cc5a8e97c6aa2e8a6330241dca17740ad40ac561/jbang-catalog.json",
+      "link": "https://github.com/citrusframework/citrus/blob/457566215aec51205ce31757d2a1c70a09b77a51/jbang-catalog.json",
       "aliases": [
         {
           "a": "citrus",
@@ -633,7 +633,7 @@
     {
       "owner": "jdubois",
       "name": "boot-ui",
-      "stars": 344,
+      "stars": 345,
       "icon": "https://avatars.githubusercontent.com/u/316835?v\u003d4",
       "link": "https://github.com/jdubois/boot-ui/blob/6efc78d31c08baae0fca7d33b00d464e9970bed6/jbang-catalog.json",
       "aliases": [
@@ -649,7 +649,7 @@
     {
       "owner": "itsallcode",
       "name": "openfasttrace",
-      "stars": 220,
+      "stars": 221,
       "icon": "https://avatars.githubusercontent.com/u/12786252?v\u003d4",
       "link": "https://github.com/itsallcode/openfasttrace/blob/0f299c0d0af243928cee4e18394de9b169377053/jbang-catalog.json",
       "aliases": [
@@ -746,7 +746,7 @@
     {
       "owner": "quarkiverse",
       "name": "quarkus-roq",
-      "stars": 160,
+      "stars": 161,
       "icon": "https://avatars.githubusercontent.com/u/69191779?v\u003d4",
       "link": "https://github.com/quarkiverse/quarkus-roq/blob/1f4ff554deff02995c346d45f8dea277c985c764/jbang-catalog.json",
       "aliases": [
@@ -867,7 +867,7 @@
     {
       "owner": "archgate",
       "name": "cli",
-      "stars": 75,
+      "stars": 76,
       "icon": "https://avatars.githubusercontent.com/u/207676178?v\u003d4",
       "link": "https://github.com/archgate/cli/blob/abc365a2dbf1c5673674da5c25079e80b0960eff/shims/maven/jbang-catalog.json",
       "aliases": [
@@ -883,9 +883,9 @@
     {
       "owner": "Sanne",
       "name": "incus-spawn",
-      "stars": 67,
+      "stars": 68,
       "icon": "https://avatars.githubusercontent.com/u/42573?v\u003d4",
-      "link": "https://github.com/Sanne/incus-spawn/blob/1b31a08801a29d015f5b5e2bb9a05da65a3779cc/jbang-catalog.json",
+      "link": "https://github.com/Sanne/incus-spawn/blob/178f186e7f2a6519249d2295c7337c1c76f7dbd9/jbang-catalog.json",
       "aliases": [
         {
           "a": "isx",
@@ -895,7 +895,7 @@
         },
         {
           "a": "isx-proxy",
-          "d": "\u003cp\u003eMITM authentication proxy for incus-spawn (install alongside isx)\u003c/p\u003e\n",
+          "d": "\u003cp\u003eThe isx proxy, which adds your credentials to requests leaving an instance. isx needs it: install both aliases.\u003c/p\u003e\n",
           "s": "https://github.com/Sanne/incus-spawn/releases/latest/download/isx-proxy-runner.jar",
           "c": "isx-proxy@Sanne/incus-spawn"
         }
@@ -1052,7 +1052,7 @@
     {
       "owner": "quarkusio",
       "name": "quarkus-agent-mcp",
-      "stars": 59,
+      "stars": 60,
       "icon": "https://avatars.githubusercontent.com/u/47638783?v\u003d4",
       "link": "https://github.com/quarkusio/quarkus-agent-mcp/blob/24be5636e4a302219c07735b9b305b45c01cac58/jbang-catalog.json",
       "aliases": [
@@ -1187,7 +1187,7 @@
       "name": "wanaku-barn",
       "stars": 47,
       "icon": "https://avatars.githubusercontent.com/u/200620763?v\u003d4",
-      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/124e4dafa560f9f33996265cd65d1589ff2c3123/jbang-catalog.json",
+      "link": "https://github.com/wanaku-ai/wanaku-barn/blob/7f1762d1af476e484b346fa08385d4fdf1c4dba1/jbang-catalog.json",
       "aliases": [
         {
           "a": "wanaku",
@@ -1834,7 +1834,7 @@
       "name": "jbang.dev",
       "stars": 14,
       "icon": "https://avatars.githubusercontent.com/u/60074102?v\u003d4",
-      "link": "https://github.com/jbangdev/jbang.dev/blob/c2be04cd97b3e4194a53326f2bcf300294154757/public/jbang-catalog.json",
+      "link": "https://github.com/jbangdev/jbang.dev/blob/a4829c82d103c875e425156ae923c018ba5439c7/public/jbang-catalog.json",
       "aliases": [
         {
           "a": "main",
@@ -1845,6 +1845,22 @@
           "a": "tree",
           "s": "tree/main.java",
           "c": "tree@jbangdev/jbang.dev~public"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "liberation-data",
+      "name": "drivine4j",
+      "stars": 14,
+      "icon": "https://avatars.githubusercontent.com/u/44997534?v\u003d4",
+      "link": "https://github.com/liberation-data/drivine4j/blob/a73730590a8ca470dd5eeddaeb64bfcec694edb0/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "drivine",
+          "d": "\u003cp\u003eThe drivine command line: Cypher from your shell, on Neo4j, Memgraph, FalkorDB, Postgres, Oracle and SQLite. \u003ca rel\u003d\"nofollow\" href\u003d\"https://drivine.org\"\u003ehttps://drivine.org\u003c/a\u003e\u003c/p\u003e\n",
+          "s": "org.drivine:drivine4j-cli:0.9.0",
+          "c": "drivine@liberation-data/drivine4j"
         }
       ],
       "templates": []
@@ -2017,7 +2033,7 @@
       "name": "llm4j",
       "stars": 10,
       "icon": "https://avatars.githubusercontent.com/u/68538997?v\u003d4",
-      "link": "https://github.com/srijithunni7182/llm4j/blob/dd10264183a69cafa28f807f5cb1ca46f6553137/jbang-catalog.json",
+      "link": "https://github.com/srijithunni7182/llm4j/blob/a46e5c5322ab7661a1d9cc6d7e213f17c021fecd/jbang-catalog.json",
       "aliases": [
         {
           "a": "weave",
@@ -2794,7 +2810,7 @@
       "name": "camel-kit",
       "stars": 4,
       "icon": "https://avatars.githubusercontent.com/u/47359?v\u003d4",
-      "link": "https://github.com/apache/camel-kit/blob/21ad8e240295e65209f166349136fef292f69cc4/jbang-catalog.json",
+      "link": "https://github.com/apache/camel-kit/blob/edc89578bc52fe5ef464f6666225a03523161dd3/jbang-catalog.json",
       "aliases": [
         {
           "a": "camel-kit",
@@ -2810,7 +2826,7 @@
       "name": "java-concurrency-interview",
       "stars": 4,
       "icon": "https://avatars.githubusercontent.com/u/19151554?v\u003d4",
-      "link": "https://github.com/alxkm/java-concurrency-interview/blob/bea75897b5bb105d9e1e62ea68305fb79269ab1d/jbang-catalog.json",
+      "link": "https://github.com/alxkm/java-concurrency-interview/blob/7b77a7dcc5e074b04af7d1892ce0e04720c98601/jbang-catalog.json",
       "aliases": [
         {
           "a": "quiz",
@@ -2938,7 +2954,7 @@
       "name": "logaperture",
       "stars": 3,
       "icon": "https://avatars.githubusercontent.com/u/6036847?v\u003d4",
-      "link": "https://github.com/ddeuchert/logaperture/blob/9b5cd362de186b756e925ad53c85bf1e0a635015/jbang-catalog.json",
+      "link": "https://github.com/ddeuchert/logaperture/blob/51e59cff1fddff552be79b9f1b21290441c4c269/jbang-catalog.json",
       "aliases": [
         {
           "a": "logctl",
@@ -3289,7 +3305,7 @@
       "name": "fornax",
       "stars": 3,
       "icon": "https://avatars.githubusercontent.com/u/44997534?v\u003d4",
-      "link": "https://github.com/liberation-data/fornax/blob/a222b8f9a996a558b66fa15d47725cb73262a273/jbang-catalog.json",
+      "link": "https://github.com/liberation-data/fornax/blob/08f9c4727f07428b0dab7ae6c0f4f91e58dd3c81/jbang-catalog.json",
       "aliases": [
         {
           "a": "fornax",
@@ -3744,7 +3760,7 @@
       "name": "atunko",
       "stars": 2,
       "icon": "https://avatars.githubusercontent.com/u/264616968?v\u003d4",
-      "link": "https://github.com/atunko-dev/atunko/blob/e5c004a7f19b4ac86b96c604c78efe5f571b7a45/jbang-catalog.json",
+      "link": "https://github.com/atunko-dev/atunko/blob/48d3b2abd218057796e187cd4ebb3caeb4076596/jbang-catalog.json",
       "aliases": [
         {
           "a": "atunko",
@@ -4782,7 +4798,7 @@
       "name": "cf-explorer",
       "stars": 1,
       "icon": "https://avatars.githubusercontent.com/u/1432287?v\u003d4",
-      "link": "https://github.com/garodriguezlp/cf-explorer/blob/dd0d90cb90614ba601910c81e00b0a62210cb7ff/jbang-catalog.json",
+      "link": "https://github.com/garodriguezlp/cf-explorer/blob/6b0e0aad1b5cbbdb236451e60fcd0a5421b05cf6/jbang-catalog.json",
       "aliases": [
         {
           "a": "cf-explorer",
@@ -5071,7 +5087,7 @@
       "name": "koppter",
       "stars": 1,
       "icon": "https://avatars.githubusercontent.com/u/14792043?v\u003d4",
-      "link": "https://github.com/contextswitcher/koppter/blob/dffb8cc6624b444407ab6f6a0797e7c6a9507a54/jbang-catalog.json",
+      "link": "https://github.com/contextswitcher/koppter/blob/487fac549c81ba5f15442ca471c057729f94e3e0/jbang-catalog.json",
       "aliases": [
         {
           "a": "lint",
@@ -6727,7 +6743,7 @@
       "name": "hello-javafx",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/556695?v\u003d4",
-      "link": "https://github.com/sombriks/hello-javafx/blob/9f89a6bf6f56c25e82edc10b464f1863d11f6e7d/jbang-catalog.json",
+      "link": "https://github.com/sombriks/hello-javafx/blob/635b64b3b19cdb413497e8b34c7ffaeddda99ac2/jbang-catalog.json",
       "aliases": [
         {
           "a": "runApp",
@@ -6747,7 +6763,7 @@
       "name": "valp",
       "stars": 0,
       "icon": "https://avatars.githubusercontent.com/u/54129?v\u003d4",
-      "link": "https://github.com/maxandersen/valp/blob/1be3aae2736ee722aaf84dad4f24b575abd44c07/jbang-catalog.json",
+      "link": "https://github.com/maxandersen/valp/blob/a3b010023aadff9cb403b7bc0511b3225dbac319/jbang-catalog.json",
       "aliases": [
         {
           "a": "valp",
@@ -7145,17 +7161,17 @@
         {
           "a": "tabula",
           "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
-          "c": "tabula@yaodahua/fuxian_ChatTester~CoverageCal/ProjectResult/ChatTester/tabulapdf_tabula-java"
-        },
-        {
-          "a": "tabula",
-          "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
           "c": "tabula@yaodahua/fuxian_ChatTester~Repos/tabulapdf_tabula-java"
         },
         {
           "a": "tabula",
           "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
           "c": "tabula@yaodahua/fuxian_ChatTester~CoverageCal/repos/tabulapdf_tabula-java"
+        },
+        {
+          "a": "tabula",
+          "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
+          "c": "tabula@yaodahua/fuxian_ChatTester~CoverageCal/ProjectResult/ChatTester/tabulapdf_tabula-java"
         }
       ],
       "templates": []
@@ -7175,17 +7191,17 @@
         {
           "a": "tabula",
           "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
-          "c": "tabula@minhnq182012/chattest~CoverageCal/ProjectResult/ChatTester/tabulapdf_tabula-java"
-        },
-        {
-          "a": "tabula",
-          "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
           "c": "tabula@minhnq182012/chattest~Repos/tabulapdf_tabula-java"
         },
         {
           "a": "tabula",
           "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
           "c": "tabula@minhnq182012/chattest~CoverageCal/repos/tabulapdf_tabula-java"
+        },
+        {
+          "a": "tabula",
+          "s": "https://github.com/tabulapdf/tabula-java/releases/download/v1.0.4/tabula-1.0.4-jar-with-dependencies.jar",
+          "c": "tabula@minhnq182012/chattest~CoverageCal/ProjectResult/ChatTester/tabulapdf_tabula-java"
         }
       ],
       "templates": []
@@ -8348,6 +8364,22 @@
           "d": "\u003cp\u003eDetermine if the local environment is setup to access private GitHub repositories\u003c/p\u003e\n",
           "s": "caniaccessprivategithubrepos.java",
           "c": "caniaccessprivategithubrepos@robintegg-createfuture"
+        }
+      ],
+      "templates": []
+    },
+    {
+      "owner": "koppor",
+      "name": "changelog-news",
+      "stars": 0,
+      "icon": "https://avatars.githubusercontent.com/u/1366654?v\u003d4",
+      "link": "https://github.com/koppor/changelog-news/blob/89f3e8f695a20c097449f70b6f42a2e23c3ece2b/jbang-catalog.json",
+      "aliases": [
+        {
+          "a": "changelog-news",
+          "d": "\u003cp\u003eShows the CHANGELOG.md entries that are new in this checkout since the last run, grouped by who wrote them\u003c/p\u003e\n",
+          "s": "src/ChangelogNews.java",
+          "c": "changelog-news@koppor/changelog-news"
         }
       ],
       "templates": []
